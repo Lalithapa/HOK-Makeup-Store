@@ -1,0 +1,161 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement_bar_xqp6tT": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_cctUjt": {
+          "type": "announcement",
+          "settings": {
+            "text": "The Winter Wonderland Sale is Live: Up To 60% OFF + Surprise Gift on orders ₹799+",
+            "link": "https:\/\/hokmakeup.com\/pages\/mega-festive-sale"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_cctUjt"
+      ],
+      "custom_css": [
+        "p.announcement-bar__message.h5 {font-size: clamp(12px, 2vw, 14px); font-family: var(--family-regular); margin: 0;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "hok_announcement_bar_hJBdUQ": {
+      "type": "hok-announcement-bar",
+      "blocks": {
+        "announcement_je9h9w": {
+          "type": "announcement",
+          "settings": {
+            "bg_color": "",
+            "bg_color_gd": "",
+            "bg_img": "shopify:\/\/shop_images\/Strip_36af40d5-7d17-4819-aeb2-57e0b9803887.jpg",
+            "text": "<p>The Winter Wonderland Sale is Live: Up To 60% OFF + Surprise Gift on orders ₹799+<\/p>",
+            "head_col": "#121212",
+            "desk-main-heading-size": 16,
+            "mob-main-heading-size": 12,
+            "sub_txt": "",
+            "sub_head_col": "#121212",
+            "desk-sub-heading-size": 10,
+            "mob-sub-heading-size": 14,
+            "link": "shopify:\/\/pages\/mega-festive-sale"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_je9h9w"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {margin-bottom: 0;}"
+      ],
+      "settings": {
+        "menu": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "top-center",
+        "menu": "desktop-main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "new_header_pqxJqQ": {
+      "type": "new-header",
+      "disabled": true,
+      "settings": {
+        "sdjkhfgksh": "",
+        "header_logo": "shopify:\/\/shop_images\/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
+        "mobile_logo": "shopify:\/\/shop_images\/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
+        "cart_collection_products": "",
+        "hskjfd": true,
+        "heyhbs": true,
+        "skdieuf": true,
+        "opwrire": true,
+        "perior": "",
+        "potus": "",
+        "oprutqw": "",
+        "sjdhkewew": "main-menu",
+        "lkjhgsd": "",
+        "ojfchkls": "",
+        "home_search_products": "",
+        "search_list": ""
+      }
+    },
+    "navbar_UJefUW": {
+      "type": "navbar",
+      "disabled": true,
+      "settings": {
+        "navs": "desktop-main-menu",
+        "newInTxt": "",
+        "newInUrl": "",
+        "newInTxt_2": "",
+        "newInUrl_2": "",
+        "brandsTxt": "",
+        "brandsUrl": "",
+        "brandsTxt_2": "",
+        "brandsUrl_2": "",
+        "makeupTxt": "",
+        "makeupUrl": "",
+        "makeupTxt_2": "",
+        "makeupUrl_2": "",
+        "skinTxt": "",
+        "skinUrl": "",
+        "skinTxt_2": "",
+        "skinUrl_2": "",
+        "setsTxt": "",
+        "setsUrl": "",
+        "setsTxt_2": "",
+        "setsUrl_2": "",
+        "hairTxt": "",
+        "hairUrl": "",
+        "hairTxt_2": "",
+        "hairUrl_2": "",
+        "bnbTxt": "",
+        "bnbUrl": "",
+        "bnbTxt_2": "",
+        "bnbUrl_2": "",
+        "fragrancesTxt": "",
+        "fragrancesUrl": "",
+        "fragrancesTxt_2": "",
+        "fragrancesUrl_2": "",
+        "accessoriesTxt": "",
+        "accessoriesUrl": "",
+        "accessoriesTxt_2": "",
+        "accessoriesUrl_2": ""
+      }
+    },
+    "main_cart_drawer_Yx3cqc": {
+      "type": "main-cart-drawer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_xqp6tT",
+    "hok_announcement_bar_hJBdUQ",
+    "header",
+    "new_header_pqxJqQ",
+    "navbar_UJefUW",
+    "main_cart_drawer_Yx3cqc"
+  ]
+}

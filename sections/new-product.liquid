@@ -1,0 +1,651 @@
+{% assign first_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+  event: 'view_item',
+  ecommerce: {
+  items: [{
+  item_name: '{{ product.title | replace: "'","##@@singleinvertedcomma@@##" }}'.replace("##@@singleinvertedcomma@@##", "'"),
+  item_id: "{% if product.sku %}{{ product.sku }}{% else %}{{ product.id}}{% endif %}",
+  price: "{{ product.price | money_without_currency | remove:',' }}",
+  item_brand: "{{ product.vendor | remove: "'" | remove: '"' }}",
+  {% for collection in product.collections %}
+  item_category{% unless forloop.index == 1 %}{{ forloop.index }}{% endunless %}: "{{ collection.title }}",
+  {% endfor %}
+  item_variant: "{{ product.selected_or_first_available_variant.title | remove: "'" | remove: '"' }}",
+  quantity: '1'
+  }]
+  }
+  });
+</script>
+<section class="container pt-1 pt-md-4">
+  <div id="breadcrumbs" class="mobile_screen">
+    {% render 'breadcrumbs' %}
+  </div>
+  <div class="row gap-0 gap-md-3 gap-lg-4 gap-xl-5 gap-mt-5 m-auto">
+    <div class="col-12 col-md-6">
+      <div class="row">
+        <div class="col-2 desktop_screen_hidden p-0 product-list-carousel ">
+          <div class="product-button-prev carousel-btn">
+            {{ 'arrow-back.svg' | inline_asset_content }}
+          </div>
+          <div class="swiper productSlider">
+            <div class="swiper-wrapper">
+              {% for media in product.media %}
+                {% if media.media_type == 'image' or media.media_type == 'model' %}
+                  <div
+                    class="swiper-slide{% if product.metafields.custom.image_alt_text_fullfilled %}{% unless first_variant.featured_image.alt == media.alt %} non-swiper-slide{% endunless %}{% endif %}"
+                    data-filter="{{ media.alt |  remove: 'Group-' | replace: " ", "-" | escape  }}"
+                  >
+                    <img
+                      src="{{ media | image_url }}"
+                      alt="{{ product.title }}"
+                      title="{{ product.title }}"
+                      height="100"
+                      width="100"
+                      fetchpriority="false"
+                      loading="lazy"
+                    >
+                  </div>
+                {% else %}
+                  <div
+                    class="swiper-slide{% if product.metafields.custom.image_alt_text_fullfilled %}{% unless first_variant.featured_image.alt == media.alt %} non-swiper-slide{% endunless %}{% endif %}"
+                    data-filter="{{ media.alt |  remove: 'Group-' | replace: " ", "-" | escape  }}"
+                  >
+                    <img
+                      src="{{ media.preview_image.src | image_url }}"
+                      alt="{{ media.alt | escape }}"
+                      height="100%"
+                      width="100%"
+                      fetchpriority="true"
+                      loading="eager"
+                    >
+                  </div>
+                {% endif %}
+                <!-- Use it like any other HTML element -->
+              {% endfor %}
+            </div>
+          </div>
+          <div class="product-button-next carousel-btn">
+            {{ 'arrow-next.svg' | inline_asset_content }}
+          </div>
+        </div>
+        <div class="col-12 col-md-10 position-relative my-auto p-0 px-md-4">
+          {% comment %}
+            <div
+             class="wishlist-engine pdpbanner desktop_screen"
+             data-product_id="{{  product.id }}"
+             data-variant_id="{{ product.selected_or_first_available_variant.id }}"
+             data-full_button="false"
+             data-css="true"></div>
+          {% endcomment %}
+          <div
+            style="display: block;"
+            class="gw-wl-add-to-wishlist-placeholder desktop"
+            data-gw-product_id="{{ product.id }}"
+          ></div>
+          <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff" class="swiper productSlider2">
+            <div class="swiper-wrapper">
+              {% assign free_slider = true %}
+              {% for media in product.media %}
+                {% if media.media_type == 'image' %}
+                  <div
+                    class="swiper-slide{% if product.metafields.custom.image_alt_text_fullfilled %}{% unless first_variant.featured_image.alt == media.alt %} non-swiper-slide{% endunless %}{% endif %}"
+                    data-filter="{{ media.alt |  remove: 'Group-' | replace: " ", "-" | escape  }}"
+                  >
+                    {% comment %}
+                      <a
+                        href="{{ media | image_url }}"
+                        data-fancybox="{{ media.alt |  remove: 'Group-' }}"
+                        data-variant="{{ media.alt }}"
+                        data-caption="{{ media.alt |  remove: 'Group-' }}">
+                        <img
+                        src="{{ media | image_url }}"
+                        alt="{{ product.title }}"
+                        title="{{ product.title }}"
+                        height="100%"
+                        width="100%"
+                        loading="eager">
+                      </a>
+                    {% endcomment %}
+                    <div class="swiper-zoom-container">
+                      <img
+                        src="{{ media | image_url }}"
+                        alt="{{ product.title }}"
+                        title="{{ product.title }}"
+                        height="100%"
+                        width="100%"
+                        fetchpriority="true"
+                        loading="eager"
+                      >
+                    </div>
+                  </div>
+                {% elsif media.media_type == 'video' %}
+                  <div
+                    class="swiper-slide{% if product.metafields.custom.image_alt_text_fullfilled %}{% unless first_variant.featured_image.alt == media.alt %} non-swiper-slide{% endunless %}{% endif %}"
+                    data-filter="{{ media.alt |  remove: 'Group-' | replace: " ", "-" | escape  }}"
+                  >
+                    {% assign media_poster = media.preview_image.src | image_url %}
+                    {% render 'deffered-video', media: media, mediaPosterImg: media_poster %}
+                  </div>
+                {% elsif media.media_type == 'model' %}
+                  {% assign free_slider = false %}
+                  <div
+                    class="swiper-slide h-auto{% if product.metafields.custom.image_alt_text_fullfilled %}{% unless first_variant.featured_image.alt == media.alt %} non-swiper-slide{% endunless %}{% endif %}"
+                    data-filter="{{ media.alt |  remove: 'Group-' | replace: " ", "-" | escape  }}"
+                  >
+                    <model-viewer
+                      id="model-viewer-{{ forloop.index }}"
+                      class="w-100 h-100"
+                      src="{{ media.sources.first.url }}"
+                      ar
+                      ar-modes="scene-viewer quick-look"
+                      camera-controls
+                      touch-action="pan-y"
+                      alt="A 3D model of an makeup product"
+                      tone-mapping="neutral"
+                      shadow-intensity="1"
+                      auto-rotate
+                      disable-pan
+                      max-camera-orbit="auto 90deg auto"
+                      poster="{{ media.preview_image.src |  image_url  }}"
+                    >
+                      <div id="error" class="d-none">AR is not supported on this device</div>
+                    </model-viewer>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="arrow_handler">
+              <div class="product-button-prev-main carousel-btn d-flex">
+                {{ 'arrow-back.svg' | inline_asset_content }}
+              </div>
+              <div class="product-button-next-main carousel-btn d-flex">
+                {{ 'arrow-next.svg' | inline_asset_content }}
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-0 col-md-5 p-0">
+      <div class="l-pdp-product_info_wrapper">
+        <div class="l-pdp-product_info">
+          <div class="l-pdp-product_info_inner">
+            {% comment %}
+              <div class="l-pdp-product_vendor">{{ product.vendor | capitalize }}</div>
+              {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'text' %}
+                    {% liquid
+                        assign brand = product.vendor | handleize
+                        assign brand_name = block.settings.brand_name | handleize
+                      %}
+                    {% if brand contains brand_name %}
+                      <a class="b-pdp_brand" href="{{ product.url }}">
+                        <img
+                          src="{{ block.settings.brand_logo | image_url }}"
+                          alt="{{ brand }}"
+                          loading="lazy"
+                          width="auto"
+                          height="60">
+                      </a>
+                    {% endif %}
+                  {% endcase %}
+                {% endfor %}
+            {% endcomment %}
+
+            {% comment %}
+              <div class="rating">
+                <a href="#judgeme_product_reviews">
+                  {% if product.metafields.reviews.rating.value != blank %}
+                    <div class="product-card-ratings-wrapper d-flex-center" bis_skin_checked="1">
+                      <div
+                        class="star-rating"
+                        style="--rating:{{ product.metafields.reviews.rating.value }} "
+                        aria-label="Rating of this product is {{ product.metafields.reviews.rating.value }} out of 5."
+                        bis_skin_checked="1"
+                      >
+                        <wbr>
+                      </div>
+                      <span class="zero-reviews">({{ product.metafields.reviews.rating.value }}) </span>
+                    </div>
+
+                  {% else %}
+                    <div class="product-card-ratings-wrapper d-flex-center" bis_skin_checked="1">
+                      <div
+                        class="star-rating"
+                        style="--rating:0 "
+                        aria-label="Rating of this product is 0 out of 5."
+                        bis_skin_checked="1"
+                      >
+                        <wbr>
+                      </div>
+                      <span class="zero-reviews">(Be the first to rate) </span>
+                    </div>
+                  {% endif %}
+                </a>
+              </div>
+            {% endcomment %}
+
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when '@app' %}
+                  {% render block %}
+                {% when 'title' %}
+                  <div>
+                    {% assign product_qty = 0 %}
+                    {% for variant in product.variants %}
+                      {% if variant.inventory_quantity > 0 %}
+                        {% assign product_qty = product_qty | plus: variant.inventory_quantity %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if product_qty == 0 %}
+                      <div class="b-product_card-stock">
+                        <div class="b-availability m-out_of_stock">
+                          <div class="b-availability-inner">
+                            <span class="b-availability-label"> Out of Stock </span>
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if product_qty >= 1 and product_qty < 10 %}
+                      {% render 'limited-stock' %}
+                    {% endif %}
+
+                    <h1 class="b-product_name position-relative">
+                      {{ product.title | escape }}
+                      <div id="shareProduct">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
+                          <path d="M11.6349 16C11.1173 16 10.6765 15.8079 10.3127 15.4237C9.94882 15.0405 9.76689 14.5747 9.76689 14.0263C9.76689 13.9211 9.77535 13.8124 9.79228 13.7003C9.8097 13.5876 9.83558 13.4816 9.86992 13.3821L4.0897 9.78132C3.90703 9.99921 3.69449 10.1689 3.4521 10.2905C3.2097 10.4121 2.95038 10.4732 2.67413 10.4737C2.15549 10.4737 1.71499 10.2821 1.35264 9.89895C0.989291 9.51526 0.807617 9.04947 0.807617 8.50158C0.807617 7.95368 0.989291 7.48763 1.35264 7.10342C1.71599 6.71921 2.15649 6.52684 2.67413 6.52632C2.95087 6.52632 3.2102 6.58737 3.4521 6.70947C3.694 6.83158 3.90653 7.00132 4.0897 7.21868L9.87067 3.61711C9.83583 3.51816 9.80995 3.41237 9.79302 3.29974C9.7756 3.18763 9.76689 3.07895 9.76689 2.97368C9.76689 2.42526 9.94832 1.95947 10.3112 1.57632C10.6735 1.19211 11.1138 1 11.6319 1C12.1501 1 12.5908 1.19184 12.9542 1.57553C13.3175 1.95921 13.4994 2.42474 13.4999 2.97211C13.5004 3.51947 13.3187 3.98553 12.9549 4.37026C12.593 4.755 12.1525 4.94737 11.6334 4.94737C11.3567 4.94737 11.0973 4.88632 10.8554 4.76421C10.6135 4.64211 10.401 4.47237 10.2178 4.255L4.43762 7.85658C4.47196 7.95553 4.49759 8.06079 4.51452 8.17237C4.53194 8.28447 4.54065 8.39263 4.54065 8.49684C4.54065 8.60105 4.53194 8.71026 4.51452 8.82447C4.4971 8.93868 4.47121 9.04526 4.43687 9.14421L10.2178 12.745C10.4005 12.5276 10.613 12.3579 10.8554 12.2358C11.0978 12.1137 11.3572 12.0526 11.6334 12.0526C12.1521 12.0526 12.5925 12.2445 12.9549 12.6282C13.3182 13.0113 13.4999 13.4768 13.4999 14.0247C13.4999 14.5726 13.3187 15.0387 12.9564 15.4229C12.594 15.8071 12.1535 15.9995 11.6349 16ZM11.6334 4.15789C11.9405 4.15789 12.2041 4.04184 12.4241 3.80974C12.6436 3.57711 12.7533 3.29842 12.7533 2.97368C12.7533 2.64895 12.6436 2.37026 12.4241 2.13763C12.2041 1.90553 11.9405 1.78947 11.6334 1.78947C11.3263 1.78947 11.0628 1.90553 10.8428 2.13763C10.6232 2.37026 10.5135 2.64895 10.5135 2.97368C10.5135 3.29842 10.6232 3.57711 10.8428 3.80974C11.0628 4.04184 11.3263 4.15789 11.6334 4.15789ZM2.67413 9.68421C2.98124 9.68421 3.24479 9.56816 3.46479 9.33605C3.68429 9.10342 3.79404 8.82474 3.79404 8.5C3.79404 8.17526 3.68429 7.89658 3.46479 7.66395C3.24529 7.43132 2.98173 7.31526 2.67413 7.31579C2.36653 7.31632 2.10298 7.43237 1.88348 7.66395C1.66397 7.89658 1.55422 8.17526 1.55422 8.5C1.55422 8.82474 1.66397 9.10342 1.88348 9.33605C2.10298 9.56868 2.36653 9.68474 2.67413 9.68421ZM11.6334 15.2105C11.9405 15.2105 12.2041 15.0945 12.4241 14.8624C12.6436 14.6297 12.7533 14.3511 12.7533 14.0263C12.7533 13.7016 12.6436 13.4229 12.4241 13.1903C12.2041 12.9582 11.9405 12.8421 11.6334 12.8421C11.3263 12.8421 11.0628 12.9582 10.8428 13.1903C10.6232 13.4229 10.5135 13.7016 10.5135 14.0263C10.5135 14.3511 10.6232 14.6297 10.8428 14.8624C11.0628 15.0945 11.3263 15.2105 11.6334 15.2105Z" fill="#212529" stroke="#212529" stroke-width="0.6"/>
+                        </svg>
+                      </div>
+                    </h1>
+                  </div>
+                {% when 'price' %}
+                  <div class="l-pdp-price_section d-flex">
+                    <div class="product-prices d-flex gap-2">
+                      <span class="b-product_price-value">
+                        {{ first_variant.price | money_without_trailing_zeros }}
+                      </span>
+                      <span class="b-product_price-value rack-rate">
+                        {{ first_variant.compare_at_price | money_without_trailing_zeros }}
+                      </span>
+                      <span
+                        class="discount_svg_container position-relative"
+                        {% if first_variant.inventory_quantity == 0 %}
+                          style="display:none"
+                        {% endif %}
+                      >
+                        <span class="discount_label">
+                          {{
+                            first_variant.compare_at_price
+                            | minus: first_variant.price
+                            | times: 100.0
+                            | divided_by: first_variant.compare_at_price
+                            | money_without_currency
+                            | times: 100
+                            | remove: '.0'
+                          -}}
+                          % OFF
+                        </span>
+                      </span>
+                    </div>
+                    <div class="inclusive">Inclusive Of All Taxes</div>
+                  </div>
+              {% endcase %}
+            {% endfor %}
+            {% if product.available and product.variants.size > 1 %}
+              <div class="product_actions-variations">
+                <div class="product-swatches-container">
+                  <span class="product_swatch_colors_name"> Shade: </span>
+                  <span class="product_swatch_colors_value text-capitalize" data-js-color-value="">
+                    {{ product.selected_or_first_available_variant.option1 }}
+                  </span>
+                </div>
+              </div>
+              {% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
+              <div class="main_product_swatches">
+                {% render 'product_page_swatches' with 'Color' as swatch, random_number: random_number %}
+              </div>
+            {% endif %}
+            {% liquid
+              assign offer_name = 'default'
+              for collection in product.collections
+                if collection.handle == 'bogo-sale-limited-time-only'
+                  assign offer_name = 'bogo'
+                elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by'
+                  assign offer_name = 'offerHidden'
+                elsif collection.handle == 'foundation-sale'
+                  assign offer_name = 'foundation-sale'
+                elsif collection.handle contains 'giverny'
+                  assign offer_name = 'giverny'
+                endif
+              endfor
+            %}
+            {% unless offer_name == 'offerHidden' %}
+              <div class="b-accordion m-full mt-space">
+                <div
+                  class="b-accordion-item m-accordion-expanded topborder"
+                  id="searchAcc"
+                >
+                  <span class="b-accordion-control m-accordion-expanded ">
+                    Available offers
+                    <span class="accordion-glimpse">
+                      <p class="bogo-text-wrapper">
+                        {% if offer_name == 'bogo' %}
+                          <b>Buy One Get </b> ...
+                        {% elsif offer_name == 'default' %}
+                          <b>Welcome Offer:</b> Extra 10% ...
+                        {% elsif offer_name == 'lamel' %}
+                          <b>Buy Two Get One Free</b> ...
+                        {% elsif offer_name == 'foundation-sale' %}
+                          <b>Get a Free Face Brush Worth ₹34</b> ...
+                        {% endif %}
+                      </p>
+                    </span>
+                  </span>
+                  <div class="b-accordion-container m-accordion-expanded b-pdp_accordion-column m-wide">
+                    <div class="b-pdp_accordion-columns">
+                      <div class="b-pdp_accordion-column m-wide">
+                        <div class="offer-container">
+                          <div class="bogo-wrapper">
+                            <div class="bogo-offer-wrapper">
+                              {% if offer_name == 'bogo' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper"><b>Buy One Get One Free</b></p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper"><b>Buy Two Get Two Free</b></p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    <b>
+                                      Offers on Selected
+                                      <a
+                                        href="https://www.hokmakeup.com/collections/bogo-sale-limited-time-only"
+                                        class="text-decoration-underline"
+                                        >Collection</a
+                                      ></b
+                                    >
+                                  </p>
+                                </div>
+                              {% elsif offer_name == 'default' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    Welcome Offer: <b>Extra 10% OFF </b>for First-Time Buyers!
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    Get a special surprise on orders above <span>₹799</span>!
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    Spend <span>₹1,499</span> or more and unlock an even bigger surprise!
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    <small style="font-size: 10px;">*Offers will be applied at checkout</small>
+                                  </p>
+                                </div>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endunless %}
+            <div class="atc_buttons mt-space">
+              {% render 'product_add_to_Cart', first_variant: first_variant %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Image Gallery carousel
+  let swiperList, swiperMain,freeSlide = {{ free_slider }};
+
+  function initializeSwiperList() {
+    return new Swiper(".productSlider", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      speed: 100,
+      direction: "vertical",
+      freeMode: true,
+      navigation: {
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
+      }
+    });
+  }
+
+  function initializeSwiperMain() {
+    return new Swiper(".productSlider2", {
+      spaceBetween: 10,
+      speed: 100,
+      zoom: true,
+      touchStartForcePreventDefault: true,
+      autoheight: true,
+      freeMode: true,
+      allowTouchMove: freeSlide,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true
+      },
+      thumbs: {
+        swiper: swiperList,
+      },
+      navigation: {
+        nextEl: ".product-button-next-main",
+        prevEl: ".product-button-prev-main",
+      }
+    });
+  }
+
+  function initializeSlider() {
+    swiperList = initializeSwiperList();
+    swiperMain = initializeSwiperMain();
+  }
+
+  // Initialize the sliders
+  initializeSlider();
+
+  {% unless product.metafields.custom.image_alt_text_fullfilled %}
+    {% unless template.suffix == "club-product" %}
+      swiperMain.slideTo({{ product.selected_or_first_available_variant.featured_media.position | minus: 1 }});
+    {% endunless %}
+  {% endunless %}
+
+  function updateSliderPosition(mediaPosition) {
+    swiperMain.slideTo(mediaPosition);
+  }
+
+  function updateProductInfo($target,optionId, optionValue, variantPrice, variantRackRate,variantPriceNumber,variant_availability,variantRackRateNumber, discountedPercentage, variantSku, mediaPosition, imgSource) {
+    
+      const closestContainer = $target.closest(".l-pdp-product_info_inner");
+      closestContainer.find(".b-product_price-value").text(variantPrice);
+      closestContainer.find("#main-product-handle-btn").attr("product_variantid", optionValue).removeAttr("disabled").text("Add to bag");
+      closestContainer.find(".product_swatch_colors_value").text(optionId);
+
+      {% unless product.metafields.custom.image_alt_text_fullfilled %}
+        {% unless template.suffix == "club-product" %}
+          updateSliderPosition(mediaPosition - 1);
+        {% else %}
+          swiperMain.slides[0].querySelector('img').src = imgSource;
+          updateSliderPosition(0);
+        {% endunless %}
+        $('.productSlider2').addClass('fade-slider');
+        setTimeout(() => {
+          $('.productSlider2').removeClass('fade-slider');
+        }, 300);
+      {% else %}
+        updateSliderPosition(0);
+      {% endunless %}
+
+      if (variantRackRateNumber > variantPriceNumber) {
+        closestContainer.find(".b-product_price-value.rack-rate").text(variantRackRate);
+        if (closestContainer.find(".discount_label").length >= 1) closestContainer.find(".discount_label").text(`${discountedPercentage}% OFF`);
+        closestContainer.find(".b-product_price-value.rack-rate").show();
+        closestContainer.find(".discount_svg_container").show();
+      } else {
+        closestContainer.find(".b-product_price-value.rack-rate").hide();
+        closestContainer.find(".discount_svg_container").hide();
+      }
+
+      const $skuText = $('.b-pdp_accordion-product_code');
+      if ($skuText) $skuText.text(variantSku);
+      if(variant_availability == "true"){
+         closestContainer.find("#main-product-handle-btn").text('Add to bag');
+         closestContainer.find("#main-product-handle-btn").removeAttr('disabled');
+      }else{
+         closestContainer.find("#main-product-handle-btn").text('Out Of Stock');
+         closestContainer.find("#main-product-handle-btn").attr('disabled','disabled');
+      }
+      
+      const currentUrl = window.location.href.replace(/\?variant=\d+/, '');
+      const modifiedUrl = currentUrl + `?variant=${optionValue}`;
+      window.history.replaceState(null, null, modifiedUrl);
+  }
+
+  function handleSwatchChange(event) {
+    const $target = $(event.target);
+    const optionId = $target.attr('variantid');
+    const variantPrice = $target.attr('variantPrice');
+    const variantRackRate = $target.attr('variantRackRate');
+    const imgSource = $target.attr('imgSource');
+    const variant_availability = $target.attr("is_variant_available");
+    const optionValue = $target.val();
+    const mediaPosition = Number($target.attr('mediaPosition'));
+    const variantPriceNumber = parseInt(variantPrice.replace(/[₹,]/g, '').trim());
+    const variantRackRateNumber = parseInt(variantRackRate.replace(/[₹,]/g, '').trim());
+    const discountedPercentage = Math.round(((variantRackRateNumber - variantPriceNumber) / variantRackRateNumber) * 100);
+    const variantSku = $target.attr('variant-sku');
+
+    updateProductInfo($target,optionId, optionValue, variantPrice, variantRackRate,variantPriceNumber,variant_availability,variantRackRateNumber, discountedPercentage, variantSku, mediaPosition, imgSource);
+  }
+
+  function handleFilteredSlides(variantOptionName) {
+    
+    const allSlides = $(".productSlider .swiper-slide").get().concat($(".productSlider2 .swiper-slide").get());
+    allSlides.forEach(slide => $(slide).addClass("non-swiper-slide"));
+
+    const filteredSlides = allSlides.reduce((acc, slide) => {
+      if ($(slide).attr('data-filter') === variantOptionName) acc.push(slide);
+      return acc;
+    }, []);
+
+    $(filteredSlides).removeClass("non-swiper-slide");
+  }
+
+  function handleMetafieldFullfilled($target) {
+    const variantOptionName = $target.parent().attr('data-value');
+    handleFilteredSlides(variantOptionName);
+    swiperList.destroy();
+    swiperMain.destroy();
+    initializeSlider();
+  }
+
+
+  function handleProductSwatchChange(event) {
+     handleSwatchChange(event);
+    {% if product.metafields.custom.image_alt_text_fullfilled %}
+     handleMetafieldFullfilled($(event.target));
+    {% endif %}
+  }
+
+  //Product Swatch Change
+  $('body').on('change', '.product.swatch :radio', handleProductSwatchChange);
+    
+    //Share Product Details
+    const getShareData = (
+      title = 'HOK Makeup',
+      productTitle = 'this amazing product',
+      text = `Hey! Checkout ${productTitle} at HOK Makeup`,
+      url = '{{ shop.url }}'
+    ) => {
+      const shareData = {
+        title,
+        text,
+        url,
+      };
+      return shareData;
+    };
+    const webShare = async (shareData) => {
+        if (navigator.share) 
+        try {
+            await navigator.share(shareData);
+        } catch (error) {
+            console.log("Error sharing:", error);
+        }
+        else console.log("Web Share API is not supported in this browser.");
+    };
+    $('#shareProduct').on('click', function () {
+      const productTitle = "{{- product.title -}}"; 
+      const productUrl = window.location.href ;
+         const shareData = {
+            title: "HOK Makeup",
+            text: `Hey! Checkout this ${productTitle} at HOK Makeup`,
+            url: productUrl
+          };
+      webShare(shareData);
+    });
+});
+</script>
+<script type="application/ld+json">
+  {{ product | structured_data }}
+</script>
+{% schema %}
+{
+  "name": "Product Meta",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Vendor Image",
+      "settings": [
+        {
+          "type": "text",
+          "id": "brand_name",
+          "label": "Brand Name"
+        }, {
+          "type": "image_picker",
+          "id": "brand_logo",
+          "label": "Brand Logo"
+        }
+      ]
+    }, {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "Title",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 1
+    }
+  ],
+"presets": [
+    {
+      "name": "Product Meta"
+    }
+  ]
+}
+{% endschema %}

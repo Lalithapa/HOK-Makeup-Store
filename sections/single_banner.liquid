@@ -1,0 +1,111 @@
+{%- style -%}
+    .section-{{ section.id }}-margin  {
+      margin-top: {{ section.settings.margin_top_desktop }}px;
+      margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .section-{{ section.id }}-margin  {
+        margin-top: {{ section.settings.margin_top_mobile }}px;
+        margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+      }
+    }
+  {%- endstyle -%}
+  <div class="section-{{ section.id }}-margin">
+    <div class="container-fluid p-0 scroll-trigger animate--fade-in">
+      <a href="{% if section.settings.shradhha_link == '#' %}javascript:void(0){% else %}{{ section.settings.shradhha_link }}{% endif %}">
+        <img
+          class="desktop_screen"
+          src="{{ section.settings.image | image_url }}"
+          alt="{{ section.settings.image | escape }}"
+          width="100%"
+          height="100%"
+          loading="eager"
+        >
+        <img
+          class="mobile_screen"
+          src="{{ section.settings.image_mobile | image_url }}"
+          alt="{{ section.settings.image_mobile | escape }}"
+          width="100%"
+          height="100%"
+          loading="eager"
+        >
+      </a>
+    </div>
+  </div>
+  {% schema %}
+  {
+    "name": "Single Banner",
+    "settings": [
+      {
+      "type": "header",
+      "content": "Desktop Margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Mobile Margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    },
+    {
+      "type": "url",
+      "id": "shradhha_link",
+      "label": "Shraddha Link"
+    },
+      {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+      {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Mobile Image"
+        }
+    ],
+     "presets": [
+    {
+      "name": "Single Banner"
+    }
+  ]
+  }
+  {% endschema %}
+  
