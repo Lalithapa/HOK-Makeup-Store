@@ -120,9 +120,9 @@
   z-index: 1;
 }
 .button-cta.atc {
-  color: #fff;
-  background-color: #212529;
-  font-size: 12px;
+  /* color: #fff;
+  background-color: #212529; */
+  font-size: 14px;
 }
 .button-cta:before,
 .button-cta:after {
@@ -144,7 +144,7 @@
 }
 .button-cta.atc:before,
 .button-cta.atc:after {
-  background-color: #fff;
+  background-color: #000000;
 }
 .button-cta:after {
   top: 180%;

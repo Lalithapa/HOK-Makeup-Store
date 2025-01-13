@@ -96,20 +96,18 @@
   display: flex;
 }
 .custom_label_badge {
-  position: absolute;
-  top: 8px;
   z-index: 1;
-  left: 8px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 .custom_label_badge .custom_badges {
-  color: #212529;
-  background: #efefef;
+  color: #393939;
+  border-radius: 50px;
+  background: #FFF0F1;
+  box-shadow: 0px 1px 1px 0px rgba(192, 178, 178, 0.25);
   padding: 3px 10px;
-  font-family: var(--family-heavy);
-  font-size: 10px;
+  font-family: var(--family-medium);
+  font-size: 11px;
   line-height: 12px;
   text-transform: uppercase;
   width: max-content;
@@ -194,7 +192,9 @@
 }
 .button-cta {
   display: inline-block;
-  border: 1px solid #212529;
+  background: #fff;
+  border: 0.65px solid #343333;
+  border-radius: 50px;
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
@@ -203,10 +203,10 @@
   color: #000;
   z-index: 1;
 }
-.button-cta.atc {
+/* .button-cta.atc {
   color: #fff;
   background-color: #212529;
-}
+} */
 .button-cta:before,
 .button-cta:after {
   content: "";
@@ -329,7 +329,7 @@
 /* .glass-product-overlay.active .swatch.variantHandler {
   margin-bottom: 8px;
 } */
-.glass-product-overlay.active .b-product_promo_tile-name_link {
+.glass-product-overlay.active .b-product_promo_vendor-name_link {
   font-size: 16px;
 }
 .glass-product-overlay.active .b-add_to_bag-button {

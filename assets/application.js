@@ -31,7 +31,8 @@ let newSlide = document.querySelector(".b-mini_cart-popover"),
     addVariants = document.getElementById("b-show-more"),
     showMoreSwatch = document.querySelector(".b-swatch_colors-wrapper"),
     overlayBg = document.getElementById("bg_dark"),
-    bgLoader = document.querySelector(".bg-loader");
+    bgLoader = document.querySelector(".bg-loader"),
+    quickview_sectionid = $("#product_Quick_View").attr("sectionId");
 var size = window.matchMedia("(max-width: 700px)"),
     maccor = "m-accordion-expanded",
     productFirstVariant = document.querySelectorAll(".b-add_to_bagId");
@@ -274,6 +275,80 @@ $("body").on("change", ".pockets.swatch :radio", function () {
         closest_container_button.attr('disabled', 'disabled');
     }
 });
+
+//fetch Quick View Data
+async function fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid) {
+    try {
+      const sectionUrl = `/products/${quickTogglebtnHandle}?section_id=${quickview_sectionid}`;
+      const response = await axios.get(sectionUrl);
+       await $(".pdp_quick_view").replaceWith(response.data); 
+    } catch (error) {
+      console.error("Error fetching quick view data:", error);
+    }
+  }
+  //Open Quick View
+  $("body").on("click", 'button[data-quickviewslide="open"]', async function () {
+    debugger;
+    quickTogglebtnId = $(this).attr("data-quickviewID");
+    let quickTogglebtnHandle = $(this).attr("data-quickviewHandle");
+    // Call the fetchQuickViewData function
+     await fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid);
+     let pdp_MediaData = JSON.parse($(this).attr("pdp_MediaData")),
+     sliders = "#quick_view_image_slider",firstImgPos = $(this).attr("firstImgPos");
+    if (pdp_MediaData.length == 0) return alert("Add Media Image");
+    const $swiperWrapper = $("<div>", {
+      class: "swiper-wrapper",
+    });
+      await pdp_MediaData.forEach((m) => {
+        const $imgContainer = $("<div>", {
+          class: "quick-view-slide swiper-slide",
+        });
+        let productMedia;
+        if (m.media_type.toLowerCase() === "image") {
+          productMedia = $("<img>", {
+            src: m.src,
+            alt: m.alt,
+            mediaId: m.id,
+            position: m.position,
+            class: "img-fluid asp34 quickMedia",
+          });
+        } else if (m.media_type.toLowerCase() === "video") {
+          productMedia = $("<video>", {
+            src: m.sources[0].url,
+            type: m.sources[0].mime_type,
+            poster: m.preview_image.src,
+            alt: m.alt,
+            autoplay: true,
+            loop: true,
+            mediaId: m.id,
+            position: m.position,
+            class: "img-fluid asp34 quickMedia",
+          });
+        }
+        // Append the img element to the div element
+        $imgContainer.append(productMedia);
+        $swiperWrapper.append($imgContainer);
+      });
+      $swiperWrapper.appendTo(sliders);
+      feedbackSlider = new Swiper(sliders, {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        freeMode: true,
+        navigation: { 
+            prevEl: '#quick_view_image_container .quick-view-prev', 
+            nextEl: '#quick_view_image_container .quick-view-next',
+        },
+        pagination: {
+          el: ".quick-view-slider-pagination",
+          dynamicBullets: true,
+        },
+      });
+      feedbackSlider.slideTo(firstImgPos - 1, 500, false);
+      $(`${sliders}`).fadeIn(100);
+      $("#product_Quick_View").addClass("quick-view-slide-open");
+      $(".quickview-overlay").addClass("quickview-overlay-open");
+      return $("html").addClass("overflow-hidden");
+  });
 
 // Adding Product from Product Pockets
 $("body").on("click", ".b-add_to_bag-button.button-cta.atc.pocket", async function (event) {
