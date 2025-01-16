@@ -32,7 +32,9 @@ let newSlide = document.querySelector(".b-mini_cart-popover"),
     showMoreSwatch = document.querySelector(".b-swatch_colors-wrapper"),
     overlayBg = document.getElementById("bg_dark"),
     bgLoader = document.querySelector(".bg-loader"),
-    quickview_sectionid = $("#product_Quick_View").attr("sectionId");
+    quickview_sectionid = $("#product_Quick_View").attr("sectionId"),
+    under992 = $(window).width() <= 992 &&
+    window.location.href.indexOf("www.hokmakeup.com/products/") > -1;
 var size = window.matchMedia("(max-width: 700px)"),
     maccor = "m-accordion-expanded",
     productFirstVariant = document.querySelectorAll(".b-add_to_bagId");
@@ -47,6 +49,15 @@ const cartSlide = () => {
             : ((newSlide.className += " show_Slider"),
                 $("#bg_dark").addClass("cartOverlay"));
 }
+// For Closing Quick View Slider
+const closeQV = () => {
+  $(".quick-view-slide-container").removeClass("quick-view-slide-open");
+  $(".quickview-overlay").removeClass("quickview-overlay-open");
+  $(".account-auth-container").removeClass("toggle-account-container");
+  $(".overlay-container").removeClass("overlay-open");
+  $(".filter-container").show();
+  $("html").removeClass("overflow-hidden");
+};
 
 // Closing Cart Slider
 const closeSlider = () => {
@@ -224,6 +235,7 @@ $("body").on("click", "#main-product-handle-btn", async function (event) {
 });
 
 // Product Pockets Swatches Variations
+
 $("body").on("change", ".pockets.swatch :radio", function () {
     let optionId = $(this).attr("variantid"),
         variantPrice = $(this).attr("variantPrice"),
@@ -288,7 +300,6 @@ async function fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid) {
   }
   //Open Quick View
   $("body").on("click", 'button[data-quickviewslide="open"]', async function () {
-    debugger;
     quickTogglebtnId = $(this).attr("data-quickviewID");
     let quickTogglebtnHandle = $(this).attr("data-quickviewHandle");
     // Call the fetchQuickViewData function
@@ -331,8 +342,8 @@ async function fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid) {
       });
       $swiperWrapper.appendTo(sliders);
       feedbackSlider = new Swiper(sliders, {
-        slidesPerView: 2,
-        spaceBetween: 8,
+        slidesPerView: 1.4,
+        spaceBetween: 13,
         freeMode: true,
         navigation: { 
             prevEl: '#quick_view_image_container .quick-view-prev', 
@@ -340,7 +351,7 @@ async function fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid) {
         },
         pagination: {
           el: ".quick-view-slider-pagination",
-          dynamicBullets: true,
+          type: "progressbar",
         },
       });
       feedbackSlider.slideTo(firstImgPos - 1, 500, false);
@@ -348,6 +359,50 @@ async function fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid) {
       $("#product_Quick_View").addClass("quick-view-slide-open");
       $(".quickview-overlay").addClass("quickview-overlay-open");
       return $("html").addClass("overflow-hidden");
+  });
+
+  $("body").on("click", ".close_overlay", function () {
+    closeQV();
+  });
+
+  // Varinat Dropdown
+function forDropMobile(string) {
+    $(".product-adding-for-mobile").css({
+      display: string,
+    });
+    $(".dropdown-color-name").css({
+      "max-width": "80px",
+    });
+    $(".dropdown-button").css({
+      "border-radius": "50px",
+    });
+  }
+
+  $("body").on("click",".dropdown-button", function () {
+$(".dropdown-content").show();
+$(".shadow-dropdown-icon").addClass("flip-dropdown-icon");
+if (under992) {
+    //add
+    $(".product-adding-for-mobile").css({
+    display: "block",
+    });
+    $(".dropdown-color-name").css({
+    "max-width": "100%",
+    overflow: "hidden",
+    "text-overflow": "ellipsis",
+    });
+    $(".dropdown-button").css({
+    "border-radius": "8px",
+    });
+}
+});
+$("body").on("click", ".dropdown-content li", function () {
+    // changeSwatch.call(this); // Pass the clicked element to the function
+    // var selectedOption = $(this).html();
+    // $(".dropdown-selected-shade").html(selectedOption);
+    $(".shadow-dropdown-icon").removeClass("flip-dropdown-icon");
+    $(".dropdown-content").hide();
+    under992 && forDropMobile("flex");
   });
 
 // Adding Product from Product Pockets

@@ -5,6 +5,7 @@
       "blocks": {
         "image_MXYCcT": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "banner-image-desktop": "shopify:\/\/shop_images\/Header_banner-desktop_6dc6e720-716d-46d9-b7b5-7e172032bd73.jpg",
             "banner-image-mobile": "shopify:\/\/shop_images\/Header_banner-mob.png",
