@@ -1,0 +1,361 @@
+.product_type_pdp {
+    font-family: Segoe UI Bold, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.13px;
+    margin: 8px 0px;
+  }
+  #product-offers-offers_AVEWGR .product-offers__item .h6 {
+    font-family: Segoe UI This;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.6px;
+  }
+  .swatches_color_shades_count:has(.swiper-initialized) {
+    width: 50%;
+    margin: 8px 20px;
+  }
+  .swatches_color_shades_count {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  .swatches_color_shades_count:has(.swiper-initialized){
+     gap: 2rem;
+  }
+  .swatches_color_shades_count:has(.swiper-initialized) .swatches_color_main {
+    width: 100%;
+  }
+  
+  .color__swatches_slider {
+    width: max-content;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .swiper-slide {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #d2c9c9;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swatches_color_main {
+    position: relative;
+    width: max-content;
+    height: 100%;
+    margin: auto 0;
+  }
+  .product-card__info .swiper-button-next:after,
+  .product-card__info .swiper-button-prev:after {
+    font-size: 0;
+  }
+  .product-card__info .swiper-button-next,
+  .product-card__info .swiper-button-prev {
+    top: 2px;
+    z-index: 1;
+  }
+  .swaches_count_shade {
+  }
+  .swatch_arrows{
+    position:relative;
+  }
+  .custom_featured_collection .h2,
+  .section-stack.custom_featured_collection .custom_para_featured_collection,
+  .collection__list_info .prose .h2 {
+    font-size: clamp(21px, 2vw, 50px);
+  }
+  .buy__now_it_btn {
+    width: 100%;
+    border: 1px solid #000;
+    margin: 10px 0px;
+    padding: 10px;
+    font-family: Segoe UI Bold, sans-serif;
+    font-weight: 700;
+    font-size: clamp(15px, 2vw, 20px);
+  }
+  .collection__list_info .prose .h2 {
+    font-family: Segoe UI Bold, sans-serif;
+    font-weight: 700;
+  }
+  .featured_collections_btn_main {
+    width: 100%;
+    border-bottom: 1px solid #dcd9d9;
+  }
+  product-recommendations .prose .h2,
+  recently-viewed-products .prose .h2 {
+    font-family: "Segoe UI Bold", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+  }
+  product-sticky-bar .buy-buttons .button {
+    background: #000;
+    border: none;
+  }
+  button.button.button--outline.w-full {
+    background: #000;
+    color: #fff;
+    font-family: Segoe UI Bold, sans-serif;
+    font-weight: 700;
+    font-size: clamp(15px, 2vw, 20px);
+  }
+  .text-on-sale.sale-price-productpage {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .text-subdued.line-through.compare_price_design {
+    color: #807e7e;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+  }
+  .buy__now_it_btn {
+    width: 100%;
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 10px;
+  }
+  span.discount-code-pdp {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    padding: 6px 18px;
+    background: #f8f4f6;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+  .product-info__block-item .product-title {
+    color: #000;
+    text-transform: capitalize;
+    font-family: "Segoe UI Bold", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-top: 0.7rem;
+  }
+  .product-info__block-item .product_btn_custom_buy {
+    display: flex;
+  }
+  .custom_product_add_button {
+    width: 100%;
+  }
+  .shopify-payment-button {
+    display: none !important;
+  }
+  button.product-card__quick-add-button.cstm_card_design.sold__out {
+    cursor: not-allowed;
+  }
+  .product-card__image {
+    aspect-ratio: 1;
+  }
+  .color-swatch.is-selected {
+    border: 0.5px solid #000;
+  }
+  .product-card__info {
+    min-height: 10rem;
+  }
+  .collection-card .custom_design_collectioncard .button{
+    border: 0.8px solid #4D4D4D;
+  }
+  .collection-card .custom_design_collectioncard,
+  .collection-card .custom_design_collectioncard .button {
+    width: 100%;
+    border-color: unset;
+    border-radius: 5px;
+    padding: 10px 0;
+    background: unset;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .product-card .badge--on-sale {
+    border-radius: 2px;
+    background: #f8f4f6;
+    color: #000;
+    text-transform: capitalize;
+    font-family: Roboto;
+    font-size: 1rem;
+    padding: 7px 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  .product-card__quick-add-button.cstm_card_design {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+  .product-card form {
+    width: 100%;
+  }
+  .cstm_card_design .text-on-sale {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 6px;
+    font-family: "Roboto", sans-serif;
+  }
+  compare-at-price.text-subdued {
+    color: #656565;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .product_button_with-price {
+    font-family: "Segoe UI Bold", sans-serif;
+    font-weight: 700;
+  }
+  
+  .swatch-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .swatch-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .swatch-item:last-child {
+    border-bottom: none;
+  }
+  
+  .swatch-name {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .swatch-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .dropdown-shade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .dropdown-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .dropdown-arrow {
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+  .swatch-list {
+    display: none;
+  }
+  
+  /* .dropdown-header.active .dropdown-arrow {
+    transform: rotate(180deg);
+  } */
+  .prose.text-center.custom_rich_text_design {
+    text-align: left;
+    color: #7a7a7a;
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(80px, 2vw, 32px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .section-stack.custom_featured_collection .custom_featured_h {
+    color: #535353;
+    font-family: "Roboto";
+    font-size: 18px;
+    padding: 10px 60px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+  button.h2.custom_featured_h[aria-current="true"] {
+    font-weight: 600;
+  }
+  .section-stack.custom_featured_collection .custom_para_featured_collection {
+    color: #000;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0;
+    word-spacing: 6px;
+    text-transform: capitalize;
+  }
+  product-recommendations .prose .h2,
+  recently-viewed-products .prose .h2 {
+    letter-spacing: normal;
+  }
+  
+  @media (max-width: 767px) {
+    .collection-list .collection-card {
+      flex-basis: 45% !important;
+    }
+    .section-stack.custom_featured_collection .custom_featured_h {
+      font-size: 13px;
+      padding: 8px 16px;
+    }
+  
+    .collection-list {
+      gap: 10px;
+      justify-content: space-evenly;
+    }
+    .product_button_with-price,
+    compare-at-price.text-subdued,
+    compare-at-price.text-subdued {
+      font-size: 12px;
+    }
+    .product-card__info {
+      min-height: 9rem;
+    }
+    .product-info__block-item .product-title {
+      font-size: 24px;
+    }
+    product-recommendations .prose .h2,
+    recently-viewed-products .prose .h2 {
+      font-size: 21px;
+    }
+  
+    .product-sticky-bar.is-visible {
+      padding: 0px;
+    }
+    .product-card .badge--on-sale {
+      font-size: 12px;
+    }
+  }
+  
