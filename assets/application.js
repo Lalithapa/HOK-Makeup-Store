@@ -1,8 +1,3 @@
-// Check If Product Page
-function isProductPage() {
-    return window.location.pathname.includes("/products/");
-}
-
 //Cart Fetch
 const fetchCart = (data) => {
     const { items, sections } = data,
@@ -32,10 +27,9 @@ let newSlide = document.querySelector(".b-mini_cart-popover"),
     showMoreSwatch = document.querySelector(".b-swatch_colors-wrapper"),
     overlayBg = document.getElementById("bg_dark"),
     bgLoader = document.querySelector(".bg-loader"),
-    quickview_sectionid = $("#product_Quick_View").attr("sectionId"),
     under992 = $(window).width() <= 992 &&
     window.location.href.indexOf("www.hokmakeup.com/products/") > -1;
-var size = window.matchMedia("(max-width: 700px)"),
+var feedbackSlider,size = window.matchMedia("(max-width: 700px)"),
     maccor = "m-accordion-expanded",
     productFirstVariant = document.querySelectorAll(".b-add_to_bagId");
 
@@ -49,15 +43,7 @@ const cartSlide = () => {
             : ((newSlide.className += " show_Slider"),
                 $("#bg_dark").addClass("cartOverlay"));
 }
-// For Closing Quick View Slider
-const closeQV = () => {
-  $(".quick-view-slide-container").removeClass("quick-view-slide-open");
-  $(".quickview-overlay").removeClass("quickview-overlay-open");
-  $(".account-auth-container").removeClass("toggle-account-container");
-  $(".overlay-container").removeClass("overlay-open");
-  $(".filter-container").show();
-  $("html").removeClass("overflow-hidden");
-};
+
 
 // Closing Cart Slider
 const closeSlider = () => {
@@ -233,177 +219,7 @@ $("body").on("click", "#main-product-handle-btn", async function (event) {
         productKey = Number($(this).attr("product_variantId"));
     await reUseCart(event, "/cart/add.js", productKey, quant);
 });
-
-// Product Pockets Swatches Variations
-
-$("body").on("change", ".pockets.swatch :radio", function () {
-    let optionId = $(this).attr("variantid"),
-        variantPrice = $(this).attr("variantPrice"),
-        variantRackRate = $(this).attr("variantRackRate"),
-        variant_availability = $(this).attr("is_variant_available"),
-        imgSource = $(this).attr("imgSource"),
-        optionValue = $(this).val(),
-        variantPriceNumber = parseInt(variantPrice.replace(/[₹,]/g, "").trim()),
-        variantRackRateNumber = parseInt(
-            variantRackRate.replace(/[₹,]/g, "").trim()
-        ),
-        discountedPercentage = Math.round(
-            ((variantRackRateNumber - variantPriceNumber) / variantRackRateNumber) *
-            100
-        ),
-        closestContainer = $(this).closest(".b-product_promo_tile"),
-        closest_container_button = closestContainer.find(".b-add_to_bag-button.button-cta.atc.pocket")
-    closestContainer.find(".img_url_1").attr("src", imgSource),
-        closestContainer.find(".variant_name").text(optionId),
-        closestContainer.find(".b-product_price-value").text(variantPrice),
-        closestContainer
-            .find(".b-add_to_bag-button.b-add_to_bagId")
-            .val(optionValue),
-        closestContainer
-            .find(".b-add_to_bag-button.button-cta.atc")
-            .attr("cartid", optionValue)
-            .val(optionValue),
-        closestContainer
-            .find(".b-add_to_bag-button.button-cta.atc")
-            .removeAttr("disabled")
-            .text("Add to Bag"),
-        variantRackRateNumber > variantPriceNumber
-            ? (closestContainer
-                .find(".b-product_price-value.rack-rate")
-                .text(variantRackRate),
-                closestContainer.find(".discount_label").length >= 1 &&
-                closestContainer
-                    .find(".discount_label")
-                    .text(`${discountedPercentage}% OFF`),
-                closestContainer.find(".b-product_price-value.rack-rate").show(),
-                closestContainer.find(".discount_svg_container").show())
-            : (closestContainer.find(".b-product_price-value.rack-rate").hide(),
-                closestContainer.find(".discount_svg_container").hide());
-    if (variant_availability == "true") {
-        closest_container_button.text('Add to bag');
-        closest_container_button.removeAttr('disabled');
-    } else {
-        closest_container_button.text('Out Of Stock');
-        closest_container_button.attr('disabled', 'disabled');
-    }
-});
-
-//fetch Quick View Data
-async function fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid) {
-    try {
-      const sectionUrl = `/products/${quickTogglebtnHandle}?section_id=${quickview_sectionid}`;
-      const response = await axios.get(sectionUrl);
-       await $(".pdp_quick_view").replaceWith(response.data); 
-    } catch (error) {
-      console.error("Error fetching quick view data:", error);
-    }
-  }
-  //Open Quick View
-  $("body").on("click", 'button[data-quickviewslide="open"]', async function () {
-    quickTogglebtnId = $(this).attr("data-quickviewID");
-    let quickTogglebtnHandle = $(this).attr("data-quickviewHandle");
-    // Call the fetchQuickViewData function
-     await fetchQuickViewData(quickTogglebtnHandle, quickview_sectionid);
-     let pdp_MediaData = JSON.parse($(this).attr("pdp_MediaData")),
-     sliders = "#quick_view_image_slider",firstImgPos = $(this).attr("firstImgPos");
-    if (pdp_MediaData.length == 0) return alert("Add Media Image");
-    const $swiperWrapper = $("<div>", {
-      class: "swiper-wrapper",
-    });
-      await pdp_MediaData.forEach((m) => {
-        const $imgContainer = $("<div>", {
-          class: "quick-view-slide swiper-slide",
-        });
-        let productMedia;
-        if (m.media_type.toLowerCase() === "image") {
-          productMedia = $("<img>", {
-            src: m.src,
-            alt: m.alt,
-            mediaId: m.id,
-            position: m.position,
-            class: "img-fluid asp34 quickMedia",
-          });
-        } else if (m.media_type.toLowerCase() === "video") {
-          productMedia = $("<video>", {
-            src: m.sources[0].url,
-            type: m.sources[0].mime_type,
-            poster: m.preview_image.src,
-            alt: m.alt,
-            autoplay: true,
-            loop: true,
-            mediaId: m.id,
-            position: m.position,
-            class: "img-fluid asp34 quickMedia",
-          });
-        }
-        // Append the img element to the div element
-        $imgContainer.append(productMedia);
-        $swiperWrapper.append($imgContainer);
-      });
-      $swiperWrapper.appendTo(sliders);
-      feedbackSlider = new Swiper(sliders, {
-        slidesPerView: 1.4,
-        spaceBetween: 13,
-        freeMode: true,
-        navigation: { 
-            prevEl: '#quick_view_image_container .quick-view-prev', 
-            nextEl: '#quick_view_image_container .quick-view-next',
-        },
-        pagination: {
-          el: ".quick-view-slider-pagination",
-          type: "progressbar",
-        },
-      });
-      feedbackSlider.slideTo(firstImgPos - 1, 500, false);
-      $(`${sliders}`).fadeIn(100);
-      $("#product_Quick_View").addClass("quick-view-slide-open");
-      $(".quickview-overlay").addClass("quickview-overlay-open");
-      return $("html").addClass("overflow-hidden");
-  });
-
-  $("body").on("click", ".close_overlay", function () {
-    closeQV();
-  });
-
-  // Varinat Dropdown
-function forDropMobile(string) {
-    $(".product-adding-for-mobile").css({
-      display: string,
-    });
-    $(".dropdown-color-name").css({
-      "max-width": "80px",
-    });
-    $(".dropdown-button").css({
-      "border-radius": "50px",
-    });
-  }
-
-  $("body").on("click",".dropdown-button", function () {
-$(".dropdown-content").show();
-$(".shadow-dropdown-icon").addClass("flip-dropdown-icon");
-if (under992) {
-    //add
-    $(".product-adding-for-mobile").css({
-    display: "block",
-    });
-    $(".dropdown-color-name").css({
-    "max-width": "100%",
-    overflow: "hidden",
-    "text-overflow": "ellipsis",
-    });
-    $(".dropdown-button").css({
-    "border-radius": "8px",
-    });
-}
-});
-$("body").on("click", ".dropdown-content li", function () {
-    // changeSwatch.call(this); // Pass the clicked element to the function
-    // var selectedOption = $(this).html();
-    // $(".dropdown-selected-shade").html(selectedOption);
-    $(".shadow-dropdown-icon").removeClass("flip-dropdown-icon");
-    $(".dropdown-content").hide();
-    under992 && forDropMobile("flex");
-  });
+  
 
 // Adding Product from Product Pockets
 $("body").on("click", ".b-add_to_bag-button.button-cta.atc.pocket", async function (event) {

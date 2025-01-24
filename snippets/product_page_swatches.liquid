@@ -37,7 +37,7 @@
           class="header_box"
         {% endif %}
       >
-        <div
+        <div id="main_product_page"
           class="product swatch variantHandler {% unless template contains 'collection' or template contains 'search' %}collec{% endunless %}"
           swiper_slider="{{ product.id | append: section.id | remove: '-' |  remove: '_'  }}"
           data-option-index="{{ indexIs }}"

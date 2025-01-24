@@ -45,12 +45,12 @@
               {% endfor %}
             </div>
         {% endunless %}
-        {% comment %} <div
+         <div
           style="display: block;"
           class="gw-add-to-wishlist-product-card-placeholder"
           data-gw-product-id="{{ product.id }}"
           data-gw-variant-id="{{ product.first_available_variant.id }}"
-        ></div> {% endcomment %}
+        ></div>
       {% if showCross %}
         <div class="handle_product_overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -92,6 +92,14 @@
     {% comment %} PDP Image Ends {% endcomment %}
     {% comment %} PDP Details Starts {% endcomment %}
     <div class="b-product_promo_tile-content">
+      {% unless remove_extra_details %}
+       <div class="rating">
+            <div
+              class="gw-rv-listing-average-placeholder"
+              data-product_id="{{ product.id }}"
+            ><br></div>
+          </div>
+      {% endunless %}
       {% unless showCross %}
         <div class="custom_label_badge">
           {% for tags in product.tags %}
@@ -113,16 +121,10 @@
             {% endif %}
           {% endfor %}
         </div>
-        <div class="rating d-none">
-            <div
-              class="gw-rv-listing-average-placeholder"
-              data-product_id="{{ product.id }}"
-            ><br></div>
-          </div>
     {% endunless %}
       <p class="b-product_promo_vendor-name">
         <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}">
-          {{- product.vendor | remove: 'BOGO'  -}}
+          {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2'  -}}
         </a>
         <a class="b-product_promo_tile-name_link" href="{{- product.url -}}">
           {{- product.title  -}}

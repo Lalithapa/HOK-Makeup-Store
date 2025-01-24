@@ -546,7 +546,7 @@
       ],
       "settings": {
         "showContainer": "container",
-        "image_priority": true,
+        "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
@@ -667,7 +667,7 @@
       ],
       "settings": {
         "showContainer": "container",
-        "image_priority": true,
+        "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#fbf9f4",
@@ -690,6 +690,28 @@
         "num-slides-xl": "4",
         "num-slides-2xl": "4",
         "showArrow": true
+      }
+    },
+    "skincare_tabs_YG3gjy": {
+      "type": "skincare_tabs",
+      "settings": {
+        "banner-video-desktop": "shopify:\/\/files\/videos\/skincare-desktop-video.mp4",
+        "banner-video-mobile": "shopify:\/\/files\/videos\/skincare-mobile-video.mp4",
+        "collection": "cleanser",
+        "collection2": "toners",
+        "collection3": "eye-serums",
+        "collection4": "moisturizer",
+        "collection5": "eye-care",
+        "collectiona": "acne-skincare",
+        "collection2a": "hyperpigmentation-skincare",
+        "collection3a": "aging-skincare",
+        "collection4a": "oily-skin-skincare",
+        "collection6a": "dull-skin-skincare",
+        "collectionb": "hyaluronic-acid-skincare",
+        "collection2b": "vitamin-c-skincare",
+        "collection3b": "retinol-skincare",
+        "collection4b": "niacinamide-skincare",
+        "collection5b": "salicylic-acid-skincare"
       }
     },
     "scroll_model_h4Hqa3": {
@@ -1687,6 +1709,7 @@
     "main_hero_banner_qcCWtj",
     "multi_functional_container_NewNkt",
     "multi_functional_container_4M7jiW",
+    "skincare_tabs_YG3gjy",
     "scroll_model_h4Hqa3",
     "hok_featured_collection_yCrqB9",
     "grid_media_collection_krrKMw",

@@ -52,6 +52,10 @@ menu-drawer > details[open] > summary::before {
   transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
 }
 
+.menu-drawer-container.menu-opening ~ html {
+  overflow: hidden;
+}
+
 .js details[open].menu-opening > .menu-drawer,
 details[open].menu-opening > .menu-drawer__submenu {
   transform: translateX(0);

@@ -405,5 +405,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".gw-rv-listing-average-reviews .gw-rv-avg-rating[aria-label=\"0 out of 5 ratings\"] {display: none;}"
+    ]
   }
 }

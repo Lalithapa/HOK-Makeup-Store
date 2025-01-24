@@ -200,8 +200,9 @@
   </div>
 </div>
 <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-  let numSlidesSm = parseFloat('{{ num_slides_sm }}'),numSlidesMd = parseFloat('{{ num_slides_md }}'),numSlidesLg = parseFloat('{{ num_slides_lg }}'),numSlidesXl = parseFloat('{{ num_slides_xl }}'),numSlides2xl = parseFloat('{{ num_slides_2xl }}');
+  // document.addEventListener('DOMContentLoaded', function () {
+  {% assign section_unique_name = section.id |  remove: '-' |  remove: '_'  %}
+  let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
   {% if section.settings.enableShuffle %}
      function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -216,11 +217,11 @@
     slides.forEach(slide => swiperWrapper.appendChild(slide));
     {% endif %}
 
-  const bannerSlider{{ section.id |  remove: '-' |  remove: '_'   }} = new Swiper('#square-banner-carousel-{{ section.id }}', {
+  const bannerSlider{{ section_unique_name }} = new Swiper('#square-banner-carousel-{{ section.id }}', {
     spaceBetween: 12,
     paginationClickable: true,
     speed: {{ section.settings.slide_speed |  remove: 'px'  }} ,
-    slidesPerView: numSlidesSm,
+    slidesPerView: numSlidesSm{{ section_unique_name }},
     centeredSlides: {{ section.settings.showCenter }},
     autoHeight:true,
     freeMode: {{ section.settings.showFreeScroll }},
@@ -233,18 +234,18 @@
     touchStartForcePreventDefault:true,
     breakpoints: {
       768: {
-        slidesPerView: numSlidesMd
+        slidesPerView: numSlidesMd{{ section_unique_name }}
       },
       1024: {
-        slidesPerView: numSlidesLg,
+        slidesPerView: numSlidesLg{{ section_unique_name }},
         spaceBetween: 20
       },
       1280: {
-        slidesPerView: numSlidesXl,
+        slidesPerView: numSlidesXl{{ section_unique_name }},
         spaceBetween: 20
       },
       1536: {
-        slidesPerView: numSlides2xl,
+        slidesPerView: numSlides2xl{{ section_unique_name }},
         spaceBetween: 20
       },
     }
@@ -252,7 +253,7 @@
     // parallax: true,
     // roundLengths: true,
   });
-  });
+  // });
 </script>
 
 {% schema %}

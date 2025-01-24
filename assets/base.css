@@ -122,7 +122,7 @@
 .button-cta.atc {
   /* color: #fff;
   background-color: #212529; */
-  font-size: 14px;
+  font-size: 13px;
 }
 .button-cta:before,
 .button-cta:after {
@@ -813,16 +813,22 @@ summary::-webkit-details-marker {
 }
 
 *:focus-visible {
-  outline: var(--focused-base-outline);
+  /* outline: var(--focused-base-outline);
   outline-offset: var(--focused-base-outline-offset);
-  box-shadow: var(--focused-base-box-shadow);
+  box-shadow: var(--focused-base-box-shadow); */
+  outline: none;
+  outline-offset: 0;
+  box-shadow: none;
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused {
-  outline: var(--focused-base-outline);
+  /* outline: var(--focused-base-outline);
   outline-offset: var(--focused-base-outline-offset);
-  box-shadow: var(--focused-base-box-shadow);
+  box-shadow: var(--focused-base-box-shadow); */
+  outline: none;
+  outline-offset: 0;
+  box-shadow: none;
 }
 
 /*
@@ -1739,9 +1745,10 @@ details[open] > .share-button__fallback {
   right: var(--inputs-border-width);
   bottom: var(--inputs-border-width);
   left: var(--inputs-border-width);
-  border: 0.1rem solid transparent;
+  border: 0;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground));
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+  /* box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity)); */
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -1771,7 +1778,8 @@ details[open] > .share-button__fallback {
 .customer .field input:focus-visible,
 .customer select:focus-visible,
 .localization-form__select:focus-visible.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground)); */
+  box-shadow: none;
   outline: 0;
   border-radius: var(--inputs-radius);
 }
@@ -1781,7 +1789,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer select:focus,
 .localization-form__select:focus.localization-form__select:after {
-  box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
+  /* box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground)); */
   outline: 0;
   border-radius: var(--inputs-radius);
 }

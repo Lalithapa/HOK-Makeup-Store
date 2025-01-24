@@ -21,7 +21,7 @@
   });
 </script>
 <section class="container pt-1 pt-md-4">
-  <div id="breadcrumbs" class="mobile_screen">
+  <div id="breadcrumbs" class="mobile_screen gap-2">
     {% render 'breadcrumbs' %}
   </div>
   <div class="row gap-0 gap-md-3 gap-lg-4 gap-xl-5 gap-mt-5 m-auto">
@@ -568,7 +568,7 @@
   }
 
   //Product Swatch Change
-  $('body').on('change', '.product.swatch :radio', handleProductSwatchChange);
+  $('body').on('change', '#main_product_page.product.swatch :radio', handleProductSwatchChange);
     
     //Share Product Details
     const getShareData = (

@@ -89,6 +89,10 @@
     },
     "related-products": {
       "type": "related-products",
+      "custom_css": [
+        ".b-product_promo_tile-buynow.mt-auto {display: none;}",
+        "@media screen and (max-width: 768px) {.b-product_promo_tile-content {height: calc(220px - 47px); }}"
+      ],
       "settings": {
         "heading": "<strong>You May Also Like<\/strong>",
         "heading_size": "h1",

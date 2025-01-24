@@ -275,7 +275,8 @@
                         class="{% if block.settings['banner-image-mobile'] != blank %}desktop_screen{% endif %}"
                         height="100%"
                         width="100%" 
-                        fetchpriority="{% if forloop.first %}high {% else %}auto{% endif %}"
+                        fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+                        loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                     >
                         {% if block.settings['banner-image-mobile'] != blank %}
                             <img
@@ -283,7 +284,8 @@
                             class="mobile_screen"
                             height="100%"
                             width="100%"
-                            fetchpriority="{% if forloop.first %}high {% else %}auto{% endif %}"
+                            fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+                            loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                             >
                         {% endif %}
                     {% elsif block.type == 'video' %}
@@ -339,7 +341,7 @@
                     {% comment %} button 1 desktop {% endcomment %}
                     <a
                       href="{{ block.settings['btn1-url'] }}"
-                      class="desktop_screen button-cta main-carousel-cta-btn main-carousel-cta-btn-1{% if block.settings['btn1-bg-desktop'] == '#ffffff' %} bg-white{% elsif block.settings['btn1-bg-desktop'] == '#000000' %} bg-black{% else %} bg-transparent{% endif %}{% if block.settings['btn1-bg-hover-desktop'] == '#ffffff' %} bg-hover-white{% elsif block.settings['btn1-bg-hover-desktop'] == '#000000' %} bg-hover-black{% else %} bg-hover-transparent{% endif %}
+                      class="desktop_screen button-cta square_pill main-carousel-cta-btn main-carousel-cta-btn-1{% if block.settings['btn1-bg-desktop'] == '#ffffff' %} bg-white{% elsif block.settings['btn1-bg-desktop'] == '#000000' %} bg-black{% else %} bg-transparent{% endif %}{% if block.settings['btn1-bg-hover-desktop'] == '#ffffff' %} bg-hover-white{% elsif block.settings['btn1-bg-hover-desktop'] == '#000000' %} bg-hover-black{% else %} bg-hover-transparent{% endif %}
 {% if block.settings['btn1-text-desktop'] == '#ffffff' %} text-white{% elsif block.settings['btn1-text-desktop'] == '#000000' %} text-black{% endif %}
 {% if block.settings['btn1-text-hover-desktop'] == '#ffffff' %} text-hover-white{% elsif block.settings['btn1-text-hover-desktop'] == '#000000' %} text-hover-black{% endif %}"
                     >
@@ -374,7 +376,7 @@
                     {% comment %} button 1 desktop {% endcomment %}
                     <a
                       href="{{ block.settings['btn2-url'] }}"
-                      class="desktop_screen button-cta main-carousel-cta-btn main-carousel-cta-btn-2{% if block.settings['btn2-bg-desktop'] == '#ffffff' %} bg-white{% elsif block.settings['btn2-bg-desktop'] == '#000000' %} bg-black{% else %} bg-transparent{% endif %}
+                      class="desktop_screen button-cta square_pill main-carousel-cta-btn main-carousel-cta-btn-2{% if block.settings['btn2-bg-desktop'] == '#ffffff' %} bg-white{% elsif block.settings['btn2-bg-desktop'] == '#000000' %} bg-black{% else %} bg-transparent{% endif %}
 {% if block.settings['btn2-bg-hover-desktop'] == '#ffffff' %} bg-hover-white{% elsif block.settings['btn2-bg-hover-desktop'] == '#000000' %} bg-hover-black{% else %} bg-hover-transparent{% endif %}
 {% if block.settings['btn2-text-desktop'] == '#ffffff' %} text-white{% elsif block.settings['btn2-text-desktop'] == '#000000' %} text-black{% endif %}
 {% if block.settings['btn2-text-hover-desktop'] == '#ffffff' %} text-hover-white{% elsif block.settings['btn2-text-hover-desktop'] == '#000000' %} text-hover-black{% endif %}"
@@ -409,27 +411,30 @@
     </div>
   </div>
 <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-        const heroSlider{{ section.id | remove: '-' | remove: '_' }} = new Swiper('#hero-carousel-{{ section.id }}', {
-            spaceBetween: 12,
-            speed: {{ section.settings.slide_speed | remove: 'px'  }},
-            {% if section.settings.autoplay %}
-                autoplay: {
-                    delay: { { section.settings.autoplay_time } },
-                    disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                },
-            {% endif %}
-            touchStartForcePreventDefault: true,
-                navigation: {
-                prevEl: '#carousel-prev-{{ section.id }}',
-                    nextEl: '#carousel-next-{{ section.id }}',
-            },
-            pagination: {
-                el: "#carousel-pagination-wrapper-{{ section.id }}"
-            }
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    const heroSlider{{ section.id | remove: '-' | remove: '_' }} = new Swiper('#hero-carousel-{{ section.id }}', {
+        preloadImages: false, // Disable preloading for lazy loading
+        lazy: true,           // Enable lazy loading
+        spaceBetween: 12,
+        speed: {{ section.settings.slide_speed }},
+        touchStartForcePreventDefault:true,
+        {% if section.settings.autoplay %}
+        autoplay: {
+            delay: {{ section.settings.autoplay_time }},
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        {% endif %}
+        navigation: {
+            prevEl: '#carousel-prev-{{ section.id }}',
+            nextEl: '#carousel-next-{{ section.id }}',
+        },
+        pagination: {
+            el: "#carousel-pagination-wrapper-{{ section.id }}",
+            clickable: true,
+        }
     });
+});
 </script>
   
   {% schema %}

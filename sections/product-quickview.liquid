@@ -1,130 +1,168 @@
 {% comment %} Quick View Modal for {{ first_variant }} {% endcomment %}
-{% assign first_variant = product.selected_or_first_available_variant %}
-{% comment %}  quick-view-slide-open {% endcomment %}
-<div class="quick-view-slide-container" id="product_Quick_View" sectionId="{{ section.id }}">
-  <div class="quick-view-main-container">
-    <div class="hok-quick-view">
-      <div class="hok-quick-view-header border-0">
-        <h2 class="hok-quick-view-title text-center mb-0" id="staticBackdropLabel">{{ product.title }}</h2>
-        <button type="button" class="hok-quick-view-close close_overlay">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M1 1L13 13" stroke="#393939" stroke-linecap="round"/>
-            <path d="M13 1L1 13" stroke="#393939" stroke-linecap="round"/>
-          </svg>
-        </button>
+  {% liquid
+    assign first_variant = product.selected_or_first_available_variant 
+    assign offer_name = 'default'
+    for collection in product.collections
+      if collection.handle == 'bogo-sale-limited-time-only'
+        assign offer_name = 'bogo'
+      elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by'
+        assign offer_name = 'offerHidden'
+      elsif collection.handle == 'foundation-sale'
+        assign offer_name = 'foundation-sale'
+      endif
+    endfor
+  %}
+  {% comment %} quick-view-slide-open {% endcomment %}
+  <div class="quick-view-slide-container{% if first_variant %} quick-view-slide-open{% endif %}" id="product_Quick_View" sectionId="{{ section.id }}">
+    <div class="quick-view-main-container h-100">
+      <div class="hok-quick-view">
+        {% if first_variant == 'null' or first_variant == blank %}
+        <div id="quickview-spinner-wrapper" class="d-center h-100">
+        <span class="quick_view_loader">
+              <wbr>
+          </span>
       </div>
-      <div class="hok-quick-view-images">
-        <div class="quick-slideshow">
-          {% comment %} <ul class="controls desktop-screen list-unstyled" id="quick_view_image_container">
-            <li class="quick-view-prev">
-              <button class="quick-prev-slide">
-                  {{ 'arrow-back.svg' | inline_asset_content }}
-              </button>
-            </li>  
-            <li class="quick-view-next">
-                <button class="quick-next-slide">
-                {{ 'arrow-next.svg' | inline_asset_content }}
-                </button>
-              </li>
-          </ul> {% endcomment %}
-          <div class="quick-view-slider overflow-hidden" id="quick_view_image_slider">
-            <div class="swiper-pagination quick-view-slider-pagination"></div>
+      {% else %}
+        <div class="hok-quick-view-header border-0">
+          <h2 class="hok-quick-view-title text-center mb-0" id="staticBackdropLabel">{{ product.title }}</h2>
+          <button type="button" class="hok-quick-view-close close_overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 1L13 13" stroke="#393939" stroke-linecap="round" />
+              <path d="M13 1L1 13" stroke="#393939" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="hok-quick-view-images">
+          <div class="quick-slideshow">
+            <div class="quick-view-slider overflow-hidden" id="quick_view_image_slider">
+              <div class="swiper-pagination quick-view-slider-pagination"><br></div>
+            </div>
           </div>
         </div>
-      </div>
-       <div class="quick-view-details">
-        <div class="live-count d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-            <path d="M18.304 19.3159C20.224 17.8439 23.04 15.6679 23.04 7.5399V6.8999H8.95996V7.5399C8.95996 15.6679 11.84 17.8439 13.696 19.3159C14.784 20.1479 15.36 20.5959 15.36 21.6199V23.5399C14.336 23.6679 13.312 24.0519 12.928 24.8199H11.52C10.816 24.8199 10.24 25.3959 10.24 26.0999H21.76C21.76 25.3959 21.184 24.8199 20.48 24.8199H19.072C18.688 24.0519 17.728 23.6679 16.64 23.5399V21.6199C16.64 20.5959 17.152 20.1479 18.304 19.3159ZM16 19.6359C15.616 19.1239 15.04 18.6759 14.528 18.2919C12.8 16.9479 10.432 15.1559 10.304 8.1799H21.824C21.696 15.0919 19.328 16.9479 17.6 18.2919C16.96 18.7399 16.384 19.1239 16 19.6359Z" fill="black"/>
-            <path d="M12.0321 17.7799C11.9681 17.7799 5.12012 16.3079 5.12012 8.81993V8.17993H9.60012V9.45993H6.40012C6.78412 15.3479 12.2241 16.4999 12.2881 16.4999L12.0321 17.7799ZM19.9681 17.7799L19.7121 16.4999C19.9681 16.4359 25.2161 15.2839 25.6001 9.45993H22.4001V8.17993H26.8801V8.81993C26.8801 16.3079 20.0321 17.7799 19.9681 17.7799Z" fill="black"/>
+        <div class="quick-view-details">
+          <div class="live-count d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+              <path
+                d="M18.304 19.3159C20.224 17.8439 23.04 15.6679 23.04 7.5399V6.8999H8.95996V7.5399C8.95996 15.6679 11.84 17.8439 13.696 19.3159C14.784 20.1479 15.36 20.5959 15.36 21.6199V23.5399C14.336 23.6679 13.312 24.0519 12.928 24.8199H11.52C10.816 24.8199 10.24 25.3959 10.24 26.0999H21.76C21.76 25.3959 21.184 24.8199 20.48 24.8199H19.072C18.688 24.0519 17.728 23.6679 16.64 23.5399V21.6199C16.64 20.5959 17.152 20.1479 18.304 19.3159ZM16 19.6359C15.616 19.1239 15.04 18.6759 14.528 18.2919C12.8 16.9479 10.432 15.1559 10.304 8.1799H21.824C21.696 15.0919 19.328 16.9479 17.6 18.2919C16.96 18.7399 16.384 19.1239 16 19.6359Z"
+                fill="black" />
+              <path
+                d="M12.0321 17.7799C11.9681 17.7799 5.12012 16.3079 5.12012 8.81993V8.17993H9.60012V9.45993H6.40012C6.78412 15.3479 12.2241 16.4999 12.2881 16.4999L12.0321 17.7799ZM19.9681 17.7799L19.7121 16.4999C19.9681 16.4359 25.2161 15.2839 25.6001 9.45993H22.4001V8.17993H26.8801V8.81993C26.8801 16.3079 20.0321 17.7799 19.9681 17.7799Z"
+                fill="black" />
             </svg>
-          <p>Earn upto <strong>{{ first_variant.price |  divided_by: 10 }}</strong> points on this purchase</p>
-        </div>
-        {% if product.available and product.variants.size > 1 %}
+            <p>Earn upto <strong>{{ first_variant.price | divided_by: 10 }}</strong> points on this purchase</p>
+          </div>
+          {% if product.available and product.variants.size > 1 %}
           <div class="quick-view-current-shade d-none">
             SHADE: <span>{{ first_variant.title }}</span>
           </div>
-        {% endif %}
-      
-        <div class="quick-view-price d-flex">
+          {% endif %}
+
+          <div class="quick-view-price d-flex">
             <span class="selling-price">{{ first_variant.price | money_without_trailing_zeros }}</span>
             <span class="old-price">
               {% if first_variant.compare_at_price > first_variant.price %}
-                {{ first_variant.compare_at_price | money_without_trailing_zeros -}}
+              {{ first_variant.compare_at_price | money_without_trailing_zeros -}}
               {% endif %}
             </span>
             <span class="discount">
               {% if first_variant.compare_at_price > first_variant.price %}
-                ({{-
-                  first_variant.compare_at_price
-                  | minus: first_variant.price
-                  | times: 100.0
-                  | divided_by: first_variant.compare_at_price
-                  | money_without_currency
-                  | times: 100
-                  | remove: '.0'
-                -}}
-                % Off)
+              ({{-
+              first_variant.compare_at_price
+              | minus: first_variant.price
+              | times: 100.0
+              | divided_by: first_variant.compare_at_price
+              | money_without_currency
+              | times: 100
+              | remove: '.0'
+              -}}
+              % Off)
               {% endif %}
             </span>
-        </div>
-         <div class="quick-view-shades d-flex flex-column-reverse flex-wrap">
-           {% if product.available and product.variants.size > 1 %}
+          </div>
+          {% comment %} Available Offer {% endcomment %}
+          <section class="quickview_accordion">
+            <div class="quickview_tab">
+              <input type="checkbox" name="quickview_accordion-1" id="quickview_acc">
+              <label for="quickview_acc" class="quickview_tab__label">% &nbsp; Available Offers</label>
+              <div class="quickview_tab__content">
+                <ul class="bogo-offer-wrapper">
+                  {% if offer_name == 'bogo' %}
+                  <li class="bogo-text-wrapper"><b>Buy One Get One Free</b></li>
+                  <li class="bogo-text-wrapper"><b>Buy Two Get Two Free</b></li>
+                  <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
+                    <b>
+                      Offers on Selected
+                      <a href="https://www.hokmakeup.com/collections/bogo-sale-limited-time-only"
+                        class="text-decoration-underline">Collection</a></b>
+                  </p>
+                  {% elsif offer_name == 'default' %}
+                  <li class="bogo-text-wrapper">
+                    Welcome Offer: <b>Extra 10% OFF </b>for First-Time Buyers!
+                  </li>
+                  <li class="bogo-text-wrapper">
+                    Get a special surprise on orders above <span>₹799</span>!
+                  </li>
+                  <li class="bogo-text-wrapper">
+                    Spend <span>₹1,499</span> or more and unlock an even bigger surprise!
+                  </li>
+                  <p class="bogo-text-wrapper" style="color: #991054;text-align: center;" >
+                    <small style="font-size: 10px;">*Offers will be applied at checkout</small>
+                  </p>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </section>
+          {% comment %} Available Offer {% endcomment %}
+          <div class="quick-view-shades d-flex flex-column-reverse flex-wrap">
+            {% if product.available and product.variants.size > 1 %}
             {% render 'new-swatches' with 'Color' as swatch, product: product,
             showall: true,
             showdropdown: true %}
-          {% endif %}
+            {% endif %}
+          </div>
         </div>
-      </div> 
 
-      <div class="hok-quick-view-container">
-        <div class="add-to-bag-btn hok-quick-view-footer d-center">
-          <a href="{{ product.url }}" class="view-product-btn"
-            > View Product Details
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
-               <path d="M18.1919 5.44194C18.436 5.19786 18.436 4.80214 18.1919 4.55806L14.2145 0.580583C13.9704 0.336505 13.5747 0.336505 13.3306 0.580583C13.0865 0.82466 13.0865 1.22039 13.3306 1.46447L16.8661 5L13.3306 8.53553C13.0865 8.77961 13.0865 9.17534 13.3306 9.41942C13.5747 9.6635 13.9704 9.6635 14.2145 9.41942L18.1919 5.44194ZM0.25 5.625H17.75V4.375H0.25V5.625Z" fill="black"/>
-              </svg></span
-          ></a>
+        <div class="hok-quick-view-container">
+          <div class="add-to-bag-btn hok-quick-view-footer d-center">
+            <a href="{{ product.url }}" class="view-product-btn"> View Product Details
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="6" viewBox="0 0 19 6" fill="none">
+              <path d="M18.0328 3.28284C18.1891 3.12663 18.1891 2.87337 18.0328 2.71716L15.4873 0.171573C15.331 0.0153632 15.0778 0.0153632 14.9216 0.171573C14.7654 0.327783 14.7654 0.581048 14.9216 0.737258L17.1843 3L14.9216 5.26274C14.7654 5.41895 14.7654 5.67222 14.9216 5.82843C15.0778 5.98464 15.331 5.98464 15.4873 5.82843L18.0328 3.28284ZM0.25 3.4H17.75V2.6H0.25V3.4Z" fill="black"/>
+              </svg></span></a>
 
-          <button
-            type="button"
-            class="add-quick-bag-btn rounded-pill"
-            data-product_id="{{ first_variant.id }}"
-            data-product_quantity="1"
-          >
-            Add to bag
-          </button>
-          <a href="{% if section.id contains "product_quickview" %}javascript:void(0){% else %}{{ product.url }}{% endif %}"
-            class="add-quick-bag-btn-notify rounded-pill" style="display: none;"
-          >
-         {% if section.id contains "product_quickview" %}Out Of Stock{% else %}Notify Me{% endif %}
-          </a>
+            <button type="button" class="add-quick-bag-btn rounded-pill" data-product_id="{{ first_variant.id }}"
+              data-product_quantity="1">
+              Add to bag
+            </button>
+            <a href="{% if section.id contains " product_quickview" %}javascript:void(0){% else %}{{ product.url }}{%
+              endif %}" class="add-quick-bag-btn-notify rounded-pill opacity-50" style="display: none;">
+              {% if section.id contains "product_quickview" %}Out Of Stock{% else %}Notify Me{% endif %}
+            </a>
+          </div>
         </div>
-      </div>
+              {% endif %}
+        </div>
     </div>
   </div>
-</div>
-
 {% schema %}
-    {
-      "name": "Product Quick View",
-      "class": "pdp_quick_view",
-      "settings": [
-        {
-          "type": "header",
-          "content": "Default Product"
-        },
-        {
-          "type": "product",
-          "id": "default_product",
-          "label": "Default Product"
-        }
-      ],
-      "presets": [
-        {
-          "name": "Product Quick View"
-        }
-      ]
-    }
-    {% endschema %}
+  {
+    "name": "Pd Quick View",
+    "class": "pdp_quick_view",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Default Product"
+      },
+      {
+        "type": "product",
+        "id": "default_product",
+        "label": "Default Product"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Pd Quick View"
+      }
+    ]
+  }
+  {% endschema %}

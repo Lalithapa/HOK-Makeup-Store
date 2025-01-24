@@ -3,6 +3,9 @@
   position: relative;
   width: 100%;
 }
+.quick-view-slide-container.quick-view-slide-open{
+ display: none !important;
+}
 
 .swiper.productSlider {
   height: 450px;
