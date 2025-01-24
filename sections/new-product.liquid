@@ -21,7 +21,7 @@
   });
 </script>
 <section class="container pt-1 pt-md-4">
-  <div id="breadcrumbs" class="mobile_screen gap-2">
+  <div id="breadcrumbs" class="mobile_screen">
     {% render 'breadcrumbs' %}
   </div>
   <div class="row gap-0 gap-md-3 gap-lg-4 gap-xl-5 gap-mt-5 m-auto">
@@ -267,7 +267,7 @@
                   </div>
                 {% when 'price' %}
                   <div class="l-pdp-price_section d-flex">
-                    <div class="product-prices d-flex gap-2">
+                    <div class="product-prices d-flex gap-2 align-items-center">
                       <span class="b-product_price-value">
                         {{ first_variant.price | money_without_trailing_zeros }}
                       </span>
@@ -604,6 +604,50 @@
       webShare(shareData);
     });
 });
+</script>
+<script>
+   class DeferredProductMedia extends HTMLElement {
+    constructor() {
+      super();
+      const poster = this.querySelector('[id^="Deferred-Poster-"]');
+      if (!poster) return;
+      poster.addEventListener('click', this.loadContent.bind(this));
+      {% unless template contains "product" %}
+      // Bind handleMediaIntersection method to this instance
+      this.handleMediaIntersection = this.handleMediaIntersection.bind(this);
+      const observer = new IntersectionObserver(this.handleMediaIntersection, { rootMargin: '0px 0px 0px 1000px' });
+      observer.observe(poster);
+      {% endunless %}
+    }
+
+    loadContent(focus = true) {
+      if (!this.getAttribute('loaded')) {
+        const content = document.createElement('div');
+        content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
+        this.setAttribute('loaded', true);
+        const deferredElement = this.appendChild(content.querySelector('video'));
+        if (focus) deferredElement.focus();
+        {% unless template contains "product" %}
+          deferredElement.setAttribute("loop", "true");
+          deferredElement.removeAttribute('controls');
+        {% endunless %}
+        if (deferredElement.nodeName === 'VIDEO' && deferredElement.getAttribute('autoplay')) {
+          // force autoplay for safari
+          deferredElement.play();
+        }
+        this.querySelector('button').style.display = "none";
+      }
+    }
+
+    async handleMediaIntersection(entries, observer) {
+      if (!entries[0].isIntersecting) return;
+      observer.unobserve(entries[0].target);
+      this.loadContent();
+    }
+  }
+
+  customElements.define('deferred-product-media', DeferredProductMedia);
+
 </script>
 <script type="application/ld+json">
   {{ product | structured_data }}

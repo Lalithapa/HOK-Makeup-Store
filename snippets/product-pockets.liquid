@@ -2,14 +2,27 @@
   <div class="b-product_promo_tile">
     {% liquid
       assign first_variant = product.selected_or_first_available_variant
+      assign pdptag = true
       assign img_url = first_variant.featured_image
       assign img_url_1 = product.images[0].src
       assign img_url_2 = product.images[1].src
+      for tags in product.tags 
+      if tags contains 'New Arrival' 
+        assign pdptag = false 
+      endif 
+      if tags contains 'label' 
+        unless tags contains '_label_New' 
+           assign pdptag = false 
+        endunless 
+      endif 
+    endfor 
     %}
+  
     {% comment %} PDP Image Starts {% endcomment %}
     <div class="customize pdp-img-container">
       {% unless showCross %}
-        <div class="custom_label_badge">
+        {% if pdptag %}
+        <div class="custom_label_badge {{ pdptag }}">
           {% for tags in product.tags %}
             {% if tags contains 'New Arrival' %}
               <div class="custom_badges">NEW IN</div>
@@ -29,6 +42,7 @@
             {% endif %}
           {% endfor %}
         </div>
+        {% endif %}
         <div
           style="display: block;"
           class="gw-add-to-wishlist-product-card-placeholder"
@@ -100,7 +114,7 @@
           {{- product.title -}}
         </a>
       </p>
-      <div class="product-prices d-flex align-items-center {% if template contains 'collection' %}gap-1{%  else %}gap-2{% endif %}">
+      <div class="product-prices d-flex align-items-center gap-2">
         <span class="b-product_price-value">
           {{ first_variant.price | money_without_trailing_zeros }}
         </span>

@@ -1,4 +1,7 @@
- .playbutton-wrapper {
+.Avada-Faqs_Button{
+  z-index: 9998 !important;
+}
+.playbutton-wrapper {
     text-align: center
 }
 
@@ -413,7 +416,7 @@
     transform: translate(100%);
     transition: transform 0.2s linear;
     width: 500px;
-    z-index: 6;
+    z-index: 9999;
   }
   div#cart_reccommended_slider {
     padding: 8px 13px;

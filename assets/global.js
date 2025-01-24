@@ -505,7 +505,7 @@ class MenuDrawer extends HTMLElement {
     this.closeAnimation(this.mainDetailsToggle);
 
     if (event instanceof KeyboardEvent) elementToFocus?.setAttribute('aria-expanded', false);
-    document.body.style.overflow = 'auto';
+    //document.body.style.overflow = 'auto';
   }
 
   onFocusOut() {
@@ -578,8 +578,7 @@ class HeaderDrawer extends MenuDrawer {
     window.addEventListener('resize', this.onResize);
     trapFocus(this.mainDetailsToggle, summaryElement);
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
-    debugger
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
   }
 
   closeMenuDrawer(event, elementToFocus) {

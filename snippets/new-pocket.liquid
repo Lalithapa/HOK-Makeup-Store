@@ -2,9 +2,15 @@
   <div class="b-product_promo_tile">
     {% liquid
       assign first_variant = product.selected_or_first_available_variant
+      assign pdptag = true
       assign img_url = first_variant.featured_image
       assign img_url_1 = product.images[0].src
       assign img_url_2 = product.images[1].src
+      for tags in product.tags 
+        if tags contains 'New Arrival' 
+          assign pdptag = false 
+        endif 
+    endfor 
     %}
     {% comment %} PDP Image Starts {% endcomment %}
     <div class="customize pdp-img-container">
@@ -92,7 +98,7 @@
     {% comment %} PDP Image Ends {% endcomment %}
     {% comment %} PDP Details Starts {% endcomment %}
     <div class="b-product_promo_tile-content">
-      {% unless remove_extra_details %}
+      {% unless remove_extra_details %} 
        <div class="rating">
             <div
               class="gw-rv-listing-average-placeholder"
@@ -101,6 +107,7 @@
           </div>
       {% endunless %}
       {% unless showCross %}
+        {% unless pdptag %}
         <div class="custom_label_badge">
           {% for tags in product.tags %}
             {% if tags contains 'New Arrival' %}
@@ -121,6 +128,7 @@
             {% endif %}
           {% endfor %}
         </div>
+      {% endunless %}
     {% endunless %}
       <p class="b-product_promo_vendor-name">
         <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}">
@@ -155,7 +163,7 @@
               </svg>
             {% endcomment %}
             <span class="discount_label">
-              ({{
+              {{
                 first_variant.compare_at_price
                 | minus: first_variant.price
                 | times: 100.0
@@ -164,7 +172,7 @@
                 | times: 100
                 | remove: '.0'
               -}}
-              % Off)
+              % Off
             </span>
           </span>
         {% endunless %}

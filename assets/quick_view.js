@@ -101,7 +101,6 @@ $(document).ready(function () {
     // Open Quick View
     $("body").on("click", 'button[data-quickviewslide="open"]', quickViewOpener);
     $("body").on("click", "fieldset.swatch-picker.d-flex.align-items-center.gap-2", function () {
-        debugger;
         const button = $(this).next('.b-product_promo_tile-buynow').find('button[data-quickviewslide="open"]');
         if (button.length) {
             quickViewOpener.call(button[0]); // Call the function with the button element as `this`
@@ -223,6 +222,11 @@ $(document).ready(function () {
     }
 
     $("body").on("click", ".dropdown-button", function () {
+        if ( $(".dropdown-content").css('display') === 'block') {
+            $(".dropdown-content").hide(); // Hides the element
+            return $(".shadow-dropdown-icon").removeClass("flip-dropdown-icon");
+        }
+        
         $(".dropdown-content").show();
         $(".shadow-dropdown-icon").addClass("flip-dropdown-icon");
         if (under992) {
