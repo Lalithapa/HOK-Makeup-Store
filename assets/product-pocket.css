@@ -802,11 +802,14 @@ line-height: 20px; /* 142.857% */
 }
     }
 @media screen and (max-width: 768px) {
-
-      .b-product_promo_tile-content {
-        gap: 12px;
+      .grid__item .b-product_promo_tile-content {
         height: 220px;
       }
+      .b-product_promo_tile-content {
+        gap: 12px;
+        height: 240px;
+      }
+      
       #skincare-container .b-product_promo_tile-content {
         height: 200px;
     }

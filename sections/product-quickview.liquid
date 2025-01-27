@@ -50,19 +50,13 @@
               <path d="M5.04007 7.9332C4.9934 7.9332 0 6.85986 0 1.39978V0.933105H3.26671V1.86645H0.933346C1.21335 6.15985 5.18007 6.99986 5.22674 6.99986L5.04007 7.9332ZM10.8268 7.9332L10.6401 6.99986C10.8268 6.95319 14.6535 6.11318 14.9335 1.86645H12.6002V0.933105H15.8669V1.39978C15.8669 6.85986 10.8735 7.9332 10.8268 7.9332Z" fill="black"/>
             </svg>
             
-            <p>Earn upto <strong>{{ first_variant.price | divided_by: 10 }}</strong> points on this purchase</p>
+            <p>Earn upto <strong>{{ first_variant.price | divided_by: 100 }}</strong> points on this purchase</p>
           </div>
           {% if product.available and product.variants.size > 1 %}
           <div class="quick-view-current-shade d-none">
             SHADE: <span>{{ first_variant.title }}</span>
           </div>
           {% endif %}
-           
-          <div
-          class="gw-rv-listing-average-placeholder"
-          style="display: block"
-          data-product_id="{{ product.id }}"
-        ></div>
           <div class="quick-view-price d-flex">
             <span class="selling-price">{{ first_variant.price | money_without_trailing_zeros }}</span>
             <span class="old-price">
@@ -72,7 +66,7 @@
             </span>
             <span class="discount">
               {% if first_variant.compare_at_price > first_variant.price %}
-              ({{-
+              {{-
               first_variant.compare_at_price
               | minus: first_variant.price
               | times: 100.0
@@ -81,7 +75,7 @@
               | times: 100
               | remove: '.0'
               -}}
-              % Off)
+              % Off
               {% endif %}
             </span>
           </div>

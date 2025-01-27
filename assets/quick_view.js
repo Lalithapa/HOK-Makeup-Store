@@ -62,10 +62,14 @@ $(document).ready(function () {
                         alt: media.alt,
                         autoplay: true,
                         loop: true,
+                        muted:true, 
+                        controls:true,
                         mediaId: media.id,
                         position: media.position,
                         class: "img-fluid asp34 quickMedia",
                     });
+                   // Directly mute the video using JavaScript
+                    productMedia[0].muted = true;
                 }
 
                 $imgContainer.append(productMedia);

@@ -135,7 +135,7 @@
           {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2'  -}}
         </a>
         <a class="b-product_promo_tile-name_link" href="{{- product.url -}}">
-          {{- product.title  -}}
+          {{- product.title | remove: product.vendor  -}}
         </a>
       </p>
       <div class="product-prices d-flex align-items-center {% if template contains 'collection' %}gap-1{%  else %}gap-2{% endif %}">
