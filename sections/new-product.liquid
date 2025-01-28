@@ -276,9 +276,9 @@
                       </span>
                       <span
                         class="discount_svg_container position-relative"
-                        {% if first_variant.inventory_quantity == 0 %}
+                        {% comment %} {% if first_variant.inventory_quantity == 0 %}
                           style="display:none"
-                        {% endif %}
+                        {% endif %} {% endcomment %}
                       >
                         <span class="discount_label">
                           {{

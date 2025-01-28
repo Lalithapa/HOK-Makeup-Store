@@ -49,8 +49,9 @@
                               {% comment %} {{- 'icon-arrow.svg' | inline_asset_content -}} {% endcomment %}
                               {{- 'arrow-next.svg' | inline_asset_content -}}
                             </span>
-                            {{ link.title | escape }}
+                           {{ link.title | escape }}
                           </button>
+                          <a href="{{ link.url }}" class="menu-view-all">{{ link.title | escape | prepend:'View All ' }}</a>
                           <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                             {%- for childlink in link.links -%}
                               <li>
@@ -94,6 +95,9 @@
                                         </span>
                                         {{ childlink.title | escape }}
                                       </button>
+                                      <a href="{{ childlink.url }}" class="menu-view-all">
+                                      {% unless childlink.title != "Revolution Beauty" %}View All{% else %}{{ childlink.title | escape | prepend:'View All ' }}{% endunless %} 
+                                      </a>
                                       <ul
                                         class="menu-drawer__menu list-menu"
                                         role="list"

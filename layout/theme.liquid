@@ -452,6 +452,30 @@
     </ul>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll("video.lazyvideo");
+  
+      const loadVideo = (video) => {
+        const source = video.querySelector("source");
+        const videoSrc = source.getAttribute("data-src");
+        source.setAttribute("src", videoSrc);
+        video.load();
+      };
+  
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              loadVideo(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 } // Load when 50% of the video is in the viewport
+      );
+  
+      videos.forEach((video) => observer.observe(video));
+      });
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',

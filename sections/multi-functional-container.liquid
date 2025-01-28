@@ -121,41 +121,22 @@
                       }}
                     {% endif %}
                   {% when 'video-media' %}
+                    {% assign media_desktop = block.settings['banner-video-desktop']   %}
                     {% if block.settings['banner-video-mobile'] != blank %}
-                      {{
-                        block.settings['banner-video-desktop']
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'desktop_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          playsinline: true
-                      }}
-                      {{
-                        block.settings['banner-video-mobile']
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'mobile_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          playsinline: true
-                      }}
+                      {% assign media_mobile =  block.settings['banner-video-mobile']   %}
+                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
+                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
+                        <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                     {% else %}
-                      {{
-                        block.settings['banner-video-desktop']
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'square-banner-media d-block',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          playsinline: true
-                      }}
+                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo square-banner-media d-block" autoplay loop muted playsinline>
+                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                     {% endif %}
                 {% endcase %}
                 {% if block.settings.shopcatagorytxt != blank %}

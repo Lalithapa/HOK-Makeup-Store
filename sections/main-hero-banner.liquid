@@ -289,32 +289,17 @@
                             >
                         {% endif %}
                     {% elsif block.type == 'video' %}
-                      {% assign media_poster =  block.settings['banner-video-desktop'].preview_image.src |  image_url   %}
-                      {% assign media_poster_mobile =  block.settings['banner-video-mobile'].preview_image.src |  image_url   %}
-                        {{
-                        block.settings['banner-video-desktop']
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'desktop_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          poster: media_poster,
-                          playsinline: true
-                      }}
-                      {{
-                        block.settings['banner-video-mobile']
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'mobile_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          poster: media_poster_mobile,
-                          playsinline: true
-                      }} 
+                      {% assign media_desktop = block.settings['banner-video-desktop'] %}
+                      {% assign media_mobile =  block.settings['banner-video-mobile'] %}
+                     
+                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
+                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
+                        <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
                   {% endif %}
                 </a>
                 <div class="main-carousel-cta-btn-wrapper-outter">

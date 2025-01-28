@@ -153,7 +153,7 @@
         {% unless showCross %}
           <span
             class="discount_svg_container position-relative"
-            {% if first_variant.inventory_quantity == 0 or first_variant.price == first_variant.compare_at_price %}
+            {% if first_variant.price == first_variant.compare_at_price %}
               style="display:none"
             {% endif %}
           >

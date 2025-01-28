@@ -664,7 +664,7 @@
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Setting Spray"
+            "shopcatagorytxt": "Mascara"
           }
         },
         "image_media_ctnVDC": {
@@ -675,7 +675,7 @@
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Lipstick"
+            "shopcatagorytxt": "Brushes"
           }
         },
         "image_media_bmUF8P": {
@@ -686,7 +686,7 @@
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Brush Set"
+            "shopcatagorytxt": "Lipstick"
           }
         },
         "image_media_HHVyJz": {
@@ -800,6 +800,9 @@
     },
     "skincare_tabs_YG3gjy": {
       "type": "skincare_tabs",
+      "custom_css": [
+        "@media screen and (max-width: 990px) {.square-banner-media {border-radius: 8px; }}"
+      ],
       "settings": {
         "banner-video-desktop": "shopify:\/\/files\/videos\/skincare-desktop-video.mp4",
         "banner-video-mobile": "shopify:\/\/files\/videos\/skincare-mobile-video.mp4",
@@ -1000,6 +1003,7 @@
         "image_media_PTkrfB",
         "image_media_pBfGi6"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "image_priority": false,
@@ -1025,6 +1029,33 @@
         "num-slides-xl": "3",
         "num-slides-2xl": "3",
         "showArrow": false
+      }
+    },
+    "hok_featured_collection_Mjb6i7": {
+      "type": "hok-featured-collection",
+      "settings": {
+        "showContainer": "container",
+        "image_priority": false,
+        "coll-title": "Best sellers",
+        "url": "shopify:\/\/collections\/best-seller-home-page",
+        "url-title": "View All",
+        "collection": "best-seller-home-page",
+        "products_to_show": 10,
+        "swat_alig": true,
+        "slide_speed": 200,
+        "showCenter": false,
+        "showFreeScroll": true,
+        "loop": false,
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "slides-limit": 16,
+        "num-slides-sm": "1.6",
+        "num-slides-md": "2.2",
+        "num-slides-lg": "3.4",
+        "num-slides-xl": "4.2",
+        "num-slides-2xl": "5"
       }
     },
     "multi_functional_container_QB9Vzm": {
@@ -1212,33 +1243,6 @@
         "num-slides-xl": "1",
         "num-slides-2xl": "1",
         "showArrow": false
-      }
-    },
-    "hok_featured_collection_Mjb6i7": {
-      "type": "hok-featured-collection",
-      "settings": {
-        "showContainer": "container",
-        "image_priority": false,
-        "coll-title": "Best sellers",
-        "url": "shopify:\/\/collections\/best-seller-home-page",
-        "url-title": "View All",
-        "collection": "best-seller-home-page",
-        "products_to_show": 10,
-        "swat_alig": true,
-        "slide_speed": 200,
-        "showCenter": false,
-        "showFreeScroll": true,
-        "loop": false,
-        "margin_top_desktop": 36,
-        "margin_bottom_desktop": 36,
-        "margin_top_mobile": 36,
-        "margin_bottom_mobile": 36,
-        "slides-limit": 16,
-        "num-slides-sm": "1.6",
-        "num-slides-md": "2.2",
-        "num-slides-lg": "3.4",
-        "num-slides-xl": "4.2",
-        "num-slides-2xl": "5"
       }
     },
     "multi_functional_container_bBUw6a": {
@@ -1764,10 +1768,10 @@
     "skincare_tabs_YG3gjy",
     "multi_functional_container_n78MM7",
     "multi_functional_container_RaQaEY",
+    "hok_featured_collection_Mjb6i7",
     "multi_functional_container_QB9Vzm",
     "genz_cards_rLnD6C",
     "multi_functional_container_m9THUq",
-    "hok_featured_collection_Mjb6i7",
     "multi_functional_container_bBUw6a",
     "hok_featured_collection_LaACzh",
     "multi_functional_container_hzKpcp",
