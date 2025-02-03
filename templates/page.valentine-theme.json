@@ -1,0 +1,925 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "p,div,.h2,.h3,.h4,.h5,.h6,h2,h3,h4,h5,h6 {font-size: 1.5rem !important;}",
+        "h1 {font-family: var(--header-family); font-size: clamp(3rem, 2vw, 4rem); color: #000; letter-spacing: 2px; margin-bottom: clamp(2rem, 2vw, 4rem);}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multi_functional_container_ELVGqR": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_kBjY4B": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/eveline-makeup",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_2.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_3.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_6aHwAg": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/focallure-beauty",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_6cef0a38-23a1-4d34-a218-7528f21411fa.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_f08c3d62-cac4-4ad9-aa53-d379f9a3de55.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_dFcGGX": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/jessup",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_c620b6df-1b0a-4e4e-80de-932d886560b8.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_aff6f8de-b102-4b7d-9ed3-8d75b2e5deb0.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_aThPDt": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/la-girl",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_9f7f988d-7530-4580-b63a-57ad05f47bee.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_39050813-7ca0-45ab-9a19-34c9e6ba647a.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_kXXCzf": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/lamel",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_11ae3eac-34bb-48b9-a7ba-c32dcccdad86.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_246eae88-2b79-48a6-8520-1f635d4c4ce5.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_4WHfDy": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/ln-pro",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_7fea28a7-7978-41d3-b1f1-413de381cbe5.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_fcba243f-3bb0-4503-8676-efb0bb27d8d2.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_eyhtTk": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/makeup-revolution",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_fe730fac-4403-4633-b5ba-8959bd3fc850.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_9c688588-6e7a-43fa-96a6-a34ec76614e4.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_8Q6DTT": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/milani",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_8dbd7ffe-890a-4cd6-9623-087e78aa3a80.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_X_600_7e4fe802-8733-43a8-be84-295831dac375.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_AaMEcf": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pinkflash-cosmetics",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_fda7ebec-33ee-4ad0-818c-ac222dd8648e.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_dd21d12c-f183-477a-adbd-6f988dca56ee.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_En4iYf": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/revolution-relove",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_a5ec7728-7921-42ce-baf7-562f9b6133c2.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_26609eed-a316-4b6a-9a6e-7614701b997f.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_media_kBjY4B",
+        "image_media_6aHwAg",
+        "image_media_dFcGGX",
+        "image_media_aThPDt",
+        "image_media_kXXCzf",
+        "image_media_4WHfDy",
+        "image_media_eyhtTk",
+        "image_media_8Q6DTT",
+        "image_media_AaMEcf",
+        "image_media_En4iYf"
+      ],
+      "custom_css": [
+        ".arrow_handler {left: 2%; width: 96%;}"
+      ],
+      "settings": {
+        "showContainer": "full-width",
+        "image_priority": true,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "showCenter": false,
+        "showSliderArrow": true,
+        "showFreeScroll": false,
+        "loop": true,
+        "addInnerPadding": false,
+        "slide_speed": 300,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
+    "multi_functional_container_awiTfX": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_nKzVwR": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/lot-by",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Off_sticker.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_pb7UAJ": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/lipstick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Lipstick_142284da-180f-4047-a27a-f822d64bd5c6.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_tYxdkd": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/foundation",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_083df324-f016-4377-99f5-ad5316db5cde.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_bmya3W": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/eyeshadow",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Eye_Shadow_00ca4892-db9e-4b55-b12a-0e399c3f4376.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_BdRiV6": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/concealer",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Concealer_5b60cfee-a032-4ba8-86ff-e7775dda70db.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_TikrGA": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/primer",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Face_Primer_f1458c45-bf6c-46c1-a8dd-95bff2190906.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_Gxxfch": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/blush",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Blush_231cd289-69de-452f-97c8-1288a695e9ae.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_LYycWC": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/face-compact",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Compact_d8e6c76f-3828-4d12-a0a5-b72792e80a35.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_DNLMwb": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/eyeliner",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeliners_Kajal_f1162b3f-db93-4024-a9cc-43669101d221.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_Vbh8XG": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/mascara",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_bd16ddb8-eb8b-418f-9741-a268ed114548.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_x979KB": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/setting-spray",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Setting_Spray_e884d54c-a85d-4c92-a7d5-129fffd55396.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_LhRw9J": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/brush-set",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Tools_Brushes_5fadeeab-8530-402a-9435-e1fd6c9030dc.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_media_nKzVwR",
+        "image_media_pb7UAJ",
+        "image_media_tYxdkd",
+        "image_media_bmya3W",
+        "image_media_BdRiV6",
+        "image_media_TikrGA",
+        "image_media_Gxxfch",
+        "image_media_LYycWC",
+        "image_media_DNLMwb",
+        "image_media_Vbh8XG",
+        "image_media_x979KB",
+        "image_media_LhRw9J"
+      ],
+      "settings": {
+        "showContainer": "page-width",
+        "image_priority": true,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "showCenter": false,
+        "showSliderArrow": true,
+        "showFreeScroll": true,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 100,
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 0,
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "3",
+        "num-slides-md": "3.8",
+        "num-slides-lg": "5",
+        "num-slides-xl": "5",
+        "num-slides-2xl": "5",
+        "showArrow": false
+      }
+    },
+    "single_banner_GkGpAn": {
+      "type": "single_banner",
+      "settings": {
+        "margin_top_desktop": 88,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 0,
+        "shradhha_link": "",
+        "image": "shopify:\/\/shop_images\/Deals_that_make.png",
+        "image_mobile": "shopify:\/\/shop_images\/Deals_that_make_2.png"
+      }
+    },
+    "grid_images_Lakc4f": {
+      "type": "grid-images",
+      "blocks": {
+        "banner_media_3yXNft": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/focallure-beauty",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Focallure_8c3fb811-ef15-4478-859b-c0dfcd915a25.png"
+          }
+        },
+        "banner_media_V737i6": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/makeup-revolution",
+            "banner-image-desktop": "shopify:\/\/shop_images\/MUR_10778dc6-97aa-4e7c-a640-12431c84baa2.png"
+          }
+        },
+        "banner_media_XeeXgR": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/milani",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Milani_a9e5b10e-11ef-4017-954f-836e73e54fe7.png"
+          }
+        },
+        "banner_media_78ttJc": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/la-girl",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Girl_d156d89f-a46d-4ed3-b324-373176956184.png"
+          }
+        },
+        "banner_media_Fer3Hf": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/lamel",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LAMEL_79bf594a-5e01-42fb-af23-8ef13a81e216.png"
+          }
+        },
+        "banner_media_KYinz8": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pink-flash",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Pinkflash_1b927972-9188-494e-92c2-9485459fd4df.png"
+          }
+        },
+        "banner_media_acJ3xW": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/jessup",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Jessup.png"
+          }
+        },
+        "banner_media_F7KBpk": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/eveline-makeup",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Eveline_3d01dc45-b01b-4ea5-9e3d-9b927e86e333.png"
+          }
+        },
+        "banner_media_wKtFqa": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/ln-pro",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LN_Pro_e2526eb0-14fb-4038-a81b-333937abaaf2.png"
+          }
+        },
+        "banner_media_BG7848": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/la-colors",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Colors_90870f77-c9e9-4711-b460-9d39c993433e.png"
+          }
+        }
+      },
+      "block_order": [
+        "banner_media_3yXNft",
+        "banner_media_V737i6",
+        "banner_media_XeeXgR",
+        "banner_media_78ttJc",
+        "banner_media_Fer3Hf",
+        "banner_media_KYinz8",
+        "banner_media_acJ3xW",
+        "banner_media_F7KBpk",
+        "banner_media_wKtFqa",
+        "banner_media_BG7848"
+      ],
+      "custom_css": [
+        ".nav-wrapper {position: relative; padding-bottom: 90px;}",
+        "@media screen and (max-width: 768px) {.nav-wrapper {padding-bottom: 45px; }}"
+      ],
+      "settings": {
+        "showContainer": "container",
+        "margin_top_desktop": 48,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 24,
+        "margin_bottom_mobile": 0,
+        "enable_bg": false,
+        "snowflake_one": false,
+        "snowflake_two": false,
+        "snowflake_three": false
+      }
+    },
+    "single_banner_nkY3Me": {
+      "type": "single_banner",
+      "settings": {
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 48,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 32,
+        "shradhha_link": "#",
+        "image": "shopify:\/\/shop_images\/The_Perfect_match_2258d709-a7c0-487d-a414-95b32f29b4a2.png",
+        "image_mobile": "shopify:\/\/shop_images\/The_Perfect_match_1_06f0ec32-d626-4f13-adf4-660022ae23b3.png"
+      }
+    },
+    "multi_functional_container_n4VcCL": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "video_media_VY9qJb": {
+          "type": "video-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pink-flash",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Valentine Desktop New.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Valentine Render New.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_media_VY9qJb"
+      ],
+      "custom_css": [
+        ".carousel-wrapper-inner {height: 100% !important;}"
+      ],
+      "settings": {
+        "showContainer": "page-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 100,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 16,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 40,
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "shopify:\/\/collections\/la-colors",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
+    "multi_functional_container_4XCtN9": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_RtY4ap": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pinkflash-trending",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Best_Seller_6b340a06-299b-48e9-a6ea-5f8fd32645c0.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_m9gDjB": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pinkflash-lips",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Lips_c63bfba8-c813-4a63-ab14-4999380a3180.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_QYTEdd": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pinkflash-face",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Face_d512fabc-f9e4-4be1-a339-66af99ea4984.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_n9bktR": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pinkflash-eyes",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Eyes_d9371ceb-edfe-498d-a9b0-e7f095f742cb.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_media_RtY4ap",
+        "image_media_m9gDjB",
+        "image_media_QYTEdd",
+        "image_media_n9bktR"
+      ],
+      "custom_css": [
+        "p.cta_text {text-align: center;}",
+        "@media only screen and (max-width: 768px) {.carousel-section-wrapper {row-gap: 12px; }}",
+        "@media only screen and (min-width: 768px) {.carousel-section-wrapper {row-gap: 24px; }}"
+      ],
+      "settings": {
+        "showContainer": "page-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": true,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 500,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "shopify:\/\/collections\/la-colors",
+        "num-slides-sm": "2.5",
+        "num-slides-md": "3.5",
+        "num-slides-lg": "4",
+        "num-slides-xl": "4",
+        "num-slides-2xl": "4",
+        "showArrow": false
+      }
+    },
+    "single_banner_kkT9EF": {
+      "type": "single_banner",
+      "settings": {
+        "margin_top_desktop": 86,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 48,
+        "margin_bottom_mobile": 0,
+        "shradhha_link": "#",
+        "image": "shopify:\/\/shop_images\/Loved_Ones.png",
+        "image_mobile": "shopify:\/\/shop_images\/Loved_Ones_1.png"
+      }
+    },
+    "multi_functional_container_3T3CwK": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "video_media_eDAQrN": {
+          "type": "video-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/the-add-heart-sale",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Valetine S Day Section Video Final.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "rgba(0,0,0,0)",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_DVnWkq": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/makeup-revolution-jelly-blush-stick-lip-and-cheek-stain",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Valentine_s_Section_Tile_1_4f726470-ce54-4343-9b78-804f27933dc3.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_THcrCD": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/eveline-cosmetics-variete-satin-matt-lip-liquid-lipstick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Valentine_s_Section_Tile_2_6eaa719a-b575-4b28-8b01-920f8dd572c5.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_3LCEzp": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/l-a-colors-color-block-10-color-eyeshadow-palette-rose",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Valentine_s_Section_Tile_3_b4ab3526-9dbf-4c21-8ab2-1a3a3ca0f97c.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_MtBHdL": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/l-a-girl-pro-coverage-illuminating-foundation",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Valentine_s_Section_Tile_4_5eaea43b-4c04-4a54-bf8e-210173e20cb9.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_pqFbeA": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/focallure-unearthing-mars-glitter-eyeliner",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Valentine_s_Section_Tile_5_4f9ca4ce-1317-4a40-b5c8-0450da38172c.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_media_eDAQrN",
+        "image_media_DVnWkq",
+        "image_media_THcrCD",
+        "image_media_3LCEzp",
+        "image_media_MtBHdL",
+        "image_media_pqFbeA"
+      ],
+      "settings": {
+        "showContainer": "page-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "showCenter": false,
+        "showSliderArrow": true,
+        "showFreeScroll": true,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 100,
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 24,
+        "margin_bottom_mobile": 0,
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1.4",
+        "num-slides-md": "2.5",
+        "num-slides-lg": "3.5",
+        "num-slides-xl": "5",
+        "num-slides-2xl": "5",
+        "showArrow": false
+      }
+    },
+    "single_banner_MM6zR6": {
+      "type": "single_banner",
+      "settings": {
+        "margin_top_desktop": 88,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 48,
+        "margin_bottom_mobile": 0,
+        "shradhha_link": "#",
+        "image": "shopify:\/\/shop_images\/Heartfelt_savings_2.png",
+        "image_mobile": "shopify:\/\/shop_images\/Heartfelt_savings_1.png"
+      }
+    },
+    "grid_images_ENLUzq": {
+      "type": "grid-images",
+      "blocks": {
+        "banner_media_6gF4MA": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/revolution-relove",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Relove.png"
+          }
+        },
+        "banner_media_tcqznw": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/pigment-play",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Pigment_Play.png"
+          }
+        },
+        "banner_media_kwYAmk": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/wet-n-wild",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Wet_n_Wild_d429671f-6369-48aa-8a1d-c5dcad16921f.png"
+          }
+        },
+        "banner_media_qyPYQK": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/nicka-k",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Nicka_K_6a79361f-5a7f-446f-ba0c-8c14624e7fc2.png"
+          }
+        },
+        "banner_media_9i3jCk": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/bh-cosmetics",
+            "banner-image-desktop": "shopify:\/\/shop_images\/BH.png"
+          }
+        },
+        "banner_media_NHx4fA": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/ardell",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Ardell_93e6a22e-11b7-4c8f-9867-6a2ebbcb0e5a.png"
+          }
+        },
+        "banner_media_NeXKVp": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/physician-formula",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Physicians_Formula.png"
+          }
+        },
+        "banner_media_TNhkWg": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/lord-and-berry",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Lord_Berry.png"
+          }
+        },
+        "banner_media_c3wnNw": {
+          "type": "banner-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/superdrug",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Superdrug_01f4c59b-3d0c-4dc7-b8fb-46186970f565.png"
+          }
+        }
+      },
+      "block_order": [
+        "banner_media_6gF4MA",
+        "banner_media_tcqznw",
+        "banner_media_kwYAmk",
+        "banner_media_qyPYQK",
+        "banner_media_9i3jCk",
+        "banner_media_NHx4fA",
+        "banner_media_NeXKVp",
+        "banner_media_TNhkWg",
+        "banner_media_c3wnNw"
+      ],
+      "custom_css": [
+        ".nav-wrapper {padding-top: 48px; position: relative;}",
+        "@media screen and (max-width: 768px) {.nav-wrapper {padding-top: 6px; }}"
+      ],
+      "settings": {
+        "showContainer": "container",
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "enable_bg": false,
+        "snowflake_one": false,
+        "snowflake_two": false,
+        "snowflake_three": false
+      }
+    },
+    "single_banner_nWa64c": {
+      "type": "single_banner",
+      "settings": {
+        "margin_top_desktop": 88,
+        "margin_bottom_desktop": 48,
+        "margin_top_mobile": 48,
+        "margin_bottom_mobile": 32,
+        "shradhha_link": "#",
+        "image": "shopify:\/\/shop_images\/The_love.png",
+        "image_mobile": "shopify:\/\/shop_images\/The_love_1.png"
+      }
+    },
+    "multi_functional_container_RkezUp": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_DjDnHc": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/skincare",
+            "banner-image-desktop": "shopify:\/\/shop_images\/2400_x_600_d53f1b4c-f7bb-45c1-aaf7-385a05afd965.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/900_x_450_1893673e-1622-449f-a365-3f50e8682d03.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_media_DjDnHc"
+      ],
+      "settings": {
+        "showContainer": "page-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "rgba(0,0,0,0)",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 100,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 76,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 40,
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
+    "ticker_tape_erJbLw": {
+      "type": "ticker-tape",
+      "disabled": true,
+      "settings": {
+        "main_heading": "✧Up To 60% OFF + Free Surprise Gift✧ &nbsp; ❄️The Winter Wonderland Sale is Live❄️ &nbsp;"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multi_functional_container_ELVGqR",
+    "multi_functional_container_awiTfX",
+    "single_banner_GkGpAn",
+    "grid_images_Lakc4f",
+    "single_banner_nkY3Me",
+    "multi_functional_container_n4VcCL",
+    "multi_functional_container_4XCtN9",
+    "single_banner_kkT9EF",
+    "multi_functional_container_3T3CwK",
+    "single_banner_MM6zR6",
+    "grid_images_ENLUzq",
+    "single_banner_nWa64c",
+    "multi_functional_container_RkezUp",
+    "ticker_tape_erJbLw"
+  ]
+}

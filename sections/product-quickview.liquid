@@ -1,15 +1,35 @@
 {% comment %} Quick View Modal for {{ first_variant }} {% endcomment %}
   {% liquid
     assign first_variant = product.selected_or_first_available_variant 
-    assign offer_name = 'default'
+    assign offer_name = 'offerHidden'
     for collection in product.collections
       if collection.handle == 'bogo-sale-limited-time-only'
         assign offer_name = 'bogo'
-      elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by'
-        assign offer_name = 'offerHidden'
-      elsif collection.handle == 'foundation-sale'
-        assign offer_name = 'foundation-sale'
-      endif
+          elsif collection.handle == 'makeup-revolution-sale-1'
+            assign offer_name = 'makeup-revolution-sale-1'
+          elsif collection.handle == 'lamel-sale'
+            assign offer_name = 'lamel-sale'
+          elsif collection.handle == 'milani-sale'
+            assign offer_name = 'milani-sale'
+          elsif collection.handle == 'ln-pro-sale'
+            assign offer_name = 'ln-pro-sale'
+          elsif collection.handle == 'l-a-girl-sale'
+            assign offer_name = 'l-a-girl-sale'          
+          elsif collection.handle == 'focallure-beauty'
+            assign offer_name = 'focallure-beauty'         
+          elsif collection.handle == 'pink-flash'
+            assign offer_name = 'pink-flash'          
+          elsif collection.handle == 'jessup-beauty-sale'
+            assign offer_name = 'jessup-beauty-sale'        
+          elsif collection.handle == 'l-a-colors-sale'
+            assign offer_name = 'l-a-colors-sale'        
+          elsif collection.handle == 'eveline-cosmetics-sale'
+            assign offer_name = 'eveline-cosmetics-sale'
+          elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by'
+            assign offer_name = 'offerHidden'
+          elsif collection.handle == 'foundation-sale'
+            assign offer_name = 'foundation-sale'
+          endif
     endfor
   %}
   {% comment %} quick-view-slide-open {% endcomment %}
@@ -96,8 +116,28 @@
                       <a href="https://www.hokmakeup.com/collections/bogo-sale-limited-time-only"
                         class="text-decoration-underline">Collection</a></b>
                   </p>
+                  {% elsif offer_name == 'makeup-revolution-sale-1' %}
+                      <li class="bogo-text-wrapper">Buy Any 2 Makeup Revolution Products & Get a Surprise Gift!</li>
+                  {% elsif offer_name == 'milani-sale' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹999 from Milani</li>
+                      <li class="bogo-text-wrapper">Get Two Surprise Gift on orders above ₹1599 from Milani</li>
+                   {% elsif offer_name == 'ln-pro-sale' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹399 from LN Pro</li>
+                   {% elsif offer_name == 'l-a-girl-sale' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹599 from LA Girl</li>
+                      <li class="bogo-text-wrapper">Get Two Surprise Gift on orders above ₹899 from LA Girl</li>
+                   {% elsif offer_name == 'focallure-beauty' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹899 from Focallure</li>
+                  {% elsif offer_name == 'pink-flash' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹599 from PINKFLASH</li>
+                  {% elsif offer_name == 'jessup-beauty-sale' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹2,999 from Jessup</li>
+                  {% elsif offer_name == 'l-a-colors-sale' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹699 from LA Colors</li>
+                  {% elsif offer_name == 'eveline-cosmetics-sale' %}
+                      <li class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹799 from Eveline Cosmetics </li>
                   {% elsif offer_name == 'default' %}
-                  <li class="bogo-text-wrapper">
+                  <!-- <li class="bogo-text-wrapper">
                     Welcome Offer: <b>Extra 10% OFF </b>for First-Time Buyers!
                   </li>
                   <li class="bogo-text-wrapper">
@@ -108,7 +148,7 @@
                   </li>
                   <p class="bogo-text-wrapper" style="color: #991054;text-align: center;" >
                     <small style="font-size: 10px;">*Offers will be applied at checkout</small>
-                  </p>
+                  </p> -->
                   {% endif %}
                 </ul>
               </div>

@@ -346,6 +346,11 @@
               overflow-x: hidden;
           }
         {% endif %}
+      {% if template.suffix == "valentine-theme" %}
+          main#MainContent {
+              background-color: #f6e6e9;
+          }
+        {% endif %}
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
