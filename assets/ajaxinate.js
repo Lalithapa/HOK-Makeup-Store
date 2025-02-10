@@ -26,11 +26,11 @@ var Ajaxinate = function ajaxinateConstructor(config) {
     callback: null, function to callback after a new page is loaded
   */
   var defaultSettings = {
-    method: 'scroll',
   	container: '.infinte-scroll-grid',
   	pagination: '#infinite-init-button',
+    method: 'click',
     offset: 0,
-    loadingText: '<div class="jelly"><br></div>',
+    loadingText: 'Loading ...',
     callback: null
   };
   // Merge configs
@@ -95,15 +95,7 @@ Ajaxinate.prototype.checkIfPaginationInView = function handleScrollEvent() {
     this.nextPageLinkElement = this.paginationElement.querySelector('a');
     this.removeScrollListener();
     if (this.nextPageLinkElement) {
-      // this.nextPageLinkElement.innerText = this.settings.loadingText;
-      // this.nextPageUrl = this.nextPageLinkElement.href;
-      // this.loadMore();
-      this.nextPageLinkElement.innerHTML = '';
-      // Append loadingText (treated as HTML)
-      const loaderElement = document.createElement('div');
-      loaderElement.innerHTML = this.settings.loadingText;
-      // Append loader HTML inside the <a> tag
-      this.nextPageLinkElement.appendChild(loaderElement.firstChild);
+      this.nextPageLinkElement.innerText = this.settings.loadingText;
       this.nextPageUrl = this.nextPageLinkElement.href;
       this.loadMore();
     }

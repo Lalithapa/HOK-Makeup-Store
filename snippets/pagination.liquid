@@ -12,6 +12,7 @@
 {% endcomment %}
 
 {{ 'component-pagination.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ajaxinate.js' | asset_url }}" defer="defer"></script>
 
 {%- if paginate.parts.size > 0 -%}
   <div class="pagination-wrapper">
@@ -72,10 +73,18 @@
             </a>
           </li>
           <div id="infinite-init-button">
-              <a href="{{ paginate.next.url }}"> {% render 'load-more-jelly' %} </a>
+              <a href="{{ paginate.next.url }}" class="b-add_to_bag-button button-cta" style="font-size:13px;width: 350px;"> 
+              Load More  
+              {% comment %} {% render 'load-more-jelly' %} {% endcomment %}
+              </a>
           </div>
         {%- endif -%}
       </ul>
     </nav>
   </div>
 {%- endif -%}
+<script defer="defer">
+  document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate({});
+  });
+</script>

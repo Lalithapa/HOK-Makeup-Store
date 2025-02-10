@@ -276,9 +276,11 @@
                       </span>
                       <span
                         class="discount_svg_container position-relative"
-                        {% comment %} {% if first_variant.inventory_quantity == 0 %}
-                          style="display:none"
-                        {% endif %} {% endcomment %}
+                        {% comment %}
+                          {% if first_variant.inventory_quantity == 0 %}
+                            style="display:none"
+                          {% endif %}
+                        {% endcomment %}
                       >
                         <span class="discount_label">
                           {{
@@ -317,30 +319,30 @@
               for collection in product.collections
                 if collection.handle == 'bogo-sale-limited-time-only'
                   assign offer_name = 'bogo'
-                  elsif collection.handle == 'makeup-revolution-sale-1'
-                    assign offer_name = 'makeup-revolution-sale-1'
-                  elsif collection.handle == 'lamel-sale'
-                    assign offer_name = 'lamel-sale'
-                  elsif collection.handle == 'milani-sale'
-                    assign offer_name = 'milani-sale'
-                  elsif collection.handle == 'ln-pro-sale'
-                    assign offer_name = 'ln-pro-sale'
-                  elsif collection.handle == 'l-a-girl-sale'
-                    assign offer_name = 'l-a-girl-sale'          
-                  elsif collection.handle == 'focallure-beauty'
-                    assign offer_name = 'focallure-beauty'         
-                  elsif collection.handle == 'pink-flash'
-                    assign offer_name = 'pink-flash'          
-                  elsif collection.handle == 'jessup-beauty-sale'
-                    assign offer_name = 'jessup-beauty-sale'        
-                  elsif collection.handle == 'l-a-colors-sale'
-                    assign offer_name = 'l-a-colors-sale'        
-                  elsif collection.handle == 'eveline-cosmetics-sale'
-                    assign offer_name = 'eveline-cosmetics-sale'
-                  elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by'
-                    assign offer_name = 'offerHidden'
-                  elsif collection.handle == 'foundation-sale'
-                assign offer_name = 'foundation-sale'
+                elsif collection.handle == 'makeup-revolution-sale-1'
+                  assign offer_name = 'makeup-revolution-sale-1'
+                elsif collection.handle == 'lamel-sale'
+                  assign offer_name = 'lamel-sale'
+                elsif collection.handle == 'milani-sale'
+                  assign offer_name = 'milani-sale'
+                elsif collection.handle == 'ln-pro-sale'
+                  assign offer_name = 'ln-pro-sale'
+                elsif collection.handle == 'l-a-girl-sale'
+                  assign offer_name = 'l-a-girl-sale'
+                elsif collection.handle == 'focallure-beauty'
+                  assign offer_name = 'focallure-beauty'
+                elsif collection.handle == 'pink-flash'
+                  assign offer_name = 'pink-flash'
+                elsif collection.handle == 'jessup-beauty-sale'
+                  assign offer_name = 'jessup-beauty-sale'
+                elsif collection.handle == 'l-a-colors-sale'
+                  assign offer_name = 'l-a-colors-sale'
+                elsif collection.handle == 'eveline-cosmetics-sale'
+                  assign offer_name = 'eveline-cosmetics-sale'
+                elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by'
+                  assign offer_name = 'offerHidden'
+                elsif collection.handle == 'foundation-sale'
+                  assign offer_name = 'foundation-sale'
                 elsif collection.handle contains 'giverny'
                   assign offer_name = 'giverny'
                 endif
@@ -355,34 +357,45 @@
                   <span class="b-accordion-control m-accordion-expanded ">
                     Available offers
                     <span class="accordion-glimpse">
-                      <p class="bogo-text-wrapper">
-                         {% if offer_name == 'lamel-sale' %}
-                          <b>Surprise Gift   </b> ...
-                          {% elsif offer_name == 'makeup-revolution-sale-1' %}
-                            <b>Buy Any 2 Makeup </b> ...
-                          {% elsif offer_name == 'milani-sale' %}
-                             <b>Get a Surprise Gift </b> ...
-                            <b>Get Two Surprise Gift </b> ...
-                           {% elsif offer_name == 'ln-pro-sale' %}
-                             <b>Get a Surprise Gift</b> ...
-                           {% elsif offer_name == 'l-a-girl-sale' %}
-                             <b>Get a Surprise Gift </b> ...
-                           {% elsif offer_name == 'focallure-beauty' %}
-                             <b>Get a Surprise Gift </b> ...
-                          {% elsif offer_name == 'pink-flash' %}
-                            <b>Get a Surprise Gift</b> ...
-                          {% elsif offer_name == 'jessup-beauty-sale' %}
-                             <b>Get a Surprise Gift </b> ...
-                          {% elsif offer_name == 'l-a-colors-sale' %}
-                             <b>Get a Surprise </b> ...
-                          {% elsif offer_name == 'eveline-cosmetics-sale' %}
-                              <b>Get a Surprise  </b> ...
-                        {% elsif offer_name == 'bogo' %}
-                          <b>Buy One Get </b> ...
-                        {% elsif offer_name == 'foundation-sale' %}
-                          <b>Get a Free Face Brush Worth ₹34</b> ...
+                      {% comment %}
+                        <p class="bogo-text-wrapper">
+
+                             {% if offer_name == 'lamel-sale' %}
+                              <b>Surprise Gift   </b> ...
+                              {% elsif offer_name == 'makeup-revolution-sale-1' %}
+                                <b>Buy Any 2 Makeup </b> ...
+                              {% elsif offer_name == 'milani-sale' %}
+                                 <b>Get a Surprise Gift </b> ...
+                                <b>Get Two Surprise Gift </b> ...
+                               {% elsif offer_name == 'ln-pro-sale' %}
+                                 <b>Get a Surprise Gift</b> ...
+                               {% elsif offer_name == 'l-a-girl-sale' %}
+                                 <b>Get a Surprise Gift </b> ...
+                               {% elsif offer_name == 'focallure-beauty' %}
+                                 <b>Get a Surprise Gift </b> ...
+                              {% elsif offer_name == 'pink-flash' %}
+                                <b>Get a Surprise Gift</b> ...
+                              {% elsif offer_name == 'jessup-beauty-sale' %}
+                                 <b>Get a Surprise Gift </b> ...
+                              {% elsif offer_name == 'l-a-colors-sale' %}
+                                 <b>Get a Surprise </b> ...
+                              {% elsif offer_name == 'eveline-cosmetics-sale' %}
+                                  <b>Get a Surprise  </b> ...
+                            {% elsif offer_name == 'bogo' %}
+                              <b>Buy One Get </b> ...
+                            {% elsif offer_name == 'foundation-sale' %}
+                              <b>Get a Free Face Brush Worth ₹34</b> ...
+                            {% endif %}
+
+
+                        </p>
+                      {% endcomment %}
+
+                      {% for collection in product.collections %}
+                        {% if collection.handle == 'all-products-without-clearence' %}
+                          <p class="bogo-text-wrapper"><b>Welcome Offer:</b> Extra 10% ...</p>
                         {% endif %}
-                      </p>
+                      {% endfor %}
                     </span>
                   </span>
                   <div class="b-accordion-container m-accordion-expanded b-pdp_accordion-column m-wide">
@@ -391,95 +404,138 @@
                         <div class="offer-container">
                           <div class="bogo-wrapper">
                             <div class="bogo-offer-wrapper">
-                             {% if offer_name == 'lamel-sale' %}
-                              <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹399 from Lamel</p>
-                                </div>
-                                <!-- ***********************offers************************ -->
-                                 {% elsif offer_name == 'makeup-revolution-sale-1' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Buy Any 2 Makeup Revolution Products & Get a Surprise Gift!</p>
-                                </div>
+                              {% for collection in product.collections %}
+                                {% if collection.handle == 'all-products-without-clearence' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Welcome Offer: <b>Extra 10% OFF</b> for First-Time Buyers!
+                                    </p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Get a special surprise on orders above ₹799!</p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Spend ₹1,499 or more and unlock an even bigger surprise!
+                                    </p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      <small style="font-size: 10px;">*Offers will be applied at checkout</small>
+                                    </p>
+                                  </div>
+                                {% endif %}
+                              {% endfor %}
+
+                              {% comment %}
+                                {% if offer_name == 'lamel-sale' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹399 from Lamel</p>
+                                  </div>
+                                  <!-- ***********************offers************************ -->
+                                {% elsif offer_name == 'makeup-revolution-sale-1' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Buy Any 2 Makeup Revolution Products & Get a Surprise Gift!
+                                    </p>
+                                  </div>
                                 {% elsif offer_name == 'milani-sale' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹999 from Milani</p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get Two Surprise Gift on orders above ₹1599 from Milani</p>
-                                </div>
-                                 {% elsif offer_name == 'ln-pro-sale' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹399 from LN Pro</p>
-                                </div>
-                                 {% elsif offer_name == 'l-a-girl-sale' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹599 from LA Girl</p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get Two Surprise Gift on orders above ₹899 from LA Girl</p>
-                                </div>
-                                 {% elsif offer_name == 'focallure-beauty' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹899 from Focallure</p>
-                                </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹999 from Milani</p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get Two Surprise Gift on orders above ₹1599 from Milani
+                                    </p>
+                                  </div>
+                                {% elsif offer_name == 'ln-pro-sale' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹399 from LN Pro</p>
+                                  </div>
+                                {% elsif offer_name == 'l-a-girl-sale' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹599 from LA Girl</p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get Two Surprise Gift on orders above ₹899 from LA Girl
+                                    </p>
+                                  </div>
+                                {% elsif offer_name == 'focallure-beauty' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get a Surprise Gift on orders above ₹899 from Focallure
+                                    </p>
+                                  </div>
                                 {% elsif offer_name == 'pink-flash' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹599 from PINKFLASH</p>
-                                </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get a Surprise Gift on orders above ₹599 from PINKFLASH
+                                    </p>
+                                  </div>
                                 {% elsif offer_name == 'jessup-beauty-sale' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹2,999 from Jessup</p>
-                                </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get a Surprise Gift on orders above ₹2,999 from Jessup
+                                    </p>
+                                  </div>
                                 {% elsif offer_name == 'l-a-colors-sale' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹699 from LA Colors</p>
-                                </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get a Surprise Gift on orders above ₹699 from LA Colors
+                                    </p>
+                                  </div>
                                 {% elsif offer_name == 'eveline-cosmetics-sale' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Get a Surprise Gift on orders above ₹799 from Eveline Cosmetics </p>
-                                </div>
-                                <!-- ******************************************************** -->
-                              {% elsif offer_name == 'bogo' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper"><b>Buy One Get One Free</b></p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper"><b>Buy Two Get Two Free</b></p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    <b>
-                                      Offers on Selected
-                                      <a
-                                        href="https://www.hokmakeup.com/collections/bogo-sale-limited-time-only"
-                                        class="text-decoration-underline"
-                                        >Collection</a
-                                      ></b
-                                    >
-                                  </p>
-                                </div>
-                              {% else offer_name == 'default' %}
-                                <!-- <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Welcome Offer: <b>Extra 10% OFF </b>for First-Time Buyers!
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Get a special surprise on orders above <span>₹799</span>!
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Spend <span>₹1,499</span> or more and unlock an even bigger surprise!
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    <small style="font-size: 10px;">*Offers will be applied at checkout</small>
-                                  </p>
-                                </div> -->
-                              {% endif %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Get a Surprise Gift on orders above ₹799 from Eveline Cosmetics
+                                    </p>
+                                  </div>
+                                  <!-- ******************************************************** -->
+                                {% elsif offer_name == 'bogo' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper"><b>Buy One Get One Free</b></p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper"><b>Buy Two Get Two Free</b></p>
+                                  </div>
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      <b>
+                                        Offers on Selected
+                                        <a
+                                          href="https://www.hokmakeup.com/collections/bogo-sale-limited-time-only"
+                                          class="text-decoration-underline"
+                                          >Collection</a
+                                        ></b
+                                      >
+                                    </p>
+                                  </div>
+                                {% else %}
+                                  <!--
+                                    <div class="bogo-offer">
+                                      <p class="bogo-text-wrapper">
+                                        Welcome Offer: <b>Extra 10% OFF </b>for First-Time Buyers!
+                                      </p>
+                                    </div>
+                                    <div class="bogo-offer">
+                                      <p class="bogo-text-wrapper">
+                                        Get a special surprise on orders above <span>₹799</span>!
+                                      </p>
+                                    </div>
+                                    <div class="bogo-offer">
+                                      <p class="bogo-text-wrapper">
+                                        Spend <span>₹1,499</span> or more and unlock an even bigger surprise!
+                                      </p>
+                                    </div>
+                                    <div class="bogo-offer">
+                                      <p class="bogo-text-wrapper">
+                                        <small style="font-size: 10px;">*Offers will be applied at checkout</small>
+                                      </p>
+                                    </div>
+                                  -->
+                                {% endif %}
+                              {% endcomment %}
                             </div>
                           </div>
                         </div>
@@ -732,7 +788,6 @@
   }
 
   customElements.define('deferred-product-media', DeferredProductMedia);
-
 </script>
 <script type="application/ld+json">
   {{ product | structured_data }}

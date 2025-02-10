@@ -15,8 +15,6 @@
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-<script src="{{ 'ajaxinate.js' | asset_url }}" defer="defer"></script>
-
 {%- if section.settings.quick_add == 'bulk' -%}
   <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
@@ -299,22 +297,6 @@
     {{ 'mask-arch.svg' | inline_asset_content }}
   {%- endif -%}
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var endlessScroll = new Ajaxinate({});
-    // Set up a MutationObserver to monitor changes in the DOM
-    // const observer = new MutationObserver(function() {
-    //   debugger;
-    //     // Re-run the script when the DOM changes
-    //     endlessScroll = new Ajaxinate({});
-    // });
-    // // Configure the observer to watch for changes in the entire document
-    // observer.observe(document.querySelector('.collection #product-grid'), {
-    //     childList: true,        // Watch for added or removed elements
-    //     subtree: false           // Include all descendants
-    // });
-  });
-</script>
 
 {% schema %}
 {

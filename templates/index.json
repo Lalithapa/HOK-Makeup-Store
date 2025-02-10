@@ -50,6 +50,29 @@
             "btn2-text-hover-desktop": "#000000"
           }
         },
+        "video_VNAhaT": {
+          "type": "video",
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Lamel Subliminal Banenr 5.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Mobile_82a0515c-4f11-49d8-b214-45c1994993e1.mp4",
+            "banner-url": "shopify:\/\/collections\/lamel",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/lamel-subliminal-collection",
+            "btn2-url": "shopify:\/\/collections\/lamel",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
         "video_tHrchM": {
           "type": "video",
           "settings": {
@@ -98,6 +121,7 @@
         },
         "video_fAjRDw": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "banner-video-desktop": "shopify:\/\/files\/videos\/banner3desk.mp4",
             "banner-video-mobile": "shopify:\/\/files\/videos\/banner3mob.mp4",
@@ -525,6 +549,7 @@
       "block_order": [
         "image_Nxfx79",
         "video_QHRf84",
+        "video_VNAhaT",
         "video_tHrchM",
         "image_ptAQVA",
         "video_fAjRDw",
