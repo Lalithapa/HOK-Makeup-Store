@@ -15,12 +15,12 @@
     "multi_functional_container_ELVGqR": {
       "type": "multi-functional-container",
       "blocks": {
-        "image_media_kBjY4B": {
+        "image_media_eyhtTk": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/eveline-makeup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_2.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_3.jpg",
+            "banner-url": "shopify:\/\/collections\/makeup-revolution",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_cb073374-7865-4403-887e-b22914d74b34.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_7e0f4a65-8f8d-4b6c-9ed8-2c59839aefb7.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -31,7 +31,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/focallure-beauty",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_6cef0a38-23a1-4d34-a218-7528f21411fa.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_4e23826f-2cba-4cda-9348-140a38beb633.jpg",
             "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_f08c3d62-cac4-4ad9-aa53-d379f9a3de55.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
@@ -43,8 +43,8 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/jessup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_c620b6df-1b0a-4e4e-80de-932d886560b8.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_aff6f8de-b102-4b7d-9ed3-8d75b2e5deb0.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_67d5e14f-6155-456b-9319-4cab0ffe450a.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_8af97847-e198-4daa-bbb4-4c3dc7aba442.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -55,8 +55,8 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/la-girl",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_9f7f988d-7530-4580-b63a-57ad05f47bee.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_39050813-7ca0-45ab-9a19-34c9e6ba647a.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_9e4f1f58-8da7-4192-bc3f-58788a145270.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_d37e42e7-840a-4533-927b-4cad38fde686.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -67,8 +67,8 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/lamel",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_11ae3eac-34bb-48b9-a7ba-c32dcccdad86.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_246eae88-2b79-48a6-8520-1f635d4c4ce5.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_d3940dbd-37f2-4554-8498-69c6fed7651e.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_3bafd625-f886-44d6-bd8e-fb80418356df.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -79,20 +79,8 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/ln-pro",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_7fea28a7-7978-41d3-b1f1-413de381cbe5.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_fcba243f-3bb0-4503-8676-efb0bb27d8d2.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": ""
-          }
-        },
-        "image_media_eyhtTk": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify:\/\/collections\/makeup-revolution",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_fe730fac-4403-4633-b5ba-8959bd3fc850.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_9c688588-6e7a-43fa-96a6-a34ec76614e4.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_00ad1258-4bd3-4545-9b08-9e62776bb18c.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_0cd8c01f-efb0-4ca0-9776-9c90738fa6eb.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -103,8 +91,8 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/milani",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_8dbd7ffe-890a-4cd6-9623-087e78aa3a80.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_X_600_7e4fe802-8733-43a8-be84-295831dac375.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_7503e9a2-bcfd-47cc-bb35-4388df5a46ce.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_X_600_8e2b6895-f33b-4671-9df1-353afa1e7e77.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -115,8 +103,20 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/pinkflash-cosmetics",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_fda7ebec-33ee-4ad0-818c-ac222dd8648e.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_dd21d12c-f183-477a-adbd-6f988dca56ee.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_ad3d4131-dcfa-4204-9050-dde4890b3401.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_61393ec9-a3ac-43a5-835d-4c841e497abf.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_kBjY4B": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/eveline-makeup",
+            "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_985ef4fd-bf20-47a5-844e-00e7557d4150.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_8bccb0f3-6a56-4f2b-b2bc-10593593e0eb.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -125,6 +125,7 @@
         },
         "image_media_En4iYf": {
           "type": "image-media",
+          "disabled": true,
           "settings": {
             "banner-url": "shopify:\/\/collections\/revolution-relove",
             "banner-image-desktop": "shopify:\/\/shop_images\/1920_x_463_a5ec7728-7921-42ce-baf7-562f9b6133c2.jpg",
@@ -137,15 +138,15 @@
         }
       },
       "block_order": [
-        "image_media_kBjY4B",
+        "image_media_eyhtTk",
         "image_media_6aHwAg",
         "image_media_dFcGGX",
         "image_media_aThPDt",
         "image_media_kXXCzf",
         "image_media_4WHfDy",
-        "image_media_eyhtTk",
         "image_media_8Q6DTT",
         "image_media_AaMEcf",
+        "image_media_kBjY4B",
         "image_media_En4iYf"
       ],
       "custom_css": [
@@ -184,7 +185,7 @@
         "image_media_nKzVwR": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/lot-by",
+            "banner-url": "https:\/\/hokmakeup.com\/collections\/the-add-to-heart-sale-up-to-60-off",
             "banner-image-desktop": "shopify:\/\/shop_images\/Off_sticker.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
@@ -374,70 +375,70 @@
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/focallure-beauty",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Focallure_8c3fb811-ef15-4478-859b-c0dfcd915a25.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Focallure_a93159c5-2c7e-4f9b-bf64-8ceb2ff5a69a.png"
           }
         },
         "banner_media_V737i6": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/makeup-revolution",
-            "banner-image-desktop": "shopify:\/\/shop_images\/MUR_10778dc6-97aa-4e7c-a640-12431c84baa2.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/MUR_b44779c2-9114-4d30-8782-2b14c3950b53.png"
           }
         },
         "banner_media_XeeXgR": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/milani",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Milani_a9e5b10e-11ef-4017-954f-836e73e54fe7.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Milani_c80aed9e-e161-40ea-a39a-1e4fda372757.png"
           }
         },
         "banner_media_78ttJc": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/la-girl",
-            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Girl_d156d89f-a46d-4ed3-b324-373176956184.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Girl_3af68053-b7b0-4a44-9850-be52be0a0a7c.png"
           }
         },
         "banner_media_Fer3Hf": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/lamel",
-            "banner-image-desktop": "shopify:\/\/shop_images\/LAMEL_79bf594a-5e01-42fb-af23-8ef13a81e216.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/LAMEL_504e0742-7985-47ab-b2f3-90dd9f1b4cb2.png"
           }
         },
         "banner_media_KYinz8": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/pink-flash",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Pinkflash_1b927972-9188-494e-92c2-9485459fd4df.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Pinkflash_1a6155f7-23aa-4b2c-ad78-481ec607e65e.png"
           }
         },
         "banner_media_acJ3xW": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/jessup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Jessup.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Jessup_f6ddc62f-280e-449c-8245-b599664fc3fa.png"
           }
         },
         "banner_media_F7KBpk": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/eveline-makeup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eveline_3d01dc45-b01b-4ea5-9e3d-9b927e86e333.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Eveline_205451a8-0b3e-4b84-858a-0105e2b75817.png"
           }
         },
         "banner_media_wKtFqa": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/ln-pro",
-            "banner-image-desktop": "shopify:\/\/shop_images\/LN_Pro_e2526eb0-14fb-4038-a81b-333937abaaf2.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/LN_Pro_dd8f1178-a35a-490e-a51d-158f5878e6aa.png"
           }
         },
         "banner_media_BG7848": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/la-colors",
-            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Colors_90870f77-c9e9-4711-b460-9d39c993433e.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Colors_cf72f4fd-dec2-4cdb-a538-74bc0e77fbe7.png"
           }
         }
       },
@@ -752,7 +753,7 @@
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/revolution-relove",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Relove.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Relove_ff5affde-8947-48fa-bf6c-f940e0a02f02.png"
           }
         },
         "banner_media_tcqznw": {
@@ -780,28 +781,28 @@
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/bh-cosmetics",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BH.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/BH_b346f9c4-6e36-4ee5-9bad-d4fe89ade668.png"
           }
         },
         "banner_media_NHx4fA": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/ardell",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Ardell_93e6a22e-11b7-4c8f-9867-6a2ebbcb0e5a.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Ardell_f8c57a93-b863-4e72-bc13-75d48eafe0ca.png"
           }
         },
         "banner_media_NeXKVp": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/physician-formula",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Physicians_Formula.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Physicians_Formula_c04605d3-c269-4c3c-8003-225ef631e54a.png"
           }
         },
         "banner_media_TNhkWg": {
           "type": "banner-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/lord-and-berry",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Lord_Berry.png"
+            "banner-image-desktop": "shopify:\/\/shop_images\/Lord_Berry_01db2f90-489a-4cda-ba18-7a59e0e0a09b.png"
           }
         },
         "banner_media_c3wnNw": {

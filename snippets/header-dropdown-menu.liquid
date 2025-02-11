@@ -93,7 +93,7 @@
                 class="header__active-menu-item"
               {% endif %}
             >
-               {% if link.handle == "hok-rewards" %}<img loading="eager" src="//hokmakeup.com/cdn/shop/t/36/assets/hok-rewards.gif?v=180248546365669141791735555189" alt="reward-gif" width="75" height="35">{% else %} {{ link.title | escape }}{% endif %}
+               {% if link.handle == "hok-rewards" %}<img loading="lazy" src="//hokmakeup.com/cdn/shop/t/36/assets/hok-rewards.gif?v=180248546365669141791735555189" alt="reward-gif" width="75" height="35">{% else %} {{ link.title | escape }}{% endif %}
             </span>
           </a>
         {%- endif -%}

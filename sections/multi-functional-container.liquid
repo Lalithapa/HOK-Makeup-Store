@@ -95,7 +95,7 @@
                           height: '100%',
                           sizes: sizes,
                           widths: widths,
-                          fetchpriority: fetch_priority,
+                          loading:"lazy",
                           class: 'w-100 desktop_screen'
                       }}
                       {{
@@ -105,7 +105,7 @@
                           height: '100%',
                           sizes: sizes,
                           widths: widths,
-                          fetchpriority: fetch_priority,
+                          loading:"lazy",
                           class: 'w-100 mobile_screen'
                       }}
                     {% else %}
@@ -116,10 +116,11 @@
                           height: '100%',
                           sizes: sizes,
                           widths: widths,
-                          fetchpriority: fetch_priority,
+                          loading:"lazy",
                           class: 'w-100'
                       }}
                     {% endif %}
+                    {% comment %} fetchpriority: fetch_priority, {% endcomment %}
                   {% when 'video-media' %}
                     {% assign media_desktop = block.settings['banner-video-desktop']   %}
                     {% if block.settings['banner-video-mobile'] != blank %}

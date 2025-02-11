@@ -53,6 +53,7 @@ $(document).ready(function () {
                         mediaId: media.id,
                         position: media.position,
                         class: "img-fluid asp34 quickMedia",
+                        loading: "lazy"
                     });
                 } else if (media.media_type.toLowerCase() === "video") {
                     productMedia = $("<video>", {
