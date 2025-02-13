@@ -1,8 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
- {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
-
     <meta charset="utf-8">
     <meta name="google-site-verification" content="TDoXrfR2tc8ptJb5eduGq1vRueRu-47EbZAUmcY1MxQ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,7 +79,6 @@
     {% endif %}
 
     {% render 'meta-tags', page_description: page_description, page_title: page_title  %}
-
     <script src="{{ 'jquery.js' | asset_url }}" async></script>
     <script src="{{ 'swiper.js' | asset_url }}" async></script>
      {% comment %} <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script> {% endcomment %}
@@ -94,18 +91,18 @@
     <script src="{{ 'quick_view.js' | asset_url }}" defer></script>
     <script src="{{ 'axios.js' | asset_url }}" defer></script>
 
-    {% comment %} <script  defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> {% endcomment %}
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer></script>
     {%- endif -%}
+    {% comment %} <script  defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> 
     {% if request.path == '/pages/jessup-launch' %}
       <script
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
         defer
       ></script>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     {{ content_for_header }}
 
@@ -381,12 +378,11 @@
     {% endif %} 
 
     {%- if settings.cart_type == 'drawer' -%}
+      {% comment %}  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}  {% endcomment %}
       {{ 'component-cart.css' | asset_url | stylesheet_tag }}
-      {% comment %} 
-      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
       {{ 'component-totals.css' | asset_url | stylesheet_tag }}
       {{ 'component-price.css' | asset_url | stylesheet_tag }}
-      {{ 'component-discounts.css' | asset_url | stylesheet_tag }} {% endcomment %}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
 
     {%- unless settings.type_body_font.system? -%}
@@ -457,9 +453,9 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const videos = document.querySelectorAll("video.lazyvideo");
+    <script async>
+    document.addEventListener('DOMContentLoaded', function () {
+         const videos = document.querySelectorAll("video.lazyvideo");
   
       const loadVideo = (video) => {
         const source = video.querySelector("source");

@@ -13,7 +13,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10rem 0;
-    gap: 10px;
+    gap: 0;
 }
 .skin-sidebar,
 .skincare-content .list {
@@ -35,14 +35,17 @@
     z-index: 1;
     flex: 1;
     aspect-ratio: 1;
+    letter-spacing: 0px;
 }
 #skincare_concern:checked ~ .list label.skincare_concern,
 #skincare_ingredients:checked ~ .list label.skincare_ingredients,
 #skincare_product_type:checked ~ .list label.skincare_product_type {
     color: #22272c;
     background: #e3dfd0;
+    font-weight: bold;
     box-shadow: 0 4px 10px 0 #d8d5ca;
 }
+
 .skincare-content .text-skincare-content {
     width: 85%;
     height: 100%;
@@ -56,8 +59,9 @@
     margin-bottom: 10px;
     font-weight: 500;
 }
-#skincare-container .text .para {
-    margin-top: 6px;
+#skincare-container .text .para { 
+    margin-top: 1px;
+    letter-spacing:0;
     font-size: clamp(10px, 2vw, 14px);
     text-align: center;
 }
@@ -122,7 +126,7 @@
     font-family: var(--family-bold);
 }
 .skin-tab-item.active img {
-    filter: brightness(50%);
+    filter: brightness(60%);
     border: 3px solid #ffffff;
 }
 .tab-skincare-content {
@@ -131,6 +135,10 @@
     flex: 0 0 85%;
     overflow-x: auto;
     padding-bottom: clamp(16px, 2vw, 32px);
+}
+.tab-skincare-content :where(.b-product_promo_vendor-name,.product-prices){
+  text-align: center;
+  justify-content: center;
 }
 .skin-tab-panel .b-product_promo_tile {
     max-width: 320px;
@@ -145,12 +153,12 @@
     border-radius: 4px;
 }
 .tab-skincare-content::-webkit-scrollbar {
-    height: 3px;
+    height: 2px;
     background-color: #f5f5f5;
 }
 .tab-skincare-content::-webkit-scrollbar-thumb {
     background-color: #353535;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 .product-tab-card {
     flex: 1;
@@ -174,19 +182,45 @@
     font-size: 4.5rem;
   }
 }
+@media screen and (min-width: 578px) and (max-width: 786px) {
+  div#skincare-container::after {
+    max-width: 540px !important;
+  }
+}
 @media screen and (max-width: 990px) {
     .sm-margin {
         margin: 26px 0 18px;
     }
+    div#skincare-container::after {
+      content: "";
+      background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/bar-line.png);
+      width: calc(100% - 40px);
+      max-width: 720px;
+      background-position: unset;
+      background-size: cover;
+      background-repeat: round;
+      position: absolute;
+      top: 26%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 53px;
+      z-index: 1;
+    }
+    .tab-skincare-content {
+      margin-top: 60px; 
+    }
     .skincare-content {
-        width: calc(100% - 16px);
-        margin: -15px auto 0;
-        padding: 15px 15px 0;
-        gap: 16px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        background: #fff;
-        box-shadow: 0 4px 20px 0 rgba(52, 66, 71, 0.1);
+      width: calc(100% - 16px);
+      margin: -15px auto 0;
+      padding: 15px 15px 0;
+      gap: 16px;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 4px 20px 0 rgba(52, 66, 71, 0.1);
+    }
+    .tab-skincare-content{
+      width: 75%;
+      margin-inline: auto !important;
     }
     .z--1 {
         z-index: -1;
@@ -203,8 +237,8 @@
     }
     .skin-tab-item img {
         object-fit: contain;
-        max-width: 85px;
-        max-height: 85px;
+        max-width: 83px;
+        max-height: 77px;
     }
     .skincare-content .list {
         flex-direction: row;
@@ -306,7 +340,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid" id="skincare-container">
+  <div class="container-fluid position-relative" id="skincare-container">
     <div class="container skincare-content">
       <input type="radio" name="slider" checked id="skincare_product_type">
       <input type="radio" name="slider" id="skincare_concern">
@@ -693,7 +727,9 @@
       });
       let main_tab_1 = new Swiper("#main-tab-1", {
         direction: "horizontal",
-        slidesPerView: 4,
+        slidesPerView: 3.8,
+        spaceBetween: 4,
+        mousewheel: true,
         navigation: {
           prevEl: '#carousel-prev-1{{ section.id }}',
           nextEl: '#carousel-next-1{{ section.id }}',
@@ -708,7 +744,9 @@
       });
       let main_tab_2 = new Swiper("#main-tab-2", {
         direction: "horizontal",
-        slidesPerView: 4,
+        slidesPerView: 3.8,
+        spaceBetween: 4,
+        mousewheel: true,
         navigation: {
           prevEl: '#carousel-prev-2{{ section.id }}',
           nextEl: '#carousel-next-2{{ section.id }}',
@@ -724,7 +762,9 @@
       });
       let main_tab_3 = new Swiper("#main-tab-3", {
         direction: "horizontal",
-        slidesPerView: 4,
+        slidesPerView: 3.8,
+        spaceBetween: 4,
+        mousewheel: true,
         navigation: {
           prevEl: '#carousel-prev-3{{ section.id }}',
           nextEl: '#carousel-next-3{{ section.id }}',

@@ -29,6 +29,7 @@
         },
         "video_QHRf84": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "banner-video-desktop": "shopify:\/\/files\/videos\/bannerdesk1.mp4",
             "banner-video-mobile": "shopify:\/\/files\/videos\/banner1mob.mp4",
@@ -52,6 +53,7 @@
         },
         "video_VNAhaT": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "banner-video-desktop": "shopify:\/\/files\/videos\/Lamel Subliminal Banenr 5.mp4",
             "banner-video-mobile": "shopify:\/\/files\/videos\/Mobile_82a0515c-4f11-49d8-b214-45c1994993e1.mp4",
@@ -75,6 +77,7 @@
         },
         "video_tHrchM": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "banner-video-desktop": "shopify:\/\/files\/videos\/banner2desk.mp4",
             "banner-video-mobile": "shopify:\/\/files\/videos\/banner2mob.mp4",
@@ -237,6 +240,7 @@
         },
         "video_899D4k": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner_new.mp4",
             "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob-New_ad4a41b8-514b-48e9-91fa-d6c0f55e9ae2.mp4",
