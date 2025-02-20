@@ -51,7 +51,6 @@
                       title="{{ product.title }}"
                       height="100"
                       width="100"
-                      fetchpriority="false"
                       loading="lazy"
                     >
                   </div>
@@ -65,8 +64,7 @@
                       alt="{{ media.alt | escape }}"
                       height="100%"
                       width="100%"
-                      fetchpriority="true"
-                      loading="eager"
+                      loading="lazy"
                     >
                   </div>
                 {% endif %}
@@ -117,15 +115,15 @@
                       </a>
                     {% endcomment %}
                     <div class="swiper-zoom-container">
-                      <img
+                        <img
                         src="{{ media | image_url }}"
                         alt="{{ product.title }}"
                         title="{{ product.title }}"
-                        height="100%"
+                        loading="lazy"
                         width="100%"
-                        fetchpriority="true"
-                        loading="eager"
+                        height="100%"
                       >
+                      <div class="swiper-lazy-preloader swiper-lazy-preloader-black"><br></div>
                     </div>
                   </div>
                 {% elsif media.media_type == 'video' %}
@@ -165,10 +163,10 @@
               {% endfor %}
             </div>
             <div class="arrow_handler">
-              <div class="product-button-prev-main carousel-btn d-flex">
+              <div class="product-button-prev-main carousel-btn desktop_screen">
                 {{ 'arrow-back.svg' | inline_asset_content }}
               </div>
-              <div class="product-button-next-main carousel-btn d-flex">
+              <div class="product-button-next-main carousel-btn desktop_screen">
                 {{ 'arrow-next.svg' | inline_asset_content }}
               </div>
             </div>
@@ -441,13 +439,17 @@
 
   function initializeSwiperMain() {
     return new Swiper(".productSlider2", {
+      slidesPerView: "auto",
+      centeredSlides: true,  
       spaceBetween: 10,
       speed: 100,
+      lazy: true,
       zoom: true,
       touchStartForcePreventDefault: true,
       autoheight: true,
       freeMode: true,
       mousewheel: true,
+      centeredSlides: true,
       allowTouchMove: freeSlide,
       pagination: {
         el: ".swiper-pagination",
@@ -457,9 +459,19 @@
       thumbs: {
         swiper: swiperList,
       },
-      navigation: {
-        nextEl: ".product-button-next-main",
-        prevEl: ".product-button-prev-main",
+      breakpoints: {
+        0: { // For mobile screens
+          navigation: {
+            nextEl: null,
+            prevEl: null
+          }
+        },
+        768: { // For screens 768px and above, enable navigation
+          navigation: {
+            nextEl: ".product-button-next-main",
+            prevEl: ".product-button-prev-main"
+          }
+        }
       }
     });
   }
@@ -469,18 +481,9 @@
     swiperMain = initializeSwiperMain();
   }
 
-  // Initialize the sliders
-  initializeSlider();
-
-  {% unless product.metafields.custom.image_alt_text_fullfilled %}
-    {% unless template.suffix == "club-product" %}
-      swiperMain.slideTo({{ product.selected_or_first_available_variant.featured_media.position | minus: 1 }});
-    {% endunless %}
-  {% endunless %}
-
   function updateSliderPosition(mediaPosition) {
     swiperMain.slideTo(mediaPosition);
-  }
+  }  
 
   function updateProductInfo($target,optionId, optionValue, variantPrice, variantRackRate,variantPriceNumber,variant_availability,variantRackRateNumber, discountedPercentage, variantSku, mediaPosition, imgSource) {
     
@@ -575,8 +578,13 @@
     {% endif %}
   }
 
-  //Product Swatch Change
+  // Initialize the sliders
+  setTimeout(() => {
+    initializeSlider();
+    swiperMain.slideTo({{ product.selected_or_first_available_variant.featured_media.position | minus: 1 }});
+    //Product Swatch Change
   $('body').on('change', '#main_product_page.product.swatch :radio', handleProductSwatchChange);
+  }, 500);
     
     //Share Product Details
     const getShareData = (
