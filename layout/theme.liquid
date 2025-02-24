@@ -79,6 +79,9 @@
     {% endif %}
 
     {% render 'meta-tags', page_description: page_description, page_title: page_title  %}
+    <script async>
+      window.history.scrollRestoration = 'manual';
+    </script>
     <script async src="{{ 'jquery.js' | asset_url }}"></script>
     <script async src="{{ 'swiper.js' | asset_url }}" ></script>
     {% comment %} 
@@ -131,7 +134,6 @@
         {% else %}
           --gradient-background: {{ scheme.settings.background }};
         {% endif %}
-
         {% liquid
           assign background_color = scheme.settings.background
           assign background_color_brightness = background_color | color_brightness

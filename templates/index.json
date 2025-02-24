@@ -3,64 +3,38 @@
     "main_hero_banner_qcCWtj": {
       "type": "main-hero-banner",
       "blocks": {
-        "image_Nxfx79": {
+        "image_K7raBU": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Header_Banner_Desktop.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Header_Banner_Mobile.jpg",
-            "banner-url": "shopify:\/\/collections\/lot-by",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_Colors_Lip_Balm_Desktop.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/LA_Colors_Lip_Balm_Mobile.jpg",
+            "banner-url": "shopify:\/\/collections\/la-colors",
             "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/lot-by",
-            "btn2-url": "shopify:\/\/collections\/lot-by",
+            "btn1-url": "shopify:\/\/collections\/la-colors",
+            "btn2-url": "shopify:\/\/collections\/la-colors",
             "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#000000",
+            "btn1-bg-desktop": "#000000",
             "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
+            "btn1-text-desktop": "#ffffff",
             "btn1-text-hover-desktop": "#000000",
             "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "#ffffff",
-            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-bg-desktop": "rgba(0,0,0,0)",
+            "btn2-bg-hover-desktop": "#000000",
             "btn2-text-desktop": "#000000",
-            "btn2-text-hover-desktop": "#000000"
+            "btn2-text-hover-desktop": "#ffffff"
           }
         },
-        "video_QHRf84": {
+        "video_zqcdph": {
           "type": "video",
-          "disabled": true,
           "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/bannerdesk1.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/banner1mob.mp4",
-            "banner-url": "shopify:\/\/pages\/valentines-day",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Banner 1920X735_84c2b38b-5771-48f9-beb1-3b99d452ce2f.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Banner 780X1200_671ae251-51da-4135-a523-92614b6eb985.mp4",
+            "banner-url": "shopify:\/\/collections\/focallure-beauty",
             "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/pages\/valentines-day",
-            "btn2-url": "shopify:\/\/pages\/valentines-day",
-            "cta-btn-1-text": "",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "#ffffff",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#000000",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_VNAhaT": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Lamel Subliminal Banenr 5.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Mobile_82a0515c-4f11-49d8-b214-45c1994993e1.mp4",
-            "banner-url": "shopify:\/\/collections\/lamel",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/lamel-subliminal-collection",
-            "btn2-url": "shopify:\/\/collections\/lamel",
+            "btn1-url": "shopify:\/\/collections\/focallure-beauty",
+            "btn2-url": "shopify:\/\/collections\/focallure-beauty",
             "cta-btn-1-text": "Shop Now",
             "cta-btn-2-text": "Shop Brand",
             "btn1-bg-mobile": "#ffffff",
@@ -75,14 +49,36 @@
             "btn2-text-hover-desktop": "#000000"
           }
         },
-        "video_tHrchM": {
+        "video_VNAhaT": {
           "type": "video",
-          "disabled": true,
           "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/banner2desk.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/banner2mob.mp4",
-            "banner-url": "shopify:\/\/collections\/pink-flash",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Lamel Subliminal Header Banner 1920X735 Final Mob.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Lamel Subliminal Header Banner 780X1200 Final Desk.mp4",
+            "banner-url": "shopify:\/\/collections\/lamel",
             "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/lamel-subliminal-collection",
+            "btn2-url": "shopify:\/\/collections\/lamel",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "image_CNCCec": {
+          "type": "image",
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/A_Pop_of_Pink_A_Dash_of_Cute_DESKTOP.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/A_Pop_of_Pink_A_Dash_of_Cute_780_X_1200.jpg",
+            "banner-url": "shopify:\/\/collections\/pink-flash",
+            "show-cta-on-desktop": true,
             "btn1-url": "shopify:\/\/collections\/pink-flash",
             "btn2-url": "shopify:\/\/collections\/pink-flash",
             "cta-btn-1-text": "Shop Now",
@@ -119,53 +115,6 @@
             "btn2-bg-desktop": "#000000",
             "btn2-bg-hover-desktop": "#ffffff",
             "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_fAjRDw": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/banner3desk.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/banner3mob.mp4",
-            "banner-url": "shopify:\/\/collections\/lamel",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/products\/lamel-lip-stain-hydrating-lip-tint",
-            "btn2-url": "shopify:\/\/collections\/lamel",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop Brand",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "image_QFr8iR": {
-          "type": "image",
-          "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Organizer_Banner_Desktop.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Organizer_Banner_Mobile.jpg",
-            "banner-url": "shopify:\/\/collections\/atelier-collection-makeup-organizers",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/atelier-collection-makeup-organizers",
-            "btn2-url": "shopify:\/\/collections\/atelier-collection-makeup-organizers",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "#ffffff",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#000000",
             "btn2-text-hover-desktop": "#000000"
           }
         },
@@ -238,30 +187,6 @@
             "btn2-text-hover-desktop": "#000000"
           }
         },
-        "video_899D4k": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner_new.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob-New_ad4a41b8-514b-48e9-91fa-d6c0f55e9ae2.mp4",
-            "banner-url": "shopify:\/\/collections\/la-girl",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/la-girl",
-            "btn2-url": "shopify:\/\/collections\/la-girl",
-            "cta-btn-1-text": "Shop Brand",
-            "cta-btn-2-text": "Shop Now",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
         "image_ywYCaa": {
           "type": "image",
           "settings": {
@@ -284,296 +209,18 @@
             "btn2-text-desktop": "#000000",
             "btn2-text-hover-desktop": "#ffffff"
           }
-        },
-        "video_b94Gj4": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Black Friday Header Banner.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob_99b12c59-1a96-4a7e-a399-6ea6326bd7f9.mp4",
-            "banner-url": "shopify:\/\/collections\/new-arrivals",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/new-arrivals",
-            "btn2-url": "shopify:\/\/collections\/new-arrivals",
-            "cta-btn-1-text": "",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "#ffffff",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#000000",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "image_HNygpq": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/The-big-beauty-header-banner-desktop.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Artboard_2_f95ea88e-5ac4-4a6f-be09-62521ea3f543.png",
-            "banner-url": "shopify:\/\/pages\/mega-festive-sale",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/pages\/mega-festive-sale",
-            "btn2-url": "shopify:\/\/pages\/mega-festive-sale",
-            "cta-btn-1-text": "",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#000000",
-            "btn1-bg-desktop": "#000000",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#ffffff",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "rgba(0,0,0,0)",
-            "btn2-bg-hover-desktop": "#000000",
-            "btn2-text-desktop": "#000000",
-            "btn2-text-hover-desktop": "#ffffff"
-          }
-        },
-        "video_M6wP4a": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner-Desktop_0b2b0238-e99b-4d78-962e-2add00cdba48.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob_c66f8e9e-89d7-4b94-8276-e1312e49e8c1.mp4",
-            "banner-url": "shopify:\/\/collections\/koric",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/koric",
-            "btn2-url": "shopify:\/\/collections\/koric",
-            "cta-btn-1-text": "Shop Brand",
-            "cta-btn-2-text": "Shop Now",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_Fhd4Px": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner-Desktop_18daefd6-db86-4273-b34c-97ef5d33159c.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob_162b50d1-7974-458a-8cd8-fd0cdf6546c8.mp4",
-            "banner-url": "shopify:\/\/collections\/makeup-revolution",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/makeup-revolution",
-            "btn2-url": "shopify:\/\/collections\/makeup-revolution",
-            "cta-btn-1-text": "",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_Fg6zxf": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner-Desktop_e835ab5e-353d-4673-bfca-22ddec05a536.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob.mp4",
-            "banner-url": "shopify:\/\/collections\/ln-pro",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/ln-pro",
-            "btn2-url": "shopify:\/\/collections\/ln-pro",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop Brand",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_ewAXKi": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/3236ccebcd094d12aa17ff238ceb1f54.HD-720p-3.0Mbps-36043161.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/5e0f12f972564df0b35263cd9a1c9cd9.HD-1080p-2.5Mbps-36043162.mp4",
-            "banner-url": "shopify:\/\/collections\/focallure-beauty",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/focallure-beauty",
-            "btn2-url": "shopify:\/\/collections\/focallure-beauty",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop Brand",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "image_x46dgY": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Giverney-banner-desktop.webp",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Giverney-mob.webp",
-            "banner-url": "shopify:\/\/collections\/giverny",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/giverny",
-            "btn2-url": "shopify:\/\/collections\/giverny",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop Brand",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "image_MXYCcT": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Header_banner-desktop_6dc6e720-716d-46d9-b7b5-7e172032bd73.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Header_banner-mob.png",
-            "banner-url": "shopify:\/\/collections\/la-girl",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/la-girl",
-            "btn2-url": "shopify:\/\/collections\/la-girl",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop Brand",
-            "btn1-bg-mobile": "#000000",
-            "btn1-bg-desktop": "#000000",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#ffffff",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "rgba(0,0,0,0)",
-            "btn2-bg-hover-desktop": "#000000",
-            "btn2-text-desktop": "#000000",
-            "btn2-text-hover-desktop": "#ffffff"
-          }
-        },
-        "image_xMd3zp": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/PINK_FLASH_HEADER_BANNER.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/PINK_FLASH_HEADER_MOBILE.jpg",
-            "banner-url": "shopify:\/\/collections\/pink-flash",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/pink-flash",
-            "btn2-url": "shopify:\/\/products\/pinkflash-chic-in-cheek",
-            "cta-btn-1-text": "Explore Brand",
-            "cta-btn-2-text": "Shop Now",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_YHJiam": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Hok Rewards- Desktop_0a4c8ce7-85f4-47c1-9e34-8adc8460ad68.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Hok Rewards-Mob_3d07bc4f-86e6-48f2-ae88-257460c934fa.mp4",
-            "banner-url": "shopify:\/\/pages\/hok-rewards",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/pages\/hok-rewards",
-            "btn2-url": "shopify:\/\/pages\/hok-rewards",
-            "cta-btn-1-text": "Learn More",
-            "cta-btn-2-text": "",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
-        },
-        "video_RhbQCB": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner-Desktop_09c81120-bd5d-403a-84f6-dd5d9d08cc25.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob (eve).mp4",
-            "banner-url": "shopify:\/\/collections\/eveline-makeup",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/eveline-cosmetics",
-            "btn2-url": "shopify:\/\/collections\/eveline-makeup",
-            "cta-btn-1-text": "Shop Brand",
-            "cta-btn-2-text": "Shop Now",
-            "btn1-bg-mobile": "#ffffff",
-            "btn1-bg-desktop": "#ffffff",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#000000",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#000000",
-            "btn2-bg-desktop": "#000000",
-            "btn2-bg-hover-desktop": "#ffffff",
-            "btn2-text-desktop": "#ffffff",
-            "btn2-text-hover-desktop": "#000000"
-          }
         }
       },
       "block_order": [
-        "image_Nxfx79",
-        "video_QHRf84",
+        "image_K7raBU",
+        "video_zqcdph",
         "video_VNAhaT",
-        "video_tHrchM",
+        "image_CNCCec",
         "image_ptAQVA",
-        "video_fAjRDw",
-        "image_QFr8iR",
         "image_9yfRUh",
         "image_ywYrhm",
         "image_KpLUUg",
-        "video_899D4k",
-        "image_ywYCaa",
-        "video_b94Gj4",
-        "image_HNygpq",
-        "video_M6wP4a",
-        "video_Fhd4Px",
-        "video_Fg6zxf",
-        "video_ewAXKi",
-        "image_x46dgY",
-        "image_MXYCcT",
-        "image_xMd3zp",
-        "video_YHJiam",
-        "video_RhbQCB"
+        "image_ywYCaa"
       ],
       "custom_css": [
         ".desktop_screen.button-cta {display: flex;}",
@@ -607,6 +254,7 @@
         },
         "video_media_qV3JUr": {
           "type": "video-media",
+          "disabled": true,
           "settings": {
             "banner-url": "shopify:\/\/pages\/valentines-day",
             "banner-video-desktop": "shopify:\/\/files\/videos\/Main Tile_97596a76-e680-454d-87f9-c6d9e301e942.mp4",
@@ -620,7 +268,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/best-seller-home-page",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_BEST_SELLERS.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/BEST_SELLERS_5db13d2a-0162-412e-83a9-52d7fa9b5cef.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -631,7 +279,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/makeup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_MAKEUP.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/MAKEUP_9f10473d-dbb3-4b63-af3f-e57c3b7d7d66.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -642,7 +290,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/skincare",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_SKIN.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/SKIN_bc4be141-65c1-4840-b698-30d8a048d607.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -653,7 +301,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/hair-care",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_HAIR.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/HAIR_5f910a67-b403-4eca-a779-c75213a8bfdc.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -664,7 +312,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/body-care",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_BATH_BODY.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/BATH_BODY_024edd2f-c663-4c20-bb45-0506fd082f11.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -675,7 +323,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/fragrance",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_FRAGRANCE.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/FRAGRANCE.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -686,7 +334,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/combos",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Catergory_Tiles_COMBO_AND_KITS.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/COMBO_AND_KITS.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -742,7 +390,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/foundation",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_7dccaf4d-024c-4672-a28d-299a8d9f99d0.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_e9202c09-e600-4601-a138-8cceac49f964.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -753,7 +401,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/lip-tint",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Lip_Tint_ce4f10d3-c96c-4b5c-aa86-d86bcd3127e1.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Lip_Tint_5f2c18c3-868a-4532-912f-92572fc24167.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -764,7 +412,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "https:\/\/www.hokmakeup.com\/collections\/eyeshadow",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeshadow_d8d1ab9a-7658-4eab-86f6-a01e3c001294.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeshadow_bfcb42da-208b-4fe0-9af9-2fa8fe24b2af.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -775,7 +423,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "https:\/\/hokmakeup.com\/collections\/mascara",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_6ade9cf1-dfe0-4296-8fc2-9dc52379a57c.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_f03ed57e-4bc0-483b-b29c-91d36f46f46a.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -784,10 +432,9 @@
         },
         "image_media_ctnVDC": {
           "type": "image-media",
-          "disabled": true,
           "settings": {
             "banner-url": "shopify:\/\/collections\/blush",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Blush_7240ad90-69ff-4e8e-b02d-0c94b056aa5d.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Blush_f40fadcd-a7c4-4b84-bbcd-28d72eccf12e.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -798,7 +445,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/liquid-lipstick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Liquid_Lipstick.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Liquid_Lipstick_8fb94720-6f8e-424e-8c41-c6613d7aba6f.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1031,8 +678,8 @@
         "image_media_rxpDJ7"
       ],
       "custom_css": [
-        ".section-template--23786027090199__multi_functional_container_n78MM7-margin {background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0896\/2320\/0023\/files\/eveline_banner.webp?v=1733118451); background-size: cover; background-repeat: no-repeat; padding-bottom: 55px;}",
-        "@media screen and (max-width: 768px) {.section-template--23786027090199__multi_functional_container_n78MM7-margin {padding-bottom: 35px !important; }}"
+        ".section-template23945738584343multifunctionalcontainern78MM7-margin {background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0896\/2320\/0023\/files\/eveline_banner.webp?v=1733118451); background-size: cover; background-repeat: no-repeat; padding-bottom: 55px;}",
+        "@media screen and (max-width: 768px) {.section-template23945738584343multifunctionalcontainern78MM7-margin {padding-bottom: 35px !important; }}"
       ],
       "settings": {
         "showContainer": "container",
@@ -1048,7 +695,7 @@
         "slide_speed": 400,
         "margin_top_desktop": 88,
         "margin_bottom_desktop": 0,
-        "margin_top_mobile": 40,
+        "margin_top_mobile": 46,
         "margin_bottom_mobile": 0,
         "carousel-title": "Eveline- #1 Beauty Brand In Europe",
         "carousel-sub-title": "",
@@ -1182,7 +829,7 @@
           "settings": {
             "banner-url": "shopify:\/\/collections\/the-gen-z-store",
             "banner-video-desktop": "shopify:\/\/files\/videos\/Hok Genz Banner Desk.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Genz Store Video Mobile.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Hok Genz Banner Mobile_cd004fc2-ac7f-4b2a-a443-60401d9e76df.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1697,6 +1344,7 @@
     },
     "hok_featured_collection_qqaaHQ": {
       "type": "hok-featured-collection",
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "image_priority": false,

@@ -426,7 +426,7 @@
     return new Swiper(".productSlider", {
       spaceBetween: 10,
       slidesPerView: 4,
-      speed: 100,
+      speed: 200,
       direction: "vertical",
       freeMode: true,
       mousewheel: true,
@@ -440,16 +440,13 @@
   function initializeSwiperMain() {
     return new Swiper(".productSlider2", {
       slidesPerView: "auto",
-      centeredSlides: true,  
       spaceBetween: 10,
-      speed: 100,
+      speed: 200,
       lazy: true,
       zoom: true,
       touchStartForcePreventDefault: true,
       autoheight: true,
-      freeMode: true,
       mousewheel: true,
-      centeredSlides: true,
       allowTouchMove: freeSlide,
       pagination: {
         el: ".swiper-pagination",
@@ -461,12 +458,16 @@
       },
       breakpoints: {
         0: { // For mobile screens
+          freeMode: false,
+          centeredSlides: true,
           navigation: {
             nextEl: null,
             prevEl: null
           }
         },
         768: { // For screens 768px and above, enable navigation
+          freeMode: true,
+          centeredSlides: false,
           navigation: {
             nextEl: ".product-button-next-main",
             prevEl: ".product-button-prev-main"
@@ -577,48 +578,33 @@
      handleMetafieldFullfilled($(event.target));
     {% endif %}
   }
-
-  // Initialize the sliders
-  setTimeout(() => {
-    initializeSlider();
-    swiperMain.slideTo({{ product.selected_or_first_available_variant.featured_media.position | minus: 1 }});
-    //Product Swatch Change
-  $('body').on('change', '#main_product_page.product.swatch :radio', handleProductSwatchChange);
-  }, 500);
-    
-    //Share Product Details
-    const getShareData = (
-      title = 'HOK Makeup',
-      productTitle = 'this amazing product',
-      text = `Hey! Checkout ${productTitle} at HOK Makeup`,
-      url = '{{ shop.url }}'
-    ) => {
-      const shareData = {
-        title,
-        text,
-        url,
-      };
-      return shareData;
-    };
     const webShare = async (shareData) => {
         if (navigator.share) 
         try {
             await navigator.share(shareData);
         } catch (error) {
+          alert(error);
             console.log("Error sharing:", error);
         }
         else console.log("Web Share API is not supported in this browser.");
     };
-    $('#shareProduct').on('click', function () {
+    // Initialize the sliders
+    setTimeout(() => {
+      initializeSlider();
+      updateSliderPosition({{ first_variant.featured_media.position | minus: 1 }});
+      //Product Swatch Change
+      $('body').on('change', '#main_product_page.product.swatch :radio', handleProductSwatchChange);
+      $('#shareProduct').on('click', function () {
       const productTitle = "{{- product.title -}}"; 
       const productUrl = window.location.href ;
-         const shareData = {
+        const shareData = {
             title: "HOK Makeup",
             text: `Hey! Checkout this ${productTitle} at HOK Makeup`,
             url: productUrl
           };
       webShare(shareData);
     });
+    }, 500);
 });
 </script>
 <script>
@@ -661,9 +647,7 @@
       this.loadContent();
     }
   }
-
   customElements.define('deferred-product-media', DeferredProductMedia);
-
 </script>
 <script type="application/ld+json">
   {{ product | structured_data }}

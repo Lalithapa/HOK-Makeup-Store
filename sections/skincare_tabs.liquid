@@ -725,6 +725,8 @@
           tabContent.classList.add('active');
         });
       });
+      setTimeout(() => {
+     
       let main_tab_1 = new Swiper("#main-tab-1", {
         direction: "horizontal",
         slidesPerView: 3.8,
@@ -778,6 +780,7 @@
           }
         }
       });
+      }, 500);
     });
   </script>
   {% schema %}
