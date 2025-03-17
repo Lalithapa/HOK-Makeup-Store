@@ -100,120 +100,139 @@
       The latest product drops, offers and stories straight to your phone, plus 20% off your next order
     </h2>
     {% form 'customer', class: 'newsletter-form' %}
-    <input type="hidden" name="contact[tags]" value="newsletter">
-    <div class="newsletter-form__field-wrapper">
-      <div class="f-field b-email_sign_up-email_input m-auto">
-        <input id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]" class="f-input_email-field"
-          value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" {%
-          if form.errors %} autofocus aria-invalid="true" aria-describedby="Newsletter-error--{{ section.id }}" {% elsif
-          form.posted_successfully? %} aria-describedby="Newsletter-success--{{ section.id }}" {% endif %}
-          placeholder="*Enter your email" required>
-        <button type="submit" class="b-email_sign_up-submit" name="commit" id="Subscribe"
-          aria-label="{{ 'newsletter.button_label' | t }}" style="margin-top: 10px;">
-          Subscribe
-        </button>
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="newsletter-form__field-wrapper">
+        <div class="f-field b-email_sign_up-email_input m-auto">
+          <input
+            id="NewsletterForm--{{ section.id }}"
+            type="email"
+            name="contact[email]"
+            class="f-input_email-field"
+            value="{{ form.email }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            {% if form.errors %}
+              autofocus aria-invalid="true" aria-describedby="Newsletter-error--{{ section.id }}"
+            {% elsif form.posted_successfully? %}
+              aria-describedby="Newsletter-success--{{ section.id }}"
+            {% endif %}
+            placeholder="*Enter your email"
+            required
+          >
+          <button
+            type="submit"
+            class="b-email_sign_up-submit"
+            name="commit"
+            id="Subscribe"
+            aria-label="{{ 'newsletter.button_label' | t }}"
+            style="margin-top: 10px;"
+          >
+            Subscribe
+          </button>
+        </div>
+        {%- if form.errors -%}
+          <div class="f-field-error" id="Newsletter-error--{{ section.id }}">
+            <span class="f-field-error_text">Please enter a valid email address</span>
+          </div>
+        {%- endif -%}
       </div>
-      {%- if form.errors -%}
-      <div class="f-field-error" id="Newsletter-error--{{ section.id }}">
-        <span class="f-field-error_text">Please enter a valid email address</span>
-      </div>
+      {%- if form.posted_successfully? -%}
+        <div class="b-email_sign_up-field m-success" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>
+          <p class="b-email_sign_up-success_message text-center">Thanks for signing up!</p>
+        </div>
       {%- endif -%}
-    </div>
-    {%- if form.posted_successfully? -%}
-    <div class="b-email_sign_up-field m-success" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>
-      <p class="b-email_sign_up-success_message text-center">Thanks for signing up!</p>
-    </div>
-    {%- endif -%}
     {% endform %}
   </div>
 </div>
 {% comment %}
-{%- assign newsletter_id = 'footer-' | append: section.id -%}
+  {%- assign newsletter_id = 'footer-' | append: section.id -%}
 
-{%- form 'customer', id: newsletter_id, class: 'Newsletter Form' -%}
-{%- if form.posted_successfully? -%}
-<p class="Form__Alert Alert Alert--success">You have been subscribed to our newsletter.</p>
-{%- else -%}
-{%- if form.errors -%}
-<p class="Form__Alert Alert Alert--error">Some Error Occured</p>
-{%- endif -%}
+  {%- form 'customer', id: newsletter_id, class: 'Newsletter Form' -%}
+  {%- if form.posted_successfully? -%}
+  <p class="Form__Alert Alert Alert--success">You have been subscribed to our newsletter.</p>
+  {%- else -%}
+  {%- if form.errors -%}
+  <p class="Form__Alert Alert Alert--error">Some Error Occured</p>
+  {%- endif -%}
 
-<div class="Newsletter__Inner d-flex mb-4">
-  <input type="hidden" name="contact[tags]" value="newsletter">
-  <input type="email" name="contact[email]" id="subscribe_input" class="Form__Input newsInput" aria-label="Your Email"
-    placeholder="Your Email" required>
-  <button type="submit" id="subscribe_button" class="Form__Submit Button Button--primary">Submit</button>
-</div>
-{%- endif -%}
-{%- endform -%}
+  <div class="Newsletter__Inner d-flex mb-4">
+    <input type="hidden" name="contact[tags]" value="newsletter">
+    <input type="email" name="contact[email]" id="subscribe_input" class="Form__Input newsInput" aria-label="Your Email"
+      placeholder="Your Email" required>
+    <button type="submit" id="subscribe_button" class="Form__Submit Button Button--primary">Submit</button>
+  </div>
+  {%- endif -%}
+  {%- endform -%}
 {% endcomment %}
 <!-- Footer -->
 <footer>
   <div class="container scroll-trigger animate--fade-in">
     <div class="d-flex justify-content-between flex-sm-wrapper">
       {% for block in section.blocks %}
-      {%- case block.type -%}
-      {%- when 'link_list' -%}
-      <div class="footer_nav">
-        <p class="main_footer_sub_head">{{ block.settings.heading }}</p>
-        <ul class="list-unstyled lh-lg lh-3 pt-7">
-          {% for link in block.settings.menu.links %}
-          <li>
-            {{ link.title | link_to: link.url, class: 'footer_link' }}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {%- when 'text' -%}
-      <div class="d-flex flex-column justify-content-between mt-sm-40">
-        <div class="d-flex flex-column gap-12">
-          <p class="main_footer_sub_head">Help Desk</p>
-          <p class="lets_connect">
-            Call:
-            <span class="underline font-bold">+91-9810245261</span>
-          </p>
-          <p class="lets_connect">
-            Email: <a href="mailto:support@hokmakeup.com" class="underline font-bold">support@hokmakeup.com</a>
-          </p>
-          <p class="lets_connect">Monday-Saturday 10AM to 6PM</p>
-        </div>
-        <div>
-          <p class="main_footer_sub_head">Follow us on</p>
-          <ul class="list-unstyled d-flex gap-3 pt-7">
-            <li>
-              <a href="https://www.instagram.com/hokmakeup/">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <rect width="40" height="40" rx="20" fill="#707070" />
-                  <path
-                    d="M20.3039 16.0078C22.7648 16.0078 24.7961 18.0391 24.7961 20.5C24.7961 23 22.7648 24.9922 20.3039 24.9922C17.8039 24.9922 15.8117 23 15.8117 20.5C15.8117 18.0391 17.8039 16.0078 20.3039 16.0078ZM20.3039 23.4297C21.9055 23.4297 23.1945 22.1406 23.1945 20.5C23.1945 18.8984 21.9055 17.6094 20.3039 17.6094C18.6633 17.6094 17.3742 18.8984 17.3742 20.5C17.3742 22.1406 18.7023 23.4297 20.3039 23.4297ZM26.007 15.8516C26.007 16.4375 25.5383 16.9062 24.9523 16.9062C24.3664 16.9062 23.8977 16.4375 23.8977 15.8516C23.8977 15.2656 24.3664 14.7969 24.9523 14.7969C25.5383 14.7969 26.007 15.2656 26.007 15.8516ZM28.9758 16.9062C29.0539 18.3516 29.0539 22.6875 28.9758 24.1328C28.8977 25.5391 28.5852 26.75 27.5695 27.8047C26.5539 28.8203 25.3039 29.1328 23.8977 29.2109C22.4523 29.2891 18.1164 29.2891 16.6711 29.2109C15.2648 29.1328 14.0539 28.8203 12.9992 27.8047C11.9836 26.75 11.6711 25.5391 11.593 24.1328C11.5148 22.6875 11.5148 18.3516 11.593 16.9062C11.6711 15.5 11.9836 14.25 12.9992 13.2344C14.0539 12.2188 15.2648 11.9062 16.6711 11.8281C18.1164 11.75 22.4523 11.75 23.8977 11.8281C25.3039 11.9062 26.5539 12.2188 27.5695 13.2344C28.5852 14.25 28.8977 15.5 28.9758 16.9062ZM27.1008 25.6562C27.5695 24.5234 27.4523 21.7891 27.4523 20.5C27.4523 19.25 27.5695 16.5156 27.1008 15.3438C26.7883 14.6016 26.2023 13.9766 25.4602 13.7031C24.2883 13.2344 21.5539 13.3516 20.3039 13.3516C19.0148 13.3516 16.2805 13.2344 15.1477 13.7031C14.3664 14.0156 13.7805 14.6016 13.468 15.3438C12.9992 16.5156 13.1164 19.25 13.1164 20.5C13.1164 21.7891 12.9992 24.5234 13.468 25.6562C13.7805 26.4375 14.3664 27.0234 15.1477 27.3359C16.2805 27.8047 19.0148 27.6875 20.3039 27.6875C21.5539 27.6875 24.2883 27.8047 25.4602 27.3359C26.2023 27.0234 26.8273 26.4375 27.1008 25.6562Z"
-                    fill="white" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <rect width="40" height="40" rx="20" fill="#707070" />
-                  <path
-                    d="M24.1789 21.75H21.2492V30.5H17.343V21.75H14.1398V18.1562H17.343V15.3828C17.343 12.2578 19.218 10.5 22.0695 10.5C23.4367 10.5 24.882 10.7734 24.882 10.7734V13.8594H23.2805C21.718 13.8594 21.2492 14.7969 21.2492 15.8125V18.1562H24.7258L24.1789 21.75Z"
-                    fill="white" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/c/hokmakeup">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <rect width="40" height="40" rx="20" fill="#707070" />
-                  <path
-                    d="M31.0384 14.752C31.5306 16.4746 31.5306 20.166 31.5306 20.166C31.5306 20.166 31.5306 23.8164 31.0384 25.5801C30.7923 26.5645 30.013 27.3027 29.0697 27.5488C27.306 28 20.3333 28 20.3333 28C20.3333 28 13.3197 28 11.556 27.5488C10.6126 27.3027 9.83333 26.5645 9.58724 25.5801C9.09505 23.8164 9.09505 20.166 9.09505 20.166C9.09505 20.166 9.09505 16.4746 9.58724 14.752C9.83333 13.7676 10.6126 12.9883 11.556 12.7422C13.3197 12.25 20.3333 12.25 20.3333 12.25C20.3333 12.25 27.306 12.25 29.0697 12.7422C30.013 12.9883 30.7923 13.7676 31.0384 14.752ZM18.0365 23.4883L23.8607 20.166L18.0365 16.8438V23.4883Z"
-                    fill="white" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      {% endcase %}
+        {%- case block.type -%}
+          {%- when 'link_list' -%}
+            <div class="footer_nav">
+              <p class="main_footer_sub_head">{{ block.settings.heading }}</p>
+              <ul class="list-unstyled lh-lg lh-3 pt-7">
+                {% for link in block.settings.menu.links %}
+                  <li>
+                    {{ link.title | link_to: link.url, class: 'footer_link' }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {%- when 'text' -%}
+            <div class="d-flex flex-column justify-content-between mt-sm-40">
+              <div class="d-flex flex-column gap-12">
+                <p class="main_footer_sub_head">Help Desk</p>
+                <p class="lets_connect">
+                  Call:
+                  <span class="underline font-bold">+91-9810245261</span>
+                </p>
+                <p class="lets_connect">
+                  Email: <a href="mailto:support@hokmakeup.com" class="underline font-bold">support@hokmakeup.com</a>
+                </p>
+                <p class="lets_connect">Monday-Saturday 10AM to 6PM</p>
+              </div>
+              <div>
+                <p class="main_footer_sub_head">Follow us on</p>
+                <ul class="list-unstyled d-flex gap-3 pt-7">
+                  <li>
+                    <a href="https://www.instagram.com/hokmakeup/">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="20" fill="#707070" />
+                        <path
+                          d="M20.3039 16.0078C22.7648 16.0078 24.7961 18.0391 24.7961 20.5C24.7961 23 22.7648 24.9922 20.3039 24.9922C17.8039 24.9922 15.8117 23 15.8117 20.5C15.8117 18.0391 17.8039 16.0078 20.3039 16.0078ZM20.3039 23.4297C21.9055 23.4297 23.1945 22.1406 23.1945 20.5C23.1945 18.8984 21.9055 17.6094 20.3039 17.6094C18.6633 17.6094 17.3742 18.8984 17.3742 20.5C17.3742 22.1406 18.7023 23.4297 20.3039 23.4297ZM26.007 15.8516C26.007 16.4375 25.5383 16.9062 24.9523 16.9062C24.3664 16.9062 23.8977 16.4375 23.8977 15.8516C23.8977 15.2656 24.3664 14.7969 24.9523 14.7969C25.5383 14.7969 26.007 15.2656 26.007 15.8516ZM28.9758 16.9062C29.0539 18.3516 29.0539 22.6875 28.9758 24.1328C28.8977 25.5391 28.5852 26.75 27.5695 27.8047C26.5539 28.8203 25.3039 29.1328 23.8977 29.2109C22.4523 29.2891 18.1164 29.2891 16.6711 29.2109C15.2648 29.1328 14.0539 28.8203 12.9992 27.8047C11.9836 26.75 11.6711 25.5391 11.593 24.1328C11.5148 22.6875 11.5148 18.3516 11.593 16.9062C11.6711 15.5 11.9836 14.25 12.9992 13.2344C14.0539 12.2188 15.2648 11.9062 16.6711 11.8281C18.1164 11.75 22.4523 11.75 23.8977 11.8281C25.3039 11.9062 26.5539 12.2188 27.5695 13.2344C28.5852 14.25 28.8977 15.5 28.9758 16.9062ZM27.1008 25.6562C27.5695 24.5234 27.4523 21.7891 27.4523 20.5C27.4523 19.25 27.5695 16.5156 27.1008 15.3438C26.7883 14.6016 26.2023 13.9766 25.4602 13.7031C24.2883 13.2344 21.5539 13.3516 20.3039 13.3516C19.0148 13.3516 16.2805 13.2344 15.1477 13.7031C14.3664 14.0156 13.7805 14.6016 13.468 15.3438C12.9992 16.5156 13.1164 19.25 13.1164 20.5C13.1164 21.7891 12.9992 24.5234 13.468 25.6562C13.7805 26.4375 14.3664 27.0234 15.1477 27.3359C16.2805 27.8047 19.0148 27.6875 20.3039 27.6875C21.5539 27.6875 24.2883 27.8047 25.4602 27.3359C26.2023 27.0234 26.8273 26.4375 27.1008 25.6562Z"
+                          fill="white" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/hokmakeup">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="20" fill="#707070" />
+                        <path
+                          d="M24.1789 21.75H21.2492V30.5H17.343V21.75H14.1398V18.1562H17.343V15.3828C17.343 12.2578 19.218 10.5 22.0695 10.5C23.4367 10.5 24.882 10.7734 24.882 10.7734V13.8594H23.2805C21.718 13.8594 21.2492 14.7969 21.2492 15.8125V18.1562H24.7258L24.1789 21.75Z"
+                          fill="white" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/c/hokmakeup">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="20" fill="#707070" />
+                        <path
+                          d="M31.0384 14.752C31.5306 16.4746 31.5306 20.166 31.5306 20.166C31.5306 20.166 31.5306 23.8164 31.0384 25.5801C30.7923 26.5645 30.013 27.3027 29.0697 27.5488C27.306 28 20.3333 28 20.3333 28C20.3333 28 13.3197 28 11.556 27.5488C10.6126 27.3027 9.83333 26.5645 9.58724 25.5801C9.09505 23.8164 9.09505 20.166 9.09505 20.166C9.09505 20.166 9.09505 16.4746 9.58724 14.752C9.83333 13.7676 10.6126 12.9883 11.556 12.7422C13.3197 12.25 20.3333 12.25 20.3333 12.25C20.3333 12.25 27.306 12.25 29.0697 12.7422C30.013 12.9883 30.7923 13.7676 31.0384 14.752ZM18.0365 23.4883L23.8607 20.166L18.0365 16.8438V23.4883Z"
+                          fill="white" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        {% endcase %}
       {% endfor %}
     </div>
   </div>
@@ -543,14 +562,14 @@
   }
 
   /*
-  .input-container #subscribe_input {
-    position: relative;
-    z-index: 1;
-    flex: 1 1 auto;
-    width: 1%;
-    margin-top: 0;
-    margin-bottom: 0;
-  } */
+    .input-container #subscribe_input {
+      position: relative;
+      z-index: 1;
+      flex: 1 1 auto;
+      width: 1%;
+      margin-top: 0;
+      margin-bottom: 0;
+    } */
   button#subscribe_button {
     text-align: center;
     padding: 16px 24px;

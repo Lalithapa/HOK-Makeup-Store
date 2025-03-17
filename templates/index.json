@@ -3,7 +3,242 @@
     "main_hero_banner_qcCWtj": {
       "type": "main-hero-banner",
       "blocks": {
+        "image_Nxfx79": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Header_Banner_Desktop.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Header_Banner_Mobile.jpg",
+            "banner-url": "shopify:\/\/collections\/lot-by",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/lot-by",
+            "btn2-url": "shopify:\/\/collections\/lot-by",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "video_iNJH9z": {
+          "type": "video",
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner SS.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob_f67481a9-799d-4d73-b05c-d319b71806a3.mp4",
+            "banner-url": "https:\/\/hokmakeup.com\/pages\/sss-foundation",
+            "show-cta-on-desktop": false,
+            "btn1-url": "https:\/\/hokmakeup.com\/pages\/sss-foundation",
+            "btn2-url": "shopify:\/\/collections\/makeup-revolution",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "video_m9YjyX": {
+          "type": "video",
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Eos Header Banner Desktop.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Eos Header Banner Mobile.mp4",
+            "banner-url": "shopify:\/\/collections\/makeup",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/makeup",
+            "btn2-url": "shopify:\/\/collections\/makeup",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "video_biK4Ch": {
+          "type": "video",
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Desktop Header Banner 2.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Mobile Header Banner 780X1200.mp4",
+            "banner-url": "shopify:\/\/collections\/milani",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/milani",
+            "btn2-url": "shopify:\/\/collections\/milani",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "image_6z6mQA": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Header_Banner_Desktop_054dcf09-c798-441c-ad48-2399372a8a6d.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Header_Banner_Mobile_5093cafc-dd4e-47c6-984e-bc59b11d075e.jpg",
+            "banner-url": "shopify:\/\/collections\/the-glam-hour-sale",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/the-glam-hour-sale",
+            "btn2-url": "shopify:\/\/collections\/the-glam-hour-sale",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "video_AVRfnH": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner A1.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mobile(1)_8d274000-f65b-45f9-972a-fe4eda4f5f4d.mp4",
+            "banner-url": "shopify:\/\/collections\/makeup",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/makeup",
+            "btn2-url": "shopify:\/\/collections\/makeup",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "image_dRBekz": {
+          "type": "image",
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Organizer_Desktop.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Organizer_Mobile.jpg",
+            "banner-url": "shopify:\/\/products\/aloxe-big-cosmetic-organizer",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/products\/aloxe-big-cosmetic-organizer",
+            "btn2-url": "shopify:\/\/products\/aloxe-big-cosmetic-organizer",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
         "image_K7raBU": {
+          "type": "image",
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Artboard_1_8.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Artboard_1-1.png",
+            "banner-url": "shopify:\/\/collections\/focallure-beauty",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/focallure-beauty",
+            "btn2-url": "shopify:\/\/collections\/focallure-beauty",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#000000",
+            "btn1-bg-desktop": "#000000",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#ffffff",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "rgba(0,0,0,0)",
+            "btn2-bg-hover-desktop": "#000000",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#ffffff"
+          }
+        },
+        "video_zqcdph": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Banner 1920X735_84c2b38b-5771-48f9-beb1-3b99d452ce2f.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Banner 780X1200_671ae251-51da-4135-a523-92614b6eb985.mp4",
+            "banner-url": "shopify:\/\/collections\/focallure-beauty",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/focallure-beauty",
+            "btn2-url": "shopify:\/\/collections\/focallure-beauty",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "image_KpLUUg": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Header_banner-desktop_48641226-1749-4379-ad19-a68219130678.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Header_banner-mob_eee0bc82-ec8b-4ee7-b489-4e02a526c081.jpg",
+            "banner-url": "shopify:\/\/collections\/makeup-revolution",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/makeup-revolution",
+            "btn2-url": "shopify:\/\/collections\/makeup-revolution",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "image_DXTrTP": {
           "type": "image",
           "settings": {
             "banner-image-desktop": "shopify:\/\/shop_images\/LA_Colors_Lip_Balm_Desktop.jpg",
@@ -26,13 +261,14 @@
             "btn2-text-hover-desktop": "#ffffff"
           }
         },
-        "video_zqcdph": {
-          "type": "video",
+        "image_nUYJHc": {
+          "type": "image",
+          "disabled": true,
           "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Banner 1920X735_84c2b38b-5771-48f9-beb1-3b99d452ce2f.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Banner 780X1200_671ae251-51da-4135-a523-92614b6eb985.mp4",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Desktop_b9b2cb95-68e4-42f4-aae6-132d265b65e1.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Mobile_f9edfeba-af4a-4a34-be0d-d9fd5253df80.jpg",
             "banner-url": "shopify:\/\/collections\/focallure-beauty",
-            "show-cta-on-desktop": false,
+            "show-cta-on-desktop": true,
             "btn1-url": "shopify:\/\/collections\/focallure-beauty",
             "btn2-url": "shopify:\/\/collections\/focallure-beauty",
             "cta-btn-1-text": "Shop Now",
@@ -46,6 +282,30 @@
             "btn2-bg-desktop": "#000000",
             "btn2-bg-hover-desktop": "#ffffff",
             "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "video_QHRf84": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Main Banner.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Main Banner Mobile 2.mp4",
+            "banner-url": "shopify:\/\/pages\/valentines-day",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/pages\/valentines-day",
+            "btn2-url": "shopify:\/\/pages\/valentines-day",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
             "btn2-text-hover-desktop": "#000000"
           }
         },
@@ -95,6 +355,30 @@
             "btn2-text-hover-desktop": "#000000"
           }
         },
+        "video_tHrchM": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/banner2desk.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/banner2mob.mp4",
+            "banner-url": "shopify:\/\/collections\/pink-flash",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/pink-flash",
+            "btn2-url": "shopify:\/\/collections\/pink-flash",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
         "image_ptAQVA": {
           "type": "image",
           "settings": {
@@ -115,6 +399,54 @@
             "btn2-bg-desktop": "#000000",
             "btn2-bg-hover-desktop": "#ffffff",
             "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "video_fAjRDw": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/banner3desk.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/banner3mob.mp4",
+            "banner-url": "shopify:\/\/collections\/lamel",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/products\/lamel-lip-stain-hydrating-lip-tint",
+            "btn2-url": "shopify:\/\/collections\/lamel",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "Shop Brand",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#000000",
+            "btn2-bg-desktop": "#000000",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#ffffff",
+            "btn2-text-hover-desktop": "#000000"
+          }
+        },
+        "image_QFr8iR": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Organizer_Banner_Desktop.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Organizer_Banner_Mobile.jpg",
+            "banner-url": "shopify:\/\/collections\/atelier-collection-makeup-organizers",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/atelier-collection-makeup-organizers",
+            "btn2-url": "shopify:\/\/collections\/atelier-collection-makeup-organizers",
+            "cta-btn-1-text": "Shop Now",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
             "btn2-text-hover-desktop": "#000000"
           }
         },
@@ -143,6 +475,7 @@
         },
         "image_ywYrhm": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "banner-image-desktop": "shopify:\/\/shop_images\/Artboard_1_4.jpg",
             "banner-image-mobile": "shopify:\/\/shop_images\/Artboard_2_3.png",
@@ -164,17 +497,18 @@
             "btn2-text-hover-desktop": "#ffffff"
           }
         },
-        "image_KpLUUg": {
-          "type": "image",
+        "video_899D4k": {
+          "type": "video",
+          "disabled": true,
           "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Header_banner-desktop_48641226-1749-4379-ad19-a68219130678.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Header_banner-mob_eee0bc82-ec8b-4ee7-b489-4e02a526c081.jpg",
-            "banner-url": "shopify:\/\/collections\/makeup-revolution",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/makeup-revolution",
-            "btn2-url": "shopify:\/\/collections\/makeup-revolution",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop Brand",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner_new.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob-New_ad4a41b8-514b-48e9-91fa-d6c0f55e9ae2.mp4",
+            "banner-url": "shopify:\/\/collections\/la-girl",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/la-girl",
+            "btn2-url": "shopify:\/\/collections\/la-girl",
+            "cta-btn-1-text": "Shop Brand",
+            "cta-btn-2-text": "Shop Now",
             "btn1-bg-mobile": "#ffffff",
             "btn1-bg-desktop": "#ffffff",
             "btn1-bg-hover-desktop": "#ffffff",
@@ -189,6 +523,7 @@
         },
         "image_ywYCaa": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "banner-image-desktop": "shopify:\/\/shop_images\/Milani_Cosmetics_Banner_Final_1c723aae-5df0-4526-a6d8-0da8ee7bd10d.jpg",
             "banner-image-mobile": "shopify:\/\/shop_images\/MILANI_HEADER_MOBILE.jpg",
@@ -209,18 +544,57 @@
             "btn2-text-desktop": "#000000",
             "btn2-text-hover-desktop": "#ffffff"
           }
+        },
+        "video_b94Gj4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Black Friday Header Banner.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner-Mob_99b12c59-1a96-4a7e-a399-6ea6326bd7f9.mp4",
+            "banner-url": "shopify:\/\/collections\/new-arrivals",
+            "show-cta-on-desktop": false,
+            "btn1-url": "shopify:\/\/collections\/new-arrivals",
+            "btn2-url": "shopify:\/\/collections\/new-arrivals",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "",
+            "btn1-bg-mobile": "#ffffff",
+            "btn1-bg-desktop": "#ffffff",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#000000",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "#ffffff",
+            "btn2-bg-hover-desktop": "#ffffff",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#000000"
+          }
         }
       },
       "block_order": [
+        "image_Nxfx79",
+        "video_iNJH9z",
+        "video_m9YjyX",
+        "video_biK4Ch",
+        "image_6z6mQA",
+        "video_AVRfnH",
+        "image_dRBekz",
         "image_K7raBU",
         "video_zqcdph",
+        "image_KpLUUg",
+        "image_DXTrTP",
+        "image_nUYJHc",
+        "video_QHRf84",
         "video_VNAhaT",
         "image_CNCCec",
+        "video_tHrchM",
         "image_ptAQVA",
+        "video_fAjRDw",
+        "image_QFr8iR",
         "image_9yfRUh",
         "image_ywYrhm",
-        "image_KpLUUg",
-        "image_ywYCaa"
+        "video_899D4k",
+        "image_ywYCaa",
+        "video_b94Gj4"
       ],
       "custom_css": [
         ".desktop_screen.button-cta {display: flex;}",
@@ -232,9 +606,19 @@
         "autoplay": false,
         "autoplay_time": 2500,
         "margin_top_desktop": 0,
-        "margin_bottom_desktop": 36,
+        "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
-        "margin_bottom_mobile": 36
+        "margin_bottom_mobile": 16
+      }
+    },
+    "ticker_tape_VcQPBK": {
+      "type": "ticker-tape",
+      "disabled": true,
+      "custom_css": [
+        ".wrapper-9ioi {border-top: 0.1px solid #c7c7c7; border-bottom: 0.5px solid #c7c7c7;}"
+      ],
+      "settings": {
+        "main_heading": "Offer ends soon &nbsp; <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" width=\"16\" height=\"16\" viewBox=\"0 0 512 512\" fill=\"none\">\n<rect width=\"512\" height=\"512\" fill=\"url(#pattern0_1691_7271)\"\/>\n<defs>\n<pattern id=\"pattern0_1691_7271\" patternContentUnits=\"objectBoundingBox\" width=\"1\" height=\"1\">\n<use xlink:href=\"#image0_1691_7271\" transform=\"scale(0.00195312)\"\/>\n<\/pattern>\n<image id=\"image0_1691_7271\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\" xlink:href=\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAIABJREFUeJzs3XmAHHWZPvDnrZ5JQshM9ySckUACmSMJh0i4vYYF50gi6mpWRcHVH6DrgZwiAhs5BBVEdEVE3XVVVjeoKEl6ekgkHKKAUcAlyRwB1EA4ksx0zyRhkumq9\/dHyG6MOeborvdbVc\/nX2DqCT3p96nvtw6AiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiMhdYh2AaF90oaY6MxsOlmDMYQiCyQJvigI14ul4VdQAOh6Q8QCqIaiCYjyA\/QFkBBAFNgEY3OXHFgXoB4AA2CbQHgA9ol6PAj3wsFEUPT7Q4wE96ukGv5B+cdZ82Rbun56IqDxYAMicLlBvzUmFaUAwU8VrCKCHCWQKgEMBTAFwMIAK25QAgADAiwo8J5DnVfAcFM+rJ8+ppp6f2bz\/S9YBiYiGigWAQqML1OueXZgqXjDLhzdTRGcJZGYAzBBgvHW+EngNQBcgT6kET3o+nhQJnqptndRnHYyIaFcsAFQ2zy3bdPDgtsFTVeR0gZ6qkONjMuiHQwE8K8CTCvwxgDxZ6XlPTm+qetU6GBElGwsAlUzX4vyR6umbIXI6oG8GZAb4O7YnzwH6qEB+I+pna1snvWAdiIiShV\/ONGJdi\/NHaoW0QLUVwJsBVFtniigVxcpA9AFRLN8ayEPHzs30WocionhjAaAhW7lQx1RUFd4CRQsEcwA0WGeKqUCAJyFYppBf1DVV\/15E1DoUEcULCwDt1arc5kM9HWwVoBXAWQCqrDMl0AuA3quCe+v7Mg\/LfPGtAxFR9LEA0N95dmlPujgoZwN4H0Sa4cYteLRdD6BLPNV7gJr7a1tlq3UgIoomFgACADy\/XMcNbi3MUcU52H62P9Y6E+1TnyoWp4D\/nP5EepkskMA6EBFFBwtAgukC9bpO7j1NIe8TyAcBHGCdiUbsRRH8OBB8p6Ep87x1GCJyHwtAAq1p7z8o8P3zVfBxAIdZ56GSCgDcr4rv+5vS9\/HRxUS0JywACdLZVjgRCD4NyHxwiT8J1gPyI0+979e2Vq2yDkNEbmEBiLmVC3VMqqpwtgAXADjTOg9Z0Uc91S9Pb6lZzFsKiQhgAYitjvvXT4Zf8QlROR+Cg63zkBsE+IMqvlq3Kf0z3k5IlGwsADGzpn3jlGLgXSaQ8wHsZ52HnPVnFf36Vtn6veOaDtlsHYaIwscCEBOrlvQe4XnyeQH+GcAY6zwUGRsgeocXVPxbbWvVeuswRBQeFoCI2z74cYlALgQv7KOR2yyCf6t8TW+e9u6avHUYIio\/FoCIWt3WO1WAizn4qcR6VPGVsfulb5\/WKAPWYYiofFgAIqZzUd8BUhlcp4rzwUf0Upmo4q+epwtq+zI\/5MWCRPHEAhARK1ZoZfX6wj8rcCP4xD4KT4cC19Y3p3\/G2weJ4oUFIAK6sz3zAvFuAVBnnYWSSYHfeYFcXDcn\/bh1FiIqDRYAh3W29zUgCG7F9pfzEFlTQH+MYuqS+nnVG6zDENHosAA4aPWyvkneYHAdtj+9j\/v85JpXAb2irjnzQ24LEEUXC4BjOtry7xPgWwAOtM5CtHfyiO\/5\/zKzaeIz1kmIaPhYAByxcsmmQyq84rcAvMc6C9EwFBV6B7YVr244+8B+6zBENHQsAMZUVTpzhY+K4BYoMtZ5iEZCFX8VkU\/Ut6Sz1lmIaGhYAAytbuud6qncBcFZ1lmISkN\/VBw3+C+zGg\/aZJ2EiPaOBcCAqkp3rnC+ArcAqLLOQ1RizwPBufUtE39jHYSI9owFIGTd2Y2HBV7qbijeap2FqIyKgN64blzmhsZGKVqHIaK\/xwIQoq5c\/kwN8GMIDrbOQhSS3yu8Dze0VHdaByGiv8UCEILly7Vi8kD+akCuAeBZ5yEK2Wsq+vn6psw3+NwAInewAJTZmvaNU\/zA+wkgp1tnIbIkkPtSFf65R501sWCdhYhYAMqqo633nQL5DwATrbMQOaLLE\/89tc2TVloHIUo6FoAyWL5cK96wtXCDKq4A\/x8T7apfFR9taM38zDoIUZJxOJXYc8s2HbxtsHivAKdaZyFymEJxU92m9LUyX3zrMERJxAJQQqvae45OBd4iAFOtsxBFgQAPel7qn6Y3Vb1qnYUoaXhFeol0tffNTQXeb8HhTzRkCrzdD\/zHu7O9x1tnIUoaFoAS6GrLX6BBcC\/4VD+ikZgaiDzS1d431zoIUZJwC2AUXr+\/\/+uAfNI6C1EM+Cr4VENz5k7rIERJwAIwQitzhYkVqvcAOMM6C1GciODLtU3pz\/OhQUTlxQIwAh3t+Wmej3YV1FpnIYojEfz7i2PTF\/I9AkTlwwIwTB1tffWCYBmAw6yzEMWaYqkH\/721rZP6rKMQxREvAhyG7tzGWQJ\/OTj8icpPcFYgqV8\/t2wTX55FVAZcARii7mzhFBXNKlBjnYUoYdakPP+M6U2T1loHIYoTFoAh6M72vi0QWQTe5kdk5S8B9O0zWmr+bB2EKC64BbAPnW2F1kCkDRz+RJaO8CAPrm7rnWodhCguWAD2oiPXezagvwCwn3UWItpeAjra89OsgxDFAQvAHnRk8+8VlZ8DGGudhYj+1xESYOma9o1TrIMQRR2vAdiNrlz+TFUsBoc\/kav+oh4aG5oyz1sHIYoqFoBddGcLpwSiSwFMsM5CRHvFEkA0CiwAO+lo6znWg\/cgb\/UjioxnU17qNL5OmGj4eA3A69bkCtMFXjuHP1GkHOUH\/uKn21\/e3zoIUdSwAADozm48zFddCuAQ6yxENGwnjgvG\/vfy5VphHYQoShJfALqz\/QcGXup+AFOtsxDRSMmcyVsLd1inIIqSRBeAtQvX7heIn4VihnUWIholxfldbYWrrWMQRUViC4CqyuYJVd8DMNs6CxGVhkKv68j2ftQ6B1EUJLYAdLb3XS2CD1rnIKKSEhG5a\/tTPIlobxJ5G2BXW+97FPIzJPTPT5QAmzzxT6ltnrTSOgiRqxI3ADtzvcdB5VEAvG0oPrYCWC\/AKwq8IsBmBXr\/9l\/RrSKyBQBUdQKAtMCrDqBpEaShqBagRoE0ErwyFjNdFRXBSUedNbFgHYTIRYm6bea5ZZsO3rateJ8Ih3\/EDALarSqrIbpa4K2E+C+qVrw6dsB\/Zdq7a\/KlOtCKFVqZfrVwuKZwJAJMg+BIKI4EcKQC0wBMLNWxqOzqisXUf6rqu0VErcMQuSYxKwDdWR0bSP7XgJxunYX2qg+CRxXyOw+6CsXUqr5DJqyZPVsGrYMBwLNLew73fe9EBDhJBScCOAFAtXUu2jOBXFPXkr7BOgeRaxJTALpy+e+rglcHO0fWQfQRQH4DBI\/U9WWekfniW6caKl2gXvfsTfXqFU+EyOkAWgDwTXVuCVRkTkNzOmcdhMgliSgAnbnCh6H6Q+scBAAYBPAQIPeKr7m6uZnnrAOV2uolPcdIymvxFC0KnA6g0joToUd8nBjH3zeikYp9AVi9pK\/O84I\/gG\/3s7RZFTmI\/HKbr0uOnZvp3fd\/Eg\/d2Y3V6qXOAtCqwHugyFhnSizBU1WDW06fPG\/yFusoRC6IdQHYvu9f+B2A462zJNA2AL9U6N37929aOmX+lNesA1l7frmO2\/Za4WwIzgXQBCBlnSl59Ef1LTXnWqcgckGsC0BnW+83APm0dY4kEUV3AHy\/IpX6D76idc9W5TYf6mHbfFE5DyyooRKRc+qa0\/9lnYPIWmwLQEdb7zsF8kvE+M\/okAFV\/CIFvWt6S+Zh3nI1PN25\/Jv8AJ8SwTkAxljniT1BPiX+sdObJq21jkJkKZbDcU37xil+kHoKvGe73DYI5PZBwR2zmtM91mGiruP+9ZO9oPIzqvg4tj+QiMrngbrH02fJAgmsgxBZiV0B0AXqdZ1cWAag0TpLjK0H9I6KCr2NT1krvZXLX52Q2lr5MQRyiQgOt84TX3pJfUvNbdYpiKzErgB0tRWuVuj11jliaq2ofHW\/TX3f40V95bdihVZWvZr\/gECuVkGtdZ4YGvC94MSZTROfsQ5CZCFWBaA72z8zEP+PAMZaZ4kXfUkgCwb70z+YNV+2WadJmhUrtLL61b6Pq+i1AA6wzhMzTxf70yfx95qSKDYvPdEF6gVSvAsc\/qU0qNBveBo01LVk7uKXpI3Zs2WwrjX9zeK4bdMA\/SIArr6UznGVEwpcMaREis0KQFdb4TMKvd06R4zc6ykur23NPGsdhP7Ws0t7Di8W5QZAzkGMSryhAAjeVt8y8TfWQYjCFIsCsGpJ7xEpT54Bn\/Y3aqJ4RgWfrW\/J\/No6C+3d6vb8CV6A74LPESgBWdl\/YPXxrrx0iigMsTh7qPDkO+DwH63XVPXiF\/dLH8\/hHw0zmjJ\/WDcufRIEXwCw1TpPtOmsCRsKF1unIApT5FcAOtt6zwPkB9Y5Iu4JeN559U3VHdZBaGTW5ArTi6rfE+Bt1lmiSoEt8HB0Q1PmeessRGGI9ApA56K+AwD5qnWOCCuK4Mv9B6bfzOEfbdOb02vqm9ONAlwIYJN1nigSYLwEwucCUGJEugBIhf91AAda54io\/5FAT6xrzlzJfc94EBGta8nc5SneqMDvrPNEk57dne2ZZ52CKAyR3QLozhZOCUR\/iwj\/GYyoArekNH1Nbatw3zimXn92wFdV9CLrLBH056rilll8bTDFXSRXAFRVAgluAYf\/cG1SxfyGlswVHP7x9vqzAz6rou+CIG+dJ2Km9leMv9o6BFG5RXKAdrYV3g\/oT6xzREyXp6l317ZWrbIOQuFavaSvzvOCnwE4xjpLhGwTP\/XGurlVq62DEJVL5FYAnl+u4wC92TpHxGTHDOjJHP7JNGNOddeY7bcLftc6S4SMQSrg9wzFWuQKwLathUsAHGGdIyIUotfVPZ6eN+3dNVwGTrBpjTJQ35y5ANBLAPAVuEOg0Hd2ZPtOt85BVC6R2gJYuWTTIRVesQtAlXWWCBgA9IP1LTX3Wgcht3Tk8vNF8UPwvRlDII\/Ut6Tfap2CqBwitQJQ4RVvAIf\/UGwSwTwOf9qdhubMQg9eI4CN1lncp2\/pau+ba52CqBwiUwA62nqOBfAR6xwRsD7w8Pa65swy6yDkrtqW6t\/5XvB2AGuts7hOg+BLukAj811JNFSR+aUWeP8KIGWdw236ku8FZ8xoyvzBOgm5b2bTxGd8qTwZgqesszjumK5T+s6xDkFUapG4BmBVe8\/RqcB7GhEqLAY6KyqCdxx11sS\/WgehaPnT4nzN2BR+Db5VcG\/+7Gm6gc\/PoDiJxEBNBd4XEJGsJgRPpbzUWzn8aSSOnZvpRdF7hyiesc7isKkqfRdahyAqJedXADrb+xoQBM+Ay\/970pnyUm+d3lT1qnUQirbnlm06eHCw+CCABussjnp1fH\/\/1Cnzp7xmHYSoFNw\/qw78q8DhvycvBNBmDn8qhSPPnPBKZWXF2wHwzZC7d9Dm6qrzrEMQlYrTKwDd2fxRgaADQIV1FgdtED\/1Vj6qlEptTfvGKX6QegjANOssDnqurj9dJ\/PFtw5CNFpOrwCoh6vA4b87fYGHZg5\/KofpTZPWio8zAbxsncVBR3ZXF95lHYKoFJwtAM8u7TlcFR+yzuGg1zzVd\/JWPyqnurmZ5zTAPAX4StxdqOJz1hmISsHZAlAclMsBjLHO4RgF9Jza1pqHrINQ\/DXMyazwRM4HoNZZHHNi15JePh6YIs\/JAtDxq\/VVEDnXOod79Do+3pfCVNec\/i9RvcE6h2tUcLl1BqLRcrIAyNgx5wGots7hEoUsqns8c511Dkqe2pbMvwL4iXUOp4jM6c5tnGUdg2g03CwAgfKBG3+ra+xAcK4sEL7GlUInIjq+v\/9jEDxuncUh4gepS61DEI2Gc7cBdmTzZ4jg19Y5HNLvaeqU2taqVdZBKNk6F214AyoqngJwgHUWR2xF0Tusfl71BusgRCPh3AqACD5lncEhqsDHOPzJBfXzDngRkPPAiwJ3GIsK\/8PWIYhGyqkCsKZ94xQA86xzuEKBWxpaMvdY5yDaob4lnQX0Dusc7vA+Zp2AaKScKgC+n\/o4+OCf1+mqsePS11qnINrVmHGZywA8bZ3DDTqrO1s4xToF0Ug4UwC6szoWANv0dsXAk3OnNcqAdRCiXU1rlAFP\/HMA8KU4AAJRfm9RJDlTAHwpvBOCg61zuEAgX+ST\/shltc2TVqqCV8Fv908rl786wToE0XA5UwAE+IB1Bkc88eK46putQxDtS0Nr5tsActY5HFCVeq1yvnUIouFyogA8f29vBkCrdQ4HDHjif7SxUYrWQYiGwg\/04wA2W+ewJsLtS4oeJwrA1nHyjwDGWuewp1fVNk9aaZ2CaKhmzqn5CwRfss5hT07rzvbPtE5BNBxOFAAu\/wOieGbduMw3rXMQDVexL30LBIl\/NbV6Pt9fQpFiXgBW5TYfCuDt1jmsCXApl\/4pimbNl21AcCES\/oAgVfyjdQai4TAvACnd9gEAKescxn5R25q53zoE0UjVN098BJAfWucwNn31kp5jrEMQDZV5AQDk\/dYJjG31FFdYhyAaLU+9ywXotc5hyZPUu60zEA2VaQFYkytMB3CiZQYHfK22NfOsdQii0aptrVqvglusc5gSfY91BKKhMi0Avup7LY9vT1\/SbYM3WacgKpUBGbgdilescxg6rjubP8o6BNFQ2G4BCFpMj29MIAsazj6w3zoHUakc13TIZvU00aVWAW4DUCSYFYBnl\/akoTjV6vgOeGGwP\/0D6xBEpeb3Zb4N4HnrHFYCAbcBKBLMCsBg0XsHgEqr41sTla9sv32KKF5mzZdtSX44kACndGc3Hmadg2hf7LYANNHL\/y\/vt6nve9YhiMpl3dj0D0TRbZ3DiPhIzbMOQbQvJgVAVUVEmy2O7QJR3Dpl\/hS+SpViq7FRiip6o3UOKyI40zoD0b6YFIA17YXjATnU4tgO2BgMDn7HOgRRuRX7Mz8B8LJ1DiNv1wXqwHNWiPbMaAVAEvvmP1Hcxiv\/KQm2Xwugd1nnMDKx65Q8nwpITrMpAAiSuv+\/VX2PZ\/+UGD7G3AkgmRe7Ks6wjkC0N6EXgO7sxmpATg77uC5Qxc\/r51VvsM5BFJaZzfu\/JNB7rHNYUHiN1hmI9ib0AqCp1MlI6Mt\/UkjsciglmO\/JbdYZLAj0rbpQE\/ldR9EQfgHwJakP\/+ma3pJ52DoEUdhmNGX+AOAx6xwG0l1VfW+yDkG0J+FfA+DpKaEf0wGi+K6IJPp96ZRcktCLAVWV1wGQs0ItAKoqUCRx\/3+bl0ol\/V3plGASBD8HkLhnX4jg7dYZiPYk1AKwpm3TDAATwzymEwT3Tm+qetU6BpGV2tZJfQBy1jkMnKaqYh2CaHdCLQC++Inc\/\/eC4G7rDETWFPiJdQYD1WvaCkdahyDanVALgCB5b\/9TYMv+\/sCvrXMQWRs7Lr0IQME6R9h84HjrDES7E\/JFgJq4AgBF2+R5k7dYxyCyNq1RBgC9zzpH2IQFgBwVWgF4dmlPGpCGsI7nDJFfWkcgcoZ6ydsG8FgAyE2hFYBtQcWsMI\/niMFtvi6xDkHkiv6DqpchadsAygJAbgptIHsazAzrWM5QPHjs3EyvdQwiV8yeLYOAPGidI2SHrMptTurbT8lh4Z2Rq8wI7ViOUOBe6wxEzhEss44QtpQWuQpAzglxSV4TtwLgBWi3zkDkHJHEFQBRZQEg54S5J5+0FYAX6+ZmnrMOQeSa+qbqDgBrrXOESvBG6whEuwqlAKxc\/uoEAIeHcSyHPGIdgMhdkqhnYyhwlHUGol2FUgAqBsbOAJCsx2GKPGodgchVqom7DoBPAyTnhLMFoEHSlv8hfvAb6wxErvI1lagVAADp1cv6JlmHINpZOAVAEncHQF\/t5sz\/WIcgctWsORNeBvCCdY4wydZgmnUGop2FUgBUURvGcZwheFTmi28dg8hpqk9ZRwhVitsA5JaQVgAwOZTjuCKQx6wjELlOgCetM4RJlAWA3BLSNQB4QyjHcYRI8Ix1BiLnCRK1AqDAVOsMRDsrewFQVRHBIeU+jlP8itXWEYic50uiCgBXAMg1ZS8Az96\/6UAAY8p9HIcM9h0yYY11CCLX1c5JPy9Act6VISwA5JayFwBfiwl7CYZ2b3\/hCRHtjYioCpJ0t0yitkLJfeW\/BiDwEnUBoKpw+Z9oiFSRpL8v49YtWjfeOgTRDuUvAJ4mqvV60FXWGYiiwtNkvRNgy5ixfBgQOaP8FwFCkrUFIF6SzmiIRkVFE\/UwIF+9idYZiHYoewHwoIkqACp+or7QiEZDVRK1AqAACwA5I4TbAJEp9zFc4nupl60zEEVFUJGsAoBAuAVAzih7ARDI\/uU+hkvGiv+qdQaiqNivsnotALXOERZPuAJA7gjhGgBNUgEYOOqsiQXrEERRMa1RBgBstM4RFm4BkEtCKABI0m0v660DEEVQYrYBWADIJSFsASSnAAjA5X+iYVKgzzpDWASosc5AtEMYLwOaEMIxnKBQXgBINEwi2GKdITQiSXosOjkuhAKgSVoByFtnIIoaDZJTAESDlHUGoh1CKADJuQtA4fEdAETDJKKJKQAKYQEgZ4SxBZCYFQBAi9YJiKJGIYkpAAKwAJAzyloAVqzQSgAV5TyGSxTwrTMQRY0kqABogr4PyX1lLQAnLE7WQBSuABANmyZoC0C4BUAOKWsBkAUSIEFnxVwBIBo+T2XAOkNYFMoVAHJGGNcAJOasWFR4ESDRMKkEldYZQhTGdy7RkITxy5iYoaiCwDoDUeRoou6N5woAOSOMJwEmpgCI6n7WGYiiR8ZaJwiLgicJ5I4w3gWQmC0ASLJefUxUGpqYAiDAJusMRDuEsQWwLYRjOEHgVVtnIIqgxBQAQDdbJyDagRcBlpCKcgWAaPgS9IY86bdOQLQDLwIsJUXaOgJR5AgmWUcIiyi3AMgd5b8IUJGYe3wBcAuAaJgkSM4KgEK4BUDOKP9FgCKJeUOegBcBEg2XCg6wzhAaCbgCQM4o\/xaABokpAApUv\/7+AyIaAlUVJOgaAIGwAJAzyl8ABL1lP4Y7UulXC4dbhyCKilXZzQcDSM6DgIQFgNwRxkWAiVkBAABN4UjrDERRUQn\/COsMYQqUWwDkDq4AlFqAadYRiKJCvWT9fRHxXrbOQLRDCHcBeBvLfQynCFcAiIZKVRO1ApCS4kvWGYh2KHsBCKDJ+oVXFgCiYZhqHSBEwdoxE5P1fUhOC+EuAG9d2Y\/hEEWyljSJRkM8zLTOEB55ubFREvNkVHJf+QtAKkhUARDgKOsMRJGhmGUdITyaqO9Ccl\/ZC8DYMemXAGi5j+MKBWqeXdrDWwGJ9qHj\/vWTgeQ8BhiQF60TEO2s7AVgWqMMAMm6E8D3vROtMxC5LlWsPNo6Q7iUBYCcEsZzAADBX0M5jjtYAIj2IRBNVAEQBbcAyCnhFADFc6EcxxGqOMk6A5HrBHKKdYYwqegL1hmIdhZKAVDg2TCO45ATdIGGU66IIkqBU60zhEmTtxJKjgtrCyBRKwAAqrtnb6q3DkHkqlVLeo8AcJh1jjCNqahcZZ2BaGehFABPErcCAE0VuQ1AtAcVnneadYaQbTzyzAmvWIcg2lk4KwCDySsAgCTtC45oyBRBopb\/AeHZPzknlAJQuyX9FwCvhXEsh7RaByByl5xlnSBMqrrSOgPRrkIpADJffAVWh3Eshxy2qr0nUbc5EQ1Fd3bjYQAarHOEyeMKADkotCvVReSZsI7liorAa7HOQOSaAKnE\/b0IwBUAck9oBUAT+BdAgcR90RHtiwJN1hnC5msFVwDIOeGtAATyP2EdyyFv7s5urLYOQeSKFSu0Ujz8g3WOkPXMmjPhZesQRLsKrQB4KCaxAFSqeGdahyByxYQNff8ARcY6R7gkcaufFA2hFYDa1kkvAEheCxaZYx2ByBWi+l7rDKFTfcI6AtHuhPq4WoX8PszjuUAV\/7h24dr9rHMQWVuxQisBvMs6R+hEH7WOQLQ74T6vXpC4AgAgvbm6ap51CCJr+6\/vOwPAJOscYSsGlb+zzkC0O2G\/sCaJBQACfMQ6A5E1Uf0n6wwGnucFgOSqUAuADzwBQMM8phMUZ63KbT7UOgaRlZXLX50gguTt\/0N\/Y52AaE9CLQCzmtM9ALrDPKYjKiqCwXOsQxBZSQ2M+ScAVdY5wuc9Zp2AaE8s3ln\/sMExzanIR6wzEBn6mHUAExLwAkByVugFQCEPhX1MN+is7lz+TdYpiMLWtbh\/hgAJe\/sfAKC\/ri+TuEegU3SEXgBSWnww7GO6wg\/wKesMRGHTVPGT1hlMKB6T+eJbxyDak9ALwOsPBHo+7OO6QAQfev1NaESJ8KfF+RpAzrPOYcLDg9YRiPbG4hoAqCb2L0aleimuAlBijPFwAYAJ1jksiK9Z6wxEe2NSAARotziuC1TxiWeX9qStcxCV24oVWimS1G0vfam2NfO0dQqivTEpAEVPlgJI6t5YddGX\/2cdgqjcqjb0vR9AQre8ZImIJO+ZJxQpJgVgVnO6R7c\/FCiZVC5euVDHWMcgKhddqCmoXmWdww6X\/8l9JgUAACDSZnZse2+omJB\/v3UIonLpqu77IIAG6xxGtum24jLrEET7YlcAfE1yAYBArn797WhEsfL62f\/V1jkMPdJw9oH91iGI9sWsANS3pv8AYK3V8a2poLb61b6PW+cgKrWuCflzANRZ57DD5X+KBrMCICIK1V9ZHd8FKrpgZa4w0ToHUamsXKhjIHKtdQ5TXooFgCLBbgsAgHr4heXxHTCxEnqFdQiiUklNKFwM4CjrHIY665uqO6xDEA2FaQGo78s8DGC9ZQZrqrho1ZLeI6xzEI3Wmvb+g0TweescplT+yzoC0VCZFoDXn5N9n2UGB4xLebjeOgTRaPnq3wApb2diAAAgAElEQVQg0Q+5ClR+ap2BaKhMCwAAqMjPrDPYk3NWt+dPsE5BNFJdS3rfCMVHrXMYe2LGnOou6xBEQ2VeAF4aW70MwMvWOYx5XoDv87ZAiiJdoF7gyR0AUtZZLAnkbusMRMNhXgAaG6UowmUzAMdVbShcbh2CaLg6T8l\/WoBTrXMY8weD1ELrEETDYV4AACDwlc0ZABTXduc2zrKOQTRUHfevnywqX7TOYU2BX8+aMyHpK5kUMU4UgIY5mRUAeOsMMNbX1Hd1gTrxuRDti+eP+TYSfuEfAAiUV\/9T5Lg0aH5oHcAFApzaeVL+M9Y5iPalI9v7UYW+0zqHA17zNLjXOgTRcDlTAHyp\/AGAQeMYbhC5sTubT\/LDVMhx3dn8USJyu3UOFwj0F7Wtk\/qscxANlzMFYGbz\/i8BWGSdwwUCjPcFP+JdAeSi5cu1whf8CMAE6ywuEKS+ZZ2BaCScKQAAEEDuss7gCgFOrX6176vWOYh2NXmg7wu86n87Af5Q21L9O+scRCPhVAFoaK6+H8Cz1jlcoaIXdbTl32edg2iHjmz+DECvsc7hCoV+0zoD0Ug5VQBERAF8zzqHSwT43uolfQl+tSq5Yk37xiki+CkS\/sCfnWwYMy7z39YhiEbKqQIAAEWRuwBsts7hkOqUBD9ft2jdeOsglFwrVmilH3g\/AXCgdRaHfHdaowxYhyAaKecKwKzmdI8CP7bO4RIVHN1fsf8d1jkouarWF74OyOnWORziV1QEd1qHIBoN5woAAHh+6nYAap3DLXpeZ1vvxdYpKHk6c4VPAvgX6xyOue+osyb+1ToE0Wg4WQDq5lathiBnncM9cmtnrvBh6xSUHJ3ZQgtUv26dwzUqvPiPos\/JAgAAIrjNOoODBKrf7c72vs06CMVfd7b3eIguBFBhncUlCvyxvinzoHUOotFytgDUNWWWAnjCOoeDxgae\/HJVe8\/R1kEovta0b5wSiCwCH\/bzd0T1+tfvWCKKNGcLAACo6JesMzhJkUkFqfZnl\/Ycbh2F4qc723+gr6l2AG+wzuIaUTxT90TmPuscRKXgdAGob8rcB+BP1jncpJOLRW\/xnxbna6yTUHyszBUmBuIvg2KGdRYneVggCySwjkFUCk4XgO3LbHKTdQ6HHTO2Ag90Z\/t5bzaN2tPtL+9focF9AI61zuImWVn7WJpv\/aPYcLoAAEBdf\/U9EKy2zuEsxRsV\/gPPLdt0sHUUiq6OX62vGhfs18Z7\/fdMRa\/j2T\/FifMFQOaLrwGutc7hMhUcPThYfKhz0Qbu2dKwPX9vb0bGVN4P6FusszhLsLr+sfTPrGMQlZLzBQAA6lvSP4fgcescjqtHRcVvOtrz06yDUHQ8t2zTwdvGyYMATrHO4jQVnv1T7ESiAIiIelwFGIqpEuCBrsX5I62DkPvWtG+cMjhYfBjAcdZZnCZYXddffY91DKJSi0QBAIDa1sz9AJZb54iAqZrC4525Hi7n0h51tPUc6wepRwHwTZP7IOJdIfPFt85BVGqRKQAAAJErwXcEDMUBUO\/+rrbCB6yDkHu6coU5Au9RAFOsszhPsbSuqXqxdQyicohUAahvTj8B6N3WOSJinELv7srlb9YFGqnPmcqnM5s\/X1V\/CT7hbyj8QINLrUMQlYtYBxiu7uzGw3xJdQow3jpLVAhwz4Tilo9Mnjd5i3UWsrFyoY6prC58XRWfsM4SFSL4dl1zhm9BpNiK3JlhbeukFwTyFescUaLA+\/orxvM2wYRa075xSkVV4SEO\/2EQ5HXQ44XHFGuRKwAAUFXc\/FUAL1jniJjZqKh4qqOt953WQSg8Xbn8mX6Q+gN4m9\/wqF5XP696g3UMonKK3BbADh3Z\/HtFwFtzhk8BfHt8f\/9lU+ZPec06DJXH8uVaMXmg7wuAXgMgZZ0nYrqK\/eljZs2XbdZBiMopsgUAADqzvYsgMtc6RyQJVgP6gfrmmqeto1BprW7rnerB+yGf7DcyIjK3rjm9xDoHUblFcgtgBwnkIgA8ix0JxQyo\/K4jm+e+cIx0ZHs\/6kH+xOE\/YlkOf0qKSK8AAEBnLn8VFDda54i4nPj4ZN3czHPWQWhktt8dU3GHQOdZZ4mwzQH06BktNX+2DkIUhsgXgJULdUxFVd8fAZ1lnSXiXhPFjYOb0l\/l3md06EJNdVf1fVKhNwCoss4TbXppfUvN16xTEIUl8gUAADrbCicC+lsAFdZZIk+w2gv0E7WtNQ9ZR6G961rS+0b15C4AJ1pniToB\/lDbnz6Zj\/ylJIlFAQCAzrb8TQCutM4REwrIDz31Lq9trVpvHYb+1pr2\/oP8wL8ewMfAK\/xLYdBTPbm2teZJ6yBEYYpNAejO6thA8n8EZKZ1lrgQoFcFtwzIwO3HNR2y2TpP0j2\/XMdtfa1wkQiuAlBtnSc+9Iv1LTULrFMQhS02BQAAupYUTlZPHwXPikpL8Yp6elMqyNxZ2ypbreMkjS7UVNeE\/DkQWQBgmnWemHmy\/8D0ybNny6B1EKKwxaoAAEBnrveLUOEjPMtjLQTXrRub\/kFjoxStw8SdLtRUZ1XfB2T7w3z42t7S26YITmxomfgn6yA0PLpAva5T+mZDg9MVmCqQQwQ4KID0i+jLUF0nXmqF+IMP17ZO6rPO66rYFYDtT0ArPAI++rRsRNGtojd6mvkpVwRKb8UKraza0Pd+qH4BQL11nhj7dV1z+iwR4SvGI2JVbvOhKR38NIBzAQzl3SYDAixWBLfXt0z8TZnjRU7sCgAAdGfzRwWCJ8HbospL8Qo8\/Y6PMXfObN7\/Jes4UfenxfmaMR4uEMGnMbQvNxot1X+ra8l8hiXAbWsXrt1vc9WEqwRyGYBxI\/kZArT7gfeZGXOqu0ocL7JiWQAAoLOt9zxAfmCdIyG2CfQeFe8b9c3pJ6zDRE1ne18DfP+TEPlnAPtb50kclgCndWf7ZwYSLCzFs14U2ALgMw0tme+XIFrkxbYAAEBXW++PFXKOdY6EeUyg30lV6L1HnTWxYB3GVR2\/Wl+FMZXzBfpRQE6zzpN4LAFO6lrS+1ZNya+gyJTy54rgy7VN6c8n\/fOOdQF4uv3l\/ccFY5\/grYEmBgC0KfCT\/fv7F\/PNg9uvTznstcIZgcgHAH0vgAnWmWgnLAFO6cjmz4BgkQDjy3ME\/VZdc+bTSf68Y10AAGD1kr46zwt+D943bek1ARaLBj8qHFSTS9ItV7pQU11Vvacq5H2i8k8QHGydifbqrrrm9MeTPBRc0LWk963qyRKUuyQLvlvXlL4wqZ937AsAAHTlCh9U1butcxAAoADIgxAsg8iy+qbqDutApfbs0p7Di4NekwjeoYIzS718SWXGlQBT5T\/z30WCP+9EFAAA6Mz2fhMin7LOQX9nrSqWeZ4sG\/RTD8yaM+Fl60DDtaZ94xQ\/qDgdCE4D5CwADdaZaJQSPBQshT78d0jo552YArBihVZWrS+0A2i0zkJ79QJUn1LBU57IUyjiSZdeU7wqt\/nQChk8WlWPhcpJAE4DcJh1LiqDhA4FK2bDf4cEft6JKQAAsHpZ3yRvMHgCwJHWWWhYCgo8BaDDg7ygGvxVPaxVP\/XiuPFVf53WKAOlPNjKJZsOGSP+1AB6hAJTAUyFYIYAxwCYWMpjkeMSOBQsmA\/\/HRL2eSeqAADAqvaeo1OB91vwIUFxsh7AOgAbBRgE0KfQAUBeg6JfPBSDAL3wUOUBFYHCEyANwAMwUYFJnmKSik4CZBKAMZZ\/GHJMwoZC2JwZ\/jsk6PNOXAEAgI623ncK5F5sHwBERHuXoKEQJueG\/w4J+bwTOQAbWmruU8EnrXMQUUSIfKorV7hTVRN50lQOXUt63yqCXzk3\/IHtn3d74Ttx\/7wTWQAAoKE5cycgt1nnIKLIuIAloDRCu89\/NBTnx\/3zTmwBAIC6x6svU8XPrXMQUWSwBIxSJIb\/\/4n1553oAiALJNh\/U\/+HAX3UOgsRRcYFXW35b8R1KJRTRzZ\/RuBJG6Ix\/HeI7ecduz\/QSDy7tCc9WPQeEOBN1lmIKDL42OBhiNiZ\/+7E7vNmAXhdd7b\/wED8h8GnuBHR0MVuKJRDDIb\/DrH6vBO9BbCz2taq9Z76ZwH4i3UWIoqMWO8Rl0KMhj8Qs8+bBWAnta2TXoDnNQOI3PPoichMbPeIRyuie\/77EpvPO\/J\/gHLoaOurF\/jLATnUOgsRRUaslodHK2Zn\/rsT+c+bKwC70dBS3elpxZlQvGKdhYgiIzZnhqMV0zP\/XV3Qleu7xTrEaLAA7EFta9UqD6kzWAKIaMhEPpX0EuDs433LQi\/pyPZ+1jrFSCX2l3Souhb3z9CUvxTAG6yzEFFEJORZ8rtK1vD\/X4MSyFvq5qQftw4yXFwB2Ie6uVWr\/UBPB7DGOgsRRUQC3x3g9LP9y6tSPXx\/+XKtsA4yXCwAQzBzTs1fNDX4NkBWWmchoshIzDUBCdnz3wud9YaB\/IesUwwXC8AQNbzjwHVBpbwNwO+tsxBRRCTgmoCELvv\/HYV3mXWG4WIBGIYZZ1ZvHPAGGqG62DoLEUVEjLcDErzsvxs6a3V7\/gTrFMPBAjBMxzUdsnndfpl3Q\/Bd6yxEFBmx2w7gsv\/f8wKdZ51hOFgARqCxUYr1zZkLVORaAIm6ypeIRihG2wFc9t8TOd06wXCwAIxCQ3P6eoWcC2DAOgsRRUAMSgCH\/14dbh1gOFgARqmhJf1jT6UR0JessxBRBET4moDOXM9buOe\/V4dYBxgOFoASqG1NP+ZpcJICf7TOQkSRELlrAjqy+TNUvRy457831d1ZHWsdYqhYAEqktnXSC9XFLW8B8FPrLEQUARHaDuCy\/5C9VtsqW61DDBULQAlNnjd5S31L5gMCXAhgm3UeInJcBLYDuOw\/LJHaCmYBKIO6lsxdqt4ZAF60zkJEznN2O4DL\/sMl66wTDAcLQJk0tFY\/WllZcQKA5dZZiMhxDm4HcNl\/BFQj9UIgFoAyOvLMCa\/U9afPEsXVAIrWeYjIYQ6VAA7\/ERK0WUcYDvNftKRY3d53mhcEdwOYap2FiBxm\/CphDv+RknV1\/dWHy3zxrZMMFVcAQjKjqfq3Ywb0eAALrbMQkcMMVwI4\/EdOVb8RpeEPcAXARFeu8EFV\/SaAidZZiMpFgT8K8CbrHJEV8koAh\/+ovFgct61hVuNBm6yDDAdXAAzUNaf\/S1ODxwDIWmchKoMegXywoSVzAqBftA4TWSGuBHD4j44ILora8Ae4AmCuM5f\/f1DcCqDaOgvR6OkSX8acP7N5\/\/+9H7qzrXcBIP9qGCrayrwSwOE\/Oqq4s6E18wnrHCPBAuCAzkUb3oDKin+D4l3WWYhGqE+BSxpaMt\/f3T9kCRilMpUADv9RErT1H5A+e\/ZsGbSOMhIsAA7pzvbMC8T7FoAp1lmIhkx1cUWlfvKosyb+dW\/\/GkvAqN1V15z+eKlKQGeu5y1QLws+5GdkBA8Xx26bE8Wl\/x1YABzTnd1YHYj3JUA+DiBlnYdoL16A6qfrW2t+OdT\/oDPX+0WoXFvOULFWopUAnvmP2gNVxS3zJs+bvMU6yGiwADiqa0nvG9XzvgHoW6yzEO0iAPA9T\/3La1sn9Q33P+ZKwKiNaiWAZ\/6jFIMz\/x1YABymqtKZ6ztHEHwFkEOt8xAB+mjgyUUzmjJ\/GM1P6cr2Xqci15QqVeKMcCWAZ\/6jFosz\/x1YACKg41frq6Sy8koVfJZ\/ccnICwK5ora5+qel2oNmCRilYZYADv9Ri9XwB1gAIqU7u\/EwH6nrRHAe+AwHCsdrCr11q7f15uOaDtlc6h\/e0dZ7vUCuLvXPTYwhlgAO\/1GL3fAHWAAiqaOt51gR72YoWqyzUGz5qvhhRcr\/1+lNk9aW80AsAaO0jxLA4T9qsRz+AAtApHW39Z0aqH8VROZaZ6FYWQbRy+qba54O64C8O2DUdnthIC\/4G6UYXfC3OywAMdCR620UxfWAnG6dhaJLgYfU866a0VT9W4vjd+TyN4jiCxbHjoVdVgJ45j9qsT3z34EFIEa6cvkzVXElgH+wzkKRskwCvb5uTs3D1kFYAkbp9RLQ2VZo5PAfldgPf4AFIJY6c4WToHolgLPBiwVpTwRtnnrX17ZU\/846ys5YAkbtFwo0c\/iPWCKGP8ACEGtdi\/tnaIV\/MRQfArCfdR5ywqAq7kl5uLW2OfNH6zB70pnN3wjBVdY5KHESM\/wBFoBEeHZpT3rQl4+IysUAjrDOQyb6FfoflRV6676e2e8KPieAQhXzC\/52hwUgQZYv14pDtxbeI4oLATSCn38SdKjondha\/PeGsw\/stw4zXJ1t+S8B+Lx1Doq9RJ3578ABkFBrcoXpvgYfAuSj4NsH42abAL+C4K7apvSvy\/Ue+bDwOQFUVgk889+BBSDhVqzQyur1+XmAd55CmwGMsc5EI9ahih9UpFL\/Mb2p6lXrMKXElQAqk0Se+e\/AAkD\/60+L8zVjPZ0HkQ9j+62E\/P1wnAC9CtwDBD+qa655NOpn+3vDlQAqqQSf+e\/AL3jare5s\/igfeK8I\/hHAbPB3xSX9AJao6E\/9vkzbrPmyzTpQWDrb8jcBuNI6B0Veos\/8d+CXOu3TqiW9R6Q8vAfw3gPoqQBS1pmSRoBeFVmkGvx87LjM\/dMaZcA6kxWWABolDv\/XsQDQsKxe1jcpVdSmINA5ImgCMMk6U4x1ArJERNv6Dkg\/NHu2DFoHckVXLn+zKj5nnYMih8N\/JywANGK6UFNrqvpP8kXPFNVGAKcCGGedK8L6oPowPC8nRW2rm5t5zjqQy1gCaJg4\/HfBAkAls3bh2v22VFWdptC3e5A3K3AigP2tczmsD9BHROVBFXmorr\/6jzJffOtQUcISQEPE4b8bLABUNsuXa8VhWwvHBpDTRINTFHICgFok8xoCH8AqAE9A8FjgB483bK5ZxYE\/el3Z\/JdVcIV1DnIWh\/8esABQqJ5uf3n\/8f5+x\/ievlEUxwN6NCANACZaZyuhAiD\/o6rPwMPTosEzxXHFp5J8u1G5sQTQHnD47wULADmhO9t\/IFCcqSINqqgVwRG6\/b0FRwA4yDrfbvQD8leIdqtijQd0B4o1FSm\/e3rTpLXW4ZKooy3\/FQEut85BzuDw3wcWAHLeukXrxm+SqiPEKx6k4k0OJDhIVA4B5BBA0wDSAqQVyABIQ1ABRWYYh+gHMAggD8FWqPYovB4BNkJ1IwQbBfoSPHlR\/NSL\/uDA2ig+Vz8JWALodRz+Q8ACQLG2btG68Rtk\/Njd\/bMDdMtWfkHED0tA4nH4DxELABHFTmc2fyMEV1nnoLDJI8VxW1t5vc3QsAAQUSyxBCQNh\/9wsQAQUWyxBCQFh\/9IsAAQUazxVcJxx+E\/UiwARBR7LAFxxeE\/GiwARJQILAFxw+E\/WiwARJQYLAFxweFfCiwARJQoLAFRx+FfKiwARJQ4nW35mwBcaZ2DhovDv5RYAIgokVgCoobDv9RYAIgosVgCooLDvxxYAIgo0VgCXMfhXy4sAESUeCwBruLwLycWACIisAS4h8O\/3FgAiIhe15XL36yKz1nnIA7\/MLAAEBHthCXAGod\/WFgAiIh2wRJghcM\/TCwARES7wRIQNg7\/sLEAEBHthqpKd1vfbSp6kXWW+OPwt+BZByAicpGIaG1L9cUK\/YZ1lnjj8LfCFQAior1QVenM5b8ukM9YZ4kfDn9LLABERPvAElAOHP7WWACIiIaAJaCUOPxdwAJARDREqipducLPALzHOkt0yboB77W645oO2WydJOl4ESAR0RCtacu\/FcA7rHNEm04eF4z7mqryBNQYCwAR0RCsbis0BSJtACZYZ4mBC7pyhTtZAmzxfz4R0T50ZgstEP0FgHHWWWLmrrrm9MdFRK2DJBFXAIiI9qIrV5jD4V82XAkwxAJARLQHXe19c1X15+DwLyeWACMsAEREu9GRzb9Xg+AXAMZaZ0mACzpzhW+zBISLBYCIaBcdufx8EfwEQKV1lqQQ4EKWgHCxABAR7aSzrfB+UdwNoMI6S9KwBISLBYCI6HVducIHAf0xOPzNsASEhwWAiAhAR1v+Y6r6IwAp6yxJxxIQDhYAIkq8zmz+fAHuAr8TnSHAhd1tfbexBJQPf9mJKNG62vIXQvAd8PvQOSp6EUtA+fAXnogSqyOb\/4QC3wafiuosFb2ou72P7w4oAxYAIkqkzlzvpSK4Axz+zlPVz7IElB4LABElTldb\/nKo3GKdg4ZuRwmwzhEnLABElCgd2fznFPiKdQ4aPlX9bFeucJt1jrjgcgoRJUZHNv85EdxsnYNGR0S+Xtecvtg6R9RxBYCIEqEz1\/tFDv944EpAaXAFgIhiryOXv0EUX7DOQaXFlYDRYQEgoljrbMt\/CcDnrXNQebAEjBwLABHFkqpKd1vfbSp6kXUWKi+WgJFhASCi2FFV6coV\/g3Av1hnoZAobq1vzVxmHSNKWACIKFY4\/JNMbqtvSV9inSIqWACIKDZ0oaa6qvq+B+hHrLOQFZaAoWIBIKJY0IWa6qru+3eonmudhayxBAwFCwARRd72M\/\/8DwD5kHUWcgVLwL6wABBRpK1cqGMqqgo\/AfAe6yzkGpaAvWEBIKLIWrlQx1RUF\/4bindZZyFXsQTsCQsAEUVSd1bH+tJ3j0DnWWch18nX6lvSl1qncA3fBUBEkbNu0brxAQqLOPxpaPSSzrbCrdYpXMMVACKKlHWL1o3vrxi\/CMAZ1lkoargSsDMWACKKjKfbX95\/XDBuEYBG6ywUVSwBO7AAEFEkPLu0Jz1Y9NoEONU6C0UdSwDAawCIKAKev7c3U\/S9dg5\/Kg1eEwBwBYCIHPenxfmasSm0AzjROgvFTMJfIMQCQETOWtPef5Af+EsBHGudhWIqwSWAWwBE5KTnlm06OPD9X4PDn8pJcGlnNn+LdQwLXAEgIuc8t2zTwYODxQcBNFhnoWQQwZfrmjNXWucIEwsAETmlO9t\/oMJ\/QAVHW2ehhEnYdgC3AIjIGStzhYmB+Es5\/EdD1lkniCzBpZ1t+ZusY4SFBYCInPDs0p50hWoOwHHWWaJLHimO21qv0G9YJ4mwK5NyTQALABGZ685urC76Hm\/1GxV5pDhua+usxoM21TdnPssSMAqCSzva8l+1jlFuLABEZGrdonXjfUndB8XJ1lmi6\/+GPwCIiLIEjI4Al8W9BPAiQCIy053VsYEUsuCLfUbjgarilnmT503esus\/UFXpzOW\/LpDPWASLiZvqWzJXWYcoB64AEJEJVZVA8t8Fh\/8oyCPFcdvO3t3wB\/5vJUBUbg87WYx8Pq4rASwARGSiK9d3KyAfts4RXX+77L\/Hf0tEa1uqL2YJGLm4bgewABBR6Lqy+csAvdg6R3QNbfj\/77\/NEjBqcSwBvAaAiELV2VZ4P6B3gycgIzS84b8zVZXutr7bVPSiciRLAgW+2tCSucI6RymwABBRaDpyvY2ikgMwxjpLRO3xgr+hYgkYPRXc2NCcudo6x2ixABBRKFYt6T0i5cnvARxonSWaRn7mvztdufzNqvhcKX5WEsVhJYBLcERUdusWrRuf8uRecPiP1ANVxc3NpRr+AFDblP48rwkYOQEu78jlb7DOMRosAERUdv0V428DcLx1jmja+61+I\/6pIlrXmv4sgJtL+XOTRBRf6GjLf8U6x0hxC4CIyqoz2\/suiNxrnSOaSrvsvyevvwAnUa\/CLaWobgewABBR2azMFSZWqHaAS\/8jMeoL\/oajK1e4TVU\/G8ax4kihNzS01FxjnWM4uAVARGVTAb0ZHP4jUJ5l\/72pa05fDG4HjJhAru7K5r9snWM4uAJARGXR0dZzrMB7EjzRGK5Qz\/x31dlW+Bof0jRyonp9XWvNtdY5hoJ\/MYmoLDx4V4PfMcMU\/pn\/rupb0peAKwEjpiLXRGUlgCsARFRya9o3TvGD1J\/BAjAcpmf+u+JKwOhEYSWAfzmJqOT8IHUO+P0yHE4Nf2DHSoB8zTpHVKnINR25gtMXBfIvKBGVnABN1hkixLnhv0N9S\/pSloCRE9XrOrK9H7XOsScsAERUUqoqCpxgnSMinB3+O7AEjI6IfGv1kp5jrHPsDgsAEZXUn+5\/ZTyAKusc7rO\/4G+otpcA3GSdI6LGeZ7377pAnZu3zgUiomir3jK20jpDBJT82f7lVt+SuQqKW61zRNTsrpMK77MOsSsWACIqqWnvrskr4PxZrSHnl\/33pL41cxlLwMiowLlHBbMAEFHJieB\/rDM4KrLDfweWgJER4E2uXQvAAkBEpaeas47goMgP\/x3qWzOXKXCLdY6oSXmps60z7IwFgIhKTj35TwC+dQ6HxGb479DQkrmcJWC49M3WCXbGAkBEJdfQlHlegF9Y53BE7Ib\/DiwBw6PAVOsMO2MBIKLy8HElgAHrGKYED0flVr+RamjJXA7Fl6xzRMSh1gF2xgJARGVRNzfzHFSSfO\/4A1WDW1qidKvfSNW3Zr6gwFetc0RAdXdWx1qH2IEFgIjKZt1+1V8C8Jh1jtAl4Mx\/Vw0tmStUcKN1Dsdtnd6CbdYhdmABIKKyaWyUoh\/o+6F4xTpLiBJz5r+rhubM1VwJ2KuXRUStQ+zAAkBEZTVzTs1fPMi7kIzrAWJ7wd9QNbRkrhDFV6xzuEiBddYZdsYCQERlV9uafkyBcwE4c\/ZTcglc9t+TutbM57gdsDv6e+sEO2MBIKJQNLRk7gHki9Y5yiSxy\/570tCcuZorAX\/LE+9+6ww7YwEgotDUNVdfB+AO6xwllvhl\/z2pa818TgRfts7hiA19B1SzABBRMomI1jWnPwXgLussJcFl\/32qa85cye0AANBvzZ4tg9YpdsYCQEShEhGt60\/\/iyr+yzrLKHHZf4gamjNXJ3wlYMNWX263DrErFgAiCp3MF\/+l\/dLnIbqPC+ay\/zDVNWeuTGoJENErjp2b6bXOsSuxDkBEybVyoY6prOq7R6HvtM4yDBz+o9DZluKbbRcAAAOoSURBVL8JwJXWOUL00\/qWzAesQ+wOVwCIyMys+bKt78Dq9yIqKwHc8x+1+pbM5xV6g3WOUAgeH\/AG\/p91jD3hCgARmdOFmuqcUPihCD5onWWPBA8Xx26bwz3\/0uho671eIFdb5yijJ4siZ85qTvdYB9kTrgAQkTmZL379pvS5Ar3bOstucfiXXENLzTUxXglwfvgDLABE5AiZL35tf+Y8QH9kneVvcPiXTUNLzTWier11jhKLxPAHuAVARI7RhZrqqu77d6iea52Fwz8cXdne61TkGuscJRCZ4Q+wABCRg3Shprqq+r4P6HlmITj8QxWDEhCp4Q+wABCRo1RVutsL31LFJ0I\/OIe\/iQiXgMgNf4DXABCRo0REa5vSn0TY7w7g8DdT11pzbQSvCYjk8AdYAIjIYf\/37gD9VjgH5PC3FrESENnhD7AAEJHjtpeAzKcB\/WZ5D8Th74qIlIBID3+ABYCIIuD1EnARIF8rzwHQxhf7uKWuteZah98iuGLMgJ4R5eEPsAAQUUSIiNa3pC9V1YsBlOy1qqq4s\/+ANB\/v66CG5szVDpaAFWMG9Kxp767JWwcZLd4FQESR07WkcLJ6eheAY0fxY14UwUV1zZmflyoXlYdDjw2OzfAHWACIKKJ0oaa6q\/IfVniXATpr6P+lrFPR2\/2x2+7gkn90OFACYjX8ARYAIoqB1e35E7xA5wFyOoDDALwBQBWA1wC8DMiLUH0cgra6\/vSDMl9808A0IoYlIHbDH2ABIKKYWrlQx8yaL9usc1BpGTwsKJbDH2ABICKiiOls610AyL+GcKjI3+q3NywAREQUOSGUgFgPf4C3ARIRUQTVt9QsUJFry\/PT9bdxuM9\/X1gAiIgokhqa09er6scADJTwx\/50fP+mM+O4578rbgEQEVGkrV7Sc4yX8r4Lxcmj+DEbRPSKuuaa\/yhZMMexABARUeSpqnS1Fear4AoB3jSM\/3QDoN\/a6svtx87N9JYtoINYAIiIKFZWL+k5JuWlzg6gbxHgcACTAVQD2ArgVQVeAPT3Aq+9\/8DqpbNnS8keLU1EREQOeX65jrPOQERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERE9P\/bg0MCAAAAAEH\/X3vDAAAAAAAAAAAAAAAAAAAAAAAAADwFEnKmOtxCmoAAAAAASUVORK5CYII=\"\/>\n<\/defs>\n<\/svg> &nbsp;"
       }
     },
     "multi_functional_container_NewNkt": {
@@ -254,10 +638,9 @@
         },
         "video_media_qV3JUr": {
           "type": "video-media",
-          "disabled": true,
           "settings": {
-            "banner-url": "shopify:\/\/pages\/valentines-day",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Main Tile_97596a76-e680-454d-87f9-c6d9e301e942.mp4",
+            "banner-url": "https:\/\/hokmakeup.com\/collections\/makeup",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/EOS tile2_85517905-85e4-4ea7-9398-018c73efb031.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -268,7 +651,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/best-seller-home-page",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BEST_SELLERS_5db13d2a-0162-412e-83a9-52d7fa9b5cef.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Best_Sellers_b1ea3817-932a-4fe2-b292-2fe028705f7e.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -279,7 +662,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/makeup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/MAKEUP_9f10473d-dbb3-4b63-af3f-e57c3b7d7d66.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Makeup_00f6b03f-e2a8-421e-bbf3-fd4a82b09b0d.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -290,7 +673,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/skincare",
-            "banner-image-desktop": "shopify:\/\/shop_images\/SKIN_bc4be141-65c1-4840-b698-30d8a048d607.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Skin_0c31b313-a246-42ae-86f4-0ac1132358a8.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -301,7 +684,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/hair-care",
-            "banner-image-desktop": "shopify:\/\/shop_images\/HAIR_5f910a67-b403-4eca-a779-c75213a8bfdc.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Hair_d948758b-385d-453d-a577-ebf5a8afe1b1.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -312,7 +695,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/body-care",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BATH_BODY_024edd2f-c663-4c20-bb45-0506fd082f11.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Bath_Body_f3f061bc-54db-44a3-b171-2218b28d3fa7.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -323,7 +706,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/fragrance",
-            "banner-image-desktop": "shopify:\/\/shop_images\/FRAGRANCE.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Fragrance_a7ccf80b-15c5-4e89-9461-e33d0bd52cbc.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -334,7 +717,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/combos",
-            "banner-image-desktop": "shopify:\/\/shop_images\/COMBO_AND_KITS.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Combos_and_Kits.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -362,6 +745,7 @@
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": true,
         "showFreeScroll": true,
@@ -372,6 +756,8 @@
         "margin_bottom_desktop": 42,
         "margin_top_mobile": 16,
         "margin_bottom_mobile": 16,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
@@ -383,6 +769,55 @@
         "showArrow": false
       }
     },
+    "multi_functional_container_KEjR43": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "video_media_JYUnbj": {
+          "type": "video-media",
+          "settings": {
+            "banner-url": "https:\/\/hokmakeup.com\/collections\/makeup",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Eos  Banner 1920X160 Desktop.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Eos 550X275 Banner Mobile.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_media_JYUnbj"
+      ],
+      "settings": {
+        "showContainer": "full-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 400,
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "title-top-padding": 0,
+        "title_alignment": "left",
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
     "multi_functional_container_4M7jiW": {
       "type": "multi-functional-container",
       "blocks": {
@@ -390,7 +825,7 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/foundation",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_e9202c09-e600-4601-a138-8cceac49f964.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_01.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -401,55 +836,66 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/lip-tint",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Lip_Tint_5f2c18c3-868a-4532-912f-92572fc24167.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_02.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Lip Oils"
+            "shopcatagorytxt": "Lip Tint"
           }
         },
         "image_media_jf9G4A": {
           "type": "image-media",
           "settings": {
             "banner-url": "https:\/\/www.hokmakeup.com\/collections\/eyeshadow",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeshadow_bfcb42da-208b-4fe0-9af9-2fa8fe24b2af.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_03.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
             "shopcatagorytxt": "Eyeshadow"
           }
         },
-        "image_media_7EdraC": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/mascara",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_f03ed57e-4bc0-483b-b29c-91d36f46f46a.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Mascara"
-          }
-        },
         "image_media_ctnVDC": {
           "type": "image-media",
           "settings": {
             "banner-url": "shopify:\/\/collections\/blush",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Blush_f40fadcd-a7c4-4b84-bbcd-28d72eccf12e.jpg",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_04.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Brushes"
+            "shopcatagorytxt": "Blush"
+          }
+        },
+        "image_media_mirJRA": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/setting-spray",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_05.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Setting Spray"
           }
         },
         "image_media_bmUF8P": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/liquid-lipstick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Liquid_Lipstick_8fb94720-6f8e-424e-8c41-c6613d7aba6f.jpg",
+            "banner-url": "shopify:\/\/collections\/lipstick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_06.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
             "shopcatagorytxt": "Lipstick"
+          }
+        },
+        "image_media_7EdraC": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "https:\/\/hokmakeup.com\/collections\/mascara",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Top-picks-artboard_07.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Mascara"
           }
         },
         "image_media_HHVyJz": {
@@ -469,9 +915,10 @@
         "image_media_ncCFqk",
         "image_media_4i47Pt",
         "image_media_jf9G4A",
-        "image_media_7EdraC",
         "image_media_ctnVDC",
+        "image_media_mirJRA",
         "image_media_bmUF8P",
+        "image_media_7EdraC",
         "image_media_HHVyJz"
       ],
       "custom_css": [
@@ -483,6 +930,7 @@
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": true,
         "showFreeScroll": true,
@@ -493,6 +941,8 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "Top Picks",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
@@ -526,9 +976,9 @@
         "showCenter": false,
         "showFreeScroll": true,
         "loop": false,
-        "margin_top_desktop": 88,
+        "margin_top_desktop": 24,
         "margin_bottom_desktop": 0,
-        "margin_top_mobile": 48,
+        "margin_top_mobile": 16,
         "margin_bottom_mobile": 0,
         "slides-limit": 16,
         "num-slides-sm": "1.6",
@@ -538,31 +988,95 @@
         "num-slides-2xl": "5"
       }
     },
+    "multi_functional_container_XaTjix": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "video_media_LKgPcW": {
+          "type": "video-media",
+          "disabled": true,
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/lamel",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/New Section - Lamel.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/New Section Mobile - Lamel.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_TGkw4k": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "https:\/\/hokmakeup.com\/apps\/gbq\/quiz\/1",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_Finder_Banner_1920x463_84ec4b75-56b0-4587-b569-8426df479283.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Foundation_Finder_Banner_780x600_b209b435-1752-4842-9622-da3cfa965a64.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_media_LKgPcW",
+        "image_media_TGkw4k"
+      ],
+      "settings": {
+        "showContainer": "container",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 500,
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 64,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "title-top-padding": 0,
+        "title_alignment": "left",
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
     "grid_media_collection_krrKMw": {
       "type": "grid-media-collection",
       "settings": {
-        "margin_top_desktop": 64,
+        "margin_top_desktop": 32,
         "margin_bottom_desktop": 88,
-        "margin_top_mobile": 36,
+        "margin_top_mobile": 24,
         "margin_bottom_mobile": 48,
-        "title": "TRENDS YOU CAN'T MISS",
+        "title": "Just Dropped!",
         "url-title": "View All G.O.A.T",
-        "veiw-all-url": "shopify:\/\/collections\/pink-flash",
+        "veiw-all-url": "shopify:\/\/collections\/makeup-revolution",
         "content_1": "Shop Now",
-        "coll_link_1": "",
-        "cont_1_img": "shopify:\/\/files\/videos\/Tycm 2.mp4",
-        "content_2": "Lip Tint",
-        "coll_link_2": "shopify:\/\/collections\/lip-tint",
-        "cont_2_img": "shopify:\/\/shop_images\/Bubble_Glowy_Lip_Tint_1080_X1080_a98f6ce1-6e39-47ec-9469-1a0e714fbb1e.jpg",
-        "cont_2_img_desktop": "shopify:\/\/shop_images\/Bubble_Glowy_Lip_Tint_860_X434_9b91a9b8-4f85-4c54-a6e8-a5010dd42813.jpg",
-        "content_3": "Blush",
-        "coll_link_3": "shopify:\/\/collections\/blush",
-        "cont_3_img": "shopify:\/\/shop_images\/Chic_In_Cheek_Blush_1080_X_1080_91da3a9e-6531-499c-af58-aa163b882923.jpg",
-        "cont_3_img_desktop": "shopify:\/\/shop_images\/Chic_In_Cheek_Blush_860_X_434_cae21449-707b-4196-bc04-d0cf63934ba8.jpg"
+        "coll_link_1": "shopify:\/\/collections\/makeup-revolution",
+        "cont_1_img": "shopify:\/\/files\/videos\/Air blur TYCM.mp4",
+        "content_2": "Explore Foundations",
+        "coll_link_2": "shopify:\/\/collections\/foundation",
+        "cont_2_img": "shopify:\/\/shop_images\/SS_Foundation_1080X1080_f0d078cb-5dbf-48ba-b7fe-8aaf70b0f631.jpg",
+        "cont_2_img_desktop": "shopify:\/\/shop_images\/SS_Foundation_460_290.jpg",
+        "content_3": "Explore <br> Eyeshadows",
+        "coll_link_3": "shopify:\/\/collections\/eyeshadow",
+        "cont_3_img": "shopify:\/\/shop_images\/Icon_Palette_1080X1080_533c5822-b7fe-4d21-a860-6abe99cf8af5.jpg",
+        "cont_3_img_desktop": "shopify:\/\/shop_images\/Icon_Palette_460_290.jpg"
       }
     },
     "skincare_tabs_YG3gjy": {
       "type": "skincare_tabs",
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 990px) {.square-banner-media {border-radius: 8px; }}"
       ],
@@ -591,6 +1105,7 @@
       "blocks": {
         "video_media_hDqah9": {
           "type": "video-media",
+          "disabled": true,
           "settings": {
             "banner-url": "shopify:\/\/collections\/eveline-cosmetics",
             "banner-video-desktop": "shopify:\/\/files\/videos\/Explore Eveline Section_8a79ba26-991e-406d-bccb-0e0b2fd08dfe.mp4",
@@ -600,34 +1115,22 @@
             "shopcatagorytxt": ""
           }
         },
-        "image_media_UYVcxT": {
-          "type": "image-media",
-          "disabled": true,
-          "settings": {
-            "banner-url": "shopify:\/\/products\/lash-therapy-total-action-eyelash-serum-8-in-1",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1_79c73c3d-5be6-4520-9657-e61c7275a07c.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": ""
-          }
-        },
         "image_media_7tXw7P": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/eveline-cosmetics-brazilian-body-shimmer-with-golden-dust-150-ml",
-            "banner-image-desktop": "shopify:\/\/shop_images\/2_d9b23f5a-7f1c-433e-8e73-ab42ed22f69e.jpg",
+            "banner-url": "https:\/\/hokmakeup.com\/collections\/milani",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Baked_1_1.gif",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
             "shopcatagorytxt": ""
           }
         },
-        "image_media_aJrGcR": {
+        "image_media_bqiA8E": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/wonder-match-volume-length-mascara-intense-black",
-            "banner-image-desktop": "shopify:\/\/shop_images\/3.jpg",
+            "banner-url": "shopify:\/\/products\/milani-color-fetish-hydrating-lip-stain",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Lip_Stain.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -637,8 +1140,52 @@
         "image_media_KJQTEW": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/keratin-color-repair-shampoo-colour-protection-8-in-1-400ml",
-            "banner-image-desktop": "shopify:\/\/shop_images\/4.jpg",
+            "banner-url": "shopify:\/\/products\/milani-conceal-perfect-2-in-1-foundation-concealer",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Foundation.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_yRBK6V": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/milani-gilded-eyeshadow-sticks",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Glided_Eyeshadow.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_UYVcxT": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/milani-baked-blush",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Baked_Blush_820f9042-a6f6-42e2-8149-47283d68593d.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_6jEAqp": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/milani-highly-rated-anti-gravity-waterproof-mascara",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_949fe518-422a-456c-b54c-9892d18513bc.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_aJrGcR": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/milani-color-fetish-matte-lipstick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Fetish_Lipstick.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -648,8 +1195,8 @@
         "image_media_A7L8R6": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/soft-whitening-face-and-body-care-cream-200ml",
-            "banner-image-desktop": "shopify:\/\/shop_images\/5.jpg",
+            "banner-url": "shopify:\/\/products\/milani-fruit-fetish-lip-oils",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Fruit_Fetish_Lip_Oil.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -659,8 +1206,19 @@
         "image_media_rxpDJ7": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/sun-protection-face-cream-whitening-spf50-50ml",
-            "banner-image-desktop": "shopify:\/\/shop_images\/6_df53c50d-451b-4edd-bc8f-68af52f75184.jpg",
+            "banner-url": "shopify:\/\/products\/milani-stay-put-liquid-lip-longwear-lipstick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Liquid_Lipstick.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
+        "image_media_tdjitn": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/products\/milani-make-it-last-natural-finish-setting-spray-prime-correct-set",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Brand_of_the_Week_-_Milani_Setting_Spray.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -670,34 +1228,46 @@
       },
       "block_order": [
         "video_media_hDqah9",
-        "image_media_UYVcxT",
         "image_media_7tXw7P",
-        "image_media_aJrGcR",
+        "image_media_bqiA8E",
         "image_media_KJQTEW",
+        "image_media_yRBK6V",
+        "image_media_UYVcxT",
+        "image_media_6jEAqp",
+        "image_media_aJrGcR",
         "image_media_A7L8R6",
-        "image_media_rxpDJ7"
+        "image_media_rxpDJ7",
+        "image_media_tdjitn"
       ],
       "custom_css": [
-        ".section-template23945738584343multifunctionalcontainern78MM7-margin {background-image: url(https:\/\/cdn.shopify.com\/s\/files\/1\/0896\/2320\/0023\/files\/eveline_banner.webp?v=1733118451); background-size: cover; background-repeat: no-repeat; padding-bottom: 55px;}",
-        "@media screen and (max-width: 768px) {.section-template23945738584343multifunctionalcontainern78MM7-margin {padding-bottom: 35px !important; }}"
+        ".carousel-section-title-wrapper {margin: auto;}",
+        ".carousel-section-wrapper {row-gap: 21px;}",
+        ".carousel-btn {background: #fff;}",
+        ".section-center-text {text-align: center;}",
+        ".arrow_handler {top: 46%;}",
+        ".carousel-section-wrapper {padding: 2px !important;}",
+        "@media screen and (max-width: 768px) {.section-template--23786027090199__multi_functional_container_n78MM7-margin {padding-bottom: 35px !important; }}"
       ],
       "settings": {
-        "showContainer": "container",
+        "showContainer": "page-width",
         "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
-        "bg_color": "rgba(0,0,0,0)",
+        "bg_color": "#e2ceaa",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
-        "showSliderArrow": false,
+        "showSliderArrow": true,
         "showFreeScroll": false,
         "loop": false,
         "addInnerPadding": false,
         "slide_speed": 400,
-        "margin_top_desktop": 88,
-        "margin_bottom_desktop": 0,
-        "margin_top_mobile": 46,
-        "margin_bottom_mobile": 0,
-        "carousel-title": "Eveline- #1 Beauty Brand In Europe",
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 32,
+        "margin_top_mobile": 40,
+        "margin_bottom_mobile": 30,
+        "title-top-padding": 30,
+        "title_alignment": "left",
+        "carousel-title": "<div class=\"section-center-text\">\n        <p class=\"para-title-text\" style=\"margin:auto;        font-size: 35px;\">BRAND OF THE WEEK <\/p>\n        <br> \n         \n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0896\/2320\/0023\/files\/milani-gif.gif?v=1741679575\" style=\"width: 170px;mix-blend-mode: multiply;\">\n        <\/div>",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
         "num-slides-sm": "1.3",
@@ -773,6 +1343,7 @@
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": false,
         "showFreeScroll": false,
@@ -783,6 +1354,8 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 40,
         "margin_bottom_mobile": 0,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "Find Your Favorites:",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "shopify:\/\/collections\/makeup",
@@ -809,9 +1382,9 @@
         "showCenter": false,
         "showFreeScroll": true,
         "loop": false,
-        "margin_top_desktop": 36,
+        "margin_top_desktop": 64,
         "margin_bottom_desktop": 36,
-        "margin_top_mobile": 36,
+        "margin_top_mobile": 46,
         "margin_bottom_mobile": 36,
         "slides-limit": 16,
         "num-slides-sm": "1.6",
@@ -840,6 +1413,7 @@
       "block_order": [
         "video_media_nUM8WP"
       ],
+      "disabled": true,
       "custom_css": [
         ".carousel-section-title-wrapper p {display: flex; align-items: center; justify-content: center; gap: 20px;}",
         "span.carousel-sub-title {font-family: var(--family-bold); font-size: clamp(12px, 2vw, 24px);}",
@@ -851,6 +1425,7 @@
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": false,
         "showFreeScroll": false,
@@ -861,6 +1436,8 @@
         "margin_bottom_desktop": 36,
         "margin_top_mobile": 36,
         "margin_bottom_mobile": 36,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "MAIN CHARACTER VIBES  |",
         "carousel-sub-title": "The drama? It’s yours.",
         "carousel-sub-title-links": "\/",
@@ -938,6 +1515,7 @@
         "banner_media_w3QCa9",
         "banner_media_EyxiDK"
       ],
+      "disabled": true,
       "custom_css": [
         ".arrow_handler {z-index: 1;}",
         "@media only screen and (min-width: 768px) {.carousel-section-wrapper {row-gap: 24px; }}"
@@ -968,9 +1546,9 @@
         "video_media_z8rYgT": {
           "type": "video-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/eveline-makeup",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Trending On Instagram Desk.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Trending On Instagram-Mobile.mp4",
+            "banner-url": "shopify:\/\/collections\/lamel",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/New section.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/New section mobile.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -981,12 +1559,14 @@
       "block_order": [
         "video_media_z8rYgT"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": false,
         "showFreeScroll": false,
@@ -997,6 +1577,8 @@
         "margin_bottom_desktop": 64,
         "margin_top_mobile": 40,
         "margin_bottom_mobile": 40,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
@@ -1248,6 +1830,7 @@
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": true,
         "showFreeScroll": true,
@@ -1258,6 +1841,8 @@
         "margin_bottom_desktop": 64,
         "margin_top_mobile": 40,
         "margin_bottom_mobile": 40,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "brands on board",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
@@ -1296,52 +1881,6 @@
         "num-slides-2xl": "5"
       }
     },
-    "multi_functional_container_hzKpcp": {
-      "type": "multi-functional-container",
-      "blocks": {
-        "image_media_BzbpWH": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "https:\/\/sweetons.com",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Sweetons_Desktop.png",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Sweetons_Mobile_1.png",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_media_BzbpWH"
-      ],
-      "settings": {
-        "showContainer": "full-width",
-        "image_priority": false,
-        "enableShuffle": false,
-        "show-shop-now": false,
-        "bg_color": "#ffffff",
-        "showCenter": false,
-        "showSliderArrow": false,
-        "showFreeScroll": false,
-        "loop": false,
-        "addInnerPadding": false,
-        "slide_speed": 100,
-        "margin_top_desktop": 64,
-        "margin_bottom_desktop": 64,
-        "margin_top_mobile": 40,
-        "margin_bottom_mobile": 40,
-        "carousel-title": "",
-        "carousel-sub-title": "",
-        "carousel-sub-title-links": "",
-        "num-slides-sm": "1",
-        "num-slides-md": "1",
-        "num-slides-lg": "1",
-        "num-slides-xl": "1",
-        "num-slides-2xl": "1",
-        "showArrow": false
-      }
-    },
     "hok_featured_collection_qqaaHQ": {
       "type": "hok-featured-collection",
       "disabled": true,
@@ -1370,6 +1909,55 @@
         "num-slides-2xl": "5"
       }
     },
+    "multi_functional_container_dHXVHM": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "video_media_TKBD3U": {
+          "type": "video-media",
+          "settings": {
+            "banner-url": "shopify:\/\/pages\/hok-rewards",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Hok Rewards Desktop New.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Hok Rewards Mobile New.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_media_TKBD3U"
+      ],
+      "settings": {
+        "showContainer": "full-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 400,
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "title-top-padding": 0,
+        "title_alignment": "left",
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
     "multi_functional_container_8Ffmec": {
       "type": "multi-functional-container",
       "blocks": {
@@ -1395,6 +1983,7 @@
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": false,
         "showFreeScroll": false,
@@ -1405,6 +1994,8 @@
         "margin_bottom_desktop": 64,
         "margin_top_mobile": 40,
         "margin_bottom_mobile": 40,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
@@ -1416,10 +2007,10 @@
         "showArrow": false
       }
     },
-    "multi_functional_container_KEjR43": {
+    "multi_functional_container_iKD6c7": {
       "type": "multi-functional-container",
       "blocks": {
-        "video_media_JYUnbj": {
+        "video_media_LbNmk8": {
           "type": "video-media",
           "settings": {
             "banner-url": "shopify:\/\/pages\/hok-rewards",
@@ -1433,14 +2024,16 @@
         }
       },
       "block_order": [
-        "video_media_JYUnbj"
+        "video_media_LbNmk8"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
         "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
         "showCenter": false,
         "showSliderArrow": false,
         "showFreeScroll": false,
@@ -1451,6 +2044,57 @@
         "margin_bottom_desktop": 36,
         "margin_top_mobile": 36,
         "margin_bottom_mobile": 36,
+        "title-top-padding": 0,
+        "title_alignment": "left",
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
+    "multi_functional_container_hzKpcp": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_BzbpWH": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "https:\/\/sweetons.com",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Sweetons_Desktop.png",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Sweetons_Mobile_1.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_media_BzbpWH"
+      ],
+      "settings": {
+        "showContainer": "full-width",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 100,
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 64,
+        "margin_top_mobile": 40,
+        "margin_bottom_mobile": 40,
+        "title-top-padding": 0,
+        "title_alignment": "left",
         "carousel-title": "",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
@@ -1524,10 +2168,13 @@
   },
   "order": [
     "main_hero_banner_qcCWtj",
+    "ticker_tape_VcQPBK",
     "multi_functional_container_NewNkt",
+    "multi_functional_container_KEjR43",
     "multi_functional_container_4M7jiW",
     "scroll_model_h4Hqa3",
     "hok_featured_collection_yCrqB9",
+    "multi_functional_container_XaTjix",
     "grid_media_collection_krrKMw",
     "skincare_tabs_YG3gjy",
     "multi_functional_container_n78MM7",
@@ -1538,10 +2185,11 @@
     "multi_functional_container_m9THUq",
     "multi_functional_container_bBUw6a",
     "hok_featured_collection_LaACzh",
-    "multi_functional_container_hzKpcp",
     "hok_featured_collection_qqaaHQ",
+    "multi_functional_container_dHXVHM",
     "multi_functional_container_8Ffmec",
-    "multi_functional_container_KEjR43",
+    "multi_functional_container_iKD6c7",
+    "multi_functional_container_hzKpcp",
     "rich_text_TCqqwJ",
     "17327352487d4c08d1"
   ]

@@ -9,7 +9,7 @@
       <div><strong>Offer ends in:</strong><span id="cart_countdown">00:00:00</span></div>
     </div>
   </div>
-  <div id="cart_reccommended_slider" class="position-relative overflow-hidden">
+  <div id="cart_reccommended_slider" class="position-relative overflow-hidden d-none">
     <div class="swiper-wrapper">
       {% for product in collections['recommended-products'].products limit: 3 %}
         <div class="b-mini_cart-product p-0 swiper-slide" style="border:none !important">
@@ -20,7 +20,7 @@
                 title="{{ product.title | escape }}"
               >
                 <img
-                  loading="lazy"
+                  loading="eager"
                   width="100%"
                   height="100%"
                   class="b-miniproduct-product_image"
@@ -118,7 +118,7 @@
         item(s)
       </div>
       <div class="b-mini_cart-sub_total">
-        Total:
+        Sub Total:
         <strong class="b-mini_cart-sub_total_number">
           {{ cart.total_price | money_with_currency }}
         </strong>
@@ -250,10 +250,10 @@
                         class="b-qty_selector-control m-minus minusBtn"
                         data-index-sub="{{ item.index }}"
                       >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="45" viewBox="0 0 32 45" fill="none">
-                        <rect width="32" height="45" fill="white"/>
-                        <path d="M11.5 22.5H20.5" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="45" viewBox="0 0 32 45" fill="none">
+                          <rect width="32" height="45" fill="white"/>
+                          <path d="M11.5 22.5H20.5" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                       </button>
                       <label class="b-qty_selector-label">
                         <span
@@ -340,20 +340,22 @@
               </div>
             </div>
           </div>
-          <div class="b-cart_totals-row b-cart_totals-estimated_total">
-            <div class="b-cart_totals-estimated_total_title">
-              Discount
-              {% for discount_application in cart.cart_level_discount_applications %}
-                {% comment %}<span style="color:#ee50c3">({{ discount_application.title }})</span> {% endcomment %}
-                <span style="color:#ee50c3">(Festive Discount)</span>
-              {% endfor %}
-            </div>
-            <div class="b-cart_totals-estimated_total_value">
-              <div class="totals__subtotal-value" style="color:#ee50c3">
-                {{ cart.total_discount | money }}
+          <!--
+            <div class="b-cart_totals-row b-cart_totals-estimated_total ">
+              <div class="b-cart_totals-estimated_total_title">
+                Discount
+                {% for discount_application in cart.cart_level_discount_applications %}
+                  {% comment %}<span style="color:#ee50c3">({{ discount_application.title }})</span> {% endcomment %}
+                  <span style="color:#ee50c3">(Festive Discount)</span>
+                {% endfor %}
+              </div>
+              <div class="b-cart_totals-estimated_total_value">
+                <div class="totals__subtotal-value" style="color:#ee50c3">
+                  {{ cart.total_discount | money }}
+                </div>
               </div>
             </div>
-          </div>
+          -->
           {% comment %}
             <div class="b-cart_totals-row m-shipping_cost ">
             <div class="b-cart_totals-title">
@@ -372,59 +374,43 @@
             </div>
           {% endcomment %}
         </div>
-        <div class="b-cart_totals-row b-cart_totals-estimated_total pt-3">
-          <div class="b-cart_totals-estimated_total_title">
-            <strong>Total</strong>
-          </div>
-          <div class="b-cart_totals-estimated_total_value">
-            <span class="totals__subtotal-value">{{ cart.total_price | money }}</span>
-          </div>
+        <div class="b-cart_totals-row b-cart_totals-estimated_total pt-3 text_change">
+          {{ ' Please note: Checkout to see your final total with discounts and offers applied.' }}
         </div>
-        <div id="payment_img">
-          <div id="payment_image_info_1">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="34"
-                height="34"
-                viewBox="0 0 34 34"
-                fill="none"
-              >
-                <path
-                  d="M16.2222 22.94V17.46L11.5556 14.68V20.16L16.2222 22.94ZM17.7778 22.94L22.4444 20.16V14.68L17.7778 17.46V22.94ZM16.2222 24.78L10.7778 21.56C10.5315 21.4133 10.3403 21.22 10.2042 20.98C10.0681 20.74 10 20.4733 10 20.18V13.82C10 13.5267 10.0681 13.26 10.2042 13.02C10.3403 12.78 10.5315 12.5867 10.7778 12.44L16.2222 9.22C16.4685 9.07333 16.7278 9 17 9C17.2722 9 17.5315 9.07333 17.7778 9.22L23.2222 12.44C23.4685 12.5867 23.6597 12.78 23.7958 13.02C23.9319 13.26 24 13.5267 24 13.82V20.18C24 20.4733 23.9319 20.74 23.7958 20.98C23.6597 21.22 23.4685 21.4133 23.2222 21.56L17.7778 24.78C17.5315 24.9267 17.2722 25 17 25C16.7278 25 16.4685 24.9267 16.2222 24.78ZM20.1111 14.22L21.6083 13.34L17 10.6L15.4833 11.5L20.1111 14.22ZM17 16.08L18.5167 15.18L13.9083 12.44L12.3917 13.34L17 16.08Z"
-                  fill="#FF0280"
-                  stroke="white"
-                  stroke-width="0.5" />
-              </svg>
+        <!--
+          <div id="payment_img">
+            <div id="payment_image_info_1">
+              <p class="mb-0">% &nbsp; Save extra 5% off on all prepaid orders</p>
             </div>
-            <p class="mb-0" >Save extra 5% off on all prepaid orders</p>
+
+              <div id="payment_image_info_2">
+                <div class="d-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11"
+                    height="13"
+                    viewBox="0 0 11 13"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.5 12C5.5 12 10 9.8 10 6.5V2.65L5.5 1L1 2.65V6.5C1 9.8 5.5 12 5.5 12Z"
+                      fill="#A5CC9D"
+                      stroke="#388E3C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p class="mb-0">*Offers will be applied at checkout</p>
+              </div>
+
           </div>
-          <div id="payment_image_info_2">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="11"
-                height="13"
-                viewBox="0 0 11 13"
-                fill="none"
-              >
-                <path
-                  d="M5.5 12C5.5 12 10 9.8 10 6.5V2.65L5.5 1L1 2.65V6.5C1 9.8 5.5 12 5.5 12Z"
-                  fill="#A5CC9D"
-                  stroke="#388E3C"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <p class="mb-0">100% Safe & Secure transactions</p>
-          </div>
-        </div>
+        -->
       </div>
     {% else %}
       <div class="section-container banner">
         <div class="header-text text-line-clamp h2">Oops!</div>
         <div class="text text-line-clamp h5">Your bag is empty</div>
-          <button class="b-button_1 rounded-3" onclick="closeSlider()">Shop Now</button>
+        <button class="b-button_1 rounded-3" onclick="closeSlider()">Shop Now</button>
       </div>
       <style>
         .section-container.banner {
@@ -438,71 +424,73 @@
         }
       </style>
     {% endif %}
-    {% comment %} <div id="free-gift-criteria" class="is-gift-criteria-opened d-none">
-      <p class="d-center">
-        <img loading="lazy" src="{{ 'gift_icon.webp' | asset_url }}" width="23" height="23" alt="gift-icon"> 
-        <span>See Free Gifts by Brand </span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
-          <path d="M1 5.5L4.80952 1.5L9 5.5" stroke="white" stroke-width="1.25" stroke-linecap="round"/>
-        </svg>
-      </p>
-    </div> {% endcomment %}
-  </div>
- {% comment %}
-  <div id="available-gift-offers" class="d-none">
-    <span class="b-mini_cart-gift-close is-gift-criteria-opened"></span>
-    <div class="offer-zone d-flex flex-column h-100">
-      <div>
-        <p class="d-center gift-header">
-          <!-- <img loading="lazy" src="{{ 'gift_icon.webp' | asset_url }}" width="23" height="23" alt="gift-icon"> -->
-          <span class="px-2">See Free Gifts by Brand </span>
+    {% comment %}
+      <div id="free-gift-criteria" class="is-gift-criteria-opened d-none">
+        <p class="d-center">
+          <img loading="lazy" src="{{ 'gift_icon.webp' | asset_url }}" width="23" height="23" alt="gift-icon">
+          <span>See Free Gifts by Brand </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
+            <path d="M1 5.5L4.80952 1.5L9 5.5" stroke="white" stroke-width="1.25" stroke-linecap="round"/>
+          </svg>
         </p>
-        <p class="gift-subtext text-center">Gifts will be automatically added to your bag.</p>
       </div>
-      <div id="gift-offer-list" class="overflow-auto">
-        <div class="b-mini_cart-product py-4">
-          <div class="b-miniproduct">
-            <div class="b-miniproduct-image">
-              <a href="{{ shop.url }}" title="Surprise Gift">
-                <img
-                  loading="lazy"
-                  width="100%"
-                  height="100%"
-                  class="b-miniproduct-product_image bg-blur"
-                  src="https://cdn.shopify.com/s/files/1/1743/7443/files/Koric-jar-icon.jpg?v=1731754803"
-                  alt="Surprise Gift"
-                  title="Surprise Gift"
-                >
-              </a>
-            </div>
-            <div class="b-miniproduct-info">
-              <div class="b-miniproduct-title m-0">
-                <div class="b-miniproduct-name free-gift-desc">
-                  <p>Secret treat!</p>
-                  <p>
-                    Visit <a href="{{ shop.url }}" class="text-decoration-underline">Hokmakeup</a> to pick a surprise
-                    gift – because who doesn’t love surprises?
-                  </p>
-                  <p><span class="pink">Eligibility:</span> On order above <strong>₹799</strong></p>
+    {% endcomment %}
+  </div>
+  {% comment %}
+    <div id="available-gift-offers" class="d-none">
+      <span class="b-mini_cart-gift-close is-gift-criteria-opened"></span>
+      <div class="offer-zone d-flex flex-column h-100">
+        <div>
+          <p class="d-center gift-header">
+            <!-- <img loading="lazy" src="{{ 'gift_icon.webp' | asset_url }}" width="23" height="23" alt="gift-icon"> -->
+            <span class="px-2">See Free Gifts by Brand </span>
+          </p>
+          <p class="gift-subtext text-center">Gifts will be automatically added to your bag.</p>
+        </div>
+        <div id="gift-offer-list" class="overflow-auto">
+          <div class="b-mini_cart-product py-4">
+            <div class="b-miniproduct">
+              <div class="b-miniproduct-image">
+                <a href="{{ shop.url }}" title="Surprise Gift">
+                  <img
+                    loading="lazy"
+                    width="100%"
+                    height="100%"
+                    class="b-miniproduct-product_image bg-blur"
+                    src="https://cdn.shopify.com/s/files/1/1743/7443/files/Koric-jar-icon.jpg?v=1731754803"
+                    alt="Surprise Gift"
+                    title="Surprise Gift"
+                  >
+                </a>
+              </div>
+              <div class="b-miniproduct-info">
+                <div class="b-miniproduct-title m-0">
+                  <div class="b-miniproduct-name free-gift-desc">
+                    <p>Secret treat!</p>
+                    <p>
+                      Visit <a href="{{ shop.url }}" class="text-decoration-underline">Hokmakeup</a> to pick a surprise
+                      gift – because who doesn’t love surprises?
+                    </p>
+                    <p><span class="pink">Eligibility:</span> On order above <strong>₹799</strong></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="t_n_c_gifts" class="mt-auto">
-        <p>
-          <strong>Terms of Use :</strong> You may choose between a free gift or a coupon, only one can be applied to
-          your order.
-        </p>
-        <button class="is-gift-criteria-opened">Go Back</button>
+        <div id="t_n_c_gifts" class="mt-auto">
+          <p>
+            <strong>Terms of Use :</strong> You may choose between a free gift or a coupon, only one can be applied to
+            your order.
+          </p>
+          <button class="is-gift-criteria-opened">Go Back</button>
+        </div>
       </div>
     </div>
-  </div>
- {% endcomment %}
+  {% endcomment %}
   <div id="fixed_checkeout">
     <div class="text-center">
-      <p>Shipping calculated at checkout</p>
+      <p>Shipping and Discount will be applied at checkout</p>
     </div>
     <div class="b-mini_cart-bag_btn">
       <form
@@ -524,7 +512,7 @@
           }
         </script>
 
-        {% comment %} 
+        {% comment %}
           <button
             class="b-button_1"
             id="check-Out_Btn"
@@ -532,7 +520,7 @@
             name="checkout">
             Checkout
           </button>
-       {% endcomment %}
+        {% endcomment %}
       </form>
       {% comment %} <a class="b-button_1" href="{{ routes.cart_url }}" title="View your bag"> View your bag </a> {% endcomment %}
     </div>
@@ -662,7 +650,7 @@
 </style>
 <script>
         document.addEventListener("DOMContentLoaded", (event) => {
-                 setInterval(function updateTimer() {
+                  setInterval(function updateTimer() {
                      const now = new Date();
                      // Set target time to 12:00 PM on the same or next day
                      const targetTime = new Date();
@@ -688,6 +676,7 @@
                      // Update the countdown element
                      document.getElementById("cart_countdown").textContent = formattedTime;
                  }, 1000);
+
 
                  const cart_reccommended_slider = new Swiper('#cart_reccommended_slider', {
                      slidesPerView: 1, // Show 1 slides by default
@@ -793,5 +782,4 @@
                      subQty(index, event);
                  });
                  });
-
 </script>

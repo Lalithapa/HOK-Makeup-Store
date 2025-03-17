@@ -1,24 +1,27 @@
-{%- assign section_unique_name = section.id |  remove: '-' |  remove: '_' -%}
 {%- style -%}
-  #shopify-section-{{ section_unique_name }}{
-    background-color:{{ section.settings.bg_color }};
+  #shopify-section-{{ section.id }}{
+    background:linear-gradient({{ section.settings.bg_color }},{{ section.settings.bg_color_second }})
   }
-  .section-{{ section_unique_name }}-margin {
+  .section-{{ section.id }}-margin {
     margin-top: {{ section.settings.margin_top_desktop }}px;
     margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
   }
   {% if section.settings.enableShuffle %}
     @media screen and (min-width:768px){
-      #square-banner-carousel-{{ section_unique_name }} .carousel-wrapper-outer{
+      #square-banner-carousel-{{ section.id }} .carousel-wrapper-outer{
          aspect-ratio: 57 / 22;
       }
-    } 
+    }
   {% endif %}
   @media screen and (max-width: 768px) {
-    .section-{{ section_unique_name }}-margin {
+    .section-{{ section.id }}-margin {
       margin-top: {{ section.settings.margin_top_mobile }}px;
       margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
     }
+  }
+  .carousel-section-title-wrapper p svg{
+    vertical-align: baseline;
+    margin-left: -9px;
   }
 {%- endstyle -%}
 {% liquid
@@ -34,13 +37,12 @@
     assign fetch_priority = 'auto'
   endif
 %}
-<div class="section-{{ section_unique_name }}-margin">
+<div class="section-{{ section.id }}-margin">
   <div
     class="{% if section.settings.showContainer %}{{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if section.settings.addInnerPadding %} spacing_handler{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-    style="background-color:{{ section.settings.bg_color }}"
   >
     {% if section.settings['carousel-title'] != blank %}
-      <div class="carousel-section-title-wrapper">
+      <div class="carousel-section-title-wrapper" style="padding-top:{{ section.settings.title-top-padding }}px">
         <p>
           {{- section.settings['carousel-title'] -}}
           {% if section.settings['carousel-sub-title'] != blank %}
@@ -77,7 +79,7 @@
 
     <div class="carousel-nav-wrapper">
       <div
-        id="square-banner-carousel-{{ section_unique_name }}"
+        id="square-banner-carousel-{{ section.id }}"
         class="carousel-wrapper-outer {% if section.settings.showContainer == "page-width" %}spacing{% endif %} swiper"
       >
         <div class="carousel-wrapper-inner swiper-wrapper">
@@ -96,7 +98,7 @@
                           height: '100%',
                           sizes: sizes,
                           widths: widths,
-                          loading:"lazy",
+                          fetchpriority: fetch_priority,
                           class: 'w-100 desktop_screen'
                       }}
                       {{
@@ -106,7 +108,7 @@
                           height: '100%',
                           sizes: sizes,
                           widths: widths,
-                          loading:"lazy",
+                          fetchpriority: fetch_priority,
                           class: 'w-100 mobile_screen'
                       }}
                     {% else %}
@@ -117,28 +119,48 @@
                           height: '100%',
                           sizes: sizes,
                           widths: widths,
-                          loading:"lazy",
+                          fetchpriority: fetch_priority,
                           class: 'w-100'
                       }}
                     {% endif %}
-                    {% comment %} fetchpriority: fetch_priority, {% endcomment %}
                   {% when 'video-media' %}
-                    {% assign media_desktop = block.settings['banner-video-desktop']   %}
+                    {% assign media_desktop = block.settings['banner-video-desktop'] %}
                     {% if block.settings['banner-video-mobile'] != blank %}
-                      {% assign media_mobile =  block.settings['banner-video-mobile']   %}
-                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
-                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
-                        <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
+                      {% assign media_mobile = block.settings['banner-video-mobile'] %}
+                      {{
+                        media_desktop
+                        | video_tag:
+                          width: '100%',
+                          height: '100%',
+                          class: 'desktop_screen square-banner-media',
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          controls: false
+                      }}
+                      {{
+                        media_mobile
+                        | video_tag:
+                          width: '100%',
+                          height: '100%',
+                          class: 'mobile_screen square-banner-media',
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          controls: false
+                      }}
                     {% else %}
-                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo square-banner-media d-block" autoplay loop muted playsinline>
-                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
+                      {{
+                        media_desktop
+                        | video_tag:
+                          width: '100%',
+                          height: '100%',
+                          class: 'square-banner-media d-block',
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          controls: false
+                      }}
                     {% endif %}
                 {% endcase %}
                 {% if block.settings.shopcatagorytxt != blank %}
@@ -171,10 +193,10 @@
       </div>
       {% if section.settings.showSliderArrow %}
         <div class="arrow_handler">
-          <div id="carousel-prev-{{ section_unique_name }}" class="carousel-btn">
+          <div id="carousel-prev-{{ section.id }}" class="carousel-btn">
             {{ 'arrow-back.svg' | inline_asset_content }}
           </div>
-          <div id="carousel-next-{{ section_unique_name }}" class="carousel-btn">
+          <div id="carousel-next-{{ section.id }}" class="carousel-btn">
             {{ 'arrow-next.svg' | inline_asset_content }}
           </div>
         </div>
@@ -182,72 +204,61 @@
     </div>
   </div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(() => {
-      let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),
-          numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),
-          numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),
-          numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),
-          numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
-
-      {% if section.settings.enableShuffle %}
-        function shuffle(array) {
-          for (let i = array.length - 1; i > 0; i--) {
+<script type="text/javascript">
+  // document.addEventListener('DOMContentLoaded', function () {
+  {% assign section_unique_name = section.id |  remove: '-' |  remove: '_'  %}
+  let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
+  {% if section.settings.enableShuffle %}
+     function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
-          }
         }
-        
-        const swiperWrapper = document.querySelector('#square-banner-carousel-{{ section_unique_name }} .swiper-wrapper');
-        if (swiperWrapper) {
-          const slides = Array.from(swiperWrapper.children);
-          shuffle(slides);
+    };
+    const swiperWrapper = document.querySelector('#square-banner-carousel-{{ section.id }} .swiper-wrapper');
+    const slides = Array.from(swiperWrapper.children);
+    shuffle(slides);
+    swiperWrapper.innerHTML = '';
+    slides.forEach(slide => swiperWrapper.appendChild(slide));
+    {% endif %}
 
-          // Clear existing elements safely
-          while (swiperWrapper.firstChild) {
-            swiperWrapper.removeChild(swiperWrapper.firstChild);
-          }
-
-          slides.forEach(slide => swiperWrapper.appendChild(slide));
-        } else {
-          console.error("Swiper wrapper (Slider) not found!");
-        }
-      {% endif %}
-
-      try {
-        const swiperContainer = document.querySelector('#square-banner-carousel-{{ section_unique_name }}');
-        if (swiperContainer) {
-          // console.log("Swiper initializing on:", swiperContainer);
-          new Swiper(swiperContainer, {
-            spaceBetween: 12,
-            paginationClickable: true,
-            speed: {{ section.settings.slide_speed | remove: 'px' }},
-            slidesPerView: numSlidesSm{{ section_unique_name }},
-            centeredSlides: {{ section.settings.showCenter }},
-            autoHeight: true,
-            freeMode: {{ section.settings.showFreeScroll }},
-            loop: {{ section.settings.loop }},
-            navigation: {
-              prevEl: '#carousel-prev-{{ section_unique_name }}',
-              nextEl: '#carousel-next-{{ section_unique_name }}',
-              disabledClass: 'disabled_swiper_button'
-            },
-            breakpoints: {
-              768: { slidesPerView: numSlidesMd{{ section_unique_name }} },
-              1024: { slidesPerView: numSlidesLg{{ section_unique_name }}, spaceBetween: 20 },
-              1280: { slidesPerView: numSlidesXl{{ section_unique_name }}, spaceBetween: 20 },
-              1536: { slidesPerView: numSlides2xl{{ section_unique_name }}, spaceBetween: 20 },
-            }
-          });
-        } else {
-          console.error("Swiper container not found on iOS!");
-        }
-      } catch (e) {
-        console.error("Swiper Initialization Error:", e);
-      }
-    }, 100); // Small delay to ensure DOM is ready
+  const bannerSlider{{ section_unique_name }} = new Swiper('#square-banner-carousel-{{ section.id }}', {
+    spaceBetween: 12,
+    paginationClickable: true,
+    speed: {{ section.settings.slide_speed |  remove: 'px'  }} ,
+    slidesPerView: numSlidesSm{{ section_unique_name }},
+    centeredSlides: {{ section.settings.showCenter }},
+    autoHeight:true,
+    freeMode: {{ section.settings.showFreeScroll }},
+    loop: {{ section.settings.loop }} ,
+    navigation: {
+      prevEl: '#carousel-prev-{{ section.id }}',
+      nextEl: '#carousel-next-{{ section.id }}',
+      disabledClass: 'disabled_swiper_button'
+    },
+    touchStartForcePreventDefault:true,
+    breakpoints: {
+      768: {
+        slidesPerView: numSlidesMd{{ section_unique_name }}
+      },
+      1024: {
+        slidesPerView: numSlidesLg{{ section_unique_name }},
+        spaceBetween: 20
+      },
+      1280: {
+        slidesPerView: numSlidesXl{{ section_unique_name }},
+        spaceBetween: 20
+      },
+      1536: {
+        slidesPerView: numSlides2xl{{ section_unique_name }},
+        spaceBetween: 20
+      },
+    }
+    // pagination: '.swiper-pagination',
+    // parallax: true,
+    // roundLengths: true,
   });
+  // });
 </script>
 
 {% schema %}
@@ -289,6 +300,12 @@
     {
       "type": "color",
       "id": "bg_color",
+      "label": "Add Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_second",
       "label": "Add Background Color",
       "default": "#fff"
     },
@@ -386,7 +403,28 @@
       "default": 36
     },
     {
-      "type": "text",
+      "type": "range",
+      "id": "title-top-padding",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "title Top padding",
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "html",
       "id": "carousel-title",
       "label": "Carousel Title"
     },

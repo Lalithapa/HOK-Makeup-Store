@@ -140,14 +140,14 @@
         "disabled": false,
         "settings": {}
       },
-      "6615124273980966592": {
-        "type": "shopify:\/\/apps\/chatty-livechat-helpdesk\/blocks\/app-embed\/1c0e135d-e8e1-4fe2-86be-1c36def46675",
-        "disabled": false,
-        "settings": {}
-      },
       "15796953133730294439": {
         "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
         "disabled": false,
+        "settings": {}
+      },
+      "7147999719060634790": {
+        "type": "shopify:\/\/apps\/gsc-countdown-timer\/blocks\/countdown-bar\/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+        "disabled": true,
         "settings": {}
       }
     },

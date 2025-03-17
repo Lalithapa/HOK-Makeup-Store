@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+ {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
+
     <meta charset="utf-8">
     <meta name="google-site-verification" content="TDoXrfR2tc8ptJb5eduGq1vRueRu-47EbZAUmcY1MxQ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +11,7 @@
     <link rel="canonical" href="{{ canonical_url }}">
      {% comment %} Marketing Scripts Starts {% endcomment %}
     <!-- Google Tag Manager -->
-    <script async >
+    <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -18,22 +20,22 @@
     </script>
     <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
-    <script async  src="https://www.googletagmanager.com/gtag/js?id=UA-97440784-1"></script>
-    <script async>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97440784-1"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-97440784-1');
     </script>
     <!-- Clarity Tracking Code for -->
-    <script async type="text/javascript">
+    <script type="text/javascript">
       (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "judk7c1u5s");
     </script>
-    <script async >
+    <script>
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
       {% if customer %}
@@ -79,35 +81,34 @@
     {% endif %}
 
     {% render 'meta-tags', page_description: page_description, page_title: page_title  %}
-    <script async>
-      window.history.scrollRestoration = 'manual';
-    </script>
-    <script async src="{{ 'jquery.js' | asset_url }}"></script>
-    <script async src="{{ 'swiper.js' | asset_url }}" ></script>
-    {% comment %} 
-      <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-      <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script> 
-    {% endcomment %}
-    <script src="{{ 'global.js' | asset_url }}" defer></script>
-    <script src="{{ 'details-disclosure.js' | asset_url }}" defer></script>
-    <script src="{{ 'details-modal.js' | asset_url }}" defer></script>
-    <script src="{{ 'search-form.js' | asset_url }}" defer></script>
-    <script src="{{ 'application.js' | asset_url }}" defer></script>
-    <script src="{{ 'quick_view.js' | asset_url }}" defer></script>
-    <script src="{{ 'axios.js' | asset_url }}" defer></script>
+
+    <script src="{{ 'jquery.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'application.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
+    <script src="{{ 'quick_view.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'axios.js' | asset_url }}" defer="defer"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     {%- if settings.animations_reveal_on_scroll -%}
-      <script src="{{ 'animations.js' | asset_url }}" defer></script>
+      <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    {% comment %} <script  defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> 
     {% if request.path == '/pages/jessup-launch' %}
       <script
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"
         defer
       ></script>
-    {% endif %} {% endcomment %}
+    {% endif %}
+
     {{ content_for_header }}
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
@@ -134,6 +135,7 @@
         {% else %}
           --gradient-background: {{ scheme.settings.background }};
         {% endif %}
+
         {% liquid
           assign background_color = scheme.settings.background
           assign background_color_brightness = background_color | color_brightness
@@ -379,7 +381,7 @@
     {% endif %} 
 
     {%- if settings.cart_type == 'drawer' -%}
-      {% comment %}  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}  {% endcomment %}
+      {% comment %} {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
       {{ 'component-cart.css' | asset_url | stylesheet_tag }}
       {{ 'component-totals.css' | asset_url | stylesheet_tag }}
       {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -415,6 +417,7 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
+       window.history.scrollRestoration = 'manual';
     </script> 
   </head>
 
@@ -453,10 +456,36 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-
-    <script async>
-    document.addEventListener('DOMContentLoaded', function () {
-         const videos = document.querySelectorAll("video.lazyvideo");
+    <!-- Required to show all the recommended products on Foundation Friday -->
+    <script defer="defer">
+     document.addEventListener("DOMContentLoaded", function () {
+          // Check if the URL contains "/apps/gbq/quiz/"
+          if (window.location.pathname.includes("/apps/gbq/quiz/")) {
+              const observer = new MutationObserver((mutations) => {
+                  mutations.forEach((mutation) => {
+                      // Check if the target node contains the required class
+                      mutation.addedNodes.forEach((node) => {
+                          if (node.nodeType === 1 && node.classList.contains("gbqResultsPageWrapper")) {
+                              // Modify the first image's display property
+                              document.querySelectorAll(".gbqProductItem .gbqProductImageContainer img:first-child")
+                                  .forEach(img => img.style.display = "block");
+      
+                              // Stop observing after finding the element
+                              observer.disconnect();
+                          }
+                      });
+                  });
+              });
+      
+              // Observe only the parent node where ".gbqResultsPageWrapper" is expected to be added
+              const parentNode = document.body; // Adjust this if you know the exact parent node
+              observer.observe(parentNode, { childList: true, subtree: true });
+          }
+      });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll("video.lazyvideo");
   
       const loadVideo = (video) => {
         const source = video.querySelector("source");
@@ -526,7 +555,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
     {% comment %} {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%} {% endcomment %}

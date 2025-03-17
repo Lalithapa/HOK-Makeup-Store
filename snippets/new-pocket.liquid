@@ -72,7 +72,7 @@
             alt="{{ product.images[0].alt }}"
             width="310"
             height="310"
-            loading="lazy"
+            fetchpriority="{{ fetch_priority }}"
           >
           <img
             class="img-fluid img_url_2"
@@ -80,7 +80,7 @@
             alt="{{ product.images[1].alt }}"
             width="310"
             height="310"
-            loading="lazy"
+            fetchpriority="{{ fetch_priority }}"
           >
         {% else %}
           <img
@@ -89,11 +89,10 @@
             alt="{{ product.title }}"
             title="{{ product.title }}"
             width="310"
-            loading="lazy"
+            fetchpriority="{{ fetch_priority }}"
             height="310"
           >
         {% endif %}
-        {% comment %} fetchpriority="{{ fetch_priority }}" {% endcomment %}
       </a>
     </div>
     {% comment %} PDP Image Ends {% endcomment %}
@@ -210,7 +209,7 @@
         {% if product.variants.size > 3 %}
             {% liquid
             assign product_count = product.variants.size | minus: 3 %}
-            <label for="swatch-{{ section.id |  remove: '-' |  remove: '_' }}-{{ variant.id }}{{ product.handle | append: value | modulo: 100 | plus: 1 }}" class="circular_swatch circular_swatch_additional_count d-center">
+            <label class="circular_swatch circular_swatch_additional_count d-center">
                <span>{{ product_count | t |  prepend: '+'  }}</span>
             </label>
         {% endif %}

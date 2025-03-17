@@ -167,8 +167,8 @@
                        >
                      {% else %}
                        {% assign media_video =  block.settings['banner-video'] %}
-                         <video poster="{{ media_video.preview_image.src | image_url }}" class="lazyvideo d-block square-banner-media" autoplay loop muted playsinline>
-                          <source data-src="{{ media_video.sources[1].url }}" type="video/mp4">
+                         <video poster="{{ media_video.preview_image.src | image_url }}" class="d-block square-banner-media" autoplay loop muted playsinline>
+                          <source src="{{ media_video.sources[1].url }}" data-src="{{ media_video.sources[1].url }}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>
                      {% endif %}
@@ -216,45 +216,44 @@
  
  document.addEventListener('DOMContentLoaded', function () {
    var numSlidesSm = parseFloat('{{ num_slides_sm }}'),numSlidesMd = parseFloat('{{ num_slides_md }}'),numSlidesLg = parseFloat('{{ num_slides_lg }}'),numSlidesXl = parseFloat('{{ num_slides_xl }}'),numSlides2xl = parseFloat('{{ num_slides_2xl }}');
-    setTimeout(() => {
-      const bannerSlider{{ section.id |  remove: '-' |  remove: '_'   }} = new Swiper('#square-banner-carousel-{{ section.id }}', {
-        spaceBetween: 42,
-        paginationClickable: true,
-        speed: {{ section.settings.slide_speed |  remove: 'px'  }} ,
-        slidesPerView: numSlidesSm,
-        centeredSlides: {{ section.settings.showCenter }},
-        freeMode: {{ section.settings.showFreeScroll }},
-        loop: {{ section.settings.loop }} ,
-        scrollbar: {
-            el: ".swiper-scrollbar"
-          },
-        navigation: {
-          prevEl: '#carousel-prev-{{ section.id }}',
-          nextEl: '#carousel-next-{{ section.id }}',
-        },
-          pagination: {
-            el: "#carousel-pagination-wrapper-{{ section.id }}"
-        },
-        touchStartForcePreventDefault:true,
-        breakpoints: {
-          768: {
-            slidesPerView: numSlidesMd,
-          },
-          1024: {
-            slidesPerView: numSlidesLg,
-            spaceBetween:16,
-          },
-          1280: {
-            slidesPerView: numSlidesXl,
-            spaceBetween:16,
-          },
-          1536: {
-            slidesPerView: numSlides2xl,
-            spaceBetween:16
-          },
-        }
-      }); 
-     }, 500);
+
+   const bannerSlider{{ section.id |  remove: '-' |  remove: '_'   }} = new Swiper('#square-banner-carousel-{{ section.id }}', {
+     spaceBetween: 42,
+     paginationClickable: true,
+     speed: {{ section.settings.slide_speed |  remove: 'px'  }} ,
+     slidesPerView: numSlidesSm,
+     centeredSlides: {{ section.settings.showCenter }},
+     freeMode: {{ section.settings.showFreeScroll }},
+     loop: {{ section.settings.loop }} ,
+     scrollbar: {
+         el: ".swiper-scrollbar"
+       },
+     navigation: {
+       prevEl: '#carousel-prev-{{ section.id }}',
+       nextEl: '#carousel-next-{{ section.id }}',
+     },
+      pagination: {
+         el: "#carousel-pagination-wrapper-{{ section.id }}"
+     },
+     touchStartForcePreventDefault:true,
+     breakpoints: {
+       768: {
+         slidesPerView: numSlidesMd,
+       },
+       1024: {
+         slidesPerView: numSlidesLg,
+         spaceBetween:16,
+       },
+       1280: {
+         slidesPerView: numSlidesXl,
+         spaceBetween:16,
+       },
+       1536: {
+         slidesPerView: numSlides2xl,
+         spaceBetween:16
+       },
+     }
+   });
 });
  </script>
  

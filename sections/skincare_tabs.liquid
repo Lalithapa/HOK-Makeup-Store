@@ -146,6 +146,7 @@
 .skin-tab-panel.active {
     display: flex;
     gap: 20px;
+    scroll-snap-type: x mandatory;
 }
 .tab-skincare-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
@@ -164,6 +165,7 @@
     flex: 1;
     min-width: 320px;
     max-width: 320px;
+    scroll-snap-align: center;
 }
 .skincare-arrow_handler {
     display: none !important;
@@ -333,8 +335,8 @@
       </div>
       <div class="col-12 col-md-9 z--1">
         {% assign media_desktop =  section.settings['banner-video-desktop']  %}
-        <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo d-block square-banner-media" autoplay loop muted playsinline>
-          <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+        <video poster="{{ media_desktop.preview_image.src | image_url }}" class="d-block square-banner-media" autoplay loop muted playsinline>
+          <source src="{{ media_desktop.sources[1].url }}" data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -725,8 +727,6 @@
           tabContent.classList.add('active');
         });
       });
-      setTimeout(() => {
-     
       let main_tab_1 = new Swiper("#main-tab-1", {
         direction: "horizontal",
         slidesPerView: 3.8,
@@ -780,7 +780,6 @@
           }
         }
       });
-      }, 500);
     });
   </script>
   {% schema %}

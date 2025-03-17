@@ -1,62 +1,62 @@
 {%- style -%}
-.section-{{ section.id }}-margin {
-margin-top: {{ section.settings.margin_top_desktop }}px;
-margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
-}
-.new-slider-title-wrapper{
-margin-bottom:clamp(24px, 2vw, 40px);    
-}
-.new-slider-container {
-display: grid;
-grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
-}
-.video-hero-container { grid-area: 1 / 1 / 3 / 3; }
-.image-container-for-collection {
-grid-area: 1 / 3 / 2 / 5;
-position:relative;
-}
-.image-sec-container-for-collection { grid-area: 2 / 3 / 3 / 5; }
-.banner-full{
-  display: block;
-  position: relative;
-    height: 100%;
-    width: 100%;
-}
-.banner__href{
-    font-family:var(--family-medium);
-    font-size: clamp(14px, 2vw, 18px);
-    z-index: 1;
-    color: #fff;
-    white-space: nowrap;
-    line-height: 17px;
-    position: absolute;
-    left: 2rem;
-    bottom: 2rem;
-}
+  .section-{{ section.id }}-margin {
+  margin-top: {{ section.settings.margin_top_desktop }}px;
+  margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+  }
+  .new-slider-title-wrapper{
+  margin-bottom:clamp(24px, 2vw, 40px);
+  }
+  .new-slider-container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  }
+  .video-hero-container { grid-area: 1 / 1 / 3 / 3; }
+  .image-container-for-collection {
+  grid-area: 1 / 3 / 2 / 5;
+  position:relative;
+  }
+  .image-sec-container-for-collection { grid-area: 2 / 3 / 3 / 5; }
+  .banner-full{
+    display: block;
+    position: relative;
+      height: 100%;
+      width: 100%;
+  }
+  .banner__href{
+      font-family:var(--family-medium);
+      font-size: clamp(14px, 2vw, 18px);
+      z-index: 1;
+      color: #fff;
+      white-space: nowrap;
+      line-height: 17px;
+      position: absolute;
+      left: 2rem;
+      bottom: 2rem;
+  }
 
-@media screen and (max-width: 768px) {
-.section-{{ section.id }}-margin {
-margin-top: {{ section.settings.margin_top_mobile }}px;
-margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
-}
+  @media screen and (max-width: 768px) {
+  .section-{{ section.id }}-margin {
+  margin-top: {{ section.settings.margin_top_mobile }}px;
+  margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+  }
 
-.new-slider-container {
-  grid-template-columns: repeat(2, 1fr);
-grid-template-rows: 1fr;
-grid-column-gap: 16px;
-grid-row-gap: 16px;
-}
-.video-hero-container { grid-area: 1 / 1 / 2 / 3; }
-.image-container-for-collection { grid-area: 2 / 1 / 3 / 2; }
-.image-sec-container-for-collection { grid-area: 2 / 2 / 3 / 3; }
-.banner__href{
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-}
+  .new-slider-container {
+    grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  }
+  .video-hero-container { grid-area: 1 / 1 / 2 / 3; }
+  .image-container-for-collection { grid-area: 2 / 1 / 3 / 2; }
+  .image-sec-container-for-collection { grid-area: 2 / 2 / 3 / 3; }
+  .banner__href{
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  }
 {%- endstyle -%}
 {% capture white_arrow %} 
   <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
@@ -67,9 +67,9 @@ grid-row-gap: 16px;
   <div class="container new-slider-wrapper new-slider-gap-fix scroll-trigger animate--fade-in">
     <div class="new-slider-title-wrapper">
       {% if section.settings.title != blank %}
-      <div class="carousel-section-title-wrapper">
-        <p>{{- section.settings.title -}}</p>
-      </div>
+        <div class="carousel-section-title-wrapper lll">
+          <p>{{- section.settings.title -}}</p>
+        </div>
       {% endif %}
     </div>
     <div class="new-slider-content">
@@ -77,34 +77,77 @@ grid-row-gap: 16px;
         <div class="video-hero-container">
           <a href="{{ section.settings.coll_link_1 }}" class="banner-full">
             {% assign media_poster = section.settings.cont_1_img.preview_image.src | image_url %}
-            <video poster="{{ media_poster }}" class="lazyvideo w-100 img-fluid d-block" autoplay loop muted playsinline>
-              <source data-src="{{ section.settings.cont_1_img.sources[1].url }}" type="video/mp4">
+            <video
+              poster="{{ media_poster }}"
+              class="w-100 img-fluid d-block"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <source
+                src="{{ section.settings.cont_1_img.sources[1].url }}"
+                data-src="{{ section.settings.cont_1_img.sources[1].url }}"
+                type="video/mp4"
+              >
               Your browser does not support the video tag.
             </video>
           </a>
         </div>
-        <div class="image-container-for-collection"><a class="banner-full"
-            href="{{ section.settings.coll_link_2 }}">
+        <div class="image-container-for-collection">
+          <a
+            class="banner-full"
+            href="{{ section.settings.coll_link_2 }}"
+          >
             <div class="banner__href">
               {{ section.settings.content_2 }}
               {{ white_arrow }}
             </div>
-            <img width="100%" height="100%" src="{{ section.settings.cont_2_img | image_url }}"
-              alt="{{ section.settings.content_2 | escape }}" class="img-fluid mobile_screen h-100" loading="lazy">
-            <img width="100%" height="100%" src="{{ section.settings.cont_2_img_desktop | image_url }}"
-              alt="{{ section.settings.content_2 | escape }}" class="img-fluid desktop_screen h-100" loading="lazy">
-          </a> </div>
-        <div class="image-sec-container-for-collection"> <a class="banner-full"
-            href="{{ section.settings.coll_link_3 }}">
+            <img
+              width="100%"
+              height="100%"
+              src="{{ section.settings.cont_2_img | image_url }}"
+              alt="{{ section.settings.content_2 | escape }}"
+              class="img-fluid mobile_screen h-100"
+              loading="lazy"
+            >
+            <img
+              width="100%"
+              height="100%"
+              src="{{ section.settings.cont_2_img_desktop | image_url }}"
+              alt="{{ section.settings.content_2 | escape }}"
+              class="img-fluid desktop_screen h-100"
+              loading="lazy"
+            >
+          </a>
+        </div>
+        <div class="image-sec-container-for-collection">
+          <a
+            class="banner-full"
+            href="{{ section.settings.coll_link_3 }}"
+          >
             <div class="banner__href">
               {{ section.settings.content_3 }}
               {{ white_arrow }}
             </div>
-            <img width="100%" height="100%" src="{{ section.settings.cont_3_img | image_url }}"
-              alt="{{ section.settings.content_3 | escape }}" class="img-fluid mobile_screen h-100" loading="lazy">
-            <img width="100%" height="100%" src="{{ section.settings.cont_3_img_desktop | image_url }}"
-              alt="{{ section.settings.content_3 | escape }}" class="img-fluid desktop_screen h-100" loading="lazy">
-          </a></div>
+            <img
+              width="100%"
+              height="100%"
+              src="{{ section.settings.cont_3_img | image_url }}"
+              alt="{{ section.settings.content_3 | escape }}"
+              class="img-fluid mobile_screen h-100"
+              loading="lazy"
+            >
+            <img
+              width="100%"
+              height="100%"
+              src="{{ section.settings.cont_3_img_desktop | image_url }}"
+              alt="{{ section.settings.content_3 | escape }}"
+              class="img-fluid desktop_screen h-100"
+              loading="lazy"
+            >
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -220,7 +263,7 @@ grid-row-gap: 16px;
 "label": "Add Your 2nd Image Desktop"
 },
 {
-"type": "text",
+"type": "html",
 "id": "content_3",
 "label": "Add Your Text"
 },

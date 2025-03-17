@@ -292,11 +292,11 @@
                       {% assign media_desktop = block.settings['banner-video-desktop'] %}
                       {% assign media_mobile =  block.settings['banner-video-mobile'] %}
                      
-                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
+                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" data-banner="promo{{ forloop.index }}" autoplay loop muted playsinline>
                         <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
-                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
+                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" data-banner="promo{{ forloop.index }}" autoplay loop muted playsinline>
                         <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>

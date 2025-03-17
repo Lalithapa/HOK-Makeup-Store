@@ -2,20 +2,39 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "1740743233fd94300e": {
+      "type": "apps",
+      "blocks": {
+        "gsc_countdown_timer_countdown_ki4nJE": {
+          "type": "shopify:\/\/apps\/gsc-countdown-timer\/blocks\/countdown\/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "settings": {
+            "widget_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "gsc_countdown_timer_countdown_ki4nJE"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
     "announcement_bar_xqp6tT": {
       "type": "announcement-bar",
       "blocks": {
         "announcement_cctUjt": {
           "type": "announcement",
           "settings": {
-            "text": "The Add To Heart Sale is Live: Up To 60% OFF + Surprise Gifts",
-            "link": "shopify:\/\/pages\/valentines-day"
+            "text": "Grab Up To 30% + Extra 15% OFF on orders above ₹1999 on your favorite brands.",
+            "link": "shopify:\/\/collections\/new-arrivals"
           }
         }
       },
       "block_order": [
         "announcement_cctUjt"
       ],
+      "disabled": true,
       "custom_css": [
         "p.announcement-bar__message.h5 {font-size: clamp(12px, 2vw, 14px); font-family: var(--family-regular); margin: 0;}"
       ],
@@ -27,6 +46,13 @@
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
+      }
+    },
+    "updated_announcement_bar_NFDExf": {
+      "type": "updated-announcement-bar",
+      "settings": {
+        "text": "<p>End Of Season Sale is Live: Up to 50% + Surprise Gifts<\/p>",
+        "link": "shopify:\/\/collections\/makeup"
       }
     },
     "hok_announcement_bar_hJBdUQ": {
@@ -157,7 +183,9 @@
     }
   },
   "order": [
+    "1740743233fd94300e",
     "announcement_bar_xqp6tT",
+    "updated_announcement_bar_NFDExf",
     "hok_announcement_bar_hJBdUQ",
     "header",
     "new_header_pqxJqQ",

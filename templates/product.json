@@ -23,13 +23,20 @@
             "icon_color": "#000000",
             "background_color": "#f8f8f8"
           }
+        },
+        "gsc_countdown_timer_countdown_6cnHP8": {
+          "type": "shopify:\/\/apps\/gsc-countdown-timer\/blocks\/countdown\/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+          "settings": {
+            "widget_id": "GSC-SMALL-xKCjCwLsdvXl"
+          }
         }
       },
       "block_order": [
         "title_dW7gcz",
         "growave_loyalty_wishlist_block_product_review_avg_profile_AQ98iM",
         "price_UMAJAf",
-        "growave_loyalty_wishlist_block_product_earn_points_widget_UKDj7i"
+        "growave_loyalty_wishlist_block_product_earn_points_widget_UKDj7i",
+        "gsc_countdown_timer_countdown_6cnHP8"
       ],
       "settings": {}
     },
