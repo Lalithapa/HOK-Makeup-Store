@@ -72,10 +72,10 @@
 .reward-banner-content {
   padding: 88px !important;
   gap: 16px;
-  background: #fff5f3;
+  background: #FFF5F3;
 }
 .reward-banner-title {
-  margin-bottom: 18px;
+  position: relative;
   color: #333;
   font-size: 43px;
   line-height: normal;
@@ -88,20 +88,20 @@
   width: max-content;
 }
 .reward-banner-title-svg {
-  position: relative;
-  top: -24px;
-  left: -16px;
+  position: absolute;
+  top: -28px;
+  right: unset;
 }
 .reward-banner-sub-title {
   color: #968181;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
-  margin-bottom: 0;
+  margin: 2rem 0;
 }
 .reward-banner-button-container,
 .ways-to-earn-points-list-item {
-  gap: 16px;
+  gap: 8px;
 }
 .reward-banner-button-container > a,
 .reward-banner-button-container > button {
@@ -400,7 +400,7 @@
   padding-top: 60px;
 }
 .way-to-earn-points-details {
-  background-color: #fafafa;
+  background: #fafafa;
   padding: 24px 85px;
   height: 100%;
 }
@@ -460,6 +460,7 @@
 }
 .level-fun-brand-offers-header {
   margin: 24px 0;
+  font-size: 13px;
 }
 .level-fun-brand-offers-container {
   list-style: none;
@@ -578,7 +579,7 @@ p.level-fun-brand-most-popular {
 @media only screen and (max-width: 992px) {
   .how-it-works-section,
   .reward-section {
-    margin: 56px auto !important;
+    margin: 40px auto !important;
   }
   .reward-section-title {
     font-size: 20px;
@@ -599,17 +600,28 @@ p.level-fun-brand-most-popular {
   }
   .way-to-earn-points-gif {
     margin-left: 0;
+    max-width: 30rem !important;
+    width: 100%;
   }
   .way-to-earn-points-gif-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #fff;
+  }
+  .ways-to-earn-points-list-item {
+      gap: 8px;
   }
 }
 @media only screen and (max-width: 768px) {
   .reward-banner-content {
     padding: 40px;
+    background: #fff;
   }
+  .reward-banner-sub-title {
+    margin: 2rem 0 3rem;
+  }
+
   .use-point-container {
     display: flex;
     align-items: center;
@@ -635,6 +647,9 @@ p.level-fun-brand-most-popular {
     font-size: 16px;
     padding: 10px 0;
   }
+  .way-to-earn-points-details {
+    background: #fff;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .use-point-img-container {
@@ -655,7 +670,12 @@ p.level-fun-brand-most-popular {
     font-size: 14px;
     line-height: 20px;
   }
-  .reward-banner-title,
+  .reward-banner-title{
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+  }
   .reward-section-title {
     font-size: 20px;
     line-height: 25px;
@@ -667,11 +687,12 @@ p.level-fun-brand-most-popular {
     height: 420px;
   }
   .reward-banner-content {
-    padding: 20px !important;
+    padding: 40px 20px 20px !important;
   }
   .reward-banner-sub-title {
     font-size: 13px;
     line-height: 20px;
+    text-align: center;
   }
   .reward-section {
     margin: 40px auto;

@@ -338,13 +338,13 @@
           display:flex;
         }
         {% if template.suffix == "makeup-page" %}
-          main#MainContent {
+          /* main#MainContent {
               background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Background_Tile.jpg);
               background-repeat: repeat;
               background-position: top;
               background-size: contain;
               overflow-x: hidden;
-          }
+          } */
         {% endif %}
       {% if template.suffix == "valentine-theme" %}
           main#MainContent {
@@ -458,31 +458,29 @@
     </ul>
     <!-- Required to show all the recommended products on Foundation Friday -->
     <script defer="defer">
-     document.addEventListener("DOMContentLoaded", function () {
-          // Check if the URL contains "/apps/gbq/quiz/"
-          if (window.location.pathname.includes("/apps/gbq/quiz/")) {
-              const observer = new MutationObserver((mutations) => {
-                  mutations.forEach((mutation) => {
-                      // Check if the target node contains the required class
-                      mutation.addedNodes.forEach((node) => {
-                          if (node.nodeType === 1 && node.classList.contains("gbqResultsPageWrapper")) {
-                              // Modify the first image's display property
-                              document.querySelectorAll(".gbqProductItem .gbqProductImageContainer img:first-child")
-                                  .forEach(img => img.style.display = "block");
-      
-                              // Stop observing after finding the element
-                              observer.disconnect();
-                          }
-                      });
-                  });
-              });
-      
-              // Observe only the parent node where ".gbqResultsPageWrapper" is expected to be added
-              const parentNode = document.body; // Adjust this if you know the exact parent node
-              observer.observe(parentNode, { childList: true, subtree: true });
-          }
-      });
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.pathname.includes("/apps/gbq/quiz/")) {
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === 1 && node.classList.contains("gbqResultsPageWrapper")) {
+                            // Show the first image
+                            document.querySelectorAll(".gbqProductItem .gbqProductImageContainer img:first-child")
+                                .forEach(img => img.style.display = "block");
+
+                            // Stop observing after target found
+                            observer.disconnect();
+                        }
+                    });
+                });
+            });
+
+            const parentNode = document.body;
+            observer.observe(parentNode, { childList: true, subtree: true });
+        }
+    });
     </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
     const videos = document.querySelectorAll("video.lazyvideo");
