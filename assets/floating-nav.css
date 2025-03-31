@@ -92,9 +92,19 @@
 .nav-item.active svg {
     transform: scale(0.6);
 }
+.nav-item.active .icon.nav-hok-reward svg {
+    transform: scale(0.9);
+}
 .nav-item.active svg.icon-logo path {
     fill: #fff;
 }
+.nav-item.active .icon.nav-hok-reward svg.icon-logo path {
+    fill: unset;
+}
+
 .nav-item.active svg path {
     stroke: #fff;
+}
+.nav-item.active .icon.nav-hok-reward svg path {
+    stroke: unset;
 }

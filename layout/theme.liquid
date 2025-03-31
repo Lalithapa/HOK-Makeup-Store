@@ -93,12 +93,10 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'axios.js' | asset_url }}" defer="defer"></script>
-
-     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    {% comment %} 
     {% if request.path == '/pages/jessup-launch' %}
       <script
         type="module"
@@ -106,6 +104,7 @@
         defer
       ></script>
     {% endif %}
+    {% endcomment %}
 
     {{ content_for_header }}
 
@@ -441,7 +440,6 @@
     {% comment %} {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%} {% endcomment %}
-
     <div class="bg_dark" id="bg_dark" onclick="closeSlider()"></div>
      
     {% sections 'header-group' %}
@@ -449,6 +447,70 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+    {% if template == "page.makeup-page" or template == "page.skincare-page" %} 
+      <div class="splash"> 
+        <div class="splash-img">
+            <img loading="eager" fetchpriority="high" src="https://cdn.shopify.com/s/files/1/1743/7443/files/Comp_1_1.gif?v=1686723543" alt="makeup-splash" width="100%" height="100%"/>
+        </div>
+      </div>
+      <style>
+        .splash {
+          cursor: pointer;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          height: 100vh;
+          width: 100vw;
+          transform: translate(-50%, -50%);
+          background-color: rgb(255, 255, 255);
+          z-index: 9999;
+          opacity: 1;  /* Fully visible at the start */
+          visibility: visible;  /* Ensures the element is visible */
+          transition: opacity 600ms ease-in-out, visibility 0s 600ms;  /* Opacity transition and delayed visibility transition */
+        }
+  
+        .splash-hidden {
+          opacity: 0;  /* Fade the element out */
+          visibility: hidden;  /* Make it invisible after the fade out */
+          transition: opacity 600ms ease-in-out, visibility 0s 600ms;  /* Matching transition timing */
+        }
+  
+        .splash-img {
+          height: 100%;
+          color: rgb(0, 0, 0);
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* animation: zoom-in-zoom-out 2s ease infinite; */
+        }
+        .splash-img img {
+          object-fit: cover;
+        }
+  
+        @keyframes zoom-in-zoom-out {
+          0% {
+            transform: scale(100%);
+          }
+          50% {
+            transform: scale(120%);
+          }
+          100% {
+            transform: scale(100%);
+          }
+        }
+      </style>
+      <script>
+          // Wait for the page to load completely
+          document.addEventListener("DOMContentLoaded", (event) => {
+            // Set a timeout to add the "hidden" class after 2 seconds
+            setTimeout(function() {
+              const splashElement = document.querySelector('.splash');
+              splashElement.classList.add('splash-hidden');
+            }, 1000); 
+          });
+        </script> 
+     {% endif %}
 
     {% sections 'footer-group' %}
     {% render 'toaster' %}

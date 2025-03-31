@@ -356,7 +356,7 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
   list-style: none;
   padding: 10px 0;
 }
@@ -516,10 +516,11 @@ p.level-fun-brand-most-popular {
 }
 .use-point-rule-container {
   flex: 1;
-  padding: 40px;
+  padding: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
 }
 .use-point-rule-details {
   text-align: center;

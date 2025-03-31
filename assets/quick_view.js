@@ -63,7 +63,7 @@ $(document).ready(function () {
                         autoplay: true,
                         loop: true,
                         muted:true, 
-                        controls:true,
+                        playsinline:true,
                         mediaId: media.id,
                         position: media.position,
                         class: "img-fluid asp34 quickMedia",
