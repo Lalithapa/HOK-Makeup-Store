@@ -49,6 +49,9 @@
                     </svg>
                 {% endif %}
               {% endfor %}
+              {% if product.metafields.custom.isnonveg.value %}
+                <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/unnamed.png?v=1743678709" alt="non veg" width="25" height="25">
+               {% endif %}
             </div>
         {% endunless %}
          <div
@@ -132,7 +135,7 @@
     {% endunless %}
       <p class="b-product_promo_vendor-name">
         <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}">
-          {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2'  -}}
+          {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: '-pd-bundle' -}}
         </a>
         <a class="b-product_promo_tile-name_link" href="{{- product.url -}}">
           {{- product.title | remove: product.vendor  -}}

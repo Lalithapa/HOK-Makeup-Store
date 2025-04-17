@@ -67,6 +67,10 @@
                       loading="eager"
                     >
                   {% endif %}
+                  <div class="card-bottom">
+                    <span class="price-text">{{ block.settings.banner-image-mobile }}</span>
+                    <span class="arrow">&#8594;</span>
+                  </div>
                 </a>
               </div>
             {% endfor %}
@@ -269,14 +273,17 @@
           {
             "type": "image_picker",
             "id": "banner-image-desktop",
-            "label": "Banner Image Desktop",
-            "info": "Default - aspect-ratio 1:1, 1080x1080 , Hero Banner- 1950x735px"
+            "label": "Banner Image Desktop"
           },
           {
             "type": "image_picker",
             "id": "banner-image-mobile",
-            "label": "Banner Image Mobile",
-            "info": "If Empty , desktop image will be seen on Mobile - aspect-ratio 1:1, 1080x1080 "
+            "label": "Banner Image Mobile"
+          },
+          {
+            "type": "text",
+            "id": "banner-text",
+            "label": "Card Text"
           }
         ]
       }

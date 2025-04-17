@@ -2,7 +2,6 @@
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
  {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
-
     <meta charset="utf-8">
     <meta name="google-site-verification" content="TDoXrfR2tc8ptJb5eduGq1vRueRu-47EbZAUmcY1MxQ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -320,11 +319,12 @@
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        letter-spacing: 0.06rem;
+        /* letter-spacing: 0.06rem; */
+        letter-spacing: 0;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
-        font-family: var(--font-body-family);
+        font-family: var(--family-regular);
         font-style: var(--font-body-style);
-        font-weight: var(--font-body-weight);
+        /* font-weight: var(--font-body-weight); */
       }
       a{
         text-decoration:none;
@@ -336,20 +336,17 @@
         .mobile_screen{
           display:flex;
         }
-        {% if template.suffix == "makeup-page" %}
-          /* main#MainContent {
-              background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Background_Tile.jpg);
-              background-repeat: repeat;
-              background-position: top;
-              background-size: contain;
-              overflow-x: hidden;
-          } */
-        {% endif %}
-      {% if template.suffix == "valentine-theme" %}
-          main#MainContent {
-              background-color: #f6e6e9;
-          }
-        {% endif %}
+        {%  comment  %}
+          {% if template.suffix == "makeup-page" %}
+            main#MainContent {
+                background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Background_Tile.jpg);
+                background-repeat: repeat;
+                background-position: top;
+                background-size: contain;
+                overflow-x: hidden;
+            }
+          {% endif %}
+        {% endcomment %} 
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
