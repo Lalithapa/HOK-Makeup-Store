@@ -38,7 +38,7 @@
     height: 100%;
     object-fit: cover;
     }
-    .card-overlay {
+    .grid-container-card-overlay {
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -56,7 +56,7 @@
     align-items: center;
     padding: 10px;
     font-size: 24px;
-    font-family: var(--family-heavy);
+    font-family: var(--family-bold);
     }
 
     .grid-card-arrow {
@@ -88,7 +88,7 @@
     .grid-card-arrow svg{
       width: 9px;
     }
-    .card-overlay {
+    .grid-container-card-overlay {
       font-size: 12px;
       padding: 5px 10px;
     }
@@ -115,7 +115,7 @@
                 loading="eager"
             >
             {% endif %}
-            <div class="card-overlay">{{ block.settings.overlay-text }}</div>
+            <div class="grid-container-card-overlay">{{ block.settings.overlay-text }}</div>
         </div>
         <div class="grid-card-bottom">
         <span>{{ block.settings.banner-text }}</span>

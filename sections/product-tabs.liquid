@@ -4,8 +4,8 @@
   margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
   }
   .product-tab-section {
-  padding: 40px 20px;
-  margin: auto;
+    padding: 40px 20px;
+    margin: auto;
   }
 
   .product-tab-header {
@@ -44,27 +44,27 @@
   bottom: -4px;
   }
 
-  .product-tab-grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 310px; /* Fixed width for each column */
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 10px 0 24px;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  .product-tab-grid-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 320px; /* Fixed width for each column */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0 24px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
-  .product-tab-grid::-webkit-scrollbar{
+  .product-tab-grid-container::-webkit-scrollbar{
   height: 2px;
   background: #D9D9D9;
   }
-  .product-tab-grid::-webkit-scrollbar-thumb {
+  .product-tab-grid-container::-webkit-scrollbar-thumb {
   background: #181818;
   }
 
-  .product-tab-block {
+  .product-tab-block-section {
   scroll-snap-align: start;
   }
 
@@ -77,27 +77,25 @@
   display: block;
   }
   @media screen and (max-width: 768px) {
-  .section-{{ section.id }}-margin {
-  margin-top: {{ section.settings.margin_top_mobile }}px;
-  margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
-  }
-  .product-tab-header{
-  gap: 16px;
-  justify-content: space-evenly;
-  }
-  .product-tab-button {
-  font-size: 20px;
-  }
-  .product-tab-grid {
-  grid-auto-columns: 230px;
-  }
+    .section-{{ section.id }}-margin {
+      margin-top: {{ section.settings.margin_top_mobile }}px;
+      margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+    }
+    .product-tab-header{
+      gap: 12px;
+      justify-content: space-evenly;
+    }
+    .product-tab-button {
+      font-size: 20px;
+    }
+    .product-tab-grid-container {
+      grid-auto-columns: 230px;
+    }
   }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-margin">
-  <div
-    class="product-tab-section{% if section.settings.showContainer %} {{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
-  >
+  <div class="product-tab-section{% if section.settings.showContainer %} {{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" >
     <!-- Tabs -->
     <div class="product-tab-header">
       {% for block in section.blocks %}
@@ -109,15 +107,14 @@
         </button>
       {% endfor %}
     </div>
-
     <!-- Containers -->
     {% for block in section.blocks %}
       <div
         class="product-tab-container{% if forloop.first %} active{% endif %}"
         id="{{ section.id |  append: block.settings.title }}"
       >
-        <div class="product-tab-grid">
-          <div class="product-tab-block">
+        <div class="product-tab-grid-container">
+          <div class="product-tab-block-section">
             <img
               src="{{ block.settings.image |  image_url  }}"
               alt="{{ block.settings.image }} "
@@ -127,7 +124,7 @@
             >
           </div>
           {% for product in block.settings.collection.products limit: 7 %}
-            <div class="product-tab-block">
+            <div class="product-tab-block-section">
               {% assign indexing = forloop.index0 %}
               {% render 'new-pocket', product: product, fetch_priority: fetch_priority, indexIs: indexing %}
             </div>

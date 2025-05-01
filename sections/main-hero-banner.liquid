@@ -275,7 +275,6 @@
                         class="{% if block.settings['banner-image-mobile'] != blank %}desktop_screen{% endif %}"
                         height="100%"
                         width="100%" 
-                        fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
                         loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                     >
                         {% if block.settings['banner-image-mobile'] != blank %}
@@ -284,7 +283,6 @@
                             class="mobile_screen"
                             height="100%"
                             width="100%"
-                            fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
                             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                             >
                         {% endif %}

@@ -5,47 +5,61 @@
         margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
         background: {{ section.settings.background_color }};
     }
-    .pinkflash-section {
+    .banner-tabs-grid-section {
  
   text-align: center;
   padding: 40px 20px;
 }
 
-.pinkflash-section h3 {
+.banner-tabs-grid-section h3 {
     color: #000;
-  font-size: 40px;
-  font-family: var(--header-family);
-  text-transform: uppercase;
-  letter-spacing: 0;
+    font-size: 40px;
+    margin-bottom: 24px;
+    font-family: var(--header-family);
+    text-transform: uppercase;
+    letter-spacing: 0;
 }
 
-.pinkflash-section p {
+.banner-tabs-grid-section p {
   color: #1A1919;
   font-size: 20px;
   display: flex;
   gap: 6px;
   align-items: center;
 }
+.banner-tabs-grid-buttons{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 15px;
+}
 
-.pinkflash-container {
-    display: grid;
+.grid-tab-collection-container {
+    display: none;
     grid-template-columns: 0.78fr 1fr;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas: "box1 box2" "box1 box3";
-    gap: 0 48px;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+        "box1 box4"
+        "box1 box2"
+        "box1 box3";
+    gap: 21px 48px;
     align-items: center;
 }
+.grid-tab-collection-container.active {
+    display: grid;
+}
 
-.pinkflash-image{
+.grid-tab-collection-image{
   grid-area: box1;
 }
-.pinkflash-image img {
+.grid-tab-collection-image img {
   width: 100%;
   border-radius: 12px;
 }
 
-.pinkflash-products-scroll {
-  display: flex;
+.grid-tab-collection-products-scroll {
+  display: none;
     gap: 20px;
     overflow-x: auto;
     padding-bottom: 10px;
@@ -53,17 +67,56 @@
     align-items: end;
     height: 100%;
 }
-.pinkflash-products-scroll::-webkit-scrollbar{
+.grid-tab-collection-products-scroll.active {
+  display: flex;
+}
+.grid-tab-collection-products-scroll::-webkit-scrollbar{
   height: 2px;
   background: #D9D9D9;
   }
-  .pinkflash-products-scroll::-webkit-scrollbar-thumb {
+  .grid-tab-collection-products-scroll::-webkit-scrollbar-thumb {
   background: #181818;
   }
-
-.product-card {
+  
+  .tabular-btn {
+    background: transparent;
+    color: #505050;
+    border-radius: 50px;
+    border: 1px solid #595959;
+    box-shadow: 0px 1px 6px 0px rgba(148, 147, 147, 0.25);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+.banner-tabs-grid-section .tabular-category-tab-btn{
   background: transparent;
-  min-width: 350px;
+  font-family: var(--family-medium);
+  color: #505050;
+  box-shadow: 0px 1px 6px 0px rgba(148, 147, 147, 0.25);
+  border: 1px solid #595959;
+  padding: 6px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.banner-tabs-grid-section .tabular-category-tab-btn.active{
+  background: #ECAFAF;
+  color: #000;
+  border: none;
+  font-family: var(--family-heavy);
+}
+.tabular-btn.active{
+  background: #FFF;
+  color:#000;
+  box-shadow: 0px 1px 8px 0px rgba(63, 62, 58, 0.25);
+  border: none;
+  font-family:var(--family-heavy);
+}
+.banner-tabs-grid-section .product-card {
+  background: transparent;
+  min-width: 390px;
   text-align: left;
 }
 
@@ -76,7 +129,7 @@
 
 .discount-tag {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 0;
     width: 100%;
     background: rgba(253, 245, 245, 0.73);
@@ -111,35 +164,44 @@
 .old-price {
   text-decoration: line-through;
   color: #999;
-  font-weight: normal;
+  font-family: var(--family-light);
   font-size: calc(100% - 2px);
 }
+.sub_collection_buttons{
+  grid-area: box4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.sub_collection_buttons::-webkit-scrollbar{
+  display: none;
+}
 
-.shop-all-btn {
+.sub-collections-shop-all-btn {
   grid-area: box3;
   display: flex;
   align-items: start;
   height: 85%;
   position: relative;
-  top: 20px;
   justify-content: center;
 }
 
-.shop-all-btn button {
-  font-family:var(--family-heavy);
-  padding: 12px;
-    width: 100%;
-    max-width: 360px;
-    font-size: 16px;
-    background: #ffffff;
-    border: 1px solid #000;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.sub-collections-shop-all-btn button {
+  font-family: var(--family-heavy);
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 360px;
+  font-size: 16px;
+  background: #ffffff;
+  border: 1px solid #C3A8AE;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.shop-all-btn button:hover {
+.sub-collections-shop-all-btn button:hover {
   background: #000;
   color: #fff;
 }
@@ -149,23 +211,50 @@
             margin-top: {{ section.settings.margin_top_mobile }}px;
             margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
         }
-        .pinkflash-section h3 {
+        .banner-tabs-grid-section h3 {
           font-size: 22px;
           text-align: left;
           margin:0;
+      } 
+      .sm-width{
+        width: 100%;
       }
-        .pinkflash-container {
-          grid-template-columns: 1fr;
-              grid-template-rows: auto;
-              grid-template-areas:
-                  "box1"
-                  "box2"
-                  "box3";
-              gap: 16px;
-          }
-        .pinkflash-products-scroll {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
+      .grid-tab-collection-container {
+        grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "box1"
+                "box4"
+                "box2"
+                "box3";
+            gap: 16px;
+        }
+      .grid-tab-collection-products-scroll {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+      .banner-tabs-grid-buttons{
+        justify-content: start;
+        flex-wrap: nowrap;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 10px 5px;
+      }
+      .sub_collection_buttons{
+        padding: 2px;
+        overflow-x: auto; 
+        justify-content: start;
+        gap: 8px;
+      }
+      .tabular-btn {
+        font-size: 14px;
+        font-family: var(--family-medium);
+        border: 1px solid #CFCDCD;
+        color: #CFCDCD;
+        box-shadow: 0px 1px 6px 0px rgba(148, 147, 147, 0.25);
+      }
+      .tabular-btn.active {
+        box-shadow: 0px 1px 8px 0px rgba(63, 62, 58, 0.25);
+      }
       .product-card {
         min-width: 110px;
     }
@@ -176,17 +265,17 @@
         font-size: 9px;
         padding: 3px;
     }
-    .pinkflash-section p {
+    .banner-tabs-grid-section p {
     font-size: 10px;
     }
     .product-card .subtitle {
       -webkit-line-clamp: 2;
       font-size: 9px;
     }
-    .shop-all-btn {
+    .sub-collections-shop-all-btn {
       top: 0;
     }
-    .shop-all-btn button {
+    .sub-collections-shop-all-btn button {
     padding: 12px;
     font-size: 13px;
 }
@@ -195,62 +284,224 @@
 <div class="section-{{ section.id }}-margin">
     <div
         class="banner-tabs-grid-section{% if section.settings.showContainer %} {{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-        <div class="m-md-auto">
+        <div class="sm-width m-md-auto">
             <h3>{{ section.settings.title }}</h3>
-            <p class="d-none d-md-flex">{{ section.settings.subTitle }}</p>
+            <div class="banner-tabs-grid-buttons">
+              {%- assign button_text = section.settings.buttonText | split:',' -%}
+                {% for button in button_text -%}
+                  <button class="tabular-category-tab-btn{% if forloop.first %} active{% endif %}" onclick="filterTabs(event, '{{ button }}')">{{ button | capitalize }}</button>
+                {%- endfor %}
+            </div>
+            <p class="text-start text-md-center">{{ section.settings.subTitle }}</p>
         </div>
-        <div class="pinkflash-container">
-            <div class="pinkflash-image">
+        {% for blocks in section.blocks %}
+          <div class="grid-tab-collection-container{% if forloop.first %} active{% endif %}" data-category="{{ button_text[forloop.index0] }}" >
+            <div class="grid-tab-collection-image">
                 <img
-                src="{{ section.settings.image |  image_url  }}"
-                alt="{{ section.settings.image }} "
+                src="{{ blocks.settings.image |  image_url  }}"
+                alt="{{ blocks.settings.image }} "
                 loading="lazy"
                 width="100%"
                 height="100%"
               >
             </div>
-           
-            <div class="pinkflash-products-scroll"> 
-                {% for product in section.settings.collection.products limit: 7 %}
-                    {% assign first_variant = product.selected_or_first_available_variant %}
-                <div class="product-card">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="{{ first_variant.featured_image | image_url }}" alt="{{ product.title }}"
-                    title="{{ product.title }}" width="100%" loading="lazy" height="100%">
-                   {% if first_variant.price < first_variant.compare_at_price %}
-                     <span class="discount-tag">{{
-                        first_variant.compare_at_price
-                        | minus: first_variant.price
-                        | times: 100.0
-                        | divided_by: first_variant.compare_at_price
-                        | money_without_currency
-                        | times: 100
-                        | remove: '.0'
-                      -}}
-                      % Off</span>
-                   {% endif %}
-                    </div>
-
-                    <p class="title"> {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: '-pd-bundle' -}}</p>
-                    <p class="subtitle"> {{- product.title | remove: product.vendor  -}}</p>
-                    <p class="price">{{ first_variant.price |  money_without_currency }}
-                        {% if first_variant.price < first_variant.compare_at_price %}
-                            <span class="old-price">{{ first_variant.compare_at_price |  money_without_currency }}</span>
-                          {% endif %}   
-                          </p>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="shop-all-btn">
+            {%- assign sub_button_text = blocks.settings.sub_buttonText | split:',' -%}
+              <div class="sub_collection_buttons">
+                {% for buttons in sub_button_text -%}
+                <button class="tabular-btn{% if forloop.first %} active{% endif %}" onclick="filtersubTabs(event, '{{ buttons }}')">{{ buttons | capitalize }}</button>
+              {% endfor %}
+              </div>
+              <div class="grid-tab-collection-products-scroll active" data-category="{{ sub_button_text[0] }}">
+                  {% assign collection = blocks.settings.collection %}
+                  {% assign collection_handle = collection.handle %}
+                  {% assign collection = collections[collection_handle] %}
+                  {% assign collection_products = collection.products | size %}
+                  {% if collection_products == 0 %} 
+                      <p class="no-products">No products found in this collection.</p>
+                  {% endif %}
+                  {% for product in collection.products limit: 7 %}
+                      {% assign first_variant = product.selected_or_first_available_variant %}
+                  <div class="product-card">
+                      <div class="position-relative">
+                          <img class="img-fluid" src="{{ first_variant.featured_image | image_url }}" alt="{{ product.title }}"
+                      title="{{ product.title }}" width="100%" loading="lazy" height="100%">
+                    {% if first_variant.price < first_variant.compare_at_price %}
+                      <span class="discount-tag">{{
+                          first_variant.compare_at_price
+                          | minus: first_variant.price
+                          | times: 100.0
+                          | divided_by: first_variant.compare_at_price
+                          | money_without_currency
+                          | times: 100
+                          | remove: '.0'
+                        -}}
+                        % Off</span>
+                    {% endif %}
+                      </div>
+                      <p class="title"> {{- product.vendor -}}</p>
+                      <p class="subtitle"> {{- product.title | remove: product.vendor  -}}</p>
+                      <p class="price">{{ first_variant.price |  money_without_currency }}
+                          {% if first_variant.price < first_variant.compare_at_price %}
+                              <span class="old-price">{{ first_variant.compare_at_price |  money_without_currency }}</span>
+                            {% endif %}   
+                            </p>
+                  </div>
+                  {% endfor %}
+              </div>
+              <div class="grid-tab-collection-products-scroll" data-category="{{ sub_button_text[1] }}">
+                  {% assign collection = blocks.settings.collection2 %}
+                  {% assign collection_handle = collection.handle %}
+                  {% assign collection = collections[collection_handle] %}
+                  {% assign collection_products = collection.products | size %}
+                  {% if collection_products == 0 %} 
+                      <p class="no-products">No products found in this collection.</p>
+                  {% endif %}
+                  {% for product in collection.products limit: 7 %}
+                      {% assign first_variant = product.selected_or_first_available_variant %}
+                  <div class="product-card">
+                      <div class="position-relative">
+                          <img class="img-fluid" src="{{ first_variant.featured_image | image_url }}" alt="{{ product.title }}"
+                      title="{{ product.title }}" width="100%" loading="lazy" height="100%">
+                    {% if first_variant.price < first_variant.compare_at_price %}
+                      <span class="discount-tag">{{
+                          first_variant.compare_at_price
+                          | minus: first_variant.price
+                          | times: 100.0
+                          | divided_by: first_variant.compare_at_price
+                          | money_without_currency
+                          | times: 100
+                          | remove: '.0'
+                        -}}
+                        % Off</span>
+                    {% endif %}
+                      </div>
+                      <p class="title"> {{- product.vendor -}}</p>
+                      <p class="subtitle"> {{- product.title | remove: product.vendor  -}}</p>
+                      <p class="price">{{ first_variant.price |  money_without_currency }}
+                          {% if first_variant.price < first_variant.compare_at_price %}
+                              <span class="old-price">{{ first_variant.compare_at_price |  money_without_currency }}</span>
+                            {% endif %}   
+                            </p>
+                  </div>
+                  {% endfor %}
+              </div>
+              <div class="grid-tab-collection-products-scroll" data-category="{{ sub_button_text[2] }}">
+                  {% assign collection = blocks.settings.collection3 %}
+                  {% assign collection_handle = collection.handle %}
+                  {% assign collection = collections[collection_handle] %}
+                  {% assign collection_products = collection.products | size %}
+                  {% if collection_products == 0 %} 
+                      <p class="no-products">No products found in this collection.</p>
+                  {% endif %}
+                  {% for product in collection.products limit: 7 %}
+                      {% assign first_variant = product.selected_or_first_available_variant %}
+                  <div class="product-card">
+                      <div class="position-relative">
+                          <img class="img-fluid" src="{{ first_variant.featured_image | image_url }}" alt="{{ product.title }}"
+                      title="{{ product.title }}" width="100%" loading="lazy" height="100%">
+                    {% if first_variant.price < first_variant.compare_at_price %}
+                      <span class="discount-tag">{{
+                          first_variant.compare_at_price
+                          | minus: first_variant.price
+                          | times: 100.0
+                          | divided_by: first_variant.compare_at_price
+                          | money_without_currency
+                          | times: 100
+                          | remove: '.0'
+                        -}}
+                        % Off</span>
+                    {% endif %}
+                      </div>
+                      <p class="title"> {{- product.vendor -}}</p>
+                      <p class="subtitle"> {{- product.title | remove: product.vendor  -}}</p>
+                      <p class="price">{{ first_variant.price |  money_without_currency }}
+                          {% if first_variant.price < first_variant.compare_at_price %}
+                              <span class="old-price">{{ first_variant.compare_at_price |  money_without_currency }}</span>
+                            {% endif %}   
+                            </p>
+                  </div>
+                  {% endfor %}
+              </div>
+              <div class="grid-tab-collection-products-scroll" data-category="{{ sub_button_text[3] }}">
+                  {% assign collection = blocks.settings.collection4 %}
+                  {% assign collection_handle = collection.handle %}
+                  {% assign collection = collections[collection_handle] %}
+                  {% assign collection_products = collection.products | size %}
+                  {% if collection_products == 0 %} 
+                      <p class="no-products">No products found in this collection.</p>
+                  {% endif %}
+                  {% for product in collection.products limit: 7 %}
+                      {% assign first_variant = product.selected_or_first_available_variant %}
+                  <div class="product-card">
+                      <div class="position-relative">
+                          <img class="img-fluid" src="{{ first_variant.featured_image | image_url }}" alt="{{ product.title }}"
+                      title="{{ product.title }}" width="100%" loading="lazy" height="100%">
+                    {% if first_variant.price < first_variant.compare_at_price %}
+                      <span class="discount-tag">{{
+                          first_variant.compare_at_price
+                          | minus: first_variant.price
+                          | times: 100.0
+                          | divided_by: first_variant.compare_at_price
+                          | money_without_currency
+                          | times: 100
+                          | remove: '.0'
+                        -}}
+                        % Off</span>
+                    {% endif %}
+                      </div>
+                      <p class="title"> {{- product.vendor -}}</p>
+                      <p class="subtitle"> {{- product.title | remove: product.vendor  -}}</p>
+                      <p class="price">{{ first_variant.price |  money_without_currency }}
+                          {% if first_variant.price < first_variant.compare_at_price %}
+                              <span class="old-price">{{ first_variant.compare_at_price |  money_without_currency }}</span>
+                            {% endif %}   
+                            </p>
+                  </div>
+                  {% endfor %}
+              </div>
+            <div class="sub-collections-shop-all-btn">
                 <button>SHOP ALL</button>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
+<script>
+function filterTabs(event, category) {
+  // Toggle active class on buttons
+  document.querySelectorAll('.tabular-category-tab-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // Show/hide product grids
+  document.querySelectorAll('.grid-tab-collection-container').forEach(grid => {
+    if (grid.dataset.category === category) {
+      grid.classList.add('active');
+      grid.querySelectorAll('.sub_collection_buttons .tabular-btn')[0].classList.add('active');
+      grid.querySelector('.grid-tab-collection-products-scroll').classList.add('active');
+    } else {
+      grid.classList.remove('active');
+    }
+  });
+}
+function filtersubTabs(event, category) {
+  // Toggle active class on buttons
+  document.querySelectorAll('.tabular-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  // Show/hide product grids
+  document.querySelectorAll('.grid-tab-collection-products-scroll').forEach(grid => {
+    if (grid.dataset.category === category) {
+      grid.classList.add('active');
+    } else {
+      grid.classList.remove('active');
+    }
+  });
+}
+</script>
 {% schema %}
     {
       "name": "Banner Product Tab Grid",
       "class": "banner-product-tab-grid",
+      "max_blocks": 4,
       "settings": [
         {
           "type": "radio",
@@ -279,15 +530,11 @@
             "id": "subTitle",
             "label": "Brand Sub Title"
         },
-        {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Collection Image"
-        },
-        {
-        "type": "collection",
-        "id": "collection",
-        "label": "Brand Collection"
+         {
+            "type": "text",
+            "id": "buttonText",
+            "label": "Navigation Button Text",
+            "info": "This text will be used for the navigation button (Use , to seperate the buttons) (Max 4 words)"
         },
         {
           "type": "header",
@@ -337,6 +584,45 @@
           "label": "Margin Bottom",
           "default": 36
         }
+      ],
+      "blocks": [
+        {
+    "name": "Collection tabs",
+    "type": "tabs",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Collection Image"
+        },
+        {
+            "type": "text",
+            "id": "sub_buttonText",
+            "label": "Navigation Button Text",
+            "info": "This text will be used for the navigation button (Use , to seperate the buttons) (Max 4 words)"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Choose Collection 1"
+          },
+          {
+          "type": "collection",
+          "id": "collection2",
+          "label": "Choose Collection 2"
+          },
+          {
+          "type": "collection",
+          "id": "collection3",
+          "label": "Choose Collection 3"
+          },
+          {
+          "type": "collection",
+          "id": "collection4",
+          "label": "Choose Collection 4"
+          }
+    ]
+    }
       ],
       "presets": [
         {

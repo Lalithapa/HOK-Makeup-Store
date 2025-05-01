@@ -1,17 +1,16 @@
 
 {%- style -%}
-    .section-{{ section.id }}-margin {
-        margin-top: {{ section.settings.margin_top_desktop }}px;
-        margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
-        background: {{ section.settings.background_color }};
-    }
-    .pinkflash-section {
- 
+.section-{{ section.id }}-margin {
+    margin-top: {{ section.settings.margin_top_desktop }}px;
+    margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+    background: {{ section.settings.background_color }};
+}
+.vendor-section {
   text-align: center;
   padding: 40px 20px;
 }
 
-.pinkflash-section h3 {
+.vendor-section h3 {
     color: #000;
   font-size: 40px;
   font-family: var(--header-family);
@@ -19,7 +18,7 @@
   letter-spacing: 0;
 }
 
-.pinkflash-section p {
+.vendor-section p {
   color: #1A1919;
   font-size: 20px;
   display: flex;
@@ -27,54 +26,55 @@
   align-items: center;
 }
 
-.pinkflash-container {
-    display: grid;
-    grid-template-columns: 0.78fr 1fr;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas: "box1 box2" "box1 box3";
-    gap: 0 48px;
-    align-items: center;
+.multi-vendor-container {
+  display: grid;
+  grid-template-columns: 0.78fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "box1 box2" "box1 box3";
+  gap: 0 48px;
+  align-items: center;
 }
 
-.pinkflash-image{
+.multi-vendor-image{
   grid-area: box1;
 }
-.pinkflash-image img {
+.multi-vendor-image img {
   width: 100%;
   border-radius: 12px;
 }
 
-.pinkflash-products-scroll {
+.multi-vendor-products-scroll {
   display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    grid-area: box2;
-    align-items: end;
-    height: 100%;
+  gap: 32px;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  grid-area: box2;
+  align-items: end;
+  height: 100%;
 }
-.pinkflash-products-scroll::-webkit-scrollbar{
+.multi-vendor-products-scroll::-webkit-scrollbar{
   height: 2px;
   background: #D9D9D9;
   }
-  .pinkflash-products-scroll::-webkit-scrollbar-thumb {
+  .multi-vendor-products-scroll::-webkit-scrollbar-thumb {
   background: #181818;
   }
 
-.product-card {
+.multi-vendor-product-card {
   background: transparent;
-  min-width: 350px;
+  min-width: 390px;
   text-align: left;
 }
 
-.product-card img {
-    position: relative;
+.multi-vendor-product-card img {
+  position: relative;
   width: 100%;
   border-radius: 20px;
+  border: 1px solid rgba(206, 204, 204, 0.60);
   box-shadow: 0px 2px 7px 0px rgba(201, 202, 202, 0.25);
 }
 
-.discount-tag {
+.multi-vendor-discount-tag {
     position: absolute;
     bottom: 20%;
     left: 0;
@@ -86,12 +86,12 @@
     padding: 6px;
 }
 
-.product-card .title {
+.multi-vendor-product-card .title {
   margin: 8px 0 2px;
   font-family: var(--family-medium);
 }
 
-.product-card .subtitle {
+.multi-vendor-product-card .subtitle {
   font-size: 16px;
   color: #000000;
   height: 32px;
@@ -103,19 +103,19 @@
   display: -webkit-box;
 }
 
-.price {
+.multi-vendor-price {
   font-size: 14px;
   font-family: var(--family-heavy);
 }
 
-.old-price {
+.multi-vendor-old-price {
   text-decoration: line-through;
   color: #999;
-  font-weight: normal;
+  font-family: var(--family-light);
   font-size: calc(100% - 2px);
 }
 
-.shop-all-btn {
+.multi-vendor-shop-all-btn {
   grid-area: box3;
   display: flex;
   align-items: start;
@@ -125,68 +125,69 @@
   justify-content: center;
 }
 
-.shop-all-btn button {
+.multi-vendor-shop-all-btn a {
   font-family:var(--family-heavy);
-  padding: 12px;
+    padding: 8px 12px;
     width: 100%;
     max-width: 360px;
     font-size: 16px;
     background: #ffffff;
-    border: 1px solid #000;
+    border: 1px solid #C3A8AE;
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.shop-all-btn button:hover {
+.multi-vendor-shop-all-btn button:hover {
   background: #000;
   color: #fff;
 }
 
     @media screen and (max-width: 768px) {
-        .section-{{ section.id }}-margin {
-            margin-top: {{ section.settings.margin_top_mobile }}px;
-            margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
-        }
-        .pinkflash-section h3 {
-          font-size: 22px;
-          text-align: left;
-          margin:0;
+    .section-{{ section.id }}-margin {
+        margin-top: {{ section.settings.margin_top_mobile }}px;
+        margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+    }
+    .vendor-section h3 {
+      font-size: 22px;
+      text-align: left;
+      margin:0;
+    }
+    .multi-vendor-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+          "box1"
+          "box2"
+          "box3";
+      gap: 16px;
       }
-        .pinkflash-container {
-          grid-template-columns: 1fr;
-              grid-template-rows: auto;
-              grid-template-areas:
-                  "box1"
-                  "box2"
-                  "box3";
-              gap: 16px;
-          }
-        .pinkflash-products-scroll {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-      .product-card {
+    .multi-vendor-products-scroll {
+      /* grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); */
+      gap: 8px;
+    }
+    .multi-vendor-product-card {
         min-width: 110px;
     }
-    .product-card img {
+    .multi-vendor-product-card img {
         border: 1px solid rgba(206, 204, 204, 0.60);
     }
-    .discount-tag {
+    .multi-vendor-discount-tag {
         font-size: 9px;
         padding: 3px;
     }
-    .pinkflash-section p {
+    .vendor-section p {
     font-size: 10px;
     }
-    .product-card .subtitle {
+    .multi-vendor-product-card .subtitle {
       -webkit-line-clamp: 2;
       font-size: 9px;
     }
-    .shop-all-btn {
+    .multi-vendor-shop-all-btn {
       top: 0;
     }
-    .shop-all-btn button {
+    .multi-vendor-shop-all-btn a {
     padding: 12px;
     font-size: 13px;
 }
@@ -194,13 +195,13 @@
   {%- endstyle -%}
 <div class="section-{{ section.id }}-margin">
     <div
-        class="pinkflash-section{% if section.settings.showContainer %} {{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        class="vendor-section{% if section.settings.showContainer %} {{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
         <div class="m-md-auto">
             <h3>{{ section.settings.title }}</h3>
             <p class="d-none d-md-flex">{{ section.settings.subTitle }}</p>
         </div>
-        <div class="pinkflash-container">
-            <div class="pinkflash-image">
+        <div class="multi-vendor-container">
+            <div class="multi-vendor-image">
                 <img
                 src="{{ section.settings.image |  image_url  }}"
                 alt="{{ section.settings.image }} "
@@ -209,16 +210,15 @@
                 height="100%"
               >
             </div>
-           
-            <div class="pinkflash-products-scroll"> 
+            <div class="multi-vendor-products-scroll"> 
                 {% for product in section.settings.collection.products limit: 7 %}
                     {% assign first_variant = product.selected_or_first_available_variant %}
-                <div class="product-card">
+                <div class="multi-vendor-product-card">
                     <div class="position-relative">
                         <img class="img-fluid" src="{{ first_variant.featured_image | image_url }}" alt="{{ product.title }}"
                     title="{{ product.title }}" width="100%" loading="lazy" height="100%">
                    {% if first_variant.price < first_variant.compare_at_price %}
-                     <span class="discount-tag">{{
+                     <span class="multi-vendor-discount-tag">{{
                         first_variant.compare_at_price
                         | minus: first_variant.price
                         | times: 100.0
@@ -233,16 +233,18 @@
 
                     <p class="title"> {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: '-pd-bundle' -}}</p>
                     <p class="subtitle"> {{- product.title | remove: product.vendor  -}}</p>
-                    <p class="price">{{ first_variant.price |  money_without_currency }}
+                    <p class="multi-vendor-price">{{ first_variant.price |  money_without_trailing_zeros }}
                         {% if first_variant.price < first_variant.compare_at_price %}
-                            <span class="old-price">{{ first_variant.compare_at_price |  money_without_currency }}</span>
+                            <span class="multi-vendor-old-price">{{ first_variant.compare_at_price |  money_without_trailing_zeros }}</span>
                           {% endif %}   
                           </p>
                 </div>
                 {% endfor %}
             </div>
-            <div class="shop-all-btn">
-                <button>SHOP ALL</button>
+            <div class="multi-vendor-shop-all-btn">
+              <a href="{{ section.settings.collection.url }}" title="{{ section.settings.collection.title }}">
+                SHOP ALL
+              </a>
             </div>
         </div>
     </div>

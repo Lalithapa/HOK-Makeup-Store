@@ -9,7 +9,7 @@
   }
   .testimonials-section h5 {
     font-family: var(--family-regular);
-    color: #666;
+    color: #000;
     margin-bottom: 0.5rem;
     font-size: 18px;
   }
@@ -19,33 +19,36 @@
     font-weight: 400;
     margin-bottom: 2rem;
   }
-  .stats {
+  .testimonial-stats {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 32px 0;
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
   }
-  .stat-box.br-left {
+  .testimonial-stat-box.br-left {
     border-left: 1px solid #FF5F72;
   }
-  .stat-box h3 {
+  .testimonial-stat-box h3 {
     font-size: 40px;
     font-family: var(--header-family);
   }
-  .stat-box p {
-    font-size: 1rem;
+  .testimonial-stat-box p {
+    font-size: 16px;
     color: #000;
   }
-  .cards {
+  .testimonial-section-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 32px;
     margin-top: 2rem;
   }
-  .card {
+  .testimonial-section-container::-webkit-scrollbar {
+    display: none;
+  } 
+  .testimonial-cards {
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 2px 10px 0px rgba(168, 168, 168, 0.25);
@@ -53,37 +56,36 @@
     border-radius: 12px;
     width: 350px;
     height: 100%;
-    min-height: 330px;
+    min-height: 370px;
     text-align: left;
   }
-  .card img {
+  .testimonial-cards img {
     width: 53px;
     height: 53px;
     border-radius: 50%;
-    margin-bottom: 1rem;
   }
-  .stars {
+  .testimonial-stars {
     color: #f5a623;
-    margin-bottom: 1rem;
+    margin: 16px 0;
     font-size: 1.2rem;
   }
-  .card p.review_text {
+  .testimonial-cards p.review_text {
     font-size: 16px;
     color: #000;
   }
-  .name {
+  .testimonial-container-name {
     font-size: 14px;
     font-weight: bold;
   }
-  .name span {
+  .testimonial-container-name span {
     font-weight: normal;
-    color: #777;
+    color: #1A1919;
   }
-  .meta {
-    font-size: 0.8rem;
+  .testimonial-container-meta {
+    font-size: 14px;
     color: #888;
   }
-  .meta a {
+  .testimonial-container-meta a {
     color: #666;
     text-decoration: underline;
   }
@@ -95,17 +97,17 @@
     .testimonials-section h5 {
       font-size: 16px;
     }
-    .testimonials-section h2 , .stat-box h3 {
+    .testimonials-section h2 , .testimonial-stat-box h3 {
       font-size: 22px;
     }
-    .stats {
+    .testimonial-stats {
       flex-direction: row;
     }
-    .stat-box p {
+    .testimonial-stat-box p {
         font-size: 12px;
         max-width: 80px;
     }
-    .cards {
+    .testimonial-section-container {
       flex-direction: row;
       align-items: center;
       overflow-x: auto;
@@ -114,14 +116,14 @@
       margin-top: 0rem;
       padding: 0 8px 8px;
     }
-    .card {
+    .testimonial-cards {
       flex: 0 0 75%;
       flex-wrap: nowrap;
     }
-    .card p.review_text {
+    .testimonial-cards p.review_text {
         font-size: 14px;
     }
-    .name {
+    .testimonial-container-name {
         font-size: 12px;
     }
   }
@@ -131,9 +133,9 @@
   <h5>“{{ section.settings.subheading }}”</h5>
   <h2>{{ section.settings.heading }}</h2>
 
-  <div class="stats">
-    <div class="stat-box">
-      <h3>100<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="18" viewBox="0 0 17 18" fill="none">
+  <div class="testimonial-stats">
+    <div class="testimonial-stat-box">
+      <h3>100<span style="margin-left: 6px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="18" viewBox="0 0 17 18" fill="none">
       <rect y="0.190918" width="17" height="17" fill="url(#pattern0_2801_25079)"/>
       <defs>
       <pattern id="pattern0_2801_25079" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -144,29 +146,32 @@
       </svg></span></h3>
       <p>authentic products</p>
     </div>
-    <div class="stat-box br-left">
+    <div class="testimonial-stat-box br-left">
     <wbr>
     </div>
-    <div class="stat-box">
+    <div class="testimonial-stat-box">
       <h3>2-3</h3>
       <p>days delivery across India</p>
     </div>
-    <div class="stat-box br-left">
+    <div class="testimonial-stat-box br-left">
     <wbr>
     </div>
-    <div class="stat-box">
-      <h3>10,000<span>+</span></h3>
+    <div class="testimonial-stat-box">
+      <h3>10,000<span style="margin-left: 6px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+      <path d="M10 2.19092V19.1909" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
+      <path d="M18.5 10.6909L1.5 10.6909" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
+      </svg></span></h3>
       <p>happy orders & counting</p>
     </div>
   </div>
 
-  <div class="cards">
+  <div class="testimonial-section-container">
     {% for block in section.blocks %}
-      <div class="card">
+      <div class="testimonial-cards">
         {% if block.settings.image %}
           <img src="{{ block.settings.image | image_url: width: 100 }}" alt="Customer image">
         {% endif %}
-        <div class="stars">
+        <div class="testimonial-stars">
           {% for i in (1..5) %}
             {% if i <= block.settings.rating %}
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
@@ -187,11 +192,11 @@
         </div>
         <p class="review_text">"{{ block.settings.quote }}"</p>
         <div class="mt-auto">
-          <p class="name">
+          <p class="testimonial-container-name">
           {{ block.settings.name -}}
           <span>, {{ block.settings.location }}</span>
         </p>
-        <p class="meta">
+        <p class="testimonial-container-meta">
           {{ block.settings.date }} | Bought
           <a href="{{ block.settings.product_link }}">{{ block.settings.product }}</a>
         </p>

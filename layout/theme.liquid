@@ -430,20 +430,9 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     {% comment %} Marketing Code  {% endcomment %}  
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
-
     {% comment %} {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%} {% endcomment %}
-    <div class="bg_dark" id="bg_dark" onclick="closeSlider()"></div>
-     
-    {% sections 'header-group' %}
-    <div class="quickview-overlay close_overlay"></div>
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
     {% if template == "page.makeup-page" or template == "page.skincare-page" %} 
       <div class="splash"> 
         <div class="splash-img">
@@ -456,8 +445,8 @@
           position: fixed;
           top: 50%;
           left: 50%;
-          height: 100vh;
-          width: 100vw;
+          height: 100dvh;
+          width: 100dvw;
           transform: translate(-50%, -50%);
           background-color: rgb(255, 255, 255);
           z-index: 9999;
@@ -508,37 +497,21 @@
           });
         </script> 
      {% endif %}
-
+    <div class="bg_dark" id="bg_dark" onclick="closeSlider()"></div>
+    {% sections 'header-group' %}
+    <div class="quickview-overlay close_overlay"></div>
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
     {% sections 'footer-group' %}
     {% render 'toaster' %}
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-    <!-- Required to show all the recommended products on Foundation Friday -->
-    <script defer="defer">
-    document.addEventListener("DOMContentLoaded", function () {
-        if (window.location.pathname.includes("/apps/gbq/quiz/")) {
-            const observer = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    mutation.addedNodes.forEach((node) => {
-                        if (node.nodeType === 1 && node.classList.contains("gbqResultsPageWrapper")) {
-                            // Show the first image
-                            document.querySelectorAll(".gbqProductItem .gbqProductImageContainer img:first-child")
-                                .forEach(img => img.style.display = "block");
-
-                            // Stop observing after target found
-                            observer.disconnect();
-                        }
-                    });
-                });
-            });
-
-            const parentNode = document.body;
-            observer.observe(parentNode, { childList: true, subtree: true });
-        }
-    });
-    </script>
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {

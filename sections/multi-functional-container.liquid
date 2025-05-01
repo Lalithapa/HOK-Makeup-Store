@@ -13,15 +13,31 @@
       }
     }
   {% endif %}
+  {% if section.settings.show_scrollbar %}
+  .coming-soon-swiper-pagination-{{ section.id }}{
+      top: unset !important;
+      bottom: -26px;
+      background: #F5F5F5;
+      z-index: 0;
+    }
+  .coming-soon-swiper-pagination-{{ section.id }} .swiper-pagination-progressbar-fill{
+    background: #6E6E6E;
+  }
+  {% endif %}
+  .carousel-section-title-wrapper p svg{
+    vertical-align: baseline;
+    margin-left: -9px;
+  }
   @media screen and (max-width: 768px) {
     .section-{{ section.id }}-margin {
       margin-top: {{ section.settings.margin_top_mobile }}px;
       margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
     }
-  }
-  .carousel-section-title-wrapper p svg{
-    vertical-align: baseline;
-    margin-left: -9px;
+    {% if section.settings.show_scrollbar %}
+    .coming-soon-swiper-pagination-{{ section.id }}{
+        bottom: -12px;
+      }
+    {% endif %}
   }
 {%- endstyle -%}
 {% liquid
@@ -201,6 +217,9 @@
           </div>
         </div>
       {% endif %}
+      {% if section.settings.show_scrollbar %} 
+        <div class="swiper-pagination coming-soon-swiper-pagination-{{ section.id }}"><br></div>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -236,6 +255,12 @@
       nextEl: '#carousel-next-{{ section.id }}',
       disabledClass: 'disabled_swiper_button'
     },
+    {% if section.settings.show_scrollbar %} 
+      pagination: {
+        el: ".coming-soon-swiper-pagination-{{ section.id }}",
+        type: "progressbar",
+      },
+    {% endif %}
     touchStartForcePreventDefault:true,
     breakpoints: {
       768: {
@@ -251,7 +276,7 @@
       },
       1536: {
         slidesPerView: numSlides2xl{{ section_unique_name }},
-        spaceBetween: 20
+        spaceBetween: 24
       },
     }
     // pagination: '.swiper-pagination',
@@ -323,6 +348,13 @@
       "label": "Show Slider Arrow",
       "info": "If enabled ,Slider arrows will be seen",
       "default": true
+    },
+     {
+      "type": "checkbox",
+      "id": "show_scrollbar",
+      "label": "Show Scrollbar",
+      "info": "If enabled ,Slider scrollbar will be seen",
+      "default": false
     },
     {
       "type": "checkbox",

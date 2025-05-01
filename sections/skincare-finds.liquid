@@ -4,12 +4,17 @@
       margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
     }
     .b-skincare-vendor{
-      font-size: 20px;
+      font-size: 22px;
       font-family:var(--family-heavy);
       line-height: 32px;
+      margin-top: 10px;
     }
     .b-skincare-subtitle{ 
-      font-size: 14px;
+      font-size: 19px;
+      color: #7E7E7E;
+    }
+    .b-skincare-subtitle strong{
+      color: #1B1B1B;
     }
     .skincare-finds-swiper-pagination-{{ section.id }}{
       top: unset !important;
@@ -32,41 +37,50 @@
       text-align: center;
       justify-content: center;
     }
-    .offer-card {
+    .skincare-offer-card {
       border-radius: 10px;
       background: #FFF;
       box-shadow: 0px 2px 10px 0px rgba(40, 84, 102, 0.25);
       transition: 0.3s;
     }
-    .offer-card .content{
+    .skincare-offer-card .content{
       padding: 24px;
     }
 
-    .offer-card .brand-line {
+    .skincare-offer-card .skincare-brand-line {
       margin-bottom: 8px;
       gap: 16px;
     }
-    .brand-line img {
+    .skincare-brand-line img {
       width: 120px;
       height: 34px;
       object-fit: contain;
     }
 
-    .offer-card .discount-text {
+    .skincare-offer-card .discount-text {
       color: #000;
       font-size: 20px;
-      font-family: var(--family-heavy);
+      font-family: var(--family-bold);
     }
-    .offer-card .middle-line {
+    .skincare-offer-card .middle-line {
       font-size: 16px;
       color: #D2D2D2;
     }
 
-    .offer-card .tagline-phrase {
+    .skincare-offer-card .tagline-phrase {
       color: #000;
       font-size: 16px;
       text-align: center;
       white-space: nowrap;
+    }
+    @media screen and (max-width: 768px) {
+      .b-skincare-vendor {
+        font-size: 20px;
+        margin-top: 4px;
+      }
+      .b-skincare-subtitle {
+        font-size: 16px;
+      }
     }
     @media screen and (max-width: 768px) {
       .section-{{ section.id }}-margin  {
@@ -80,24 +94,24 @@
       .b-skincare-subtitle {
         font-size: 11px;
         text-overflow: ellipsis;
-        height: 46px;
+        height: 30px;
       }
       .view-all-continer-btn{
       font-size: 13px;
       width: 100%;
       }
-      .brand-line img {
+      .skincare-brand-line img {
         width: 90px;
         height: 24px;
     }
-    .offer-card .content {
+    .skincare-offer-card .content {
         padding: 18px;
     }
-    .offer-card .discount-text ,
-    .offer-card .middle-line {
+    .skincare-offer-card .discount-text ,
+    .skincare-offer-card .middle-line {
       font-size: 16px;
     }
-    .offer-card .tagline-phrase {
+    .skincare-offer-card .tagline-phrase {
       font-size: 12px;
       font-family: var(--family-heavy);
     }
@@ -147,20 +161,20 @@
                             <p class="b-skincare-vendor">
                               {{- section_block.title -}}
                             </p>
-                            <p class="b-skincare-subtitle">
+                            <div class="b-skincare-subtitle">
                               {{- section_block.subtitle -}}
-                            </p>
+                            </div>
                           </div>
                         </div>
                       </a>
                   
                     {% when "cards" %}
                       <a href="{{ section_block.url }}">
-                        <div class="offer-card">
+                        <div class="skincare-offer-card">
                           <img class="img-fluid" src="{{ section_block.image | image_url }}" alt="{{ section_block.title }}" 
                             title="{{ section_block.title }}" width="100%" loading="lazy" height="100%">
                           <div class="content">
-                            <div class="brand-line d-center">
+                            <div class="skincare-brand-line d-center">
                               <span class="brand">
                                 <img class="img-fluid" src="{{ section_block.logo | image_url }}" alt="{{ section_block.title }}" 
                                 title="{{ section_block.title }}" width="100%" loading="lazy" height="34">
@@ -409,7 +423,7 @@
         "label": "Brand Title"
       },
       {
-        "type": "text",
+        "type": "richtext",
         "id": "subtitle",
         "label": "Brand Sub Title"
       }

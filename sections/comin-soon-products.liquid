@@ -3,17 +3,18 @@
       margin-top: {{ section.settings.margin_top_desktop }}px;
       margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
     }
-    .b-coming-soon{ 
+    .b-coming-soon-products{ 
       font-size: 20px;
       text-transform: uppercase;
       line-height: 36px;
     }
-    .b-coming-vendor{
+    .b-header-vendor-label{
       font-size: 20px;
-      font-family:var(--family-heavy);
+      font-family:var(--family-bold);
       line-height: 32px;
     }
     .b-coming-subtitle{ 
+      color: #000;
       font-size: 14px;
       text-overflow: ellipsis;
       height: 64px;
@@ -25,7 +26,7 @@
       margin-top: 32px;
       width: 100%;
       padding: 10px;
-      font-family:var(--family-heavy);
+      font-family:var(--family-bold);
       text-transform: uppercase;
       font-size: 18px;
       display: inline-block;
@@ -39,12 +40,13 @@
       color: #000;
       z-index: 1;
     }
-    .coming-soon-swiper-pagination{
+    .coming-soon-swiper-pagination-{{ section.id }}{
       top: unset !important;
       bottom: -26px;
       background: #F5F5F5;
+      z-index: 0;
     }
-    .coming-soon-swiper-pagination .swiper-pagination-progressbar-fill{
+    .coming-soon-swiper-pagination-{{ section.id }} .swiper-pagination-progressbar-fill{
       background: #6E6E6E;
     }
     @media screen and (max-width: 768px) {
@@ -52,11 +54,11 @@
         margin-top: {{ section.settings.margin_top_mobile }}px;
         margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
       }
-      .b-coming-soon{ 
+      .b-coming-soon-products{ 
         font-size: 13px;
         line-height: 30px;
       }
-      .b-coming-vendor {
+      .b-header-vendor-label {
         font-size: 16px;
         line-height: 20px;
       }
@@ -90,7 +92,7 @@
           <p class="carousel-sub-title">{{ section.settings['coll-title'] }}</p>
           <span class="new-slider-url">
             {{- section.settings['url-title'] | link_to: section.settings.url }}
-            <svg
+            {% comment %} <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8"
               height="12"
@@ -99,7 +101,7 @@
               style="width:6px;height:10px;margin-left:10px"
             >
               <path d="M1.5 11L6.5 6L1.5 1" stroke="#393939" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
+            </svg> {% endcomment %}
           </span>
         </div>
       {% endif %}
@@ -119,8 +121,8 @@
                           <div class="b-product_promo_tile">
                             <img class="img-fluid" src="{{ section_block.image | image_url }}" alt="{{ product.title }}"
                               title="{{ product.title }}" width="100%" loading="lazy" height="100%">
-                            <p class="b-coming-soon">Coming Soon</p>
-                            <p class="b-coming-vendor">
+                            <p class="b-coming-soon-products">Coming Soon</p>
+                            <p class="b-header-vendor-label">
                               {{- product.vendor -}}
                             </p>
                             <p class="b-coming-subtitle">
@@ -144,7 +146,7 @@
             {{ 'arrow-next.svg' | inline_asset_content }}
           </div>
         </div>
-        <div class="swiper-pagination coming-soon-swiper-pagination"><br></div>
+        <div class="swiper-pagination coming-soon-swiper-pagination-{{ section.id }}"><br></div>
       </div>
     </div>
   </div>
@@ -161,7 +163,7 @@
         freeMode: {{ section.settings.showFreeScroll }},
         loop: {{ section.settings.loop }} ,
         pagination: {
-          el: ".coming-soon-swiper-pagination",
+          el: ".coming-soon-swiper-pagination-{{ section.id }}",
           type: "progressbar",
         },
         breakpoints: {
