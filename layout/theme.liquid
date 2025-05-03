@@ -433,7 +433,7 @@
     {% comment %} {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%} {% endcomment %}
-    {% if template == "page.makeup-page" or template == "page.skincare-page" %} 
+    {% comment %} {% if template == "page.makeup-page" or template == "page.skincare-page" %} 
       <div class="splash"> 
         <div class="splash-img">
             <img loading="eager" fetchpriority="high" src="https://cdn.shopify.com/s/files/1/1743/7443/files/Comp_1_1.gif?v=1686723543" alt="makeup-splash" width="100%" height="100%"/>
@@ -496,7 +496,7 @@
             }, 1000); 
           });
         </script> 
-     {% endif %}
+     {% endif %} {% endcomment %}
     <div class="bg_dark" id="bg_dark" onclick="closeSlider()"></div>
     {% sections 'header-group' %}
     <div class="quickview-overlay close_overlay"></div>
