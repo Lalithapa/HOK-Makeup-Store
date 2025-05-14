@@ -110,6 +110,7 @@
     .skincare-offer-card .discount-text ,
     .skincare-offer-card .middle-line {
       font-size: 16px;
+      white-space: nowrap;
     }
     .skincare-offer-card .tagline-phrase {
       font-size: 12px;
@@ -170,7 +171,7 @@
                   
                     {% when "cards" %}
                       <a href="{{ section_block.url }}">
-                        <div class="skincare-offer-card">
+                        <div class="skincare-offer-card " dfdf>
                           <img class="img-fluid" src="{{ section_block.image | image_url }}" alt="{{ section_block.title }}" 
                             title="{{ section_block.title }}" width="100%" loading="lazy" height="100%">
                           <div class="content">
@@ -411,7 +412,7 @@
         "type": "image_picker",
         "id": "image",
         "label": "Brand Image"
-      }, 
+      },  
       {
         "type": "url",
         "id": "url",
@@ -441,6 +442,11 @@
             {
         "type": "image_picker",
         "id": "image",
+        "label": "Brand Image"
+      }, 
+            {
+        "type": "image_picker",
+        "id": "mobile_image",
         "label": "Brand Image"
       }, 
             {

@@ -273,7 +273,7 @@
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
                         {% assign indexing = forloop.index0 %}
-                        {% render 'new-pocket', product: item, fetch_priority: true, indexIs: indexing %}
+                        {% render 'new-pocket', product: item, fetch_priority: true, indexIs: indexing , showCross:false %}
                         {% comment %} {% render 'product-pockets', product: item, fetch_priority: true, indexIs: indexing %}
                           {% render 'card-product',
                               card_product: item,

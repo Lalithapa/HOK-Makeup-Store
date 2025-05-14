@@ -263,7 +263,7 @@
                   {% endif %}
                 >
                   {% assign indexing = forloop.index0 %}
-                 {% render 'new-pocket', product: product, fetch_priority: true, indexIs: indexing %}
+                  {% render 'new-pocket', product: product, fetch_priority: true, indexIs: indexing , showCross:false  %}
                   {% comment %}
                     {% render 'card-product',
                       card_product: product,

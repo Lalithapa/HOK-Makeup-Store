@@ -140,15 +140,17 @@
         "disabled": false,
         "settings": {}
       },
-      "15796953133730294439": {
-        "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+      "13951170544780599758": {
+        "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
         "disabled": false,
         "settings": {}
       },
-      "7147999719060634790": {
-        "type": "shopify:\/\/apps\/gsc-countdown-timer\/blocks\/countdown-bar\/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
+      "15796953133730294439": {
+        "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
         "disabled": true,
-        "settings": {}
+        "settings": {
+          "disable_shadow_root_globally": false
+        }
       }
     },
     "color_schemes": {
@@ -204,6 +206,17 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-ab706da6-6236-4379-95b7-d15d971327d9": {
+        "settings": {
+          "background": "#000000",
+          "background_gradient": "",
+          "text": "#fff8e7",
+          "button": "#78c5d5",
+          "button_label": "#000000",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }

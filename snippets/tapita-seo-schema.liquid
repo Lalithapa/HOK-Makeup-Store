@@ -84,11 +84,11 @@
             {%-  assign new_page_description = new_page_description | replace: variableMapper[i], variableValueItem -%}
         {%- endfor %}
         
-        {%-  assign page_title = new_page_title | strip_html | url_decode -%}
+        {%-  assign page_title = new_page_title | strip_html | url_decode | replace: '&quot;', '"' -%}
         {%-  assign page_description = new_page_description | strip_html | url_decode -%}
         {%-  assign page_description = new_page_description | replace: '"', "'" -%}
         <script>
-        var tapita_meta_page_title =  `{{  page_title }}`;
+        var tapita_meta_page_title =  `{{  page_title | replace: '&quot;', '"' }}`;
         var tapita_meta_page_description = `{{  page_description }}`;
         </script>
         {%- break -%}

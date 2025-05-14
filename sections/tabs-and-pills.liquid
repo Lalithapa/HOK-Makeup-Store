@@ -1,7 +1,174 @@
-<div class="mobile_screen flex-column container">
-  <div class="tab-nav">
-    <a href="{% if template == "index" %}javascript:void(0){% else %}/{% endif %}" class="tab-button{% if template == "index" %} active{% endif %}" data-tab="home">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="19" height="19" viewBox="0 0 201.387 201.387" style="enable-background:new 0 0 201.387 201.387;" xml:space="preserve">
+{% stylesheet %}
+   .tab-nav {
+      display: flex;
+      justify-content: space-around;
+      margin: 16px 0 0 ;
+      z-index: 0;
+      gap: 16px;
+      width: calc(100% - 8px);
+    }
+     .tab-nav[location="home"] {
+        gap: 8px;
+     }
+
+  .tab-button {
+    flex:1;
+    background: #fff;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: var(--family-medium);
+    transition: background 0.3s;
+    box-shadow: 0px 2px 10px 0px rgba(150, 149, 149, 0.25);
+  }
+  .tab-button svg {
+    /* width: 14px;
+    height: 14px; */
+    margin-right: 10px;
+  }
+  .tab-button.active[data-tab="home"] {
+    background: #1B1A1A;
+    color: #fff;
+    box-shadow: 0px 2px 10px 0px rgba(150, 149, 149, 0.25);
+  }
+  .tab-button.active[data-tab="home"] svg{
+    fill: #fff;
+  }
+  a.tab-button[data-tab="home"]:hover {
+    background: #000000;
+    color: #fff;
+  }
+  a.tab-button[data-tab="makeup"]:hover {
+    background: #f0dce3;
+    color: #000;
+  }
+  a.tab-button[data-tab="home"]:hover svg {
+    fill: #fff;
+  }
+
+  .tab-button.active {
+    font-weight: 700;
+    background: #F0DCE3;
+    position: relative;
+  }
+  .tab-button.active[data-tab="makeup"] {
+     font-size: 15px;
+  }
+  a.tab-button.active[data-tab="makeup"]:before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    top: -7px;
+    width: calc(100% + 16px);
+    height: calc(100% + 14px);
+    z-index: -1;
+    border-radius: 17px 17px 0 0;
+  }
+  a.tab-button.active[data-tab="makeup"]:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    bottom: -7px;
+    left: -38px;
+    width: 30px;
+    height: 30px;
+    z-index: -1;
+    clip-path: path("M30,0 A25,25 0 0,0 0,30 L0,0 Z");
+    transform: rotate(180deg);
+  }
+
+  button.tab-button.active:before {
+    content: "";
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    background: #ffffff;
+    box-shadow: 0px -16px 20px 0px rgb(181 181 181 / 26%);
+    z-index: -1;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+  }
+
+  .tab-button.active svg {
+    width: 19px;
+    height: 19px;
+    margin-right: 6px;
+  }
+
+  .tab-content.active {
+    display: block;
+    border-radius: 17px;
+    margin: 6px 0 16px;
+  }
+  #makeup.tab-content.active {
+    border-radius: 17px 0 17px 17px;
+    background: #fff;
+    box-shadow: 0px 6px 10px rgba(91, 91, 91, 0.25);
+  }
+  #makeup .category-cards{
+    gap: 16px;
+  }
+  .category-cards {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 10px;
+  }
+
+  /* #makeup .category-cards , #skincare .category-cards{
+    box-shadow: 0px 6px 10px rgba(91, 91, 91, 0.25);
+  }
+  #makeup .category-cards{
+    border-radius: 17px 0 17px 17px ;
+  } */
+
+  .tab-content , .category-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-product-cards {
+    border-radius: 20px;
+    scroll-snap-align: start;
+    text-align: center;
+    flex: 0 0 auto;
+  }
+  .tab-product-cards > * {
+      mix-blend-mode: multiply;
+  }
+
+   #makeup .tab-product-cards img , #skincare .tab-product-cards img {
+      width: auto;
+      height: 70px;
+  }
+{% endstylesheet %}
+<div class="mobile_screen flex-column container" style="background: #F4F4F4;">
+  <div class="tab-nav" location="{% if template == "index" %}home{% else %}makeup{% endif %}">
+    <a
+      href="{% if template == "index" %}javascript:void(0){% else %}/{% endif %}"
+      class="tab-button{% if template == "index" %} active{% endif %}"
+      data-tab="home"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        id="Capa_1"
+        x="0px"
+        y="0px"
+        width="19"
+        height="19"
+        viewBox="0 0 201.387 201.387"
+        style="enable-background:new 0 0 201.387 201.387;"
+        xml:space="preserve"
+      >
         <g>
           <g>
             <path d="M129.413,24.885C127.389,10.699,115.041,0,100.692,0C91.464,0,82.7,4.453,77.251,11.916    c-1.113,1.522-0.78,3.657,0.742,4.77c1.517,1.109,3.657,0.78,4.768-0.744c4.171-5.707,10.873-9.115,17.93-9.115    c10.974,0,20.415,8.178,21.963,19.021c0.244,1.703,1.705,2.932,3.376,2.932c0.159,0,0.323-0.012,0.486-0.034    C128.382,28.479,129.679,26.75,129.413,24.885z"/>
@@ -77,293 +244,438 @@
         </g>
         <g>
         </g>
-      </svg> Home
+      </svg>
+      Home
     </a>
-    <a href="{% if template == "page.makeup-page" %}javascript:void(0){% else %}/pages/mega-festive-sale{% endif %}" class="tab-button{% if template == "page.makeup-page" %} active{% endif %}" data-tab="makeup">
+    <a
+      href="{% if template == "page.makeup-page" %}javascript:void(0){% else %}/pages/mega-festive-sale{% endif %}"
+      class="tab-button{% if template == "page.makeup-page" %} active{% endif %}"
+      data-tab="makeup"
+    >
       <div class="div-left"><br></div>
-       <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 512 512" width="19" height="19" viewBox="0 0 512 512"><g id="_x32_3_Mirror"><g><path d="m252.002 253.741c1.465 0 2.93-.559 4.048-1.677l63.096-63.096c2.236-2.236 2.236-5.859 0-8.096-2.236-2.236-5.859-2.236-8.096 0l-63.096 63.096c-2.236 2.236-2.236 5.859 0 8.096 1.118 1.118 2.583 1.677 4.048 1.677z"/><path d="m293.498 264.949c1.118 1.118 2.583 1.677 4.048 1.677s2.93-.559 4.048-1.677l30.437-30.437c2.236-2.236 2.236-5.859 0-8.096-2.236-2.236-5.859-2.236-8.096 0l-30.437 30.437c-2.237 2.237-2.237 5.86 0 8.096z"/><path d="m256.001 323.378c76.346 0 138.458-62.112 138.458-138.458s-62.112-138.461-138.458-138.461-138.462 62.115-138.462 138.461 62.116 138.458 138.462 138.458zm0-265.469c70.032 0 127.008 56.975 127.008 127.011 0 70.032-56.975 127.008-127.008 127.008-70.036 0-127.011-56.975-127.011-127.008 0-70.035 56.975-127.011 127.011-127.011z"/><path d="m480.496 179.195h-45.723c-3.04-96.009-82.038-173.192-178.772-173.192s-175.732 77.183-178.773 173.192h-45.724c-3.163 0-5.725 2.564-5.725 5.725s2.563 5.725 5.725 5.725h13.047c3.053 114.032 96.696 205.87 211.45 205.87 114.756 0 208.397-91.838 211.45-205.87h13.045c3.161 0 5.725-2.564 5.725-5.725s-2.564-5.725-5.725-5.725zm-224.495-161.742c92.34 0 167.467 75.127 167.467 167.467s-75.127 167.467-167.467 167.467-167.467-75.127-167.467-167.467 75.127-167.467 167.467-167.467zm0 367.612c-108.44 0-196.95-86.703-199.999-194.42h21.227c3.04 96.009 82.038 173.193 178.773 173.193s175.732-77.183 178.773-173.193h21.225c-3.049 107.718-91.558 194.42-199.999 194.42z"/><path d="m346.168 467.394h-65.589v-54.489c0-3.161-2.564-5.725-5.725-5.725s-5.725 2.564-5.725 5.725v54.489h-19.389v-53.994c0-3.161-2.564-5.725-5.725-5.725s-5.725 2.564-5.725 5.725v53.994h-65.586c-10.641 0-19.3 8.659-19.3 19.304 0 10.641 8.659 19.3 19.3 19.3h173.465c10.641 0 19.3-8.659 19.3-19.3-.001-10.646-8.66-19.304-19.301-19.304zm0 27.153h-173.465c-4.327 0-7.85-3.522-7.85-7.85 0-4.331 3.522-7.853 7.85-7.853 34.986.021 145.814.004 173.465 0 4.327 0 7.85 3.522 7.85 7.853 0 4.328-3.523 7.85-7.85 7.85z"/></g></g><g id="Layer_1"/></svg> Makeup
-       <div class="div-right"><br></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        enable-background="new 0 0 512 512"
+        width="19"
+        height="19"
+        viewBox="0 0 512 512"
+      >
+        <g id="_x32_3_Mirror"><g><path d="m252.002 253.741c1.465 0 2.93-.559 4.048-1.677l63.096-63.096c2.236-2.236 2.236-5.859 0-8.096-2.236-2.236-5.859-2.236-8.096 0l-63.096 63.096c-2.236 2.236-2.236 5.859 0 8.096 1.118 1.118 2.583 1.677 4.048 1.677z"/><path d="m293.498 264.949c1.118 1.118 2.583 1.677 4.048 1.677s2.93-.559 4.048-1.677l30.437-30.437c2.236-2.236 2.236-5.859 0-8.096-2.236-2.236-5.859-2.236-8.096 0l-30.437 30.437c-2.237 2.237-2.237 5.86 0 8.096z"/><path d="m256.001 323.378c76.346 0 138.458-62.112 138.458-138.458s-62.112-138.461-138.458-138.461-138.462 62.115-138.462 138.461 62.116 138.458 138.462 138.458zm0-265.469c70.032 0 127.008 56.975 127.008 127.011 0 70.032-56.975 127.008-127.008 127.008-70.036 0-127.011-56.975-127.011-127.008 0-70.035 56.975-127.011 127.011-127.011z"/><path d="m480.496 179.195h-45.723c-3.04-96.009-82.038-173.192-178.772-173.192s-175.732 77.183-178.773 173.192h-45.724c-3.163 0-5.725 2.564-5.725 5.725s2.563 5.725 5.725 5.725h13.047c3.053 114.032 96.696 205.87 211.45 205.87 114.756 0 208.397-91.838 211.45-205.87h13.045c3.161 0 5.725-2.564 5.725-5.725s-2.564-5.725-5.725-5.725zm-224.495-161.742c92.34 0 167.467 75.127 167.467 167.467s-75.127 167.467-167.467 167.467-167.467-75.127-167.467-167.467 75.127-167.467 167.467-167.467zm0 367.612c-108.44 0-196.95-86.703-199.999-194.42h21.227c3.04 96.009 82.038 173.193 178.773 173.193s175.732-77.183 178.773-173.193h21.225c-3.049 107.718-91.558 194.42-199.999 194.42z"/><path d="m346.168 467.394h-65.589v-54.489c0-3.161-2.564-5.725-5.725-5.725s-5.725 2.564-5.725 5.725v54.489h-19.389v-53.994c0-3.161-2.564-5.725-5.725-5.725s-5.725 2.564-5.725 5.725v53.994h-65.586c-10.641 0-19.3 8.659-19.3 19.304 0 10.641 8.659 19.3 19.3 19.3h173.465c10.641 0 19.3-8.659 19.3-19.3-.001-10.646-8.66-19.304-19.301-19.304zm0 27.153h-173.465c-4.327 0-7.85-3.522-7.85-7.85 0-4.331 3.522-7.853 7.85-7.853 34.986.021 145.814.004 173.465 0 4.327 0 7.85 3.522 7.85 7.853 0 4.328-3.523 7.85-7.85 7.85z"/></g></g><g id="Layer_1"/>
+      </svg>
+      Makeup
+      <div class="div-right"><br></div>
     </a>
-    <a href="{% if template == "page.skincare-page" %}javascript:void(0){% else %}/pages/pink-flash{% endif %}" class="tab-button{% if template == "page.skincare-page" %} active{% endif %}" data-tab="skincare">
-       <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 128 128" width="19" height="19"><path d="M94.014,115.084h0a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,94.01,115.084Z"/><path d="M94.012,115.084a9.712,9.712,0,0,1-6.927-2.926,9.127,9.127,0,0,1-2.621-6.667c.113-3.944,3.671-9.316,6.636-13.128a3.689,3.689,0,0,1,5.826,0c2.964,3.812,6.52,9.185,6.634,13.127h0a9.128,9.128,0,0,1-2.622,6.667A9.709,9.709,0,0,1,94.012,115.084Zm0-21.146a.679.679,0,0,0-.545.267c-3.747,4.818-5.937,8.963-6.006,11.372a6.155,6.155,0,0,0,1.775,4.49,6.659,6.659,0,0,0,9.549,0,6.156,6.156,0,0,0,1.776-4.49c-.071-2.408-2.258-6.553-6-11.372A.68.68,0,0,0,94.013,93.938Z"/><path d="M106.486,28.823h-2.474c-1.254-1.973-2.538-8.137-2.7-20.269a7.254,7.254,0,0,0-14.507,0c-.162,12.132-1.445,18.3-2.7,20.269H81.631a6.406,6.406,0,0,0-6.4,6.4V43.6a6.407,6.407,0,0,0,6.4,6.4h5.186l.744,28.458c0,2.567,2.578,8.9,6.467,8.9s6.467-6.334,6.466-8.862l.745-28.5h5.247a6.406,6.406,0,0,0,6.4-6.4V35.222A6.406,6.406,0,0,0,106.486,28.823ZM89.805,8.594a4.254,4.254,0,1,1,8.507,0c.13,9.737.936,16.5,2.4,20.229h-13.3C88.868,25.1,89.675,18.33,89.805,8.594ZM97.5,78.458c0,1.757-2.052,5.9-3.467,5.9s-3.467-4.144-3.468-5.941L89.817,50h8.422ZM109.885,43.6a3.4,3.4,0,0,1-3.4,3.4H81.631a3.4,3.4,0,0,1-3.4-3.4V35.222a3.4,3.4,0,0,1,3.4-3.4h24.855a3.4,3.4,0,0,1,3.4,3.4Z"/><path d="M59.647,62.953a19.575,19.575,0,0,0-5.806-6.89,3.57,3.57,0,0,1-1.257-4.054l.2-.575a4.375,4.375,0,0,0-.444-8.7H25.4a4.376,4.376,0,0,0-.44,8.7l.2.563a3.629,3.629,0,0,1,.2,1.182A3.561,3.561,0,0,1,23.9,56.064,19.572,19.572,0,0,0,16,71.73v47.71a7.544,7.544,0,0,0,7.54,7.53H54.2a7.544,7.544,0,0,0,7.54-7.53V71.73A19.572,19.572,0,0,0,59.647,62.953ZM25.4,45.732H52.343a1.388,1.388,0,0,1,0,2.749H25.4a1.388,1.388,0,0,1,0-2.749ZM58.74,119.44a4.54,4.54,0,0,1-4.54,4.53H23.54A4.54,4.54,0,0,1,19,119.44V71.73a16.558,16.558,0,0,1,6.684-13.255,6.463,6.463,0,0,0,2.421-6.994H49.633a6.54,6.54,0,0,0,2.427,7A16.512,16.512,0,0,1,58.74,71.73Z"/><path d="M47.545,71.229H30.2a5.207,5.207,0,0,0-5.2,5.2v32.016a5.206,5.206,0,0,0,5.2,5.2h17.35a5.206,5.206,0,0,0,5.2-5.2V76.43A5.207,5.207,0,0,0,47.545,71.229Zm2.2,37.217a2.2,2.2,0,0,1-2.2,2.2H30.2a2.2,2.2,0,0,1-2.2-2.2V76.43a2.2,2.2,0,0,1,2.2-2.2h17.35a2.2,2.2,0,0,1,2.2,2.2Z"/></svg> Skincare
-    </a>
+    {% comment %}
+        <a href="{% if template == "page.skincare-page" %}javascript:void(0){% else %}/pages/pink-flash{% endif %}" class="tab-button{% if template == "page.skincare-page" %} active{% endif %}" data-tab="skincare">
+         <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 128 128" width="19" height="19"><path d="M94.014,115.084h0a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,94.01,115.084Z"/><path d="M94.012,115.084a9.712,9.712,0,0,1-6.927-2.926,9.127,9.127,0,0,1-2.621-6.667c.113-3.944,3.671-9.316,6.636-13.128a3.689,3.689,0,0,1,5.826,0c2.964,3.812,6.52,9.185,6.634,13.127h0a9.128,9.128,0,0,1-2.622,6.667A9.709,9.709,0,0,1,94.012,115.084Zm0-21.146a.679.679,0,0,0-.545.267c-3.747,4.818-5.937,8.963-6.006,11.372a6.155,6.155,0,0,0,1.775,4.49,6.659,6.659,0,0,0,9.549,0,6.156,6.156,0,0,0,1.776-4.49c-.071-2.408-2.258-6.553-6-11.372A.68.68,0,0,0,94.013,93.938Z"/><path d="M106.486,28.823h-2.474c-1.254-1.973-2.538-8.137-2.7-20.269a7.254,7.254,0,0,0-14.507,0c-.162,12.132-1.445,18.3-2.7,20.269H81.631a6.406,6.406,0,0,0-6.4,6.4V43.6a6.407,6.407,0,0,0,6.4,6.4h5.186l.744,28.458c0,2.567,2.578,8.9,6.467,8.9s6.467-6.334,6.466-8.862l.745-28.5h5.247a6.406,6.406,0,0,0,6.4-6.4V35.222A6.406,6.406,0,0,0,106.486,28.823ZM89.805,8.594a4.254,4.254,0,1,1,8.507,0c.13,9.737.936,16.5,2.4,20.229h-13.3C88.868,25.1,89.675,18.33,89.805,8.594ZM97.5,78.458c0,1.757-2.052,5.9-3.467,5.9s-3.467-4.144-3.468-5.941L89.817,50h8.422ZM109.885,43.6a3.4,3.4,0,0,1-3.4,3.4H81.631a3.4,3.4,0,0,1-3.4-3.4V35.222a3.4,3.4,0,0,1,3.4-3.4h24.855a3.4,3.4,0,0,1,3.4,3.4Z"/><path d="M59.647,62.953a19.575,19.575,0,0,0-5.806-6.89,3.57,3.57,0,0,1-1.257-4.054l.2-.575a4.375,4.375,0,0,0-.444-8.7H25.4a4.376,4.376,0,0,0-.44,8.7l.2.563a3.629,3.629,0,0,1,.2,1.182A3.561,3.561,0,0,1,23.9,56.064,19.572,19.572,0,0,0,16,71.73v47.71a7.544,7.544,0,0,0,7.54,7.53H54.2a7.544,7.544,0,0,0,7.54-7.53V71.73A19.572,19.572,0,0,0,59.647,62.953ZM25.4,45.732H52.343a1.388,1.388,0,0,1,0,2.749H25.4a1.388,1.388,0,0,1,0-2.749ZM58.74,119.44a4.54,4.54,0,0,1-4.54,4.53H23.54A4.54,4.54,0,0,1,19,119.44V71.73a16.558,16.558,0,0,1,6.684-13.255,6.463,6.463,0,0,0,2.421-6.994H49.633a6.54,6.54,0,0,0,2.427,7A16.512,16.512,0,0,1,58.74,71.73Z"/><path d="M47.545,71.229H30.2a5.207,5.207,0,0,0-5.2,5.2v32.016a5.206,5.206,0,0,0,5.2,5.2h17.35a5.206,5.206,0,0,0,5.2-5.2V76.43A5.207,5.207,0,0,0,47.545,71.229Zm2.2,37.217a2.2,2.2,0,0,1-2.2,2.2H30.2a2.2,2.2,0,0,1-2.2-2.2V76.43a2.2,2.2,0,0,1,2.2-2.2h17.35a2.2,2.2,0,0,1,2.2,2.2Z"/></svg> Skincare
+      </a>
+    {% endcomment %}
   </div>
-  
-  <div class="tab-content{% if template == "index" %} active{% endif %}" id="home"> 
-    <div class="category-cards">
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Foundation_302f9c28-8768-44cb-b3b0-0e5669448969.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+  <div class="tab-content{% if template == "index" %} active{% endif %}" id="home">
+    <div class="category-cards" bis_skin_checked="1">
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="https://hokmakeup.com/collections/makeup" title="Sale" class="lazyload-media">
+          <video
+            playsinline
+            width="110"
+            height="100%"
+            class="img-fluid"
+            autoplay
+            loop
+            muted
+            preload="metadata"
+            poster="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/preview_images/saleis_small.png?v=1746189136"
+            onloadeddata="this.parentElement.classList.add('loaded')"
+          >
+            <source
+              src="https://cdn.shopify.com/videos/c/vp/5564d3c9e2054ba787da48fb1df8ddcf/5564d3c9e2054ba787da48fb1df8ddcf.HD-1080p-2.5Mbps-46185480.mp4?v=0"
+              type="video/mp4"
+            >
+          </video>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Lipstick_b1c652c4-9fb1-4855-a149-feb0f618772d.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/hok-makeup-x-sweetons" title="Sweetons">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/tile.jpg?v=1746253074&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Sweetons"
+              onload="this.parentElement.classList.add('loaded')"
+            >
+          </div>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Foundation_302f9c28-8768-44cb-b3b0-0e5669448969.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/best-seller-home-page" title="Best Sellers">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Best_Sellers_29cdb50f-dbd0-411f-9b10-5a3498ab5fc2.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Best Sellers"
+            >
+          </div>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Lipstick_b1c652c4-9fb1-4855-a149-feb0f618772d.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/makeup" title="Makeup">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Makeup_4f71f507-47c5-4cba-9985-a77d2d010b04.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Makeup"
+            >
+          </div>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Foundation_302f9c28-8768-44cb-b3b0-0e5669448969.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/skincare" title="Skincare">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Skin_b07f8aec-247a-4d6b-9919-2d7d7647a35e.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Skincare"
+            >
+          </div>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Lipstick_b1c652c4-9fb1-4855-a149-feb0f618772d.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/hair-care" title="Hair Care">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Hair_b6e32764-348f-4459-ba87-00b46e064c15.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Hair Care"
+            >
+          </div>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Foundation_302f9c28-8768-44cb-b3b0-0e5669448969.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/accessories-1" title="Accessories">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Organizers.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Accessories"
+            >
+          </div>
+        </a>
       </div>
-      <div class="tab-product-cards">
-        <img src="https://hokmakeup.com/cdn/shop/files/Lipstick_b1c652c4-9fb1-4855-a149-feb0f618772d.png" width="85" height="100%" class="img-fluid" loading="lazy" alt="Face">
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/body-care" title="Body Care">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Bath_Body_0069d3a4-6ae2-4598-8bbe-c77158012105.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Body Care"
+            >
+          </div>
+        </a>
+      </div>
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/fragrance" title="Fragrance">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Fragrance_7ab772ad-cbec-4387-88f1-5a2920f670b6.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Fragrance"
+            >
+          </div>
+        </a>
+      </div>
+
+      <div class="tab-product-cards" bis_skin_checked="1">
+        <a href="/collections/combos" title="Combos & Kits">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Combos_and_Kits_bf9d2d7b-7fcb-4535-9272-9c02e48175e6.jpg?v=1744972602&width=3000"
+              width="110"
+              height="100%"
+              class="img-fluid"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Combos & Kits"
+            >
+          </div>
+        </a>
       </div>
     </div>
   </div>
-  
+
   <div class="tab-content{% if template == "page.makeup-page" %} active{% endif %}" id="makeup">
     <div class="category-cards">
       <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36949.png?v=1742473974" width="90" height="55" loading="lazy" alt="Face">
+        <a href="/collections/face" title="Face">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/qw.png?v=1746793287"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Face"
+            >
+          </div>
+        </a>
       </div>
       <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36942.png?v=1742537995" width="90" height="55" loading="lazy" alt="Eyes">
+        <a href="/collections/eyes" title="Eyes">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/we.png?v=1746793288"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Eyes"
+            >
+          </div>
+        </a>
       </div>
       <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36949.png?v=1742473974" width="90" height="55" loading="lazy" alt="Lips">
+        <a href="/collections/lips" title="Lips">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/er.png?v=1746793287"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Lips"
+            >
+          </div>
+        </a>
       </div>
       <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36942.png?v=1742537995" width="90" height="55" loading="lazy" alt="Hair">
+        <a href="/collections/nails" title="Nails">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/rt.png?v=1746793288"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Nails"
+            >
+          </div>
+        </a>
+      </div>
+      <div class="tab-product-cards">
+        <a href="/collections/tools-brushes" title="Tools">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/yu.png?v=1746793287"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Tools"
+            >
+          </div>
+        </a>
+      </div>
+      <div class="tab-product-cards">
+        <a href="/collections/combos" title="Value Sets">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/ui.png?v=1746793288"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Value Sets"
+            >
+          </div>
+        </a>
+      </div>
+      <div class="tab-product-cards">
+        <a href="/collections/accessories-1" title="Accessories">
+          <div class="lazyload-media">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/ty.png?v=1746793288"
+              width="90"
+              height="55"
+              loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
+              alt="Accessories"
+            >
+          </div>
+        </a>
       </div>
     </div>
   </div>
-  <div class="tab-content{% if template == "page.skincare-page" %} active{% endif %}" id="skincare">
-    <div class="category-cards">
-      <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36942.png?v=1742537995" width="90" height="55" loading="lazy" alt="Eyes">
+  {% comment %}
+      <div class="tab-content{% if template == "page.skincare-page" %} active{% endif %}" id="skincare">
+        <div class="category-cards">
+          <div class="tab-product-cards">
+            <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36942.png?v=1742537995" width="90" height="55" loading="lazy" alt="Eyes">
+            </div>
+            <div class="tab-product-cards">
+              <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36949.png?v=1742473974" width="90" height="55" loading="lazy" alt="Face">
+            </div>
+          <div class="tab-product-cards">
+            <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36949.png?v=1742473974" width="90" height="55" loading="lazy" alt="Lips">
+          </div>
+          <div class="tab-product-cards">
+            <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36942.png?v=1742537995" width="90" height="55" loading="lazy" alt="Hair">
+          </div>
         </div>
-        <div class="tab-product-cards">
-          <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36949.png?v=1742473974" width="90" height="55" loading="lazy" alt="Face">
-        </div>
-      <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36949.png?v=1742473974" width="90" height="55" loading="lazy" alt="Lips">
-      </div>
-      <div class="tab-product-cards">
-        <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Frame_36942.png?v=1742537995" width="90" height="55" loading="lazy" alt="Hair">
-      </div>
     </div>
-  </div>
+  {% endcomment %}
 </div>
-<style>
-
-  .tab-nav {
-  display: flex;
-  justify-content: space-around;
-  /* background: #fff; */
-  margin: 16px 0 0 ;
-  z-index: 0;
-}
-
-.tab-button {
-  background: #fff;
-  border: none;
-  padding: 4px 16px;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 13px;
-  font-weight: 500;
-  transition: background 0.3s;
-  box-shadow: 0px 2px 10px 0px rgba(150, 149, 149, 0.25);
-}
-.tab-button svg {
-  width: 14px;
-  height: 14px;
-  margin-right: 10px; 
-}
-.tab-button.active[data-tab="home"] {
-  background: #1B1A1A;
-  color: #fff;
-}
-.tab-button.active[data-tab="home"] svg{
-  fill: #fff;
-}
-
-.tab-button.active {
-  font-weight: 600;
-  background: #F0DCE3;
-  position: relative;
-}
-
-button.tab-button.active:before {
-    content: "";
-    width: calc(100% + 14px);
-    height: calc(100% + 14px);
-    position: absolute;
-    top: -7px;
-    left: -7px;
-    background: #ffffff;
-    box-shadow: 0px -16px 20px 0px rgb(181 181 181 / 26%);
-    z-index: -1;
-    border-top-left-radius: 17px;
-    border-top-right-radius: 17px;
-}
-
-.tab-button.active svg {
-  width: 19px;
-  height: 19px;
-  margin-right: 6px;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.category-cards {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 10px;
-  margin: 6px 0 16px;
-  background: #fff;
-  border-radius: 17px;
-}
-
-#makeup .category-cards , #skincare .category-cards{
-  box-shadow: 0px 6px 10px rgba(91, 91, 91, 0.25);
-}
-
-.tab-content , .category-cards::-webkit-scrollbar {
-  display: none;
-}
-
-.tab-product-cards {
-  background: #fff;
-  border-radius: 20px;
-  scroll-snap-align: start;
-  text-align: center;
-  flex: 0 0 auto;
-}
-
- #makeup .tab-product-cards img , #skincare .tab-product-cards img {
-    width: 90px;
-    height: 55px;
-}
-
-</style>
 <div class="tab-content" id="skincare">
   <p>Skincare Content Here</p>
 </div>
 {% schema %}
+{
+  "name": "Chips Navigation",
+  "max_blocks": 12,
+  "settings": [
     {
-      "name": "Chips Navigation",
-      "max_blocks": 12,
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Desktop Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
       "settings": [
         {
-          "type": "link_list",
-          "id": "menu",
-          "default": "main-menu",
-          "label": "Desktop Menu"
-        }
-      ],
-      "blocks": [
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color"
+        },
         {
-          "type": "announcement",
-          "name": "Announcement",
-          "settings": [
-            {
-              "type": "color",
-              "id": "bg_color",
-              "label": "Background Color"
-            },
-            {
-              "type": "color_background",
-              "id": "bg_color_gd",
-              "label": "Background Color Gradient"
-            },
-            {
-              "type": "image_picker",
-              "id": "bg_img",
-              "label": "Background Image"
-            },
-            {
-              "type": "richtext",
-              "id": "text",
-              "label": "Announcement Heading",
-              "default": "<p>Welcome to our store</p>"
-            },
-            {
-              "type": "color",
-              "id": "head_col",
-              "label": "Main Heading Color",
-              "default": "#fff"
-            },
-            {
-              "type": "range",
-              "id": "desk-main-heading-size",
-              "label": "Desktop Main Heading Text Size",
-              "default": 22,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-            {
-              "type": "range",
-              "id": "mob-main-heading-size",
-              "label": "Mobile Main Heading Text Size",
-              "default": 14,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-    
-            {
-              "type": "richtext",
-              "id": "sub_txt",
-              "label": "Sub Heading",
-              "default": "<p>*automatically applied at checkout, excludes sale items, Miracle Cream and Haircare Electricals. Cannot be used in conjunction with any other offer.</p>"
-            },
-            {
-              "type": "color",
-              "id": "sub_head_col",
-              "label": "Sub Heading Color",
-              "default": "#fff"
-            },
-            {
-              "type": "range",
-              "id": "desk-sub-heading-size",
-              "label": "Desktop Sub Heading Text Size",
-              "default": 10,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-            {
-              "type": "range",
-              "id": "mob-sub-heading-size",
-              "label": "Mobile Sub Heading Text Size",
-              "default": 8,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-            {
-              "type": "url",
-              "id": "link",
-              "label": "Announcement Bar Link"
-            }
-          ]
-        }
-      ],
-      "presets": [
+          "type": "color_background",
+          "id": "bg_color_gd",
+          "label": "Background Color Gradient"
+        },
         {
-          "name": "Chips Navigation"
+          "type": "image_picker",
+          "id": "bg_img",
+          "label": "Background Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Announcement Heading",
+          "default": "<p>Welcome to our store</p>"
+        },
+        {
+          "type": "color",
+          "id": "head_col",
+          "label": "Main Heading Color",
+          "default": "#fff"
+        },
+        {
+          "type": "range",
+          "id": "desk-main-heading-size",
+          "label": "Desktop Main Heading Text Size",
+          "default": 22,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mob-main-heading-size",
+          "label": "Mobile Main Heading Text Size",
+          "default": 14,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+
+        {
+          "type": "richtext",
+          "id": "sub_txt",
+          "label": "Sub Heading",
+          "default": "<p>*automatically applied at checkout, excludes sale items, Miracle Cream and Haircare Electricals. Cannot be used in conjunction with any other offer.</p>"
+        },
+        {
+          "type": "color",
+          "id": "sub_head_col",
+          "label": "Sub Heading Color",
+          "default": "#fff"
+        },
+        {
+          "type": "range",
+          "id": "desk-sub-heading-size",
+          "label": "Desktop Sub Heading Text Size",
+          "default": 10,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mob-sub-heading-size",
+          "label": "Mobile Sub Heading Text Size",
+          "default": 8,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Announcement Bar Link"
         }
       ]
     }
-    {% endschema %}
-    
+  ],
+  "presets": [
+    {
+      "name": "Chips Navigation"
+    }
+  ]
+}
+{% endschema %}

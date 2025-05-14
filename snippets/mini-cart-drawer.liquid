@@ -180,7 +180,7 @@
               {% if item.variant.title != 'Default Title' %}
                 <ul class="b-miniproduct-attribute_list list-unstyled p-0">
                   <li class="b-miniproduct-attribute_item">
-                    <span class="b-miniproduct-attribute_key"> Colour: </span>
+                    <span class="b-miniproduct-attribute_key {{ item.vendor }}"> {% unless item.vendor == "Sweetons" or item.vendor == "Fini" or item.title contains 'Multipurpose Lip Balm' %}Colour:{% else %}Size:{% endunless %}</span>
                     &nbsp;
                     <strong class="b-miniproduct-attribute_value">
                       {{ item.variant.title | capitalize }}

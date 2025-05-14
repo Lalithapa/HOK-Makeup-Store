@@ -2,6 +2,10 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "main_cart_drawer_446jVG": {
+      "type": "main-cart-drawer",
+      "settings": {}
+    },
     "new_footer_kPaAYa": {
       "type": "new-footer",
       "blocks": {
@@ -58,6 +62,7 @@
     }
   },
   "order": [
+    "main_cart_drawer_446jVG",
     "new_footer_kPaAYa",
     "footer"
   ]

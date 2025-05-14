@@ -3,7 +3,9 @@
     assign first_variant = product.selected_or_first_available_variant 
     assign offer_name = 'default'
     for collection in product.collections
-      if collection.handle == 'bogo-sale-limited-time-only'
+      if collection.handle == 'buy-any-3-at-949'
+        assign offer_name = 'pd-bundle'
+      elsif collection.handle == 'bogo-sale-limited-time-only'
         assign offer_name = 'bogo'
       elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by' or collection.handle == 'the-add-to-heart-sale-up-to-60-off'
         assign offer_name = 'offerHidden'
@@ -80,14 +82,33 @@
             </span>
           </div>
           {% comment %} Available Offer {% endcomment %}
-          {% unless offer_name == 'offerHidden' %}
+          {% unless offer_name == 'offerHidden'  %}
           <section class="quickview_accordion">
             <div class="quickview_tab">
               <input type="checkbox" name="quickview_accordion-1" id="quickview_acc">
               <label for="quickview_acc" class="quickview_tab__label">% &nbsp; Available Offers</label>
               <div class="quickview_tab__content">
                 <ul class="bogo-offer-wrapper">
-                  {% if offer_name == 'bogo' %}
+                  {% if product.vendor == "Sweetons" or product.vendor == "Fini"  %}
+                    {% unless product.title contains '1 Kg' or product.title contains '1.8 Kg' %}
+                        <li class="bogo-text-wrapper"><b>Buy 2 Get Extra 15% OFF</b></li>
+                        <li class="bogo-text-wrapper"><b>Buy 3 Get Extra 25% OFF</b></li>
+                        <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
+                          <b>
+                            Offers on Selected
+                            <a href="/collections/small-pack-candies"
+                              class="text-decoration-underline">Collection</a></b>
+                        </p>
+                      {% endunless %}
+                  {% elsif offer_name == 'pd-bundle' %}
+                  <li class="bogo-text-wrapper"><b>Buy Any 3 at ₹949 - Limited Time Offer!</b></li>
+                  <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
+                    <b>
+                      Offers on Selected
+                      <a href="/collections/buy-any-3-at-949"
+                        class="text-decoration-underline">Collection</a></b>
+                  </p>
+                  {% elsif offer_name == 'bogo' %}
                   <li class="bogo-text-wrapper"><b>Buy One Get One Free</b></li>
                   <li class="bogo-text-wrapper"><b>Buy Two Get Two Free</b></li>
                   <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">

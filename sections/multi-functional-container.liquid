@@ -13,31 +13,15 @@
       }
     }
   {% endif %}
-  {% if section.settings.show_scrollbar %}
-  .coming-soon-swiper-pagination-{{ section.id }}{
-      top: unset !important;
-      bottom: -26px;
-      background: #F5F5F5;
-      z-index: 0;
-    }
-  .coming-soon-swiper-pagination-{{ section.id }} .swiper-pagination-progressbar-fill{
-    background: #6E6E6E;
-  }
-  {% endif %}
-  .carousel-section-title-wrapper p svg{
-    vertical-align: baseline;
-    margin-left: -9px;
-  }
   @media screen and (max-width: 768px) {
     .section-{{ section.id }}-margin {
       margin-top: {{ section.settings.margin_top_mobile }}px;
       margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
     }
-    {% if section.settings.show_scrollbar %}
-    .coming-soon-swiper-pagination-{{ section.id }}{
-        bottom: -12px;
-      }
-    {% endif %}
+  }
+  .carousel-section-title-wrapper p svg{
+    vertical-align: baseline;
+    margin-left: -9px;
   }
 {%- endstyle -%}
 {% liquid
@@ -68,30 +52,32 @@
         </p>
       </div>
     {% endif %}
-    {% if section.settings['hero-banner'] != blank %}
-      <a href="{{ section.settings.carousel-sub-title-links }}">
-        <img
-          loading="lazy"
-          class="{% if section.settings['hero-banner-mobile'] != blank %}mobile_screen{% endif %}"
-          width="100%"
-          height="100%"
-          src="{{ section.settings['hero-banner'] |  image_url  }}"
-          alt="{{ section.settings['hero-banner'] | escape }}"
-        >
-      </a>
-    {% endif %}
-    {% if section.settings['hero-banner-mobile'] != blank %}
       <a href="{{ section.settings.carousel-sub-title-links }}" class="img-center">
-        <img
-          loading="lazy"
-          class="desktop_screen"
-          width="100%"
-          height="100%"
-          src="{{ section.settings['hero-banner-mobile'] |  image_url  }}"
-          alt="{{ section.settings['hero-banner'] | escape }}"
-        >
+        <div class="lazyload-media">                    
+        {% if section.settings['hero-banner'] != blank %}
+              <img
+                loading="lazy"
+                class="{% if section.settings['hero-banner-mobile'] != blank %}mobile_screen{% endif %}"
+                width="100%"
+                height="100%"
+                src="{{ section.settings['hero-banner'] |  image_url  }}"
+                alt="{{ section.settings['hero-banner'] | escape }}"
+                onload="this.parentElement.classList.add('loaded')" 
+              >
+          {% endif %}
+        {% if section.settings['hero-banner-mobile'] != blank %}
+          <img
+            loading="lazy"
+            class="desktop_screen"
+            width="100%"
+            height="100%"
+            src="{{ section.settings['hero-banner-mobile'] |  image_url  }}"
+            alt="{{ section.settings['hero-banner'] | escape }}"
+            onload="this.parentElement.classList.add('loaded')" 
+          >
+        {% endif %}
+        </div>
       </a>
-    {% endif %}
 
     <div class="carousel-nav-wrapper">
       <div
@@ -100,84 +86,70 @@
       >
         <div class="carousel-wrapper-inner swiper-wrapper">
           {% for block in section.blocks %}
-            <div class="square-banner-slide-wrapper swiper-slide" data-format="{{ section.id |  append: forloop.index }}" >
-              <a href="{{ block.settings['banner-url'] }}" class="square-banner-slide">
+            <div class="square-banner-slide-wrapper swiper-slide">
+              <a href="{{ block.settings['banner-url'] }}" class="square-banner-slide"{% if section.settings.seo_text %} data-location="{{ section.settings.seo_text | append:forloop.index }}"{% endif %}>
                 {% case block.type %}
                   {% when 'image-media' %}
                     {% assign sizes = '100vw' %}
                     {% assign widths = '550, 750, 1100, 1500, 1920, 2000, 3000' %}
+                   <div class="lazyload-media">                    
                     {% if block.settings['banner-image-mobile'] != blank %}
-                      {{
-                        block.settings['banner-image-desktop']
-                        | image_url: width: 3000
-                        | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: fetch_priority,
-                          class: 'w-100 desktop_screen'
-                      }}
-                      {{
-                        block.settings['banner-image-mobile']
-                        | image_url: width: 550
-                        | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: fetch_priority,
-                          class: 'w-100 mobile_screen'
-                      }}
+                      <img 
+                        src="{{ block.settings['banner-image-desktop'] | image_url: width: 3000  }}" 
+                        width="100%"
+                        height="100%" 
+                        sizes="{{ sizes }}" 
+                        fetchpriority="{{ fetch_priority }}" 
+                        class="w-100 desktop_screen" 
+                        onload="this.parentElement.classList.add('loaded')" 
+                        alt="{{ block.settings['banner-image-desktop'].alt | escape }}"
+                      >
+                      <img 
+                        src="{{ block.settings['banner-image-mobile'] | image_url: width: 550  }}" 
+                        width="100%"
+                        height="100%" 
+                        sizes="{{ sizes }}" 
+                        fetchpriority="{{ fetch_priority }}" 
+                        class="w-100 mobile_screen" 
+                        onload="this.parentElement.classList.add('loaded')" 
+                        alt="{{ block.settings['banner-image-mobile'].alt | escape }}"
+                      >
                     {% else %}
-                      {{
-                        block.settings['banner-image-desktop']
-                        | image_url: width: 3000
-                        | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: fetch_priority,
-                          class: 'w-100'
-                      }}
+                      <img 
+                        src="{{ block.settings['banner-image-desktop'] | image_url: width: 3000  }}" 
+                        width="100%"
+                        height="100%" 
+                        sizes="{{ sizes }}" 
+                        fetchpriority="{{ fetch_priority }}" 
+                        class="w-100" 
+                        onload="this.parentElement.classList.add('loaded')" 
+                        alt="{{ block.settings['banner-image-desktop'].alt | escape }}"
+                      >
                     {% endif %}
+                    </div>
                   {% when 'video-media' %}
-                    {% assign media_desktop = block.settings['banner-video-desktop'] %}
-                    {% if block.settings['banner-video-mobile'] != blank %}
-                      {% assign media_mobile = block.settings['banner-video-mobile'] %}
-                      {{
-                        media_desktop
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'desktop_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          controls: false
-                      }}
-                      {{
-                        media_mobile
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'mobile_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          controls: false
-                      }}
+                  {% assign media_desktop = block.settings['banner-video-desktop'] %}
+                  {% if block.settings['banner-video-mobile'] != blank %}
+                    {% assign media_mobile = block.settings['banner-video-mobile'] %}
+                
+                    <div class="lazyload-media">
+                       <video poster="{{ media_desktop.preview_image.src | image_url }}" class="desktop_screen square-banner-media" autoplay loop muted playsinline onloadeddata="this.parentElement.classList.add('loaded')">
+                        <source src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="mobile_screen square-banner-media" autoplay loop muted playsinline onloadeddata="this.parentElement.classList.add('loaded')">
+                        <source src="{{ media_mobile.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
                     {% else %}
-                      {{
-                        media_desktop
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'square-banner-media d-block',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          controls: false
-                      }}
-                    {% endif %}
+                    <div class="lazyload-media">
+                       <video poster="{{ media_desktop.preview_image.src | image_url }}" class="square-banner-media d-block" autoplay loop muted playsinline onloadeddata="this.parentElement.classList.add('loaded')">
+                        <source src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                       </video>
+                    </div>
+                  {% endif %}
                 {% endcase %}
                 {% if block.settings.shopcatagorytxt != blank %}
                   <p class="cta_text{% if section.settings.showSliderArrow %} arrows{% endif %}">
@@ -217,9 +189,6 @@
           </div>
         </div>
       {% endif %}
-      {% if section.settings.show_scrollbar %} 
-        <div class="swiper-pagination coming-soon-swiper-pagination-{{ section.id }}"><br></div>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -255,12 +224,6 @@
       nextEl: '#carousel-next-{{ section.id }}',
       disabledClass: 'disabled_swiper_button'
     },
-    {% if section.settings.show_scrollbar %} 
-      pagination: {
-        el: ".coming-soon-swiper-pagination-{{ section.id }}",
-        type: "progressbar",
-      },
-    {% endif %}
     touchStartForcePreventDefault:true,
     breakpoints: {
       768: {
@@ -276,7 +239,7 @@
       },
       1536: {
         slidesPerView: numSlides2xl{{ section_unique_name }},
-        spaceBetween: 24
+        spaceBetween: 20
       },
     }
     // pagination: '.swiper-pagination',
@@ -298,10 +261,15 @@
       "label": "Choose Container Style",
       "options": [
         { "value": "full-width", "label": "Show Full Container" },
-        { "value": "page-width", "label": "Show FrameWork Container" },
-        { "value": "container", "label": "Show Bootstrap Container" }
+        { "value": "page-width", "label": "Show FrameWork Container" }
       ],
-      "default": "container"
+      "default": "page-width"
+    },
+      {
+      "type": "text",
+      "id": "seo_text",
+      "label": "Seo Tag Trigger Team",
+      "info": "Used for GTM (Anil)"
     },
     {
       "type": "checkbox",
@@ -348,13 +316,6 @@
       "label": "Show Slider Arrow",
       "info": "If enabled ,Slider arrows will be seen",
       "default": true
-    },
-     {
-      "type": "checkbox",
-      "id": "show_scrollbar",
-      "label": "Show Scrollbar",
-      "info": "If enabled ,Slider scrollbar will be seen",
-      "default": false
     },
     {
       "type": "checkbox",

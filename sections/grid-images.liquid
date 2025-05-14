@@ -47,9 +47,9 @@
           id="grid-container-{{ section.id }}"
           class="{% if section.settings.showContainer == "container" %}spacing {% endif %}swiper"
         >
-          <div class="row justify-content-center gap-4">
+          <div class="row justify-content-center gap-3">
             {% for block in section.blocks %}
-              <div class="col-5 col-sm-3 col-lg-25 p-0">
+              <div class="col-5 col-sm-3 col-md-2 m-md-2 p-0">
                 <a href="{{ block.settings['banner-url'] }}">
                   <img
                     src="{{ block.settings.banner-image-desktop | image_url }}"
@@ -67,10 +67,6 @@
                       loading="eager"
                     >
                   {% endif %}
-                  <div class="card-bottom">
-                    <span class="price-text">{{ block.settings.banner-image-mobile }}</span>
-                    <span class="arrow">&#8594;</span>
-                  </div>
                 </a>
               </div>
             {% endfor %}
@@ -99,9 +95,6 @@
             height: 350px;
             left: -50%;
             bottom: -110px;
-          }
-          .col-lg-25{
-            width: 22%;
           }
         }
     {% endif %}
@@ -149,11 +142,6 @@
           }
          }
     {% endif %}
-    @media screen and (min-width: 768px) {
-          .col-lg-25{
-            width: 22%;
-          }
-        }
   </style>
   {% schema %}
   {
@@ -167,7 +155,7 @@
         "label": "Choose Container Style",
         "options": [
           { "value": "full-width", "label": "Show Full Container" },
-          { "value": "page-width", "label": "Show Hok Container" },
+          { "value": "spacesDesktop", "label": "Show Hok Container" },
           { "value": "container", "label": "Show FrameWork Container" }
         ],
         "default": "full-width"
@@ -273,17 +261,14 @@
           {
             "type": "image_picker",
             "id": "banner-image-desktop",
-            "label": "Banner Image Desktop"
+            "label": "Banner Image Desktop",
+            "info": "Default - aspect-ratio 1:1, 1080x1080 , Hero Banner- 1950x735px"
           },
           {
             "type": "image_picker",
             "id": "banner-image-mobile",
-            "label": "Banner Image Mobile"
-          },
-          {
-            "type": "text",
-            "id": "banner-text",
-            "label": "Card Text"
+            "label": "Banner Image Mobile",
+            "info": "If Empty , desktop image will be seen on Mobile - aspect-ratio 1:1, 1080x1080 "
           }
         ]
       }

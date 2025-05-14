@@ -74,8 +74,8 @@
     </div>
     <div class="new-slider-content">
       <div class="new-slider-container">
-        <div class="video-hero-container">
-          <a href="{{ section.settings.coll_link_1 }}" class="banner-full">
+        <div class="video-hero-container" >
+          <a href="{{ section.settings.coll_link_1 }}" class="banner-full" data-location="trends-card-1">
             {% assign media_poster = section.settings.cont_1_img.preview_image.src | image_url %}
             <video
               poster="{{ media_poster }}"
@@ -94,10 +94,10 @@
             </video>
           </a>
         </div>
-        <div class="image-container-for-collection">
+        <div class="image-container-for-collection" >
           <a
-            class="banner-full"
-            href="{{ section.settings.coll_link_2 }}"
+            class="banner-full lazyload-media"
+            href="{{ section.settings.coll_link_2 }}" data-location="trends-card-2"
           >
             <div class="banner__href">
               {{ section.settings.content_2 }}
@@ -110,6 +110,7 @@
               alt="{{ section.settings.content_2 | escape }}"
               class="img-fluid mobile_screen h-100"
               loading="lazy"
+               onload="this.parentElement.classList.add('loaded')"
             >
             <img
               width="100%"
@@ -118,13 +119,14 @@
               alt="{{ section.settings.content_2 | escape }}"
               class="img-fluid desktop_screen h-100"
               loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
             >
           </a>
         </div>
         <div class="image-sec-container-for-collection">
           <a
-            class="banner-full"
-            href="{{ section.settings.coll_link_3 }}"
+            class="banner-full lazyload-media"
+            href="{{ section.settings.coll_link_3 }}" data-location="trends-card-3"
           >
             <div class="banner__href">
               {{ section.settings.content_3 }}
@@ -137,6 +139,7 @@
               alt="{{ section.settings.content_3 | escape }}"
               class="img-fluid mobile_screen h-100"
               loading="lazy"
+               onload="this.parentElement.classList.add('loaded')"
             >
             <img
               width="100%"
@@ -145,6 +148,7 @@
               alt="{{ section.settings.content_3 | escape }}"
               class="img-fluid desktop_screen h-100"
               loading="lazy"
+              onload="this.parentElement.classList.add('loaded')"
             >
           </a>
         </div>

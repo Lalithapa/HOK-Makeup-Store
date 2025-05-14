@@ -68,7 +68,7 @@ $(document).ready(function () {
                         position: media.position,
                         class: "img-fluid asp34 quickMedia",
                     });
-                   // Directly mute the video using JavaScript
+                   //  
                     productMedia[0].muted = true;
                 }
 

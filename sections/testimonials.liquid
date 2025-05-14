@@ -42,13 +42,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px;
+    gap: clamp(16px,2vw,32px);
     margin-top: 2rem;
   }
   .testimonial-section-container::-webkit-scrollbar {
     display: none;
   } 
   .testimonial-cards {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 2px 10px 0px rgba(168, 168, 168, 0.25);
@@ -106,6 +108,7 @@
     .testimonial-stat-box p {
         font-size: 12px;
         max-width: 80px;
+        margin-inline:auto;
     }
     .testimonial-section-container {
       flex-direction: row;
@@ -117,7 +120,7 @@
       padding: 0 8px 8px;
     }
     .testimonial-cards {
-      flex: 0 0 75%;
+      flex: 0 0 80%;
       flex-wrap: nowrap;
     }
     .testimonial-cards p.review_text {
@@ -157,7 +160,7 @@
     <wbr>
     </div>
     <div class="testimonial-stat-box">
-      <h3>10,000<span style="margin-left: 6px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+      <h3>1,50,00,000<span style="margin-left: 6px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
       <path d="M10 2.19092V19.1909" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
       <path d="M18.5 10.6909L1.5 10.6909" stroke="black" stroke-width="2.8" stroke-linecap="round"/>
       </svg></span></h3>

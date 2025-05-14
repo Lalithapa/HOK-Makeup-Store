@@ -53,8 +53,8 @@
           {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
             {% comment %} mw-310 {% endcomment %}
             <div class="swiper-slide" product_slider="true">
-              {% assign indexing = forloop.index0 %}
-              {% render 'new-pocket', product: product, fetch_priority: fetch_priority, indexIs: indexing %}
+              {% assign indexing = forloop.index %}
+              {% render 'new-pocket', product: product, fetch_priority: fetch_priority, indexIs: indexing , seo_text: section.settings.seo_text %}
             </div>
           {% endfor %}
         </div>
@@ -123,6 +123,12 @@
     ],
     "default": "full-width"
    },
+     {
+      "type": "text",
+      "id": "seo_text",
+      "label": "Seo Tag Trigger Team",
+      "info": "Used for GTM (Anil)"
+    },
    {
     "type": "checkbox",
     "id": "image_priority",

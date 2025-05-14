@@ -268,15 +268,16 @@
           <div class="swiper-wrapper">
             {% for block in section.blocks %}
               <div class="swiper-slide">
-                <a href="{{ block.settings['banner-url'] }}">
+                <a href="{{ block.settings['banner-url'] }}" class="lazyload-media" data-location="Hero-banner-{{ forloop.index }}">
                   {% if block.type == 'image' %}
-                    <img
-                        src="{{ block.settings.banner-image-desktop | image_url }}"
-                        class="{% if block.settings['banner-image-mobile'] != blank %}desktop_screen{% endif %}"
-                        height="100%"
-                        width="100%" 
-                        loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
-                    >
+                      <img
+                          src="{{ block.settings.banner-image-desktop | image_url }}"
+                          class="{% if block.settings['banner-image-mobile'] != blank %}desktop_screen{% endif %}"
+                          height="100%"
+                          width="100%" 
+                          loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                         {% unless forloop.first %}onload="this.parentElement.classList.add('loaded')"{% endunless %}
+                      >
                         {% if block.settings['banner-image-mobile'] != blank %}
                             <img
                             src="{{ block.settings.banner-image-mobile | image_url }}"
@@ -284,18 +285,21 @@
                             height="100%"
                             width="100%"
                             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                           {% unless forloop.first %}onload="this.parentElement.classList.add('loaded')"{% endunless %}
                             >
                         {% endif %}
                     {% elsif block.type == 'video' %}
                       {% assign media_desktop = block.settings['banner-video-desktop'] %}
                       {% assign media_mobile =  block.settings['banner-video-mobile'] %}
                      
-                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" data-banner="promo{{ forloop.index }}" autoplay loop muted playsinline>
-                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="desktop_screen square-banner-media" autoplay loop muted playsinline
+                        onloadeddata="this.parentElement.classList.add('loaded')">
+                        <source data-src="{{ media_desktop.sources[1].url }}" src="{{ media_desktop.sources[1].url }}" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
-                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" data-banner="promo{{ forloop.index }}" autoplay loop muted playsinline>
-                        <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
+                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="mobile_screen square-banner-media" autoplay loop muted playsinline
+                        onloadeddata="this.parentElement.classList.add('loaded')">
+                        <source data-src="{{ media_mobile.sources[1].url }}" src="{{ media_mobile.sources[1].url }}" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                   {% endif %}
@@ -304,7 +308,7 @@
                 {% if block.settings['cta-btn-1-text'] != blank %}
                   {% comment %} button 1 mobile {% endcomment %}
                   <a
-                    href="{{ block.settings['btn1-url'] }}"
+                    href="{{ block.settings['btn1-url'] }}" data-location="Hero-banner-{{ forloop.index }}a"
                     class="
                       mobile_screen button-cta main-carousel-cta-btn main-carousel-cta-btn-1
                       {% if block.settings['btn1-bg-mobile'] == '#ffffff' %}bg-white
@@ -323,7 +327,7 @@
                   {% if block.settings['show-cta-on-desktop'] == true %}
                     {% comment %} button 1 desktop {% endcomment %}
                     <a
-                      href="{{ block.settings['btn1-url'] }}"
+                      href="{{ block.settings['btn1-url'] }}" data-location="Hero-banner-{{ forloop.index }}a"
                       class="desktop_screen button-cta square_pill main-carousel-cta-btn main-carousel-cta-btn-1{% if block.settings['btn1-bg-desktop'] == '#ffffff' %} bg-white{% elsif block.settings['btn1-bg-desktop'] == '#000000' %} bg-black{% else %} bg-transparent{% endif %}{% if block.settings['btn1-bg-hover-desktop'] == '#ffffff' %} bg-hover-white{% elsif block.settings['btn1-bg-hover-desktop'] == '#000000' %} bg-hover-black{% else %} bg-hover-transparent{% endif %}
 {% if block.settings['btn1-text-desktop'] == '#ffffff' %} text-white{% elsif block.settings['btn1-text-desktop'] == '#000000' %} text-black{% endif %}
 {% if block.settings['btn1-text-hover-desktop'] == '#ffffff' %} text-hover-white{% elsif block.settings['btn1-text-hover-desktop'] == '#000000' %} text-hover-black{% endif %}"
@@ -346,7 +350,7 @@
                       {% elsif block.settings['btn2-bg-mobile'] == '#000000' %}bg-black
                       {% else %}bg-transparent
                       {% endif %}
-                    "
+                    " data-banner="Hero-banner-{{ forloop.index }}b"
                   >
                     <div class="main-carousel-cta-btn-wrapper">
                       <span class="main-carousel-cta-text">
@@ -358,7 +362,7 @@
                   {% if block.settings['show-cta-on-desktop'] == true %}
                     {% comment %} button 1 desktop {% endcomment %}
                     <a
-                      href="{{ block.settings['btn2-url'] }}"
+                      href="{{ block.settings['btn2-url'] }}" data-location="Hero-banner-{{ forloop.index }}b"
                       class="desktop_screen button-cta square_pill main-carousel-cta-btn main-carousel-cta-btn-2{% if block.settings['btn2-bg-desktop'] == '#ffffff' %} bg-white{% elsif block.settings['btn2-bg-desktop'] == '#000000' %} bg-black{% else %} bg-transparent{% endif %}
 {% if block.settings['btn2-bg-hover-desktop'] == '#ffffff' %} bg-hover-white{% elsif block.settings['btn2-bg-hover-desktop'] == '#000000' %} bg-hover-black{% else %} bg-hover-transparent{% endif %}
 {% if block.settings['btn2-text-desktop'] == '#ffffff' %} text-white{% elsif block.settings['btn2-text-desktop'] == '#000000' %} text-black{% endif %}
