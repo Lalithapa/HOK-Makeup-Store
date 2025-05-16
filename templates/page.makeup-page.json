@@ -320,6 +320,58 @@
         "showArrow": false
       }
     },
+    "multi_functional_container_MqVUJX": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "video_media_k3pKmf": {
+          "type": "video-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/makeup",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Banner 1920X160.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Banner 550X275.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_media_k3pKmf"
+      ],
+      "disabled": true,
+      "name": "Multi-functional",
+      "settings": {
+        "showContainer": "full-width",
+        "seo_text": "",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 500,
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "title-top-padding": 2,
+        "title_alignment": "left",
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
     "comin_soon_products_CnWigy": {
       "type": "coming-soon-grid",
       "blocks": {
@@ -409,7 +461,7 @@
             "name": "Shikha S.",
             "location": "Lucknow",
             "date": "12.02.25",
-            "product": "Rev Pro Serum",
+            "product": "Watery Transferproof Lip Cream",
             "product_link": "shopify:\/\/products\/focallure-watery-transferproof-lip-cream",
             "rating": 5,
             "quote": "Totally in love—smooth, blendable formulas with a flawless, lightweight finish! Vibrant, long-lasting, and inclusive shades in sleek packaging—must-try quality at a great price."
@@ -422,7 +474,7 @@
             "name": "Sushree Sutar",
             "location": "Delhi",
             "date": "02.03.25",
-            "product": "Rev Pro Serum",
+            "product": "L.A. Girl Pro Corrector HD",
             "product_link": "shopify:\/\/products\/la-girl-pro-corrector-hd",
             "rating": 4,
             "quote": "My friend recommended me HOK makeup website and I am really impressed with the discount on product they are offering... product quality are branded and top notch."
@@ -435,7 +487,7 @@
             "name": "Adhya",
             "location": "Pune",
             "date": "25.03.25",
-            "product": "Rev Pro Serum",
+            "product": "Milani Conceal + Perfect Long Wear Concealer",
             "product_link": "shopify:\/\/products\/conceal-perfect-long-wear-concealer",
             "rating": 5,
             "quote": "Good quality products at discounted price.. Have a lot of international brands like focallure which is not available at other sites."
@@ -597,9 +649,8 @@
     },
     "tabular_categories_rkqrKN": {
       "type": "tabular-categories",
-      "disabled": true,
       "settings": {
-        "showContainer": "container",
+        "showContainer": "page-width",
         "combos_url": "",
         "margin_top_desktop": 36,
         "margin_bottom_desktop": 88,
@@ -1001,7 +1052,6 @@
         "content_8XFtBg",
         "content_7cU93G"
       ],
-      "disabled": true,
       "settings": {
         "showContainer": "container",
         "coll-title": "this week’s best finds",
@@ -1025,7 +1075,6 @@
     },
     "custom_liquid_3GVLqR": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"container\">\n<div class=\"carousel-section-title-wrapper\" style=\"padding-top:2px\">\n        <p>Budget buys for you\n        <\/p>\n      <\/div>\n<\/div>",
         "color_scheme": "",
@@ -1127,7 +1176,6 @@
         "banner_media_NcidUp",
         "banner_media_yywNAK"
       ],
-      "disabled": true,
       "settings": {
         "showContainer": "page-width",
         "margin_top_desktop": 36,
@@ -1248,6 +1296,7 @@
     "lcp_banner_7E4YPB",
     "multi_functional_container_ELVGqR",
     "multi_functional_container_awiTfX",
+    "multi_functional_container_MqVUJX",
     "comin_soon_products_CnWigy",
     "testimonials_gbMUiH",
     "product_tabs_JHdAYp",

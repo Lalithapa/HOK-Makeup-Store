@@ -1,90 +1,33 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
-    {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%}
-
+ {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
+ 
     <meta charset="utf-8">
     <meta name="google-site-verification" content="TDoXrfR2tc8ptJb5eduGq1vRueRu-47EbZAUmcY1MxQ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="{{ canonical_url }}">
-    {% comment %} Marketing Scripts Starts {% endcomment %}
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-TM3V83B');
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97440784-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-97440784-1');
-    </script>
-    <!-- Clarity Tracking Code for -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "judk7c1u5s");
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-      {% if customer %}
-      userType: "member",
-      customer: {
-      id: {{ customer.id }},
-      lastOrder: "{{ customer.orders.first.created_at | date: '%B %d, %Y %I:%M%p' }}",
-      orderCount: {{ customer.orders.size }},
-      totalSpent: {% if customer %}{% assign total_spent = 0 %}{% for item in customer.orders %}{% assign total_spent = total_spent | plus: item.total_net_amount %}{% endfor %}{{ total_spent | money_without_currency | remove:"," }}{% else %}""{% endif %},
-      tags: {{- customer.tags | json -}}
-      },
-      {% else %}
-      userType: "visitor",
-      customer: {
-      id: "",
-      lastOrder: "",
-      orderCount: "",
-      totalSpent: "",
-      tags: ""
-      },
-      {% endif %}
-      });
-    </script>
-    {% comment %} Marketing Scripts Ends {% endcomment %}
-
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
-
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
-
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
-
     {% render 'meta-tags', page_description: page_description, page_title: page_title %}
-    {% include 'custom-fonts' %}
     <script src="{{ 'jquery.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'application.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'swiper.js' | asset_url }}" ></script>
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
     <script src="{{ 'quick_view.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -93,9 +36,11 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'axios.js' | asset_url }}" defer="defer"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> {% endcomment %}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -107,13 +52,14 @@
       ></script>
     {% endif %}
 
-    {%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}
-
+    {{ content_for_header }}
+    
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
+    {% render 'custom-fonts' %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -375,14 +321,15 @@
         onload="this.media='all'"
       >
     {% endif %}
-
-    {%- if settings.cart_type == 'drawer' -%}
-      {% comment %} {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
-      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
-      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
-      {{ 'component-price.css' | asset_url | stylesheet_tag }}
-      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
+    
+      {%- if settings.cart_type == 'drawer' -%}
+        {% comment %}{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
+        {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+        {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+        {{ 'component-price.css' | asset_url | stylesheet_tag }}
+        {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+      {%- endif -%}
+   
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -415,8 +362,58 @@
       }
        window.history.scrollRestoration = 'manual';
     </script>
+        {% comment %} Marketing Scripts Starts {% endcomment %}
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TM3V83B');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97440784-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-97440784-1');
+    </script>
+    <!-- Clarity Tracking Code for -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "judk7c1u5s");
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+      {% if customer %}
+      userType: "member",
+      customer: {
+      id: {{ customer.id }},
+      lastOrder: "{{ customer.orders.first.created_at | date: '%B %d, %Y %I:%M%p' }}",
+      orderCount: {{ customer.orders.size }},
+      totalSpent: {% if customer %}{% assign total_spent = 0 %}{% for item in customer.orders %}{% assign total_spent = total_spent | plus: item.total_net_amount %}{% endfor %}{{ total_spent | money_without_currency | remove:"," }}{% else %}""{% endif %},
+      tags: {{- customer.tags | json -}}
+      },
+      {% else %}
+      userType: "visitor",
+      customer: {
+      id: "",
+      lastOrder: "",
+      orderCount: "",
+      totalSpent: "",
+      tags: ""
+      },
+      {% endif %}
+      });
+    </script>
+    {% comment %} Marketing Scripts Ends {% endcomment %}
   </head>
-
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     {% comment %} Marketing Code  {% endcomment %}
     <!-- Google Tag Manager (noscript) -->
@@ -429,21 +426,17 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    {% comment %} Marketing Code  {% endcomment %}
     {% comment %}
       {%- if settings.cart_type == 'drawer' -%}
         {%- render 'cart-drawer' -%}
       {%- endif -%}
     {% endcomment %}
-
     <div class="bg_dark" id="bg_dark" onclick="closeSlider()"></div>
-
     {% sections 'header-group' %}
     <div class="quickview-overlay close_overlay"></div>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-
     {% sections 'footer-group' %}
     {% render 'toaster' %}
      <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -455,6 +448,30 @@
     </ul>
     <!-- Required to show all the recommended products on Foundation Friday -->
     <script>
+         document.addEventListener('DOMContentLoaded', function () {
+         const videos = document.querySelectorAll("video.lazyvideo");
+  
+      const loadVideo = (video) => {
+        const source = video.querySelector("source");
+        const videoSrc = source.getAttribute("data-src");
+        source.setAttribute("src", videoSrc);
+        video.load();
+      };
+  
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              loadVideo(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 } // Load when 50% of the video is in the viewport
+      );
+  
+      videos.forEach((video) => observer.observe(video));
+      });
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -498,7 +515,6 @@
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
     </script>
-
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -507,6 +523,5 @@
         <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
       {%- endif -%}
     {% endcomment %}
-    {{ 'tiny-img-link-preloader.js' | asset_url | script_tag }}
   </body>
 </html>

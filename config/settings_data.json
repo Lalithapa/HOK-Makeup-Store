@@ -140,14 +140,24 @@
         "disabled": false,
         "settings": {}
       },
+      "36909921495456953": {
+        "type": "shopify:\/\/apps\/ai-speed\/blocks\/ai-speed\/f9e4b8d0-6523-47d0-b77a-783072cc6552",
+        "disabled": false,
+        "settings": {
+          "enable_optimization": true,
+          "debug_mode": false,
+          "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
+          "image_threshold": 30
+        }
+      },
       "13951170544780599758": {
         "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       },
       "15796953133730294439": {
         "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "disable_shadow_root_globally": false
         }

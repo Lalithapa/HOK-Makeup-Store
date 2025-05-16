@@ -139,9 +139,11 @@
     scroll-snap-align: start;
     text-align: center;
     flex: 0 0 auto;
+    background: inherit;
   }
-  .tab-product-cards > * {
+  .tab-product-cards video ,.tab-product-cards img {
       mix-blend-mode: multiply;
+      background-blend-mode: multiply;
   }
 
    #makeup .tab-product-cards img , #skincare .tab-product-cards img {
@@ -275,21 +277,20 @@
   <div class="tab-content{% if template == "index" %} active{% endif %}" id="home">
     <div class="category-cards" bis_skin_checked="1">
       <div class="tab-product-cards" bis_skin_checked="1">
-        <a href="https://hokmakeup.com/collections/makeup" title="Sale" class="lazyload-media">
+        <a href="https://hokmakeup.com/collections/makeup" title="Sale">
           <video
             playsinline
             width="110"
             height="100%"
-            class="img-fluid"
+            class="lazyvideo img-fluid"
             autoplay
             loop
             muted
             preload="metadata"
-            poster="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/preview_images/saleis_small.png?v=1746189136"
-            onloadeddata="this.parentElement.classList.add('loaded')"
+            poster="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/sale-tile.png?v=1747296750"
           >
             <source
-              src="https://cdn.shopify.com/videos/c/vp/5564d3c9e2054ba787da48fb1df8ddcf/5564d3c9e2054ba787da48fb1df8ddcf.HD-1080p-2.5Mbps-46185480.mp4?v=0"
+              data-src="https://cdn.shopify.com/videos/c/o/v/41cfd21fc0cb4251bbe547acf3ed47fc.mp4"
               type="video/mp4"
             >
           </video>
@@ -298,16 +299,14 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/hok-makeup-x-sweetons" title="Sweetons">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/tile.jpg?v=1746253074&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Sweetons-min.jpg?v=1747295717"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Sweetons"
-              onload="this.parentElement.classList.add('loaded')"
             >
           </div>
         </a>
@@ -315,14 +314,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/best-seller-home-page" title="Best Sellers">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Best_Sellers_29cdb50f-dbd0-411f-9b10-5a3498ab5fc2.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Best_Sellers_copy.jpg?v=1747294425"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Best Sellers"
             >
           </div>
@@ -331,14 +329,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/makeup" title="Makeup">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Makeup_4f71f507-47c5-4cba-9985-a77d2d010b04.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Makeup_copy.jpg?v=1747294425"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Makeup"
             >
           </div>
@@ -347,14 +344,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/skincare" title="Skincare">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Skin_b07f8aec-247a-4d6b-9919-2d7d7647a35e.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Skin_copy-min.jpg?v=1747295714"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Skincare"
             >
           </div>
@@ -363,14 +359,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/hair-care" title="Hair Care">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Hair_b6e32764-348f-4459-ba87-00b46e064c15.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Hair_copy-min.jpg?v=1747295714"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Hair Care"
             >
           </div>
@@ -379,14 +374,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/accessories-1" title="Accessories">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Organizers.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Organizers_copy-min.jpg?v=1747295715"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Accessories"
             >
           </div>
@@ -395,14 +389,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/body-care" title="Body Care">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Bath_Body_0069d3a4-6ae2-4598-8bbe-c77158012105.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Bath_Body_copy-min.jpg?v=1747295714"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Body Care"
             >
           </div>
@@ -411,14 +404,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/fragrance" title="Fragrance">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Fragrance_7ab772ad-cbec-4387-88f1-5a2920f670b6.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Fragrance_copy.jpg?v=1747294425"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Fragrance"
             >
           </div>
@@ -427,14 +419,13 @@
 
       <div class="tab-product-cards" bis_skin_checked="1">
         <a href="/collections/combos" title="Combos & Kits">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
-              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Combos_and_Kits_bf9d2d7b-7fcb-4535-9272-9c02e48175e6.jpg?v=1744972602&width=3000"
+              src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Combos_and_Kits_copy-min.jpg?v=1747295715"
               width="110"
               height="100%"
               class="img-fluid"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Combos & Kits"
             >
           </div>
@@ -447,13 +438,12 @@
     <div class="category-cards">
       <div class="tab-product-cards">
         <a href="/collections/face" title="Face">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/qw.png?v=1746793287"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Face"
             >
           </div>
@@ -461,13 +451,12 @@
       </div>
       <div class="tab-product-cards">
         <a href="/collections/eyes" title="Eyes">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/we.png?v=1746793288"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Eyes"
             >
           </div>
@@ -475,13 +464,12 @@
       </div>
       <div class="tab-product-cards">
         <a href="/collections/lips" title="Lips">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/er.png?v=1746793287"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Lips"
             >
           </div>
@@ -489,13 +477,12 @@
       </div>
       <div class="tab-product-cards">
         <a href="/collections/nails" title="Nails">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/rt.png?v=1746793288"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Nails"
             >
           </div>
@@ -503,13 +490,12 @@
       </div>
       <div class="tab-product-cards">
         <a href="/collections/tools-brushes" title="Tools">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/yu.png?v=1746793287"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Tools"
             >
           </div>
@@ -517,13 +503,12 @@
       </div>
       <div class="tab-product-cards">
         <a href="/collections/combos" title="Value Sets">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/ui.png?v=1746793288"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Value Sets"
             >
           </div>
@@ -531,13 +516,12 @@
       </div>
       <div class="tab-product-cards">
         <a href="/collections/accessories-1" title="Accessories">
-          <div class="lazyload-media">
+          <div class="collection-card-tabs">
             <img
               src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/ty.png?v=1746793288"
               width="90"
               height="55"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
               alt="Accessories"
             >
           </div>

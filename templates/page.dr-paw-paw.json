@@ -126,7 +126,7 @@
           "type": "button",
           "settings": {
             "text": "UK’s cult fave",
-            "link": "#shopify-section-template--24340201832727__video_custom_Qxw4xN"
+            "link": "#shopify-section-template--24359407649047__video_custom_Qxw4xN"
           }
         },
         "button_4NMCUi": {
@@ -305,6 +305,7 @@
       "disabled": true,
       "settings": {
         "showContainer": "full-width",
+        "seo_text": "",
         "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
@@ -484,7 +485,7 @@
           "type": "button",
           "settings": {
             "text": "UK’s cult fave",
-            "link": "#shopify-section-template--24340201832727__video_custom_Qxw4xN"
+            "link": "#shopify-section-template--24359407649047__video_custom_Qxw4xN"
           }
         },
         "button_9EDJwc": {
@@ -513,7 +514,7 @@
           "type": "button",
           "settings": {
             "text": "Go to top",
-            "link": "#shopify-section-template--24340201832727__video_custom_9Hpmib"
+            "link": "#shopify-section-template--24359407649047__video_custom_9Hpmib"
           }
         }
       },

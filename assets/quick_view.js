@@ -6,7 +6,7 @@ $(document).ready(function () {
     }
     // Fetch Quick View Data
     async function fetchQuickViewData(product_handler) {
-        console.time("Fetch Quick View Data");
+        //console.time("Fetch Quick View Data");
         try {
             const showMoreSwatch = document.querySelector("#product_Quick_View").getAttribute('sectionId');
             const sectionUrl = `/products/${product_handler}?section_id=${showMoreSwatch}`;
@@ -15,7 +15,7 @@ $(document).ready(function () {
         } catch (error) {
             console.error("Error fetching quick view data:", error.message);
         }
-        console.timeEnd("Fetch Quick View Data");
+        //console.timeEnd("Fetch Quick View Data");
     }
     async function quickViewOpener() {
         const pdp_MediaData = JSON.parse($(this).attr("pdp_MediaData"));

@@ -98,8 +98,8 @@ predictive-search[loading] .predictive-search {
 }
 
 predictive-search .spinner {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 16px;
+  height: 16px;
   line-height: 0;
 }
 

@@ -4,17 +4,6 @@
   "sections": {
     "1740743233fd94300e": {
       "type": "apps",
-      "blocks": {
-        "gsc_countdown_timer_countdown_ki4nJE": {
-          "type": "shopify:\/\/apps\/gsc-countdown-timer\/blocks\/countdown\/58dc5b1b-43d2-4209-b1f3-52aff31643ed",
-          "settings": {
-            "widget_id": ""
-          }
-        }
-      },
-      "block_order": [
-        "gsc_countdown_timer_countdown_ki4nJE"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
@@ -51,7 +40,7 @@
     "updated_announcement_bar_NFDExf": {
       "type": "updated-announcement-bar",
       "settings": {
-        "text": "<p>End Of Season Sale is Live: Up to 50% + Surprise Gifts<\/p>",
+        "text": "<p>Add To Bag Madness Sale is Live<\/p>",
         "link": "shopify:\/\/collections\/makeup"
       }
     },
@@ -72,7 +61,7 @@
             "sub_head_col": "#121212",
             "desk-sub-heading-size": 10,
             "mob-sub-heading-size": 14,
-            "link": "shopify:\/\/pages\/mega-festive-sale"
+            "link": "shopify:\/\/pages\/makeup"
           }
         }
       },
@@ -93,7 +82,7 @@
         "logo_position": "top-center",
         "menu": "desktop-main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "always",
+        "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
@@ -173,6 +162,7 @@
     },
     "main_cart_drawer_Yx3cqc": {
       "type": "main-cart-drawer",
+      "disabled": true,
       "settings": {}
     },
     "product_quickview_FBBVgd": {

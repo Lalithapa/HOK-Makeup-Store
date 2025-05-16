@@ -294,7 +294,7 @@
                         {% elsif offer_name == 'bogo' %}
                           <b>Buy One Get </b> ...
                         {% elsif offer_name == 'default' %}
-                          Welcome Offer: <b>Extra 10% off </b>...
+                          Extra <b>₹100 OFF</b> on orders ...
                         {% elsif offer_name == 'lamel' %}
                           <b>Buy Two Get One Free</b> ...
                         {% elsif offer_name == 'foundation-sale' %}
@@ -346,17 +346,17 @@
                               {% elsif offer_name == 'default' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                    Welcome Offer: <b>Extra 10% OFF </b>for First-Time Buyers!
+                                       Extra <strong>₹100 OFF</strong> on orders <strong>₹750+</strong>
                                   </p>
                                 </div>
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                    Get a special surprise on orders above <span>₹799</span>!
+                                      Extra <strong>₹150 OFF</strong> on orders <strong>₹1200+</strong>
                                   </p>
                                 </div>
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                    Spend <span>₹1,499</span> or more and unlock an even bigger surprise!
+                                        Extra <strong>₹250 OFF</strong> on orders <strong>₹1600+</strong>
                                   </p>
                                 </div>
                                 {% comment %}
@@ -511,9 +511,8 @@
     // Initialize the sliders
     setTimeout(() => {
       initializeSlider();
-      updateSliderPosition({{ first_variant.featured_media.position | minus: 1 }});
-        //Product Swatch Change
         {% if product.variants.size > 1 %}
+        updateSliderPosition({{ first_variant.featured_media.position | minus: 1 }});
         //Product Swatch Change
         const debouncedHandleProductSwatchChange = debounce(handleProductSwatchChange, 300);
 
