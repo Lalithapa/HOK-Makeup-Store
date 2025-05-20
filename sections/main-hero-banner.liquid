@@ -278,6 +278,7 @@
                         fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
                         loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                     >
+<<<<<<< HEAD
                       {% if block.settings['banner-image-mobile'] != blank %}
                           <img
                           src="{{ block.settings.banner-image-mobile | image_url }}"
@@ -287,6 +288,42 @@
                           fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
                           loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                           >
+=======
+                        {% if block.settings['banner-image-mobile'] != blank %}
+                            <img
+                            src="{{ block.settings.banner-image-mobile | image_url }}"
+                            class="mobile_screen"
+                            height="100%"
+                            width="100%"
+                            fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
+                            loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                            >
+                        {% endif %}
+                    {% elsif block.type == 'video' %}
+                      {% assign media_desktop = block.settings['banner-video-desktop'] %}
+                      {% assign media_mobile =  block.settings['banner-video-mobile'] %}
+                     
+                      <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" data-banner="promo{{ forloop.index }}" autoplay loop muted playsinline>
+                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" data-banner="promo{{ forloop.index }}" autoplay loop muted playsinline>
+                        <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                  {% endif %}
+                </a>
+                <div class="main-carousel-cta-btn-wrapper-outter">
+                {% if block.settings['cta-btn-1-text'] != blank %}
+                  {% comment %} button 1 mobile {% endcomment %}
+                  <a
+                    href="{{ block.settings['btn1-url'] }}"
+                    class="
+                      mobile_screen button-cta main-carousel-cta-btn main-carousel-cta-btn-1
+                      {% if block.settings['btn1-bg-mobile'] == '#ffffff' %}bg-white
+                      {% elsif block.settings['btn1-bg-mobile'] == '#000000' %}bg-black
+                      {% else %}bg-transparent
+>>>>>>> dad015635884605aed00febbc4f7ed6c4a8e8f9a
                       {% endif %}
                   {% elsif block.type == 'video' %}
                     {% assign media_desktop = block.settings['banner-video-desktop'] %}
