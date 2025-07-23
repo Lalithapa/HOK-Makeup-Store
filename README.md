@@ -52,9 +52,12 @@ We specialize in **beauty, skincare, and cosmetic products**, catering to beauty
 
 ## 📸 Screenshots
 
-> _(Add screenshots of homepage, PDP, cart page if publishing in GitHub repo)_
+<img width="388" height="842" alt="image" src="https://github.com/user-attachments/assets/82051056-b5fc-49a2-abd0-130b0d28e657" />
+<img width="379" height="844" alt="image" src="https://github.com/user-attachments/assets/4290bd74-a50e-4245-89b0-d8fa2c98edd3" />
+<img width="388" height="844" alt="image" src="https://github.com/user-attachments/assets/e064d192-6d18-40b9-9248-bf184929ad3a" />
+<img width="386" height="840" alt="image" src="https://github.com/user-attachments/assets/acba740c-2f9b-4920-abbe-c2330ea02268" />
+<img width="391" height="841" alt="image" src="https://github.com/user-attachments/assets/f946d6de-9e27-436e-9f61-d828c918efb7" />
 
----
 
 ## 📦 Folder Structure (Shopify)
 
