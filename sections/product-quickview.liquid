@@ -9,7 +9,7 @@ for collection in product.collections
     assign offer_name = 'bogo'
   elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by' or collection.handle == 'the-add-to-heart-sale-up-to-60-off'
     assign offer_name = 'offerHidden'
-  elsif collection.handle == 'foundation-sale'
+  elsif collection.handle == 'foundation-sale' or collection.handle == 'slay-the-base'
     assign offer_name = 'foundation-sale'
   endif
 endfor
@@ -100,6 +100,14 @@ endfor
                           class="text-decoration-underline">Collection</a></b>
                     </p>
                   {% endunless %}
+                {% elsif offer_name == 'foundation-sale' %}
+                  <li class="bogo-text-wrapper"><b>Get Extra <strong>₹100 OFF</strong> + <strong>FREE ₹425 </strong> Foundation Brush on every order!</b></li>
+                   <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
+                      <b>
+                        Offers on Selected
+                        <a href="collections/slay-the-base"
+                          class="text-decoration-underline">Collection</a></b>
+                    </p>
               {% elsif offer_name == 'pd-bundle' %}
               <li class="bogo-text-wrapper"><b>Buy Any 3 at ₹949 - Limited Time Offer!</b></li>
               <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">

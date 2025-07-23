@@ -10,17 +10,39 @@
     "main_hero_banner_qcCWtj": {
       "type": "main-hero-banner",
       "blocks": {
+        "image_K7raBU": {
+          "type": "image",
+          "settings": {
+            "banner-image-desktop": "shopify:\/\/shop_images\/Focallure_May_Launch_Header_Desktop1.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Focallure_May_Launch_Header_Mobile.jpg",
+            "banner-url": "shopify:\/\/collections\/focallure-beauty",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/focallure-beauty",
+            "btn2-url": "shopify:\/\/collections\/focallure-beauty",
+            "cta-btn-1-text": "",
+            "cta-btn-2-text": "Shop The Brand",
+            "btn1-bg-mobile": "#000000",
+            "btn1-bg-desktop": "#000000",
+            "btn1-bg-hover-desktop": "#ffffff",
+            "btn1-text-desktop": "#ffffff",
+            "btn1-text-hover-desktop": "#000000",
+            "btn2-bg-mobile": "#ffffff",
+            "btn2-bg-desktop": "rgba(0,0,0,0)",
+            "btn2-bg-hover-desktop": "#000000",
+            "btn2-text-desktop": "#000000",
+            "btn2-text-hover-desktop": "#ffffff"
+          }
+        },
         "video_m9YjyX": {
           "type": "video",
-          "disabled": true,
           "settings": {
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Header Banner Desktop.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Header Banner Mobile 11.mp4",
-            "banner-url": "shopify:\/\/collections\/makeup",
-            "show-cta-on-desktop": false,
-            "btn1-url": "shopify:\/\/collections\/makeup",
-            "btn2-url": "shopify:\/\/collections\/makeup",
-            "cta-btn-1-text": "",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/Ln Pro Motion Banner Desktop New.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/Ln Pro Motion Banner Mobile New.mp4",
+            "banner-url": "shopify:\/\/collections\/ln-pro",
+            "show-cta-on-desktop": true,
+            "btn1-url": "shopify:\/\/collections\/ln-pro",
+            "btn2-url": "shopify:\/\/collections\/ln-pro",
+            "cta-btn-1-text": "Shop The Brand",
             "cta-btn-2-text": "",
             "btn1-bg-mobile": "#ffffff",
             "btn1-bg-desktop": "#ffffff",
@@ -244,29 +266,6 @@
             "btn2-text-hover-desktop": "#000000"
           }
         },
-        "image_K7raBU": {
-          "type": "image",
-          "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Artboard_1_8.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Artboard_1-1.png",
-            "banner-url": "shopify:\/\/collections\/focallure-beauty",
-            "show-cta-on-desktop": true,
-            "btn1-url": "shopify:\/\/collections\/focallure-beauty",
-            "btn2-url": "shopify:\/\/collections\/focallure-beauty",
-            "cta-btn-1-text": "Shop Now",
-            "cta-btn-2-text": "Shop The Brand",
-            "btn1-bg-mobile": "#000000",
-            "btn1-bg-desktop": "#000000",
-            "btn1-bg-hover-desktop": "#ffffff",
-            "btn1-text-desktop": "#ffffff",
-            "btn1-text-hover-desktop": "#000000",
-            "btn2-bg-mobile": "#ffffff",
-            "btn2-bg-desktop": "rgba(0,0,0,0)",
-            "btn2-bg-hover-desktop": "#000000",
-            "btn2-text-desktop": "#000000",
-            "btn2-text-hover-desktop": "#ffffff"
-          }
-        },
         "image_dRBekz": {
           "type": "image",
           "settings": {
@@ -340,6 +339,7 @@
         }
       },
       "block_order": [
+        "image_K7raBU",
         "video_m9YjyX",
         "video_Dwg4J7",
         "video_MXjwEA",
@@ -350,7 +350,6 @@
         "image_dN3aiQ",
         "image_KpLUUg",
         "video_iNJH9z",
-        "image_K7raBU",
         "image_dRBekz",
         "image_DXTrTP",
         "image_CNCCec"
@@ -530,6 +529,56 @@
         "showArrow": false
       }
     },
+    "multi_functional_container_KEjR43": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_TrMeck": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify:\/\/collections\/bogo-sale-limited-time-only",
+            "banner-image-desktop": "shopify:\/\/shop_images\/Strip_1920x160_07f01ff1-5627-468b-98a8-4a4d18b43814.jpg",
+            "banner-image-mobile": "shopify:\/\/shop_images\/Strip_550X275_006ed9b4-2147-48f3-95c5-6f1e53383a2a.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_media_TrMeck"
+      ],
+      "settings": {
+        "showContainer": "full-width",
+        "seo_text": "",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#ffffff",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 400,
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36,
+        "title-top-padding": 0,
+        "title_alignment": "left",
+        "carousel-title": "",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "1",
+        "num-slides-md": "1",
+        "num-slides-lg": "1",
+        "num-slides-xl": "1",
+        "num-slides-2xl": "1",
+        "showArrow": false
+      }
+    },
     "coming_soon_grid_yrmGVz": {
       "type": "coming-soon-grid",
       "blocks": {
@@ -562,6 +611,7 @@
         },
         "collection_7J8nUX": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "milani",
             "launch_text": "Just Launched",
@@ -571,11 +621,30 @@
         },
         "collection_NqHEya": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "la-girl",
             "launch_text": "Just Launched",
             "image": "shopify:\/\/shop_images\/La_Girl.jpg",
             "subtitle": "Discover L.A. Girl’s On Cloud Nine—soft-glam shades with featherlight, blendable, dreamy finishes."
+          }
+        },
+        "product_eQLiP3": {
+          "type": "product",
+          "settings": {
+            "product": "milani-conceal-perfect-undereye-brightener",
+            "launch_text": "Just Launched",
+            "image": "shopify:\/\/shop_images\/4_dfa6e5ef-4ef4-41f6-891e-6a4f15df6b81.webp",
+            "subtitle": "Brighten, hydrate, and glow—Milani’s Undereye Brightener is your secret to instantly flawless, wide-awake eyes!"
+          }
+        },
+        "product_4nem88": {
+          "type": "product",
+          "settings": {
+            "product": "relove-drip-it-glossy-lip-oil",
+            "launch_text": "Just Launched",
+            "image": "shopify:\/\/shop_images\/5057566852913_9.webp",
+            "subtitle": "One swipe of Relove Drip It = glassy shine, soft lips, and major glow-up."
           }
         }
       },
@@ -584,7 +653,9 @@
         "collection_9B9zC4",
         "collection_ga9dBe",
         "collection_7J8nUX",
-        "collection_NqHEya"
+        "collection_NqHEya",
+        "product_eQLiP3",
+        "product_4nem88"
       ],
       "name": "Coming Soon Grid",
       "settings": {
@@ -924,57 +995,6 @@
         "showArrow": false
       }
     },
-    "multi_functional_container_KEjR43": {
-      "type": "multi-functional-container",
-      "blocks": {
-        "image_media_TrMeck": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify:\/\/collections\/buy-any-3-at-949",
-            "banner-image-desktop": "shopify:\/\/shop_images\/The_Beauty_Haul_Sale_Banner_1920x160_e9ae385e-0ddd-4d08-b8a9-7e2432ae9cc3.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/The_Beauty_Haul_Sale_Banner_550_x_275.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_media_TrMeck"
-      ],
-      "disabled": true,
-      "settings": {
-        "showContainer": "full-width",
-        "seo_text": "",
-        "image_priority": false,
-        "enableShuffle": false,
-        "show-shop-now": false,
-        "bg_color": "#ffffff",
-        "bg_color_second": "#ffffff",
-        "showCenter": false,
-        "showSliderArrow": false,
-        "showFreeScroll": false,
-        "loop": false,
-        "addInnerPadding": false,
-        "slide_speed": 400,
-        "margin_top_desktop": 36,
-        "margin_bottom_desktop": 0,
-        "margin_top_mobile": 36,
-        "margin_bottom_mobile": 36,
-        "title-top-padding": 0,
-        "title_alignment": "left",
-        "carousel-title": "",
-        "carousel-sub-title": "",
-        "carousel-sub-title-links": "",
-        "num-slides-sm": "1",
-        "num-slides-md": "1",
-        "num-slides-lg": "1",
-        "num-slides-xl": "1",
-        "num-slides-2xl": "1",
-        "showArrow": false
-      }
-    },
     "grid_media_collection_krrKMw": {
       "type": "grid-media-collection",
       "settings": {
@@ -1082,8 +1102,8 @@
         "video_media_hDqah9": {
           "type": "video-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/makeup-revolution",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/BOTW SLIDE_1.mp4",
+            "banner-url": "shopify:\/\/collections\/la-colors",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/La Color Botw 1 Slide.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1093,8 +1113,8 @@
         "image_media_7tXw7P": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/makeup-revolution-skin-silk-serum-foundation",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BOTW_SLIDE_2_32fcb35b-446b-42f2-9a30-e6e62b5f1341.jpg",
+            "banner-url": "shopify:\/\/products\/jelly-cool-tinted-blush-stick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_COLORS_BOTW_2-min.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1104,8 +1124,8 @@
         "image_media_bqiA8E": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/makeup-revolution-air-blur-matte-liquid-lipstick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BOTW_SLIDE_3.jpg",
+            "banner-url": "shopify:\/\/products\/l-a-colors-stay-jelly-juicy-hydrating-sheer-butter-lip-balm",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_COLORS_BOTW_3-min.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1115,8 +1135,8 @@
         "image_media_KJQTEW": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/makeup-revolution-pout-bomb-plumping-gloss-espresso-cool-nude?_pos=3&_psq=poutb&_ss=e&_v=1.0",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BOTW_SLIDE_4.jpg",
+            "banner-url": "shopify:\/\/products\/l-a-colors-just-glow-highlighter-bronzer-stick",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_COLORS_BOTW_4-min.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1126,8 +1146,8 @@
         "image_media_yRBK6V": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/makeup-revolution-reloaded-red-alert?variant=49736129478935",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BOTW_SLIDE_5.jpg",
+            "banner-url": "shopify:\/\/products\/l-a-colors-changing-glossy-lip-oil-stocking-stuffer",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_COLORS_BOTW_5-min.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1137,8 +1157,8 @@
         "image_media_UYVcxT": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/makeup-revolution-loose-baking-powder-1",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BOTW_SLIDE_6.jpg",
+            "banner-url": "shopify:\/\/products\/l-a-colors-18-color-moodsetter-eyeshadow",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_COLORS_BOTW_6-min.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1148,8 +1168,8 @@
         "image_media_6jEAqp": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/makeup-revolution-beam-bright-blush?_pos=1&_sid=0e05e6117&_ss=r",
-            "banner-image-desktop": "shopify:\/\/shop_images\/BOTW_SLIDE_7.jpg",
+            "banner-url": "shopify:\/\/products\/l-a-colors-color-balm",
+            "banner-image-desktop": "shopify:\/\/shop_images\/LA_COLORS_BOTW_7-min.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1170,12 +1190,11 @@
         ".carousel-wrapper-outer {padding-bottom: 30px;}",
         ".carousel-section-title-wrapper {margin: auto; padding-top: 0;}",
         ".carousel-section-wrapper {row-gap: 21px;}",
-        ".para-title-text {margin: auto; font-size: 35px;}",
+        ".para-title-text {margin: auto; font-size: clamp(22px, 2vw, 35px);}",
         ".carousel-btn {background: #fff;}",
         ".section-center-text {text-align: center;}",
         ".arrow_handler {top: 46%;}",
-        ".square-banner-slide {box-shadow: rgb(151 124 116) 6px 5px 19px 0px;}",
-        "@media screen and (max-width: 768px) {.para-title-text {font-size: 22px; } .para-title-logo {width: 140px; }}"
+        "@media screen and (max-width: 768px) {.para-title-logo {width: 140px; }}"
       ],
       "settings": {
         "showContainer": "container",
@@ -1183,8 +1202,8 @@
         "image_priority": false,
         "enableShuffle": false,
         "show-shop-now": false,
-        "bg_color": "#d3baa7",
-        "bg_color_second": "#ffffff",
+        "bg_color": "#aed7fe",
+        "bg_color_second": "#f0d8f9",
         "showCenter": false,
         "showSliderArrow": true,
         "showFreeScroll": false,
@@ -1197,7 +1216,7 @@
         "margin_bottom_mobile": 30,
         "title-top-padding": 30,
         "title_alignment": "left",
-        "carousel-title": "<div class=\"section-center-text\">\n        <p class=\"para-title-text\">BRAND OF THE WEEK <\/p>\n<br>\n<img class=\"para-title-logo\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0896\/2320\/0023\/files\/REVOLUTION-MAKEUP_LOGO_NEW_a3d7153b-dc38-415d-b2cf-146b74f19c83.png?v=1746267654;width=170\">\n<\/div>",
+        "carousel-title": "<div class=\"section-center-text\">\n        <p class=\"para-title-text\">BRAND OF THE WEEK <\/p>\n<br>\n<img class=\"para-title-logo\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0896\/2320\/0023\/files\/LA_Colors_logo.png?v=1747375564;width=170\">\n<\/div>",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
         "num-slides-sm": "1.5",
@@ -1684,12 +1703,12 @@
     "tabs_and_pills_rr6WVU",
     "main_hero_banner_qcCWtj",
     "multi_functional_container_A7XTBC",
+    "multi_functional_container_KEjR43",
     "coming_soon_grid_yrmGVz",
     "multi_functional_container_4M7jiW",
     "hok_featured_collection_yCrqB9",
     "multi_functional_container_m9THUq",
     "multi_functional_container_NewNkt",
-    "multi_functional_container_KEjR43",
     "grid_media_collection_krrKMw",
     "hok_featured_collection_Mjb6i7",
     "multi_functional_container_XaTjix",

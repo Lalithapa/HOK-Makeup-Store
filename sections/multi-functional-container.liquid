@@ -31,10 +31,13 @@
   assign num_slides_xl = section.settings['num-slides-xl']
   assign num_slides_2xl = section.settings['num-slides-2xl']
   assign image_priority = section.settings.image_priority
+  assign load_video = false
   if image_priority
     assign fetch_priority = 'high'
+    assign load_video = true
   else
     assign fetch_priority = 'auto'
+    assign load_video = false
   endif
 %}
 <div class="section-{{ section.id }}-margin">

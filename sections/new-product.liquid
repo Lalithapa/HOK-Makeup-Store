@@ -273,7 +273,7 @@
                   assign offer_name = 'bogo'
                 elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by' or collection.handle == 'the-add-to-heart-sale-up-to-60-off' or  product.title contains '1 Kg' or product.title contains '1.8 Kg' 
                   assign offer_name = 'offerHidden'
-                elsif collection.handle == 'foundation-sale'
+                elsif collection.handle == 'foundation-sale' or collection.handle == 'slay-the-base'
                   assign offer_name = 'foundation-sale'
                 elsif collection.handle contains 'giverny'
                   assign offer_name = 'giverny'
@@ -289,6 +289,8 @@
                       <p class="bogo-text-wrapper">
                         {% if template contains 'candies' %}
                           <b>Buy Any 2 and get </b> ...
+                        {% elsif offer_name == 'foundation-sale' %}
+                          <b>Get Extra ₹100 OFF + </b> ...
                         {% elsif offer_name == 'pd-bundle' %}
                           <b>Buy Any 3 at ₹94</b> ...
                         {% elsif offer_name == 'bogo' %}
@@ -297,8 +299,6 @@
                           Extra <b>₹100 OFF</b> on orders ...
                         {% elsif offer_name == 'lamel' %}
                           <b>Buy Two Get One Free</b> ...
-                        {% elsif offer_name == 'foundation-sale' %}
-                          <b>Get a Free Face Brush Worth ₹34</b> ...
                         {% endif %}
                       </p>
                     </span>
@@ -341,6 +341,12 @@
                                         >Collection</a
                                       ></b
                                     >
+                                  </p>
+                                </div>
+                              {% elsif offer_name == 'foundation-sale' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                      Get Extra <strong>₹100 OFF</strong> + <strong>FREE ₹425 </strong> Foundation Brush on every order!
                                   </p>
                                 </div>
                               {% elsif offer_name == 'default' %}

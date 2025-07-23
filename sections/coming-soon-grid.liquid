@@ -124,7 +124,7 @@
               {% assign product = all_products[section_block.product] %}
               <div class="swiper-slide">
                 <a
-                  href="javascript:void(0)"
+                  href="{% if template == 'index' %}{{ product.url }}{% else %}javascript:void(0){% endif %}"
                   {% if section.settings.seo_text %}
                     data-location="{{ section.settings.seo_text | append:forloop.index }}"
                   {% endif %}
@@ -150,7 +150,10 @@
                       <p class="b-coming-subtitle">
                         {{- section_block.subtitle -}}
                       </p>
-                      <button class="coming-soon-button d-none" type="button">Notify Me</button>
+                      {% if template == 'index' %}
+                        <button class="coming-soon-button" type="button">Shop Now</button>
+                      {% endif %}
+                      <!-- <button class="coming-soon-button d-none" type="button">Notify Me</button> -->
                     </div>
                   </div>
                 </a>

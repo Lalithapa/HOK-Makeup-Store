@@ -380,8 +380,8 @@
           "settings": {
             "product": "l-n-pro-blush-4g",
             "launch_text": "Coming Soon",
-            "image": "shopify:\/\/shop_images\/LN_Pro_D.jpg",
-            "subtitle": "High-shine lips, zero stickiness. LUMIGLOSS is coming to light up your pout."
+            "image": "shopify:\/\/shop_images\/Image_20250515_180148_752.jpg",
+            "subtitle": "Blushes, highlighters, and more—LN Pro’s So Cute range is launching soon. Don’t miss out!"
           }
         },
         "product_d6JtQT": {
@@ -405,7 +405,7 @@
         "product_tqjiDB": {
           "type": "product",
           "settings": {
-            "product": "argan-keratin-exclusive-shampoo-8-in-1-150ml",
+            "product": "eveline-cosmetics-beauty-glow-moisturizing-and-firming-body-lotion-350-ml",
             "launch_text": "Coming Soon",
             "image": "shopify:\/\/shop_images\/Eveline_D.jpg",
             "subtitle": "Minty fresh meets high gloss. Cooling Kisses is landing soon to keep your lips chill and cute!"
@@ -649,8 +649,9 @@
     },
     "tabular_categories_rkqrKN": {
       "type": "tabular-categories",
+      "disabled": true,
       "settings": {
-        "showContainer": "page-width",
+        "showContainer": "container",
         "combos_url": "",
         "margin_top_desktop": 36,
         "margin_bottom_desktop": 88,
@@ -1052,6 +1053,7 @@
         "content_8XFtBg",
         "content_7cU93G"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "coll-title": "this week’s best finds",
@@ -1075,6 +1077,7 @@
     },
     "custom_liquid_3GVLqR": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div class=\"container\">\n<div class=\"carousel-section-title-wrapper\" style=\"padding-top:2px\">\n        <p>Budget buys for you\n        <\/p>\n      <\/div>\n<\/div>",
         "color_scheme": "",
@@ -1176,6 +1179,7 @@
         "banner_media_NcidUp",
         "banner_media_yywNAK"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "page-width",
         "margin_top_desktop": 36,

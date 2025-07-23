@@ -119,50 +119,6 @@
     "show_cart_note": true,
     "cart_drawer_collection": "recommended-products",
     "cart_color_scheme": "scheme-1",
-    "sections": {
-      "main-password-header": {
-        "type": "main-password-header",
-        "settings": {
-          "color_scheme": "scheme-1"
-        }
-      },
-      "main-password-footer": {
-        "type": "main-password-footer",
-        "settings": {
-          "color_scheme": "scheme-1"
-        }
-      }
-    },
-    "content_for_index": [],
-    "blocks": {
-      "1232542678405107163": {
-        "type": "shopify:\/\/apps\/instafeed\/blocks\/head-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-        "disabled": false,
-        "settings": {}
-      },
-      "36909921495456953": {
-        "type": "shopify:\/\/apps\/ai-speed\/blocks\/ai-speed\/f9e4b8d0-6523-47d0-b77a-783072cc6552",
-        "disabled": false,
-        "settings": {
-          "enable_optimization": true,
-          "debug_mode": false,
-          "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
-          "image_threshold": 30
-        }
-      },
-      "13951170544780599758": {
-        "type": "shopify:\/\/apps\/tapita-seo-speed\/blocks\/app-embed\/cd37ca7a-40ad-4fdc-afd3-768701482209",
-        "disabled": true,
-        "settings": {}
-      },
-      "15796953133730294439": {
-        "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-        "disabled": false,
-        "settings": {
-          "disable_shadow_root_globally": false
-        }
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -228,6 +184,45 @@
           "button_label": "#000000",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
+        }
+      }
+    },
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "1232542678405107163": {
+        "type": "shopify:\/\/apps\/instafeed\/blocks\/head-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
+      },
+      "36909921495456953": {
+        "type": "shopify:\/\/apps\/ai-speed\/blocks\/ai-speed\/f9e4b8d0-6523-47d0-b77a-783072cc6552",
+        "disabled": false,
+        "settings": {
+          "enable_optimization": true,
+          "debug_mode": false,
+          "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
+          "image_threshold": 30
+        }
+      },
+      "15796953133730294439": {
+        "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
+        "disabled": false,
+        "settings": {
+          "disable_shadow_root_globally": false
         }
       }
     }
