@@ -73,7 +73,7 @@
 }
 .skincare_banner_content {
     color: #000;
-    font-family: var(--family-light);
+    font-weight: 300;
     font-size: 2rem;
 }
 .skincare-content .text-skincare-content .skincare_product_type {
@@ -110,7 +110,6 @@
     transition: background-color 0.3s;
     color: #000;
     text-align: center;
-    font-family: var(--family-regular);
 }
 .skin-tab-item img {
     object-fit: contain;
@@ -122,8 +121,8 @@
     box-shadow: 0 2px 4px 0 rgba(224, 213, 213, 0.25);
 }
 .skin-tab-item.active {
-    color: #000;
-    font-family: var(--family-bold);
+  color: #000;
+  font-weight: 700;
 }
 .skin-tab-item.active img {
     filter: brightness(60%);
@@ -260,10 +259,10 @@
     #skincare_concern:checked ~ .list label.skincare_concern,
     #skincare_ingredients:checked ~ .list label.skincare_ingredients,
     #skincare_product_type:checked ~ .list label.skincare_product_type {
-        border-radius: 6px 6px 0 0;
-        background: #efeeea;
-        font-family: var(--family-bold);
-        box-shadow: unset;
+      border-radius: 6px 6px 0 0;
+      background: #efeeea;
+      font-weight: 700;
+      box-shadow: unset;
     }
     .skincare-content .list label {
         cursor: pointer;

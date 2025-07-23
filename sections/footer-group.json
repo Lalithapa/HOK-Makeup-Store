@@ -2,6 +2,13 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "product_quickview_Ciajkn": {
+      "type": "product-quickview",
+      "name": "Pd Quick View",
+      "settings": {
+        "default_product": ""
+      }
+    },
     "main_cart_drawer_446jVG": {
       "type": "main-cart-drawer",
       "settings": {}
@@ -63,6 +70,7 @@
   },
   "order": [
     "main_cart_drawer_446jVG",
+    "product_quickview_Ciajkn",
     "new_footer_kPaAYa",
     "footer"
   ]

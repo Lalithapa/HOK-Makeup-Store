@@ -1,155 +1,196 @@
 {{ 'floating-nav.css' | asset_url | stylesheet_tag }}
 <div id="floating-nav" class="mobile_screen">
   <div class="bottom-nav">
-  <a href="{% if template == "index" %}javascript:void(0){% else %}/{% endif %}" class="nav-item{% if template == "index" %} active{% endif %}" {{ template }}>
-    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-logo" width="13" height="20" viewBox="0 0 13 20" fill="none">
-    <path d="M4.5 0.00195312H0.5V20.002H4.5V12.423H8.5V20.002H12.5V0.00195312H8.5V7.89669H4.5V0.00195312Z" stroke="#0B0A0A" fill="#0B0A0A"/>
-    </svg></span>
-    <span class="label">home</span> 
-  </a>
-  <a href="{% if template.suffix == "deal-of-the-day" %}javascript:void(0){% else %}/pages/deal-of-the-day{% endif %}" class="nav-item{% if template.suffix == "deal-of-the-day" %} active{% endif %}">
-    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
-    <path d="M10.625 8.89669H13.75C14.3023 8.89669 14.75 9.34441 14.75 9.89669V11.5283M10.625 8.89669H7.5C6.94772 8.89669 6.5 9.34441 6.5 9.89669V11.5283M10.625 8.89669C9.07812 8.19494 6.29375 6.47564 7.53125 5.21248C8.76875 3.94932 9.76562 5.7388 10.1094 6.79143L10.625 8.89669ZM10.625 8.89669C10.625 8.19494 10.8313 6.47564 11.6562 5.21248C12.6875 3.63353 14.2344 5.21248 13.7188 6.26511C13.3063 7.10722 11.4844 8.37037 10.625 8.89669ZM6.5 11.5283V15.7914C6.5 16.3437 6.94772 16.7914 7.5 16.7914H13.75C14.3023 16.7914 14.75 16.3437 14.75 15.7914V11.5283M6.5 11.5283H11.6562M13.2031 11.5283H14.75M19.7656 15.1686L26.9 5.7388M31.9531 11.002C31.9531 12.3979 32.7861 13.1622 33.2295 13.4701C33.3885 13.5805 33.5 13.757 33.5 13.9506V19.502C33.5 20.3304 32.8284 21.002 32 21.002H2C1.17157 21.002 0.5 20.3304 0.5 19.502V13.9136C0.5 13.7396 0.590163 13.5783 0.72699 13.4708C1.1568 13.1331 2.04688 12.2795 2.04688 11.002C2.04688 9.72439 1.1568 8.87081 0.72699 8.5331C0.590163 8.42559 0.5 8.26429 0.5 8.09027V2.50195C0.5 1.67353 1.17157 1.00195 2 1.00195H32C32.8284 1.00195 33.5 1.67353 33.5 2.50195V8.05332C33.5 8.24687 33.3885 8.42336 33.2295 8.53377C32.7861 8.84175 31.9531 9.60603 31.9531 11.002ZM24.9219 16.2651C24.0676 16.2651 23.375 15.5582 23.375 14.6862C23.375 13.8141 24.0676 13.1072 24.9219 13.1072C25.7762 13.1072 26.4688 13.8141 26.4688 14.6862C26.4688 15.5582 25.7762 16.2651 24.9219 16.2651ZM22.8594 7.34982V7.28567C22.8594 6.43135 22.1668 5.7388 21.3125 5.7388V5.7388C20.4582 5.7388 19.7656 6.43135 19.7656 7.28567V7.34981C19.7656 8.20413 20.4582 8.89669 21.3125 8.89669V8.89669C22.1668 8.89669 22.8594 8.20413 22.8594 7.34982Z" stroke="#0B0A0A" stroke-linecap="round"/>
-    </svg></span>
-    <span class="label">offer</span>
-  </a>
-  <a href="{% if template.suffix == "brand" %}javascript:void(0){% else %}/pages/brands{% endif %}" class="nav-item{% if template.suffix == "brand" %} active{% endif %}">
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
-  <path d="M19.2133 6.08984C20.4002 8.19488 20.7848 10.6585 20.296 13.0251C19.8071 15.3918 18.4779 17.5014 16.5541 18.9639C14.6303 20.4264 12.242 21.1428 9.83082 20.9808C7.41965 20.8188 5.1487 19.7892 3.43787 18.0824" stroke="black" stroke-linecap="round"/>
-  <path d="M1.78939 15.9141C0.602472 13.809 0.21788 11.3454 0.706726 8.97878C1.19557 6.61214 2.52479 4.50253 4.4486 3.04003C6.37242 1.57754 8.76071 0.861066 11.1719 1.0231C13.583 1.18513 15.854 2.21471 17.5648 3.92146" stroke="black" stroke-linecap="round"/>
-  <circle cx="10.5015" cy="11.0029" r="7.00099" stroke="black" stroke-linecap="round"/>
-  <path d="M10.5015 4V18M10.5015 4C11.6128 4.13891 13.8353 5.33873 13.8353 11.0061C13.8353 16.6736 11.6128 18 10.5015 18M10.5015 4C9.39027 4.13891 7.16776 5.33873 7.16776 11.0061C7.16776 16.6736 9.39027 18 10.5015 18M4.5 8.50581H16.5M4.5 13.5065H16.5" stroke="black" stroke-linecap="round"/>
-  <circle cx="17" cy="3.5" r="1.5" fill="black"/>
-  <circle cx="4" cy="18.5" r="1.5" fill="black"/>
-</svg>
-    </span>
-    <span class="label">brands</span>
-  </a>
-  <a href="{% if template.suffix == "hok-rewards" %}javascript:void(0){% else %}/pages/hok-rewards{% endif %}" class="nav-item{% if template.suffix == "hok-rewards" %} active{% endif %}">
-    <span class="icon nav-hok-reward">
-      {{ 'icon-reward.svg' | inline_asset_content }}
-    </span>
-   </a>
-  <a href="{% if template.suffix == "index" %}javascript:void(0){% else %}/pages/brands{% endif %}" class="nav-item{% if template.suffix == "deal" %} active{% endif %}">
-    <span class="icon d-center icon-account"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
-    <circle cx="6.50282" cy="2.57338" r="2.57143" fill="#FDFDFD"/>
-    <path d="M11.0743 12.002C11.6265 12.002 12.0823 11.5516 11.997 11.0059C11.806 9.78409 11.2667 8.64696 10.4424 7.75931C9.39757 6.63409 7.98046 6.00195 6.50283 6.00195C5.02519 6.00195 3.60808 6.63409 2.56323 7.75931C1.73899 8.64696 1.19967 9.78409 1.00868 11.0059C0.923383 11.5516 1.37911 12.002 1.9314 12.002L6.50283 12.002H11.0743Z" fill="#FDFDFD"/>
-  </svg></span>
-  <span class="label">account</span>
-  </a>
-</div>
+    <a
+      href="{% if template == "index" %}javascript:void(0){% else %}/{% endif %}"
+      class="nav-item{% if template == "index" %} active{% endif %}"
+      {{ template }}
+    >
+      <span class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-logo"
+          width="13"
+          height="20"
+          viewBox="0 0 13 20"
+          fill="none"
+        >
+          <path d="M4.5 0.00195312H0.5V20.002H4.5V12.423H8.5V20.002H12.5V0.00195312H8.5V7.89669H4.5V0.00195312Z" stroke="#0B0A0A" fill="#0B0A0A"/>
+        </svg>
+      </span>
+      <span class="label">home</span>
+    </a>
+    <a
+      href="{% if template.suffix == "deal-of-the-day" %}javascript:void(0){% else %}/pages/deal-of-the-day{% endif %}"
+      class="nav-item{% if template.suffix == "deal-of-the-day" %} active{% endif %}"
+    >
+      <span class="icon">
+        <img
+          src="{% if template.suffix == "deal-of-the-day" %}https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Offer_2.svg?v=1749463348{% else %}https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Offer_1.svg?v=1749462823{% endif %}"
+          width="25"
+          height="22"
+          alt="offers"
+          loading="eager"
+        >
+      </span>
+      <span class="label">offer</span>
+    </a>
+    <a
+      href="{% if template.suffix == "brand" %}javascript:void(0){% else %}/pages/brands{% endif %}"
+      class="nav-item{% if template.suffix == "brand" %} active{% endif %}"
+    >
+      <span class="icon">
+        <img
+          src="{% if template.suffix == "brand" %}https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Brands_2.svg?v=1749463013{% else %}https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Brands_1.svg?v=1749463012{% endif %}"
+          width="21"
+          height="22"
+          alt="brands"
+          loading="eager"
+        >
+      </span>
+      <span class="label">brands</span>
+    </a>
+    <a
+      href="{% if template.suffix == "hok-rewards" %}javascript:void(0){% else %}/pages/hok-rewards{% endif %}"
+      class="nav-item{% if template.suffix == "hok-rewards" %} active{% endif %}"
+    >
+      <span class="icon nav-hok-reward">
+        {% if template.suffix == 'hok-rewards' %}
+          <img
+            src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Hok-rewards.png"
+            width="40"
+            height="auto"
+            alt="hok-rewards"
+            loading="eager"
+          >
+        {% else %}
+          {{ 'icon-reward.svg' | inline_asset_content }}
+        {% endif %}
+      </span>
+    </a>
+    <a
+      href="/account"
+      class="nav-item"
+    >
+      <span class="icon d-center icon-account">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+          <circle cx="6.50282" cy="2.57338" r="2.57143" fill="#FDFDFD"/>
+          <path d="M11.0743 12.002C11.6265 12.002 12.0823 11.5516 11.997 11.0059C11.806 9.78409 11.2667 8.64696 10.4424 7.75931C9.39757 6.63409 7.98046 6.00195 6.50283 6.00195C5.02519 6.00195 3.60808 6.63409 2.56323 7.75931C1.73899 8.64696 1.19967 9.78409 1.00868 11.0059C0.923383 11.5516 1.37911 12.002 1.9314 12.002L6.50283 12.002H11.0743Z" fill="#FDFDFD"/>
+        </svg>
+      </span>
+      <span class="label">account</span>
+    </a>
+  </div>
 </div>
 {% schema %}
+{
+  "name": "Floating Bar",
+  "max_blocks": 12,
+  "settings": [
     {
-      "name": "Floating Bar",
-      "max_blocks": 12,
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Desktop Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
       "settings": [
         {
-          "type": "link_list",
-          "id": "menu",
-          "default": "main-menu",
-          "label": "Desktop Menu"
-        }
-      ],
-      "blocks": [
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color"
+        },
         {
-          "type": "announcement",
-          "name": "Announcement",
-          "settings": [
-            {
-              "type": "color",
-              "id": "bg_color",
-              "label": "Background Color"
-            },
-            {
-              "type": "color_background",
-              "id": "bg_color_gd",
-              "label": "Background Color Gradient"
-            },
-            {
-              "type": "image_picker",
-              "id": "bg_img",
-              "label": "Background Image"
-            },
-            {
-              "type": "richtext",
-              "id": "text",
-              "label": "Announcement Heading",
-              "default": "<p>Welcome to our store</p>"
-            },
-            {
-              "type": "color",
-              "id": "head_col",
-              "label": "Main Heading Color",
-              "default": "#fff"
-            },
-            {
-              "type": "range",
-              "id": "desk-main-heading-size",
-              "label": "Desktop Main Heading Text Size",
-              "default": 22,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-            {
-              "type": "range",
-              "id": "mob-main-heading-size",
-              "label": "Mobile Main Heading Text Size",
-              "default": 14,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-    
-            {
-              "type": "richtext",
-              "id": "sub_txt",
-              "label": "Sub Heading",
-              "default": "<p>*automatically applied at checkout, excludes sale items, Miracle Cream and Haircare Electricals. Cannot be used in conjunction with any other offer.</p>"
-            },
-            {
-              "type": "color",
-              "id": "sub_head_col",
-              "label": "Sub Heading Color",
-              "default": "#fff"
-            },
-            {
-              "type": "range",
-              "id": "desk-sub-heading-size",
-              "label": "Desktop Sub Heading Text Size",
-              "default": 10,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-            {
-              "type": "range",
-              "id": "mob-sub-heading-size",
-              "label": "Mobile Sub Heading Text Size",
-              "default": 8,
-              "step": 1,
-              "min": 2,
-              "max": 60,
-              "unit": "px"
-            },
-            {
-              "type": "url",
-              "id": "link",
-              "label": "Announcement Bar Link"
-            }
-          ]
-        }
-      ],
-      "presets": [
+          "type": "color_background",
+          "id": "bg_color_gd",
+          "label": "Background Color Gradient"
+        },
         {
-          "name": "Floating Bar"
+          "type": "image_picker",
+          "id": "bg_img",
+          "label": "Background Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Announcement Heading",
+          "default": "<p>Welcome to our store</p>"
+        },
+        {
+          "type": "color",
+          "id": "head_col",
+          "label": "Main Heading Color",
+          "default": "#fff"
+        },
+        {
+          "type": "range",
+          "id": "desk-main-heading-size",
+          "label": "Desktop Main Heading Text Size",
+          "default": 22,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mob-main-heading-size",
+          "label": "Mobile Main Heading Text Size",
+          "default": 14,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+
+        {
+          "type": "richtext",
+          "id": "sub_txt",
+          "label": "Sub Heading",
+          "default": "<p>*automatically applied at checkout, excludes sale items, Miracle Cream and Haircare Electricals. Cannot be used in conjunction with any other offer.</p>"
+        },
+        {
+          "type": "color",
+          "id": "sub_head_col",
+          "label": "Sub Heading Color",
+          "default": "#fff"
+        },
+        {
+          "type": "range",
+          "id": "desk-sub-heading-size",
+          "label": "Desktop Sub Heading Text Size",
+          "default": 10,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+        {
+          "type": "range",
+          "id": "mob-sub-heading-size",
+          "label": "Mobile Sub Heading Text Size",
+          "default": 8,
+          "step": 1,
+          "min": 2,
+          "max": 60,
+          "unit": "px"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Announcement Bar Link"
         }
       ]
     }
-    {% endschema %}
-    
+  ],
+  "presets": [
+    {
+      "name": "Floating Bar"
+    }
+  ]
+}
+{% endschema %}

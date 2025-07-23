@@ -2,16 +2,22 @@
   .section-{{ section.id }}-margin  {
     margin-top: {{ section.settings.margin_top_desktop }}px;
     margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
-  } 
+  }
   .b-coming-soon-products{
     font-size: 20px;
     text-transform: uppercase;
     line-height: 36px;
   }
   .b-header-vendor-label{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
     font-size: 20px;
-    font-family:var(--family-bold);
+    font-weight: 700;
     line-height: 32px;
+    height: clamp(24px,3vw,32px);
+    overflow:hidden;
   }
   .b-coming-subtitle{
     color: #000;
@@ -26,7 +32,7 @@
     margin-top: 32px;
     width: 100%;
     padding: 10px;
-    font-family:var(--family-bold);
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 18px;
     display: inline-block;
@@ -132,16 +138,18 @@
                   <div class="content-item">
                     <div class="b-product_promo_tile">
                       <div class="lazyload-media">
-                      <img
-                        class="img-fluid rounded-2"
-                        src="{{ section_block.image | image_url }}"
-                        alt="{{ product.title }}"
-                        title="{{ product.title }}"
-                        width="100%"
-                        loading="lazy"
-                        height="100%"
-                         
-                      >
+                        <img
+                          srcset="
+                            {{ section_block.image | image_url: width: 388, height: 388 }} 388w,
+                            {{ section_block.image | image_url: width: 746, height: 746 }} 746w
+                          "
+                          sizes="(max-width: 568px) 388px, 746px"
+                          src="{{ section_block.image | image_url: width: 388, height: 388 }}"
+                          alt="{{ section_block.image | escape }}"
+                          width="100%"
+                          height="auto"
+                          loading="lazy"
+                        >
                       </div>
                       <p class="b-coming-soon-products">{{ section_block.launch_text }}</p>
                       <p class="b-header-vendor-label">
@@ -169,16 +177,15 @@
                   <div class="content-item">
                     <div class="b-product_promo_tile">
                       <div class="lazyload-media">
-                      <img
-                        class="img-fluid"
-                        src="{{ section_block.image | image_url }}"
-                        alt="{{ section_block.collection.title }}"
-                        title="{{ section_block.collection.title }}"
-                        width="100%"
-                        loading="lazy"
-                        height="100%"
-                         
-                      >
+                        <img
+                          class="img-fluid"
+                          src="{{ section_block.image | image_url }}"
+                          alt="{{ section_block.collection.title }}"
+                          title="{{ section_block.collection.title }}"
+                          width="100%"
+                          loading="lazy"
+                          height="100%"
+                        >
                       </div>
                       <p class="b-coming-soon-products">{{ section_block.launch_text }}</p>
                       <p class="b-header-vendor-label">

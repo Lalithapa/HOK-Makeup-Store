@@ -4,6 +4,7 @@
   .section-{{ section.id }}-margin {
     margin-top: {{ section.settings.margin_top_desktop }}px;
     margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+    height: 100vh;
   }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top_desktop }}px;
@@ -25,7 +26,6 @@
 {% assign html_blocks = section.blocks | where: 'type', 'html' %}
 {% assign text_index = 0 %}
 <!-- Dynamic upper text display area -->
-
 <div class="wrapper-content section-{{ section.id }}-margin section-{{ section.id }}-padding">
   <div
     class="dynamic-upper-text"
@@ -56,10 +56,17 @@
               <div class=" upper desktop-only">{{ block.settings['text-image'] }}</div>
               <div class="combo-offer-card zoom-wrapper" data-modal="combo-offer-modal-{{ forloop.index }}">
                 <img
-                  src="{{ block.settings.image | img_url: '300x300' }}"
-                  class="zoomed-image"
+                  src="{{ block.settings.image | image_url }}"
+                  class="zoomed-image desktop_screen"
                   alt="Zoomed Image"
-                  width="300"
+                  width="100%"
+                  height="auto"
+                >
+                <img
+                  src="{{ block.settings.mobile_image | image_url }}"
+                  class="zoomed-image mobile_screen"
+                  alt="Zoomed Image"
+                  width="100%"
                   height="auto"
                 >
               </div>
@@ -90,7 +97,7 @@
       <div
         id="combo-offer-modal-{{ forloop.index }}"
         class="combo-offer-modal"
-        style="background-image: url('{{ block.settings.image | img_url: 'large' }}'); background-repeat: no-repeat; background-size: cover;"
+        style="background-image: url('{{ block.settings.mobile_image | image_url }}');"
       >
         <span class="combo-offer-close">
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="8" viewBox="0 0 23 8" fill="none">
@@ -101,9 +108,9 @@
         </span>
         <div class="combo-offer-popup">
           <div class="combo-offer-grid">
-            {% for product in collections[block.settings.collection].products %}
+            {% for product in collections[block.settings.collection].products limit: 10 %}
               <div class="combo-offer-product">
-                {% render 'new-procduct-card-double',
+                {% render 'new-product-card-double',
                   product: product,
                   fetch_priority: fetch_priority,
                   indexIs: indexing
@@ -111,6 +118,19 @@
               </div>
             {% endfor %}
           </div>
+          {% if collections[block.settings.collection].products.size > 10 %}
+            <div class="combo-offer-grid">
+              {% for product in collections[block.settings.collection].products offset: 10 limit: 10 %}
+                <div class="combo-offer-product">
+                  {% render 'new-product-card-double',
+                    product: product,
+                    fetch_priority: fetch_priority,
+                    indexIs: indexing
+                  %}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
 
         {% if block.settings.url_collecion_link %}
@@ -233,6 +253,11 @@
 "label": "Card Image"
 },
 {
+"type": "image_picker",
+"id": "mobile_image",
+"label": "Card Mobile Image"
+},
+{
 "type": "html",
 "id": "text-bottom-image",
 "label": "Card upper text desktop"
@@ -288,14 +313,17 @@
     document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth <= 768) {
         const swiper = new Swiper('.combo-offer-card-swiper', {
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-          loop: true,
+          slidesPerView: 1.1,
+          spaceBetween: 5,
+          loop: false,
           loopedSlides: 3,
 
           breakpoints: {
+             425: { slidesPerView: 1.2,
+              centeredSlides: true
+            },
             768: {
-              slidesPerView: 3,
+              slidesPerView: 1.2,
               centeredSlides: true
             },
             1024: {
@@ -305,56 +333,45 @@
           },
           on: {
             slideChange: function () {
-              const activeSlide = document.querySelector('.combo-offer-card-swiper .swiper-slide-active');
-              const activeText = activeSlide?.getAttribute('data-text');
-              const activeBottomText = activeSlide?.getAttribute('data-text-bottom');
-              console.log(activeBottomText, 'activeBottomText');
-              if (activeText) {
-                document.getElementById('combo-offer-active-text').innerHTML = activeText;
-              }
-              if (activeBottomText) {
-                document.getElementById('combo-offer-active-text-bottom').innerHTML = activeBottomText;
-              }
+              setTimeout(()=>{
+               const activeSlide = document.querySelector('.combo-offer-card-swiper .swiper-slide-active');
+                const activeText = activeSlide?.getAttribute('data-text');
+                const activeBottomText = activeSlide?.getAttribute('data-text-bottom');
+                //console.log(activeBottomText, 'activeBottomText');
+                if (activeText) {
+                  document.getElementById('combo-offer-active-text').innerHTML = activeText;
+                }
+                if (activeBottomText) {
+                  document.getElementById('combo-offer-active-text-bottom').innerHTML = activeBottomText;
+                }
+            },100)
             }
           }
         });
-
-        // Set initial upper and bottom text
         const firstSlide = document.querySelector('.combo-offer-card-swiper .swiper-slide-active');
-        if (firstSlide) {
-          const firstText = firstSlide.getAttribute('data-text');
-          const firstBottomText = firstSlide.getAttribute('data-text-bottom');
+          if (firstSlide) {
+            const firstText = firstSlide.getAttribute('data-text');
+            const firstBottomText = firstSlide.getAttribute('data-text-bottom');
 
-          document.getElementById('combo-offer-active-text').innerHTML = firstText || '';
-          document.getElementById('combo-offer-active-text-bottom').innerHTML = firstBottomText || '';
-        }
+            document.getElementById('combo-offer-active-text').innerHTML = firstText || '';
+            document.getElementById('combo-offer-active-text-bottom').innerHTML = firstBottomText || '';
+          }
       }
-       // Modal open
       document.querySelectorAll('.combo-offer-card').forEach(card => {
         card.addEventListener('click', function () {
           const target = this.getAttribute('data-modal');
           const popup = document.getElementById(target);
-
-          // Show the popup
           popup.style.display = 'block';
-
-          // Restart animation
           popup.classList.remove('show');
           void popup.offsetWidth; // force reflow
           popup.classList.add('show');
         });
       });
-
-     // Modal close
   document.querySelectorAll('.combo-offer-close').forEach(btn => {
     btn.addEventListener('click', function () {
       const modal = this.closest('.combo-offer-modal');
-
-      // Add hide class and remove show
       modal.classList.remove('show');
       modal.classList.add('hide');
-
-      // Wait for hide animation to finish
       modal.addEventListener('animationend', function handler() {
         modal.style.display = 'none';
         modal.classList.remove('hide');
@@ -369,7 +386,6 @@
       const modal = e.target;
       modal.classList.remove('show');
       modal.classList.add('hide');
-
       modal.addEventListener('animationend', function handler() {
         modal.style.display = 'none';
         modal.classList.remove('hide');

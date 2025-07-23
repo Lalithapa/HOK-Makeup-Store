@@ -40,7 +40,7 @@
       </h2>
     </div>
   {% endif %}
-  <div class="swiper combo-product-swiper page-width">
+  <div class="swiper combo-product-swiper container">
     <div class="swiper-wrapper">
       {% for product in section.settings.collection.products %}
         <div class="swiper-slide">
@@ -174,9 +174,9 @@
   document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".combo-product-swiper", {
       slidesPerView: 5,
-      spaceBetween: 5,
+      spaceBetween: 16,
        centeredSlides: false,
-      loop: true,
+      loop: false,
 
       navigation: {
         nextEl: ".swiper-button-next",
@@ -194,10 +194,11 @@
       breakpoints: {
         349: {
           slidesPerView: 1.5,
-          centeredSlides: false,
+          centeredSlides: true,
         },
         768: {
-          slidesPerView: 1.5
+          slidesPerView: 1.5,
+          centeredSlides: true,
         },
         1024: {
           slidesPerView: 3

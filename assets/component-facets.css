@@ -1073,6 +1073,10 @@ input.mobile-facets__checkbox {
   width: 50%;
   border: 1px solid #000;
   font-size: 14px;
+  border-radius: 50px;
+}
+.mobile-facets__footer .button:before , .mobile-facets__footer .button:after {
+  border-radius: 50px !important;
 }
 
 .mobile-facets__sort {
@@ -1084,7 +1088,7 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__sort label {
   flex-shrink: 0;
-  font-family: var(--family-bold);
+  font-weight: 700;
 }
 
 .mobile-facets__sort .select {

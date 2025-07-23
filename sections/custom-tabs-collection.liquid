@@ -37,11 +37,12 @@
           class="tab {% if forloop.first %}active{% endif %} tab_{{ forloop.index }}"
           data-tab="{{ block.id }}"
           style="background:{{ block.settings.tab_color }}"
-
-          data-aos="custom-fade-rotate"
-          data-aos-delay="100"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
+          {% comment %}
+            data-aos="custom-fade-rotate"
+            data-aos-delay="100"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          {% endcomment %}
         >
           {{ block.settings.tab_title }}
         </div>
@@ -59,7 +60,7 @@
                 <div class="swiper-slide product-card tabbed-collections-card">
                   <div class="product__pocket_deal_day" product_slider="true">
                     {% assign indexing = forloop.index0 %}
-                    {% render 'new-procduct-card-double', product: product, indexIs: indexing %}
+                    {% render 'new-product-card-double', product: product, indexIs: indexing %}
                   </div>
                 </div>
               {% endfor %}
@@ -86,7 +87,7 @@
                 %}
                   <div class="product-card tabbed-collections-card">
                     {% assign indexing = forloop.index0 %}
-                    {% render 'new-procduct-card-double', product: product, indexIs: indexing %}
+                    {% render 'new-product-card-double', product: product, indexIs: indexing %}
                   </div>
                 {% endfor %}
               </div>

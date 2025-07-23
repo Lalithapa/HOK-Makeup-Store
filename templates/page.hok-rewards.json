@@ -94,7 +94,7 @@
             "brandImage": "shopify:\/\/shop_images\/712X580_EUPHORIA.jpg",
             "brandLogo": "shopify:\/\/shop_images\/EUPHORIA_caafb218-e1da-4819-9a66-8d31f264f5b6.png",
             "brandLogoText": "<p>spend <strong>₹8000+<\/strong> quarterly<\/p>",
-            "backgroundColor": "pink",
+            "backgroundColor": "euphoria",
             "features": "Everything in Bliss Plus :",
             "offers": "<ul class=\"level-fun-brand-offers-container\">                                  <li class=\"level-fun-brand-offers\">                                     4000 Points for level up                                  <\/li>                                 <li class=\"level-fun-brand-offers\">                                     4X points on ₹1 per purchase                                   <\/li>                                  <li class=\"level-fun-brand-offers\">                                       15% Off On Birthday                                   <\/li>                           <\/ul>",
             "most-popular": false
@@ -111,12 +111,20 @@
     "b0dbed1f-51d9-4a37-ba2d-208cfff08a5e": {
       "type": "hok-reward-uses",
       "settings": {}
+    },
+    "floating_nav_ciE8Qc": {
+      "type": "floating-nav",
+      "name": "Floating Bar",
+      "settings": {
+        "menu": "main-menu"
+      }
     }
   },
   "order": [
     "main",
     "1bdebf7a-1866-417f-9a32-930107844c4b",
     "a7dcbcc7-2ecd-429a-8cf4-79996559e195",
-    "b0dbed1f-51d9-4a37-ba2d-208cfff08a5e"
+    "b0dbed1f-51d9-4a37-ba2d-208cfff08a5e",
+    "floating_nav_ciE8Qc"
   ]
 }

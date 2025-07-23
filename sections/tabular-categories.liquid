@@ -38,13 +38,12 @@
       border-radius: 50px;
       cursor: pointer;
       font-size: 20px;
-      text-transform: capitalize;
     }
 
     .tabular-category-btn.active {
       color: #000;
       box-shadow: 0px 1px 8px 0px rgba(63, 62, 58, 0.25);
-      font-family:var(--family-bold);
+      font-weight: 700;
       border:none;
     }
     .tabular-productGrid{
@@ -88,7 +87,7 @@
       transition: 0.3s ease;
     }
 
-    .tabular-product-card img.tabular-product-card-image {
+    .tabular-product-card img {
       height: auto;
       border-radius: 10px;
     }
@@ -118,7 +117,7 @@
     .tabular-section-product-info span {
       font-size: 20px;
       color: #000;
-      font-family: var(--family-bold);
+      font-weight: 700;
     }
 
     @media (max-width: 900px) {
@@ -179,41 +178,94 @@
     </div>
 
     <div class="product-category-tabs">
-       {%- assign button_text = section.settings.buttonText | split:',' -%}
-      {% for button in button_text -%}
-        <button class="tabular-category-btn{% if forloop.first %} active{% endif %}" onclick="filterCategoryTab(event, '{{ button }}')">{{ button | capitalize }}</button>
-      {%- endfor %}
+      <button class="tabular-category-btn active" onclick="filterTab(event, 'Eyeliner')">Eyeliner</button>
+      <button class="tabular-category-btn" onclick="filterTab(event, 'Lip Oil')">Lip Oil</button>
+      <button class="tabular-category-btn" onclick="filterTab(event, 'Pencil Liner')">Pencil Liner</button>
+      <button class="tabular-category-btn" onclick="filterTab(event, 'Liquid Liner')">Liquid Liner</button>
     </div>
 
     <div class="tabular-category-quote">
       "Didn’t expect this quality at this price! So smooth and long-lasting.” – Aisha K.<span style="font-style:normal;">&nbsp;|&nbsp;</span> <strong style="font-style:normal;">Pinkflash</strong>
     </div>
-    {% for block in section.blocks %}
-      <div class="tabular-productGrid{% if forloop.index < 6 %} active{% endif %}" data-category="{% if forloop.index <= 6 %}Eyeliner{%  elsif forloop.index >= 7 and forloop.index <= 12 %}Lip Tint{%  elsif forloop.index >= 13 and forloop.index <= 18 %}Blush{% else %}Eyeshadow{% endif %}">
-        {% assign product = block.settings.product %}
-          <div class="tabular-product-card">
-            <a href="{{ product.url }}" title="{{ product.title }}">
-              <img src="{{ block.settings.image | image_url }}" alt="{{ product.title |  append: forloop.index }}" class="tabular-product-card-image" width="100%" height="100%">
-              <div class="tabular-section-product-info">
-                <div class="sequence">
-                  {{ forloop.index }}
-                </div>
-                <div>
-                  <div class="d-flex gap-2"><img src="{{ block.settings.brand_logo_image | image_url }}" alt="logo" width="auto" height="25">
-                  <h4><span style="color:#D2D2D2">|</span><span> {{ block.settings.Offer_title | default:'lamel' }}</span></h4></div>
-                  <p style="color: #3498db;font-weight:600;">{{ block.settings.Offer_subtitle | default:'lamel' }}</p>
-                </div>
-              </div>
-            </a>
+    <div class="tabular-productGrid active" data-category="Eyeliner">
+      {% for i in (1..6) %}
+        <div class="tabular-product-card">
+          <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/la_33010555-449d-413a-891a-ae1cc9059888.png" alt="Lip Oil" width="100%" height="100%">
+          <div class="tabular-section-product-info">
+            <div class="sequence">
+              {{ i }}
+            </div>
+            <div>
+              <div class="d-flex gap-2"><img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/lacolors-logo.png?v=1745403507" alt="logo" width="auto" height="25">
+              <h4><span style="color:#D2D2D2">|</span><span> Steal at 25% Off</span></h4></div>
+              <p style="color: #3498db;font-weight:600;">Lowest price ever</p>
+            </div>
           </div>
         </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+
+    <!-- Lip Oil Grid -->
+    <div class="tabular-productGrid" data-category="Lip Oil">
+      {% for i in (1..6) %}
+        <div class="tabular-product-card">
+          <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/la_33010555-449d-413a-891a-ae1cc9059888.png?v=1745319308" alt="Lip Oil" width="100%" height="100%">
+          <div class="tabular-section-product-info">
+            <div class="sequence">
+              {{ i }}
+            </div>
+            <div>
+              <div class="d-flex gap-2"><img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/lacolors-logo.png?v=1745403507" alt="logo" width="auto" height="25">
+              <h4><span style="color:#D2D2D2">|</span> <span> Steal at 25% Off</span></h4></div>
+              <p style="color: #3498db;">Lowest price ever</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Lip Oil Grid -->
+    <div class="tabular-productGrid" data-category="Pencil Liner">
+      {% for i in (1..6) %}
+        <div class="tabular-product-card">
+          <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/la_33010555-449d-413a-891a-ae1cc9059888.png?v=1745319308" alt="Lip Oil" width="100%" height="100%">
+          <div class="tabular-section-product-info">
+            <div class="sequence">
+              {{ i }}
+            </div>
+            <div>
+              <div class="d-flex gap-2"><img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/lacolors-logo.png?v=1745403507" alt="logo" width="auto" height="25">
+              <h4><span style="color:#D2D2D2">|</span> <span> Steal at 25% Off</span></h4></div>
+              <p style="color: #3498db;">Lowest price ever</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Lip Oil Grid -->
+    <div class="tabular-productGrid" data-category="Liquid Liner">
+      {% for i in (1..6) %}
+        <div class="tabular-product-card">
+          <img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/pf_a34ec916-8f96-4c07-b67c-3cee6b9744a3.png?v=1745310339" alt="Lip Oil" width="100%" height="100%">
+          <div class="tabular-section-product-info">
+            <div class="sequence">
+              {{ i }}
+            </div>
+            <div>
+              <div class="d-flex gap-2"><img src="https://cdn.shopify.com/s/files/1/0896/2320/0023/files/lacolors-logo.png?v=1745403507" alt="logo" width="auto" height="25">
+              <h4><span style="color:#D2D2D2">|</span> <span> Steal at 25% Off</span></h4></div>
+              <p style="color: #3498db;">Lowest price ever</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Add similar blocks for Pencil Liner and Liquid Liner as needed -->
   </div>
 </div>
 </div>
 
 <script>
-function filterCategoryTab(event, category) {
+function filterTab(event, category) {
   // Toggle active class on buttons
   document.querySelectorAll('.tabular-category-btn').forEach(btn => btn.classList.remove('active'));
   event.target.classList.add('active');
@@ -227,12 +279,40 @@ function filterCategoryTab(event, category) {
     }
   });
 }
+// "blocks": [
+//     {
+//       "type": "image",
+//       "name": "content",
+//       "settings": [
+//         {
+//           "type": "color",
+//           "id": "colors",
+//           "label": "Background Color",
+//           "default": "#f9f0e1"  
+//         },  
+//         {
+//           "type": "product",
+//           "id": "product",
+//           "label": "Product"
+//         },
+//         {
+//           "type": "image_picker",
+//           "id": "image",
+//           "label": "Product Image"
+//         },
+//         {
+//           "type": "text",
+//           "id": "title",
+//           "label": "Brand Title"
+//         }
+//       ]
+//     }
+//   ],
 </script>
 {% schema %}
     {
       "name": "Tabular Categories",
       "class": "tabular-cat-section",
-      "max_blocks": 24,
       "settings": [
         {
           "type": "radio", 
@@ -249,12 +329,6 @@ function filterCategoryTab(event, category) {
           "type": "url",
           "id": "combos_url",
           "label": "Combos URL"
-        },
-         {
-            "type": "text",
-            "id": "buttonText",
-            "label": "Navigation Button Text",
-            "info": "This text will be used for the navigation button (Use , to seperate the buttons) (Max 4 words)"
         },
         {
           "type": "header",
@@ -303,45 +377,6 @@ function filterCategoryTab(event, category) {
           "unit": "px",
           "label": "Margin Bottom",
           "default": 36
-        }
-      ],
-      "blocks": [
-        {
-          "type": "image",
-          "name": "content",
-          "settings": [
-            {
-              "type": "product",
-              "id": "product",
-              "label": "Product"
-            },
-            {
-              "type": "image_picker",
-              "id": "image",
-              "label": "Product Image"
-            },
-            {
-              "type": "image_picker",
-              "id": "brand_logo_image",
-              "label": "Product Brand Image"
-            },
-            {
-              "type": "text",
-              "id": "Offer_title",
-              "label": "Brand Offer Title"
-            },
-            {
-              "type": "text",
-              "id": "Offer_subtitle",
-              "label": "Brand Offer Sub Title"
-            },
-            {
-              "type": "color",
-              "id": "colors",
-              "label": "Text Color",
-              "default": "#f9f0e1"  
-            }
-          ]
         }
       ],
       "presets": [

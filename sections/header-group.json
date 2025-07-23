@@ -2,13 +2,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "1740743233fd94300e": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
     "announcement_bar_xqp6tT": {
       "type": "announcement-bar",
       "blocks": {
@@ -40,44 +33,13 @@
     "updated_announcement_bar_NFDExf": {
       "type": "updated-announcement-bar",
       "settings": {
-        "text": "<p>Add To Bag Madness Sale is Live<\/p>",
-        "link": "shopify:\/\/collections\/makeup"
-      }
-    },
-    "hok_announcement_bar_hJBdUQ": {
-      "type": "hok-announcement-bar",
-      "blocks": {
-        "announcement_je9h9w": {
-          "type": "announcement",
-          "settings": {
-            "bg_color": "",
-            "bg_color_gd": "",
-            "bg_img": "shopify:\/\/shop_images\/Strip_36af40d5-7d17-4819-aeb2-57e0b9803887.jpg",
-            "text": "<p>The Winter Wonderland Sale is Live: Up To 60% OFF + Surprise Gift on orders ₹799+<\/p>",
-            "head_col": "#121212",
-            "desk-main-heading-size": 16,
-            "mob-main-heading-size": 12,
-            "sub_txt": "",
-            "sub_head_col": "#121212",
-            "desk-sub-heading-size": 10,
-            "mob-sub-heading-size": 14,
-            "link": "shopify:\/\/pages\/makeup"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_je9h9w"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "p {margin-bottom: 0;}"
-      ],
-      "settings": {
-        "menu": ""
+        "text": "<p>Hot Girl Summer Drop Sale is Live: Up To 50% OFF+ Surprise Gifts<\/p>",
+        "link": "https:\/\/hokmakeup.com\/pages\/hot-girl-summer-drop"
       }
     },
     "header": {
       "type": "header",
+      "custom_css": [],
       "settings": {
         "logo_position": "top-center",
         "menu": "desktop-main-menu",
@@ -167,16 +129,15 @@
     },
     "product_quickview_FBBVgd": {
       "type": "product-quickview",
+      "disabled": true,
       "settings": {
         "default_product": ""
       }
     }
   },
   "order": [
-    "1740743233fd94300e",
     "announcement_bar_xqp6tT",
     "updated_announcement_bar_NFDExf",
-    "hok_announcement_bar_hJBdUQ",
     "header",
     "new_header_pqxJqQ",
     "navbar_UJefUW",

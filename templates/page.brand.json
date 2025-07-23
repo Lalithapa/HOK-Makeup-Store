@@ -269,11 +269,19 @@
         "brand_text_heading": "EVERYDAY ESSENTIALS",
         "text_color": "#7b7b7b"
       }
+    },
+    "floating_nav_qQHLND": {
+      "type": "floating-nav",
+      "name": "Floating Bar",
+      "settings": {
+        "menu": "main-menu"
+      }
     }
   },
   "order": [
     "main",
     "brand_grid_MBzAit",
-    "brand_grid_g98dCV"
+    "brand_grid_g98dCV",
+    "floating_nav_qQHLND"
   ]
 }

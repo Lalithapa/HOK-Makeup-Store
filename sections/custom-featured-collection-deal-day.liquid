@@ -1,15 +1,14 @@
 <!-- section/custom-featured-collection-deal-day.liquid -->
-
 {%- style -%}
   .section-{{ section.id }}-margin {
     margin-top: {{ section.settings.margin_top_desktop }}px;
     margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+    height: 100vh;
   }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top_desktop }}px;
     padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
   }
-
   @media screen and (max-width: 768px) {
     .section-{{ section.id }}-margin {
       margin-top: {{ section.settings.margin_top_mobile }}px;
@@ -52,7 +51,7 @@
           <a href="{% if section.settings.link == '#' %}javascript:void(0){% else %}{{ section.settings.link }}{% endif %}">
             <img
               class="desktop_screen"
-              src="{{ section.settings.image | img_url: 'master' }}"
+              src="{{ section.settings.image | image_url }}"
               alt="{{ section.settings.image | escape }}"
               width="100%"
               height="auto"
@@ -60,7 +59,7 @@
             >
             <img
               class="mobile_screen"
-              src="{{ section.settings.image_mobile | img_url: 'master'}}"
+              src="{{ section.settings.image_mobile | image_url}}"
               alt="{{ section.settings.image_mobile | escape }}"
               width="100%"
               height="auto"
@@ -75,7 +74,7 @@
           {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
             <div class="product__pocket_deal_day">
               {% assign indexing = forloop.index0 %}
-              {% render 'new-procduct-card-double',
+              {% render 'new-product-card-double',
                 product: product,
                 fetch_priority: fetch_priority,
                 indexIs: indexing
@@ -170,7 +169,7 @@
   {
       "type": "range",
       "id": "margin_top_desktop",
-      "min": 36,
+      "min": 0,
       "max": 200,
       "step": 2,
       "unit": "px",
@@ -180,7 +179,7 @@
     {
       "type": "range",
       "id": "margin_bottom_desktop",
-      "min": 36,
+      "min": 0,
       "max": 200,
       "step": 2,
       "unit": "px",
@@ -211,7 +210,7 @@
       "type": "range",
       "id": "margin_top_mobile",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 2,
       "unit": "px",
       "label": "Margin Top (Mobile)",
@@ -221,7 +220,7 @@
       "type": "range",
       "id": "margin_bottom_mobile",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 2,
       "unit": "px",
       "label": "Margin Bottom (Mobile)",
@@ -231,7 +230,7 @@
       "type": "range",
       "id": "padding_top_mobile",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 2,
       "unit": "px",
       "label": "Padding Top (Mobile)",
@@ -241,16 +240,12 @@
       "type": "range",
       "id": "padding_bottom_mobile",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 2,
       "unit": "px",
       "label": "Padding Bottom (Mobile)",
       "default": 20
     }
-
-
-
-
   ],
   "presets": [
     {
@@ -260,135 +255,166 @@
 }
 {% endschema %}
 <style>
-         .container-top-image-product{
-           width:100%;
-           display:flex;
-           overflow: auto hidden;
-           padding: 0px;
-           position:relative;
-          transform: rotateX(180deg);
-          scrollbar-color: #393939 #D8D8D8;
-          scrollbar-width: thin;
-          scroll-snap-type: y mandatory;
-         }
-        .container-top-image-product > * {
-            transform: rotateX(180deg);
-        }
-         .featured-custom-banner{
-            width:40%;
-         }
-         .featured-collection_day_deal  .carousel-section-wrapper{row-gap: 0px;}
-          .featured-collection_day_deal .carousel-wrapper-outer{
-            width:60%;
-         }
-          .featured-collection_day_deal  .b-product_tile-picture_container{
-            padding: 0px 30px;
-          }
-    .featured-collection_day_deal .product__pocket_deal_day  .b-product_price-value{
-       font-size: 14px;
-     }
-       .featured-collection_day_deal .product__pocket_deal_day  .b-product_promo_tile-name_link{height: 35px;}
-          .featured-collection_day_deal .product__pocket_deal_day  .b-product_promo_vendor-name_link{font-size: 14px;}
-           .featured-collection_day_deal .product__pocket_deal_day .b-product_promo_tile-name_link{font-size: 12px;}
-              .featured-collection_day_deal .button-cta.atc{font-size:11px;}
-            .featured-collection_day_deal  .product__pocket_deal_day{padding: 28px 31px 0px 33px;border-top: 1px solid #E5DCD5;
-       border-right: 1px solid #E5DCD5;}
-         .featured-custom-banner img{
-          width: 100%;
-         height: 100%;
-         object-fit: cover;
-        max-height: 700px;
-         }
-         .featured-custom-banner a{
-           height: 100%;
-           width: 100%;
-           display: block;
-         }
-         .featured-collection_day_deal .carousel-wrapper-outer{
-           display: grid;
-           grid-template-columns: repeat(15, 1fr);
-           grid-template-rows: 2fr;
-           /* gap: 3.5rem;
-           padding-inline: 4rem; */
-           align-items: center;
-           padding-bottom:3rem;
-         }
-         .top-section{
-           /* padding: 0px 20px; */
-           overflow-x: hidden;
-         }
-         .collection-title-text {
-           background: #DEF31C;
-           width: 100%;
-           padding: 10px 15px;
-       }
-           .featured-collection_day_deal .img-fluid{
-             max-width: 172px;
-           }
-            .featured-collection_day_deal .carousel-wrapper-inner{
-              flex-wrap: wrap;
-              justify-content: center;
-              gap:20px;
-            }
-
-          .featured-collection_day_deal  .carousel-title{
-            font-size: 24px;
-            font-style: normal;
-            margin-left:20px;
-            font-weight: 700;
-            line-height: normal;
-          }
-         .featured-collection_day_deal .carousel-sub-title{
-           text-transform: none;
-           font-size: clamp(12px, 2vw, 17px);
-           display:none
-         }
-         .featured-collection_day_deal   .b-product_promo_tile-content{
-           height: 150px;
-         }
-         .featured-collection_day_deal .b-add_to_bag-button{
-           padding:7px;
-         }
-
-         @media screen and (max-width: 768px) {
-
-           .featured-collection_day_deal .carousel-title{margin-left: 0px; font-family: var(--family-bold);}
-           .featured-collection_day_deal .product__pocket_deal_day {
-          padding: unset;
-          border-top: unset;
-           border-right:unset;
+  .container-top-image-product{
+       width:100%;
+       display:flex;
+       overflow: auto hidden;
+       padding: 0px;
+       position:relative;
+       transform: rotateX(180deg);
+       scroll-snap-type: y mandatory;
   }
-        .featured-collection_day_deal   .b-product_promo_tile-content{
-           height: 100px;
-         }
-           .collection-title-text {
-         background: #fff;}
-       /* .featured-collection_day_deal   .b-product_promo_tile-name_link{
-         height: unset;
-       } */
-       .featured-custom-banner{
-            width:75%;
-         }
-           .container-top-image-product{padding: 0px 15px;  transform: unset;  -webkit-overflow-scrolling: touch;}
-           .custom-scroll::-webkit-scrollbar{height: 3px;}
-           .container-top-image-product > * {
-            transform: unset;
-        }
-          .featured-collection_day_deal .carousel-wrapper-outer{
-            width:30%;
-           gap: 3.5rem;
-           padding-inline: 2rem;
-         }
-            .featured-collection_day_deal .img-fluid{
-             max-width:100%;
-           }
-          .featured-collection_day_deal  .b-product_promo_tile-name_link{font-size: 12px;}
-           .featured-collection_day_deal  .b-product_tile-picture_container{
-            padding: 0px ;
-            display: block;
-            min-height: 166px;
-          }
-           .featured-custom-banner img {border-radius: 10px;}
-           .featured-collection_day_deal .carousel-sub-title{display:block;}
-         }
+    .container-top-image-product::-webkit-scrollbar{
+      height: 5px;
+    }
+    .container-top-image-product::-webkit-scrollbar-thumb{
+     background: #CAA4A6;
+    }
+   .container-top-image-product > * {
+       transform: rotateX(180deg);
+  }
+   .featured-custom-banner{
+       width:40%;
+  }
+   .featured-collection_day_deal .carousel-section-wrapper{
+      row-gap: 0px;
+  }
+   .featured-collection_day_deal .carousel-wrapper-outer{
+       width:60%;
+  }
+    .animated_product .b-product_promo_tile {
+      max-width: 500px;
+      width: 100%;
+      margin: auto;
+    }
+   .featured-collection_day_deal .product__pocket_deal_day .b-product_price-value{
+       font-size: 14px;
+  }
+   .featured-collection_day_deal .product__pocket_deal_day .b-product_promo_tile-name_link{
+      height: 35px;
+  }
+   .featured-collection_day_deal .product__pocket_deal_day .b-product_promo_vendor-name_link{
+      font-size: 14px;
+      white-space: nowrap;
+  }
+   .featured-collection_day_deal .product__pocket_deal_day .b-product_promo_tile-name_link{
+      font-size: 12px;
+  }
+   .featured-collection_day_deal .button-cta.atc{
+      font-size:11px;
+  }
+   .featured-collection_day_deal .product__pocket_deal_day{
+      padding: 30px 30px 0;
+      border-top: 1px solid #E5DCD5;
+       border-right: 1px solid #E5DCD5;
+  }
+   .featured-custom-banner img{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       max-height: 900px;
+  }
+   .featured-custom-banner a{
+       height: 100%;
+       width: 100%;
+       display: block;
+  }
+   .featured-collection_day_deal .carousel-wrapper-outer{
+       display: grid;
+       grid-template-columns: repeat(15, 1fr);
+       grid-template-rows: 2fr;
+       align-items: center;
+       padding-bottom:3rem;
+  }
+   .top-section{
+       overflow-x: hidden;
+  }
+   .collection-title-text {
+       background: #DEF31C;
+       width: 100%;
+       padding: 10px 15px;
+  }
+   .featured-collection_day_deal .img-fluid{
+       max-width: 280px;
+  }
+   .featured-collection_day_deal .carousel-wrapper-inner{
+       flex-wrap: wrap;
+       justify-content: center;
+       gap:20px;
+  }
+   .featured-collection_day_deal .carousel-title{
+       font-size:  24px;
+       font-style: normal;
+       margin-left:20px;
+       font-weight: 700;
+       line-height: normal;
+  }
+   .featured-collection_day_deal .carousel-sub-title{
+       text-transform: none;
+       font-size: clamp(12px, 2vw, 17px);
+       display:none
+  }
+   .featured-collection_day_deal .b-product_promo_tile-content{
+       height: 140px;
+  }
+   .featured-collection_day_deal .b-add_to_bag-button{
+       padding:7px;
+  }
+   @media screen and (max-width: 768px) {
+ .animated_product .b-product_tile-picture_container img{
+     min-width:300px;
+   }
+     .featured-collection_day_deal .carousel-title{
+       margin: 0 0 10px 0;
+         font-weight: 700;
+       font-size:  34px;
+    }
+     .featured-collection_day_deal .product__pocket_deal_day {
+         padding: unset;
+         border-top: unset;
+         border-right:unset;
+    }
+     .featured-collection_day_deal .b-product_promo_tile-content{
+         height: 100px;
+    }
+     .collection-title-text {
+         background: #fff;
+    }
+     .featured-custom-banner{
+         width:75%;
+    }
+     .container-top-image-product{
+        padding: 0px 15px;
+         transform: unset;
+         -webkit-overflow-scrolling: touch;
+    }
+     .custom-scroll::-webkit-scrollbar{
+        height: 3px;
+    }
+     .container-top-image-product > * {
+         transform: unset;
+    }
+     .featured-collection_day_deal .carousel-wrapper-outer{
+         width:25%;
+         gap: 3.5rem;
+         padding-inline: 2rem;
+    }
+     .featured-collection_day_deal .img-fluid{
+         max-width:100%;
+    }
+     .featured-collection_day_deal .b-product_promo_tile-name_link{
+        font-size: 12px;
+    }
+     .featured-collection_day_deal .b-product_tile-picture_container{
+         padding: 0px ;
+         display: block;
+         min-height: 166px;
+    }
+     .featured-custom-banner img {
+        border-radius: 10px;
+    }
+     .featured-collection_day_deal .carousel-sub-title{
+        display:block;
+    }
+  }
 </style>

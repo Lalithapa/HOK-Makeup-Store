@@ -137,13 +137,14 @@
     {% endunless %}
       <p class="b-product_promo_vendor-name">
         <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
-          {{- product.vendor | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove:'-pd-bundle'  -}}
+          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' -}}
         </a>
         <a class="b-product_promo_tile-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
           {{- product.title | remove: product.vendor  -}}
         </a>
       </p>
-      <div class="product-prices d-flex align-items-center {% if template contains 'collection' %}gap-1{%  else %}gap-2{% endif %}">
+      {% comment %} {% if template contains 'collection' %}gap-1{%  else %}gap-2{% endif %} {% endcomment %}
+      <div class="product-prices d-flex align-items-center gap-2">
         <span class="b-product_price-value">
           {{ first_variant.price | money_without_trailing_zeros }}
         </span>

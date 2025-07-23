@@ -1,8 +1,6 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
- {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%} 
- 
     <meta charset="utf-8">
     <meta name="google-site-verification" content="TDoXrfR2tc8ptJb5eduGq1vRueRu-47EbZAUmcY1MxQ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +12,10 @@
     {%- endif -%}
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      {{ 'Mosvita-Heavy.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
+      {{ 'NickySans-Regular.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: true }}
     {%- endunless -%}
     <title>
       {{ page_title }}
@@ -36,11 +38,11 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'axios.js' | asset_url }}" defer="defer"></script>
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> {% endcomment %}
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ 'scroll-animation.js' | asset_url }}" defer="defer"></script>
+    {% comment %}
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    {% endcomment %}
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -51,7 +53,6 @@
         defer
       ></script>
     {% endif %}
-
     {{ content_for_header }}
     {% render 'custom-fonts' %}
     {%- liquid
@@ -113,12 +114,8 @@
       }
 
       :root {
-        --header-family: "Anton", sans-serif;
-        --family-light: "Sweet Sans Pro Light", sans-serif;
-        --family-regular: "Sweet Sans Pro Regular", sans-serif;
-        --family-medium: "Sweet Sans Pro-Medium", sans-serif;
-        --family-bold: "Sweet Sans Pro-Bold", sans-serif;
-        --family-heavy: "Sweet Sans Pro Heavy", sans-serif;
+        --header-family: "Mosvita", sans-serif;
+        --family-regular: 'NickySans', sans-serif;
         --star-size: 12px;
         --star-color: #fff;
         --star-background: #000;
@@ -258,18 +255,20 @@
       }
 
       body {
-        display: grid;
+         display: grid;
         grid-template-rows: auto auto 1fr auto;
         grid-template-columns: 100%;
         min-height: 100%;
         margin: 0;
         font-size: 1.5rem;
-        /* letter-spacing: 0.06rem; */
         letter-spacing: 0;
         line-height: calc(1 + 0.8 / var(--font-body-scale));
         font-family: var(--family-regular);
+        font-weight: 400;
+        /* letter-spacing: 0.06rem;
+        font-family: var(--family-regular);
         font-style: var(--font-body-style);
-        /* font-weight: var(--font-body-weight); */
+        font-weight: var(--font-body-weight); */
       }
       a{
         text-decoration:none;
@@ -283,9 +282,21 @@
         }
       {% if template.suffix == "valentine-theme" %}
           main#MainContent {
-              background-color: #f6e6e9;
+            background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/Background-02-min.jpg);
+            overflow-x:hidden;
           }
         {% endif %}
+      {% if template.suffix == "deal-of-the-day" %}
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+      main#MainContent .shopify-section {
+          scroll-snap-align: start;
+          scroll-snap-stop:always;
+          /* height: 100vh; */
+      }
+      {% endif %}
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
@@ -308,10 +319,11 @@
     {% endif %}
     {{ 'bootstrap.css' | asset_url | stylesheet_tag }}
     {% comment %} <link rel="stylesheet" href="{{ 'swiper.css' | asset_url  }}" media="print" onload="this.media='all'">{% endcomment %}
-    {{ 'swiper.css' | asset_url | stylesheet_tag }} 
+    {{ 'swiper.css' | asset_url | stylesheet_tag }}
     {{ 'additional-swiper.css' | asset_url | stylesheet_tag }}
     {{ 'mini-cart.css' | asset_url | stylesheet_tag }}
     {{ 'product-pocket.css' | asset_url | stylesheet_tag }}
+    {{ 'aos-animation.css' | asset_url | stylesheet_tag }}
     {% if template == 'cart' %}
       <link
         rel="stylesheet"
@@ -320,13 +332,13 @@
         onload="this.media='all'"
       >
     {% endif %}
-      {%- if settings.cart_type == 'drawer' -%}
-        {% comment %}{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
-        {{ 'component-cart.css' | asset_url | stylesheet_tag }}
-        {{ 'component-totals.css' | asset_url | stylesheet_tag }}
-        {{ 'component-price.css' | asset_url | stylesheet_tag }}
-        {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
-      {%- endif -%}
+    {%- if settings.cart_type == 'drawer' -%}
+      {% comment %}{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
+      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+      {{ 'component-price.css' | asset_url | stylesheet_tag }}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -347,8 +359,6 @@
       <link
         rel="stylesheet"
         href="{{ 'component-predictive-search.css' | asset_url }}"
-        media="print"
-        onload="this.media='all'"
       >
     {%- endif -%}
     {% render 'sr-checkout' %}
@@ -358,7 +368,8 @@
       }
        window.history.scrollRestoration = 'manual';
     </script>
-        {% comment %} Marketing Scripts Starts {% endcomment %}
+    <script src="{{ 'scroll-animation.js' | asset_url }}" defer="defer"></script>
+    {% comment %} Marketing Scripts Starts {% endcomment %}
     <!-- Google Tag Manager -->
     <script>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -446,9 +457,9 @@
           "https://www.instagram.com/hokmakeup/",
           "https://www.facebook.com/hokmakeup",
           "https://www.youtube.com/c/hokmakeup"
-        ] 
+        ]
       }
-      </script>
+    </script>
     {% comment %} Marketing Scripts Ends {% endcomment %}
   </head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -476,7 +487,7 @@
     </main>
     {% sections 'footer-group' %}
     {% render 'toaster' %}
-     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
     <ul hidden>
@@ -485,28 +496,8 @@
     </ul>
     <!-- Required to show all the recommended products on Foundation Friday -->
     <script>
-         document.addEventListener('DOMContentLoaded', function () {
-         const videos = document.querySelectorAll("video.lazyvideo");
-  
-      const loadVideo = (video) => {
-        const source = video.querySelector("source");
-        const videoSrc = source.getAttribute("data-src");
-        source.setAttribute("src", videoSrc);
-        video.load();
-      };
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              loadVideo(entry.target);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.5 } // Load when 50% of the video is in the viewport
-      );
-      videos.forEach((video) => observer.observe(video));
-      });
+      // Video Lazyload and New Icon Logic
+     document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll("video.lazyvideo"),r=e=>{let r=e.querySelector("source"),t=r.getAttribute("data-src");r.setAttribute("src",t),e.load()},t=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&(r(e.target),t.unobserve(e.target))})},{threshold:.5});e.forEach(e=>t.observe(e));let n=[document.querySelector("#HeaderMenu-makeup .new-icon"),document.querySelector("#HeaderMenu-makeup-explore-all .new-icon"),document.querySelector("#HeaderDrawer-makeup .new-icon"),document.querySelector("#HeaderDrawer-makeup-explore-all .new-icon")],a=[document.querySelector("#HeaderMenu-skin .new-icon"),document.querySelector("#HeaderMenu-skin-explore-all .new-icon"),document.querySelector("#HeaderDrawer-skin .new-icon"),document.querySelector("#HeaderDrawer-skin-explore-all .new-icon")];localStorage.getItem("visitedMakeup")&&n.forEach(e=>e&&(e.style.display="none")),localStorage.getItem("visitedSkincare")&&a.forEach(e=>e&&(e.style.display="none"));let l=[document.getElementById("HeaderMenu-makeup"),document.getElementById("HeaderMenu-makeup-explore-all"),document.getElementById("HeaderDrawer-makeup"),document.getElementById("HeaderDrawer-makeup-explore-all")];l.forEach(e=>{e&&e.addEventListener("click",function(){localStorage.setItem("visitedMakeup","true")})});let o=[document.getElementById("HeaderMenu-skin"),document.getElementById("HeaderMenu-skin-explore-all"),document.getElementById("HeaderDrawer-skin"),document.getElementById("HeaderDrawer-skin-explore-all")];o.forEach(e=>{e&&e.addEventListener("click",function(){localStorage.setItem("visitedSkincare","true")})})});
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',

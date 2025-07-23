@@ -24,6 +24,7 @@
         },
         "blog_rLxkMb": {
           "type": "Blog",
+          "disabled": true,
           "settings": {
             "blog": "skincare"
           }

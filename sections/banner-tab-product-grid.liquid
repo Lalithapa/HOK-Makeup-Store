@@ -34,6 +34,9 @@
   gap: 16px;
   margin-bottom: 15px;
 }
+.banner-tabs-grid-buttons::-webkit-scrollbar{
+  display:none;
+}
 
 .grid-tab-collection-container {
     display: none;
@@ -92,7 +95,7 @@
 }
 .banner-tabs-grid-section .tabular-category-tab-btn{
   background: transparent;
-  font-family: var(--family-medium);
+  font-weight: 500;
   color: #505050;
   white-space: nowrap;
   box-shadow: 0px 1px 6px 0px rgba(148, 147, 147, 0.25);
@@ -109,14 +112,14 @@
   background: #ECAFAF;
   color: #000;
   border: none;
-  font-family: var(--family-heavy);
+  font-weight: 800;
 }
 .tabular-btn.active{
   background: #FFF;
   color:#000;
   box-shadow: 0px 1px 8px 0px rgba(63, 62, 58, 0.25);
   border: none;
-  font-family:var(--family-heavy);
+  font-weight: 800;
 }
 .banner-tabs-grid-section .shop-the-look-product-card {
   background: transparent;
@@ -145,7 +148,7 @@
 
 .shop-the-look-product-card .title {
   margin: 8px 0 2px;
-  font-family: var(--family-medium);
+  font-weight: 500;
 }
 
 .shop-the-look-product-card .subtitle {
@@ -162,13 +165,13 @@
 
 .shop-the-look-price {
   font-size: 14px;
-  font-family: var(--family-heavy);
+  font-weight: 800;
 }
 
 .shop-the-look-old-price {
   text-decoration: line-through;
   color: #999;
-  font-family: var(--family-light);
+  font-weight: 300;
   font-size: calc(100% - 2px);
 }
 .sub_collection_buttons{
@@ -192,7 +195,7 @@
 }
 
 .sub-collections-shop-all-btn button {
-  font-family: var(--family-heavy);
+  font-weight: 800;
   padding: 8px 12px;
   width: 100%;
   max-width: 360px;
@@ -200,7 +203,6 @@
   background: #ffffff;
   border: 1px solid #C3A8AE;
   border-radius: 50px;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -249,6 +251,7 @@
         gap: 8px;
         overflow-x: auto;
         padding: 10px 0px;
+        margin:0;
       }
       .sub_collection_buttons{
         padding: 2px;
@@ -258,7 +261,7 @@
       }
       .tabular-btn {
         font-size: 14px;
-        font-family: var(--family-medium);
+        font-weight: 500;
         border: 1px solid #CFCDCD;
         color: #CFCDCD;
         box-shadow: 0px 1px 6px 0px rgba(148, 147, 147, 0.25);

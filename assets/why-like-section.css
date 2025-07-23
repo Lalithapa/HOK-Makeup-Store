@@ -22,7 +22,7 @@
      margin-bottom: 80px;
     color: #FFF8E7;
     text-align: center;
-    font-family: var(--family-light);
+    font-weight: 300;
     font-size: clamp(13px, 2vw, 19px);
     word-spacing: 2px;
     letter-spacing: 0;
@@ -85,7 +85,7 @@
     background: #FBE403;
     display: block;
     color: #000;
-    font-family: var(--family-medium);
+    font-weight: 500;
     font-size: clamp(16px, 2vw, 18px);
       }
 

@@ -1,3 +1,4 @@
+<!-- section/main-hero-banner -->
 {%- style -%}
     .section-{{ section.id }}-margin {
       margin-top: {{ section.settings.margin_top_desktop }}px;
@@ -78,7 +79,7 @@
     flex: 1;
     max-width: 285px;
     /* width: 190px; */
-    font-family: var(--family-heavy);
+   font-weight: 800;
     font-size: 13px;
     line-height: 16px;
     text-transform: uppercase;
@@ -291,11 +292,11 @@
                     {% elsif block.type == 'video' %}
                       {% assign media_desktop = block.settings['banner-video-desktop'] %}
                       {% assign media_mobile =  block.settings['banner-video-mobile'] %}
-                        <video poster="{{ media_desktop.preview_image.src | image_url }}" class="{% unless forloop.first %}lazyvideo {% endunless %}desktop_screen square-banner-media" autoplay loop muted playsinline>
+                        <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
                           <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
                           Your browser does not support the video tag
                         </video>
-                        <video poster="{{ media_mobile.preview_image.src | image_url }}" class="{% unless forloop.first %}lazyvideo {% endunless %}mobile_screen square-banner-media" autoplay loop muted playsinline>
+                        <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
                           <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>

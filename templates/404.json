@@ -1,11 +1,33 @@
 {
   "sections": {
+    "single_banner_wnfcna": {
+      "type": "single_banner",
+      "custom_css": [
+        ".container-fluid {width: 75%;}",
+        "@media (min-width: 768px) {.container-fluid {width: 40%; }}"
+      ],
+      "name": "Single Banner",
+      "settings": {
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 0,
+        "shradhha_link": "\/",
+        "image": "shopify:\/\/shop_images\/pana.png",
+        "image_mobile": "shopify:\/\/shop_images\/pana.png"
+      }
+    },
     "main": {
       "type": "main-404",
+      "custom_css": [
+        ".center > *:not(a) {display: none;}",
+        ".button,.button:after {border-radius: 50px;}"
+      ],
       "settings": {}
     }
   },
   "order": [
+    "single_banner_wnfcna",
     "main"
   ]
 }

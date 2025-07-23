@@ -70,9 +70,9 @@
             src="{{ product.metafields.custom.deal_of_the_day_product_image.value | image_url }}"
             alt="Extra Product Image"
             title="{{ product.title }}"
-            width="310"
+            width="100%"
             fetchpriority="{{ fetch_priority }}"
-            height="310"
+            height="100%"
           >
         {% else %}
           <img
@@ -80,9 +80,9 @@
             src="{{ product.featured_image | image_url }}"
             alt="{{ product.title }}"
             title="{{ product.title }}"
-            width="310"
+            width="100%"
             fetchpriority="{{ fetch_priority }}"
-            height="310"
+            height="100%"
           >
         {% endif %}
       </a>

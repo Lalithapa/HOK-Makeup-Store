@@ -79,22 +79,23 @@
     {% if section.settings.snowflake_one %}
          .section-{{ section.id }}-margin .nav-wrapper.snowflake_one:before {
           content: "";
-          width: 800px;
-          height: 800px;
-          background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/snowflake1.png?v=1734518810);
+          width: 350px;
+          height: 350px;
+          background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/2-min.png?v=1748331586);
           position: absolute;
-          left: -20%;
-          bottom: -275px;
+          left: -14%;
+          top: -200px;
           display: block;
           background-size: cover;
           background-position: center;
+          transform: rotate(340deg);
         }
         @media screen and (max-width: 768px) {
           .section-{{ section.id }}-margin .nav-wrapper.snowflake_one:before {
-            width: 350px;
-            height: 350px;
-            left: -50%;
-            bottom: -110px;
+           width: 100px;
+            height: 100px;
+            left: -14%;
+            top: -80px;
           }
         }
     {% endif %}
@@ -103,42 +104,43 @@
           content: "";
           width: 350px;
           height: 350px;
-          background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/snowflake2.png?v=1734522498);
+          background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/4-min.png?v=1748331586);
           position: absolute;
-          right: -15%;
-          top: -200px;
+          right: -14%;
+          top: -230px;
+          transform: rotate(330deg);
           display: block;
           background-size: cover;
           background-position: center;
         }
       @media screen and (max-width: 768px) {
         .section-{{ section.id }}-margin .nav-wrapper.snowflake_two:after {
-            width: 200px;
-            height: 200px;
-            right: -40%;
-            top: -110px;
+           width: 100px;
+            height: 100px;
+            right: -18%;
+            top: -118px;
           }
          }
     {% endif %}
         {% if section.settings.snowflake_three %}
          .section-{{ section.id }}-margin .nav-wrapper.snowflake_three:before {
             content: "";
-            width: 700px;
-            height: 700px;
-            background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/snowflake3.png);
+            width: 350px;
+            height: 350px;
+            background-image: url(https://cdn.shopify.com/s/files/1/0896/2320/0023/files/shell-min.png?v=1748331587);
             position: absolute;
-            left: -25%;
-            bottom: -300px;
+            left: -13%;
+            top: -230px;
             display: block;
             background-size: cover;
             background-position: center;
         }
        @media screen and (max-width: 768px) {
          .section-{{ section.id }}-margin .nav-wrapper.snowflake_three:before {
-            width: 250px;
-            height: 250px;
-            left: -40%;
-            bottom: -60px;
+              width: 100px;
+              height: 100px;
+              left: -18%;
+              top: -75px;
           }
          }
     {% endif %}
@@ -238,13 +240,13 @@
       {
         "type": "checkbox",
         "id": "snowflake_two",
-        "label": "Enable Right Snowflake",
+        "label": "Enable Right-2 Snowflake",
         "default":false
       },
       {
         "type": "checkbox",
         "id": "snowflake_three",
-        "label": "Enable Right Snowflake",
+        "label": "Enable Right-3 Snowflake",
         "default":false
       }
     ],

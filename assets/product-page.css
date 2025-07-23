@@ -277,7 +277,7 @@
   padding: 16px 0;
   text-transform: capitalize;
   color: #212529;
-  font-family: var(--family-medium);
+  font-weight: 600;
   font-size: 17px;
   line-height: 24px;
 }
@@ -372,6 +372,9 @@
   top: auto;
   bottom: 100%;
   margin-bottom: 2px;
+}
+span.metafield-multi_line_text_field {
+    text-transform: capitalize;
 }
 
 @media (min-width: 768px) {
@@ -2227,7 +2230,8 @@ button#main-product-handle-btn:disabled {
 
 .l-pdp-product_info_inner .b-product_name {
   color: #212529;
-  font-family: var(--family-medium);
+  font-family: var(--family-regular);
+  font-weight: 500;
   font-size: 23px;
   line-height: 28px;
 }
@@ -2240,15 +2244,9 @@ button#main-product-handle-btn:disabled {
 
 .l-pdp-product_info_inner .product-swatches-container {
   color: #212529;
-  font-family: var(--family-medium);
+  font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-}
-
-.l-pdp-product_info_inner
-  .product-swatches-container
-  .product_swatch_colors_value {
-  font-family: var(--family-regular);
 }
 
 #offers_gap {
@@ -2262,11 +2260,12 @@ button#main-product-handle-btn:disabled {
   flex-direction: column;
   gap: 8px;
 }
-
+.high-demand-info {
+  font-size: 16px;
+}
 .offer-heading,
 .bogo-text-wrapper {
   color: #212529;
-  font-family: var(--family-heavy);
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -2274,24 +2273,22 @@ button#main-product-handle-btn:disabled {
 }
 
 .bogo-text-wrapper {
-  font-family: var(--family-regular);
   text-transform: unset;
 }
 
 .bogo-text-wrapper b {
-  font-family: var(--family-medium);
+  font-weight: 500;
 }
 
 .inclusive {
   color: #8f8f8f;
-  font-family: var(--family-regular);
   font-size: 12px;
   line-height: 14px;
 }
 
 .zero-reviews {
   color: #585858;
-  font-family: var(--family-medium);
+  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
 }
@@ -2315,7 +2312,7 @@ button#main-product-handle-btn:disabled {
   }
 
   #shareProduct {
-    right: 0;
+    right: -16px;
   }
 
   .l-pdp-product_info_inner .product-swatches-container {
@@ -2330,7 +2327,9 @@ button#main-product-handle-btn:disabled {
   .offer-heading {
     font-size: 13px;
   }
-
+  .high-demand-info {
+    font-size: 11px;
+  }
   .bogo-text-wrapper {
     font-size: 12px;
   }
@@ -2588,7 +2587,6 @@ button#main-product-handle-btn:disabled {
 .b-pdp_accordion-column {
   font-size: 14px;
   line-height: 18px;
-  font-family: var(--family-regular);
 }
 /* .b-accordion-control {
   font-family: var(--family-heavy);

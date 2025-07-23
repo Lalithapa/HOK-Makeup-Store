@@ -1,9 +1,14 @@
 {% comment %}
   Renders a header drawer menu for mobile and desktop.
-
   Usage:
   {% render 'header-drawer' %}
 {% endcomment %}
+{% capture new_launch  %} 
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 14 14" fill="none" class="position-relative new-icon" style="top:-8px;left:4px;">
+  <rect width="14" height="14" rx="7" fill="#E06E27"/>
+  <path d="M8.544 3.623H9.327V9.5H8.616L4.881 4.991H4.872V9.5H4.089V3.623H4.8L8.535 8.132H8.544V3.623Z" fill="white"/>
+</svg>
+{% endcapture %}
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -36,7 +41,7 @@
                         id="HeaderDrawer-{{ link.handle }}"
                         class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
                       >
-                        {{ link.title | escape }}
+                        {{ link.title | escape }} {% if link.handle == 'makeup' or link.handle == 'skin' %} {{ new_launch }} {% endif %}
                         <span class="svg-wrapper">
                           {% comment %} {{- 'icon-arrow.svg' | inline_asset_content -}} {% endcomment %}
                           {{- 'arrow-next.svg' | inline_asset_content -}}
@@ -71,7 +76,11 @@
                                       aria-current="page"
                                     {% endif %}
                                   >
-                                    {{ childlink.title | escape }}
+                                    {% if childlink.title != 'Explore All' %}
+                                      {{ childlink.title | escape }}
+                                    {% else %}
+                                      <span>{{ childlink.title | escape }} {{ new_launch }}</span>
+                                    {% endif %}
                                   </a>
                                 {%- else -%}
                                   <details id="Details-menu-drawer-{{ link.handle }}-{{ childlink.handle }}">

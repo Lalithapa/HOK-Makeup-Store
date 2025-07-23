@@ -4,6 +4,7 @@
   .section-{{ section.id }}-margin {
   margin-top: {{ section.settings.margin_top_desktop }}px;
   margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+  height: 100vh;
   }
   .section-{{ section.id }}-padding {
   padding-top: {{ section.settings.padding_top_desktop }}px;
@@ -71,7 +72,7 @@
 "type": "range",
 "id": "margin_top_mobile",
 "min": 20,
-"max": 100,
+"max": 200,
 "step": 2,
 "unit": "px",
 "label": "Margin Top (Mobile)",
@@ -81,7 +82,7 @@
 "type": "range",
 "id": "margin_bottom_mobile",
 "min": 20,
-"max": 100,
+"max": 200,
 "step": 2,
 "unit": "px",
 "label": "Margin Bottom (Mobile)",
@@ -91,7 +92,7 @@
 "type": "range",
 "id": "padding_top_mobile",
 "min": 20,
-"max": 100,
+"max": 200,
 "step": 2,
 "unit": "px",
 "label": "Padding Top (Mobile)",
@@ -101,7 +102,7 @@
 "type": "range",
 "id": "padding_bottom_mobile",
 "min": 20,
-"max": 100,
+"max": 200,
 "step": 2,
 "unit": "px",
 "label": "Padding Bottom (Mobile)",
@@ -161,9 +162,7 @@
   <div
     class="best-deal-content"
     style="background-color: {{ section.settings.background_color }};"
-    data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="300"
+    
   >
     <h2 class="best-deal-heading">{{ section.settings.heading }}</h2>
     <div class="content_wrapper">
@@ -172,7 +171,7 @@
         {{ section.settings.link_text }}
       </p>
     </div>
-    <a href="/pages/deal-of-the-day" class="best-back-link">{{ 'Back to top deals' }}</a>
+    <a href="#" class="best-back-link">{{ 'Back to top deals' }}</a>
   </div>
 
   <a href="{{ section.settings.continue_url}}" class="best-deal-button">{{ 'Continue Shopping' | upcase }}</a>

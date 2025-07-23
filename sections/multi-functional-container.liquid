@@ -1,28 +1,46 @@
+<!-- section/multi-functional-container.liquid -->
 {%- style -%}
-  #shopify-section-{{ section.id }}{
-    background:linear-gradient({{ section.settings.bg_color }},{{ section.settings.bg_color_second }})
-  }
-  .section-{{ section.id }}-margin {
-    margin-top: {{ section.settings.margin_top_desktop }}px;
-    margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
-  }
-  {% if section.settings.enableShuffle %}
-    @media screen and (min-width:768px){
-      #square-banner-carousel-{{ section.id }} .carousel-wrapper-outer{
-         aspect-ratio: 57 / 22;
-      }
-    }
-  {% endif %}
-  @media screen and (max-width: 768px) {
-    .section-{{ section.id }}-margin {
-      margin-top: {{ section.settings.margin_top_mobile }}px;
-      margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
-    }
-  }
-  .carousel-section-title-wrapper p svg{
-    vertical-align: baseline;
-    margin-left: -9px;
-  }
+   #shopify-section-{{ section.id }}{
+     background:linear-gradient({{ section.settings.bg_color }},{{ section.settings.bg_color_second }})
+   }
+   .section-{{ section.id }}-margin {
+     margin-top: {{ section.settings.margin_top_desktop }}px;
+     margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+   }
+   {% if template == 'page.skin-care' %}
+     .carousel-wrapper-inner.swiper-wrapper {
+      height: unset;
+     }
+   .swiper-scrollbar.custom_bar,.swiper-scrollbar.custom_bar .swiper-scrollbar-drag{
+     display:block;
+   }
+  .swiper-scrollbar.custom_bar{background: #F5F5F5;}
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+  background: #f5f5f5;
+}
+   .carousel-wrapper-inner.swiper-wrapper.skin-care-cls{height:unset !important;}
+   .carousel-wrapper-inner.swiper-wrapper.skin-care-cls .square-banner-slide .cta_text{
+     text-align: center;
+   }
+   
+   {% endif %}
+   {% if section.settings.enableShuffle %}
+     @media screen and (min-width:768px){
+       #square-banner-carousel-{{ section.id }} .carousel-wrapper-outer{
+          aspect-ratio: 57 / 22;
+       }
+     }
+   {% endif %}
+   @media screen and (max-width: 768px) {
+     .section-{{ section.id }}-margin {
+       margin-top: {{ section.settings.margin_top_mobile }}px;
+       margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+     }
+   }
+   .carousel-section-title-wrapper p svg{
+     vertical-align: baseline;
+     margin-left: -9px;
+   }
 {%- endstyle -%}
 {% liquid
   assign num_slides_sm = section.settings['num-slides-sm']
@@ -85,10 +103,16 @@
         id="square-banner-carousel-{{ section.id }}"
         class="carousel-wrapper-outer {% if section.settings.showContainer == "page-width" %}spacing{% endif %} swiper"
       >
-        <div class="carousel-wrapper-inner swiper-wrapper">
+        <div class="carousel-wrapper-inner swiper-wrapper {% if template == 'page.skin-care' %}skin-care-cls{% endif %}">
           {% for block in section.blocks %}
             <div class="square-banner-slide-wrapper swiper-slide">
-              <a href="{{ block.settings['banner-url'] }}" class="square-banner-slide"{% if section.settings.seo_text %} data-location="{{ section.settings.seo_text | append:forloop.index }}"{% endif %}>
+              <a
+                href="{{ block.settings['banner-url'] }}"
+                class="square-banner-slide"
+                {% if section.settings.seo_text %}
+                  data-location="{{ section.settings.seo_text | append:forloop.index }}"
+                {% endif %}
+              >
                 {% case block.type %}
                   {% when 'image-media' %}
                     {% assign sizes = '100vw' %}
@@ -193,6 +217,9 @@
             </div>
           {% endfor %}
         </div>
+        {% if template == 'page.skin-care' %}
+          <div class="swiper-scrollbar custom_bar"></div>
+        {% endif %}
       </div>
       {% if section.settings.showSliderArrow %}
         <div class="arrow_handler">
@@ -234,6 +261,13 @@
     autoHeight:true,
     freeMode: {{ section.settings.showFreeScroll }},
     loop: {{ section.settings.loop }} ,
+
+    grabCursor: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+    },
+
     navigation: {
       prevEl: '#carousel-prev-{{ section.id }}',
       nextEl: '#carousel-next-{{ section.id }}',
@@ -243,6 +277,7 @@
     breakpoints: {
       768: {
         slidesPerView: numSlidesMd{{ section_unique_name }}
+
       },
       1024: {
         slidesPerView: numSlidesLg{{ section_unique_name }},

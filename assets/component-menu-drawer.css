@@ -174,7 +174,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   font-size: 1.4rem;
   width: 100%;
   background-color: transparent;
-  font-family: var(--font-body-family);
+  font-family: var(--family-regular);
+  font-weight: 500;
   font-style: var(--font-body-style);
   text-align: left;
   position: relative;

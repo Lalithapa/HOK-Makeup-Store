@@ -252,7 +252,11 @@
               <div class="product_actions-variations">
                 <div class="product-swatches-container">
                   <span class="product_swatch_colors_name">
-                    {% unless template contains 'candies' or product.handle == 'dr-pawpaw-original-balm' %}Shade: {% else %}Size: {% endunless -%}
+                    {% unless template contains 'candies' or product.handle == 'dr-pawpaw-original-balm' -%}
+                      Shade:
+                    {% else -%}
+                      Size:
+                    {% endunless -%}
                   </span>
                   <span class="product_swatch_colors_value text-capitalize" data-js-color-value="">
                     {{ product.selected_or_first_available_variant.option1 }}
@@ -271,7 +275,7 @@
                   assign offer_name = 'pd-bundle'
                 elsif collection.handle == 'bogo-sale-limited-time-only'
                   assign offer_name = 'bogo'
-                elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by' or collection.handle == 'the-add-to-heart-sale-up-to-60-off' or  product.title contains '1 Kg' or product.title contains '1.8 Kg' 
+                elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by' or collection.handle == 'the-add-to-heart-sale-up-to-60-off' or product.title contains '1 Kg' or product.title contains '1.8 Kg'
                   assign offer_name = 'offerHidden'
                 elsif collection.handle == 'foundation-sale' or collection.handle == 'slay-the-base'
                   assign offer_name = 'foundation-sale'
@@ -293,6 +297,8 @@
                           <b>Get Extra ₹100 OFF + </b> ...
                         {% elsif offer_name == 'pd-bundle' %}
                           <b>Buy Any 3 at ₹94</b> ...
+                        {% elsif offer_name == 'giverny' %}
+                          <b>Buy Any 3 at ₹109</b> ...
                         {% elsif offer_name == 'bogo' %}
                           <b>Buy One Get </b> ...
                         {% elsif offer_name == 'default' %}
@@ -310,19 +316,19 @@
                           <div class="bogo-wrapper">
                             <div class="bogo-offer-wrapper">
                               {% if template contains 'candies' %}
-                               {% unless product.title contains '1 Kg' or product.title contains '1.8 Kg' %}
-                                 <div class="bogo-offer">
-                                    <p class="bogo-text-wrapper">
-                                      Buy <b> 2</b> and get <b>15% Off</b>
-                                    </p>
-                                    <p class="bogo-text-wrapper">
-                                      Buy <b> 3</b> and get <b>25% Off</b>
-                                    </p>
+                                {% unless product.title contains '1 Kg' or product.title contains '1.8 Kg' %}
+                                  <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Buy <b> 2</b> and get <b>15% Off</b></p>
+                                    <p class="bogo-text-wrapper">Buy <b> 3</b> and get <b>25% Off</b></p>
                                   </div>
                                 {% endunless %}
                               {% elsif offer_name == 'pd-bundle' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">Buy Any <b>3 at ₹949 </b> - Limited Time Offer!</p>
+                                </div>
+                              {% elsif offer_name == 'giverny' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy Any <b>3 at ₹1099 </b> - Limited Time Offer!</p>
                                 </div>
                               {% elsif offer_name == 'bogo' %}
                                 <div class="bogo-offer">
@@ -346,23 +352,29 @@
                               {% elsif offer_name == 'foundation-sale' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                      Get Extra <strong>₹100 OFF</strong> + <strong>FREE ₹425 </strong> Foundation Brush on every order!
+                                    Get Extra <strong>₹100 OFF</strong> + <strong>FREE ₹425 </strong> Foundation Brush
+                                    on every order!
                                   </p>
                                 </div>
                               {% elsif offer_name == 'default' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                       Extra <strong>₹100 OFF</strong> on orders <strong>₹750+</strong>
+                                    Welcome Offer: Extra<strong> 10% OFF</strong> on orders above ₹700!
                                   </p>
                                 </div>
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                      Extra <strong>₹150 OFF</strong> on orders <strong>₹1200+</strong>
+                                    Get <strong>a Surprise Gift</strong> on orders above <strong>₹999</strong>
                                   </p>
                                 </div>
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                        Extra <strong>₹250 OFF</strong> on orders <strong>₹1600+</strong>
+                                    Get <strong>Two Surprise Gift</strong> on orders above <strong>₹1499</strong>
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    Get <strong>Three Surprise Gifts</strong> on orders above <strong>₹2299</strong>
                                   </p>
                                 </div>
                                 {% comment %}

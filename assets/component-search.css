@@ -1,5 +1,6 @@
 .search__input.field__input {
   padding-right: 9.8rem;
+  font-family: var(--family-regular);
 }
 
 .search__button {

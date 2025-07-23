@@ -37,8 +37,14 @@
       "settings": {
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "background_color": "#ffffff",
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "heading_text": "",
         "shradhha_link": "",
         "image": "shopify:\/\/shop_images\/Rectangle_4293.jpg",
         "image_mobile": "shopify:\/\/shop_images\/Rectangle_4293_mo.jpg"
@@ -126,7 +132,7 @@
           "type": "button",
           "settings": {
             "text": "UK’s cult fave",
-            "link": "#shopify-section-template--24359407649047__video_custom_Qxw4xN"
+            "link": "#shopify-section-template--24757819638039__video_custom_Qxw4xN"
           }
         },
         "button_4NMCUi": {
@@ -191,7 +197,7 @@
     "why_like_section_YUkWbH": {
       "type": "why-like-section",
       "custom_css": [
-        "@media screen and (max-width: 750px) {.why-love-it-section .text-content p {padding: 0px 26px; margin-bottom: 60px; font-size: 15px; font-weight: 300 !important; line-height: normal; padding: 0px 43px; font-family: \"Sweet Sans Pro\"; } .why-love-it-section .notify-btn {font-size: 18px; padding: 10px 40px; min-height: 34px; font-family: var(--family-bold); }}"
+        "@media screen and (max-width: 750px) {.why-love-it-section .text-content p {padding: 0px 26px; margin-bottom: 60px; font-size: 15px; font-weight: 300 !important; line-height: normal; padding: 0px 43px; font-family: \"Sweet Sans Pro\"; } .why-love-it-section .notify-btn {font-size: 18px; padding: 10px 40px; min-height: 34px; font-weight: 700; }}"
       ],
       "settings": {
         "bgimage": "shopify:\/\/shop_images\/desk.jpg",
@@ -485,7 +491,7 @@
           "type": "button",
           "settings": {
             "text": "UK’s cult fave",
-            "link": "#shopify-section-template--24359407649047__video_custom_Qxw4xN"
+            "link": "#shopify-section-template--24757819638039__video_custom_Qxw4xN"
           }
         },
         "button_9EDJwc": {
@@ -514,7 +520,7 @@
           "type": "button",
           "settings": {
             "text": "Go to top",
-            "link": "#shopify-section-template--24359407649047__video_custom_9Hpmib"
+            "link": "#shopify-section-template--24757819638039__video_custom_9Hpmib"
           }
         }
       },

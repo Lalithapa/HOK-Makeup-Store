@@ -54,7 +54,7 @@
 
 .mega-menu__link--level-2 {
   /* font-weight: bold; */
-  font-family:var(--family-bold);
+  font-weight: 700;
 }
 
 .header--top-center .mega-menu__list {
