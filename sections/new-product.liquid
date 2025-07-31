@@ -273,6 +273,8 @@
               for collection in product.collections
                 if collection.handle == 'buy-any-3-at-949'
                   assign offer_name = 'pd-bundle'
+                elsif collection.handle == 'combos'
+                  assign offer_name = 'combos'
                 elsif collection.handle == 'bogo-sale-limited-time-only'
                   assign offer_name = 'bogo'
                 elsif collection.handle == '9-to-9-sale' or collection.handle == '9-to-9-sale-b' or collection.handle == 'customized-combo' or collection.handle == 'lot-by' or collection.handle == 'the-add-to-heart-sale-up-to-60-off' or product.title contains '1 Kg' or product.title contains '1.8 Kg'
@@ -297,12 +299,14 @@
                           <b>Get Extra ₹100 OFF + </b> ...
                         {% elsif offer_name == 'pd-bundle' %}
                           <b>Buy Any 3 at ₹94</b> ...
+                        {% elsif offer_name == 'combos' %}
+                          <b>Instant ₹100 off on Or</b> ...
                         {% elsif offer_name == 'giverny' %}
                           <b>Buy Any 3 at ₹109</b> ...
                         {% elsif offer_name == 'bogo' %}
                           <b>Buy One Get </b> ...
                         {% elsif offer_name == 'default' %}
-                          Extra <b>₹100 OFF</b> on orders ...
+                          Buy <b>2</b> and get Flat 10% ...
                         {% elsif offer_name == 'lamel' %}
                           <b>Buy Two Get One Free</b> ...
                         {% endif %}
@@ -322,13 +326,20 @@
                                     <p class="bogo-text-wrapper">Buy <b> 3</b> and get <b>25% Off</b></p>
                                   </div>
                                 {% endunless %}
+                              {% elsif offer_name == 'combos' %}
+                                 <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">Instant <strong>₹100</strong> OFF on Orders above <strong>₹999+</strong></p>
+                                    <p class="bogo-text-wrapper">Instant <strong>₹200</strong> OFF on Orders above <strong>₹1499+</strong></p>
+                                    <p class="bogo-text-wrapper">Instant <strong>₹400</strong> OFF on Orders above <strong>₹1999+</strong></p>
+                                    <p class="bogo-text-wrapper">Free <strong>Pouch</strong> On Orders Above <strong>₹799</strong></p>
+                                  </div>
                               {% elsif offer_name == 'pd-bundle' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">Buy Any <b>3 at ₹949 </b> - Limited Time Offer!</p>
                                 </div>
                               {% elsif offer_name == 'giverny' %}
                                 <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Buy Any <b>3 at ₹1099 </b> - Limited Time Offer!</p>
+                                  <p class="bogo-text-wrapper">Buy Any <b>3 at ₹1099 </b> +<b>Free Pouch</b> - Limited Time Offer!</p>
                                 </div>
                               {% elsif offer_name == 'bogo' %}
                                 <div class="bogo-offer">
@@ -357,36 +368,51 @@
                                   </p>
                                 </div>
                               {% elsif offer_name == 'default' %}
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Welcome Offer: Extra<strong> 10% OFF</strong> on orders above ₹700!
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Get <strong>a Surprise Gift</strong> on orders above <strong>₹999</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Get <strong>Two Surprise Gift</strong> on orders above <strong>₹1499</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                    Get <strong>Three Surprise Gifts</strong> on orders above <strong>₹2299</strong>
-                                  </p>
-                                </div>
-                                {% comment %}
+                                <!--
                                   <div class="bogo-offer">
                                     <p class="bogo-text-wrapper">
-                                      The more you add to cart, the more you save!
+                                      Welcome Offer: Extra<strong> 10% OFF</strong> on orders above ₹700!
                                     </p>
                                   </div>
-                                {% endcomment %}
+                                -->
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
-                                    <small style="font-size: 10px;">*Offers will be applied at checkout</small>
+                                   <strong>Buy More, Save More</strong>
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
+                                   Buy 2 → <strong>Extra 10% OFF</strong>
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
+                                    Buy 3 → <strong>Extra 20% OFF</strong>
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
+                                    Buy 4+ → <strong>Extra 25% OFF</strong>
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                   <strong>Surprise Gifts worth :</strong>
+                                  </p>
+                                </div>
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
+                                   ₹599 on orders above ₹899+
+                                  </p>
+                                </div>
+                               <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
+                                  ₹1250 on orders above ₹1999+
+                                  </p>
+                                </div>
+                               <div class="bogo-offer" style="padding-left: 10px;">
+                                  <p class="bogo-text-wrapper">
+                                   ₹1849 on orders above ₹2999+
                                   </p>
                                 </div>
                               {% endif %}
@@ -399,6 +425,11 @@
                 </div>
               </div>
             {% endunless %}
+            <div class="bogo-offer">
+              <p class="bogo-text-wrapper">
+                Get Flat <strong>₹100</strong> cashback on 1st Mobikwik UPI Payment (min purchase Rs.999)
+              </p>
+            </div>
             <div class="atc_buttons mt-space">
               {% render 'product_add_to_Cart', first_variant: first_variant %}
             </div>

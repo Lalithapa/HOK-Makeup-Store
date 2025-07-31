@@ -8,7 +8,7 @@
         "h1 {font-family: var(--header-family); font-size: clamp(3rem, 2vw, 4rem); color: #000; letter-spacing: 2px; margin-bottom: clamp(2rem, 2vw, 4rem);}"
       ],
       "settings": {
-        "padding_top": 24,
+        "padding_top": 28,
         "padding_bottom": 28
       }
     },
@@ -1747,7 +1747,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_37684.png",
             "heading": "Vegan",
-            "text": "No animal-derived ingredients"
+            "text": "<p>No animal-derived ingredients<\/p>"
           }
         },
         "icon_item_jcGh9n": {
@@ -1755,7 +1755,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_37681.png",
             "heading": "Non-toxic",
-            "text": "Free from harsh chemicals"
+            "text": "<p>Free from harsh chemicals<\/p>"
           }
         },
         "icon_item_jK8keq": {
@@ -1763,7 +1763,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_37682.png",
             "heading": "Cruelty-free",
-            "text": "Not tested on animals"
+            "text": "<p>Not tested on animals<\/p>"
           }
         },
         "icon_item_ENzGFe": {
@@ -1771,7 +1771,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/Frame_37683.png",
             "heading": "Dermatologist-tested",
-            "text": "Gentle and safe for skin"
+            "text": "<p>Gentle and safe for skin<\/p>"
           }
         }
       },
@@ -1911,12 +1911,10 @@
         "include_margins": true
       }
     },
-    "floating_nav_jcD4Mr": {
+    "floating_nav_zXYbbx": {
       "type": "floating-nav",
-      "disabled": true,
-      "name": "Floating Bar",
       "settings": {
-        "menu": "desktop-main-menu"
+        "menu": "main-menu"
       }
     }
   },
@@ -1944,6 +1942,6 @@
     "multi_functional_container_wrDhRa",
     "rich_text_wJb9da",
     "174877037719c9b4f1",
-    "floating_nav_jcD4Mr"
+    "floating_nav_zXYbbx"
   ]
 }

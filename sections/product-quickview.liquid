@@ -5,6 +5,8 @@
   for collection in product.collections
     if collection.handle == 'buy-any-3-at-949'
       assign offer_name = 'pd-bundle'
+    elsif collection.handle == 'combos'
+      assign offer_name = 'combos'
     elsif product.vendor == 'HOK Makeup ORG'
       assign offer_name = 'org-sale'
     elsif collection.handle == 'bogo-sale-limited-time-only'
@@ -149,14 +151,29 @@
                         <li class="bogo-text-wrapper">Extra <b>₹250 OFF</b> on orders <b>₹1600+</b></li>
                       {% endif %}
                     {% elsif offer_name == 'pd-bundle' %}
-                      <li class="bogo-text-wrapper"><b>Buy Any 3 at ₹999 - Limited Time Offer!</b></li>
-                      <li class="bogo-text-wrapper"><b>Buy Any 4 at ₹1299 - Limited Time Offer!</b></li>
-                      <li class="bogo-text-wrapper"><b>Buy Any 5 at ₹1499 - Limited Time Offer!</b></li>
+                      <li class="bogo-text-wrapper"><b>Buy Any 3 at ₹999 + Free Pouch - Limited Time Offer!</b></li>
+                      <li class="bogo-text-wrapper"><b>Buy Any 4 at ₹1299 + Free Pouch - Limited Time Offer!</b></li>
+                      <li class="bogo-text-wrapper"><b>Buy Any 5 at ₹1499 + Free Pouch - Limited Time Offer!</b></li>
                       <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
                         <b>
                           Offers on Selected
                           <a
                             href="/collections/buy-any-3-at-949"
+                            class="text-decoration-underline"
+                            >Collection</a
+                          ></b
+                        >
+                      </p>
+                    {% elsif offer_name == 'combos' %}
+                      <li class="bogo-text-wrapper"><b>Instant ₹100 OFF on Orders above ₹999+</b></li>
+                      <li class="bogo-text-wrapper"><b>Instant ₹200 OFF on Orders above ₹1499+</b></li>
+                      <li class="bogo-text-wrapper"><b>Instant ₹400 OFF on Orders above ₹1999+</b></li>
+                      <li class="bogo-text-wrapper"><b>Free Pouch On Orders Above ₹799</b></li>
+                      <p class="bogo-text-wrapper" style="color: #991054;text-align: center;"> 
+                        <b>
+                          Offers on Selected
+                          <a
+                            href="/collections/combos"
                             class="text-decoration-underline"
                             >Collection</a
                           ></b
@@ -176,17 +193,28 @@
                         >
                       </p>
                     {% elsif offer_name == 'default' %}
-                      <li class="bogo-text-wrapper">
+                      <!-- <li class="bogo-text-wrapper">
                         Welcome Offer: Extra<strong> 10% OFF</strong> on orders above ₹700!
+                      </li> -->
+                      <p style="font-size: 12px;"><strong>Buy More, Save More</strong></p>
+                      <li class="bogo-text-wrapper">
+                        Buy 2 → <strong>Extra 10% OFF</strong>
                       </li>
                       <li class="bogo-text-wrapper">
-                        Get <strong>A Surprise Gift</strong> on orders above <strong>₹999</strong>
+                        Buy 3 → <strong>Extra 20% OFF</strong>
                       </li>
                       <li class="bogo-text-wrapper">
-                        Get <strong>Two Surprise Gift</strong> on orders above <strong>₹1499</strong>
+                        Buy 4+ → <strong>Extra 25% OFF</strong>
+                      </li>
+                      <p style="font-size: 12px;"><strong>Surprise Gifts worth :</strong></p>
+                      <li class="bogo-text-wrapper">
+                        ₹599 on orders above ₹899+
                       </li>
                       <li class="bogo-text-wrapper">
-                        Get <strong>Three Surprise Gifts</strong> on orders above <strong>₹2299</strong>
+                         ₹1250 on orders above ₹1999+
+                      </li>
+                      <li class="bogo-text-wrapper">
+                          ₹1849 on orders above ₹2999+
                       </li>
                       <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
                         <small style="font-size: 10px;">*Offers will be applied at checkout</small>

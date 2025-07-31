@@ -6,9 +6,9 @@
         "image_KkeTCx": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Sale-is-live_1.gif",
-            "collection_link": "https:\/\/hokmakeup.com\/collections\/makeup",
-            "title": "Summer Drop"
+            "image": "shopify:\/\/shop_images\/RAKHI_SALE_LIVE.gif",
+            "collection_link": "shopify:\/\/collections\/product-without-clearance",
+            "title": "Rakhi Sale"
           }
         },
         "image_9Jtw68": {
@@ -104,6 +104,24 @@
       "type": "hero-banner-carousel",
       "blocks": {
         "video_media_tYcbPg": {
+          "type": "video-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify:\/\/collections\/product-without-clearance",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/1920X735_Rakhi Sale.mp4",
+            "banner-video-mobile": "shopify:\/\/files\/videos\/780X1200Mobile.mp4",
+            "show_gradient": "none",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "content_visibility": "d-none",
+            "cta_text": "",
+            "cta_subtext": "",
+            "cta_text_mobile": "",
+            "cta_subtext_mobile": ""
+          }
+        },
+        "video_media_tFChXC": {
           "type": "video-media",
           "settings": {
             "banner_top_tag": "none",
@@ -448,6 +466,7 @@
       },
       "block_order": [
         "video_media_tYcbPg",
+        "video_media_tFChXC",
         "image_media_AwttCj",
         "video_media_anHgKq",
         "video_media_43fWVw",
@@ -1065,10 +1084,9 @@
       "blocks": {
         "video_media_PVUYGU": {
           "type": "video-media",
-          "disabled": true,
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/makeup",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Offer Tile Sale.mp4",
+            "banner-url": "shopify:\/\/collections\/product-without-clearance",
+            "banner-video-desktop": "shopify:\/\/files\/videos\/RAKHI SALE LIVE.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1077,6 +1095,7 @@
         },
         "image_media_6cH7t6": {
           "type": "image-media",
+          "disabled": true,
           "settings": {
             "banner-url": "https:\/\/hokmakeup.com\/collections\/makeup",
             "banner-image-desktop": "shopify:\/\/shop_images\/Sale-is-live-Desktop_1.gif",

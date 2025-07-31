@@ -33,8 +33,8 @@
     "updated_announcement_bar_NFDExf": {
       "type": "updated-announcement-bar",
       "settings": {
-        "text": "<p>HOK Vanity Storm Sale is Live: Up To 50% OFF+ Surprise Gifts<\/p>",
-        "link": "https:\/\/hokmakeup.com\/collections\/makeup"
+        "text": "<p><strong>Rakhi Sale Live – Up to 25% OFF + Surprise Gifts!<\/strong><\/p>",
+        "link": "shopify:\/\/collections\/product-without-clearance"
       }
     },
     "header": {
