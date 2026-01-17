@@ -130,6 +130,7 @@
     {% endcomment %}
     {% assign totalSavings = 0 %}
     {% for item in cart.items %}
+    {% if  item.final_price > 100 %}
       <div
         class="b-mini_cart-products_list cart-items"
         id="CartItem-{{ item.index | plus: 1 }}"
@@ -176,6 +177,9 @@
                   ></cart-remove-button>
                 </div>
               </div>
+              {% if item.product.title =='bundle' or item.product.title =='DIY Palette' %}
+              <p style="font-family: 'Montserrat';font-size: 12px;font-weight: 600;position: relative;top: -24px;"> {{ item.properties.Items }}</p>
+              {% endif %} 
               {% comment %} variant details comes here {% endcomment %}
               {% if item.variant.title != 'Default Title' %}
                 <ul class="b-miniproduct-attribute_list list-unstyled p-0">
@@ -318,7 +322,9 @@
             </div>
           </div>
         </div>
+     
       </div>
+      {% endif %}
       {% assign regularPrice = item.product.price %}
       {% assign compareAtPrice = item.product.compare_at_price %}
       {% assign savings = regularPrice | minus: compareAtPrice %}
@@ -410,7 +416,10 @@
       <div class="section-container banner">
         <div class="header-text text-line-clamp h2">Oops!</div>
         <div class="text text-line-clamp h5">Your bag is empty</div>
-        <button class="b-button_1 rounded-3" onclick="closeSlider()">Shop Now</button>
+        {% comment %} <button class="b-button_1 rounded-3" onclick="closeSlider()">Shop Now</button> {% endcomment %}
+         <a href="/" class="b-button_1 rounded-3" onclick="closeSlider()">
+          Shop Now
+        </a>
       </div>
       <style>
         .section-container.banner {

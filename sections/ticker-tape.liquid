@@ -1,13 +1,15 @@
 <div class="tabbY2">
-  <div class="wrapper-9ioi">
-    <div class="tickertapexx">
-      {% for _ in (1..30) %}
-        <span>
-          {{ section.settings.main_heading }}
-        </span>
-      {% endfor %}
+  <a href="{{ section.settings.url | default: '#' }}" alt="{{ section.settings.main_heading }}">
+    <div class="wrapper-9ioi">
+      <div class="tickertapexx">
+        {% for _ in (1..30) %}
+          <span>
+            {{ section.settings.main_heading }}
+          </span>
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  </a>
 </div>
 <style>
   /* Ticker Tape */
@@ -66,7 +68,12 @@
     "id": "main_heading",
     "label": "HighLighted Text",
     "default": "Don’t miss out!"
-    }
+    },
+     {
+    "type": "url",
+    "id": "url",
+    "label": "Add Your Link"
+    },
     ],
   "presets": [
   {

@@ -308,12 +308,15 @@
               <div class="banner-info-content {% if block.settings.content_visibility %}{{ block.settings.content_visibility }}{% endif %}">
                 {% if block.settings.logo %}
                   <div class="banner-info-content-logo mb-0 mb-md-3">
-                    <img
-                      src="{{ block.settings.logo | image_url}}"
-                      height="48"
-                      width="auto"
-                      fetchpriority="high"
-                    >
+                     <img
+                    src="{{ block.settings.logo | image_url: height: 48 }}"
+                    height="48"
+                    width="140"
+                    style="width:auto; height:48px;"
+                    alt="{{ block.settings.logo.alt | default: 'Brand logo' | escape }}"
+                    fetchpriority="high"
+                    decoding="async"
+                  >
                   </div>
                 {% endif %}
                 <div class="banner-info-content-text">

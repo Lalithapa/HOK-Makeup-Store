@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -19,35 +28,35 @@
           "type": "faq_item",
           "settings": {
             "question": "How does the HOK Squad Affiliate Program work?",
-            "answer": "<p>Sign up, set up your profile, and add your payment details. Share your unique HOK Squad referral link or code with your followers on Instagram, YouTube, or anywhere you like! Every time someone shops on <a href=\"https:\/\/hokmakeup.com\" target=\"_blank\">hokmakeup.com<\/a> through your link, you earn a commission. The more your community shops, the more you earn.<br\/><br\/><\/p>"
+            "answer": "<p>Sign up, set up your profile, and add your payment details. Share your unique HOK Squad referral link or code with your followers on Instagram, YouTube, or anywhere you like! Every time someone shops on <a href=\"https://hokmakeup.com\" target=\"_blank\">hokmakeup.com</a> through your link, you earn a commission. The more your community shops, the more you earn.<br/><br/></p>"
           }
         },
         "faq_item_b7m4Bj": {
           "type": "faq_item",
           "settings": {
             "question": "How do I earn in this program?",
-            "answer": "<p>You earn a fixed commission on every successful purchase made through your <strong>referral link or promo code<\/strong>. Plus, if your referrals join HOK Squad too, you unlock even more bonuses through our referral chain benefits.<\/p>"
+            "answer": "<p>You earn a fixed commission on every successful purchase made through your <strong>referral link or promo code</strong>. Plus, if your referrals join HOK Squad too, you unlock even more bonuses through our referral chain benefits.</p>"
           }
         },
         "faq_item_8NqJpR": {
           "type": "faq_item",
           "settings": {
             "question": "What are the perks of being part of HOK Squad?",
-            "answer": "<ul><li>💰 Commission on every sale through your unique link\/code<\/li><li>🌟 Early access to new launches & exclusive campaigns<\/li><li>🎁 Special discount codes for your followers<\/li><li>📈 Monthly performance tracking via your affiliate dashboard<\/li><li>🚀 Opportunities to be featured on HOK’s social media<br\/><br\/><\/li><\/ul>"
+            "answer": "<ul><li>💰 Commission on every sale through your unique link/code</li><li>🌟 Early access to new launches & exclusive campaigns</li><li>🎁 Special discount codes for your followers</li><li>📈 Monthly performance tracking via your affiliate dashboard</li><li>🚀 Opportunities to be featured on HOK’s social media<br/><br/></li></ul>"
           }
         },
         "faq_item_7WtazM": {
           "type": "faq_item",
           "settings": {
             "question": "How do I join?",
-            "answer": "<p>Just click <strong>Sign Up<\/strong> on the HOK Squad page and complete the onboarding steps!<\/p>"
+            "answer": "<p>Just click <strong>Sign Up</strong> on the HOK Squad page and complete the onboarding steps!</p>"
           }
         },
         "faq_item_UEykz6": {
           "type": "faq_item",
           "settings": {
             "question": "When and how do I get paid?",
-            "answer": "<p>Payments are processed by the <strong>15th of every month<\/strong> for the previous month’s confirmed sales (post return\/refund checks). Make sure your bank details are correctly filled and you’ve accepted the terms & conditions.<\/p>"
+            "answer": "<p>Payments are processed by the <strong>15th of every month</strong> for the previous month’s confirmed sales (post return/refund checks). Make sure your bank details are correctly filled and you’ve accepted the terms & conditions.</p>"
           }
         }
       },

@@ -209,7 +209,7 @@
           alt="{{ section.settings.image }} "
           loading="lazy"
           width="100%"
-          height="100%"
+          height="auto"
           class="desktop_screen"
         >
         <img
@@ -217,7 +217,7 @@
           alt="{{ section.settings.mobile_image }} "
           loading="lazy"
           width="100%"
-          height="100%"
+          height="auto"
           class="mobile_screen"
         >
       </div>
@@ -234,7 +234,7 @@
                   title="{{ product.title }}"
                   width="100%"
                   loading="lazy"
-                  height="100%"
+                  height="auto"
                 >
                 {% if first_variant.price < first_variant.compare_at_price %}
                   <span class="multi-vendor-discount-tag">

@@ -116,7 +116,7 @@ const reUseCart = async (event, method, variant_id, qty) => {
           ($("#toastifies").fadeIn(100),
           setTimeout(() => {
             $("#toastifies").fadeOut(100);
-          }, 1300));
+          }, 3000));
     })
     .catch((error) => {
       if (is_cart_reccommend) {
@@ -169,7 +169,8 @@ $("body").on(
   function () {
     $(this).closest("details").removeAttr("open");
   }
-);
+); 
+
 
 // Updating Quantity of Product SKU
 $("body").on("click", ".qtybox .btnqty", function () {

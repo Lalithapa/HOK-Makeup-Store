@@ -3,7 +3,7 @@
   .section-{{ section.id }}-margin {
     margin-top: {{ section.settings.margin_top_desktop }}px;
     margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
-    height: 100vh;
+   
   }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top_desktop }}px;
@@ -267,6 +267,9 @@
     .container-top-image-product::-webkit-scrollbar{
       height: 5px;
     }
+   .featured-collection_day_deal .b-product_tile-picture_container img.img_url_1 {
+     mix-blend-mode: unset; 
+}
     .container-top-image-product::-webkit-scrollbar-thumb{
      background: #CAA4A6;
     }
@@ -304,7 +307,7 @@
       font-size:11px;
   }
    .featured-collection_day_deal .product__pocket_deal_day{
-      padding: 30px 30px 0;
+      padding: 10px 33px 0;
       border-top: 1px solid #E5DCD5;
        border-right: 1px solid #E5DCD5;
   }
@@ -312,7 +315,7 @@
        width: 100%;
        height: 100%;
        object-fit: cover;
-       max-height: 900px;
+       max-height: 880px;
   }
    .featured-custom-banner a{
        height: 100%;
@@ -324,7 +327,7 @@
        grid-template-columns: repeat(15, 1fr);
        grid-template-rows: 2fr;
        align-items: center;
-       padding-bottom:3rem;
+       padding-bottom:5rem;
   }
    .top-section{
        overflow-x: hidden;
@@ -335,7 +338,7 @@
        padding: 10px 15px;
   }
    .featured-collection_day_deal .img-fluid{
-       max-width: 280px;
+       max-width: 270px;
   }
    .featured-collection_day_deal .carousel-wrapper-inner{
        flex-wrap: wrap;
@@ -355,11 +358,16 @@
        display:none
   }
    .featured-collection_day_deal .b-product_promo_tile-content{
-       height: 140px;
+       height: 180px;
   }
    .featured-collection_day_deal .b-add_to_bag-button{
        padding:7px;
   }
+  .featured-collection_day_deal .b-product_tile-picture_container{
+    background: none;
+    }
+
+
    @media screen and (max-width: 768px) {
  .animated_product .b-product_tile-picture_container img{
      min-width:300px;
@@ -375,7 +383,7 @@
          border-right:unset;
     }
      .featured-collection_day_deal .b-product_promo_tile-content{
-         height: 100px;
+         height: 130px;
     }
      .collection-title-text {
          background: #fff;
@@ -396,11 +404,13 @@
     }
      .featured-collection_day_deal .carousel-wrapper-outer{
          width:25%;
-         gap: 3.5rem;
+         gap: 2rem;
          padding-inline: 2rem;
+         padding-bottom: 1rem;
     }
      .featured-collection_day_deal .img-fluid{
-         max-width:100%;
+         {% comment %} max-width:100%; {% endcomment %}
+          max-width: 163px;
     }
      .featured-collection_day_deal .b-product_promo_tile-name_link{
         font-size: 12px;

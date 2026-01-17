@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,9 +25,9 @@
       "type": "image-with-text-community",
       "name": "image with text community",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Frame_37504.png",
-        "image_mobile": "shopify:\/\/shop_images\/Frame_37769.png",
-        "description_text": "<p><strong>Ready to be part of something bigger? A community of beauty besties<\/strong><br\/><br\/>Think: a glam squad of creators, influencers, and college cool kids all rising together. Wanna grow your page, get brand perks, and drop content? <br\/><br\/>This is <em><strong>your sign.<\/strong><\/em> Here to hype, help, and make <strong>you <\/strong>the next big thing. <br\/>Let’s fly, fam<\/p>",
+        "image": "shopify://shop_images/Frame_37504.png",
+        "image_mobile": "shopify://shop_images/Frame_37769.png",
+        "description_text": "<p><strong>Ready to be part of something bigger? A community of beauty besties</strong><br/><br/>Think: a glam squad of creators, influencers, and college cool kids all rising together. Wanna grow your page, get brand perks, and drop content? <br/><br/>This is <em><strong>your sign.</strong></em> Here to hype, help, and make <strong>you </strong>the next big thing. <br/>Let’s fly, fam</p>",
         "padding_top_desktop": 100,
         "padding_bottom_desktop": 70,
         "padding_top_mobile": 70,
@@ -38,7 +47,7 @@
         "text_NxEcax": {
           "type": "text",
           "settings": {
-            "text": "<p>We’re not gatekeeping this glow-up<\/p><p><\/p><ol><li>Whether you're serving lewks or just finding your light — there's room for you here.<\/li><li>This isn’t just a creator fam. It’s your beauty launchpad.<\/li><\/ol><p>               <em>Come through, trendsetters!<\/em><\/p><p>                 <strong>  Let’s do this!<\/strong><\/p>"
+            "text": "<p>We’re not gatekeeping this glow-up</p><p></p><ol><li>Whether you're serving lewks or just finding your light — there's room for you here.</li><li>This isn’t just a creator fam. It’s your beauty launchpad.</li></ol><p>               <em>Come through, trendsetters!</em></p><p>                 <strong>  Let’s do this!</strong></p>"
           }
         },
         "button_ynnWPh": {
@@ -60,7 +69,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 990px) {.rich-text__blocks {max-width: 100%; }}",
-        "@media screen and (max-width: 768) {.rich-text__wrapper {width: calc(100% - 3rem \/ var(--font-body-scale)); }}"
+        "@media screen and (max-width: 768) {.rich-text__wrapper {width: calc(100% - 3rem / var(--font-body-scale)); }}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -124,9 +133,9 @@
           "settings": {
             "background_color": "#e9ff47",
             "tab_label": "Campus Ambassador",
-            "image": "shopify:\/\/shop_images\/Frame_37760_7d372fcb-7637-4a08-a300-f100dbffdc9f.png",
+            "image": "shopify://shop_images/Frame_37760_7d372fcb-7637-4a08-a300-f100dbffdc9f.png",
             "text-para": "You're the go-to glam guru in your college crew! From dorm-room GRWMs to campus beauty challenges, you're spreading the HOK love right where the buzz is — your campus.",
-            "text": "<p><strong>Why it slaps :<\/strong><\/p><ul><li>No campus needed — it’s all about your vibe & reach<\/li><li>Create cool content, join campaigns & stack your commissions<\/li><li>Get reposted by HOK, land paid collabs & unlock exclusive goodies<\/li><li>Ideal for creators, micro-influencers, and beauty lovers with range<\/li><li>Grow with us through tiers: from free PR to full-on paid deals<\/li><\/ul><p><\/p>",
+            "text": "<p><strong>Why it slaps :</strong></p><ul><li>No campus needed — it’s all about your vibe & reach</li><li>Create cool content, join campaigns & stack your commissions</li><li>Get reposted by HOK, land paid collabs & unlock exclusive goodies</li><li>Ideal for creators, micro-influencers, and beauty lovers with range</li><li>Grow with us through tiers: from free PR to full-on paid deals</li></ul><p></p>",
             "text_url": "Apply as  Brand Ambassador",
             "url": ""
           }
@@ -136,9 +145,9 @@
           "settings": {
             "background_color": "#e9ff47",
             "tab_label": "Campus Ambassador",
-            "image": "shopify:\/\/shop_images\/Frame_9487_806e9b71-26cd-4090-947b-9c29dbfe9305.png",
+            "image": "shopify://shop_images/Frame_9487_806e9b71-26cd-4090-947b-9c29dbfe9305.png",
             "text-para": "You're a content queen (or king) ruling the feed! Whether you’re serving looks from your bedroom or sharing hot takes on trending makeup, you rep HOK to your growing online fam.",
-            "text": "<p><strong>Why it pops  :<\/strong><\/p><ul><li>No campus needed — it’s all about your vibe & reach<\/li><li>Create cool content, join campaigns & stack your commissions<\/li><li>Get reposted by HOK, land paid collabs & unlock exclusive goodies<\/li><li>Ideal for creators, micro-influencers, and beauty lovers with range<\/li><li>Grow with us through tiers: from free PR to full-on paid deals<\/li><\/ul>",
+            "text": "<p><strong>Why it pops  :</strong></p><ul><li>No campus needed — it’s all about your vibe & reach</li><li>Create cool content, join campaigns & stack your commissions</li><li>Get reposted by HOK, land paid collabs & unlock exclusive goodies</li><li>Ideal for creators, micro-influencers, and beauty lovers with range</li><li>Grow with us through tiers: from free PR to full-on paid deals</li></ul>",
             "text_url": "Apply as  Brand Ambassador",
             "url": ""
           }
@@ -177,8 +186,8 @@
         "padding_bottom_mobile": 60,
         "heading_text": "what you’ll do?",
         "shradhha_link": "",
-        "image": "shopify:\/\/shop_images\/Frame_37768.png",
-        "image_mobile": "shopify:\/\/shop_images\/Frame_37767.png"
+        "image": "shopify://shop_images/Frame_37768.png",
+        "image_mobile": "shopify://shop_images/Frame_37767.png"
       }
     },
     "what_you_ll_get_BiUDYt": {
@@ -189,7 +198,7 @@
           "settings": {
             "level_title": "Level 1",
             "level_name": "BEGINNER",
-            "note": "<p><em>For fresh faces ready to glow up!<\/em><\/p><ul><li>Get <strong>free products<\/strong> every month to start your creator journey<\/li><li>Earn <strong>10% commission<\/strong> on every sale through your link<\/li><li><strong>Exclusive access<\/strong> to monthly campaigns & creator toolkits<br\/><br\/><em>Be part of a growing community of beauty lovers<\/em><br\/><br\/><br\/><br\/><br\/><br\/><\/li><\/ul>"
+            "note": "<p><em>For fresh faces ready to glow up!</em></p><ul><li>Get <strong>free products</strong> every month to start your creator journey</li><li>Earn <strong>10% commission</strong> on every sale through your link</li><li><strong>Exclusive access</strong> to monthly campaigns & creator toolkits<br/><br/><em>Be part of a growing community of beauty lovers</em><br/><br/><br/><br/><br/><br/></li></ul>"
           }
         },
         "tier_ATefqN": {
@@ -197,7 +206,7 @@
           "settings": {
             "level_title": "Level 2",
             "level_name": "ENGAGED",
-            "note": "<p><em>For who brings the vibes (& the conversions)!<\/em><\/p><ul><li>Extra <strong>PR<\/strong> drops curated just for you<\/li><li>Boosted <strong>commission: 15%<\/strong> per sale<\/li><li>Your best<strong> stories get reposted<\/strong> on our socials<\/li><li><strong>Early access<\/strong> to new launches & collab invite<\/li><\/ul><p><br\/><em>More visibility = More growth<\/em><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            "note": "<p><em>For who brings the vibes (& the conversions)!</em></p><ul><li>Extra <strong>PR</strong> drops curated just for you</li><li>Boosted <strong>commission: 15%</strong> per sale</li><li>Your best<strong> stories get reposted</strong> on our socials</li><li><strong>Early access</strong> to new launches & collab invite</li></ul><p><br/><em>More visibility = More growth</em><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>"
           }
         },
         "tier_rFBEf9": {
@@ -205,7 +214,7 @@
           "settings": {
             "level_title": "Level 3",
             "level_name": "STAR CREATOR",
-            "note": "<p><em>You're not just part of HokSquad—you lead it!<\/em><\/p><ul><li>Earn up to <strong>20% commission<\/strong> on affiliate sales<\/li><li>Land <strong>paid <\/strong>collaborations & brand sponsorships<\/li><li><strong>Get featured<\/strong> in our campaigns, newsletters & website<\/li><li><strong>Co-create<\/strong> with the HOK team on upcoming launches<\/li><li><strong>Priority access<\/strong> to product trials, events & spotlights<br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><\/li><\/ul>"
+            "note": "<p><em>You're not just part of HokSquad—you lead it!</em></p><ul><li>Earn up to <strong>20% commission</strong> on affiliate sales</li><li>Land <strong>paid </strong>collaborations & brand sponsorships</li><li><strong>Get featured</strong> in our campaigns, newsletters & website</li><li><strong>Co-create</strong> with the HOK team on upcoming launches</li><li><strong>Priority access</strong> to product trials, events & spotlights<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></li></ul>"
           }
         }
       },
@@ -226,7 +235,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20,
         "heading": "WHAT YOU’LL GET?",
-        "subheading": "<p>Every new level brings a little more joy —<strong>Level up<\/strong> to unlock <strong>special perks, early access, and a few surprises<\/strong><\/p><p><em>It’s our way of saying thanks for being here.<\/em><\/p>"
+        "subheading": "<p>Every new level brings a little more joy —<strong>Level up</strong> to unlock <strong>special perks, early access, and a few surprises</strong></p><p><em>It’s our way of saying thanks for being here.</em></p>"
       }
     },
     "experience_highlights_GhMdti": {
@@ -235,25 +244,25 @@
         "experience_nYMpit": {
           "type": "experience",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37720.png"
+            "image": "shopify://shop_images/Frame_37720.png"
           }
         },
         "experience_dVfybY": {
           "type": "experience",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37720.png"
+            "image": "shopify://shop_images/Frame_37720.png"
           }
         },
         "experience_fkkzLY": {
           "type": "experience",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37720.png"
+            "image": "shopify://shop_images/Frame_37720.png"
           }
         },
         "experience_GeMPdP": {
           "type": "experience",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37720.png"
+            "image": "shopify://shop_images/Frame_37720.png"
           }
         }
       },
@@ -296,8 +305,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "rewards",
         "shradhha_link": "",
-        "image": "shopify:\/\/shop_images\/Frame_37542.png",
-        "image_mobile": "shopify:\/\/shop_images\/Frame_37697.png"
+        "image": "shopify://shop_images/Frame_37542.png",
+        "image_mobile": "shopify://shop_images/Frame_37697.png"
       }
     },
     "how_it_work_K6fQtd": {
@@ -308,7 +317,7 @@
           "settings": {
             "step_number": "1",
             "heading": "Join the Squad",
-            "description": "<p>Sign up and get your exclusive affiliate code + tracking link.<\/p><p><em>Quick, easy & free.<\/em><\/p>",
+            "description": "<p>Sign up and get your exclusive affiliate code + tracking link.</p><p><em>Quick, easy & free.</em></p>",
             "button_label": "Apply Now",
             "button_link": "#"
           }
@@ -318,7 +327,7 @@
           "settings": {
             "step_number": "2",
             "heading": "Share your Code",
-            "description": "<p>Create fun, authentic content <strong>– share your code <\/strong>with friends, followers, & beauty fam.<\/p><p><em>Spread the word, make it big<\/em><\/p>",
+            "description": "<p>Create fun, authentic content <strong>– share your code </strong>with friends, followers, & beauty fam.</p><p><em>Spread the word, make it big</em></p>",
             "button_label": "Apply Now",
             "button_link": ""
           }
@@ -328,7 +337,7 @@
           "settings": {
             "step_number": "3",
             "heading": "Earn Commission",
-            "description": "<p>Every time someone shops using your link or code, you earn up to <strong>20% commission.<\/strong><\/p><p><em>Watch your earnings grow.<\/em><\/p>",
+            "description": "<p>Every time someone shops using your link or code, you earn up to <strong>20% commission.</strong></p><p><em>Watch your earnings grow.</em></p>",
             "button_label": "Apply Now",
             "button_link": ""
           }
@@ -338,7 +347,7 @@
           "settings": {
             "step_number": "4",
             "heading": "Level Up",
-            "description": "<p>Top creators get access to <strong>monthly bonuses, PR kits, paid collabs, & VIP features.<\/strong><\/p><p><em>Create more, Gain more!<\/em><\/p>",
+            "description": "<p>Top creators get access to <strong>monthly bonuses, PR kits, paid collabs, & VIP features.</strong></p><p><em>Create more, Gain more!</em></p>",
             "button_label": "Apply Now",
             "button_link": ""
           }
@@ -369,25 +378,25 @@
         "icon_item_etw9am": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37552.png",
+            "icon": "shopify://shop_images/Frame_37552.png",
             "heading": "",
-            "text": "<p><strong>Where the squad lives —<\/strong>daily updates, memes, and all the juice drops here first.<\/p>"
+            "text": "<p><strong>Where the squad lives —</strong>daily updates, memes, and all the juice drops here first.</p>"
           }
         },
         "icon_item_xiLU9c": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37553.png",
+            "icon": "shopify://shop_images/Frame_37553.png",
             "heading": "",
-            "text": "<p><strong>Your digital HQ<\/strong> for briefs, insights, and exclusive creator perks. Keep those notifications on!<\/p>"
+            "text": "<p><strong>Your digital HQ</strong> for briefs, insights, and exclusive creator perks. Keep those notifications on!</p>"
           }
         },
         "icon_item_TgBPQa": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37554.png",
+            "icon": "shopify://shop_images/Frame_37554.png",
             "heading": "",
-            "text": "<p><strong>Virtual face-time for brainstorms,<\/strong> creator catch-ups, and all the big ideas you can’t text.<\/p>"
+            "text": "<p><strong>Virtual face-time for brainstorms,</strong> creator catch-ups, and all the big ideas you can’t text.</p>"
           }
         }
       },

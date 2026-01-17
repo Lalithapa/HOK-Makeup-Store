@@ -54,12 +54,15 @@
               {% endif %}
             </div>
         {% endunless %}
+         {% comment %} 
+         Growave Wishlist 
          <div
           style="display: block;"
-          class="gw-add-to-wishlist-product-card-placeholder"
+          class="gw-add-to-wishlist-product-card-placeholder asdasasas"
           data-gw-product-id="{{ product.id }}"
           data-gw-variant-id="{{ product.first_available_variant.id }}"
-        ></div>
+        ></div> {% endcomment %}
+        <div class="wishlist-engine" data-product_id="{{ product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
       {% if showCross %}
         <div class="handle_product_overlay">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -73,8 +76,8 @@
             class="img-fluid img_url_1"
             src="{{ img_url_1 | image_url }}"
             alt="{{ product.images[0].alt }}"
-            width="310"
-            height="310"
+            width="100%"
+            height="auto"
             loading="lazy"
              
           >
@@ -82,8 +85,8 @@
             class="img-fluid img_url_2"
             src="{{ img_url_2 | image_url }}"
             alt="{{ product.images[1].alt }}"
-            width="310"
-            height="310"
+            width="100%"
+            height="auto"
             loading="eager"
           >
         {% else %}
@@ -92,10 +95,10 @@
             src="{{ product.featured_image | image_url }}"
             alt="{{ product.title }}"
             title="{{ product.title }}"
-            width="310"
+            width="100%"
             loading="lazy"
              
-            height="310"
+            height="auto"
           >
         {% endif %}
       </a>
@@ -103,14 +106,6 @@
     {% comment %} PDP Image Ends {% endcomment %}
     {% comment %} PDP Details Starts {% endcomment %}
     <div class="b-product_promo_tile-content">
-      {% unless remove_extra_details %} 
-       <div class="rating">
-            <div
-              class="gw-rv-listing-average-placeholder"
-              data-product_id="{{ product.id }}"
-            ><br></div>
-          </div>
-      {% endunless %}
       {% unless showCross %}
         {% unless pdptag %}
         <div class="custom_label_badge">
@@ -121,12 +116,7 @@
             {% if tags contains 'label' %}
               {% unless tags contains '_label_New' %}
                 {% assign tag_value = tags | split: '_' | slice: 2 %}
-                <div
-                  class="custom_badges"
-                  {% if tag_value == 'Buy Any 2 at 1499' %}
-                    style="background:#9d806b;color:#fefefe;"
-                  {% endif %}
-                >
+                <div class="custom_badges">
                   {{ tag_value }}
                 </div>
               {% endunless %}
@@ -135,9 +125,16 @@
         </div>
       {% endunless %}
     {% endunless %}
+    {% unless remove_extra_details %} 
+      {% if product.metafields.air_reviews_product.review_count > 0 and product.metafields.air_reviews_product.review_count != blank %}
+          <div class="rating">
+            <div class="AirReviews-Widget AirReviews-Widget--Stars" data-review-avg="{{ product.metafields.air_reviews_product.review_avg }}" data-review-count="{{ product.metafields.air_reviews_product.review_count }}" ></div>
+          </div>
+        {% endif %}
+      {% endunless %}
       <p class="b-product_promo_vendor-name">
         <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
-          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' -}}
+          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929E' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: 'D-CAT' | remove: 'C-CAT'  | remove: 'B2G2' | remove: 'B499' | remove:"B1299" | remove:"M1299" | remove:"E1299" | remove:"L1099" | remove:"R1499" | remove:"M799"| remove:"929D" | remove: "L.A. Girl LA1499" -}}
         </a>
         <a class="b-product_promo_tile-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
           {{- product.title | remove: product.vendor  -}}

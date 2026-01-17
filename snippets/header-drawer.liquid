@@ -25,13 +25,13 @@
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
-            <div class="gw-rd-vipt-tiers-progress-wrapper">
+            {% comment %} <div class="gw-rd-vipt-tiers-progress-wrapper">
               <p class="gw-rd-vipt-tiers-progress-wrapper__title">We Value Every Point You Earn!</p>
               <div
                 class="gw-rd-vip-tiers-single-progress-widget-placeholder"
                 style="display: block"
               ></div>
-            </div>
+            </div> {% endcomment %}
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>
@@ -152,8 +152,14 @@
                         aria-current="page"
                       {% endif %}
                     >
-                    {{ link.title | escape }} {% if link.handle == "hok-rewards" %}&nbsp;<img loading="lazy" src="{{ 'star.png' |  asset_url }}" width="23" height="23" alt="hok-rewards">{% endif %}
-                      {% comment %} {% if link.handle == "hok-rewards" %}<img loading="eager" src="//hokmakeup.com/cdn/shop/t/36/assets/hok-rewards.gif?v=180248546365669141791735555189" alt="reward-gif" width="75" height="35">{% else %} {{ link.title | escape }}{% endif %} {% endcomment %}
+                    {% if link.handle == "winter-offer" %}
+                       <span  style="position:relative;top:-4px;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23" fill="none">
+                            <path d="M7.24029 9.97525L7.30285 10.1008L7.18244 10.172C7.15036 10.1908 7.106 10.2417 7.06251 10.3458C7.02077 10.4457 6.98709 10.5752 6.96394 10.7203C6.91767 11.0105 6.91521 11.3401 6.94414 11.5735L6.95504 11.6622L6.88204 11.7147L1.39763 15.6477L7.43981 12.8258L7.56348 12.7682L7.63271 12.8867C7.65182 12.9189 7.70337 12.9631 7.80751 13.0076C7.90768 13.0503 8.03682 13.0853 8.18118 13.112C8.46968 13.1654 8.79713 13.183 9.02485 13.1809L9.10298 13.18L9.14846 13.2444L14.537 20.8306L10.3199 12.7194L10.2718 12.6267L10.3423 12.5489C10.3462 12.5444 10.3577 12.5279 10.3751 12.4924C10.3918 12.4583 10.4105 12.4137 10.4296 12.3602C10.4678 12.2533 10.5067 12.1169 10.5395 11.9688C10.6058 11.6687 10.6436 11.3406 10.616 11.1181L10.6041 11.0295L10.6781 10.977L17.5674 6.10415L10.1502 9.80656L10.0623 9.85065L9.98662 9.78797C9.78736 9.62049 9.6184 9.46574 9.38073 9.3657C9.14874 9.26807 8.83978 9.21877 8.36909 9.29886L8.27472 9.31478L8.22007 9.235L3.23599 1.89708L7.24029 9.97525Z" fill="#797DFF" stroke="#797DFF" stroke-width="0.3"/>
+                          </svg>
+                      </span>
+                    {% endif %}
+                    {{ link.title | escape }}
                     </a>
                   {%- endif -%}
                 </li>

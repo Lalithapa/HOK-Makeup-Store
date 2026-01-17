@@ -104,17 +104,22 @@
               {{ white_arrow }}
             </div>
             <img
-              width="100%"
-              height="100%"
-              src="{{ section.settings.cont_2_img | image_url }}"
+              src="{{ section.settings.cont_2_img | image_url: width: 326, format: 'webp' }}"
+              srcset="
+                {{ section.settings.cont_2_img | image_url: width: 326 }} 326w
+              "
+              sizes="326px"
+              width="326"
+              height="326"
               alt="{{ section.settings.content_2 | escape }}"
-              class="img-fluid mobile_screen h-100"
+              class="img-fluid mobile_screen"
               loading="lazy"
-               onload="this.parentElement.classList.add('loaded')"
+              decoding="async"
+              onload="this.parentElement.classList.add('loaded')"
             >
             <img
               width="100%"
-              height="100%"
+              height="auto"
               src="{{ section.settings.cont_2_img_desktop | image_url }}"
               alt="{{ section.settings.content_2 | escape }}"
               class="img-fluid desktop_screen h-100"
@@ -133,17 +138,22 @@
               {{ white_arrow }}
             </div>
             <img
-              width="100%"
-              height="100%"
-              src="{{ section.settings.cont_3_img | image_url }}"
-              alt="{{ section.settings.content_3 | escape }}"
-              class="img-fluid mobile_screen h-100"
-              loading="lazy"
-               onload="this.parentElement.classList.add('loaded')"
-            >
+                src="{{ section.settings.cont_3_img | image_url: width: 326, format: 'webp'}}"
+                srcset="
+                  {{ section.settings.cont_3_img | image_url: width: 326 }} 326w
+                "
+                sizes="326px"
+                width="326"
+                height="326"
+                alt="{{ section.settings.cont_3_img | escape }}"
+                class="img-fluid mobile_screen"
+                loading="lazy"
+                decoding="async"
+                onload="this.parentElement.classList.add('loaded')"
+              >
             <img
               width="100%"
-              height="100%"
+              height="auto"
               src="{{ section.settings.cont_3_img_desktop | image_url }}"
               alt="{{ section.settings.content_3 | escape }}"
               class="img-fluid desktop_screen h-100"
@@ -259,7 +269,7 @@
 {
 "type": "image_picker",
 "id": "cont_2_img",
-"label": "Add Your 2nd Image"
+"label": "Add Your 2nd Image mobile"
 },
 {
 "type": "image_picker",
@@ -279,12 +289,12 @@
 {
 "type": "image_picker",
 "id": "cont_3_img",
-"label": "Add Your 3rd Image"
+"label": "Add Your 3rd Image Mobile"
 },
 {
 "type": "image_picker",
 "id": "cont_3_img_desktop",
-"label": "Add Your 3rd Image desktop"
+"label": "Add Your 3rd Image Desktop "
 }
 ],
 "presets": [

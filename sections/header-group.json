@@ -1,50 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement_bar_xqp6tT": {
-      "type": "announcement-bar",
+    "17686429695c6670c0": {
+      "type": "_blocks",
       "blocks": {
-        "announcement_cctUjt": {
-          "type": "announcement",
+        "ai_gen_block_dbafc58_dpDFfL": {
+          "type": "ai_gen_block_dbafc58",
           "settings": {
-            "text": "Grab Up To 30% + Extra 15% OFF on orders above ₹1999 on your favorite brands.",
-            "link": "shopify:\/\/collections\/new-arrivals"
-          }
+            "text_1": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
+            "text_2": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
+            "text_3": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
+            "text_4": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
+            "text_5": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
+            "show_icon": true,
+            "icon_type": "sparkle",
+            "icon_size": 14,
+            "icon_color": "#000000",
+            "icon_text_spacing": 16,
+            "background_color": "#eae1d0",
+            "text_color": "#000000",
+            "font_size": 14,
+            "font_weight": "400",
+            "text_transform": "none",
+            "padding_vertical": 8,
+            "animation_speed": 50,
+            "item_spacing": 20,
+            "pause_on_hover": true
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "announcement_cctUjt"
+        "ai_gen_block_dbafc58_dpDFfL"
       ],
-      "disabled": true,
-      "custom_css": [
-        "p.announcement-bar__message.h5 {font-size: clamp(12px, 2vw, 14px); font-family: var(--family-regular); margin: 0;}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-4",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
-    "updated_announcement_bar_NFDExf": {
-      "type": "updated-announcement-bar",
-      "settings": {
-        "text": "<p><strong>Rakhi Sale Live – Up to 25% OFF + Surprise Gifts!<\/strong><\/p>",
-        "link": "shopify:\/\/collections\/product-without-clearance"
-      }
+      "settings": {}
     },
     "header": {
       "type": "header",
-      "custom_css": [],
+      "custom_css": [
+        ".tmenu_item_text {font-family: 'Mosvita' !important;}",
+        ".tmenu_item--root > .tmenu_submenu {box-shadow: none !important; border-top: 0.5px solid #d2d1d1;}"
+      ],
       "settings": {
         "logo_position": "top-center",
-        "menu": "desktop-main-menu",
+        "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
@@ -56,92 +67,10 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "new_header_pqxJqQ": {
-      "type": "new-header",
-      "disabled": true,
-      "settings": {
-        "sdjkhfgksh": "",
-        "header_logo": "shopify:\/\/shop_images\/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
-        "mobile_logo": "shopify:\/\/shop_images\/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
-        "cart_collection_products": "",
-        "hskjfd": true,
-        "heyhbs": true,
-        "skdieuf": true,
-        "opwrire": true,
-        "perior": "",
-        "potus": "",
-        "oprutqw": "",
-        "sjdhkewew": "main-menu",
-        "lkjhgsd": "",
-        "ojfchkls": "",
-        "home_search_products": "",
-        "search_list": ""
-      }
-    },
-    "navbar_UJefUW": {
-      "type": "navbar",
-      "disabled": true,
-      "settings": {
-        "navs": "desktop-main-menu",
-        "newInTxt": "",
-        "newInUrl": "",
-        "newInTxt_2": "",
-        "newInUrl_2": "",
-        "brandsTxt": "",
-        "brandsUrl": "",
-        "brandsTxt_2": "",
-        "brandsUrl_2": "",
-        "makeupTxt": "",
-        "makeupUrl": "",
-        "makeupTxt_2": "",
-        "makeupUrl_2": "",
-        "skinTxt": "",
-        "skinUrl": "",
-        "skinTxt_2": "",
-        "skinUrl_2": "",
-        "setsTxt": "",
-        "setsUrl": "",
-        "setsTxt_2": "",
-        "setsUrl_2": "",
-        "hairTxt": "",
-        "hairUrl": "",
-        "hairTxt_2": "",
-        "hairUrl_2": "",
-        "bnbTxt": "",
-        "bnbUrl": "",
-        "bnbTxt_2": "",
-        "bnbUrl_2": "",
-        "fragrancesTxt": "",
-        "fragrancesUrl": "",
-        "fragrancesTxt_2": "",
-        "fragrancesUrl_2": "",
-        "accessoriesTxt": "",
-        "accessoriesUrl": "",
-        "accessoriesTxt_2": "",
-        "accessoriesUrl_2": ""
-      }
-    },
-    "main_cart_drawer_Yx3cqc": {
-      "type": "main-cart-drawer",
-      "disabled": true,
-      "settings": {}
-    },
-    "product_quickview_FBBVgd": {
-      "type": "product-quickview",
-      "disabled": true,
-      "settings": {
-        "default_product": ""
-      }
     }
   },
   "order": [
-    "announcement_bar_xqp6tT",
-    "updated_announcement_bar_NFDExf",
-    "header",
-    "new_header_pqxJqQ",
-    "navbar_UJefUW",
-    "main_cart_drawer_Yx3cqc",
-    "product_quickview_FBBVgd"
+    "17686429695c6670c0",
+    "header"
   ]
 }

@@ -5,6 +5,28 @@
   for collection in product.collections
     if collection.handle == 'buy-any-3-at-949'
       assign offer_name = 'pd-bundle'
+    elsif collection.handle contains 'buy-any-4-at-999'
+      assign offer_name = 'buy4_999'
+    elsif collection.handle contains 'la-girl-buy-any-4-at-1499'
+      assign offer_name = 'Lagirl@1499'
+    elsif collection.handle contains 'flat-50-on-orders-799'
+      assign offer_name = '799_50OFF'
+    elsif collection.handle contains 'buy-any-3-get-3-free'
+      assign offer_name = 'buy3_get3'
+    elsif collection.handle contains 'buy-any-3-at-799'
+      assign offer_name = 'buy3_799'
+    elsif collection.handle contains 'hok-makeup-x-sweetons'
+      assign offer_name = 'candy'
+    elsif collection.handle contains 'buy-any-4-at-1299' or collection.handle contains 'mix-buy-any-4-at-1299' or collection.handle contains 'eveline-buy-any-4-at-1299'
+      assign offer_name = 'buy4_1299'
+    elsif collection.handle == 'eveline-festive-sale'
+      assign offer_name = 'eveline--sale'
+    elsif collection.handle == 'buy-2-get-2-free'
+      assign offer_name = 'b2g2'
+     elsif collection.handle == 'buy-any-5-1099'
+      assign offer_name = 'C--CAT'
+    elsif collection.handle contains 'lamel-any-4-at-1099'
+        assign offer_name = 'lamelbuy4_1299'
     elsif collection.handle == 'combos'
       assign offer_name = 'combos'
     elsif product.vendor == 'HOK Makeup ORG'
@@ -15,6 +37,10 @@
       assign offer_name = 'offerHidden'
     elsif collection.handle == 'foundation-sale' or collection.handle == 'slay-the-base'
       assign offer_name = 'foundation-sale'
+    elsif collection.handle == 'giverny' 
+      assign offer_name = 'giverny'
+    elsif collection.handle == 'flat-70-off-orders-above-599' 
+      assign offer_name = 'flat-70-off-orders-above-599'
     endif
   endfor
 %}
@@ -145,6 +171,55 @@
                           ></b
                         >
                       </p>
+                      {% elsif offer_name == 'b2g2' %}
+                       <li class="bogo-text-wrapper">
+                        Buy <strong>2</strong> get <strong>2</strong> free + Surprise Gift
+                       </li>
+                      {% elsif offer_name == 'buy4_999'%}
+                       <li class="bogo-text-wrapper">
+                        Buy any <strong>4</strong> at <strong>₹999</strong> - Limited Time Offer!
+                       </li>
+                       <li class="bogo-text-wrapper">
+                         Buy any <strong>7</strong> at <strong>₹1499</strong> - Limited Time Offer!
+                        </li>
+                      {% elsif offer_name == 'Lagirl@1499'%}
+                       <li class="bogo-text-wrapper">
+                        Buy any <strong>4</strong> at <strong>₹1499</strong> - Limited Time Offer!
+                       </li>
+                      {% elsif offer_name == '799_50OFF'%}
+                       <li class="bogo-text-wrapper">
+                        Flat <strong>50%</strong> on orders above <strong>799</strong> 
+                       </li>
+                      {% elsif offer_name == 'buy3_get3'%}
+                       <li class="bogo-text-wrapper">
+                        Buy any <strong>3</strong> at <strong>₹1499</strong> + Get <b>3 Free</b> Gifts
+                       </li>
+                      {% elsif offer_name == 'buy3_799'%}
+                       <li class="bogo-text-wrapper">
+                        Buy any <strong>3</strong> at <strong>₹799</strong>
+                       </li>
+                      {% elsif offer_name == 'buy4_1299'%}
+                       <li class="bogo-text-wrapper">
+                        Buy any <strong>4</strong> at <strong>₹1299</strong> - Limited Time Offer!
+                       </li>
+                      {% elsif offer_name == 'eveline--sale' %}
+                       <li class="bogo-text-wrapper">
+                        Buy Any <strong>3 at ₹1099</strong>
+                       </li>
+                       <li class="bogo-text-wrapper">
+                        Buy Any <strong>5 at ₹1699</strong>
+                       </li>
+                       {% elsif offer_name == 'lamelbuy4_1299' %}
+                       <li class="bogo-text-wrapper">
+                        Buy Any <strong>4 at ₹1099</strong>
+                       </li>
+                       {% elsif offer_name == 'C--CAT' %}
+                       <li class="bogo-text-wrapper">
+                        Buy Any <strong>5 at ₹1099</strong> + Extra ₹100 OFF instantly (Prepaid only)
+                       </li>
+                       <li class="bogo-text-wrapper">
+                        Buy Any <strong>3 for ₹699</strong> (Prepaid only)
+                       </li>
                     {% elsif offer_name == 'org-sale' %}
                       <li class="bogo-text-wrapper">Surprise Gift on Order above <b>₹999</b></li>
                       {% if product.title == 'Stella Makeup Organizer' %}
@@ -165,10 +240,7 @@
                         >
                       </p>
                     {% elsif offer_name == 'combos' %}
-                      <li class="bogo-text-wrapper"><b>Instant ₹100 OFF on Orders above ₹999+</b></li>
-                      <li class="bogo-text-wrapper"><b>Instant ₹200 OFF on Orders above ₹1499+</b></li>
-                      <li class="bogo-text-wrapper"><b>Instant ₹400 OFF on Orders above ₹1999+</b></li>
-                      <li class="bogo-text-wrapper"><b>Free Pouch On Orders Above ₹799</b></li>
+                      <p class="bogo-text-wrapper">Get a <b>Surprise Gift</b> on orders above <b>₹799</b></p>
                       <p class="bogo-text-wrapper" style="color: #991054;text-align: center;"> 
                         <b>
                           Offers on Selected
@@ -192,30 +264,28 @@
                           ></b
                         >
                       </p>
+                    {% elsif offer_name == 'candy' %}
+                      <li class="bogo-text-wrapper">Buy Any <b>2</b> & Get Extra <b>15% OFF</b></li>
+                      <li class="bogo-text-wrapper">Buy Any <b>3</b> & Get Extra <b>20% OFF</b></li>
+                      <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
+                        <b>
+                          Offers on Selected
+                          <a
+                            href="https://www.hokmakeup.com/collections/hok-makeup-x-sweetons"
+                            class="text-decoration-underline"
+                            >Collection</a
+                          ></b
+                        >
+                      </p>
+                    {% elsif offer_name == 'giverny' %}
+                       <li class="bogo-text-wrapper"> Buy Any  <strong> 3 at 1250 + Surprise Gift </strong> </li>
+                     {% elsif offer_name == 'flat-70-off-orders-above-599' %}
+                       <li class="bogo-text-wrapper"> Flat <strong>70%</strong> OFF on Orders <strong>599+</strong> </li>
                     {% elsif offer_name == 'default' %}
-                      <!-- <li class="bogo-text-wrapper">
-                        Welcome Offer: Extra<strong> 10% OFF</strong> on orders above ₹700!
-                      </li> -->
-                      <p style="font-size: 12px;"><strong>Buy More, Save More</strong></p>
-                      <li class="bogo-text-wrapper">
-                        Buy 2 → <strong>Extra 10% OFF</strong>
-                      </li>
-                      <li class="bogo-text-wrapper">
-                        Buy 3 → <strong>Extra 20% OFF</strong>
-                      </li>
-                      <li class="bogo-text-wrapper">
-                        Buy 4+ → <strong>Extra 25% OFF</strong>
-                      </li>
-                      <p style="font-size: 12px;"><strong>Surprise Gifts worth :</strong></p>
-                      <li class="bogo-text-wrapper">
-                        ₹599 on orders above ₹899+
-                      </li>
-                      <li class="bogo-text-wrapper">
-                         ₹1250 on orders above ₹1999+
-                      </li>
-                      <li class="bogo-text-wrapper">
-                          ₹1849 on orders above ₹2999+
-                      </li>
+                      <li class="bogo-text-wrapper">Extra <b>10% OFF</b> on orders above ₹999</li>
+                      <li class="bogo-text-wrapper">Extra <b>15% OFF</b> on orders above ₹1499</li>
+                      <li class="bogo-text-wrapper">Get <b>Two Surprise Gifts</b> on orders above ₹2299</li>
+                      <li class="bogo-text-wrapper"><b>On Prepaid Orders: Extra 5% OFF</b></li>
                       <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
                         <small style="font-size: 10px;">*Offers will be applied at checkout</small>
                       </p>

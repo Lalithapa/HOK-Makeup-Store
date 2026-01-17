@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -22,8 +31,8 @@
     "video_custom_9Hpmib": {
       "type": "video-custom",
       "settings": {
-        "banner-video-desktop": "shopify:\/\/files\/videos\/Dr Pawpaw Landing Page Banner (Desktop) new.mp4",
-        "banner-video-mobile": "shopify:\/\/files\/videos\/Dr Pawpaw Landing Page Banner (Mobile) New.mp4",
+        "banner-video-desktop": "shopify://files/videos/Dr Pawpaw Landing Page Banner (Desktop) new.mp4",
+        "banner-video-mobile": "shopify://files/videos/Dr Pawpaw Landing Page Banner (Mobile) New.mp4",
         "show_badge": false,
         "cta-text": "Meet Dr. PawPaw",
         "cta-text-url": "",
@@ -46,8 +55,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "shradhha_link": "",
-        "image": "shopify:\/\/shop_images\/Rectangle_4293.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/Rectangle_4293_mo.jpg"
+        "image": "shopify://shop_images/Rectangle_4293.jpg",
+        "image_mobile": "shopify://shop_images/Rectangle_4293_mo.jpg"
       }
     },
     "rich_text_V6Uqch": {
@@ -63,14 +72,14 @@
         "text_TRqwEY": {
           "type": "text",
           "settings": {
-            "text": "<p>With Dr. <em>PAWPAW<\/em> it’s easy to <strong>LOOK <\/strong>good, <\/p><p><strong>FEEL<\/strong> good, <strong>DO<\/strong> good<\/p>"
+            "text": "<p>With Dr. <em>PAWPAW</em> it’s easy to <strong>LOOK </strong>good, </p><p><strong>FEEL</strong> good, <strong>DO</strong> good</p>"
           }
         },
         "button_BeaRTJ": {
           "type": "button",
           "settings": {
             "button_label": "Meet Dr. PawPaw",
-            "button_link": "shopify:\/\/collections\/dr-paw-paw",
+            "button_link": "shopify://collections/dr-paw-paw",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -118,7 +127,7 @@
           "disabled": true,
           "settings": {
             "text": "Which balm are you?",
-            "link": ""
+            "link": "#shopify-section-template--25997483278615__video_custom_Qxw4xN"
           }
         },
         "button_EXG3ch": {
@@ -132,7 +141,7 @@
           "type": "button",
           "settings": {
             "text": "UK’s cult fave",
-            "link": "#shopify-section-template--24757819638039__video_custom_Qxw4xN"
+            "link": "#shopify-section-template--25997483278615__video_custom_Qxw4xN"
           }
         },
         "button_4NMCUi": {
@@ -174,13 +183,13 @@
         "testimonial_KnRELb": {
           "type": "testimonial",
           "settings": {
-            "custom_content": "<p>loved by<em> CELEBS <\/em>like <\/p>"
+            "custom_content": "<p>loved by<em> CELEBS </em>like </p>"
           }
         },
         "testimonial_GnmTCF": {
           "type": "testimonial",
           "settings": {
-            "custom_content": "<p><strong>Victoria Beckham & Emma Watson<\/strong><\/p>"
+            "custom_content": "<p><strong>Victoria Beckham & Emma Watson</strong></p>"
           }
         }
       },
@@ -200,15 +209,15 @@
         "@media screen and (max-width: 750px) {.why-love-it-section .text-content p {padding: 0px 26px; margin-bottom: 60px; font-size: 15px; font-weight: 300 !important; line-height: normal; padding: 0px 43px; font-family: \"Sweet Sans Pro\"; } .why-love-it-section .notify-btn {font-size: 18px; padding: 10px 40px; min-height: 34px; font-weight: 700; }}"
       ],
       "settings": {
-        "bgimage": "shopify:\/\/shop_images\/desk.jpg",
-        "bgimage_mobile": "shopify:\/\/shop_images\/blackkk.svg",
+        "bgimage": "shopify://shop_images/desk.jpg",
+        "bgimage_mobile": "shopify://shop_images/blackkk.svg",
         "heading": "Why you’ll love it?",
         "description": "Because it just works—and works everywhere. Dr.PAWPAW is the do-it-all balm that fixes dry lips, cuticles, flyaways, and more—instantly. Powered by papaya, aloe, and olive oil, it soothes, hydrates, and repairs without harsh ingredients. Vegan, cruelty-free, and trusted by makeup artists, loved by real people—Dr.PAWPAW isn’t just another balm, it’s your daily essential in a tube.",
-        "bg_image": "shopify:\/\/shop_images\/image-mobile.png",
-        "info_image": "shopify:\/\/shop_images\/Claims-mobile_fd592b91-aca9-4dab-8ffe-0a532cbe4cfe.png",
-        "mobile_image": "shopify:\/\/shop_images\/Claims-mobile_fd592b91-aca9-4dab-8ffe-0a532cbe4cfe.png",
+        "bg_image": "shopify://shop_images/image-mobile.png",
+        "info_image": "shopify://shop_images/Claims-mobile_fd592b91-aca9-4dab-8ffe-0a532cbe4cfe.png",
+        "mobile_image": "shopify://shop_images/Claims-mobile_fd592b91-aca9-4dab-8ffe-0a532cbe4cfe.png",
         "button_text": "Meet Dr. PawPaw",
-        "button_link": "shopify:\/\/collections\/dr-paw-paw",
+        "button_link": "shopify://collections/dr-paw-paw",
         "padding_top_desktop": 100,
         "padding_bottom_desktop": 100,
         "padding_top_mobile": 60,
@@ -219,11 +228,11 @@
       "type": "video-custom",
       "disabled": true,
       "settings": {
-        "banner-video-desktop": "shopify:\/\/files\/videos\/Header-desktop (1).mp4",
-        "banner-video-mobile": "shopify:\/\/files\/videos\/Eos Header Banner Mobile.mp4",
+        "banner-video-desktop": "shopify://files/videos/Header-desktop (1).mp4",
+        "banner-video-mobile": "shopify://files/videos/Eos Header Banner Mobile.mp4",
         "show_badge": true,
         "cta-text": "Meet Dr. PawPaw",
-        "cta-text-url": "shopify:\/\/products\/ardell-3d-faux-mink-861",
+        "cta-text-url": "shopify://products/ardell-3d-faux-mink-861",
         "cta-text-color": "#000000",
         "cta-bg-color": "#334fb4"
       }
@@ -296,8 +305,8 @@
           "type": "video-media",
           "settings": {
             "banner-url": "",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/rev-video-new.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/brand-week-lgirl.mp4",
+            "banner-video-desktop": "shopify://files/videos/rev-video-new.mp4",
+            "banner-video-mobile": "shopify://files/videos/brand-week-lgirl.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -346,25 +355,25 @@
         "testimonial_AiFxNb": {
           "type": "testimonial",
           "settings": {
-            "custom_content": "<p><em>DERMATOLOGIST<\/em>  approved<\/p>"
+            "custom_content": "<p><em>DERMATOLOGIST</em>  approved</p>"
           }
         },
         "testimonial_7AYL9m": {
           "type": "testimonial",
           "settings": {
-            "custom_content": "<p> <strong>paediatrician  <\/strong>approved          <\/p>"
+            "custom_content": "<p> <strong>paediatrician  </strong>approved          </p>"
           }
         },
         "testimonial_NU9ywN": {
           "type": "testimonial",
           "settings": {
-            "custom_content": "<p>suitable for <em>ECZEMA<\/em> prone skin<\/p>"
+            "custom_content": "<p>suitable for <em>ECZEMA</em> prone skin</p>"
           }
         },
         "testimonial_jxPdBy": {
           "type": "testimonial",
           "settings": {
-            "custom_content": "<p>suitable for <strong>sensitive<\/strong> skin<\/p>"
+            "custom_content": "<p>suitable for <strong>sensitive</strong> skin</p>"
           }
         }
       },
@@ -393,11 +402,11 @@
       "type": "video-custom",
       "name": "video custom",
       "settings": {
-        "banner-video-desktop": "shopify:\/\/files\/videos\/paw-paw-Desk.mp4",
-        "banner-video-mobile": "shopify:\/\/files\/videos\/Pawpaw-mobile.mp4",
+        "banner-video-desktop": "shopify://files/videos/paw-paw-Desk.mp4",
+        "banner-video-mobile": "shopify://files/videos/Pawpaw-mobile.mp4",
         "show_badge": true,
         "cta-text": "Meet Dr. PawPaw",
-        "cta-text-url": "shopify:\/\/collections\/dr-paw-paw",
+        "cta-text-url": "shopify://collections/dr-paw-paw",
         "cta-text-color": "#000000",
         "cta-bg-color": "#fb9c03"
       }
@@ -409,8 +418,8 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
-        "video": "shopify:\/\/files\/videos\/rev-video-new.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video": "shopify://files/videos/rev-video-new.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -424,7 +433,7 @@
         "testimonial_ynpEm6": {
           "type": "testimonial",
           "settings": {
-            "customer_image": "shopify:\/\/shop_images\/1_2.jpg",
+            "customer_image": "shopify://shop_images/1_2.jpg",
             "customer_name": "marc pilcher- Hair & Makeup Designer for Bridgerton",
             "testimonial": "“it provided protection against the elements during the winter and on night shoots”",
             "product": "dr-pawpaw-original-balm"
@@ -433,7 +442,7 @@
         "testimonial_G6QYAg": {
           "type": "testimonial",
           "settings": {
-            "customer_image": "shopify:\/\/shop_images\/4_a1750795-97e4-487e-b87f-c57926deb7ee.jpg",
+            "customer_image": "shopify://shop_images/4_a1750795-97e4-487e-b87f-c57926deb7ee.jpg",
             "customer_name": "MakeupAddictionCanada- Reddit User",
             "testimonial": "“the coral color is a stunning blush and a little goes a long way on the lips too”",
             "product": "dr-pawpaw-tinted-lip-balm-10ml"
@@ -442,7 +451,7 @@
         "testimonial_F83nE8": {
           "type": "testimonial",
           "settings": {
-            "customer_image": "shopify:\/\/shop_images\/2_2_78a5d0f7-6eed-4fa0-81c4-366698ae750e.jpg",
+            "customer_image": "shopify://shop_images/2_2_78a5d0f7-6eed-4fa0-81c4-366698ae750e.jpg",
             "customer_name": "Customer Review- Amazon",
             "testimonial": "“in an hour, my chapped lips healed, by the end of the day, they were plumped. I’m sold!”",
             "product": "dr-pawpaw-lip-eye-balm-8ml"
@@ -451,7 +460,7 @@
         "testimonial_iYqjjK": {
           "type": "testimonial",
           "settings": {
-            "customer_image": "shopify:\/\/shop_images\/3_cfc28e7c-bf65-4bf1-b958-be61cee04c6e.jpg",
+            "customer_image": "shopify://shop_images/3_cfc28e7c-bf65-4bf1-b958-be61cee04c6e.jpg",
             "customer_name": "Customer Review- Amazon",
             "testimonial": "\"i use it every night & it makes my lips feel silky smooth & moisturized when i wake up\"",
             "product": "dr-pawpaw-overnight-lip-mask-25-ml"
@@ -491,7 +500,7 @@
           "type": "button",
           "settings": {
             "text": "UK’s cult fave",
-            "link": "#shopify-section-template--24757819638039__video_custom_Qxw4xN"
+            "link": "#shopify-section-template--25997483278615__video_custom_Qxw4xN"
           }
         },
         "button_9EDJwc": {
@@ -520,7 +529,7 @@
           "type": "button",
           "settings": {
             "text": "Go to top",
-            "link": "#shopify-section-template--24757819638039__video_custom_9Hpmib"
+            "link": "#shopify-section-template--25997483278615__video_custom_9Hpmib"
           }
         }
       },
@@ -549,7 +558,7 @@
       "type": "apps",
       "blocks": {
         "instafeed_app_block_8nz8fc": {
-          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "disabled": true,
           "settings": {
             "title": "on the #gram",
@@ -566,15 +575,10 @@
             "feed_id": "",
             "html_area": ""
           }
-        },
-        "instafeed_ig_app_block_EHGwEy": {
-          "type": "shopify:\/\/apps\/instafeed-ig\/blocks\/app-block\/37be8af8-61d9-482d-a6b3-0b1be143eaf2",
-          "settings": {}
         }
       },
       "block_order": [
-        "instafeed_app_block_8nz8fc",
-        "instafeed_ig_app_block_EHGwEy"
+        "instafeed_app_block_8nz8fc"
       ],
       "settings": {
         "include_margins": true

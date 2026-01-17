@@ -31,7 +31,9 @@
   gap: 1px;
   /* justify-content: space-between; */
 }
-
+.pawpaw-info .addtobag_plus_icon .b-add_to_bag-button.button-cta.atc.pocket{
+  padding:unset;
+} 
 .find-your-pawpaw .pawpaw-container {
   width: 95%;
   margin: auto;

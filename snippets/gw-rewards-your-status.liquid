@@ -35,7 +35,7 @@
   function onSdkReady() {
     const moduleName = window.gw.sdk.common.constants.modules.REWARDS;
   
-    window.gw.sdk.common.events.runIfModuleReady(moduleName, () => {
+    window.gw.sdk.runIfModuleReady(moduleName, () => {
       getRewardsProgramAccount();
     });
   

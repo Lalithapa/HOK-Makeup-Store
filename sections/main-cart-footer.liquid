@@ -105,6 +105,8 @@
               </div>
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
+
+              
                 <button
                   type="submit"
                   id="checkout"
@@ -113,9 +115,23 @@
                   {% if cart == empty %}
                     disabled
                   {% endif %}
-                  form="cart"
+                  {% comment %} form="cart" {% endcomment %}
                 >
-                  {{ 'sections.cart.checkout' | t }}
+                  {% comment %} {{ 'sections.cart.checkout' | t }} {% endcomment %}
+
+                   <script>
+            if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Calcutta') {
+              document.write('<div class="shiprocket-headless" data-type="cart"></div>');
+            } else {
+              if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Asia/Kolkata') {
+                document.write('<div class="shiprocket-headless" data-type="cart"></div>');
+              } else {
+                document.write(
+                  '<button class="b-button_1"  type="submit" name="checkout" id="checkout" > checkout </button>'
+                );
+              }
+            }
+          </script>
                 </button>
               </div>
 

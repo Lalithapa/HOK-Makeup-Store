@@ -70,12 +70,14 @@
             {{ 'arrow-next.svg' | inline_asset_content }}
           </div>
         </div>
-        <div class="col-12 col-md-10 position-relative my-auto p-0 px-md-4">
-          <div
+        <div class="col-12 col-md-10 position-relative my-auto p-0 pl-md-4">
+          {% comment %} <div
             style="display: block;"
             class="gw-wl-add-to-wishlist-placeholder desktop"
             data-gw-product_id="{{ product.id }}"
-          ></div>
+          ></div> {% endcomment %}
+
+          {% if  product.price > 100 %}<div class="product-page-container wishlist-engine" data-product_id="{{  product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>{% endif %}
           <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff" class="swiper productSlider2">
             <div class="swiper-wrapper">
               {% for media in product.media %}
@@ -184,6 +186,13 @@
                         </svg>
                       </div>
                     </h1>
+                    {% if product.handle == "diy-bundle" %}
+                      <div class="bogo-offer top-2">
+                        <p class="bogo-text-wrapper">
+                          Build your glow bundle: 2 blushes, 1 highlighter, 1 contour
+                        </p>
+                      </div>
+                    {% endif %}
                   </div>
 
                 {% when 'price' %}
@@ -273,6 +282,28 @@
               for collection in product.collections
                 if collection.handle == 'buy-any-3-at-949'
                   assign offer_name = 'pd-bundle'
+                elsif collection.handle contains 'buy-any-4-at-999'
+                  assign offer_name = 'buy4@999'
+                elsif collection.handle contains 'la-girl-buy-any-4-at-1499'
+                  assign offer_name = 'Lagirl@1499'
+                elsif collection.handle contains 'buy-any-3-get-3-free'
+                  assign offer_name = 'buy3_get3'
+                elsif collection.handle contains 'flat-50-on-orders-799'
+                  assign offer_name = '799_50OFF'
+                elsif collection.handle contains 'buy-any-3-at-799'
+                  assign offer_name = 'buy3_799'
+                elsif collection.handle contains 'hok-makeup-x-sweetons'
+                  assign offer_name = 'candy'
+                elsif collection.handle contains 'buy-any-4-at-1299' or collection.handle contains 'mix-buy-any-4-at-1299' or collection.handle contains 'eveline-buy-any-4-at-1299'
+                  assign offer_name = 'buy4_1299'
+                elsif collection.handle contains 'eveline-festive-sale'
+                  assign offer_name = 'eveline-sale'
+                elsif collection.handle == 'buy-2-get-2-free'
+                  assign offer_name = 'b2g2'
+                 elsif collection.handle contains 'buy-any-5-1099'
+                  assign offer_name = 'C--CAT'
+                 elsif collection.handle contains 'lamel-any-4-at-1099'
+                  assign offer_name = 'lamelbuy4_1299'
                 elsif collection.handle == 'combos'
                   assign offer_name = 'combos'
                 elsif collection.handle == 'bogo-sale-limited-time-only'
@@ -283,11 +314,21 @@
                   assign offer_name = 'foundation-sale'
                 elsif collection.handle contains 'giverny'
                   assign offer_name = 'giverny'
+                elsif collection.handle contains 'flat-70-off-orders-above-599'
+                  assign offer_name = 'flat-70-off-orders-above-599'
+                  
                 endif
               endfor
             %}
-            {% unless offer_name == 'offerHidden' %}
-              <div class="b-accordion m-full mt-space">
+            {% if product.handle == "diy-bundle" %}
+             <div class="bogo-offer">
+              <p class="bogo-text-wrapper color-mustard">
+                <b>*Note:</b> You cannot edit the bundle once you add it to your cart
+              </p>
+            </div>
+            {% endif %}
+            {% unless offer_name == 'offerHidden' or product.handle == "diy-bundle" %}
+              <div class="b-accordion m-full">
                 <div class="b-accordion-item m-accordion-expanded topborder" id="searchAcc">
                   <span class="b-accordion-control m-accordion-expanded ">
                     Available offers
@@ -297,16 +338,38 @@
                           <b>Buy Any 2 and get </b> ...
                         {% elsif offer_name == 'foundation-sale' %}
                           <b>Get Extra ₹100 OFF + </b> ...
+                        {% elsif offer_name == 'b2g2' %}
+                           Buy <strong>2</strong> get <strong>2</strong>...
                         {% elsif offer_name == 'pd-bundle' %}
                           <b>Buy Any 3 at ₹94</b> ...
-                        {% elsif offer_name == 'combos' %}
-                          <b>Instant ₹100 off on Or</b> ...
-                        {% elsif offer_name == 'giverny' %}
+                        {% elsif offer_name == 'buy4@999' %}
+                          <b>Buy Any 4 at ₹99</b> ...
+                        {% elsif offer_name == 'Lagirl@1499' %}
+                          <b>Buy Any 4 at ₹1499</b> ...
+                        {% elsif offer_name == 'candy' %}
+                          <b>Buy Any 2 and get</b> ...
+                        {% elsif offer_name == 'buy3_get3' %}
+                          <b>Buy Any 3 at ₹14</b> ...
+                        {% elsif offer_name == '799_50OFF' %}
+                          <b>Flat 50% on or</b> ...
+                        {% elsif offer_name == 'buy3_799' %}
+                          <b>Buy Any 3 at ₹79</b> ...
+                        {% elsif offer_name == 'buy4_1299' %}
+                          <b>Buy Any 4 at ₹129</b> ...
+                        {% elsif offer_name == 'eveline-sale' %}
                           <b>Buy Any 3 at ₹109</b> ...
+                        {% elsif offer_name == 'C--CAT' %}
+                          <b>Buy Any 5 at ₹109</b> ...
+                        {% elsif offer_name == 'lamelbuy4_1299' %}
+                          <b>Buy Any 4 at ₹109</b> ...
+                        {% elsif offer_name == 'combos' %}
+                          Get a <b>Surprise Gift</b> on ...
+                        {% elsif offer_name == 'giverny' %}
+                          <b>Buy Any 3 at 125</b> ...
                         {% elsif offer_name == 'bogo' %}
                           <b>Buy One Get </b> ...
                         {% elsif offer_name == 'default' %}
-                          Buy <b>2</b> and get Flat 10% ...
+                          <b>Extra 10% OFF Orders </b> ...
                         {% elsif offer_name == 'lamel' %}
                           <b>Buy Two Get One Free</b> ...
                         {% endif %}
@@ -328,18 +391,69 @@
                                 {% endunless %}
                               {% elsif offer_name == 'combos' %}
                                  <div class="bogo-offer">
-                                    <p class="bogo-text-wrapper">Instant <strong>₹100</strong> OFF on Orders above <strong>₹999+</strong></p>
-                                    <p class="bogo-text-wrapper">Instant <strong>₹200</strong> OFF on Orders above <strong>₹1499+</strong></p>
-                                    <p class="bogo-text-wrapper">Instant <strong>₹400</strong> OFF on Orders above <strong>₹1999+</strong></p>
-                                    <p class="bogo-text-wrapper">Free <strong>Pouch</strong> On Orders Above <strong>₹799</strong></p>
+                                    <p class="bogo-text-wrapper">Get a <b>Surprise Gift</b> on orders above <b>₹799</b></p>
                                   </div>
                               {% elsif offer_name == 'pd-bundle' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">Buy Any <b>3 at ₹949 </b> - Limited Time Offer!</p>
                                 </div>
+                              {% elsif offer_name == 'buy4@999' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy Any <b>4 at ₹999 </b> - Limited Time Offer!</p>
+                                  <p class="bogo-text-wrapper">Buy Any <b>7 at ₹1499 </b> - Limited Time Offer!</p>
+                                </div>
+                              {% elsif offer_name == 'candy' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy Any <b>2</b> & Get Extra <b>15% OFF</b></p>
+                                  <p class="bogo-text-wrapper">Buy Any <b>3</b> & Get Extra <b>20% OFF</b></p>
+                                </div>
+                              {% elsif offer_name == 'buy4@999' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy any <strong>3</strong> at <strong>₹1499</strong> + Get <b>3 Free</b> Gifts</p>
+                                </div>
+                              {% elsif offer_name == 'Lagirl@1499' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy any <strong>4</strong> at <strong>₹1499</strong></p>
+                                </div>
+                              {% elsif offer_name == 'buy4_1299' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy Any <b>4 at ₹1299 </b> - Limited Time Offer!</p>
+                                </div>
+                              {% elsif offer_name == 'buy3_799' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Buy Any <b>3 at ₹799 </b> - Limited Time Offer!</p>
+                                </div>
+                              {% elsif offer_name == '799_50OFF' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Flat <strong>50%</strong> on orders above <strong>799</strong></p>
+                                </div>
+                                {% elsif offer_name == 'C--CAT' %}
+                                <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Buy Any <strong>5 at ₹1099</strong> + Extra ₹100 OFF instantly (Prepaid only)
+                                    </p>
+                                     <p class="bogo-text-wrapper">
+                                      Buy Any <strong> 3 for ₹699 </strong> (Prepaid only)
+                                    </p>
+                                  </div>
+                                {% elsif offer_name == 'lamelbuy4_1299' %}
+                                <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Buy Any <strong>4 at ₹1099</strong>
+                                    </p>
+                                  </div>
+                              {% elsif offer_name == 'eveline-sale' %}
+                                <div class="bogo-offer">
+                                    <p class="bogo-text-wrapper">
+                                      Buy Any <strong>3 at ₹1099</strong>
+                                    </p>
+                                    <p class="bogo-text-wrapper">
+                                      Buy Any <strong>5 at ₹1699</strong>
+                                    </p>
+                                  </div>
                               {% elsif offer_name == 'giverny' %}
                                 <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Buy Any <b>3 at ₹1099 </b> +<b>Free Pouch</b> - Limited Time Offer!</p>
+                                  <p class="bogo-text-wrapper">Buy Any 3 at 1250 + Surprise Gift</p>
                                 </div>
                               {% elsif offer_name == 'bogo' %}
                                 <div class="bogo-offer">
@@ -360,6 +474,12 @@
                                     >
                                   </p>
                                 </div>
+                              {% elsif offer_name == 'b2g2' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    Buy <strong>2</strong> get <strong>2</strong> free + Surprise Gift
+                                  </p>
+                                </div>
                               {% elsif offer_name == 'foundation-sale' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">
@@ -367,54 +487,20 @@
                                     on every order!
                                   </p>
                                 </div>
+
+                                {% elsif offer_name == 'flat-70-off-orders-above-599' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">
+                                    Flat <strong>70%</strong> OFF on Orders <strong>599+</strong>
+                                  </p>
+                                </div>
                               {% elsif offer_name == 'default' %}
-                                <!--
                                   <div class="bogo-offer">
-                                    <p class="bogo-text-wrapper">
-                                      Welcome Offer: Extra<strong> 10% OFF</strong> on orders above ₹700!
-                                    </p>
+                                      <p class="bogo-text-wrapper">Extra <b>10% OFF</b> on orders above ₹999</p>
+                                      <p class="bogo-text-wrapper">Extra <b>15% OFF</b> on orders above ₹1499</p>
+                                      <p class="bogo-text-wrapper">Get <b>Two Surprise Gifts</b> on orders above ₹2299</p>
+                                      <p class="bogo-text-wrapper"><b>On Prepaid Orders: Extra 5% OFF</b></p>
                                   </div>
-                                -->
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                   <strong>Buy More, Save More</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
-                                   Buy 2 → <strong>Extra 10% OFF</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
-                                    Buy 3 → <strong>Extra 20% OFF</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
-                                    Buy 4+ → <strong>Extra 25% OFF</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">
-                                   <strong>Surprise Gifts worth :</strong>
-                                  </p>
-                                </div>
-                                <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
-                                   ₹599 on orders above ₹899+
-                                  </p>
-                                </div>
-                               <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper" style="padding-left: 10px;">
-                                  ₹1250 on orders above ₹1999+
-                                  </p>
-                                </div>
-                               <div class="bogo-offer" style="padding-left: 10px;">
-                                  <p class="bogo-text-wrapper">
-                                   ₹1849 on orders above ₹2999+
-                                  </p>
-                                </div>
                               {% endif %}
                             </div>
                           </div>
@@ -426,13 +512,15 @@
               </div>
             {% endunless %}
             <div class="bogo-offer">
-              <p class="bogo-text-wrapper">
-                Get Flat <strong>₹100</strong> cashback on 1st Mobikwik UPI Payment (min purchase Rs.999)
+              <p class="bogo-text-wrapper" style="color:#7D7D7D">
+                <strong style="color:#196400">Delivered in 2–5 working days* &nbsp;&nbsp; |&nbsp;&nbsp; </strong>Delivery timelines may vary by location
               </p>
             </div>
-            <div class="atc_buttons mt-space">
+            {% unless product.template_suffix == 'freebie-product-template' %}
+            <div class="atc_buttons mt-space ">
               {% render 'product_add_to_Cart', first_variant: first_variant %}
             </div>
+            {% endunless %}
           </div>
         </div>
       </div>

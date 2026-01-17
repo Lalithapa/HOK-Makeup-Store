@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -18,57 +27,57 @@
         "image_3tHCM8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/qw.png",
-            "collection_link": "\/collections\/face",
-            "title": "Face"
+            "image": "shopify://shop_images/qw.png",
+            "collection_link": "/collections/face",
+            "title": ""
           }
         },
         "image_DAFdEA": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/we.png",
-            "collection_link": "\/collections\/eyes",
-            "title": "Eyes"
+            "image": "shopify://shop_images/we.png",
+            "collection_link": "/collections/eyes",
+            "title": ""
           }
         },
         "image_kBVwKh": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/er.png",
-            "collection_link": "\/collections\/lips",
-            "title": "Lips"
+            "image": "shopify://shop_images/er.png",
+            "collection_link": "/collections/lips",
+            "title": ""
           }
         },
         "image_MTWqFc": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rt.png",
-            "collection_link": "\/collections\/nails",
-            "title": "Nails"
+            "image": "shopify://shop_images/rt.png",
+            "collection_link": "/collections/nails",
+            "title": ""
           }
         },
         "image_gJmWge": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/yu.png",
-            "collection_link": "\/collections\/tools-brushes",
-            "title": "Tools"
+            "image": "shopify://shop_images/yu.png",
+            "collection_link": "/collections/tools-brushes",
+            "title": ""
           }
         },
         "image_GAXn3x": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ui.png",
-            "collection_link": "\/collections\/combos",
-            "title": "Value Sets"
+            "image": "shopify://shop_images/ui.png",
+            "collection_link": "/collections/combos",
+            "title": ""
           }
         },
         "image_LFF8HR": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ty.png",
-            "collection_link": "\/collections\/accessories-1",
-            "title": "Accessories"
+            "image": "shopify://shop_images/ty.png",
+            "collection_link": "/collections/accessories-1",
+            "title": ""
           }
         }
       },
@@ -88,8 +97,8 @@
       "type": "lcp-banner",
       "disabled": true,
       "settings": {
-        "banner_image": "shopify:\/\/shop_images\/SS_FOUNDATION_BANNER_DESKTOP.jpg",
-        "banner_image_mobile": "shopify:\/\/shop_images\/SS_FOUNDATION_BANNER_MOBILE.jpg",
+        "banner_image": "shopify://shop_images/SS_FOUNDATION_BANNER_DESKTOP.jpg",
+        "banner_image_mobile": "shopify://shop_images/SS_FOUNDATION_BANNER_MOBILE.jpg",
         "lazyload": false,
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 0,
@@ -103,9 +112,9 @@
         "image_media_8Q6DTT": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/makeup-revolution",
-            "banner-image-desktop": "shopify:\/\/shop_images\/MUR_D_19bf85fe-caef-4aa8-8311-a5c005e87873.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/MUR_M.jpg",
+            "banner-url": "shopify://collections/makeup-revolution",
+            "banner-image-desktop": "shopify://shop_images/MUR_D_19bf85fe-caef-4aa8-8311-a5c005e87873.jpg",
+            "banner-image-mobile": "shopify://shop_images/MUR_M.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -115,9 +124,9 @@
         "image_media_AJyPxN": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/ardell",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Ardell_Banner__D.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Ardell_Banner__M.jpg",
+            "banner-url": "shopify://collections/ardell",
+            "banner-image-desktop": "shopify://shop_images/Ardell_Banner__D.jpg",
+            "banner-image-mobile": "shopify://shop_images/Ardell_Banner__M.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -127,9 +136,9 @@
         "image_media_cp9NnG": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/jessup",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Jessup_Banner_D.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Jessup_Banner_M.jpg",
+            "banner-url": "shopify://collections/jessup",
+            "banner-image-desktop": "shopify://shop_images/Jessup_Banner_D.jpg",
+            "banner-image-mobile": "shopify://shop_images/Jessup_Banner_M.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -139,9 +148,9 @@
         "image_media_tE4i8L": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/ln-pro",
-            "banner-image-desktop": "shopify:\/\/shop_images\/LN_Pro_D_89f782e2-72f3-4228-8b92-df61b46ca2d3.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/LN_Pro_M.jpg",
+            "banner-url": "shopify://collections/ln-pro",
+            "banner-image-desktop": "shopify://shop_images/LN_Pro_D_89f782e2-72f3-4228-8b92-df61b46ca2d3.jpg",
+            "banner-image-mobile": "shopify://shop_images/LN_Pro_M.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -195,8 +204,8 @@
         "image_media_9dJEhc": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/focallure-lasting-matte-lipstick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Lipstick_d9cfb11c-f93c-408e-b82b-9f4c0f424410.jpg",
+            "banner-url": "shopify://products/focallure-lasting-matte-lipstick",
+            "banner-image-desktop": "shopify://shop_images/Lipstick_d9cfb11c-f93c-408e-b82b-9f4c0f424410.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -206,8 +215,8 @@
         "image_media_wJMDpc": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/milani-conceal-perfect-2-in-1-foundation-concealer",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_344443b8-54b1-407f-8e74-a99bc0be2d3d.jpg",
+            "banner-url": "shopify://products/milani-conceal-perfect-2-in-1-foundation-concealer",
+            "banner-image-desktop": "shopify://shop_images/Foundation_344443b8-54b1-407f-8e74-a99bc0be2d3d.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -217,8 +226,8 @@
         "image_media_LhRw9J": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/lamel-lip-stain-hydrating-lip-tint",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Bestseller.jpg",
+            "banner-url": "shopify://products/lamel-lip-stain-hydrating-lip-tint",
+            "banner-image-desktop": "shopify://shop_images/Bestseller.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -228,8 +237,8 @@
         "image_media_7MG7Dx": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/products\/eveline-cosmetics-better-than-perfect-soft-matte-pressed-blush?variant=50309458329879",
-            "banner-image-desktop": "shopify:\/\/shop_images\/New_Launch_bbb015d7-1c88-4cb2-af85-728c48c0f8c0.jpg",
+            "banner-url": "https://hokmakeup.com/products/eveline-cosmetics-better-than-perfect-soft-matte-pressed-blush?variant=50309458329879",
+            "banner-image-desktop": "shopify://shop_images/New_Launch_bbb015d7-1c88-4cb2-af85-728c48c0f8c0.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -239,8 +248,8 @@
         "image_media_GNHxpC": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/makeup-revolution-the-eternal-icon-green-palette",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeshadow_f7190985-1f0b-44d8-a6ce-743b60f930d2.jpg",
+            "banner-url": "shopify://products/makeup-revolution-the-eternal-icon-green-palette",
+            "banner-image-desktop": "shopify://shop_images/Eyeshadow_f7190985-1f0b-44d8-a6ce-743b60f930d2.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -250,8 +259,8 @@
         "image_media_VKLwxL": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-girl-pro-conceal-hd",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Concealer_9d9be83d-c10c-4dd8-9d90-4f9429b7399b.jpg",
+            "banner-url": "shopify://products/l-a-girl-pro-conceal-hd",
+            "banner-image-desktop": "shopify://shop_images/Concealer_9d9be83d-c10c-4dd8-9d90-4f9429b7399b.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -261,8 +270,8 @@
         "image_media_zxrxL8": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-n-pro-kajal-eye-liner",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeliner_Kajal_abd66db4-4dea-400b-b35e-70550c82919d.jpg",
+            "banner-url": "shopify://products/l-n-pro-kajal-eye-liner",
+            "banner-image-desktop": "shopify://shop_images/Eyeliner_Kajal_abd66db4-4dea-400b-b35e-70550c82919d.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -272,8 +281,8 @@
         "image_media_74Mi7b": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/revolution-relove-hd-super-matte-banana-powder",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Compact_aa9dc0ac-498d-40eb-808e-06353d427e2b.jpg",
+            "banner-url": "shopify://products/revolution-relove-hd-super-matte-banana-powder",
+            "banner-image-desktop": "shopify://shop_images/Compact_aa9dc0ac-498d-40eb-808e-06353d427e2b.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -283,8 +292,8 @@
         "image_media_yiEVpV": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/primer",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Face_Primer_ab8c0235-bf75-4aa3-8d13-342e2ac2c153.jpg",
+            "banner-url": "shopify://collections/primer",
+            "banner-image-desktop": "shopify://shop_images/Face_Primer_ab8c0235-bf75-4aa3-8d13-342e2ac2c153.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -294,8 +303,8 @@
         "image_media_iPpCr4": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/jelly-cool-tinted-blush-stick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Blush_6b23d2a0-425d-4e70-8aa6-7d2f8d9d3521.jpg",
+            "banner-url": "shopify://products/jelly-cool-tinted-blush-stick",
+            "banner-image-desktop": "shopify://shop_images/Blush_6b23d2a0-425d-4e70-8aa6-7d2f8d9d3521.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -305,8 +314,8 @@
         "image_media_wVLPWQ": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/eveline-cosmetics-superthin-defining-mascara-black-6-ml",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_afe38a2e-1ac8-4181-96e0-055113cf1ad3.jpg",
+            "banner-url": "shopify://products/eveline-cosmetics-superthin-defining-mascara-black-6-ml",
+            "banner-image-desktop": "shopify://shop_images/Mascara_afe38a2e-1ac8-4181-96e0-055113cf1ad3.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -316,8 +325,8 @@
         "image_media_crHE4R": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-girl-luxe-shine-nail-fave-artificial-nail-tips-excite-me-28-pc-kit",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Nails_18a4022c-f696-485c-b9bb-28e2d80ae0fd.jpg",
+            "banner-url": "shopify://products/l-a-girl-luxe-shine-nail-fave-artificial-nail-tips-excite-me-28-pc-kit",
+            "banner-image-desktop": "shopify://shop_images/Nails_18a4022c-f696-485c-b9bb-28e2d80ae0fd.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -327,8 +336,8 @@
         "image_media_nq6j8P": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/bh-flat-powder-brush-1",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Tools_and_Brushes.jpg",
+            "banner-url": "shopify://products/bh-flat-powder-brush-1",
+            "banner-image-desktop": "shopify://shop_images/Tools_and_Brushes.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -391,9 +400,9 @@
         "video_media_k3pKmf": {
           "type": "video-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/makeup",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Banner 1920X160.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Banner 550X275.mp4",
+            "banner-url": "shopify://collections/makeup",
+            "banner-video-desktop": "shopify://files/videos/Banner 1920X160.mp4",
+            "banner-video-mobile": "shopify://files/videos/Banner 550X275.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -444,7 +453,7 @@
           "settings": {
             "product": "l-n-pro-blush-4g",
             "launch_text": "Coming Soon",
-            "image": "shopify:\/\/shop_images\/Image_20250515_180148_752.jpg",
+            "image": "shopify://shop_images/Image_20250515_180148_752.jpg",
             "subtitle": "Blushes, highlighters, and more—LN Pro’s So Cute range is launching soon. Don’t miss out!"
           }
         },
@@ -453,7 +462,7 @@
           "settings": {
             "product": "l-a-colors-24-pcs-artificial-nails-on-stocking-stuffer",
             "launch_text": "Coming Soon",
-            "image": "shopify:\/\/shop_images\/LA_Color_D.jpg",
+            "image": "shopify://shop_images/LA_Color_D.jpg",
             "subtitle": "Smudge-proof, kiss-proof, drama-proof. Lockin Lip Color is about to take over!"
           }
         },
@@ -462,7 +471,7 @@
           "settings": {
             "product": "focallure-airy-velvet-lipcream",
             "launch_text": "Coming Soon",
-            "image": "shopify:\/\/shop_images\/Lush_Flush_On_Cream_Blush_facalllure.jpg",
+            "image": "shopify://shop_images/Lush_Flush_On_Cream_Blush_facalllure.jpg",
             "subtitle": "Your next blush obsession? It’s almost here.Lush Flush by Focallure is creamier, bolder, and worth the wait."
           }
         },
@@ -471,7 +480,7 @@
           "settings": {
             "product": "pinkflash-oil-controller-translucent-loose-powder",
             "launch_text": "Coming Soon",
-            "image": "shopify:\/\/shop_images\/Pink_Flash_powder_blush_1.jpg",
+            "image": "shopify://shop_images/Pink_Flash_powder_blush_1.jpg",
             "subtitle": "Get ready to blush harder and cuter!Pink Flash's heart-shaped powder blushes are coming soon to glow up your cheeks."
           }
         },
@@ -480,7 +489,7 @@
           "settings": {
             "product": "nicka-k-auto-eye-liner",
             "launch_text": "Coming Soon",
-            "image": "shopify:\/\/shop_images\/Nicka_K-_Stay_ever_gel_eyeliner.jpg",
+            "image": "shopify://shop_images/Nicka_K-_Stay_ever_gel_eyeliner.jpg",
             "subtitle": "Smudge-proof. Intense. Unstoppable. Stay Ever Gel Eyeliners are coming to lock in your look — for good."
           }
         }
@@ -521,12 +530,12 @@
         "testimonial_zPKLdG": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/girl1.png",
+            "image": "shopify://shop_images/girl1.png",
             "name": "Shikha S.",
             "location": "Lucknow",
             "date": "12.02.25",
             "product": "Watery Transferproof Lip Cream",
-            "product_link": "shopify:\/\/products\/focallure-watery-transferproof-lip-cream",
+            "product_link": "shopify://products/focallure-watery-transferproof-lip-cream",
             "rating": 5,
             "quote": "Totally in love—smooth, blendable formulas with a flawless, lightweight finish! Vibrant, long-lasting, and inclusive shades in sleek packaging—must-try quality at a great price."
           }
@@ -534,12 +543,12 @@
         "testimonial_Lw7TpF": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/girl2.png",
+            "image": "shopify://shop_images/girl2.png",
             "name": "Sushree Sutar",
             "location": "Delhi",
             "date": "02.03.25",
             "product": "L.A. Girl Pro Corrector HD",
-            "product_link": "shopify:\/\/products\/la-girl-pro-corrector-hd",
+            "product_link": "shopify://products/la-girl-pro-corrector-hd",
             "rating": 4,
             "quote": "My friend recommended me HOK makeup website and I am really impressed with the discount on product they are offering... product quality are branded and top notch."
           }
@@ -547,12 +556,12 @@
         "testimonial_mEyde4": {
           "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/girl3.png",
+            "image": "shopify://shop_images/girl3.png",
             "name": "Adhya",
             "location": "Pune",
             "date": "25.03.25",
             "product": "Milani Conceal + Perfect Long Wear Concealer",
-            "product_link": "shopify:\/\/products\/conceal-perfect-long-wear-concealer",
+            "product_link": "shopify://products/conceal-perfect-long-wear-concealer",
             "rating": 5,
             "quote": "Good quality products at discounted price.. Have a lot of international brands like focallure which is not available at other sites."
           }
@@ -581,8 +590,8 @@
           "type": "image",
           "settings": {
             "collection": "flying-off-the-shelves",
-            "image": "shopify:\/\/shop_images\/MUR_D.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/MUR_M_08022493-6321-4489-bbaa-ef12ec831614.jpg",
+            "image": "shopify://shop_images/MUR_D.jpg",
+            "mobile_image": "shopify://shop_images/MUR_M_08022493-6321-4489-bbaa-ef12ec831614.jpg",
             "title": "Trending"
           }
         },
@@ -590,8 +599,8 @@
           "type": "image",
           "settings": {
             "collection": "new-arrivals",
-            "image": "shopify:\/\/shop_images\/Lamel_D.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Lamel_M.jpg",
+            "image": "shopify://shop_images/Lamel_D.jpg",
+            "mobile_image": "shopify://shop_images/Lamel_M.jpg",
             "title": "New Arrivals"
           }
         },
@@ -599,8 +608,8 @@
           "type": "image",
           "settings": {
             "collection": "best-seller-home-page",
-            "image": "shopify:\/\/shop_images\/LA_Girl_D.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/LA_Girl_M.jpg",
+            "image": "shopify://shop_images/LA_Girl_D.jpg",
+            "mobile_image": "shopify://shop_images/LA_Girl_M.jpg",
             "title": "Best Sellers"
           }
         }
@@ -625,8 +634,8 @@
         "background_color": "#fff3f5",
         "title": "Lashes Speak Louder with Ardell.",
         "subTitle": "From everyday glam to red carpet drama, there's a lash for every look—and every lash moment.",
-        "image": "shopify:\/\/shop_images\/Ardell__D.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Ardell__M.jpg",
+        "image": "shopify://shop_images/Ardell__D.jpg",
+        "mobile_image": "shopify://shop_images/Ardell__M.jpg",
         "collection": "ardell",
         "margin_top_desktop": 64,
         "margin_bottom_desktop": 36,
@@ -640,46 +649,46 @@
         "content_EkJyfP": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Eveline_D_dc837e23-ea4b-4bdf-bc13-fb61c2605123.jpg",
-            "url": "shopify:\/\/collections\/eveline-cosmetics",
+            "image": "shopify://shop_images/Eveline_D_dc837e23-ea4b-4bdf-bc13-fb61c2605123.jpg",
+            "url": "shopify://collections/eveline-cosmetics",
             "title": "Upto 30% Off",
-            "subtitle": "<p><em>Flying off the shelves—don’t let your next beauty fave be gone!<\/em><\/p>"
+            "subtitle": "<p><em>Flying off the shelves—don’t let your next beauty fave be gone!</em></p>"
           }
         },
         "content_4eXWCX": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/I_Heart_D_5949bc74-a9e6-4279-8a5f-d196e5e0fcab.jpg",
-            "url": "shopify:\/\/collections\/i-heart-revolution",
+            "image": "shopify://shop_images/I_Heart_D_5949bc74-a9e6-4279-8a5f-d196e5e0fcab.jpg",
+            "url": "shopify://collections/i-heart-revolution",
             "title": "Upto 20% Off",
-            "subtitle": "<p>In 78 wishlists right now!<\/p>"
+            "subtitle": "<p>In 78 wishlists right now!</p>"
           }
         },
         "content_7BR7mE": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Giverny_D_d3da0374-0b1e-4096-9064-7bf85974b2cc.jpg",
-            "url": "shopify:\/\/collections\/giverny",
+            "image": "shopify://shop_images/Giverny_D_d3da0374-0b1e-4096-9064-7bf85974b2cc.jpg",
+            "url": "shopify://collections/giverny",
             "title": "Flat 10% Off",
-            "subtitle": "<p>Favourite fragrance of our 60% customers!<\/p>"
+            "subtitle": "<p>Favourite fragrance of our 60% customers!</p>"
           }
         },
         "content_jbzmam": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Lamel_D_bc6c9b48-b31e-4735-a7bb-742497b17c4d.jpg",
-            "url": "shopify:\/\/collections\/lamel",
+            "image": "shopify://shop_images/Lamel_D_bc6c9b48-b31e-4735-a7bb-742497b17c4d.jpg",
+            "url": "shopify://collections/lamel",
             "title": "Upto 15% Off",
-            "subtitle": "<p><em>In 47 carts right now!<\/em><\/p>"
+            "subtitle": "<p><em>In 47 carts right now!</em></p>"
           }
         },
         "content_yG4ntq": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pinkflash_D_9da6d981-4f56-4170-9bf7-2ad3a2a4c3b1.jpg",
-            "url": "shopify:\/\/collections\/pink-flash",
+            "image": "shopify://shop_images/Pinkflash_D_9da6d981-4f56-4170-9bf7-2ad3a2a4c3b1.jpg",
+            "url": "shopify://collections/pink-flash",
             "title": "Upto 70% Off",
-            "subtitle": "<p>Just restocked—and already running low again.<\/p>"
+            "subtitle": "<p>Just restocked—and already running low again.</p>"
           }
         }
       },
@@ -735,7 +744,8 @@
         ".wrapper-9ioi {background: #5f2a1a;}"
       ],
       "settings": {
-        "main_heading": "&nbsp;★&nbsp; scroll. spot. steal the deal!"
+        "main_heading": "&nbsp;★&nbsp; scroll. spot. steal the deal!",
+        "url": ""
       }
     },
     "multi_functional_container_n4VcCL": {
@@ -744,9 +754,9 @@
         "video_media_dfgqNj": {
           "type": "video-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/la-colors",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/LA colors-Desktop.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/LA Colors-Mobile.mp4",
+            "banner-url": "shopify://collections/la-colors",
+            "banner-video-desktop": "shopify://files/videos/LA colors-Desktop.mp4",
+            "banner-video-mobile": "shopify://files/videos/LA Colors-Mobile.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -799,8 +809,8 @@
         "image_media_RzwLq4": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-colors-14-color-eyeshadow-palette-dreamy-eye-looks",
-            "banner-image-desktop": "shopify:\/\/shop_images\/2_c136f8ed-ceec-43c2-a047-2f5b926f7b49.png",
+            "banner-url": "shopify://products/l-a-colors-14-color-eyeshadow-palette-dreamy-eye-looks",
+            "banner-image-desktop": "shopify://shop_images/2_c136f8ed-ceec-43c2-a047-2f5b926f7b49.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -810,8 +820,8 @@
         "image_media_pNyFrp": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-colors-stay-jelly-juicy-hydrating-sheer-butter-lip-balm",
-            "banner-image-desktop": "shopify:\/\/shop_images\/5_24d23d1d-659c-40d6-8d46-2c1923c2b4ab.png",
+            "banner-url": "shopify://products/l-a-colors-stay-jelly-juicy-hydrating-sheer-butter-lip-balm",
+            "banner-image-desktop": "shopify://shop_images/5_24d23d1d-659c-40d6-8d46-2c1923c2b4ab.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -821,8 +831,8 @@
         "image_media_nrtKAU": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/jelly-cool-tinted-blush-stick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/4_04eb22cf-b8a3-4e06-876a-591a510f1a59.png",
+            "banner-url": "shopify://products/jelly-cool-tinted-blush-stick",
+            "banner-image-desktop": "shopify://shop_images/4_04eb22cf-b8a3-4e06-876a-591a510f1a59.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -832,8 +842,8 @@
         "image_media_DBtVfX": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-colors-just-glow-highlighter-bronzer-stick",
-            "banner-image-desktop": "shopify:\/\/shop_images\/3_3f053115-7e73-482d-b987-a031c76bbfc9.png",
+            "banner-url": "shopify://products/l-a-colors-just-glow-highlighter-bronzer-stick",
+            "banner-image-desktop": "shopify://shop_images/3_3f053115-7e73-482d-b987-a031c76bbfc9.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -843,8 +853,8 @@
         "image_media_iardKz": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-colors-cuticle-oil-pen",
-            "banner-image-desktop": "shopify:\/\/shop_images\/6_a77a780e-06f8-426d-ba41-1a2c43a471b7.png",
+            "banner-url": "shopify://products/l-a-colors-cuticle-oil-pen",
+            "banner-image-desktop": "shopify://shop_images/6_a77a780e-06f8-426d-ba41-1a2c43a471b7.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -854,8 +864,8 @@
         "image_media_4UaUDG": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/products\/l-a-colors-5-pcs-dreamy-pout-lip-balm-set-dreamy-pout",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1_1efc96d7-7092-4d63-9999-7cf01aefd26d.png",
+            "banner-url": "shopify://products/l-a-colors-5-pcs-dreamy-pout-lip-balm-set-dreamy-pout",
+            "banner-image-desktop": "shopify://shop_images/1_1efc96d7-7092-4d63-9999-7cf01aefd26d.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -899,7 +909,7 @@
         "title_alignment": "left",
         "carousel-title": "",
         "carousel-sub-title": "",
-        "carousel-sub-title-links": "shopify:\/\/collections\/la-colors",
+        "carousel-sub-title-links": "shopify://collections/la-colors",
         "num-slides-sm": "2.8",
         "num-slides-md": "3.6",
         "num-slides-lg": "4",
@@ -914,7 +924,7 @@
         "tabs_VFL3Cm": {
           "type": "tabs",
           "settings": {
-            "image": "shopify:\/\/shop_images\/desktop-min.png",
+            "image": "shopify://shop_images/desktop-min.png",
             "sub_buttonText": "Mascara, Eyeliner, Lipstick, Foundation",
             "collection": "lamel",
             "collection2": "makeup-revolution",
@@ -925,7 +935,7 @@
         "tabs_A4GHwz": {
           "type": "tabs",
           "settings": {
-            "image": "shopify:\/\/shop_images\/desktop_3_-min.png",
+            "image": "shopify://shop_images/desktop_3_-min.png",
             "sub_buttonText": "Lamel, Makeup Revolution Beauty, Milani, Eveline",
             "collection": "pink-flash",
             "collection2": "makeup-revolution",
@@ -936,7 +946,7 @@
         "tabs_TwJic4": {
           "type": "tabs",
           "settings": {
-            "image": "shopify:\/\/shop_images\/desktop_2_-min.png",
+            "image": "shopify://shop_images/desktop_2_-min.png",
             "sub_buttonText": "Mascara, Eyeliner, Lipstick, Foundation",
             "collection": "hok-makeup-x-sweetons",
             "collection2": "makeup-revolution",
@@ -947,7 +957,7 @@
         "tabs_iyFPrA": {
           "type": "tabs",
           "settings": {
-            "image": "shopify:\/\/shop_images\/desktop_1_-min.png",
+            "image": "shopify://shop_images/desktop_1_-min.png",
             "sub_buttonText": "Lamel, Makeup Reolution Beauty, Milani, Eveline",
             "collection": "body-care",
             "collection2": "makeup-revolution",
@@ -978,9 +988,9 @@
     "foundation_quiz_WGJbtW": {
       "type": "foundation-quiz",
       "settings": {
-        "product_img": "shopify:\/\/shop_images\/foundation-product.png",
-        "bg-image": "shopify:\/\/shop_images\/image_1e716adb-7c75-4498-8155-bf6c8975783a.png",
-        "url": "https:\/\/hokmakeup.com\/apps\/gbq\/quiz\/1"
+        "product_img": "shopify://shop_images/foundation-product.png",
+        "bg-image": "shopify://shop_images/image_1e716adb-7c75-4498-8155-bf6c8975783a.png",
+        "url": "https://hokmakeup.com/apps/gbq/quiz/1"
       }
     },
     "skincare_finds_y4zp7A": {
@@ -989,9 +999,9 @@
         "cards_U6w39h": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/wet-n-wild",
-            "image": "shopify:\/\/shop_images\/Wet_n_Wild_D.jpg",
-            "logo": "shopify:\/\/shop_images\/imagewet.png",
+            "url": "shopify://collections/wet-n-wild",
+            "image": "shopify://shop_images/Wet_n_Wild_D.jpg",
+            "logo": "shopify://shop_images/imagewet.png",
             "title": "Upto 60% Off",
             "subtitle": "Where Wild Meets Wow"
           }
@@ -999,9 +1009,9 @@
         "cards_KXFKbp": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/ln-pro",
-            "image": "shopify:\/\/shop_images\/LN_Pro_D_c15c5f30-552c-4d93-9212-e6e9ba6ccc6a.jpg",
-            "logo": "shopify:\/\/shop_images\/LN_pro_logo.png",
+            "url": "shopify://collections/ln-pro",
+            "image": "shopify://shop_images/LN_Pro_D_c15c5f30-552c-4d93-9212-e6e9ba6ccc6a.jpg",
+            "logo": "shopify://shop_images/LN_pro_logo.png",
             "title": "Upto 50% Off",
             "subtitle": "Studio-Ready. Street-Approved."
           }
@@ -1009,9 +1019,9 @@
         "cards_7LxEmb": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/lord-and-berry",
-            "image": "shopify:\/\/shop_images\/Lord_n_Berry_D.jpg",
-            "logo": "shopify:\/\/shop_images\/imagelord.png",
+            "url": "shopify://collections/lord-and-berry",
+            "image": "shopify://shop_images/Lord_n_Berry_D.jpg",
+            "logo": "shopify://shop_images/imagelord.png",
             "title": "Flat 20% Off",
             "subtitle": "Modern Beauty, Milan Born."
           }
@@ -1019,9 +1029,9 @@
         "cards_7KdQQA": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/absolute-new-york",
-            "image": "shopify:\/\/shop_images\/Absolute_D.jpg",
-            "logo": "shopify:\/\/shop_images\/imageabsolute.png",
+            "url": "shopify://collections/absolute-new-york",
+            "image": "shopify://shop_images/Absolute_D.jpg",
+            "logo": "shopify://shop_images/imageabsolute.png",
             "title": "Flat 20% Off",
             "subtitle": "All In. All Day. Absolute."
           }
@@ -1041,7 +1051,7 @@
         "background_color": "#ffffff",
         "coll-title": "big brands under budget",
         "button-title": "View All",
-        "button-url": "shopify:\/\/pages\/brands",
+        "button-url": "shopify://pages/brands",
         "slide_speed": 500,
         "showCenter": false,
         "showFreeScroll": false,
@@ -1068,64 +1078,64 @@
         "content_6dkPHh": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MUR-_D_-min.png",
-            "url": "shopify:\/\/collections\/makeup-revolution",
+            "image": "shopify://shop_images/MUR-_D_-min.png",
+            "url": "shopify://collections/makeup-revolution",
             "title": "Upto 50% off",
-            "subtitle": "<p>In <strong>42<\/strong> carts right now.<\/p>"
+            "subtitle": "<p>In <strong>42</strong> carts right now.</p>"
           }
         },
         "content_RcNRVW": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MILANI-_D_-min.png",
-            "url": "shopify:\/\/collections\/milani",
+            "image": "shopify://shop_images/MILANI-_D_-min.png",
+            "url": "shopify://collections/milani",
             "title": "Upto 50% off",
-            "subtitle": "<p>Only <strong>9<\/strong> left—don’t miss this travel must-have!<\/p>"
+            "subtitle": "<p>Only <strong>9</strong> left—don’t miss this travel must-have!</p>"
           }
         },
         "content_QyDKU6": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LA-GIRL-_D_-min.png",
-            "url": "shopify:\/\/collections\/la-girl",
+            "image": "shopify://shop_images/LA-GIRL-_D_-min.png",
+            "url": "shopify://collections/la-girl",
             "title": "Upto 30% off",
-            "subtitle": "<p>Trending this week—selling every hour!<\/p>"
+            "subtitle": "<p>Trending this week—selling every hour!</p>"
           }
         },
         "content_rGLbeT": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Lamel-_D_-min.png",
-            "url": "shopify:\/\/products\/lamel-glam-eyeshadow-palette-sparkle",
+            "image": "shopify://shop_images/Lamel-_D_-min.png",
+            "url": "shopify://products/lamel-glam-eyeshadow-palette-sparkle",
             "title": "Upto 50% off",
-            "subtitle": "<p>Last <strong>6<\/strong> palettes remaining!<\/p>"
+            "subtitle": "<p>Last <strong>6</strong> palettes remaining!</p>"
           }
         },
         "content_8XFtBg": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/EVELINE-_D_-min.png",
-            "url": "shopify:\/\/collections\/eveline-cosmetics",
+            "image": "shopify://shop_images/EVELINE-_D_-min.png",
+            "url": "shopify://collections/eveline-cosmetics",
             "title": "Upto 30% off",
-            "subtitle": "<p>Loved by lash lovers—almost sold out!<\/p>"
+            "subtitle": "<p>Loved by lash lovers—almost sold out!</p>"
           }
         },
         "content_DDHHYk": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LN-PRO-_D_-min.png",
-            "url": "shopify:\/\/collections\/ln-pro",
+            "image": "shopify://shop_images/LN-PRO-_D_-min.png",
+            "url": "shopify://collections/ln-pro",
             "title": "Upto 50% off",
-            "subtitle": "<p>Only a few shades left!<\/p>"
+            "subtitle": "<p>Only a few shades left!</p>"
           }
         },
         "content_7cU93G": {
           "type": "content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/BH-COSMETICS-_D_-min.png",
-            "url": "shopify:\/\/collections\/bh-cosmetics",
+            "image": "shopify://shop_images/BH-COSMETICS-_D_-min.png",
+            "url": "shopify://collections/bh-cosmetics",
             "title": "Upto 50% off",
-            "subtitle": "<p>Fan favorite—low stock alert!<\/p>"
+            "subtitle": "<p>Fan favorite—low stock alert!</p>"
           }
         }
       },
@@ -1143,7 +1153,7 @@
         "background_color": "#ffffff",
         "coll-title": "this week’s best finds",
         "button-title": "View All",
-        "button-url": "shopify:\/\/pages\/brands",
+        "button-url": "shopify://pages/brands",
         "slide_speed": 500,
         "showCenter": false,
         "showFreeScroll": false,
@@ -1168,7 +1178,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<div class=\"container\">\n<div class=\"carousel-section-title-wrapper\" style=\"padding-top:2px\">\n        <p>Budget buys for you\n        <\/p>\n      <\/div>\n<\/div>",
+        "custom_liquid": "<div class=\"container\">\n<div class=\"carousel-section-title-wrapper\" style=\"padding-top:2px\">\n        <p>Budget buys for you\n        </p>\n      </div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 0
@@ -1180,9 +1190,9 @@
         "banner_media_AYLkjW": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/lipstick",
+            "banner-url": "shopify://collections/lipstick",
             "banner-overlay-color": "#71161c",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Lipstick_D_4f77685e-6546-4d21-85ca-75a128987945.jpg",
+            "banner-image-desktop": "shopify://shop_images/Lipstick_D_4f77685e-6546-4d21-85ca-75a128987945.jpg",
             "overlay-text": "Lipstick",
             "banner-text": "Under ₹199"
           }
@@ -1190,9 +1200,9 @@
         "banner_media_bkyz7k": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/eyeliner",
+            "banner-url": "shopify://collections/eyeliner",
             "banner-overlay-color": "#804457",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeliner_D_4fb24a8e-647e-4e53-9b84-ab30444f6314.jpg",
+            "banner-image-desktop": "shopify://shop_images/Eyeliner_D_4fb24a8e-647e-4e53-9b84-ab30444f6314.jpg",
             "overlay-text": "Eyeliner",
             "banner-text": "Under ₹299"
           }
@@ -1200,9 +1210,9 @@
         "banner_media_F8xchf": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/blush",
+            "banner-url": "shopify://collections/blush",
             "banner-overlay-color": "#f26255",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Blush_D_c5659078-d0ea-4b45-8fe5-966029551833.jpg",
+            "banner-image-desktop": "shopify://shop_images/Blush_D_c5659078-d0ea-4b45-8fe5-966029551833.jpg",
             "overlay-text": "Blush",
             "banner-text": "Under ₹199"
           }
@@ -1210,9 +1220,9 @@
         "banner_media_peXxkH": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/blush-up-to-70-off",
+            "banner-url": "shopify://collections/blush-up-to-70-off",
             "banner-overlay-color": "#c19049",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Highlighter_D_3233442c-981e-4a0a-bdc6-7fbf6a1aebf3.jpg",
+            "banner-image-desktop": "shopify://shop_images/Highlighter_D_3233442c-981e-4a0a-bdc6-7fbf6a1aebf3.jpg",
             "overlay-text": "Highlighter",
             "banner-text": "Under ₹299"
           }
@@ -1220,9 +1230,9 @@
         "banner_media_8cC4V4": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/mascara",
+            "banner-url": "shopify://collections/mascara",
             "banner-overlay-color": "#3b2dc1",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Mascara_D_c9de5bef-cee0-4b00-bb77-c8273a3bbced.jpg",
+            "banner-image-desktop": "shopify://shop_images/Mascara_D_c9de5bef-cee0-4b00-bb77-c8273a3bbced.jpg",
             "overlay-text": "Mascara",
             "banner-text": "Under ₹199"
           }
@@ -1230,9 +1240,9 @@
         "banner_media_9cMBML": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/eyeshadow",
+            "banner-url": "shopify://collections/eyeshadow",
             "banner-overlay-color": "#f8b64b",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Eyeshadow_D_a38b9dd0-57c1-41e7-9c72-90170affd5ca.jpg",
+            "banner-image-desktop": "shopify://shop_images/Eyeshadow_D_a38b9dd0-57c1-41e7-9c72-90170affd5ca.jpg",
             "overlay-text": "Eyeshadow",
             "banner-text": "Under ₹299"
           }
@@ -1240,9 +1250,9 @@
         "banner_media_NcidUp": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/foundation",
+            "banner-url": "shopify://collections/foundation",
             "banner-overlay-color": "#dba580",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Foundation_D_85c9a799-12c3-4e0f-9f63-61cefa7fbc3d.jpg",
+            "banner-image-desktop": "shopify://shop_images/Foundation_D_85c9a799-12c3-4e0f-9f63-61cefa7fbc3d.jpg",
             "overlay-text": "Foundation",
             "banner-text": "Under ₹199"
           }
@@ -1250,9 +1260,9 @@
         "banner_media_yywNAK": {
           "type": "banner-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/concealer",
+            "banner-url": "shopify://collections/concealer",
             "banner-overlay-color": "#733c09",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Concealer_D_17a6f4ca-8a1c-4156-ae62-09c063121809.jpg",
+            "banner-image-desktop": "shopify://shop_images/Concealer_D_17a6f4ca-8a1c-4156-ae62-09c063121809.jpg",
             "overlay-text": "Concealer",
             "banner-text": "Under ₹299"
           }
@@ -1285,8 +1295,8 @@
           "settings": {
             "colors": "#f7efd8",
             "product": "milani-lip-fetish-fantasy-duo",
-            "image": "shopify:\/\/shop_images\/Milani_D.jpg",
-            "brand_logo": "shopify:\/\/shop_images\/milani-logo.png",
+            "image": "shopify://shop_images/Milani_D.jpg",
+            "brand_logo": "shopify://shop_images/milani-logo.png",
             "title": ""
           }
         },
@@ -1295,8 +1305,8 @@
           "settings": {
             "colors": "#fff3f5",
             "product": "makeup-revolution-reloaded-palette-combo-hypnotic-red-alert-velvet-rose",
-            "image": "shopify:\/\/shop_images\/MUR_D_b00afe54-c068-4b43-938d-d76864de5ad8.jpg",
-            "brand_logo": "shopify:\/\/shop_images\/black_1.png",
+            "image": "shopify://shop_images/MUR_D_b00afe54-c068-4b43-938d-d76864de5ad8.jpg",
+            "brand_logo": "shopify://shop_images/black_1.png",
             "title": ""
           }
         },
@@ -1305,8 +1315,8 @@
           "settings": {
             "colors": "#fdc0d0",
             "product": "i-heart-revolution-tropical-caramel-bath-body-gift-set",
-            "image": "shopify:\/\/shop_images\/I_heart_D_b2359b84-06b6-4d34-81ca-f12aa8b45707.jpg",
-            "brand_logo": "shopify:\/\/shop_images\/imagelord_d55d4965-973b-442d-8af6-df3bfc536bd3.png",
+            "image": "shopify://shop_images/I_heart_D_b2359b84-06b6-4d34-81ca-f12aa8b45707.jpg",
+            "brand_logo": "shopify://shop_images/imagelord_d55d4965-973b-442d-8af6-df3bfc536bd3.png",
             "title": ""
           }
         }
@@ -1331,9 +1341,9 @@
         "video_media_VFDMhM": {
           "type": "video-media",
           "settings": {
-            "banner-url": "shopify:\/\/pages\/hok-rewards",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Hok Rewards- Desktop_0a4c8ce7-85f4-47c1-9e34-8adc8460ad68.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Hok Rewards Mobile-New.mp4",
+            "banner-url": "shopify://pages/hok-rewards",
+            "banner-video-desktop": "shopify://files/videos/Hok Rewards- Desktop_0a4c8ce7-85f4-47c1-9e34-8adc8460ad68.mp4",
+            "banner-video-mobile": "shopify://files/videos/Hok Rewards Mobile-New.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1344,6 +1354,7 @@
       "block_order": [
         "video_media_VFDMhM"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "seo_text": "",
@@ -1377,7 +1388,6 @@
     },
     "floating_nav_zXYbbx": {
       "type": "floating-nav",
-      "disabled": true,
       "settings": {
         "menu": "main-menu"
       }

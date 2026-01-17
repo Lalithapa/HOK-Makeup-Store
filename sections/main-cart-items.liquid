@@ -79,6 +79,7 @@
 
               <tbody>
                 {%- for item in cart.items -%}
+                  {% if  item.final_price > 100 %}
                   <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                     <td class="cart-item__media">
                       {% if item.image %}
@@ -169,6 +170,7 @@
                           </li>
                         {%- endfor -%}
                       </ul>
+                      <div class="wishlist-engine-cart" data-product_id="{{ item.product.id }}" data-variant_id="{{ item.product.selected_or_first_available_variant.id }}" data-line="{{ item.index | plus: 1 }}">Save For Later</div>
                     </td>
 
                     <td class="cart-item__totals right medium-hide large-up-hide">
@@ -430,6 +432,7 @@
                       </div>
                     </td>
                   </tr>
+                  {% endif %}
                 {%- endfor -%}
               </tbody>
             </table>

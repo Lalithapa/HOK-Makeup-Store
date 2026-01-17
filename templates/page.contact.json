@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -16,8 +25,8 @@
         ".field {font-family: \"Sweet Sans Pro Regular\";}"
       ],
       "settings": {
-        "heading": "<strong>GET IN TOUCH<\/strong>",
-        "sub_heading": "<h3>Hey! we’ve got your back. We are at your service in case of any query or issues you may contact us from Monday to Friday, 10 am to 5 pm.<\/h3><h3>Connect with us : <strong>+91 9810245261<\/strong><\/h3><h3>Reach out at : <strong>support@hokmakeup.com<\/strong><\/h3><h3><\/h3><h3>Report an issue<strong> -<\/strong><\/h3>",
+        "heading": "<strong>GET IN TOUCH</strong>",
+        "sub_heading": "<h3>Hey! we’ve got your back. We are at your service in case of any query or issues you may contact us from Monday to Friday, 10 am to 5 pm.</h3><h3>Connect with us : <strong>+91 9810245261</strong></h3><h3>Reach out at : <strong>support@hokmakeup.com</strong></h3><h3></h3><h3>Report an issue<strong> -</strong></h3>",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
         "padding_top": 36,

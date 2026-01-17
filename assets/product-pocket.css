@@ -113,10 +113,22 @@
     justify-content: center;
     align-items: center;
   }
-.b-product_promo_tile-content{display:flex;flex-direction:column;gap:12px;width:100%;height:254px}
+.b-product_promo_tile-content{
+  display:flex;
+  flex-direction:column;
+  gap:12px;width:100%;
+  height:254px;
+  padding-top: 1rem;
+}
 #skincare-container .b-product_promo_tile-content{
   padding-top: 0.4rem;
   height: 230px;
+}
+.AirReviews-Widget .AirReviews-StarRatingWrapper {
+  align-items: baseline !important;
+}
+.AirReviews-Widget .AirReviews-StarRatingWrapper .AirReviews-StarRate--Count {
+    font-size: 12px;
 }
 .swiper-slide[product_slider="true"]{width:310px;}.b-product_promo_tile-content .rating{min-height:16px}.star-rating{--percent: calc(var(--rating) / 5 * 100%);display:inline-block;font-size:16px;line-height:16px}.star-rating.product{padding-bottom:.8rem}.star-rating:before{content:"\2605\2605\2605\2605\2605";letter-spacing:0;background:linear-gradient(90deg,var(--star-background) var(--percent),var(--star-color) var(--percent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:#a9a9a929}.b-product_price-value{color:#212529;font-weight: 700;font-size:17px;line-height:normal;text-transform:capitalize;white-space:nowrap}.b-product_price-value.rack-rate{color:#686565;font-weight:400;text-decoration:line-through;font-size: 15px;}.discount_label{color:#E33F75;font-weight:800;font-size:14px;position:relative;white-space:nowrap;left:4px}.swatch.variantHandler{display:flex;max-width:100%;position:relative;overflow:visible auto;padding:3px;}.main_product_swatches .swatch.variantHandler{max-width:100%;margin:0}.swatch-slide-wrapper{column-gap:8px}.swatch-slide-wrapper .swatch-element{width:auto}.swatch.variantHandler.navigationArrow{margin:0 auto 16px}.swatch.variantHandler .swiper-wrapper{padding:3px 2px 2px}.swatch.variantHandler input{display:none}
 .swatch-picker{
@@ -825,7 +837,7 @@ line-height: 20px; /* 142.857% */
       .b-product_promo_vendor-name_link {
         /* font-size: 14px; */
         line-height: 20px;
-        height: 38px ;
+        height: 38px;
       }
       .grid__item .b-product_price-value{
         font-size: 16px;

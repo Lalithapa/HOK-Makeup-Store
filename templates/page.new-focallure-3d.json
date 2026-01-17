@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -27,8 +36,8 @@
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
         "shradhha_link": "#",
-        "image": "shopify:\/\/shop_images\/Sticker_1.png",
-        "image_mobile": "shopify:\/\/shop_images\/Sticker_1.png"
+        "image": "shopify://shop_images/Sticker_1.png",
+        "image_mobile": "shopify://shop_images/Sticker_1.png"
       }
     },
     "single_banner_bdVmqF": {
@@ -39,9 +48,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/1_1_bcff3e85-32e4-458a-bf10-6520fbd2a2a6.png",
-        "image_mobile": "shopify:\/\/shop_images\/1_1_bcff3e85-32e4-458a-bf10-6520fbd2a2a6.png"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/1_1_bcff3e85-32e4-458a-bf10-6520fbd2a2a6.png",
+        "image_mobile": "shopify://shop_images/1_1_bcff3e85-32e4-458a-bf10-6520fbd2a2a6.png"
       }
     },
     "single_banner_X6x3Pr": {
@@ -53,9 +62,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/Strip-1.gif",
-        "image_mobile": "shopify:\/\/shop_images\/Strip-1.gif"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/Strip-1.gif",
+        "image_mobile": "shopify://shop_images/Strip-1.gif"
       }
     },
     "single_banner_JdLDyM": {
@@ -66,9 +75,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/2_65f92c0c-ca34-46db-bc5b-3b1623f9aeb2.gif",
-        "image_mobile": "shopify:\/\/shop_images\/2_65f92c0c-ca34-46db-bc5b-3b1623f9aeb2.gif"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/2_65f92c0c-ca34-46db-bc5b-3b1623f9aeb2.gif",
+        "image_mobile": "shopify://shop_images/2_65f92c0c-ca34-46db-bc5b-3b1623f9aeb2.gif"
       }
     },
     "single_banner_hxGbFH": {
@@ -79,9 +88,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/3_1_b5ad11ea-3806-4f8e-9c4e-4cd92e301b7a.png",
-        "image_mobile": "shopify:\/\/shop_images\/3_1_b5ad11ea-3806-4f8e-9c4e-4cd92e301b7a.png"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/3_1_b5ad11ea-3806-4f8e-9c4e-4cd92e301b7a.png",
+        "image_mobile": "shopify://shop_images/3_1_b5ad11ea-3806-4f8e-9c4e-4cd92e301b7a.png"
       }
     },
     "single_banner_GLbCTF": {
@@ -92,9 +101,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/Strip-1.gif",
-        "image_mobile": "shopify:\/\/shop_images\/Strip-1.gif"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/Strip-1.gif",
+        "image_mobile": "shopify://shop_images/Strip-1.gif"
       }
     },
     "single_banner_b67GJt": {
@@ -105,9 +114,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/focallure-eyeshadow-pencil",
-        "image": "shopify:\/\/shop_images\/unnamed.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/unnamed.jpg"
+        "shradhha_link": "shopify://products/focallure-eyeshadow-pencil",
+        "image": "shopify://shop_images/unnamed.jpg",
+        "image_mobile": "shopify://shop_images/unnamed.jpg"
       }
     },
     "single_banner_hbDqki": {
@@ -118,9 +127,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/focallure-diamond-skin-setting-spray",
-        "image": "shopify:\/\/shop_images\/4.2.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/4.2.jpg"
+        "shradhha_link": "shopify://products/focallure-diamond-skin-setting-spray",
+        "image": "shopify://shop_images/4.2.jpg",
+        "image_mobile": "shopify://shop_images/4.2.jpg"
       }
     },
     "single_banner_wMTrzH": {
@@ -131,9 +140,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/Strip-1.gif",
-        "image_mobile": "shopify:\/\/shop_images\/Strip-1.gif"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/Strip-1.gif",
+        "image_mobile": "shopify://shop_images/Strip-1.gif"
       }
     },
     "single_banner_bpg9cT": {
@@ -144,9 +153,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/5_1_d703e5fb-e11e-4a4b-8f1d-27ec18edb9c6.png",
-        "image_mobile": "shopify:\/\/shop_images\/5_1_d703e5fb-e11e-4a4b-8f1d-27ec18edb9c6.png"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/5_1_d703e5fb-e11e-4a4b-8f1d-27ec18edb9c6.png",
+        "image_mobile": "shopify://shop_images/5_1_d703e5fb-e11e-4a4b-8f1d-27ec18edb9c6.png"
       }
     },
     "single_banner_8rEixm": {
@@ -157,9 +166,9 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
-        "shradhha_link": "shopify:\/\/products\/blurmax-pore-minimize-primer",
-        "image": "shopify:\/\/shop_images\/6_1_c736043e-77a0-462e-8b74-f9d05eba4fdf.png",
-        "image_mobile": "shopify:\/\/shop_images\/6_1_c736043e-77a0-462e-8b74-f9d05eba4fdf.png"
+        "shradhha_link": "shopify://products/blurmax-pore-minimize-primer",
+        "image": "shopify://shop_images/6_1_c736043e-77a0-462e-8b74-f9d05eba4fdf.png",
+        "image_mobile": "shopify://shop_images/6_1_c736043e-77a0-462e-8b74-f9d05eba4fdf.png"
       }
     }
   },

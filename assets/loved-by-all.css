@@ -12,11 +12,11 @@
   padding: unset;
   width: 47px;
   height: 47px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-weight: 300;
   font-size: 28px;
   line-height: 0;
-  padding-bottom: 8px;
+  /* padding-bottom: 8px; */
   background: transparent;
 }
 
@@ -26,7 +26,8 @@
 }
 
 .loved-by-all-section .wrapper-info {
-  min-width: 171px;
+  /* min-width: 171px; */
+  flex:1;
 }
 
 .loved-by-all-section .section-title-paw-paw {

@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
+    "logo": "shopify://shop_images/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
     "logo_width": 120,
-    "favicon": "shopify:\/\/shop_images\/chatty_HOK_Fav_Icon_1_-_512x512_1.png",
+    "favicon": "shopify://shop_images/chatty_HOK_Fav_Icon_1_-_512x512_1.png",
     "type_header_font": "fira_sans_n8",
     "heading_scale": 100,
     "type_body_font": "mono",
@@ -99,7 +108,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -136,34 +145,63 @@
     "content_for_index": [],
     "blocks": {
       "1232542678405107163": {
-        "type": "shopify:\/\/apps\/instafeed\/blocks\/head-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
         "settings": {}
       },
+      "14198427981142892921": {
+        "type": "shopify://apps/se-wishlist-engine/blocks/app-embed/8f7c0857-8e71-463d-a168-8e133094753b",
+        "disabled": false,
+        "settings": {
+          "wishlist_unfill_icon": "",
+          "wishlist_fill_icon": ""
+        }
+      },
+      "14710238943034738919": {
+        "type": "shopify://apps/air-product-reviews/blocks/app-embed/c4e1e9ca-4d46-4e76-bc39-7e42417cb327",
+        "disabled": false,
+        "settings": {
+          "air_reviews_json_ld_v2": "{\n\"@context\": \"http://schema.org\",\n\"@type\": \"Product\",\n\"name\": {{ product.title | json }},\n\"description\": {{ product.description | escape | truncate: 150 | json }},\n\"image\": {{ product.featured_image | json }},\n\"aggregateRating\": {\n  \"@type\": \"AggregateRating\",\n  \"ratingValue\": {{ product.metafields.reviews.rating.value.rating | default: product.metafields.air_reviews_product.review_avg | json }},\n  \"bestRating\": {{ product.metafields.reviews.rating.value.scale_max | json }},\n  \"reviewCount\": {{ product.metafields.air_reviews_product.review_count | json }}\n }{% if shop.metafields.air_reviews_has_ugc_content.data.value == true %}, \n  \"review\":[{% assign reviewsData = product.metafields.air_reviews_product.data.value.reviews %}\n  {% for review in reviewsData limit: 10 %}\n    {\n      \"@type\": \"Review\",\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": {{ review.firstName | json }}\n      },\n      \"reviewRating\": {\n          \"@type\": \"Rating\",\n          \"bestRating\": {{ product.metafields.reviews.rating.value.scale_max | json }},\n          \"ratingValue\": {{ review.rate | json }},\n          \"worstRating\": {{ product.metafields.reviews.rating.value.scale_min | json }}\n      },\n      \"reviewBody\": {{ review.content | json }},\n      \"datePublished\": {{ review.createdAt | date: \"%Y-%m-%d %H:%M:%S\" | json }}\n    }{% unless forloop.last %},{% endunless %} \n  {% endfor %}]{% endif %}\n}"
+        }
+      },
+      "6386671502852046031": {
+        "type": "shopify://apps/reelcart/blocks/floating-video/8f2b089e-2cd0-45ca-b34e-c8bf9d0cf450",
+        "disabled": false,
+        "settings": {
+          "selected_campaign_title": "",
+          "initial_position": "bottom-right",
+          "position_offset": "40px 40px"
+        }
+      },
+      "16274974966654683533": {
+        "type": "shopify://apps/yourtoken-loyalty-rewards/blocks/app-embed/28422318-8bfb-498f-ae3c-12aa490ca976",
+        "disabled": true,
+        "settings": {}
+      },
       "36909921495456953": {
-        "type": "shopify:\/\/apps\/ai-speed\/blocks\/ai-speed\/f9e4b8d0-6523-47d0-b77a-783072cc6552",
+        "type": "shopify://apps/ai-speed/blocks/ai-speed/f9e4b8d0-6523-47d0-b77a-783072cc6552",
         "disabled": false,
         "settings": {
           "enable_optimization": true,
-          "debug_mode": false,
+          "debug_mode": true,
           "excluded_scripts": "preview-bar.js,analytics.js,important-script.js",
           "image_threshold": 30
         }
       },
-      "15796953133730294439": {
-        "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.embed.socialshopwave-helper\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-        "disabled": false,
-        "settings": {
-          "disable_shadow_root_globally": false
-        }
-      },
-      "4976129024724438625": {
-        "type": "shopify:\/\/apps\/smart-seo\/blocks\/brokenLinkDetection\/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+      "15623156175785154009": {
+        "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
         "disabled": false,
         "settings": {}
       },
-      "6406956604159796213": {
-        "type": "shopify:\/\/apps\/smart-seo\/blocks\/smartseo\/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+      "5149645339031002760": {
+        "type": "shopify://apps/minmaxify-order-limits/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": true,
+        "settings": {
+          "async": false
+        }
+      },
+      "17368511000352060744": {
+        "type": "shopify://apps/goaffpro-affiliate-marketing/blocks/goaffpro-embedded-pixel/2f4d802b-86c2-47e4-8096-ae1aa3efbab2",
         "disabled": false,
         "settings": {}
       }
@@ -393,7 +431,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
@@ -431,7 +469,9 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".gw-rv-listing-average-reviews .gw-rv-avg-rating[aria-label=\"0 out of 5 ratings\"] {display: none !important;}"
+      ".gw-rv-listing-average-reviews .gw-rv-avg-rating[aria-label=\"0 out of 5 ratings\"] {display: none !important;}",
+      ".content .section.hero {display: block !important;}",
+      ".d-flex.container2.h6 {display: none !important;}"
     ]
   }
 }

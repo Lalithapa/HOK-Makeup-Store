@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -18,41 +27,41 @@
         "image_A9HXLk": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Face_care.png",
-            "collection_link": "\/collections\/face-care",
-            "title": "Face Care"
+            "image": "shopify://shop_images/Face_care.png",
+            "collection_link": "/collections/face-care",
+            "title": ""
           }
         },
         "image_jdMJ94": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Lip_care.png",
-            "collection_link": "\/collections\/skin-lip-care",
-            "title": "Lip care"
+            "image": "shopify://shop_images/Lip_care.png",
+            "collection_link": "/collections/skin-lip-care",
+            "title": ""
           }
         },
         "image_k3UaWH": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Eye_care.png",
-            "collection_link": "\/collections\/eye-care",
-            "title": "Eye care"
+            "image": "shopify://shop_images/Eye_care.png",
+            "collection_link": "/collections/eye-care",
+            "title": ""
           }
         },
         "image_V3J4xp": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hair_care.png",
-            "collection_link": "\/collections\/hair-care",
-            "title": "Hair care"
+            "image": "shopify://shop_images/hair_care.png",
+            "collection_link": "/collections/hair-care",
+            "title": ""
           }
         },
         "image_fLaQhW": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_care.png",
-            "collection_link": "\/collections\/body-care",
-            "title": "Body Care"
+            "image": "shopify://shop_images/Body_care.png",
+            "collection_link": "/collections/body-care",
+            "title": ""
           }
         }
       },
@@ -75,11 +84,17 @@
       "settings": {
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "background_color": "#fbfaf9",
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "heading_text": "",
         "shradhha_link": "",
-        "image": "shopify:\/\/shop_images\/Frame_37689.png",
-        "image_mobile": "shopify:\/\/shop_images\/Frame_37690.png"
+        "image": "shopify://shop_images/Frame_37689.png",
+        "image_mobile": "shopify://shop_images/Frame_37690.png"
       }
     },
     "main_hero_banner_cMYFja": {
@@ -88,8 +103,8 @@
         "image_mq66Ky": {
           "type": "image",
           "settings": {
-            "banner-image-desktop": "shopify:\/\/shop_images\/Frame_37698_1.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/780_x_600_63130284-6e4f-4968-8aeb-b0d13380fda3.jpg",
+            "banner-image-desktop": "shopify://shop_images/Frame_37698_1.jpg",
+            "banner-image-mobile": "shopify://shop_images/780_x_600_63130284-6e4f-4968-8aeb-b0d13380fda3.jpg",
             "banner-url": "",
             "show-cta-on-desktop": true,
             "btn1-url": "",
@@ -135,8 +150,8 @@
         "padding_bottom_desktop": 36,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 36,
-        "image": "shopify:\/\/shop_images\/Frame_desk.png",
-        "image-mobile": "shopify:\/\/shop_images\/Frame_mobile_1.jpg"
+        "image": "shopify://shop_images/Frame_desk.png",
+        "image-mobile": "shopify://shop_images/Frame_mobile_1.jpg"
       }
     },
     "multi_functional_container_CMGrAV": {
@@ -145,9 +160,9 @@
         "image_media_9X4abb": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/skincare-new-arrivals",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Sticker_270X270_6957499e-e36d-4c9f-86a1-42d245dd83e2.png",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Sticker_134X134_34c8365d-18b5-4fbb-9405-bf7aaf625ec2.png",
+            "banner-url": "shopify://collections/skincare-new-arrivals",
+            "banner-image-desktop": "shopify://shop_images/Sticker_270X270_6957499e-e36d-4c9f-86a1-42d245dd83e2.png",
+            "banner-image-mobile": "shopify://shop_images/Sticker_134X134_34c8365d-18b5-4fbb-9405-bf7aaf625ec2.png",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -157,9 +172,9 @@
         "image_media_WwFCR7": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/sunscreen-skincare",
-            "banner-image-desktop": "shopify:\/\/shop_images\/1_efd036ca-a013-46b4-bad7-76c60d95f83a.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/1_82067a8d-7b81-42c8-b7d0-3a0d346fc030.jpg",
+            "banner-url": "shopify://collections/sunscreen-skincare",
+            "banner-image-desktop": "shopify://shop_images/1_efd036ca-a013-46b4-bad7-76c60d95f83a.jpg",
+            "banner-image-mobile": "shopify://shop_images/1_82067a8d-7b81-42c8-b7d0-3a0d346fc030.jpg",
             "cta-text": "Sunscreen",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -169,9 +184,9 @@
         "image_media_jqgBQF": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/nightcream-skincare",
-            "banner-image-desktop": "shopify:\/\/shop_images\/2_91a7c906-e3e0-4274-b7b1-f6ed822ad078.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/2_63ee8eaf-767b-4f1e-ad62-20519b654304.jpg",
+            "banner-url": "shopify://collections/nightcream-skincare",
+            "banner-image-desktop": "shopify://shop_images/2_91a7c906-e3e0-4274-b7b1-f6ed822ad078.jpg",
+            "banner-image-mobile": "shopify://shop_images/2_63ee8eaf-767b-4f1e-ad62-20519b654304.jpg",
             "cta-text": "Night Cream",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -181,9 +196,9 @@
         "image_media_c4j8hV": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/search?q=mask&options%5Bprefix%5D=last",
-            "banner-image-desktop": "shopify:\/\/shop_images\/3_2.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/3_3_153853d2-ebdf-4646-b2fd-97052fd0cc52.jpg",
+            "banner-url": "https://hokmakeup.com/search?q=mask&options%5Bprefix%5D=last",
+            "banner-image-desktop": "shopify://shop_images/3_2.jpg",
+            "banner-image-mobile": "shopify://shop_images/3_3_153853d2-ebdf-4646-b2fd-97052fd0cc52.jpg",
             "cta-text": "Masks & Peels",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -193,9 +208,9 @@
         "image_media_EgBKtJ": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/skin-lip-balm",
-            "banner-image-desktop": "shopify:\/\/shop_images\/4_b98ab7d8-a8bc-44de-a8b8-dfdca48e7396.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/4_746e17fe-c93a-45f4-a178-2c74eda74d88.jpg",
+            "banner-url": "https://hokmakeup.com/collections/skin-lip-balm",
+            "banner-image-desktop": "shopify://shop_images/4_b98ab7d8-a8bc-44de-a8b8-dfdca48e7396.jpg",
+            "banner-image-mobile": "shopify://shop_images/4_746e17fe-c93a-45f4-a178-2c74eda74d88.jpg",
             "cta-text": "Lip Care",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -205,9 +220,9 @@
         "image_media_gnTLDm": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/eye-serums",
-            "banner-image-desktop": "shopify:\/\/shop_images\/5_5e5c6f83-d3ed-4346-8112-151f0dd347fc.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/5_715d4e69-4116-4c9a-b12b-905222edc18d.jpg",
+            "banner-url": "https://hokmakeup.com/collections/eye-serums",
+            "banner-image-desktop": "shopify://shop_images/5_5e5c6f83-d3ed-4346-8112-151f0dd347fc.jpg",
+            "banner-image-mobile": "shopify://shop_images/5_715d4e69-4116-4c9a-b12b-905222edc18d.jpg",
             "cta-text": "Eye Care",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -217,9 +232,9 @@
         "image_media_fHAU4Q": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/serums-essence",
-            "banner-image-desktop": "shopify:\/\/shop_images\/6_8406e3fc-e7e4-4efe-9e8a-fc6a077c21d9.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/6_038e2e52-862c-4110-b9f2-af2ee349b472.jpg",
+            "banner-url": "https://hokmakeup.com/collections/serums-essence",
+            "banner-image-desktop": "shopify://shop_images/6_8406e3fc-e7e4-4efe-9e8a-fc6a077c21d9.jpg",
+            "banner-image-mobile": "shopify://shop_images/6_038e2e52-862c-4110-b9f2-af2ee349b472.jpg",
             "cta-text": "Face Serums",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -229,9 +244,9 @@
         "image_media_ngHMFQ": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/cleanser",
-            "banner-image-desktop": "shopify:\/\/shop_images\/7_32f3793b-9f48-43cc-892a-65a284ed3ddc.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/7_3f2da270-f001-465e-9e95-d04075265859.jpg",
+            "banner-url": "https://hokmakeup.com/collections/cleanser",
+            "banner-image-desktop": "shopify://shop_images/7_32f3793b-9f48-43cc-892a-65a284ed3ddc.jpg",
+            "banner-image-mobile": "shopify://shop_images/7_3f2da270-f001-465e-9e95-d04075265859.jpg",
             "cta-text": "Face Wash",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -241,9 +256,9 @@
         "image_media_VGKtJB": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/toners",
-            "banner-image-desktop": "shopify:\/\/shop_images\/9_812dfec4-2320-4702-9924-103ac5b7b38d.png",
-            "banner-image-mobile": "shopify:\/\/shop_images\/9_ecacb404-e2c5-4f80-b5ab-6cbd259f605d.png",
+            "banner-url": "https://hokmakeup.com/collections/toners",
+            "banner-image-desktop": "shopify://shop_images/9_812dfec4-2320-4702-9924-103ac5b7b38d.png",
+            "banner-image-mobile": "shopify://shop_images/9_ecacb404-e2c5-4f80-b5ab-6cbd259f605d.png",
             "cta-text": "Toner",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -253,9 +268,9 @@
         "image_media_PUnqYa": {
           "type": "image-media",
           "settings": {
-            "banner-url": "https:\/\/hokmakeup.com\/collections\/moisturizer-creams",
-            "banner-image-desktop": "shopify:\/\/shop_images\/8_f41ccbd0-eafa-4062-ad1d-e7bc750824a6.png",
-            "banner-image-mobile": "shopify:\/\/shop_images\/8_6909aa02-2785-4ce2-8848-0fa30d274433.png",
+            "banner-url": "https://hokmakeup.com/collections/moisturizer-creams",
+            "banner-image-desktop": "shopify://shop_images/8_f41ccbd0-eafa-4062-ad1d-e7bc750824a6.png",
+            "banner-image-mobile": "shopify://shop_images/8_6909aa02-2785-4ce2-8848-0fa30d274433.png",
             "cta-text": "Moisturiser",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -324,7 +339,7 @@
         "padding_bottom_desktop": 0,
         "padding_top_mobile": 10,
         "padding_bottom_mobile": 50,
-        "image-mobile": "shopify:\/\/shop_images\/Frame_37660.png"
+        "image-mobile": "shopify://shop_images/Frame_37660.png"
       }
     },
     "product_tabs_mobile_skin_care_LJwn3L": {
@@ -334,44 +349,44 @@
           "type": "image",
           "settings": {
             "collection": "skincare-acne",
-            "mobile_image": "shopify:\/\/shop_images\/Acne_f633eb23-cb9d-47c3-8dbe-71d8bbcb35ed.jpg",
+            "mobile_image": "shopify://shop_images/Acne_f633eb23-cb9d-47c3-8dbe-71d8bbcb35ed.jpg",
             "heading": "",
             "button_text": "",
             "title": "Acne",
-            "url": "shopify:\/\/collections\/skincare-acne"
+            "url": "shopify://collections/skincare-acne"
           }
         },
         "image_7yMAyh": {
           "type": "image",
           "settings": {
             "collection": "skincare-aging",
-            "mobile_image": "shopify:\/\/shop_images\/aging_518767a2-84fc-4b81-848d-2cb6a2f7d3fa.jpg",
+            "mobile_image": "shopify://shop_images/aging_518767a2-84fc-4b81-848d-2cb6a2f7d3fa.jpg",
             "heading": "",
             "button_text": "",
             "title": "Aging",
-            "url": "shopify:\/\/collections\/skincare-aging"
+            "url": "shopify://collections/skincare-aging"
           }
         },
         "image_3PATEc": {
           "type": "image",
           "settings": {
-            "collection": "skincare-hyperpigmentation",
-            "mobile_image": "shopify:\/\/shop_images\/Hyperpigmentation_eca38b44-c73b-4b1c-ad43-36f8e06076c1.jpg",
+            "collection": "hyperpigmentation-skincare",
+            "mobile_image": "shopify://shop_images/Hyperpigmentation_eca38b44-c73b-4b1c-ad43-36f8e06076c1.jpg",
             "heading": "",
             "button_text": "",
             "title": "Hyperpigmentation",
-            "url": "shopify:\/\/collections\/skincare-hyperpigmentation"
+            "url": "shopify://collections/skincare-hyperpigmentation"
           }
         },
         "image_Kw7VmR": {
           "type": "image",
           "settings": {
             "collection": "skincare-dull-skin",
-            "mobile_image": "shopify:\/\/shop_images\/Dull_Skin_d36b3d04-dd10-4c9a-aab7-0612ac94a37f.jpg",
+            "mobile_image": "shopify://shop_images/Dull_Skin_d36b3d04-dd10-4c9a-aab7-0612ac94a37f.jpg",
             "heading": "",
             "button_text": "",
             "title": "Dull Skin",
-            "url": "shopify:\/\/collections\/skincare-dull-skin"
+            "url": "shopify://collections/skincare-dull-skin"
           }
         },
         "image_RBaDDg": {
@@ -379,7 +394,7 @@
           "disabled": true,
           "settings": {
             "collection": "all-products",
-            "mobile_image": "shopify:\/\/shop_images\/Frame_37334.jpg",
+            "mobile_image": "shopify://shop_images/Frame_37334.jpg",
             "heading": "Is your skin craving hydration?",
             "button_text": "Fix Dry Skin",
             "title": "Dull skin",
@@ -414,39 +429,39 @@
           "type": "concern",
           "settings": {
             "concern_key": "Acne",
-            "image": "shopify:\/\/shop_images\/Acne.jpg",
+            "image": "shopify://shop_images/Acne.jpg",
             "image-text": "",
-            "button_link-image": "shopify:\/\/collections\/skincare-acne",
+            "button_link-image": "shopify://collections/skincare-acne",
             "button-url-text": "",
             "title": "Acne",
             "collection": "skincare-acne",
-            "button_link": "shopify:\/\/collections\/skincare-acne"
+            "button_link": "shopify://collections/skincare-acne"
           }
         },
         "concern_tTydn8": {
           "type": "concern",
           "settings": {
             "concern_key": "Aging",
-            "image": "shopify:\/\/shop_images\/aging.jpg",
+            "image": "shopify://shop_images/aging.jpg",
             "image-text": "",
-            "button_link-image": "shopify:\/\/collections\/skincare-aging",
+            "button_link-image": "shopify://collections/skincare-aging",
             "button-url-text": "",
             "title": "Aging",
             "collection": "skincare-aging",
-            "button_link": "shopify:\/\/collections\/skincare-aging"
+            "button_link": "shopify://collections/skincare-aging"
           }
         },
         "concern_jy8aJd": {
           "type": "concern",
           "settings": {
             "concern_key": "Hyperpigmentation",
-            "image": "shopify:\/\/shop_images\/Hyperpigmentation.jpg",
+            "image": "shopify://shop_images/Hyperpigmentation.jpg",
             "image-text": "",
-            "button_link-image": "shopify:\/\/collections\/skincare-hyperpigmentation",
+            "button_link-image": "shopify://collections/hyperpigmentation-skincare",
             "button-url-text": "",
             "title": "Hyperpigmentation",
-            "collection": "skincare-hyperpigmentation",
-            "button_link": "shopify:\/\/collections\/hyperpigmentation-skincare"
+            "collection": "hyperpigmentation-skincare",
+            "button_link": "shopify://collections/hyperpigmentation-skincare"
           }
         },
         "concern_aFGftR": {
@@ -454,9 +469,9 @@
           "disabled": true,
           "settings": {
             "concern_key": "Liquid Liner",
-            "image": "shopify:\/\/shop_images\/DR_PAW_PAW_HEADER_BANNER_MOBILE.jpg",
+            "image": "shopify://shop_images/DR_PAW_PAW_HEADER_BANNER_MOBILE.jpg",
             "image-text": "Is your skin craving hydration?",
-            "button_link-image": "shopify:\/\/collections\/3-949-offer",
+            "button_link-image": "shopify://collections/3-949-offer",
             "button-url-text": "Acne control",
             "title": "Liquid Liner",
             "collection": "all-collection-without-combo-new",
@@ -467,13 +482,13 @@
           "type": "concern",
           "settings": {
             "concern_key": "Dull Skin",
-            "image": "shopify:\/\/shop_images\/Dull_Skin.jpg",
+            "image": "shopify://shop_images/Dull_Skin.jpg",
             "image-text": "",
-            "button_link-image": "shopify:\/\/collections\/skincare-dull-skin",
+            "button_link-image": "shopify://collections/skincare-dull-skin",
             "button-url-text": "",
             "title": "Dull Skin",
             "collection": "skincare-dull-skin",
-            "button_link": "shopify:\/\/collections\/skincare-dull-skin"
+            "button_link": "shopify://collections/skincare-dull-skin"
           }
         }
       },
@@ -491,560 +506,6 @@
         "text-heading": "shop by concern"
       }
     },
-    "images_with_popup_skincare_7waxGF": {
-      "type": "images-with-popup-skincare",
-      "blocks": {
-        "review_bchmyh": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2025-05-06_at_16.14.58_1_25e00d98-fac5-4f47-a5c8-641d7bedf197.png",
-            "modal_title": "Eveline",
-            "modal_name-insta": "Vianca.janelle_",
-            "modal_text": "<p>“ tried the Eveline body lotion and I’m so impressed! It melts into the skin like a dream, leaving it soft, smooth, and glowy without any greasy feel. The scent is super fresh and subtleperfect for everyday wear.Honestly, it feels like a little spa moment in my daily routine Highly recommend if you’re looking for something hydrating but lightweight!”<\/p>",
-            "ern_points": "<p>earn<strong> 2565 <\/strong>pts <\/p>",
-            "product_choose": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
-            "show_popup": true
-          }
-        },
-        "review_VYh4eR": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/unnamed_6.png",
-            "modal_title": "",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "",
-            "ern_points": "<p>Earn 208 pts<\/p>",
-            "product_choose": "",
-            "show_popup": false
-          }
-        },
-        "review_ArKxnA": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_20250705_121024_409.jpg",
-            "modal_title": "Eveline",
-            "modal_name-insta": "Anushkamathur29",
-            "modal_text": "<p>“Absolutely love the Eveline Lip Oil! It feels super lightweight and non-sticky, yet keeps my lips hydrated all day. Gives a beautiful glossy finish without feeling heavy. I use it on its own or over lipstick—works perfectly both ways. Totally worth it for the price!”<\/p>",
-            "ern_points": "<p>earn<strong> 2229 <\/strong>pts <\/p>",
-            "product_choose": "eveline-cosmetics-wonder-match-soft-touch-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_yexhbi": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138356_1.jpg",
-            "modal_title": "Dr.PAWPAW",
-            "modal_name-insta": "philinfine",
-            "modal_text": "<p>“I’ve been using this serum for a couple of weeks now, and I can already see a difference! My skin feels super hydrated and looks more radiant.”<\/p>",
-            "ern_points": "<p>earn<strong> 2958 <\/strong>pts <\/p>",
-            "product_choose": "dr-pawpaw-your-gorgeous-skin-4in1-serum-30ml",
-            "show_popup": true
-          }
-        },
-        "review_YbXTwE": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2025-05-06_at_16.14.58_84cfccf8-a3d6-48d0-ab9a-6792c8d4bab1.png",
-            "modal_title": "Koric",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn<strong> 2013<\/strong> pts <\/p>",
-            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
-            "show_popup": true
-          }
-        },
-        "review_TkrJkT": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138369.jpg",
-            "modal_title": "Dr paw paw",
-            "modal_name-insta": "asleshhaa",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn <strong>2148 <\/strong>pts <\/p>",
-            "product_choose": "dr-pawpaw-original-balm",
-            "show_popup": true
-          }
-        },
-        "review_7KkRYT": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image1w.png",
-            "modal_title": "Dr.PAWPAW",
-            "modal_name-insta": "aadhirakrishna",
-            "modal_text": "<p>“This day cream has become a staple in my morning routine! It’s super lightweight, absorbs quickly, and leaves my skin feeling soft and fresh all day. I love that it’s fragrance-free—perfect for my sensitive skin.”<\/p>",
-            "ern_points": "<p>earn<strong> 2958<\/strong> pts <\/p>",
-            "product_choose": "dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml",
-            "show_popup": true
-          }
-        },
-        "review_cQQ8xE": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/asg.png",
-            "modal_title": "",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "",
-            "ern_points": "<p>Earn 208 pts<\/p>",
-            "product_choose": "",
-            "show_popup": false
-          }
-        },
-        "review_DNAeff": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
-            "modal_title": "Revolution",
-            "modal_name-insta": "@neeeveee__",
-            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10\/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”<\/p>",
-            "ern_points": "<p>earn<strong> 1347 <\/strong>pts <\/p>",
-            "product_choose": "relove-drip-it-glossy-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_UXtMCH": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37696.png",
-            "modal_title": "",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "",
-            "ern_points": "<p>Earn 208 pts<\/p>",
-            "product_choose": "",
-            "show_popup": false
-          }
-        },
-        "review_jfWfca": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2025-05-06_at_16.14.58_1_25e00d98-fac5-4f47-a5c8-641d7bedf197.png",
-            "modal_title": "Eveline",
-            "modal_name-insta": "Vianca.janelle_",
-            "modal_text": "<p>“ tried the Eveline body lotion and I’m so impressed! It melts into the skin like a dream, leaving it soft, smooth, and glowy without any greasy feel. The scent is super fresh and subtleperfect for everyday wear.Honestly, it feels like a little spa moment in my daily routine Highly recommend if you’re looking for something hydrating but lightweight!”<\/p>",
-            "ern_points": "<p>earn<strong> 2565 <\/strong>pts <\/p>",
-            "product_choose": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
-            "show_popup": true
-          }
-        },
-        "review_z88LVh": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/unnamed_6.png",
-            "modal_title": "",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "",
-            "ern_points": "<p>Earn 208 pts<\/p>",
-            "product_choose": "",
-            "show_popup": false
-          }
-        },
-        "review_y9fDCG": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138352_1.jpg",
-            "modal_title": "Dr.PAWPAW",
-            "modal_name-insta": "itsallaboutaish",
-            "modal_text": "<p>“This is my new go-to for everyday makeup. Just a few dabs and I look fresh instantly. It’s not sticky, gives a nice glow, and works great on both lips and cheeks. So handy and cute!”<\/p>",
-            "ern_points": "<p>earn<strong> 1608 <\/strong>pts <\/p>",
-            "product_choose": "dr-pawpaw-tinted-lip-balm-10ml",
-            "show_popup": true
-          }
-        },
-        "review_AKfC4L": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/new_564de4a3-c679-473a-b7a3-492fa819479f.png",
-            "modal_title": "Koric",
-            "modal_name-insta": "nilanjana_biswas_",
-            "modal_text": "<p>“Koric cleansing balm is honestly a game-changer! It melts off all my makeup so easily—even waterproof products”<\/p>",
-            "ern_points": "<p>earn<strong> 2013<\/strong> pts <\/p>",
-            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
-            "show_popup": true
-          }
-        },
-        "review_QaJdXE": {
-          "type": "review",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37668.png",
-            "modal_title": "Lamel",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn<strong> 208<\/strong> pts <\/p>",
-            "product_choose": "18-color-eyeshadow-palette-holi-slay",
-            "show_popup": false
-          }
-        },
-        "review_J3JbFh": {
-          "type": "review",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_9471.png",
-            "modal_title": "Lamel",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn<strong> 208<\/strong> pts <\/p>",
-            "product_choose": "18-color-eyeshadow-palette-holi-slay",
-            "show_popup": false
-          }
-        },
-        "review_UyiVAy": {
-          "type": "review",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37668.png",
-            "modal_title": "Lamel",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn<strong> 208<\/strong> pts <\/p>",
-            "product_choose": "18-color-eyeshadow-palette-holi-slay",
-            "show_popup": false
-          }
-        },
-        "review_L8zCzk": {
-          "type": "review",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
-            "modal_title": "Revolution",
-            "modal_name-insta": "@neeeveee__",
-            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10\/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”<\/p>",
-            "ern_points": "<p>earn<strong> 1347 <\/strong>pts <\/p>",
-            "product_choose": "relove-drip-it-glossy-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_bDwx87": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138347_1.jpg",
-            "modal_title": "Lamel",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn<strong> 208<\/strong> pts <\/p>",
-            "product_choose": "18-color-eyeshadow-palette-holi-slay",
-            "show_popup": false
-          }
-        },
-        "review_EpJDRi": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138369.jpg",
-            "modal_title": "Dr paw paw",
-            "modal_name-insta": "asleshhaa",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<\/p>",
-            "ern_points": "<p>earn <strong>2148 <\/strong>pts <\/p>",
-            "product_choose": "dr-pawpaw-original-balm",
-            "show_popup": true
-          }
-        },
-        "review_8zaMmd": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_20250705_121024_409.jpg",
-            "modal_title": "Eveline",
-            "modal_name-insta": "Anushkamathur29",
-            "modal_text": "<p>“Absolutely love the Eveline Lip Oil! It feels super lightweight and non-sticky, yet keeps my lips hydrated all day. Gives a beautiful glossy finish without feeling heavy. I use it on its own or over lipstick—works perfectly both ways. Totally worth it for the price!”<\/p>",
-            "ern_points": "<p>earn<strong> 2229 <\/strong>pts <\/p>",
-            "product_choose": "eveline-cosmetics-wonder-match-soft-touch-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_mPPjbk": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138356_1.jpg",
-            "modal_title": "Dr.PAWPAW",
-            "modal_name-insta": "philinfine",
-            "modal_text": "<p>“I’ve been using this serum for a couple of weeks now, and I can already see a difference! My skin feels super hydrated and looks more radiant.”<\/p>",
-            "ern_points": "<p>earn<strong> 2958 <\/strong>pts <\/p>",
-            "product_choose": "dr-pawpaw-your-gorgeous-skin-4in1-serum-30ml",
-            "show_popup": true
-          }
-        },
-        "review_6N4UAH": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
-            "modal_title": "Revolution",
-            "modal_name-insta": "@neeeveee__",
-            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10\/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”<\/p>",
-            "ern_points": "<p>earn<strong> 1347 <\/strong>pts <\/p>",
-            "product_choose": "relove-drip-it-glossy-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_dNgKyj": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_37696.png",
-            "modal_title": "",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "",
-            "ern_points": "<p>Earn 208 pts<\/p>",
-            "product_choose": "",
-            "show_popup": false
-          }
-        },
-        "review_jPn3Qm": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image1w.png",
-            "modal_title": "Dr.PAWPAW",
-            "modal_name-insta": "aadhirakrishna",
-            "modal_text": "<p>“This day cream has become a staple in my morning routine! It’s super lightweight, absorbs quickly, and leaves my skin feeling soft and fresh all day. I love that it’s fragrance-free—perfect for my sensitive skin.”<\/p>",
-            "ern_points": "<p>earn<strong> 2958<\/strong> pts <\/p>",
-            "product_choose": "dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml",
-            "show_popup": true
-          }
-        },
-        "review_BYfNeU": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/asg.png",
-            "modal_title": "",
-            "modal_name-insta": "angel_priya04",
-            "modal_text": "",
-            "ern_points": "<p>Earn 208 pts<\/p>",
-            "product_choose": "",
-            "show_popup": false
-          }
-        },
-        "review_haN6DA": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138352_1.jpg",
-            "modal_title": "Dr.PAWPAW",
-            "modal_name-insta": "itsallaboutaish",
-            "modal_text": "<p>“This is my new go-to for everyday makeup. Just a few dabs and I look fresh instantly. It’s not sticky, gives a nice glow, and works great on both lips and cheeks. So handy and cute!”<\/p>",
-            "ern_points": "<p>earn<strong> 1608 <\/strong>pts <\/p>",
-            "product_choose": "dr-pawpaw-tinted-lip-balm-10ml",
-            "show_popup": true
-          }
-        },
-        "review_NaRVfP": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/new_564de4a3-c679-473a-b7a3-492fa819479f.png",
-            "modal_title": "Koric",
-            "modal_name-insta": "nilanjana_biswas_",
-            "modal_text": "<p>“Koric cleansing balm is honestly a game-changer! It melts off all my makeup so easily—even waterproof products”<\/p>",
-            "ern_points": "<p>earn<strong> 208<\/strong> pts <\/p>",
-            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
-            "show_popup": true
-          }
-        }
-      },
-      "block_order": [
-        "review_bchmyh",
-        "review_VYh4eR",
-        "review_ArKxnA",
-        "review_yexhbi",
-        "review_YbXTwE",
-        "review_TkrJkT",
-        "review_7KkRYT",
-        "review_cQQ8xE",
-        "review_DNAeff",
-        "review_UXtMCH",
-        "review_jfWfca",
-        "review_z88LVh",
-        "review_y9fDCG",
-        "review_AKfC4L",
-        "review_QaJdXE",
-        "review_J3JbFh",
-        "review_UyiVAy",
-        "review_L8zCzk",
-        "review_bDwx87",
-        "review_EpJDRi",
-        "review_8zaMmd",
-        "review_mPPjbk",
-        "review_6N4UAH",
-        "review_dNgKyj",
-        "review_jPn3Qm",
-        "review_BYfNeU",
-        "review_haN6DA",
-        "review_NaRVfP"
-      ],
-      "custom_css": [
-        "a.veiw-button-best-seller {background: #000; color: #fff; font-weight: 600; font-size: 13px; padding: 12px; text-align: center; border-radius: 50px;}"
-      ],
-      "settings": {
-        "bg_image_desktop": "shopify:\/\/shop_images\/Group_new.png",
-        "heading": "Hear from them",
-        "subheading": "Because no one tells it better than those who’ve seen the results themselves"
-      }
-    },
-    "images_with_popup_skincare_mobile_EatgNQ": {
-      "type": "images-with-popup-skincare-mobile",
-      "blocks": {
-        "review_dBj9TU": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2025-05-06_at_16.14.58_1_25e00d98-fac5-4f47-a5c8-641d7bedf197.png",
-            "modal_name": "<p>Vianca.janelle_<\/p>",
-            "modal_title": "Eveline",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2565 <\/strong>pts<\/p>",
-            "product_choose": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
-            "show_popup": true
-          }
-        },
-        "review_89yVqx": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_9474_1.png",
-            "modal_name": "<p>Priya, 25 | Lucknow<\/p>",
-            "modal_title": "Lamel",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br\/><\/p>",
-            "ern_points": "<p>earn 208 pts<\/p>",
-            "product_choose": "ardell-naked-lash-429-1-pair",
-            "show_popup": false
-          }
-        },
-        "review_RKhDqA": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Image_20250705_121024_409.jpg",
-            "modal_name": "<p>Anushkamathur29<\/p>",
-            "modal_title": "Eveline",
-            "modal_text": "<p>“Absolutely love the Eveline Lip Oil! It feels super lightweight and non-sticky, yet keeps my lips hydrated all day. Gives a beautiful glossy finish without feeling heavy. I use it on its own or over lipstick—works perfectly both ways. Totally worth it for the price”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2229 <\/strong>pts<\/p>",
-            "product_choose": "eveline-cosmetics-wonder-match-soft-touch-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_XDDhCN": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138356_1.jpg",
-            "modal_name": "<p>@philinfine<\/p>",
-            "modal_title": "Dr.PAWPAW",
-            "modal_text": "<p>“I’ve been using this serum for a couple of weeks now, and I can already see a difference! My skin feels super hydrated and looks more radiant.”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2958<\/strong> pts<\/p>",
-            "product_choose": "dr-pawpaw-your-gorgeous-skin-4in1-serum-30ml",
-            "show_popup": true
-          }
-        },
-        "review_Ymrkgt": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
-            "modal_name": "<p>@neeeveee__<\/p>",
-            "modal_title": "Revolution Beauty",
-            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10\/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>1347<\/strong>pts<\/p>",
-            "product_choose": "relove-drip-it-glossy-lip-oil",
-            "show_popup": true
-          }
-        },
-        "review_fUN4f4": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_9475.png",
-            "modal_name": "<p>Priya, 25 | Lucknow<\/p>",
-            "modal_title": "Lamel",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br\/><\/p>",
-            "ern_points": "<p>earn 208 pts<\/p>",
-            "product_choose": "ardell-naked-lash-429-1-pair",
-            "show_popup": false
-          }
-        },
-        "review_VDpBBi": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2025-05-06_at_16.14.58_84cfccf8-a3d6-48d0-ab9a-6792c8d4bab1.png",
-            "modal_name": "<p>@nilanjana_biswas<\/p>",
-            "modal_title": "koric",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2013 <\/strong>pts<\/p>",
-            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
-            "show_popup": true
-          }
-        },
-        "review_FbWXxw": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138369.jpg",
-            "modal_name": "<p>@misathrift<\/p>",
-            "modal_title": "Dr. Paw Paw",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2148 <\/strong>pts<\/p>",
-            "product_choose": "dr-pawpaw-original-balm",
-            "show_popup": true
-          }
-        },
-        "review_Fnkhrk": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138357.jpg",
-            "modal_name": "<p>@sorellebeautyofficial<\/p>",
-            "modal_title": "Dr.PAWPAW",
-            "modal_text": "<p>“This day cream has become a staple in my morning routine! It’s super lightweight, absorbs quickly, and leaves my skin feeling soft and fresh all day. I love that it’s fragrance-free—perfect for my sensitive skin.”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2958 <\/strong>pts<\/p>",
-            "product_choose": "dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml",
-            "show_popup": true
-          }
-        },
-        "review_UXHQHB": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Group_9476.png",
-            "modal_name": "<p>Priya, 25 | Lucknow<\/p>",
-            "modal_title": "Lamel",
-            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br\/><\/p>",
-            "ern_points": "<p>earn 208 pts<\/p>",
-            "product_choose": "ardell-3d-faux-mink-859-4-pack",
-            "show_popup": false
-          }
-        },
-        "review_DUq9AD": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1000138352.jpg",
-            "modal_name": "<p><strong>itsallaboutaish<\/strong><\/p>",
-            "modal_title": "Dr.PAWPAW",
-            "modal_text": "<p>“This is my new go-to for everyday makeup. Just a few dabs and I look fresh instantly. It’s not sticky, gives a nice glow, and works great on both lips and cheeks. So handy and cute!”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>1608 <\/strong>pts<\/p>",
-            "product_choose": "dr-pawpaw-tinted-lip-balm-10ml",
-            "show_popup": true
-          }
-        },
-        "review_gBQBqr": {
-          "type": "review",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_aa45728d-0184-4b3e-9c85-a9c7235867ff.png",
-            "modal_name": "<p><strong>itsallaboutaish<\/strong><\/p>",
-            "modal_title": "nilanjana_biswas_",
-            "modal_text": "<p>“Koric cleansing balm is honestly a game-changer! It melts off all my makeup so easily—even waterproof products”<br\/><\/p>",
-            "ern_points": "<p>earn <strong>2,013 <\/strong>pts<\/p>",
-            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
-            "show_popup": true
-          }
-        }
-      },
-      "block_order": [
-        "review_dBj9TU",
-        "review_89yVqx",
-        "review_RKhDqA",
-        "review_XDDhCN",
-        "review_Ymrkgt",
-        "review_fUN4f4",
-        "review_VDpBBi",
-        "review_FbWXxw",
-        "review_Fnkhrk",
-        "review_UXHQHB",
-        "review_DUq9AD",
-        "review_gBQBqr"
-      ],
-      "custom_css": [
-        "a.veiw-button-best-seller {background: #000; color: #fff; font-weight: 600; font-size: 12px; padding: 10px; text-align: center; border-radius: 50px;}"
-      ],
-      "settings": {
-        "heading": "Hear from them",
-        "subheading": "Because no one tells it better than those who’ve seen the results themselves",
-        "bg_image_mobile": "shopify:\/\/shop_images\/Group-transformed.png"
-      }
-    },
     "skin_routine_tabs_6gNCcm": {
       "type": "skin-routine-tabs",
       "blocks": {
@@ -1055,9 +516,9 @@
             "title": "CLEANSER",
             "step": 1,
             "padding-text-top": 100,
-            "description": "<p>Start your skincare with <em>Carbon Theory Anti-Breakout Facial Cleansing Gel<\/em> that purifies pores, removing dirt, oil, and bacteria for clearer skin.<\/p>",
-            "image": "shopify:\/\/shop_images\/1_bdf91b36-163f-4f9a-a111-e0f3e498530a.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/carbon-theory-anti-breakout-facial-cleansing-gel-150ml",
+            "description": "<p>Start your skincare with <em>Carbon Theory Anti-Breakout Facial Cleansing Gel</em> that purifies pores, removing dirt, oil, and bacteria for clearer skin.</p>",
+            "image": "shopify://shop_images/1_bdf91b36-163f-4f9a-a111-e0f3e498530a.png",
+            "button_link": "https://hokmakeup.com/products/carbon-theory-anti-breakout-facial-cleansing-gel-150ml",
             "tab_group": "acne"
           }
         },
@@ -1068,9 +529,9 @@
             "title": "Toner",
             "step": 2,
             "padding-text-top": 80,
-            "description": "<p>Then use <em>Carbon Theory Breakout Control Facial Purifying Tonic<\/em> that rebalances skin’s pH, tightens pores, and preps your face to better absorb serums and treatments.<br\/><\/p>",
-            "image": "shopify:\/\/shop_images\/2_cfce9767-c88b-4220-8a29-aacb0899aec2.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/carbon-theory-tea-tree-oil-citric-acid-breakout-control-facial-purifying-tonic-250-ml",
+            "description": "<p>Then use <em>Carbon Theory Breakout Control Facial Purifying Tonic</em> that rebalances skin’s pH, tightens pores, and preps your face to better absorb serums and treatments.<br/></p>",
+            "image": "shopify://shop_images/2_cfce9767-c88b-4220-8a29-aacb0899aec2.png",
+            "button_link": "https://hokmakeup.com/products/carbon-theory-tea-tree-oil-citric-acid-breakout-control-facial-purifying-tonic-250-ml",
             "tab_group": "acne"
           }
         },
@@ -1081,9 +542,9 @@
             "title": "ESSENCE",
             "step": 3,
             "padding-text-top": 40,
-            "description": "<p>Boost your hydration, repair skin barrier, and enhance texture with <em>COSRX Advanced Snail 96 Mucin Power Essence<\/em> to create the perfect base for serums and moisturizers to follow.<\/p>",
-            "image": "shopify:\/\/shop_images\/3_c9cf9474-642a-4daa-9110-3a9e02a0bd71.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/cosrx-advanced-snail-96-mucin-power-essence-100ml",
+            "description": "<p>Boost your hydration, repair skin barrier, and enhance texture with <em>COSRX Advanced Snail 96 Mucin Power Essence</em> to create the perfect base for serums and moisturizers to follow.</p>",
+            "image": "shopify://shop_images/3_c9cf9474-642a-4daa-9110-3a9e02a0bd71.png",
+            "button_link": "https://hokmakeup.com/products/cosrx-advanced-snail-96-mucin-power-essence-100ml",
             "tab_group": "acne"
           }
         },
@@ -1094,9 +555,9 @@
             "title": "moisturise",
             "step": 4,
             "padding-text-top": 100,
-            "description": "<p>Lock in all the goodness with this <em>Eveline Niacinamide Therapy Cream Ampoule<\/em> that controls oil, reduces blemishes, and strengthens the skin barrier.<\/p>",
-            "image": "shopify:\/\/shop_images\/4_e805453a-ad30-4edc-9cf2-b85f31c22122.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/eveline-cosmetics-cream-ampoule-niacynamid-therapy-reduction-of-imperfections-day-night-50-ml",
+            "description": "<p>Lock in all the goodness with this <em>Eveline Niacinamide Therapy Cream Ampoule</em> that controls oil, reduces blemishes, and strengthens the skin barrier.</p>",
+            "image": "shopify://shop_images/4_e805453a-ad30-4edc-9cf2-b85f31c22122.png",
+            "button_link": "https://hokmakeup.com/products/eveline-cosmetics-cream-ampoule-niacynamid-therapy-reduction-of-imperfections-day-night-50-ml",
             "tab_group": "acne"
           }
         },
@@ -1107,9 +568,9 @@
             "title": "Protection",
             "step": 5,
             "padding-text-top": 100,
-            "description": "<p>Finish your routine with <em>Sun Protection Face Cream SPF3 <\/em>— a daily essential that shields your skin from harmful UV rays to prevent aging, pigmentation, and sun-damage.<\/p>",
-            "image": "shopify:\/\/shop_images\/5_b8577f7f-f489-4a05-b52e-c41a42228363.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/sun-protection-face-cream-spf30-50ml?_pos=5&_sid=76f6e7eaa&_ss=r",
+            "description": "<p>Finish your routine with <em>Sun Protection Face Cream SPF3 </em>— a daily essential that shields your skin from harmful UV rays to prevent aging, pigmentation, and sun-damage.</p>",
+            "image": "shopify://shop_images/5_b8577f7f-f489-4a05-b52e-c41a42228363.png",
+            "button_link": "https://hokmakeup.com/products/sun-protection-face-cream-spf30-50ml?_pos=5&_sid=76f6e7eaa&_ss=r",
             "tab_group": "acne"
           }
         },
@@ -1120,9 +581,9 @@
             "title": "CLEANSER",
             "step": 1,
             "padding-text-top": 100,
-            "description": "<p>Start by gently cleansing dry skin with <em>Revolution Skincare Ceramides Hydrating Cleanse<\/em> enriched with ceramides and hyaluronic acid to support your skin’s moisture barrier, leaving it soft, fresh, and calm.<\/p>",
-            "image": "shopify:\/\/shop_images\/1_960a11dd-da2b-4e92-b16f-5a4ca602f0ec.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/revolution-skincare-ceramides-hydrating-cleanser?_pos=1&_sid=26371d697&_ss=r",
+            "description": "<p>Start by gently cleansing dry skin with <em>Revolution Skincare Ceramides Hydrating Cleanse</em> enriched with ceramides and hyaluronic acid to support your skin’s moisture barrier, leaving it soft, fresh, and calm.</p>",
+            "image": "shopify://shop_images/1_960a11dd-da2b-4e92-b16f-5a4ca602f0ec.png",
+            "button_link": "https://hokmakeup.com/products/revolution-skincare-ceramides-hydrating-cleanser?_pos=1&_sid=26371d697&_ss=r",
             "tab_group": "dry"
           }
         },
@@ -1133,9 +594,9 @@
             "title": "SERUM",
             "step": 2,
             "padding-text-top": 100,
-            "description": "<p>Follow up with <em>Revolution Skincare Plumping & Hydrating Serum (2% Hyaluronic Acid)<\/em>— it delivers intense hydration, plumps and softens dry skin, locking in moisture for a smooth, dewy finish.<\/p>",
-            "image": "shopify:\/\/shop_images\/2_8fca67b2-649d-46c9-bacc-6cb0eb217fec.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/revolution-skincare-plumping-and-hydrating-serum-2-hyaluronic-acid?_pos=1&_sid=58530cd39&_ss=r",
+            "description": "<p>Follow up with <em>Revolution Skincare Plumping & Hydrating Serum (2% Hyaluronic Acid)</em>— it delivers intense hydration, plumps and softens dry skin, locking in moisture for a smooth, dewy finish.</p>",
+            "image": "shopify://shop_images/2_8fca67b2-649d-46c9-bacc-6cb0eb217fec.png",
+            "button_link": "https://hokmakeup.com/products/revolution-skincare-plumping-and-hydrating-serum-2-hyaluronic-acid?_pos=1&_sid=58530cd39&_ss=r",
             "tab_group": "dry"
           }
         },
@@ -1146,9 +607,9 @@
             "title": "moisturise",
             "step": 3,
             "padding-text-top": 100,
-            "description": "<p>Seal in all the goodness with <em>Revolution Miracle Cream<\/em>— a rich, nourishing blend of murumuru butter and vitamin E that comforts dry, flaky skin and restores lasting hydration and balance.<\/p>",
-            "image": "shopify:\/\/shop_images\/3_2813f808-9c41-4f33-9945-7a2e5e4f6215.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/revolution-pro-miracle-cream?_pos=11&_sid=b22b8e549&_ss=r",
+            "description": "<p>Seal in all the goodness with <em>Revolution Miracle Cream</em>— a rich, nourishing blend of murumuru butter and vitamin E that comforts dry, flaky skin and restores lasting hydration and balance.</p>",
+            "image": "shopify://shop_images/3_2813f808-9c41-4f33-9945-7a2e5e4f6215.png",
+            "button_link": "https://hokmakeup.com/products/revolution-pro-miracle-cream?_pos=11&_sid=b22b8e549&_ss=r",
             "tab_group": "dry"
           }
         },
@@ -1159,9 +620,9 @@
             "title": "TREATMENT",
             "step": 4,
             "padding-text-top": 100,
-            "description": "<p>Lightweight yet powerful, <em>COSRX Advanced Snail 96 Mucin Power <\/em>Essence hydrates, repairs, and soothes— boosting elasticity and leaving skin smooth and glowing.<br\/><br\/><\/p>",
-            "image": "shopify:\/\/shop_images\/4_f102d177-8b96-4aea-aca5-bae51a8aa9df.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/cosrx-advanced-snail-96-mucin-power-essence-100ml?_pos=1&_sid=e5e7e7b53&_ss=r",
+            "description": "<p>Lightweight yet powerful, <em>COSRX Advanced Snail 96 Mucin Power </em>Essence hydrates, repairs, and soothes— boosting elasticity and leaving skin smooth and glowing.<br/><br/></p>",
+            "image": "shopify://shop_images/4_f102d177-8b96-4aea-aca5-bae51a8aa9df.png",
+            "button_link": "https://hokmakeup.com/products/cosrx-advanced-snail-96-mucin-power-essence-100ml?_pos=1&_sid=e5e7e7b53&_ss=r",
             "tab_group": "dry"
           }
         },
@@ -1172,9 +633,9 @@
             "title": "PROTECT",
             "step": 5,
             "padding-text-top": 100,
-            "description": "<p>Lastly, <em>Eveline Cosmetics Sun Protection Face Cream SPF 30<\/em> is a lightweight, vitamin-enriched sunscreen that protects, hydrates and soothes dry, sensitive skin without a greasy finish.<\/p>",
-            "image": "shopify:\/\/shop_images\/5_99c90622-7f25-4fca-be64-1dbf532c0a1b.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/sun-protection-face-cream-spf30-50ml?_pos=5&_sid=76f6e7eaa&_ss=r",
+            "description": "<p>Lastly, <em>Eveline Cosmetics Sun Protection Face Cream SPF 30</em> is a lightweight, vitamin-enriched sunscreen that protects, hydrates and soothes dry, sensitive skin without a greasy finish.</p>",
+            "image": "shopify://shop_images/5_99c90622-7f25-4fca-be64-1dbf532c0a1b.png",
+            "button_link": "https://hokmakeup.com/products/sun-protection-face-cream-spf30-50ml?_pos=5&_sid=76f6e7eaa&_ss=r",
             "tab_group": "dry"
           }
         },
@@ -1185,9 +646,9 @@
             "title": "Cleanser",
             "step": 1,
             "padding-text-top": 100,
-            "description": "<p><em>Carbon Theory Anti‑Breakout Facial Cleansing Gel <\/em>detoxifies and purifies oily-prone skin with charcoal and tea tree oil. Gently removes grime without stripping moisture—for clear, balanced skin.<\/p>",
-            "image": "shopify:\/\/shop_images\/1_bdf91b36-163f-4f9a-a111-e0f3e498530a.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/carbon-theory-anti-breakout-facial-cleansing-gel-150ml?_pos=1&_sid=7b2e7c024&_ss=r",
+            "description": "<p><em>Carbon Theory Anti‑Breakout Facial Cleansing Gel </em>detoxifies and purifies oily-prone skin with charcoal and tea tree oil. Gently removes grime without stripping moisture—for clear, balanced skin.</p>",
+            "image": "shopify://shop_images/1_bdf91b36-163f-4f9a-a111-e0f3e498530a.png",
+            "button_link": "https://hokmakeup.com/products/carbon-theory-anti-breakout-facial-cleansing-gel-150ml?_pos=1&_sid=7b2e7c024&_ss=r",
             "tab_group": "oily"
           }
         },
@@ -1199,8 +660,8 @@
             "title": "tone",
             "step": 2,
             "padding-text-top": 100,
-            "description": "<p>Revolution Skincare Blemish & Pore Refining Serum (10 % Niacinamide + 1 % Zinc)\nLightweight serum controls sebum, minimizes pores, and soothes blemishes. Oil-free, calming formula to refine texture professionally.<\/p>",
-            "image": "shopify:\/\/shop_images\/image34.png",
+            "description": "<p>Revolution Skincare Blemish & Pore Refining Serum (10 % Niacinamide + 1 % Zinc)\nLightweight serum controls sebum, minimizes pores, and soothes blemishes. Oil-free, calming formula to refine texture professionally.</p>",
+            "image": "shopify://shop_images/image34.png",
             "button_link": "",
             "tab_group": "oily"
           }
@@ -1212,9 +673,9 @@
             "title": "serum",
             "step": 2,
             "padding-text-top": 100,
-            "description": "<p><em>Evolution Skincare Blemish & Pore Refining Serum (10% Niacinamide + 1% Zinc)<\/em> controls sebum, calms blemishes, and refines pores with a lightweight, oil-free formula.<\/p>",
-            "image": "shopify:\/\/shop_images\/2_8fca67b2-649d-46c9-bacc-6cb0eb217fec.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/revolution-skincare-blemish-and-pore-refining-serum?_pos=1&_sid=ffd8b56f2&_ss=r",
+            "description": "<p><em>Evolution Skincare Blemish & Pore Refining Serum (10% Niacinamide + 1% Zinc)</em> controls sebum, calms blemishes, and refines pores with a lightweight, oil-free formula.</p>",
+            "image": "shopify://shop_images/2_8fca67b2-649d-46c9-bacc-6cb0eb217fec.png",
+            "button_link": "https://hokmakeup.com/products/revolution-skincare-blemish-and-pore-refining-serum?_pos=1&_sid=ffd8b56f2&_ss=r",
             "tab_group": "oily"
           }
         },
@@ -1225,9 +686,9 @@
             "title": "moisturise",
             "step": 3,
             "padding-text-top": 100,
-            "description": "<p><em>Miracle Cream is a hydrating gel moisturizer<\/em> with niacinamide and hyaluronic acid that balances oil, smooths texture, and prevents shine—lightweight and non-greasy.<\/p>",
-            "image": "shopify:\/\/shop_images\/3_2813f808-9c41-4f33-9945-7a2e5e4f6215.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/revolution-pro-miracle-cream?_pos=11&_sid=b22b8e549&_ss=r",
+            "description": "<p><em>Miracle Cream is a hydrating gel moisturizer</em> with niacinamide and hyaluronic acid that balances oil, smooths texture, and prevents shine—lightweight and non-greasy.</p>",
+            "image": "shopify://shop_images/3_2813f808-9c41-4f33-9945-7a2e5e4f6215.png",
+            "button_link": "https://hokmakeup.com/products/revolution-pro-miracle-cream?_pos=11&_sid=b22b8e549&_ss=r",
             "tab_group": "oily"
           }
         },
@@ -1238,9 +699,9 @@
             "title": "protect",
             "step": 4,
             "padding-text-top": 100,
-            "description": "<p><em>Sun Protection Face Cream SPF30<\/em> is your essential final step—protects daily against UV rays to prevent aging, pigmentation, and sun damage.<\/p>",
-            "image": "shopify:\/\/shop_images\/5_99c90622-7f25-4fca-be64-1dbf532c0a1b.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/sun-protection-face-cream-whitening-spf50-50ml?_pos=4&_sid=7ae35ca41&_ss=r",
+            "description": "<p><em>Sun Protection Face Cream SPF30</em> is your essential final step—protects daily against UV rays to prevent aging, pigmentation, and sun damage.</p>",
+            "image": "shopify://shop_images/5_99c90622-7f25-4fca-be64-1dbf532c0a1b.png",
+            "button_link": "https://hokmakeup.com/products/sun-protection-face-cream-whitening-spf50-50ml?_pos=4&_sid=7ae35ca41&_ss=r",
             "tab_group": "oily"
           }
         },
@@ -1251,9 +712,9 @@
             "title": "cleanse",
             "step": 1,
             "padding-text-top": 100,
-            "description": "<p><em>Eveline Vit‑C Energy Soothing Face Wash Gel‑Oil 3‑in‑1 <\/em>gently cleanses, hydrates, and calms redness with rose extract and vitamin C—perfect for sensitive, reactive skin.<\/p>",
-            "image": "shopify:\/\/shop_images\/1_29c5b16b-da0b-4e53-932a-0eb02fb61c76.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/vit-c-energy-organic-booster-soothing-face-wash-gel-oil-with-red-fruit-extracts-rose-3-in-1-200ml?_pos=1&_sid=760a1c77b&_ss=r",
+            "description": "<p><em>Eveline Vit‑C Energy Soothing Face Wash Gel‑Oil 3‑in‑1 </em>gently cleanses, hydrates, and calms redness with rose extract and vitamin C—perfect for sensitive, reactive skin.</p>",
+            "image": "shopify://shop_images/1_29c5b16b-da0b-4e53-932a-0eb02fb61c76.png",
+            "button_link": "https://hokmakeup.com/products/vit-c-energy-organic-booster-soothing-face-wash-gel-oil-with-red-fruit-extracts-rose-3-in-1-200ml?_pos=1&_sid=760a1c77b&_ss=r",
             "tab_group": "sensitive"
           }
         },
@@ -1264,9 +725,9 @@
             "title": "serum",
             "step": 2,
             "padding-text-top": 100,
-            "description": "<p><em>Serum Shot 2% Hyaluronic Acid Moisturization (30ml) <\/em>deeply hydrates sensitive, dry skin with hyaluronic acid, trehalose, and panthenol—soothes irritation and strengthens its protective barrier.<\/p>",
-            "image": "shopify:\/\/shop_images\/2_7cf69b5a-bf49-4f8a-83d7-4e701422cb67.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/serum-shot-2-hyaluronic-acid-moisturization-30ml?_pos=1&_sid=4f12f4052&_ss=r",
+            "description": "<p><em>Serum Shot 2% Hyaluronic Acid Moisturization (30ml) </em>deeply hydrates sensitive, dry skin with hyaluronic acid, trehalose, and panthenol—soothes irritation and strengthens its protective barrier.</p>",
+            "image": "shopify://shop_images/2_7cf69b5a-bf49-4f8a-83d7-4e701422cb67.png",
+            "button_link": "https://hokmakeup.com/products/serum-shot-2-hyaluronic-acid-moisturization-30ml?_pos=1&_sid=4f12f4052&_ss=r",
             "tab_group": "sensitive"
           }
         },
@@ -1277,9 +738,9 @@
             "title": "moisturise",
             "step": 3,
             "padding-text-top": 100,
-            "description": "<p><em>Dr. Pawpaw Your Gorgeous Skin Hydrating Day Cream (45ml)<\/em> is a fragrance-free, gentle Korean formula that boosts radiance and hydration—ideal for sensitive skin needing daily care.<\/p>",
-            "image": "shopify:\/\/shop_images\/3_ca2b60e6-ca41-4351-86f5-a8e532ed6afa.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml?_pos=1&_sid=f3120df0c&_ss=r",
+            "description": "<p><em>Dr. Pawpaw Your Gorgeous Skin Hydrating Day Cream (45ml)</em> is a fragrance-free, gentle Korean formula that boosts radiance and hydration—ideal for sensitive skin needing daily care.</p>",
+            "image": "shopify://shop_images/3_ca2b60e6-ca41-4351-86f5-a8e532ed6afa.png",
+            "button_link": "https://hokmakeup.com/products/dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml?_pos=1&_sid=f3120df0c&_ss=r",
             "tab_group": "sensitive"
           }
         },
@@ -1290,9 +751,9 @@
             "title": "treatment",
             "step": 4,
             "padding-text-top": 100,
-            "description": "<p><em>Eveline Serum Shot 10% Niacinamide + Zinc (30ml) <\/em>is a lightweight serum that reduces inflammation and redness. Niacinamide with zinc calms sensitivity and improves texture.<\/p>",
-            "image": "shopify:\/\/shop_images\/4_4dfbb22a-83c8-41a9-92b1-57fec3956971.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/serum-shot-10-niacinamide-imperfections-30ml?_pos=1&_sid=5dc1968c0&_ss=r",
+            "description": "<p><em>Eveline Serum Shot 10% Niacinamide + Zinc (30ml) </em>is a lightweight serum that reduces inflammation and redness. Niacinamide with zinc calms sensitivity and improves texture.</p>",
+            "image": "shopify://shop_images/4_4dfbb22a-83c8-41a9-92b1-57fec3956971.png",
+            "button_link": "https://hokmakeup.com/products/serum-shot-10-niacinamide-imperfections-30ml?_pos=1&_sid=5dc1968c0&_ss=r",
             "tab_group": "sensitive"
           }
         },
@@ -1303,9 +764,9 @@
             "title": "protect",
             "step": 5,
             "padding-text-top": 100,
-            "description": "<p><em>Eveline Soft Nourishing Cream for Sensitive Skin (200 ml)<\/em> is a rich, non-greasy moisturizer with Swiss botanical actives that instantly calms, replenishes, providing long-lasting comfort and barrier protection.<\/p>",
-            "image": "shopify:\/\/shop_images\/5_36199280-a8eb-4c57-9089-4bf5ed10d870.png",
-            "button_link": "https:\/\/hokmakeup.com\/products\/soft-nourishing-face-and-body-cream-for-sensitive-skin-200ml?_pos=1&_sid=546b075ac&_ss=r",
+            "description": "<p><em>Eveline Soft Nourishing Cream for Sensitive Skin (200 ml)</em> is a rich, non-greasy moisturizer with Swiss botanical actives that instantly calms, replenishes, providing long-lasting comfort and barrier protection.</p>",
+            "image": "shopify://shop_images/5_36199280-a8eb-4c57-9089-4bf5ed10d870.png",
+            "button_link": "https://hokmakeup.com/products/soft-nourishing-face-and-body-cream-for-sensitive-skin-200ml?_pos=1&_sid=546b075ac&_ss=r",
             "tab_group": "sensitive"
           }
         }
@@ -1348,8 +809,8 @@
     "skin_care_best_sellers_PGTMrQ": {
       "type": "skin-care-best-sellers",
       "settings": {
-        "bg_image_desktop": "shopify:\/\/shop_images\/Group_9469_1_1_1.png",
-        "bg_image_mobile": "shopify:\/\/shop_images\/Frame_37700.png",
+        "bg_image_desktop": "shopify://shop_images/Group_9469_1_1_1.png",
+        "bg_image_mobile": "shopify://shop_images/Frame_37700.png",
         "margin_top_desktop": 96,
         "margin_bottom_desktop": 80,
         "padding_text_top_desktop": 20,
@@ -1360,7 +821,7 @@
         "padding_text_bottom_mobile": 36,
         "heading": "Best Sellers",
         "button_text": "View All",
-        "button_url": "shopify:\/\/collections\/skincare-best-seller",
+        "button_url": "shopify://collections/skincare-best-seller",
         "collection": "skincare-best-seller"
       }
     },
@@ -1370,9 +831,9 @@
         "image_media_9Kz3ak": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/skincare-hyaluronic",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Hyaluronic_Acid.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Hyaluronic_Acid_copy.jpg",
+            "banner-url": "shopify://collections/skincare-hyaluronic",
+            "banner-image-desktop": "shopify://shop_images/Hyaluronic_Acid.jpg",
+            "banner-image-mobile": "shopify://shop_images/Hyaluronic_Acid_copy.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1382,9 +843,9 @@
         "image_media_ELz8Vj": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/skincare-vitamin-c",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Vitamin_C_7a8886c7-aec7-4461-86fa-d67767f91672.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Vitamin_C_copy.jpg",
+            "banner-url": "shopify://collections/skincare-vitamin-c",
+            "banner-image-desktop": "shopify://shop_images/Vitamin_C_7a8886c7-aec7-4461-86fa-d67767f91672.jpg",
+            "banner-image-mobile": "shopify://shop_images/Vitamin_C_copy.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1394,9 +855,9 @@
         "image_media_dHiaJU": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/skincare-salicylic-acid",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Salicylic_Acid.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Salicylic_Acid_copy.jpg",
+            "banner-url": "shopify://collections/skincare-salicylic-acid",
+            "banner-image-desktop": "shopify://shop_images/Salicylic_Acid.jpg",
+            "banner-image-mobile": "shopify://shop_images/Salicylic_Acid_copy.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1406,9 +867,9 @@
         "image_media_yKMKew": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/skincare-niacinamide",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Niacinamide.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Niacinamide_copy.jpg",
+            "banner-url": "shopify://collections/skincare-niacinamide",
+            "banner-image-desktop": "shopify://shop_images/Niacinamide.jpg",
+            "banner-image-mobile": "shopify://shop_images/Niacinamide_copy.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1418,9 +879,9 @@
         "image_media_CWM8Rj": {
           "type": "image-media",
           "settings": {
-            "banner-url": "shopify:\/\/collections\/skincare-retinol",
-            "banner-image-desktop": "shopify:\/\/shop_images\/Retinol.jpg",
-            "banner-image-mobile": "shopify:\/\/shop_images\/Retinol_copy.jpg",
+            "banner-url": "shopify://collections/skincare-retinol",
+            "banner-image-desktop": "shopify://shop_images/Retinol.jpg",
+            "banner-image-mobile": "shopify://shop_images/Retinol_copy.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1482,22 +943,22 @@
         "margin_bottom_desktop": 120,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 70,
-        "quote_text": "<strong>“Invest in your skin<\/strong>. It is going to <strong>represent<\/strong> <i>you for a<\/i> <strong>very long time” <\/strong>— <i>Linden Tyler<\/i>"
+        "quote_text": "<strong>“Invest in your skin</strong>. It is going to <strong>represent</strong> <i>you for a</i> <strong>very long time” </strong>— <i>Linden Tyler</i>"
       }
     },
     "did_you_know_skin_care_VyBB7T": {
       "type": "did-you-know-skin-care",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/Frame_37698_1.jpg",
-        "bg_image_mobile": "shopify:\/\/shop_images\/Frame_37699.jpg",
+        "background_image": "shopify://shop_images/Frame_37698_1.jpg",
+        "bg_image_mobile": "shopify://shop_images/Frame_37699.jpg",
         "bg_color": "#fbfaf9",
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0,
         "heading": "DID YOU KNOW?",
-        "subheading": "<p><strong>85%<\/strong> of <em><strong>dull skin<\/strong><\/em> is due to lack of hydration and fatigue. <strong>The fix?<\/strong><\/p>",
-        "subtext": "<p>a serum that hydrates, revives & restores glow — <em>all in one drop!<\/em><\/p>",
+        "subheading": "<p><strong>85%</strong> of <em><strong>dull skin</strong></em> is due to lack of hydration and fatigue. <strong>The fix?</strong></p>",
+        "subtext": "<p>a serum that hydrates, revives & restores glow — <em>all in one drop!</em></p>",
         "collection": "did-you-know-skincare"
       }
     },
@@ -1507,10 +968,10 @@
         "cards_cjB87e": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/revolution-skincare",
-            "image": "shopify:\/\/shop_images\/Artboard_3_36cbfcbf-df9b-4631-9468-bbed666e7a2a.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Artboard_3_copy.jpg",
-            "logo": "shopify:\/\/shop_images\/REVOLUTION-MAKEUP_LOGO_NEWlogo.jpg",
+            "url": "shopify://collections/revolution-skincare",
+            "image": "shopify://shop_images/Artboard_3_36cbfcbf-df9b-4631-9468-bbed666e7a2a.jpg",
+            "mobile_image": "shopify://shop_images/Artboard_3_copy.jpg",
+            "logo": "shopify://shop_images/REVOLUTION-MAKEUP_LOGO_NEWlogo.jpg",
             "title": "Up to 15% Off",
             "subtitle": "High impact skincare, low-key prices"
           }
@@ -1518,10 +979,10 @@
         "cards_y38RGe": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/eveline-skin",
-            "image": "shopify:\/\/shop_images\/Artboard_2_debb1866-1c12-45d4-bbb5-36a8a80dc0ef.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Artboard_2_copy_421e44d7-8053-4ccb-aa85-8394d012b5b8.jpg",
-            "logo": "shopify:\/\/shop_images\/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
+            "url": "shopify://collections/eveline-skin",
+            "image": "shopify://shop_images/Artboard_2_debb1866-1c12-45d4-bbb5-36a8a80dc0ef.jpg",
+            "mobile_image": "shopify://shop_images/Artboard_2_copy_421e44d7-8053-4ccb-aa85-8394d012b5b8.jpg",
+            "logo": "shopify://shop_images/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
             "title": "Up to 15% Off",
             "subtitle": "Glow that keeps up with you."
           }
@@ -1529,10 +990,10 @@
         "cards_nJ4myC": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/collections\/dr-paw-paw",
-            "image": "shopify:\/\/shop_images\/Artboard_1_3acf5b52-968e-49f2-96f9-f717f71e4f2e.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Artboard_1_copy_caaad549-2e07-4046-8d30-fbe99bbced7a.jpg",
-            "logo": "shopify:\/\/shop_images\/image_15_96551ada-3846-4c65-bc4a-738b6d5c8e1e.png",
+            "url": "shopify://collections/dr-paw-paw",
+            "image": "shopify://shop_images/Artboard_1_3acf5b52-968e-49f2-96f9-f717f71e4f2e.jpg",
+            "mobile_image": "shopify://shop_images/Artboard_1_copy_caaad549-2e07-4046-8d30-fbe99bbced7a.jpg",
+            "logo": "shopify://shop_images/image_15_96551ada-3846-4c65-bc4a-738b6d5c8e1e.png",
             "title": "Up to 15% Off",
             "subtitle": "SOS for dry, moody skin"
           }
@@ -1540,10 +1001,10 @@
         "cards_KVRhzw": {
           "type": "cards",
           "settings": {
-            "url": "shopify:\/\/products\/axis-y-dark-spot-correcting-glow-serum-50ml",
-            "image": "shopify:\/\/shop_images\/Artboard_4_11ddc954-81c0-4242-b7d5-5937433328d3.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Artboard_4_copy.jpg",
-            "logo": "shopify:\/\/shop_images\/imagehhh.png",
+            "url": "shopify://products/axis-y-dark-spot-correcting-glow-serum-50ml",
+            "image": "shopify://shop_images/Artboard_4_11ddc954-81c0-4242-b7d5-5937433328d3.jpg",
+            "mobile_image": "shopify://shop_images/Artboard_4_copy.jpg",
+            "logo": "shopify://shop_images/imagehhh.png",
             "title": "Up to 15% Off",
             "subtitle": "Skincare  gets your skin and your weather"
           }
@@ -1552,9 +1013,9 @@
           "type": "cards",
           "disabled": true,
           "settings": {
-            "url": "shopify:\/\/collections\/dr-paw-paw",
-            "image": "shopify:\/\/shop_images\/Artboard_3_36cbfcbf-df9b-4631-9468-bbed666e7a2a.jpg",
-            "logo": "shopify:\/\/shop_images\/imagehhh.png",
+            "url": "shopify://collections/dr-paw-paw",
+            "image": "shopify://shop_images/Artboard_3_36cbfcbf-df9b-4631-9468-bbed666e7a2a.jpg",
+            "logo": "shopify://shop_images/imagehhh.png",
             "title": "Up to 15% Off",
             "subtitle": "Affordable Beauty, Endless Creativity"
           }
@@ -1578,7 +1039,7 @@
         "background_color": "#ffffff",
         "coll-title": "brands for you",
         "button-title": "view all",
-        "button-url": "shopify:\/\/collections",
+        "button-url": "shopify://collections",
         "slide_speed": 500,
         "showCenter": false,
         "showFreeScroll": false,
@@ -1605,45 +1066,45 @@
         "product_block_Cdxhdy": {
           "type": "product_block",
           "settings": {
-            "product-html": "shopify:\/\/shop_images\/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
-            "ern_points-2": "<p>earn <strong>208 pts <\/strong><\/p>",
-            "product-block": "shopify:\/\/shop_images\/Artboard_2_copy_2_56d13cc5-ee02-4f04-a795-a8ac1540afaf.png",
+            "product-html": "shopify://shop_images/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
+            "ern_points-2": "<p>earn <strong>208 pts </strong></p>",
+            "product-block": "shopify://shop_images/Artboard_2_copy_2_56d13cc5-ee02-4f04-a795-a8ac1540afaf.png",
             "product": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml"
           }
         },
         "product_block_nTJd3b": {
           "type": "product_block",
           "settings": {
-            "product-html": "shopify:\/\/shop_images\/image_15_d83ca8ac-78a8-4ef0-9465-3f26e2245966.png",
-            "ern_points-2": "<p>earn <strong>208 pts <\/strong><\/p>",
-            "product-block": "shopify:\/\/shop_images\/Artboard_1_copy_2_b3c80135-7d1e-4c59-b7d4-dbf4f1891a18.png",
+            "product-html": "shopify://shop_images/image_15_d83ca8ac-78a8-4ef0-9465-3f26e2245966.png",
+            "ern_points-2": "<p>earn <strong>208 pts </strong></p>",
+            "product-block": "shopify://shop_images/Artboard_1_copy_2_b3c80135-7d1e-4c59-b7d4-dbf4f1891a18.png",
             "product": "dr-pawpaw-your-gorgeous-skin-cleansing-balm-100ml"
           }
         },
         "product_block_aEgctX": {
           "type": "product_block",
           "settings": {
-            "product-html": "shopify:\/\/shop_images\/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
-            "ern_points-2": "<p>earn <strong>208 pt<\/strong>s <\/p>",
-            "product-block": "shopify:\/\/shop_images\/Artboard_3_copy_2.png",
+            "product-html": "shopify://shop_images/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
+            "ern_points-2": "<p>earn <strong>208 pt</strong>s </p>",
+            "product-block": "shopify://shop_images/Artboard_3_copy_2.png",
             "product": "sun-protection-face-cream-whitening-spf50-50ml"
           }
         },
         "product_block_FegNLx": {
           "type": "product_block",
           "settings": {
-            "product-html": "shopify:\/\/shop_images\/REVOLUTION-MAKEUP_LOGO_NEW_a3d7153b-dc38-415d-b2cf-146b74f19c83.png",
-            "ern_points-2": "<p>earn <strong>208 pts <\/strong><\/p>",
-            "product-block": "shopify:\/\/shop_images\/Artboard_4_copy_2.png",
+            "product-html": "shopify://shop_images/REVOLUTION-MAKEUP_LOGO_NEW_a3d7153b-dc38-415d-b2cf-146b74f19c83.png",
+            "ern_points-2": "<p>earn <strong>208 pts </strong></p>",
+            "product-block": "shopify://shop_images/Artboard_4_copy_2.png",
             "product": "revolution-pro-miracle-cream"
           }
         },
         "product_block_pytFTA": {
           "type": "product_block",
           "settings": {
-            "product-html": "shopify:\/\/shop_images\/image_15_d83ca8ac-78a8-4ef0-9465-3f26e2245966.png",
-            "ern_points-2": "<p>earn <strong>208 pts <\/strong><\/p>",
-            "product-block": "shopify:\/\/shop_images\/Untitled-4_139c53e5-7884-4801-9ed7-fd999cbb6445.png",
+            "product-html": "shopify://shop_images/image_15_d83ca8ac-78a8-4ef0-9465-3f26e2245966.png",
+            "ern_points-2": "<p>earn <strong>208 pts </strong></p>",
+            "product-block": "shopify://shop_images/Untitled-4_139c53e5-7884-4801-9ed7-fd999cbb6445.png",
             "product": "dr-pawpaw-original-balm"
           }
         }
@@ -1661,12 +1122,12 @@
       "settings": {
         "heading": "Skincare Essentials",
         "subheading": "From balm to body glow — melt, nourish, smooth, and protect. These everyday heroes are your shortcut to fresh, radiant, and sun-safe skin that feels as good as it looks.",
-        "product_left-badge": "shopify:\/\/shop_images\/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
-        "product_products": "shopify:\/\/shop_images\/Artboard_2_b8d7ebcb-b136-42aa-a776-3ded5a5033d4.png",
+        "product_left-badge": "shopify://shop_images/Logo_Eveline_2a3f3db1-eee1-4c8f-8446-cc643a753829.svg",
+        "product_products": "shopify://shop_images/Artboard_2_b8d7ebcb-b136-42aa-a776-3ded5a5033d4.png",
         "product_left": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
-        "ern_points": "<p>earn <strong>208 pts <\/strong><\/p>",
+        "ern_points": "<p>earn <strong>208 pts </strong></p>",
         "view_all_label": "View All",
-        "view_all_url": "shopify:\/\/collections",
+        "view_all_url": "shopify://collections",
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 0,
         "padding_text_top_desktop": 120,
@@ -1677,6 +1138,560 @@
         "padding_text_bottom_mobile": 24
       }
     },
+    "images_with_popup_skincare_7waxGF": {
+      "type": "images-with-popup-skincare",
+      "blocks": {
+        "review_bchmyh": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-05-06_at_16.14.58_1_25e00d98-fac5-4f47-a5c8-641d7bedf197.png",
+            "modal_title": "Eveline",
+            "modal_name-insta": "Vianca.janelle_",
+            "modal_text": "<p>“ tried the Eveline body lotion and I’m so impressed! It melts into the skin like a dream, leaving it soft, smooth, and glowy without any greasy feel. The scent is super fresh and subtleperfect for everyday wear.Honestly, it feels like a little spa moment in my daily routine Highly recommend if you’re looking for something hydrating but lightweight!”</p>",
+            "ern_points": "<p>earn<strong> 2565 </strong>pts </p>",
+            "product_choose": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
+            "show_popup": true
+          }
+        },
+        "review_VYh4eR": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/unnamed_6.png",
+            "modal_title": "",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "",
+            "ern_points": "<p>Earn 208 pts</p>",
+            "product_choose": "",
+            "show_popup": false
+          }
+        },
+        "review_ArKxnA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Image_20250705_121024_409.jpg",
+            "modal_title": "Eveline",
+            "modal_name-insta": "Anushkamathur29",
+            "modal_text": "<p>“Absolutely love the Eveline Lip Oil! It feels super lightweight and non-sticky, yet keeps my lips hydrated all day. Gives a beautiful glossy finish without feeling heavy. I use it on its own or over lipstick—works perfectly both ways. Totally worth it for the price!”</p>",
+            "ern_points": "<p>earn<strong> 2229 </strong>pts </p>",
+            "product_choose": "eveline-cosmetics-wonder-match-soft-touch-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_yexhbi": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138356_1.jpg",
+            "modal_title": "Dr.PAWPAW",
+            "modal_name-insta": "philinfine",
+            "modal_text": "<p>“I’ve been using this serum for a couple of weeks now, and I can already see a difference! My skin feels super hydrated and looks more radiant.”</p>",
+            "ern_points": "<p>earn<strong> 2958 </strong>pts </p>",
+            "product_choose": "dr-pawpaw-your-gorgeous-skin-4in1-serum-30ml",
+            "show_popup": true
+          }
+        },
+        "review_YbXTwE": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-05-06_at_16.14.58_84cfccf8-a3d6-48d0-ab9a-6792c8d4bab1.png",
+            "modal_title": "Koric",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn<strong> 2013</strong> pts </p>",
+            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
+            "show_popup": true
+          }
+        },
+        "review_TkrJkT": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138369.jpg",
+            "modal_title": "Dr paw paw",
+            "modal_name-insta": "asleshhaa",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn <strong>2148 </strong>pts </p>",
+            "product_choose": "dr-pawpaw-original-balm",
+            "show_popup": true
+          }
+        },
+        "review_7KkRYT": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image1w.png",
+            "modal_title": "Dr.PAWPAW",
+            "modal_name-insta": "aadhirakrishna",
+            "modal_text": "<p>“This day cream has become a staple in my morning routine! It’s super lightweight, absorbs quickly, and leaves my skin feeling soft and fresh all day. I love that it’s fragrance-free—perfect for my sensitive skin.”</p>",
+            "ern_points": "<p>earn<strong> 2958</strong> pts </p>",
+            "product_choose": "dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml",
+            "show_popup": true
+          }
+        },
+        "review_cQQ8xE": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/asg.png",
+            "modal_title": "",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "",
+            "ern_points": "<p>Earn 208 pts</p>",
+            "product_choose": "",
+            "show_popup": false
+          }
+        },
+        "review_DNAeff": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
+            "modal_title": "Revolution",
+            "modal_name-insta": "@neeeveee__",
+            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”</p>",
+            "ern_points": "<p>earn<strong> 1347 </strong>pts </p>",
+            "product_choose": "relove-drip-it-glossy-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_UXtMCH": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_37696.png",
+            "modal_title": "",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "",
+            "ern_points": "<p>Earn 208 pts</p>",
+            "product_choose": "",
+            "show_popup": false
+          }
+        },
+        "review_jfWfca": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-05-06_at_16.14.58_1_25e00d98-fac5-4f47-a5c8-641d7bedf197.png",
+            "modal_title": "Eveline",
+            "modal_name-insta": "Vianca.janelle_",
+            "modal_text": "<p>“ tried the Eveline body lotion and I’m so impressed! It melts into the skin like a dream, leaving it soft, smooth, and glowy without any greasy feel. The scent is super fresh and subtleperfect for everyday wear.Honestly, it feels like a little spa moment in my daily routine Highly recommend if you’re looking for something hydrating but lightweight!”</p>",
+            "ern_points": "<p>earn<strong> 2565 </strong>pts </p>",
+            "product_choose": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
+            "show_popup": true
+          }
+        },
+        "review_z88LVh": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/unnamed_6.png",
+            "modal_title": "",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "",
+            "ern_points": "<p>Earn 208 pts</p>",
+            "product_choose": "",
+            "show_popup": false
+          }
+        },
+        "review_y9fDCG": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138352_1.jpg",
+            "modal_title": "Dr.PAWPAW",
+            "modal_name-insta": "itsallaboutaish",
+            "modal_text": "<p>“This is my new go-to for everyday makeup. Just a few dabs and I look fresh instantly. It’s not sticky, gives a nice glow, and works great on both lips and cheeks. So handy and cute!”</p>",
+            "ern_points": "<p>earn<strong> 1608 </strong>pts </p>",
+            "product_choose": "dr-pawpaw-tinted-lip-balm-10ml",
+            "show_popup": true
+          }
+        },
+        "review_AKfC4L": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/new_564de4a3-c679-473a-b7a3-492fa819479f.png",
+            "modal_title": "Koric",
+            "modal_name-insta": "nilanjana_biswas_",
+            "modal_text": "<p>“Koric cleansing balm is honestly a game-changer! It melts off all my makeup so easily—even waterproof products”</p>",
+            "ern_points": "<p>earn<strong> 2013</strong> pts </p>",
+            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
+            "show_popup": true
+          }
+        },
+        "review_QaJdXE": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Frame_37668.png",
+            "modal_title": "Lamel",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn<strong> 208</strong> pts </p>",
+            "product_choose": "18-color-eyeshadow-palette-holi-slay",
+            "show_popup": false
+          }
+        },
+        "review_J3JbFh": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Frame_9471.png",
+            "modal_title": "Lamel",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn<strong> 208</strong> pts </p>",
+            "product_choose": "18-color-eyeshadow-palette-holi-slay",
+            "show_popup": false
+          }
+        },
+        "review_UyiVAy": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Frame_37668.png",
+            "modal_title": "Lamel",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn<strong> 208</strong> pts </p>",
+            "product_choose": "18-color-eyeshadow-palette-holi-slay",
+            "show_popup": false
+          }
+        },
+        "review_L8zCzk": {
+          "type": "review",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
+            "modal_title": "Revolution",
+            "modal_name-insta": "@neeeveee__",
+            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”</p>",
+            "ern_points": "<p>earn<strong> 1347 </strong>pts </p>",
+            "product_choose": "relove-drip-it-glossy-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_bDwx87": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138347_1.jpg",
+            "modal_title": "Lamel",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn<strong> 208</strong> pts </p>",
+            "product_choose": "18-color-eyeshadow-palette-holi-slay",
+            "show_popup": false
+          }
+        },
+        "review_EpJDRi": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138369.jpg",
+            "modal_title": "Dr paw paw",
+            "modal_name-insta": "asleshhaa",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”</p>",
+            "ern_points": "<p>earn <strong>2148 </strong>pts </p>",
+            "product_choose": "dr-pawpaw-original-balm",
+            "show_popup": true
+          }
+        },
+        "review_8zaMmd": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Image_20250705_121024_409.jpg",
+            "modal_title": "Eveline",
+            "modal_name-insta": "Anushkamathur29",
+            "modal_text": "<p>“Absolutely love the Eveline Lip Oil! It feels super lightweight and non-sticky, yet keeps my lips hydrated all day. Gives a beautiful glossy finish without feeling heavy. I use it on its own or over lipstick—works perfectly both ways. Totally worth it for the price!”</p>",
+            "ern_points": "<p>earn<strong> 2229 </strong>pts </p>",
+            "product_choose": "eveline-cosmetics-wonder-match-soft-touch-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_mPPjbk": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138356_1.jpg",
+            "modal_title": "Dr.PAWPAW",
+            "modal_name-insta": "philinfine",
+            "modal_text": "<p>“I’ve been using this serum for a couple of weeks now, and I can already see a difference! My skin feels super hydrated and looks more radiant.”</p>",
+            "ern_points": "<p>earn<strong> 2958 </strong>pts </p>",
+            "product_choose": "dr-pawpaw-your-gorgeous-skin-4in1-serum-30ml",
+            "show_popup": true
+          }
+        },
+        "review_6N4UAH": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
+            "modal_title": "Revolution",
+            "modal_name-insta": "@neeeveee__",
+            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”</p>",
+            "ern_points": "<p>earn<strong> 1347 </strong>pts </p>",
+            "product_choose": "relove-drip-it-glossy-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_dNgKyj": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Frame_37696.png",
+            "modal_title": "",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "",
+            "ern_points": "<p>Earn 208 pts</p>",
+            "product_choose": "",
+            "show_popup": false
+          }
+        },
+        "review_jPn3Qm": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image1w.png",
+            "modal_title": "Dr.PAWPAW",
+            "modal_name-insta": "aadhirakrishna",
+            "modal_text": "<p>“This day cream has become a staple in my morning routine! It’s super lightweight, absorbs quickly, and leaves my skin feeling soft and fresh all day. I love that it’s fragrance-free—perfect for my sensitive skin.”</p>",
+            "ern_points": "<p>earn<strong> 2958</strong> pts </p>",
+            "product_choose": "dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml",
+            "show_popup": true
+          }
+        },
+        "review_BYfNeU": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/asg.png",
+            "modal_title": "",
+            "modal_name-insta": "angel_priya04",
+            "modal_text": "",
+            "ern_points": "<p>Earn 208 pts</p>",
+            "product_choose": "",
+            "show_popup": false
+          }
+        },
+        "review_haN6DA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138352_1.jpg",
+            "modal_title": "Dr.PAWPAW",
+            "modal_name-insta": "itsallaboutaish",
+            "modal_text": "<p>“This is my new go-to for everyday makeup. Just a few dabs and I look fresh instantly. It’s not sticky, gives a nice glow, and works great on both lips and cheeks. So handy and cute!”</p>",
+            "ern_points": "<p>earn<strong> 1608 </strong>pts </p>",
+            "product_choose": "dr-pawpaw-tinted-lip-balm-10ml",
+            "show_popup": true
+          }
+        },
+        "review_NaRVfP": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/new_564de4a3-c679-473a-b7a3-492fa819479f.png",
+            "modal_title": "Koric",
+            "modal_name-insta": "nilanjana_biswas_",
+            "modal_text": "<p>“Koric cleansing balm is honestly a game-changer! It melts off all my makeup so easily—even waterproof products”</p>",
+            "ern_points": "<p>earn<strong> 208</strong> pts </p>",
+            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
+            "show_popup": true
+          }
+        }
+      },
+      "block_order": [
+        "review_bchmyh",
+        "review_VYh4eR",
+        "review_ArKxnA",
+        "review_yexhbi",
+        "review_YbXTwE",
+        "review_TkrJkT",
+        "review_7KkRYT",
+        "review_cQQ8xE",
+        "review_DNAeff",
+        "review_UXtMCH",
+        "review_jfWfca",
+        "review_z88LVh",
+        "review_y9fDCG",
+        "review_AKfC4L",
+        "review_QaJdXE",
+        "review_J3JbFh",
+        "review_UyiVAy",
+        "review_L8zCzk",
+        "review_bDwx87",
+        "review_EpJDRi",
+        "review_8zaMmd",
+        "review_mPPjbk",
+        "review_6N4UAH",
+        "review_dNgKyj",
+        "review_jPn3Qm",
+        "review_BYfNeU",
+        "review_haN6DA",
+        "review_NaRVfP"
+      ],
+      "custom_css": [
+        "a.veiw-button-best-seller {background: #000; color: #fff; font-weight: 600; font-size: 13px; padding: 12px; text-align: center; border-radius: 50px;}"
+      ],
+      "settings": {
+        "bg_image_desktop": "shopify://shop_images/Group_new.png",
+        "heading": "Hear from them",
+        "subheading": "Because no one tells it better than those who’ve seen the results themselves"
+      }
+    },
+    "images_with_popup_skincare_mobile_EatgNQ": {
+      "type": "images-with-popup-skincare-mobile",
+      "blocks": {
+        "review_dBj9TU": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-05-06_at_16.14.58_1_25e00d98-fac5-4f47-a5c8-641d7bedf197.png",
+            "modal_name": "<p>Vianca.janelle_</p>",
+            "modal_title": "Eveline",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br/></p>",
+            "ern_points": "<p>earn <strong>2565 </strong>pts</p>",
+            "product_choose": "eveline-cosmetics-beauty-glow-illuminating-and-smoothing-body-lotion-350-ml",
+            "show_popup": true
+          }
+        },
+        "review_89yVqx": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Group_9474_1.png",
+            "modal_name": "<p>Priya, 25 | Lucknow</p>",
+            "modal_title": "Lamel",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br/></p>",
+            "ern_points": "<p>earn 208 pts</p>",
+            "product_choose": "ardell-naked-lash-429-1-pair",
+            "show_popup": false
+          }
+        },
+        "review_RKhDqA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Image_20250705_121024_409.jpg",
+            "modal_name": "<p>Anushkamathur29</p>",
+            "modal_title": "Eveline",
+            "modal_text": "<p>“Absolutely love the Eveline Lip Oil! It feels super lightweight and non-sticky, yet keeps my lips hydrated all day. Gives a beautiful glossy finish without feeling heavy. I use it on its own or over lipstick—works perfectly both ways. Totally worth it for the price”<br/></p>",
+            "ern_points": "<p>earn <strong>2229 </strong>pts</p>",
+            "product_choose": "eveline-cosmetics-wonder-match-soft-touch-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_XDDhCN": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138356_1.jpg",
+            "modal_name": "<p>@philinfine</p>",
+            "modal_title": "Dr.PAWPAW",
+            "modal_text": "<p>“I’ve been using this serum for a couple of weeks now, and I can already see a difference! My skin feels super hydrated and looks more radiant.”<br/></p>",
+            "ern_points": "<p>earn <strong>2958</strong> pts</p>",
+            "product_choose": "dr-pawpaw-your-gorgeous-skin-4in1-serum-30ml",
+            "show_popup": true
+          }
+        },
+        "review_Ymrkgt": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_6defa3ca-28ec-4ae7-8349-ba26260673be.png",
+            "modal_name": "<p>@neeeveee__</p>",
+            "modal_title": "Revolution Beauty",
+            "modal_text": "<p>“I’m obsessed with this lip oil! It feels like butter on the lips, and gives me that juicy, glazed-donut shine without being sticky. The hydration is unreal. My lips feel soft and nourished for hours. Total 10/10 for everyday glam or no-makeup days. Basically… if you’re not drippin’, wyd?”<br/></p>",
+            "ern_points": "<p>earn <strong>1347</strong>pts</p>",
+            "product_choose": "relove-drip-it-glossy-lip-oil",
+            "show_popup": true
+          }
+        },
+        "review_fUN4f4": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Group_9475.png",
+            "modal_name": "<p>Priya, 25 | Lucknow</p>",
+            "modal_title": "Lamel",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br/></p>",
+            "ern_points": "<p>earn 208 pts</p>",
+            "product_choose": "ardell-naked-lash-429-1-pair",
+            "show_popup": false
+          }
+        },
+        "review_VDpBBi": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-05-06_at_16.14.58_84cfccf8-a3d6-48d0-ab9a-6792c8d4bab1.png",
+            "modal_name": "<p>@nilanjana_biswas</p>",
+            "modal_title": "koric",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br/></p>",
+            "ern_points": "<p>earn <strong>2013 </strong>pts</p>",
+            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
+            "show_popup": true
+          }
+        },
+        "review_FbWXxw": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138369.jpg",
+            "modal_name": "<p>@misathrift</p>",
+            "modal_title": "Dr. Paw Paw",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br/></p>",
+            "ern_points": "<p>earn <strong>2148 </strong>pts</p>",
+            "product_choose": "dr-pawpaw-original-balm",
+            "show_popup": true
+          }
+        },
+        "review_Fnkhrk": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138357.jpg",
+            "modal_name": "<p>@sorellebeautyofficial</p>",
+            "modal_title": "Dr.PAWPAW",
+            "modal_text": "<p>“This day cream has become a staple in my morning routine! It’s super lightweight, absorbs quickly, and leaves my skin feeling soft and fresh all day. I love that it’s fragrance-free—perfect for my sensitive skin.”<br/></p>",
+            "ern_points": "<p>earn <strong>2958 </strong>pts</p>",
+            "product_choose": "dr-pawpaw-your-gorgeous-skin-hydrating-day-cream-45ml",
+            "show_popup": true
+          }
+        },
+        "review_UXHQHB": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Group_9476.png",
+            "modal_name": "<p>Priya, 25 | Lucknow</p>",
+            "modal_title": "Lamel",
+            "modal_text": "<p>“I was skeptical at first, but after using these products for a few months, my skin’s never looked better. I love how they don’t just cover problems—they really help my skin heal and glow naturally.”<br/></p>",
+            "ern_points": "<p>earn 208 pts</p>",
+            "product_choose": "ardell-3d-faux-mink-859-4-pack",
+            "show_popup": false
+          }
+        },
+        "review_DUq9AD": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/1000138352.jpg",
+            "modal_name": "<p><strong>itsallaboutaish</strong></p>",
+            "modal_title": "Dr.PAWPAW",
+            "modal_text": "<p>“This is my new go-to for everyday makeup. Just a few dabs and I look fresh instantly. It’s not sticky, gives a nice glow, and works great on both lips and cheeks. So handy and cute!”<br/></p>",
+            "ern_points": "<p>earn <strong>1608 </strong>pts</p>",
+            "product_choose": "dr-pawpaw-tinted-lip-balm-10ml",
+            "show_popup": true
+          }
+        },
+        "review_gBQBqr": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image_aa45728d-0184-4b3e-9c85-a9c7235867ff.png",
+            "modal_name": "<p><strong>itsallaboutaish</strong></p>",
+            "modal_title": "nilanjana_biswas_",
+            "modal_text": "<p>“Koric cleansing balm is honestly a game-changer! It melts off all my makeup so easily—even waterproof products”<br/></p>",
+            "ern_points": "<p>earn <strong>2,013 </strong>pts</p>",
+            "product_choose": "koric-protein-superfood-cleansing-balm-removes-makeup-soothes-skin",
+            "show_popup": true
+          }
+        }
+      },
+      "block_order": [
+        "review_dBj9TU",
+        "review_89yVqx",
+        "review_RKhDqA",
+        "review_XDDhCN",
+        "review_Ymrkgt",
+        "review_fUN4f4",
+        "review_VDpBBi",
+        "review_FbWXxw",
+        "review_Fnkhrk",
+        "review_UXHQHB",
+        "review_DUq9AD",
+        "review_gBQBqr"
+      ],
+      "custom_css": [
+        "a.veiw-button-best-seller {background: #000; color: #fff; font-weight: 600; font-size: 12px; padding: 10px; text-align: center; border-radius: 50px;}"
+      ],
+      "settings": {
+        "heading": "Hear from them",
+        "subheading": "Because no one tells it better than those who’ve seen the results themselves",
+        "bg_image_mobile": "shopify://shop_images/Group-transformed.png"
+      }
+    },
     "combo_card_skincare_nmtAmk": {
       "type": "combo-card-skincare",
       "blocks": {
@@ -1684,36 +1699,36 @@
           "type": "product",
           "settings": {
             "product": "absolute-new-york-freshly-bitten-gloss",
-            "product_left-badge": "shopify:\/\/shop_images\/image_67396606-440e-4cae-999b-f5711049cf7f.png",
-            "product_image": "shopify:\/\/shop_images\/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
-            "ern_points": "<p>earn <strong>208<\/strong> pts <\/p>"
+            "product_left-badge": "shopify://shop_images/image_67396606-440e-4cae-999b-f5711049cf7f.png",
+            "product_image": "shopify://shop_images/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
+            "ern_points": "<p>earn <strong>208</strong> pts </p>"
           }
         },
         "product_GgzUhU": {
           "type": "product",
           "settings": {
             "product": "absolute-new-york-freshly-bitten-gloss",
-            "product_left-badge": "shopify:\/\/shop_images\/image_4904e08c-1cde-4869-ace6-b34490591f84.png",
-            "product_image": "shopify:\/\/shop_images\/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
-            "ern_points": "<p>earn <strong>208<\/strong> pts <\/p>"
+            "product_left-badge": "shopify://shop_images/image_4904e08c-1cde-4869-ace6-b34490591f84.png",
+            "product_image": "shopify://shop_images/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
+            "ern_points": "<p>earn <strong>208</strong> pts </p>"
           }
         },
         "product_wUhjJE": {
           "type": "product",
           "settings": {
             "product": "absolute-new-york-freshly-bitten-gloss",
-            "product_left-badge": "shopify:\/\/shop_images\/image_15_d83ca8ac-78a8-4ef0-9465-3f26e2245966.png",
-            "product_image": "shopify:\/\/shop_images\/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
-            "ern_points": "<p>earn <strong>208<\/strong> pts <\/p>"
+            "product_left-badge": "shopify://shop_images/image_15_d83ca8ac-78a8-4ef0-9465-3f26e2245966.png",
+            "product_image": "shopify://shop_images/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
+            "ern_points": "<p>earn <strong>208</strong> pts </p>"
           }
         },
         "product_zBbjpf": {
           "type": "product",
           "settings": {
             "product": "absolute-new-york-freshly-bitten-gloss",
-            "product_left-badge": "shopify:\/\/shop_images\/imagelogo_8dedeb64-ea90-4fc2-9a39-80a02f326989.png",
-            "product_image": "shopify:\/\/shop_images\/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
-            "ern_points": "<p>earn <strong>208<\/strong> pts <\/p>"
+            "product_left-badge": "shopify://shop_images/imagelogo_8dedeb64-ea90-4fc2-9a39-80a02f326989.png",
+            "product_image": "shopify://shop_images/image_89_041a493a-19b6-4323-ad22-7e3359a601f3.png",
+            "ern_points": "<p>earn <strong>208</strong> pts </p>"
           }
         }
       },
@@ -1745,33 +1760,33 @@
         "icon_item_LqkhyL": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37684.png",
+            "icon": "shopify://shop_images/Frame_37684.png",
             "heading": "Vegan",
-            "text": "<p>No animal-derived ingredients<\/p>"
+            "text": "<p>No animal-derived ingredients</p>"
           }
         },
         "icon_item_jcGh9n": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37681.png",
+            "icon": "shopify://shop_images/Frame_37681.png",
             "heading": "Non-toxic",
-            "text": "<p>Free from harsh chemicals<\/p>"
+            "text": "<p>Free from harsh chemicals</p>"
           }
         },
         "icon_item_jK8keq": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37682.png",
+            "icon": "shopify://shop_images/Frame_37682.png",
             "heading": "Cruelty-free",
-            "text": "<p>Not tested on animals<\/p>"
+            "text": "<p>Not tested on animals</p>"
           }
         },
         "icon_item_ENzGFe": {
           "type": "icon_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/Frame_37683.png",
+            "icon": "shopify://shop_images/Frame_37683.png",
             "heading": "Dermatologist-tested",
-            "text": "<p>Gentle and safe for skin<\/p>"
+            "text": "<p>Gentle and safe for skin</p>"
           }
         }
       },
@@ -1800,9 +1815,9 @@
         "video_media_t9BHzM": {
           "type": "video-media",
           "settings": {
-            "banner-url": "shopify:\/\/pages\/hok-rewards",
-            "banner-video-desktop": "shopify:\/\/files\/videos\/Hok Rewards Desktop New.mp4",
-            "banner-video-mobile": "shopify:\/\/files\/videos\/Hok Rewards Mobile New.mp4",
+            "banner-url": "shopify://pages/hok-rewards",
+            "banner-video-desktop": "shopify://files/videos/Hok Rewards Desktop New.mp4",
+            "banner-video-mobile": "shopify://files/videos/Hok Rewards Mobile New.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1813,6 +1828,7 @@
       "block_order": [
         "video_media_t9BHzM"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "full-width",
         "seo_text": "",
@@ -1866,6 +1882,7 @@
         "heading_yGiiGm",
         "heading_jJ8HeD"
       ],
+      "disabled": true,
       "custom_css": [
         "h2.rich-text__heading:nth-child(1) {font-family: var(--header-family);}",
         ".richtext {background-color: #fcfbf9;}"
@@ -1876,9 +1893,9 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top_desktop": 100,
+        "padding_top_desktop": 10,
         "padding_bottom_desktop": 100,
-        "padding_top_mobile": 72,
+        "padding_top_mobile": 62,
         "padding_bottom_mobile": 45
       }
     },
@@ -1886,7 +1903,7 @@
       "type": "apps",
       "blocks": {
         "instafeed_app_block_UiCTiM": {
-          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
             "title": "",
             "title_color": "",
@@ -1928,8 +1945,6 @@
     "image_curved_nBCB3n",
     "product_tabs_mobile_skin_care_LJwn3L",
     "shop_by_concern_desktop_skincare_Cfcrzh",
-    "images_with_popup_skincare_7waxGF",
-    "images_with_popup_skincare_mobile_EatgNQ",
     "skin_routine_tabs_6gNCcm",
     "skin_care_best_sellers_PGTMrQ",
     "multi_functional_container_8ECyUa",
@@ -1937,6 +1952,8 @@
     "did_you_know_skin_care_VyBB7T",
     "skincare_finds_fkPqyj",
     "skincare_essentials_WQNRHh",
+    "images_with_popup_skincare_7waxGF",
+    "images_with_popup_skincare_mobile_EatgNQ",
     "combo_card_skincare_nmtAmk",
     "skincare_icons_nJ8VRx",
     "multi_functional_container_wrDhRa",

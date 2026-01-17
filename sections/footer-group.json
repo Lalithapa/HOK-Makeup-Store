@@ -1,17 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "main_cart_drawer_446jVG": {
+      "type": "main-cart-drawer",
+      "settings": {}
+    },
     "product_quickview_Ciajkn": {
       "type": "product-quickview",
       "name": "Pd Quick View",
       "settings": {
         "default_product": ""
       }
-    },
-    "main_cart_drawer_446jVG": {
-      "type": "main-cart-drawer",
-      "settings": {}
     },
     "new_footer_kPaAYa": {
       "type": "new-footer",
@@ -34,7 +43,7 @@
           "type": "text",
           "settings": {
             "heading_text": "Shopping Online",
-            "subtext_text": "<p>We accept the following payment methods<\/p>"
+            "subtext_text": "<p>We accept the following payment methods</p>"
           }
         }
       },

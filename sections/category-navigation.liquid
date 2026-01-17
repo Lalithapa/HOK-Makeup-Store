@@ -62,16 +62,27 @@
   >
     <div class="category-cards">
       {% for block in section.blocks %}
+         {% assign img = block.settings.image %}
+         {% assign is_first = forloop.first %}
         <div class="tab-product-cards">
           <a href="{{ block.settings.collection_link }}" title="{{ block.settings.title }}">
             <img
-              src="{{ block.settings.image | image_url }}"
-              width="90"
-              height="{% if template == 'index' %}100%{% else %}55{% endif %}"
-              class="img-fluid"
-              fetchpriority="high"
-              alt="{{ block.settings.title }}"
-            >
+            src="{{ img | image_url: width: 60 }}"
+            srcset="
+              {{ img | image_url: width: 90 }} 90w,
+              {{ img | image_url: width: 180 }} 180w
+            "
+            sizes="(max-width: 768px)  90px"
+            width="{% if template == 'index' %}90{% else %}180{% endif %}"
+            height="{% if template == 'index' %}100{% else %}55{% endif %}" 
+            class="img-fluid" loading="{% if is_first %}eager{% else %}lazy{% endif %}"
+            fetchpriority="{% if is_first %}high{% else %}auto{% endif %}"
+            decoding="async"
+            alt="{{ block.settings.title | escape }}"
+          >
+            {% if block.settings.title %}
+              <p class="font-bold">{{ block.settings.title }}</p>
+            {% endif %}
           </a>
         </div>
       {% endfor %}

@@ -63,7 +63,7 @@
 
 .tabbed-collections {
   text-align: center;
-  height: 100vh;
+  /* height: 100vh; */
   /* background: #f8f5f2; */
 }
 
@@ -277,6 +277,9 @@
   opacity: 1;
 }
 @media screen and (max-width: 768px) {
+  .tabbed-collections-outer button.b-add_to_bag-button.button-cta.atc.pocket {
+  margin-top: 0px;
+}
   .tabbed-collections-products
     .swiper-slide.product-card.tabbed-collections-card {
     margin-right: unset !important;
@@ -396,25 +399,25 @@
     width: 48%;
   }
   .tabbed-collections-outer .b-product_promo_tile-content {
-    height: 125px;
+    height: 140px;
     padding: 0px 5px 0px 5px;
     gap: 9px;
   }
   .tabbed-collections-outer
     .product__pocket_deal_day
     .b-product_promo_vendor-name_link {
-    font-size: 11px;
+    font-size: 14px;
   }
   .tabbed-collections-outer
     .product__pocket_deal_day
     .b-product_promo_tile-name_link {
-    font-size: 9px;
-  }
-  .tabbed-collections-outer .product__pocket_deal_day .b-product_price-value {
     font-size: 12px;
   }
+  .tabbed-collections-outer .product__pocket_deal_day .b-product_price-value {
+    font-size: 14px;
+  }
   .tabbed-collections-outer .button-cta.atc {
-    font-size: 9px;
+    font-size: 12px;
   }
   [data-aos="custom-fade-rotate"] {
     transform: translatey(-300px) rotate(19deg);

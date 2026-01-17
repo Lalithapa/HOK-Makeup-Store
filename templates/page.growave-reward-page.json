@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,30 +23,6 @@
     },
     "1736149646774a2a54": {
       "type": "apps",
-      "blocks": {
-        "growave_loyalty_wishlist_v2_rewards_ways_to_earn_page_widget_qmdQXL": {
-          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/v2.rewards.waysToEarnPageWidget\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-          "settings": {}
-        },
-        "growave_loyalty_wishlist_v2_rewards_ways_to_spend_page_widget_mQgVLf": {
-          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/v2.rewards.waysToSpendPageWidget\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-          "settings": {}
-        },
-        "growave_loyalty_wishlist_block_rewards_vip_tiers_page_widget_AKhQ8m": {
-          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.rewards.vipTiersPageWidget\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-          "settings": {}
-        },
-        "growave_loyalty_wishlist_block_rewards_referral_program_page_widget_GmY76B": {
-          "type": "shopify:\/\/apps\/growave-loyalty-wishlist\/blocks\/block.rewards.referralProgramPageWidget\/b3d2efbe-110a-4e27-84a8-1f2ed63996a4",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "growave_loyalty_wishlist_v2_rewards_ways_to_earn_page_widget_qmdQXL",
-        "growave_loyalty_wishlist_v2_rewards_ways_to_spend_page_widget_mQgVLf",
-        "growave_loyalty_wishlist_block_rewards_vip_tiers_page_widget_AKhQ8m",
-        "growave_loyalty_wishlist_block_rewards_referral_program_page_widget_GmY76B"
-      ],
       "settings": {
         "include_margins": true
       }
