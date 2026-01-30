@@ -224,6 +224,15 @@
       >
         <div class="carousel-wrapper-inner swiper-wrapper">
           {% for block in section.blocks %}
+            {% liquid 
+               if forloop.first
+                assign fetch_priority = 'high'
+                assign lazy_loading = 'eager'
+                else
+                assign fetch_priority = 'auto'
+                assign lazy_loading = 'lazy'
+              endif
+            %}
             <div class="swiper-slide">
               <a
                 href="{{ block.settings['banner-url'] }}"
@@ -234,74 +243,88 @@
               >
                 {% case block.type %}
                   {% when 'image-media' %}
-                    {% assign sizes = '100vw' %}
-                    {% assign widths = '550, 750, 1100, 1500, 1920, 2000, 3000' %}
-                    {% if block.settings['banner-image-mobile'] != blank %}
+                    {% assign desktop_widths = '750, 1100, 1500, 1920, 2400' %}
+                    {% assign mobile_widths  = '320, 375, 390, 414, 480, 550, 750' %}
+                    {% if block.settings.banner-image-mobile != blank %}
                       {{
-                        block.settings['banner-image-desktop']
-                        | image_url: width: 3000
+                        block.settings.banner-image-desktop
+                        | image_url: width: 2400, format: 'webp'
                         | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: 'high',
+                          widths: desktop_widths,
+                          width: '100%',
+                          height: 'auto',
+                          sizes: '(min-width: 768px) 100vw, 0px',
+                          loading: lazy_loading,
+                          fetchpriority: fetch_priority,
                           class: 'w-100 desktop_screen'
                       }}
                       {{
-                        block.settings['banner-image-mobile']
-                        | image_url: width: 550
+                        block.settings.banner-image-mobile
+                        | image_url: width: 750, format: 'webp'
                         | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: 'high',
+                          widths: mobile_widths,
+                          width: '100%',
+                          height: 'auto',
+                          sizes: '(max-width: 767px) 100vw, 0px',
+                          loading: lazy_loading,
+                          fetchpriority: fetch_priority,
                           class: 'w-100 mobile_screen'
                       }}
                     {% else %}
                       {{
-                        block.settings['banner-image-desktop']
-                        | image_url: width: 3000
-                        | image_tag: height: '100%', sizes: sizes, widths: widths, fetchpriority: 'high', class: 'w-100'
+                        block.settings.banner-image-desktop
+                        | image_url: width: 2400, format: 'webp'
+                        | image_tag:
+                          widths: desktop_widths,
+                          width: '100%',
+                          height: 'auto',
+                          sizes: '100vw',
+                          loading: lazy_loading,
+                          fetchpriority: fetch_priority,
+                          class: 'w-100'
                       }}
                     {% endif %}
                   {% when 'video-media' %}
                     {% assign media_desktop = block.settings['banner-video-desktop'] %}
                     {% if block.settings['banner-video-mobile'] != blank %}
                       {% assign media_mobile = block.settings['banner-video-mobile'] %}
-                      <video
-                        poster="{{ media_desktop.preview_image.src | image_url }}"
-                        class="lazyvideo desktop_screen square-banner-media"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                      >
-                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
-                        Your browser does not support the video tag
-                      </video>
-                      <video
-                        poster="{{ media_mobile.preview_image.src | image_url }}"
-                        class="lazyvideo mobile_screen square-banner-media"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                      >
-                        <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
+                      {{
+                        media_desktop
+                        | video_tag: 
+                          image_size: '1920x',
+                          width: '100%',
+                          height: 'auto',
+                          class: 'desktop_screen square-banner-media',
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          controls: false
+                      }}
+                      {{
+                        media_mobile
+                        | video_tag: 
+                          image_size: '390x',
+                          width: '100%',
+                          height: 'auto',
+                          class: 'mobile_screen square-banner-media',
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          controls: false
+                      }}
                     {% else %}
-                      <video
-                        poster="{{ media_desktop.preview_image.src | image_url }}"
-                        class="lazyvideo square-banner-media d-block"
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                      >
-                        <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
-                        Your browser does not support the video tag
-                      </video>
+                       {{
+                        media_desktop
+                        | video_tag: 
+                          image_size: '1920x',
+                          width: '100%',
+                          height: 'auto',
+                          class: 'desktop_screen square-banner-media',
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          controls: false
+                      }}
                     {% endif %}
                 {% endcase %}
               </a>
@@ -309,10 +332,10 @@
                 {% if block.settings.logo %}
                   <div class="banner-info-content-logo mb-0 mb-md-3">
                     <img 
-                      src="{{ block.settings.logo | image_url}}"
+                      src="{{ block.settings.logo | image_url: height: 48 , format: 'png' }}"
                       height="48"
                       width="auto"
-                      fetchpriority="high"
+                      fetchpriority="auto"
                     >
                   </div>
                 {% endif %}
@@ -365,10 +388,10 @@
               {% if block.settings.banner_bottom_logo %}
                 <div class="banner-info-bottom-tag desktop_screen">
                   <img
-                    src="{{  block.settings.banner_bottom_logo | image_url  }}"
+                    src="{{  block.settings.banner_bottom_logo | image_url: height: 30 , format: 'png'  }}"
                     height="30"
                     width="auto"
-                    loading="eager"
+                    loading="lazy"
                     alt="{{ block.settings['banner-url'] }}"
                   >
                 </div>

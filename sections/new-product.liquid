@@ -43,11 +43,11 @@
                 {% if media.media_type == 'image' or media.media_type == 'model' %}
                   <div class="swiper-slide">
                     <img
-                      src="{{ media | image_url }}"
+                      src="{{ media | image_url: width: 100, height: 100 , crop: 'center' , format: 'webp' }}"
                       alt="{{ product.title }}"
                       title="{{ product.title }}"
-                      height="100"
                       width="100"
+                      height="auto"
                       loading="lazy"
                     >
                   </div>
@@ -55,10 +55,10 @@
                 {% else %}
                   <div class="swiper-slide">
                     <img
-                      src="{{ media.preview_image.src | image_url }}"
+                      src="{{ media.preview_image.src | image_url: width: 100, height: 100 , crop: 'center' , format: 'webp' }}"
                       alt="{{ media.alt | escape }}"
-                      height="100%"
-                      width="100%"
+                      width="100"
+                      height="auto"
                       loading="eager"
                     >
                   </div>
@@ -85,12 +85,12 @@
                   <div class="swiper-slide">
                     <div class="image-container">
                       <img
-                        src="{{ media | image_url }}"
+                        src="{{ media | image_url: width: 700, height: 700 , format: 'webp' }}"
                         alt="{{ product.title }}"
                         title="{{ product.title }}"
                         loading="lazy"
                         width="100%"
-                        height="100%"
+                        height="auto"
                         onload="this.parentElement.classList.add('loaded')"
                       >
                     </div>

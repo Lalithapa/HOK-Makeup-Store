@@ -62,24 +62,36 @@
   >
     <div class="category-cards">
       {% for block in section.blocks %}
-         {% assign img = block.settings.image %}
-         {% assign is_first = forloop.first %}
+         {% liquid 
+              assign img = block.settings.image
+               if forloop.index < 4
+                assign fetch_priority = 'high'
+                assign lazy_loading = 'eager'
+              else
+                assign fetch_priority = 'auto'
+                 assign lazy_loading = 'lazy'
+              endif
+              if template == 'index'
+                assign card_width = '90'
+                assign card_height = '100'
+              else
+                assign card_width = '140'
+                assign card_height = '55'
+              endif
+            %}
         <div class="tab-product-cards">
-          <a href="{{ block.settings.collection_link }}" title="{{ block.settings.title }}">
-            <img
-            src="{{ img | image_url: width: 60 }}"
-            srcset="
-              {{ img | image_url: width: 90 }} 90w,
-              {{ img | image_url: width: 180 }} 180w
-            "
-            sizes="(max-width: 768px) 90px, 180px"
-            width="{% if template == 'index' %}90{% else %}180{% endif %}"
-            height="{% if template == 'index' %}100{% else %}55{% endif %}" 
-            class="img-fluid" loading="{% if is_first %}eager{% else %}lazy{% endif %}"
-            fetchpriority="{% if is_first %}high{% else %}auto{% endif %}"
-            decoding="async"
-            alt="{{ block.settings.title | escape }}"
-          >
+          <a href="{{ block.settings.collection_link }}" title="{{ block.settings.title | escape }}">
+             {{
+              img
+              | image_url: width: 140, format: 'webp'
+              | image_tag:
+                width: card_width,
+                height: card_height,
+                loading: lazy_loading,
+                fetchpriority: fetch_priority,
+                class: 'img-fluid',
+                alt: block.settings.title
+            }}
             {% if block.settings.title %}
               <p class="fw-semibold">{{ block.settings.title }}</p>
             {% endif %}

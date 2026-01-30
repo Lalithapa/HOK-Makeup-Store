@@ -66,31 +66,29 @@
         {% if product.images.size > 1 %}
           <img
             class="img-fluid img_url_1"
-            src="{{ img_url_1 | image_url }}"
+            src="{{ img_url_1 | image_url: width: 310, height: 310 , format: 'webp' }}"
             alt="{{ product.images[0].alt }}"
             width="310"
-            height="310"
+            height="auto"
             loading="lazy"
-             
           >
           <img
             class="img-fluid img_url_2"
-            src="{{ img_url_2 | image_url }}"
+            src="{{ img_url_2 | image_url: width: 310, height: 310 , format: 'webp' }}"
             alt="{{ product.images[1].alt }}"
             width="310"
-            height="310"
-            loading="eager"
+            height="auto"
+            loading="lazy"
           >
         {% else %}
           <img
             class="img-fluid"
-            src="{{ product.featured_image | image_url }}"
+            src="{{ product.featured_image | image_url: width: 310, height: 310 , format: 'webp' }}"
             alt="{{ product.title }}"
             title="{{ product.title }}"
             width="310"
             loading="lazy"
-             
-            height="310"
+            height="auto"
           >
         {% endif %}
       </a>
@@ -195,19 +193,19 @@
     {% if product.available and product.variants.size > 1 %}
         <fieldset class="swatch-picker d-flex align-items-center gap-2">
         {% for variant in product.variants limit:3 %}
-            <label
+            <div
                 for="swatch-{{ section.id |  remove: '-' |  remove: '_' }}-{{ variant.id }}{{ product.handle | append: value | modulo: 100 | plus: 1 }}"
                 class="circular_swatch {% if variant.available %}available{% else %}b-swatch_colors-item m-disabled{% endif %}"
-                style="{% if product.variants[forloop.index0].metafields.custom.colour != blank %}background-color:{{ product.variants[forloop.index0].metafields.custom.colour }} !important;{% else %} background-image: url('{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url }} {% else %}{{ variant.featured_image | image_url }}{% endif %}');{% endif %}"
+                style="{% if product.variants[forloop.index0].metafields.custom.colour != blank %}background-color:{{ product.variants[forloop.index0].metafields.custom.colour }} !important;{% else %} background-image: url('{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url: width: 24, format: 'webp' }} {% else %}{{ variant.featured_image | image_url: width: 24, format: 'webp' }}{% endif %}');{% endif %}"
             >
-            </label>
+            </div>
         {% endfor %}
         {% if product.variants.size > 3 %}
             {% liquid
             assign product_count = product.variants.size | minus: 3 %}
-            <label class="circular_swatch circular_swatch_additional_count d-center">
+            <div class="circular_swatch circular_swatch_additional_count d-center">
                <span>{{ product_count | t |  prepend: '+'  }}</span>
-            </label>
+            </div>
         {% endif %}
     </fieldset>
     {% endif %}

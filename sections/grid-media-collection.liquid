@@ -76,89 +76,72 @@
       <div class="new-slider-container">
         <div class="video-hero-container" >
           <a href="{{ section.settings.coll_link_1 }}" class="banner-full" data-location="trends-card-1">
-            {% assign media_poster = section.settings.cont_1_img.preview_image.src | image_url %}
-            <video
-              poster="{{ media_poster }}"
-              class="w-100 img-fluid d-block"
-              autoplay
-              loop
-              muted
-              playsinline
-            >
-              <source
-                src="{{ section.settings.cont_1_img.sources[1].url }}"
-                data-src="{{ section.settings.cont_1_img.sources[1].url }}"
-                type="video/mp4"
-              >
-              Your browser does not support the video tag.
-            </video>
+            {% assign media_poster = section.settings.cont_1_img.preview_image.src | image_url: width: 390, format: 'webp' %}
+            {{ section.settings.cont_1_img
+              | video_tag:
+                image_size: '1200x',
+                autoplay: true,
+                loop: true,
+                muted: true,
+                controls: false,
+                playsinline: true,
+                class: 'w-100 img-fluid d-block',
+                poster: media_poster
+            }}
           </a>
         </div>
         <div class="image-container-for-collection" >
           <a
-            class="banner-full lazyload-media"
+            class="banner-full"
             href="{{ section.settings.coll_link_2 }}" data-location="trends-card-2"
           >
             <div class="banner__href">
               {{ section.settings.content_2 }}
               {{ white_arrow }}
             </div>
+
             <img
-              src="{{ section.settings.cont_2_img | image_url: width: 326, format: 'webp' }}"
-              srcset="
-                {{ section.settings.cont_2_img | image_url: width: 326 }} 326w
-              "
-              sizes="326px"
-              width="326"
-              height="326"
-              alt="{{ section.settings.content_2 | escape }}"
               class="img-fluid mobile_screen"
+              src="{{ section.settings.cont_2_img | image_url: width: 175, format: 'webp' }}"
+              alt="{{ section.settings.content_2 | escape }}"
+              width="175"
+              height="auto"
               loading="lazy"
-              decoding="async"
-              onload="this.parentElement.classList.add('loaded')"
             >
             <img
-              width="100%"
-              height="auto"
-              src="{{ section.settings.cont_2_img_desktop | image_url }}"
+              class="img-fluid desktop_screen"
+              src="{{ section.settings.cont_2_img_desktop | image_url: width: 500, format: 'webp' }}"
               alt="{{ section.settings.content_2 | escape }}"
-              class="img-fluid desktop_screen h-100"
+              width="560"
+              height="auto"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
             >
           </a>
         </div>
         <div class="image-sec-container-for-collection">
           <a
-            class="banner-full lazyload-media"
+            class="banner-full"
             href="{{ section.settings.coll_link_3 }}" data-location="trends-card-3"
           >
             <div class="banner__href">
               {{ section.settings.content_3 }}
               {{ white_arrow }}
             </div>
-            <img
-                src="{{ section.settings.cont_3_img | image_url: width: 326, format: 'webp'}}"
-                srcset="
-                  {{ section.settings.cont_3_img | image_url: width: 326 }} 326w
-                "
-                sizes="326px"
-                width="326"
-                height="326"
-                alt="{{ section.settings.cont_3_img | escape }}"
-                class="img-fluid mobile_screen"
-                loading="lazy"
-                decoding="async"
-                onload="this.parentElement.classList.add('loaded')"
-              >
-            <img
-              width="100%"
-              height="auto"
-              src="{{ section.settings.cont_3_img_desktop | image_url }}"
+             <img
+              class="img-fluid mobile_screen"
+              src="{{ section.settings.cont_3_img| image_url: width: 175, format: 'webp' }}"
               alt="{{ section.settings.content_3 | escape }}"
-              class="img-fluid desktop_screen h-100"
+              width="175"
+              height="auto"
               loading="lazy"
-              onload="this.parentElement.classList.add('loaded')"
+            >
+            <img
+              class="img-fluid desktop_screen"
+              src="{{ section.settings.cont_3_img_desktop | image_url: width: 500, format: 'webp' }}"
+              alt="{{ section.settings.content_3 | escape }}"
+              width="560"
+              height="auto"
+              loading="lazy"
             >
           </a>
         </div>
