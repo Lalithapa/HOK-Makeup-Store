@@ -2,11 +2,11 @@
 <div id="toastifies" class="toastify_notication d-center" style="display:none">
     <div class="notification success m-auto">
       <span class="d-center" >
-        <span>Added to Bag</span>
+        <span>Product Added to Bag</span>
       </span>
-      <span class="view" onclick="cartSlide()">View Bag <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+      {% comment %} <span class="view" onclick="cartSlide()">View Bag <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
       <path d="M1 10.5L5 6L1 1.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-      </svg></span>
+      </svg></span> {% endcomment %}
     </div>
   </div>
   {% comment %} Loading Screen Animation  {% endcomment %}
@@ -25,22 +25,22 @@
 
 .notification {
   background-color: #212529;
-  padding: 20px;
-  width: 350px;
-  border-radius: 4px;
+  padding: 16px;
+  width: 300px;
+  border-radius: 50px;
   box-shadow: 0 6px 10px #00000024, 0 1px 18px #0000001f, 0 3px 5px #0003;
   cursor: pointer;
   font-weight: 500;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   overflow: hidden;
 }
 
 .notification span {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   line-height: 1.6;
   white-space: nowrap;

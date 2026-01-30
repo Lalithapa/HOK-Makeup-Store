@@ -10,7 +10,7 @@
 {
   "current": {
     "logo": "shopify://shop_images/hok_logo_17eab687-076b-411b-b252-295992edca21.png",
-    "logo_width": 120,
+    "logo_width": 180,
     "favicon": "shopify://shop_images/chatty_HOK_Fav_Icon_1_-_512x512_1.png",
     "type_header_font": "fira_sans_n8",
     "heading_scale": 100,
@@ -168,15 +168,9 @@
         "type": "shopify://apps/reelcart/blocks/floating-video/8f2b089e-2cd0-45ca-b34e-c8bf9d0cf450",
         "disabled": false,
         "settings": {
-          "selected_campaign_title": "",
           "initial_position": "bottom-right",
           "position_offset": "40px 40px"
         }
-      },
-      "16274974966654683533": {
-        "type": "shopify://apps/yourtoken-loyalty-rewards/blocks/app-embed/28422318-8bfb-498f-ae3c-12aa490ca976",
-        "disabled": true,
-        "settings": {}
       },
       "36909921495456953": {
         "type": "shopify://apps/ai-speed/blocks/ai-speed/f9e4b8d0-6523-47d0-b77a-783072cc6552",
@@ -188,20 +182,23 @@
           "image_threshold": 30
         }
       },
+      "17368511000352060744": {
+        "type": "shopify://apps/goaffpro-affiliate-marketing/blocks/goaffpro-embedded-pixel/2f4d802b-86c2-47e4-8096-ae1aa3efbab2",
+        "disabled": false,
+        "settings": {}
+      },
       "15623156175785154009": {
         "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
         "disabled": false,
         "settings": {}
       },
-      "5149645339031002760": {
-        "type": "shopify://apps/minmaxify-order-limits/blocks/app-embed-block/3acfba32-89f3-4377-ae20-cbb9abc48475",
-        "disabled": true,
-        "settings": {
-          "async": false
-        }
+      "1561686393582567663": {
+        "type": "shopify://apps/madgic-order-limit/blocks/limit-purchase/ad83b8ff-f1a1-4eae-9b2a-b6fe28459d93",
+        "disabled": false,
+        "settings": {}
       },
-      "17368511000352060744": {
-        "type": "shopify://apps/goaffpro-affiliate-marketing/blocks/goaffpro-embedded-pixel/2f4d802b-86c2-47e4-8096-ae1aa3efbab2",
+      "16274974966654683533": {
+        "type": "shopify://apps/yourtoken-loyalty-rewards/blocks/app-embed/28422318-8bfb-498f-ae3c-12aa490ca976",
         "disabled": false,
         "settings": {}
       }

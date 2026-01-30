@@ -27,7 +27,7 @@
             "icon_size": 14,
             "icon_color": "#000000",
             "icon_text_spacing": 16,
-            "background_color": "#eae1d0",
+            "background_color": "#fff9ec",
             "text_color": "#000000",
             "font_size": 14,
             "font_weight": "400",
@@ -48,12 +48,12 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".tmenu_item_text {font-family: 'Mosvita' !important;}",
+        ".tmenu_item_text {font-family: \"Mosvita\" !important;}",
         ".tmenu_item--root > .tmenu_submenu {box-shadow: none !important; border-top: 0.5px solid #d2d1d1;}"
       ],
       "settings": {
-        "logo_position": "top-center",
-        "menu": "main-menu",
+        "logo_position": "top-left",
+        "menu": "desktop-main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
@@ -62,10 +62,10 @@
         "enable_country_selector": false,
         "enable_language_selector": true,
         "enable_customer_avatar": true,
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 24,
+        "padding_bottom": 0
       }
     }
   },

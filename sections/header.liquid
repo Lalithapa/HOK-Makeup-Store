@@ -1,3 +1,4 @@
+<!-- header.liuid-->
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}"  media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -31,24 +32,23 @@
       }
     }
   {%- endif -%}
-
+ .toggle-bubble,.wishlist-h-count.wishlist-total-count[data-total="0"]{
+    display:none;
+  }
   .menu-drawer-container {
     display: flex;
   }
-
   .list-menu {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-
   .list-menu--inline {
     display: inline-flex;
     /* flex-wrap: wrap; */
     flex-wrap: nowrap;
     white-space: nowrap;
   }
-
   summary.list-menu__item {
     padding-right: 2.7rem;
   }
@@ -67,11 +67,113 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
-  @media screen and (min-width: 750px) {
+.header__center-search .search__input.field__input {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+.header__center-search .field::after,
+.header__center-search .field::before {
+  display: none !important;
+  content: none !important;
+}
+.header__center-search .search__input.field__input:focus,.field:after {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+.logo_search_left_icons_wrapper .search_icons .header__search, .logo_search_left_icons_wrapper .search_icons .header__search details,.logo_search_left_icons_wrapper .search_icons {
+      width: 100%;
+}
+.h-wishlist-icon svg,#cart-icon-bubble{
+  width: 22px;
+ height: 23px;
+}
+.search__button.field__button .svg-wrapper svg {
+    width: 17px;
+    height: 17px;}
+.logo_search_left_icons_wrapper .search_icons{
+  margin:auto;
+}
+ @media screen and (max-width: 768px) {
+  .search_icons.desktop_search{
+    display:none;
+  }
+  .search_icons.mobile_search .header__search,.header {
+    display:flex;
+  }
+  .search_icons.mobile_search details{
+     width: 100%;
+  }
+  .header {
+    display:flex;
+  }
+  .logo_search_left_icons_wrapper{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+  }
+  #Details-menu-drawer-container{
+    display:block;
+  }
+  .header__icon.header__icon--menu span{
+    display:block;
+  }
+  
+  .header__heading-link{
+    padding: .75rem 0rem;
+  }
+  header-drawer {margin-left: unset !important;}
+  .header {
+    padding: 8px 16px 0rem 16px !important;
+}
+.header--mobile-left .header__heading-link {
+  margin-right:3rem;
+}
+  .header__heading-logo-wrapper{ 
+    width: 43%;
+    margin-right: 20px;
+    padding: 6px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 10px 0 rgba(119, 119, 119, 0.25);
+
+  }
+  
+  .search.search-modal__form .field{
+    padding: 0px 16px;
+  }
+  .header__icon  .humburger_wrapper{
+    width: 25px;
+    height: 25px !important;
+    {% comment %} margin-top:5px; {% endcomment %}
+
+    border-radius:50px;
+    background: #000;
+    display: inline-flex !important;;
+  align-items: center;
+  justify-content: center;
+  } 
+  .header__icon .icon.icon-close {
+    height: 20px;
+    width: 14px;
+  }
+}
+
+  @media screen and (min-width: 769px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
+    .logo_search_left_icons_wrapper{
+     display: flex;
+     justify-content: space-between;
+     {% comment %} margin-bottom:6px; {% endcomment %}
+
+    }
+    .search_icons.mobile_search{
+      display:none;
+    }
+
   }
 </style>
 
@@ -81,7 +183,7 @@
   }
 
   .section-header {
-    position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
+    position: sticky; 
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
   @media screen and (min-width: 750px) {
@@ -121,17 +223,14 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
-    {%- liquid
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width {% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+    
+ <div class="logo_search_left_icons_wrapper">
+   {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
-      endif
-
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
+      endif  
     -%}
-
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -161,17 +260,7 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-
-    {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
-        endif
-      endif
-    %}
-
+   
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -202,31 +291,15 @@
       {%- endif -%}
     {%- endif -%}
 
-    <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
-      {% comment %} <div class="desktop-localization-wrapper">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
-            {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {% endif %}
+     <div class="search_icons desktop_search">
+       {% render 'header-search', input_id: 'Search-In-Modal-1' %}
+     </div>
 
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form class="small-hide medium-hide" data-prevent-hide>
-            {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                {%- render 'language-localization', localPosition: 'HeaderLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-      </div> {% endcomment %}
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+    <div class="header__icons {% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+    
+   
+     
+     
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -235,36 +308,9 @@
         {%- endcase -%}
       {%- endfor -%}
      <!-- Right-side-header-icons-starts-here -->
-      <div class="b-header-shopping d-flex align-items-center" style="gap: 2rem;" >
-        {% comment %} {%- if shop.customer_accounts_enabled -%}
-          <a
-            href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-            class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
-            rel="nofollow"
-          >
-            {%- if section.settings.enable_customer_avatar -%}
-              <account-icon>
-                {%- if customer and customer.has_avatar? -%}
-                  {{ customer | avatar }}
-                {%- else -%}
-                  <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-                {%- endif -%}
-              </account-icon>
-            {%- else -%}
-              <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">
-              {%- liquid
-                if customer
-                  echo 'customer.account_fallback' | t
-                else
-                  echo 'customer.log_in' | t
-                endif
-              -%}
-            </span>
-          </a>
-        {%- endif -%} {% endcomment %}
-        <divs class="b-header-account desktop_screen">
+      <div class="b-header-shopping d-flex align-items-center" style="gap: 1.1rem;" >
+        
+        <div class="b-header-account desktop_screen" style="display:none">
           <div class="b-account_links">
             <a class="b-account_links-link m-sign_in" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
               <span class="b-account_links-text">
@@ -285,11 +331,13 @@
               {{ account_element }}
             </div> {% endcomment %}
           </div>
-        </divs>
+        </div>
         <div class="b-header-wishlist d-center h-100">
           <div class="gw-wl-header-icon-placeholder" style="display: block"></div>
           <a href="/apps/wishlist" class="header__icon h-wishlist-icon wishlist-page-widget">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 25 22" fill="none" class="icon"><path d="M12.4869 22C12.2364 21.9968 11.9918 21.9232 11.7804 21.7875C8.18822 19.57 5.48518 17.3766 3.2783 14.8705C2.01853 13.5287 1.04215 11.942 0.408559 10.207C-0.730606 6.84675 0.5832 2.9211 3.46882 1.07256C4.78425 0.221399 6.35422 -0.134962 7.90363 0.0659208C9.45304 0.266804 10.8831 1.01212 11.9431 2.17126C12.1376 2.37977 12.3162 2.60031 12.4869 2.81685C12.7194 2.51694 12.97 2.2317 13.2371 1.96275C13.8816 1.32075 14.6473 0.816306 15.4888 0.479444C16.3303 0.142583 17.2302 -0.0198119 18.1351 0.00192686C19.0214 0.0266866 19.8936 0.23235 20.6992 0.606539C21.5048 0.980728 22.2271 1.51571 22.8227 2.17928C25.0693 4.63732 25.6012 7.62065 24.3072 10.8045C23.6255 12.404 22.6611 13.8647 21.4613 15.1151C19.3548 17.3836 16.9713 19.3724 14.3683 21.0336C14.019 21.2662 13.6578 21.4907 13.3006 21.7113L13.1934 21.7795C12.9825 21.9174 12.738 21.9937 12.4869 22Z" stroke="#000000" fill="#ffffff"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 29 26" fill="none">
+            <path d="M25.6068 13.7159L14.3626 24.85L3.11842 13.7159C2.37676 12.9944 1.79257 12.1271 1.40263 11.1687C1.01269 10.2103 0.825447 9.1816 0.852697 8.14731C0.879947 7.11302 1.1211 6.09557 1.56096 5.15904C2.00082 4.22251 2.62987 3.38718 3.4085 2.70566C4.18712 2.02413 5.09845 1.51117 6.0851 1.19908C7.07174 0.886992 8.11234 0.782533 9.14135 0.892281C10.1704 1.00203 11.1655 1.32361 12.0641 1.83677C12.9627 2.34992 13.7453 3.04355 14.3626 3.87395C14.9826 3.04957 15.7661 2.36201 16.664 1.8543C17.562 1.34659 18.5552 1.02966 19.5813 0.923337C20.6074 0.817019 21.6444 0.923604 22.6275 1.23642C23.6105 1.54924 24.5184 2.06156 25.2943 2.74131C26.0701 3.42106 26.6973 4.25361 27.1366 5.18686C27.5759 6.1201 27.8177 7.13395 27.8471 8.16496C27.8764 9.19596 27.6926 10.2219 27.3071 11.1786C26.9216 12.1353 26.3427 13.0022 25.6068 13.7249" stroke="black" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <span class="wishlist-h-count wishlist-total-count" data-total="0">0</span>
           </a>
         </div>
@@ -301,20 +349,47 @@
                 aria-haspopup="dialog"
                 title="View Cart"
                 href="javascript:void(0)"
-                onclick="cartSlide()" >
-              <span class="b-mini_cart-quantity">
-                <strong class="b-mini_cart-quantity_number">
-                  {% if cart.item_count > -1 %}
-                    <span aria-hidden="true" class="cartIconQty">{{ cart.item_count }}</span>
-                  {% endif %}
+                {% comment %} onclick="cartSlide()" {% endcomment %}
+                 >
+               <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 26" fill="none">
+                <path d="M17.9552 7.42895V4.14112C17.9552 3.33724 17.9506 3.05613 17.8884 2.83749C17.7557 2.3584 17.4268 1.91827 16.9436 1.57293C16.4603 1.22758 15.8444 0.992558 15.1741 0.897672C14.8681 0.85493 14.4748 0.849998 13.3499 0.849998C12.225 0.849998 11.8317 0.85493 11.5257 0.899316C10.8553 0.994202 10.2395 1.22922 9.75622 1.57457C9.27297 1.91992 8.94411 2.36004 8.81134 2.83914C8.75153 3.05613 8.74463 3.33724 8.74463 4.14112V7.42895" stroke="black" stroke-width="1.3"/>
+                <path d="M4.20283 7.64975C4.65885 7.42895 5.22023 7.42895 6.3414 7.42895L8.73402 7.45103H17.9809H20.5126C21.6526 7.45103 22.2219 7.45103 22.6826 7.67523C23.0894 7.87218 23.4361 8.1896 23.6827 8.5907C23.9609 9.04646 24.0527 9.64648 24.2359 10.8443L24.2394 10.8667L25.5838 19.6987L25.5881 19.7267C25.8321 21.3318 25.9552 22.1414 25.7364 22.7729C25.5429 23.33 25.1766 23.7971 24.6985 24.0927C24.1482 24.4289 23.3824 24.4289 21.8524 24.4289H21.8523H4.86956H4.86954C3.31595 24.4289 2.54072 24.4289 1.99193 24.0876C1.51232 23.7852 1.14436 23.3097 0.955664 22.7458C0.740235 22.1003 0.878613 21.2698 1.1538 19.6206L2.62878 10.7885C2.82691 9.5894 2.92755 8.99324 3.20745 8.54654C3.4552 8.15307 3.80001 7.84241 4.20283 7.64975Z" stroke="black" stroke-width="1.3"/>
+                </svg>
+                <span class="b-mini_cart-quantity">
+                <strong class="b-mini_cart-quantity_number {% if cart.item_count == 0 %}toggle-bubble{% endif %}">
+                  
+                    <span aria-hidden="true" class="cartIconQty">
+                      {{ cart.item_count }}
+                    </span>
+                  
                 </strong>
               </span>
+             
             </a>
           </div>
         </div>
       </div>
     </div>
+    
+  </div>
+  <style>
+    .toggle-bubble{
+    display:none;
+  }
+  </style>
+  {%- liquid
+      if section.settings.menu != blank
+        if section.settings.menu_type_desktop == 'dropdown'
+          render 'header-dropdown-menu'
+        elsif section.settings.menu_type_desktop != 'drawer'
+          render 'header-mega-menu'
+        endif
+      endif
+    %}
   </header>
+  <div class="search_icons mobile_search">
+       {% render 'header-search', input_id: 'Search-In-Modal-1' %}
+     </div>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
@@ -470,6 +545,9 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
+    
   </script>
 {%- endif -%}
 
@@ -653,7 +731,7 @@
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 36,
+      "max": 100,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
@@ -663,7 +741,7 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 36,
+      "max": 100,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",

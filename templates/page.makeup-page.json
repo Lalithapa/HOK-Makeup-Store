@@ -109,36 +109,24 @@
     "multi_functional_container_ELVGqR": {
       "type": "multi-functional-container",
       "blocks": {
+        "image_media_cp9NnG": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/jessup",
+            "banner-image-desktop": "shopify://shop_images/Makuep_page_Desktop_0ca29cd2-aaa2-4ee2-be07-2b02cdbd38fb.png",
+            "banner-image-mobile": "shopify://shop_images/Makuep_page_Mobile_png_96f04321-7d63-4162-8ada-f1324cdcade2.png",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
+        },
         "image_media_8Q6DTT": {
           "type": "image-media",
           "settings": {
             "banner-url": "shopify://collections/makeup-revolution",
             "banner-image-desktop": "shopify://shop_images/MUR_D_19bf85fe-caef-4aa8-8311-a5c005e87873.jpg",
             "banner-image-mobile": "shopify://shop_images/MUR_M.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": ""
-          }
-        },
-        "image_media_AJyPxN": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/ardell",
-            "banner-image-desktop": "shopify://shop_images/Ardell_Banner__D.jpg",
-            "banner-image-mobile": "shopify://shop_images/Ardell_Banner__M.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": ""
-          }
-        },
-        "image_media_cp9NnG": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/jessup",
-            "banner-image-desktop": "shopify://shop_images/Jessup_Banner_D.jpg",
-            "banner-image-mobile": "shopify://shop_images/Jessup_Banner_M.jpg",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -156,13 +144,25 @@
             "cta-bg-color": "#000000",
             "shopcatagorytxt": ""
           }
+        },
+        "image_media_AJyPxN": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/ardell",
+            "banner-image-desktop": "shopify://shop_images/Ardell_Banner__D.jpg",
+            "banner-image-mobile": "shopify://shop_images/Ardell_Banner__M.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": ""
+          }
         }
       },
       "block_order": [
-        "image_media_8Q6DTT",
-        "image_media_AJyPxN",
         "image_media_cp9NnG",
-        "image_media_tE4i8L"
+        "image_media_8Q6DTT",
+        "image_media_tE4i8L",
+        "image_media_AJyPxN"
       ],
       "custom_css": [
         ".arrow_handler {left: 2%; width: 96%;}"
@@ -501,6 +501,7 @@
         "product_xmnPGM",
         "product_tqjiDB"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 768px) {.b-coming-subtitle {height: 56px; }}"
       ],
@@ -522,65 +523,6 @@
         "num-slides-lg": "3.4",
         "num-slides-xl": "4.2",
         "num-slides-2xl": "4.2"
-      }
-    },
-    "testimonials_gbMUiH": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_zPKLdG": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/girl1.png",
-            "name": "Shikha S.",
-            "location": "Lucknow",
-            "date": "12.02.25",
-            "product": "Watery Transferproof Lip Cream",
-            "product_link": "shopify://products/focallure-watery-transferproof-lip-cream",
-            "rating": 5,
-            "quote": "Totally in love—smooth, blendable formulas with a flawless, lightweight finish! Vibrant, long-lasting, and inclusive shades in sleek packaging—must-try quality at a great price."
-          }
-        },
-        "testimonial_Lw7TpF": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/girl2.png",
-            "name": "Sushree Sutar",
-            "location": "Delhi",
-            "date": "02.03.25",
-            "product": "L.A. Girl Pro Corrector HD",
-            "product_link": "shopify://products/la-girl-pro-corrector-hd",
-            "rating": 4,
-            "quote": "My friend recommended me HOK makeup website and I am really impressed with the discount on product they are offering... product quality are branded and top notch."
-          }
-        },
-        "testimonial_mEyde4": {
-          "type": "testimonial",
-          "settings": {
-            "image": "shopify://shop_images/girl3.png",
-            "name": "Adhya",
-            "location": "Pune",
-            "date": "25.03.25",
-            "product": "Milani Conceal + Perfect Long Wear Concealer",
-            "product_link": "shopify://products/conceal-perfect-long-wear-concealer",
-            "rating": 5,
-            "quote": "Good quality products at discounted price.. Have a lot of international brands like focallure which is not available at other sites."
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_zPKLdG",
-        "testimonial_Lw7TpF",
-        "testimonial_mEyde4"
-      ],
-      "settings": {
-        "showContainer": "container",
-        "subheading": "Don’t take our word for it",
-        "heading": "Hear it from our customers",
-        "bgcolor": "#f4f4f4",
-        "margin_top_desktop": 48,
-        "margin_bottom_desktop": 48,
-        "margin_top_mobile": 48,
-        "margin_bottom_mobile": 48
       }
     },
     "product_tabs_JHdAYp": {
@@ -625,116 +567,6 @@
         "margin_bottom_desktop": 0,
         "margin_top_mobile": 26,
         "margin_bottom_mobile": 0
-      }
-    },
-    "banner_product_grid_wtKBqN": {
-      "type": "banner-product-grid",
-      "settings": {
-        "showContainer": "container",
-        "background_color": "#fff3f5",
-        "title": "Lashes Speak Louder with Ardell.",
-        "subTitle": "From everyday glam to red carpet drama, there's a lash for every look—and every lash moment.",
-        "image": "shopify://shop_images/Ardell__D.jpg",
-        "mobile_image": "shopify://shop_images/Ardell__M.jpg",
-        "collection": "ardell",
-        "margin_top_desktop": 64,
-        "margin_bottom_desktop": 36,
-        "margin_top_mobile": 48,
-        "margin_bottom_mobile": 36
-      }
-    },
-    "skincare_finds_bi7mG7": {
-      "type": "skincare-finds",
-      "blocks": {
-        "content_EkJyfP": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Eveline_D_dc837e23-ea4b-4bdf-bc13-fb61c2605123.jpg",
-            "url": "shopify://collections/eveline-cosmetics",
-            "title": "Upto 30% Off",
-            "subtitle": "<p><em>Flying off the shelves—don’t let your next beauty fave be gone!</em></p>"
-          }
-        },
-        "content_4eXWCX": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/I_Heart_D_5949bc74-a9e6-4279-8a5f-d196e5e0fcab.jpg",
-            "url": "shopify://collections/i-heart-revolution",
-            "title": "Upto 20% Off",
-            "subtitle": "<p>In 78 wishlists right now!</p>"
-          }
-        },
-        "content_7BR7mE": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Giverny_D_d3da0374-0b1e-4096-9064-7bf85974b2cc.jpg",
-            "url": "shopify://collections/giverny",
-            "title": "Flat 10% Off",
-            "subtitle": "<p>Favourite fragrance of our 60% customers!</p>"
-          }
-        },
-        "content_jbzmam": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Lamel_D_bc6c9b48-b31e-4735-a7bb-742497b17c4d.jpg",
-            "url": "shopify://collections/lamel",
-            "title": "Upto 15% Off",
-            "subtitle": "<p><em>In 47 carts right now!</em></p>"
-          }
-        },
-        "content_yG4ntq": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Pinkflash_D_9da6d981-4f56-4170-9bf7-2ad3a2a4c3b1.jpg",
-            "url": "shopify://collections/pink-flash",
-            "title": "Upto 70% Off",
-            "subtitle": "<p>Just restocked—and already running low again.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "content_EkJyfP",
-        "content_4eXWCX",
-        "content_7BR7mE",
-        "content_jbzmam",
-        "content_yG4ntq"
-      ],
-      "settings": {
-        "showContainer": "container",
-        "background_color": "#ffffff",
-        "coll-title": "Season’s best brands",
-        "button-title": "",
-        "button-url": "",
-        "slide_speed": 500,
-        "showCenter": false,
-        "showFreeScroll": false,
-        "loop": false,
-        "margin_top_desktop": 86,
-        "margin_bottom_desktop": 86,
-        "padding_text_top_desktop": 0,
-        "padding_text_bottom_desktop": 0,
-        "margin_top_mobile": 44,
-        "margin_bottom_mobile": 54,
-        "padding_text_top_mobile": 15,
-        "padding_text_bottom_mobile": 15,
-        "slides-limit": 7,
-        "num-slides-sm": "1.2",
-        "num-slides-md": "2.5",
-        "num-slides-lg": "3",
-        "num-slides-xl": "3.2",
-        "num-slides-2xl": "3.5"
-      }
-    },
-    "tabular_categories_rkqrKN": {
-      "type": "tabular-categories",
-      "disabled": true,
-      "settings": {
-        "showContainer": "container",
-        "combos_url": "",
-        "margin_top_desktop": 36,
-        "margin_bottom_desktop": 88,
-        "margin_top_mobile": 36,
-        "margin_bottom_mobile": 36
       }
     },
     "ticker_tape_erJbLw": {
@@ -916,6 +748,116 @@
         "num-slides-xl": "5.5",
         "num-slides-2xl": "5.5",
         "showArrow": false
+      }
+    },
+    "banner_product_grid_wtKBqN": {
+      "type": "banner-product-grid",
+      "settings": {
+        "showContainer": "container",
+        "background_color": "#fff3f5",
+        "title": "Lashes Speak Louder with Ardell.",
+        "subTitle": "From everyday glam to red carpet drama, there's a lash for every look—and every lash moment.",
+        "image": "shopify://shop_images/Ardell__D.jpg",
+        "mobile_image": "shopify://shop_images/Ardell__M.jpg",
+        "collection": "ardell",
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 48,
+        "margin_bottom_mobile": 36
+      }
+    },
+    "skincare_finds_bi7mG7": {
+      "type": "skincare-finds",
+      "blocks": {
+        "content_EkJyfP": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Eveline_D_dc837e23-ea4b-4bdf-bc13-fb61c2605123.jpg",
+            "url": "shopify://collections/eveline-cosmetics",
+            "title": "Upto 30% Off",
+            "subtitle": "<p><em>Flying off the shelves—don’t let your next beauty fave be gone!</em></p>"
+          }
+        },
+        "content_4eXWCX": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/I_Heart_D_5949bc74-a9e6-4279-8a5f-d196e5e0fcab.jpg",
+            "url": "shopify://collections/i-heart-revolution",
+            "title": "Upto 20% Off",
+            "subtitle": "<p>In 78 wishlists right now!</p>"
+          }
+        },
+        "content_7BR7mE": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Giverny_D_d3da0374-0b1e-4096-9064-7bf85974b2cc.jpg",
+            "url": "shopify://collections/giverny",
+            "title": "Any 3 at 1199",
+            "subtitle": "<p>Favourite fragrance of our 60% customers!</p>"
+          }
+        },
+        "content_jbzmam": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Lamel_D_bc6c9b48-b31e-4735-a7bb-742497b17c4d.jpg",
+            "url": "shopify://collections/lamel",
+            "title": "Upto 15% Off",
+            "subtitle": "<p><em>In 47 carts right now!</em></p>"
+          }
+        },
+        "content_yG4ntq": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Pinkflash_D_9da6d981-4f56-4170-9bf7-2ad3a2a4c3b1.jpg",
+            "url": "shopify://collections/pink-flash",
+            "title": "Upto 70% Off",
+            "subtitle": "<p>Just restocked—and already running low again.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_EkJyfP",
+        "content_4eXWCX",
+        "content_7BR7mE",
+        "content_jbzmam",
+        "content_yG4ntq"
+      ],
+      "settings": {
+        "showContainer": "container",
+        "background_color": "#ffffff",
+        "coll-title": "Season’s best brands",
+        "button-title": "",
+        "button-url": "",
+        "slide_speed": 500,
+        "showCenter": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "margin_top_desktop": 86,
+        "margin_bottom_desktop": 86,
+        "padding_text_top_desktop": 0,
+        "padding_text_bottom_desktop": 0,
+        "margin_top_mobile": 44,
+        "margin_bottom_mobile": 54,
+        "padding_text_top_mobile": 15,
+        "padding_text_bottom_mobile": 15,
+        "slides-limit": 7,
+        "num-slides-sm": "1.2",
+        "num-slides-md": "2.5",
+        "num-slides-lg": "3",
+        "num-slides-xl": "3.2",
+        "num-slides-2xl": "3.5"
+      }
+    },
+    "tabular_categories_rkqrKN": {
+      "type": "tabular-categories",
+      "disabled": true,
+      "settings": {
+        "showContainer": "container",
+        "combos_url": "",
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 88,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36
       }
     },
     "banner_tab_product_grid_MFqR9d": {
@@ -1326,6 +1268,7 @@
         "image_nTnGFU",
         "image_AUm8gK"
       ],
+      "disabled": true,
       "settings": {
         "showContainer": "container",
         "combos_url": "",
@@ -1333,6 +1276,65 @@
         "margin_bottom_desktop": 36,
         "margin_top_mobile": 36,
         "margin_bottom_mobile": 36
+      }
+    },
+    "testimonials_gbMUiH": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_zPKLdG": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/girl1.png",
+            "name": "Shikha S.",
+            "location": "Lucknow",
+            "date": "12.02.25",
+            "product": "Watery Transferproof Lip Cream",
+            "product_link": "shopify://products/focallure-watery-transferproof-lip-cream",
+            "rating": 5,
+            "quote": "Totally in love—smooth, blendable formulas with a flawless, lightweight finish! Vibrant, long-lasting, and inclusive shades in sleek packaging—must-try quality at a great price."
+          }
+        },
+        "testimonial_Lw7TpF": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/girl2.png",
+            "name": "Sushree Sutar",
+            "location": "Delhi",
+            "date": "02.03.25",
+            "product": "L.A. Girl Pro Corrector HD",
+            "product_link": "shopify://products/la-girl-pro-corrector-hd",
+            "rating": 4,
+            "quote": "My friend recommended me HOK makeup website and I am really impressed with the discount on product they are offering... product quality are branded and top notch."
+          }
+        },
+        "testimonial_mEyde4": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/girl3.png",
+            "name": "Adhya",
+            "location": "Pune",
+            "date": "25.03.25",
+            "product": "Milani Conceal + Perfect Long Wear Concealer",
+            "product_link": "shopify://products/conceal-perfect-long-wear-concealer",
+            "rating": 5,
+            "quote": "Good quality products at discounted price.. Have a lot of international brands like focallure which is not available at other sites."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_zPKLdG",
+        "testimonial_Lw7TpF",
+        "testimonial_mEyde4"
+      ],
+      "settings": {
+        "showContainer": "container",
+        "subheading": "Don’t take our word for it",
+        "heading": "Hear it from our customers",
+        "bgcolor": "#f4f4f4",
+        "margin_top_desktop": 48,
+        "margin_bottom_desktop": 48,
+        "margin_top_mobile": 48,
+        "margin_bottom_mobile": 48
       }
     },
     "multi_functional_container_qb7Lz7": {
@@ -1401,14 +1403,13 @@
     "multi_functional_container_awiTfX",
     "multi_functional_container_MqVUJX",
     "comin_soon_products_CnWigy",
-    "testimonials_gbMUiH",
     "product_tabs_JHdAYp",
-    "banner_product_grid_wtKBqN",
-    "skincare_finds_bi7mG7",
-    "tabular_categories_rkqrKN",
     "ticker_tape_erJbLw",
     "multi_functional_container_n4VcCL",
     "multi_functional_container_4XCtN9",
+    "banner_product_grid_wtKBqN",
+    "skincare_finds_bi7mG7",
+    "tabular_categories_rkqrKN",
     "banner_tab_product_grid_MFqR9d",
     "foundation_quiz_WGJbtW",
     "skincare_finds_y4zp7A",
@@ -1416,6 +1417,7 @@
     "custom_liquid_3GVLqR",
     "grid_cards_dQyGrz",
     "combos_grid_AkT6Vp",
+    "testimonials_gbMUiH",
     "multi_functional_container_qb7Lz7",
     "floating_nav_zXYbbx"
   ]

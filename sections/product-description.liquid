@@ -59,6 +59,21 @@
                 {{ product.metafields.custom.address_of_mfg }}
               </p>
             {% endif %}
+            <div>
+              <p class="mt-4"><b>Importer Details</b></p>
+              <p class="product-info-details">
+                  <span>Name :</span>
+                  {% if product.vendor contains "Makeup" or product.vendor contains "revolution" or product.vendor contains "BH Cosmetics" %}
+                    Revolution Beauty India Private Limited
+                  {% else %}
+                   Kanvar Concos Distribution Private Limited
+                  {% endif %}
+                </p>
+              </div>
+              <p class="product-info-details">
+                  <span>Address :</span> A-26, Ground Floor Naraina Industrial Area, Phase-2 Naraina, Delhi (India) - 110028
+                </p>
+              </div>
           </div>
         </div>
       </div>

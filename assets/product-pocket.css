@@ -823,7 +823,7 @@ line-height: 20px; /* 142.857% */
       }
       .b-product_promo_tile-content {
         gap: 12px;
-        height: 240px;
+        /* height: 240px; */
       }
       
       #skincare-container .b-product_promo_tile-content {

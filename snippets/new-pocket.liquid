@@ -54,14 +54,6 @@
               {% endif %}
             </div>
         {% endunless %}
-         {% comment %} 
-         Growave Wishlist 
-         <div
-          style="display: block;"
-          class="gw-add-to-wishlist-product-card-placeholder asdasasas"
-          data-gw-product-id="{{ product.id }}"
-          data-gw-variant-id="{{ product.first_available_variant.id }}"
-        ></div> {% endcomment %}
         <div class="wishlist-engine" data-product_id="{{ product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>
       {% if showCross %}
         <div class="handle_product_overlay">
@@ -76,8 +68,8 @@
             class="img-fluid img_url_1"
             src="{{ img_url_1 | image_url }}"
             alt="{{ product.images[0].alt }}"
-            width="100%"
-            height="auto"
+            width="310"
+            height="310"
             loading="lazy"
              
           >
@@ -85,8 +77,8 @@
             class="img-fluid img_url_2"
             src="{{ img_url_2 | image_url }}"
             alt="{{ product.images[1].alt }}"
-            width="100%"
-            height="auto"
+            width="310"
+            height="310"
             loading="eager"
           >
         {% else %}
@@ -95,10 +87,10 @@
             src="{{ product.featured_image | image_url }}"
             alt="{{ product.title }}"
             title="{{ product.title }}"
-            width="100%"
+            width="310"
             loading="lazy"
              
-            height="auto"
+            height="310"
           >
         {% endif %}
       </a>
@@ -110,15 +102,21 @@
         {% unless pdptag %}
         <div class="custom_label_badge">
           {% for tags in product.tags %}
-            {% if tags contains 'New Arrival' %}
-              <div class="custom_badges">NEW IN</div>
+            {% comment %} This should be remove on 28 feb @Pooja_Yadav {% endcomment %}
+            {% if tags contains '_label_New' %}
+              <div class="custom_badges" style="background-color: #FF52A9">NEW IN</div>
             {% endif %}
             {% if tags contains 'label' %}
+              {% comment %} This unless condition should be remove on 28 feb
+              New arrivals Tags are working on Automation 
+              {% endcomment %}
               {% unless tags contains '_label_New' %}
-                {% assign tag_value = tags | split: '_' | slice: 2 %}
-                <div class="custom_badges">
-                  {{ tag_value }}
-                </div>
+                <p
+                  class="custom_badges"
+                  style=" color:{{ tags | split: '_' | slice:4 }};background-color:{{ tags | split: '_' | slice:3 }}"
+                >
+                  {{ tags | split: '_' | slice: 2 }}
+                </p>
               {% endunless %}
             {% endif %}
           {% endfor %}
@@ -134,7 +132,7 @@
       {% endunless %}
       <p class="b-product_promo_vendor-name">
         <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
-          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929E' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: 'D-CAT' | remove: 'C-CAT'  | remove: 'B2G2' | remove: 'B499' | remove:"B1299" | remove:"M1299" | remove:"E1299" | remove:"L1099" | remove:"R1499" | remove:"M799"| remove:"929D" | remove: "L.A. Girl LA1499" -}}
+          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929E' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: 'D-CAT' | remove: 'C-CAT'  | remove: 'B2G2' | remove: 'B499' | remove:"B1299" | remove:"M1299" | remove:"E1299" | remove:"L1099" | remove:"R1499" | remove:"M799"| remove:"929D" -}}
         </a>
         <a class="b-product_promo_tile-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
           {{- product.title | remove: product.vendor  -}}
@@ -160,11 +158,6 @@
               style="display:none"
             {% endif %}
           >
-            {% comment %}
-              <svg xmlns="http://www.w3.org/2000/svg" width="76" height="20" viewBox="0 0 76 20" fill="none">
-                <path d="M0.5 0H75.5C75.5 0 73.3873 5.94689 73.3873 10C73.3873 14.0531 75.5 20 75.5 20H0.5V0Z" class="position-relative" fill="#9D806B"/>
-              </svg>
-            {% endcomment %}
             <span class="discount_label">
               {{
                 first_variant.compare_at_price
@@ -183,22 +176,22 @@
       {% comment %} <div class="variant_container">
         {% if first_variant.option1 != blank and first_variant.option1 != 'Default Title' %}
           Shade: <span class="variant_name">{{ first_variant.option1 }}</span>
+            {% endif %}
+          </div>
+          
+          {% if product.available and product.variants.size > 1 %}
+          {% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
+          {% render 'new-swatches'
+          with 'Color' as swatch,
+          product: product,
+          indexIs: indexIs,
+          isrecommend: true,
+          isAdvertisement: showCross,
+          random_number: random_number,
+          handleRecommendSec: recommendedSection
+          %}
         {% endif %}
-      </div>
-       
-      {% if product.available and product.variants.size > 1 %}
-      {% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
-      {% render 'new-swatches'
-      with 'Color' as swatch,
-      product: product,
-      indexIs: indexIs,
-      isrecommend: true,
-      isAdvertisement: showCross,
-      random_number: random_number,
-      handleRecommendSec: recommendedSection
-      %}
-    {% endif %}
-   {% endcomment %}
+      {% endcomment %}
     {% if product.available and product.variants.size > 1 %}
         <fieldset class="swatch-picker d-flex align-items-center gap-2">
         {% for variant in product.variants limit:3 %}
@@ -251,23 +244,6 @@
               {% else %}Out of Stock{% endif %}
             </button>
           </div>
-        
-        {% comment %}
-           <form
-          action="/cart/add"
-          method="post"
-          id="AddToCartForm{{ first_variant.id }}"
-        >
-        </form>
-           {% if first_variant.inventory_quantity > 0 %}
-            <div class="b-add_to_bag">
-              <button
-                class="b-add_to_bag-button b-add_to_bagId" >
-                Out Of Stock
-              </button>
-            </div>
-          {% endif %}
-        {% endcomment %}
       </div>
     </div>
     {% comment %} PDP Details Ends {% endcomment %}

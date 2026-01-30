@@ -93,8 +93,8 @@
         "padding_bottom_mobile": 0,
         "heading_text": "",
         "shradhha_link": "",
-        "image": "shopify://shop_images/Frame_37689.png",
-        "image_mobile": "shopify://shop_images/Frame_37690.png"
+        "image": "shopify://shop_images/aaaaaa_1.png",
+        "image_mobile": "shopify://shop_images/qazxcswedv.png"
       }
     },
     "main_hero_banner_cMYFja": {
@@ -291,7 +291,7 @@
         "image_media_PUnqYa"
       ],
       "custom_css": [
-        ".square-banner-carousel {background: #fbfaf9; padding: 80px 0px;}",
+        ".square-banner-carousel {background: #fbfaf9; padding: 40px 0px;}",
         ".square-banner-slide img {border-radius: 20px;}",
         ".swiper-scrollbar.custom_bar,.swiper-scrollbar.custom_bar .swiper-scrollbar-drag {margin-top: 32px;}",
         ".carousel-section-title-wrapper p {display: none;}",
@@ -504,6 +504,127 @@
       ],
       "settings": {
         "text-heading": "shop by concern"
+      }
+    },
+    "multi_functional_container_8ECyUa": {
+      "type": "multi-functional-container",
+      "blocks": {
+        "image_media_9Kz3ak": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/skincare-hyaluronic",
+            "banner-image-desktop": "shopify://shop_images/Hyaluronic_Acid.jpg",
+            "banner-image-mobile": "shopify://shop_images/Hyaluronic_Acid_copy.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Hyaluronic acid"
+          }
+        },
+        "image_media_ELz8Vj": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/skincare-vitamin-c",
+            "banner-image-desktop": "shopify://shop_images/Vitamin_C_7a8886c7-aec7-4461-86fa-d67767f91672.jpg",
+            "banner-image-mobile": "shopify://shop_images/Vitamin_C_copy.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Vitamin C"
+          }
+        },
+        "image_media_dHiaJU": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/skincare-salicylic-acid",
+            "banner-image-desktop": "shopify://shop_images/Salicylic_Acid.jpg",
+            "banner-image-mobile": "shopify://shop_images/Salicylic_Acid_copy.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Salicylic Acid"
+          }
+        },
+        "image_media_yKMKew": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/skincare-niacinamide",
+            "banner-image-desktop": "shopify://shop_images/Niacinamide.jpg",
+            "banner-image-mobile": "shopify://shop_images/Niacinamide_copy.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Niacinamide"
+          }
+        },
+        "image_media_CWM8Rj": {
+          "type": "image-media",
+          "settings": {
+            "banner-url": "shopify://collections/skincare-retinol",
+            "banner-image-desktop": "shopify://shop_images/Retinol.jpg",
+            "banner-image-mobile": "shopify://shop_images/Retinol_copy.jpg",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Retinol"
+          }
+        }
+      },
+      "block_order": [
+        "image_media_9Kz3ak",
+        "image_media_ELz8Vj",
+        "image_media_dHiaJU",
+        "image_media_yKMKew",
+        "image_media_CWM8Rj"
+      ],
+      "custom_css": [
+        "img {border-radius: 20px;}",
+        ".carousel-section-title-wrapper {margin: auto;}",
+        ".cta_text {text-align: center; margin-top: 24px;}",
+        ".square-banner-carousel {padding: 60px 0;}",
+        ".cta_text {font-size: clamp(12px, 2vw, 20px);}",
+        "@media screen and (min-width: 1369px) {.square-banner-slide img {width: 239px !important; }}",
+        "@media (max-width: 768px) {.cta_text {margin-top: 8px; } .square-banner-carousel {padding: 20px 0; } .swiper-scrollbar.custom_bar.swiper-scrollbar-horizontal {margin: 16px 0px 24px 0px; }}"
+      ],
+      "settings": {
+        "showContainer": "page-width",
+        "seo_text": "",
+        "image_priority": false,
+        "enableShuffle": false,
+        "show-shop-now": false,
+        "bg_color": "#fbfaf9",
+        "bg_color_second": "#ffffff",
+        "showCenter": false,
+        "showSliderArrow": false,
+        "showFreeScroll": false,
+        "loop": false,
+        "addInnerPadding": false,
+        "slide_speed": 500,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 40,
+        "margin_bottom_mobile": 30,
+        "title-top-padding": 0,
+        "title_alignment": "center",
+        "carousel-title": "shop by ingredients",
+        "carousel-sub-title": "",
+        "carousel-sub-title-links": "",
+        "num-slides-sm": "3.3",
+        "num-slides-md": "3.2",
+        "num-slides-lg": "5",
+        "num-slides-xl": "5",
+        "num-slides-2xl": "5",
+        "showArrow": false
+      }
+    },
+    "scroll_quotes_text_NwQWNM": {
+      "type": "scroll-quotes-text",
+      "settings": {
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 120,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 70,
+        "quote_text": "<strong>“Invest in your skin</strong>. It is going to <strong>represent</strong> <i>you for a</i> <strong>very long time” </strong>— <i>Linden Tyler</i>"
       }
     },
     "skin_routine_tabs_6gNCcm": {
@@ -798,8 +919,8 @@
         "subheading": "TESTED. PROVEN. CURATED FOR YOU.",
         "margin_top_desktop": 0,
         "margin_bottom_desktop": 0,
-        "padding_text_top_desktop": 80,
-        "padding_text_bottom_desktop": 100,
+        "padding_text_top_desktop": 40,
+        "padding_text_bottom_desktop": 60,
         "margin_top_mobile": 24,
         "margin_bottom_mobile": 24,
         "padding_text_top_mobile": 15,
@@ -823,127 +944,6 @@
         "button_text": "View All",
         "button_url": "shopify://collections/skincare-best-seller",
         "collection": "skincare-best-seller"
-      }
-    },
-    "multi_functional_container_8ECyUa": {
-      "type": "multi-functional-container",
-      "blocks": {
-        "image_media_9Kz3ak": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/skincare-hyaluronic",
-            "banner-image-desktop": "shopify://shop_images/Hyaluronic_Acid.jpg",
-            "banner-image-mobile": "shopify://shop_images/Hyaluronic_Acid_copy.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Hyaluronic acid"
-          }
-        },
-        "image_media_ELz8Vj": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/skincare-vitamin-c",
-            "banner-image-desktop": "shopify://shop_images/Vitamin_C_7a8886c7-aec7-4461-86fa-d67767f91672.jpg",
-            "banner-image-mobile": "shopify://shop_images/Vitamin_C_copy.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Vitamin C"
-          }
-        },
-        "image_media_dHiaJU": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/skincare-salicylic-acid",
-            "banner-image-desktop": "shopify://shop_images/Salicylic_Acid.jpg",
-            "banner-image-mobile": "shopify://shop_images/Salicylic_Acid_copy.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Salicylic Acid"
-          }
-        },
-        "image_media_yKMKew": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/skincare-niacinamide",
-            "banner-image-desktop": "shopify://shop_images/Niacinamide.jpg",
-            "banner-image-mobile": "shopify://shop_images/Niacinamide_copy.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Niacinamide"
-          }
-        },
-        "image_media_CWM8Rj": {
-          "type": "image-media",
-          "settings": {
-            "banner-url": "shopify://collections/skincare-retinol",
-            "banner-image-desktop": "shopify://shop_images/Retinol.jpg",
-            "banner-image-mobile": "shopify://shop_images/Retinol_copy.jpg",
-            "cta-text": "",
-            "cta-text-color": "#ffffff",
-            "cta-bg-color": "#000000",
-            "shopcatagorytxt": "Retinol"
-          }
-        }
-      },
-      "block_order": [
-        "image_media_9Kz3ak",
-        "image_media_ELz8Vj",
-        "image_media_dHiaJU",
-        "image_media_yKMKew",
-        "image_media_CWM8Rj"
-      ],
-      "custom_css": [
-        "img {border-radius: 20px;}",
-        ".carousel-section-title-wrapper {margin: auto;}",
-        ".cta_text {text-align: center; margin-top: 24px;}",
-        ".square-banner-carousel {padding: 120px 0;}",
-        ".cta_text {font-size: clamp(12px, 2vw, 20px);}",
-        "@media screen and (min-width: 1369px) {.square-banner-slide img {width: 239px !important; }}",
-        "@media (max-width: 768px) {.cta_text {margin-top: 8px; } .square-banner-carousel {padding: 20px 0; } .swiper-scrollbar.custom_bar.swiper-scrollbar-horizontal {margin: 16px 0px 24px 0px; }}"
-      ],
-      "settings": {
-        "showContainer": "page-width",
-        "seo_text": "",
-        "image_priority": false,
-        "enableShuffle": false,
-        "show-shop-now": false,
-        "bg_color": "#fbfaf9",
-        "bg_color_second": "#ffffff",
-        "showCenter": false,
-        "showSliderArrow": false,
-        "showFreeScroll": false,
-        "loop": false,
-        "addInnerPadding": false,
-        "slide_speed": 500,
-        "margin_top_desktop": 0,
-        "margin_bottom_desktop": 0,
-        "margin_top_mobile": 60,
-        "margin_bottom_mobile": 30,
-        "title-top-padding": 0,
-        "title_alignment": "center",
-        "carousel-title": "shop by ingredients",
-        "carousel-sub-title": "",
-        "carousel-sub-title-links": "",
-        "num-slides-sm": "3.3",
-        "num-slides-md": "3.2",
-        "num-slides-lg": "5",
-        "num-slides-xl": "5",
-        "num-slides-2xl": "5",
-        "showArrow": false
-      }
-    },
-    "scroll_quotes_text_NwQWNM": {
-      "type": "scroll-quotes-text",
-      "settings": {
-        "margin_top_desktop": 0,
-        "margin_bottom_desktop": 120,
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 70,
-        "quote_text": "<strong>“Invest in your skin</strong>. It is going to <strong>represent</strong> <i>you for a</i> <strong>very long time” </strong>— <i>Linden Tyler</i>"
       }
     },
     "did_you_know_skin_care_VyBB7T": {
@@ -1116,6 +1116,7 @@
         "product_block_FegNLx",
         "product_block_pytFTA"
       ],
+      "disabled": true,
       "custom_css": [
         ".left_grid .product-card:hover .product-description {padding: 0px 10px;}"
       ],
@@ -1945,10 +1946,10 @@
     "image_curved_nBCB3n",
     "product_tabs_mobile_skin_care_LJwn3L",
     "shop_by_concern_desktop_skincare_Cfcrzh",
-    "skin_routine_tabs_6gNCcm",
-    "skin_care_best_sellers_PGTMrQ",
     "multi_functional_container_8ECyUa",
     "scroll_quotes_text_NwQWNM",
+    "skin_routine_tabs_6gNCcm",
+    "skin_care_best_sellers_PGTMrQ",
     "did_you_know_skin_care_VyBB7T",
     "skincare_finds_fkPqyj",
     "skincare_essentials_WQNRHh",

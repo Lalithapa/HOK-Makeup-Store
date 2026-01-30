@@ -2,13 +2,14 @@
   Renders a header drawer menu for mobile and desktop.
   Usage:
   {% render 'header-drawer' %}
-{% endcomment %}
+
 {% capture new_launch  %} 
 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 14 14" fill="none" class="position-relative new-icon" style="top:-8px;left:4px;">
   <rect width="14" height="14" rx="7" fill="#E06E27"/>
   <path d="M8.544 3.623H9.327V9.5H8.616L4.881 4.991H4.872V9.5H4.089V3.623H4.8L8.535 8.132H8.544V3.623Z" fill="white"/>
 </svg>
 {% endcapture %}
+ {% endcomment %}
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -17,7 +18,14 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        <span class="humburger_wrapper icon icon-hamburger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 13 10" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 0.717391C13 0.907655 12.9413 1.09013 12.8368 1.22466C12.7323 1.3592 12.5906 1.43478 12.4429 1.43478H0.557143C0.409379 1.43478 0.267668 1.3592 0.163183 1.22466C0.0586987 1.09013 0 0.907655 0 0.717391C0 0.527127 0.0586987 0.344655 0.163183 0.210118C0.267668 0.0755813 0.409379 0 0.557143 0H12.4429C12.5906 0 12.7323 0.0755813 12.8368 0.210118C12.9413 0.344655 13 0.527127 13 0.717391Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4.65221C13 4.84247 12.9413 5.02494 12.8368 5.15948C12.7323 5.29402 12.5906 5.3696 12.4429 5.3696H0.557143C0.409379 5.3696 0.267668 5.29402 0.163183 5.15948C0.0586987 5.02494 0 4.84247 0 4.65221C0 4.46194 0.0586987 4.27947 0.163183 4.14493C0.267668 4.0104 0.409379 3.93481 0.557143 3.93481H12.4429C12.5906 3.93481 12.7323 4.0104 12.8368 4.14493C12.9413 4.27947 13 4.46194 13 4.65221Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 8.5869C13 8.77716 12.9413 8.95963 12.8368 9.09417C12.7323 9.22871 12.5906 9.30429 12.4429 9.30429H0.557143C0.409379 9.30429 0.267668 9.22871 0.163183 9.09417C0.0586987 8.95963 0 8.77716 0 8.5869C0 8.39663 0.0586987 8.21416 0.163183 8.07963C0.267668 7.94509 0.409379 7.86951 0.557143 7.86951H12.4429C12.5906 7.86951 12.7323 7.94509 12.8368 8.07963C12.9413 8.21416 13 8.39663 13 8.5869Z" fill="white"/>
+        </svg> </span>
+           {% comment %} {{- 'icon-hamburger.svg' | inline_asset_content -}}  {% endcomment %}
+      
         {{- 'icon-close.svg' | inline_asset_content -}}
       </span>
     </summary>
@@ -41,7 +49,8 @@
                         id="HeaderDrawer-{{ link.handle }}"
                         class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
                       >
-                        {{ link.title | escape }} {% if link.handle == 'makeup' or link.handle == 'skin' %} {{ new_launch }} {% endif %}
+                        {{ link.title | escape }} 
+                        {% comment %} {% if link.handle == 'makeup' or link.handle == 'skin' %} {{ new_launch }} {% endif %} {% endcomment %}
                         <span class="svg-wrapper">
                           {% comment %} {{- 'icon-arrow.svg' | inline_asset_content -}} {% endcomment %}
                           {{- 'arrow-next.svg' | inline_asset_content -}}
@@ -79,7 +88,9 @@
                                     {% if childlink.title != 'Explore All' %}
                                       {{ childlink.title | escape }}
                                     {% else %}
-                                      <span>{{ childlink.title | escape }} {{ new_launch }}</span>
+                                      <span>{{ childlink.title | escape }} 
+                                        {% comment %} {{ new_launch }} {% endcomment %}
+                                      </span>
                                     {% endif %}
                                   </a>
                                 {%- else -%}
@@ -152,14 +163,8 @@
                         aria-current="page"
                       {% endif %}
                     >
-                    {% if link.handle == "winter-offer" %}
-                       <span  style="position:relative;top:-4px;">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23" fill="none">
-                            <path d="M7.24029 9.97525L7.30285 10.1008L7.18244 10.172C7.15036 10.1908 7.106 10.2417 7.06251 10.3458C7.02077 10.4457 6.98709 10.5752 6.96394 10.7203C6.91767 11.0105 6.91521 11.3401 6.94414 11.5735L6.95504 11.6622L6.88204 11.7147L1.39763 15.6477L7.43981 12.8258L7.56348 12.7682L7.63271 12.8867C7.65182 12.9189 7.70337 12.9631 7.80751 13.0076C7.90768 13.0503 8.03682 13.0853 8.18118 13.112C8.46968 13.1654 8.79713 13.183 9.02485 13.1809L9.10298 13.18L9.14846 13.2444L14.537 20.8306L10.3199 12.7194L10.2718 12.6267L10.3423 12.5489C10.3462 12.5444 10.3577 12.5279 10.3751 12.4924C10.3918 12.4583 10.4105 12.4137 10.4296 12.3602C10.4678 12.2533 10.5067 12.1169 10.5395 11.9688C10.6058 11.6687 10.6436 11.3406 10.616 11.1181L10.6041 11.0295L10.6781 10.977L17.5674 6.10415L10.1502 9.80656L10.0623 9.85065L9.98662 9.78797C9.78736 9.62049 9.6184 9.46574 9.38073 9.3657C9.14874 9.26807 8.83978 9.21877 8.36909 9.29886L8.27472 9.31478L8.22007 9.235L3.23599 1.89708L7.24029 9.97525Z" fill="#797DFF" stroke="#797DFF" stroke-width="0.3"/>
-                          </svg>
-                      </span>
-                    {% endif %}
-                    {{ link.title | escape }}
+                    {{ link.title | escape }} {% if link.handle == "hok-rewards" %}&nbsp;<img loading="lazy" src="{{ 'star.png' |  asset_url }}" width="23" height="23" alt="hok-rewards">{% endif %}
+                      {% comment %} {% if link.handle == "hok-rewards" %}<img loading="eager" src="//hokmakeup.com/cdn/shop/t/36/assets/hok-rewards.gif?v=180248546365669141791735555189" alt="reward-gif" width="75" height="35">{% else %} {{ link.title | escape }}{% endif %} {% endcomment %}
                     </a>
                   {%- endif -%}
                 </li>

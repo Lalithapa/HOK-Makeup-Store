@@ -142,32 +142,32 @@
     }
    /* text effect css */
   @media screen and (min-width: 768px) {
-      .gradient_mobile::before {
-        background: transparent;
-      }
-      #hero-pagination-wrapper-{{ section.id }} {
-        display:none;
-      }
-      .slider_arrows{
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        left: 2rem;
-        width: calc(100% - 4rem);
-
-      }
-      .slider_arrows .carousel-btn svg {
-          width: 20px;
-          height: 26px;
-          transition: 0.3s ease;
-          opacity:0;
-      }
-      .hero-banner-carousel-layout:hover .carousel-btn svg {
-        opacity:1;
-      }
+    .gradient_mobile::before {
+      background: transparent;
     }
+    #hero-pagination-wrapper-{{ section.id }} {
+      display:none;
+    }
+    .slider_arrows{
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      left: 2rem;
+      width: calc(100% - 4rem);
+
+    }
+    .slider_arrows .carousel-btn svg {
+      width: 50px;
+      height: 50px;
+      transition: 0.3s ease;
+      opacity:0;
+    }
+    .hero-banner-carousel-layout:hover .carousel-btn svg {
+      opacity:1;
+    }
+  }
   @media screen and (max-width:768px){
       .gradient_look:before{
         width: 100%;
@@ -308,15 +308,12 @@
               <div class="banner-info-content {% if block.settings.content_visibility %}{{ block.settings.content_visibility }}{% endif %}">
                 {% if block.settings.logo %}
                   <div class="banner-info-content-logo mb-0 mb-md-3">
-                     <img
-                    src="{{ block.settings.logo | image_url: height: 48 }}"
-                    height="48"
-                    width="140"
-                    style="width:auto; height:48px;"
-                    alt="{{ block.settings.logo.alt | default: 'Brand logo' | escape }}"
-                    fetchpriority="high"
-                    decoding="async"
-                  >
+                    <img 
+                      src="{{ block.settings.logo | image_url}}"
+                      height="48"
+                      width="auto"
+                      fetchpriority="high"
+                    >
                   </div>
                 {% endif %}
                 <div class="banner-info-content-text">
@@ -383,13 +380,15 @@
       {% if section.blocks.size > 1 %}
         <div class="desktop_screen slider_arrows">
           <div id="carousel-prev-{{ section.id }}" class="carousel-btn border-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="45" viewBox="0 0 25 45" fill="none">
-              <path d="M23 2L3 22.6285L23 43" stroke="black" stroke-width="4" stroke-linecap="round"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="20" transform="matrix(-1 0 0 1 40 0)" fill="#2D2D2D" fill-opacity="0.16"/>
+              <path d="M23 14L17.1414 19.8586C17.0633 19.9367 17.0633 20.0633 17.1414 20.1414L23 26" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
           </div>
           <div id="carousel-next-{{ section.id }}" class="carousel-btn border-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="45" viewBox="0 0 25 45" fill="none">
-              <path d="M2 2L22 22.6285L2 43" stroke="black" stroke-width="4" stroke-linecap="round"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect width="40" height="40" rx="20" fill="#2D2D2D" fill-opacity="0.16"></rect>
+              <path d="M17 14L22.8586 19.8586C22.9367 19.9367 22.9367 20.0633 22.8586 20.1414L17 26" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"></path>
             </svg>
           </div>
         </div>
