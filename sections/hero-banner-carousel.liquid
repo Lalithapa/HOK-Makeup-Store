@@ -225,12 +225,13 @@
         <div class="carousel-wrapper-inner swiper-wrapper">
           {% for block in section.blocks %}
             {% liquid 
-               if forloop.first
+              assign desktop_image = block.settings.banner-image-desktop
+              if forloop.first
+                assign loading_attr = 'eager'
                 assign fetch_priority = 'high'
-                assign lazy_loading = 'eager'
-                else
+              else
+                assign loading_attr = 'lazy'
                 assign fetch_priority = 'auto'
-                assign lazy_loading = 'lazy'
               endif
             %}
             <div class="swiper-slide">
@@ -243,7 +244,43 @@
               >
                 {% case block.type %}
                   {% when 'image-media' %}
-                    {% assign desktop_widths = '750, 1100, 1500, 1920, 2400' %}
+                    <picture>
+                      {% if block.settings.banner-image-mobile != blank %}
+                        {% assign mobile_image = block.settings.banner-image-mobile %}
+                        <source
+                          media="(max-width: 767px)"
+                          srcset="
+                            {{ mobile_image | image_url: width: 320, format: 'webp' }} 320w,
+                            {{ mobile_image | image_url: width: 375, format: 'webp' }} 375w,
+                            {{ mobile_image | image_url: width: 414, format: 'webp' }} 414w,
+                            {{ mobile_image | image_url: width: 480, format: 'webp' }} 480w,
+                            {{ mobile_image | image_url: width: 550, format: 'webp' }} 550w,
+                            {{ mobile_image | image_url: width: 750, format: 'webp' }} 750w
+                          "
+                          sizes="100vw"
+                        >
+                      {% endif %}
+
+                      <img
+                        src="{{ desktop_image | image_url: width: 1280, format: 'webp' }}"
+                        srcset="
+                          {{ desktop_image | image_url: width: 960, format: 'webp' }} 960w,
+                          {{ desktop_image | image_url: width: 1100, format: 'webp' }} 1100w,
+                          {{ desktop_image | image_url: width: 1280, format: 'webp' }} 1280w,
+                          {{ desktop_image | image_url: width: 1440, format: 'webp' }} 1440w
+                        "
+                        sizes="(min-width: 1400px) 1335px, (min-width: 768px) 92vw, 100vw"
+                        width="{{ desktop_image.width }}"
+                        height="{{ desktop_image.height }}"
+                        loading="{{ loading_attr }}"
+                        fetchpriority="{{ fetch_priority }}"
+                        decoding="async"
+                        class="w-100 square-banner-media"
+                        alt="{{ block.settings.cta_text | escape }}"
+                      >
+                    </picture>
+                    
+                    {% comment %} {% assign desktop_widths = '960, 1100, 1280, 1440' %}
                     {% assign mobile_widths  = '320, 375, 390, 414, 480, 550, 750' %}
                     {% if block.settings.banner-image-mobile != blank %}
                       {{
@@ -253,7 +290,7 @@
                           widths: desktop_widths,
                           width: '100%',
                           height: 'auto',
-                          sizes: '(min-width: 768px) 100vw, 0px',
+                          sizes: '(min-width: 1400px) 1335px, (min-width: 768px) 92vw, 100vw',
                           loading: lazy_loading,
                           fetchpriority: fetch_priority,
                           class: 'w-100 desktop_screen'
@@ -283,7 +320,7 @@
                           fetchpriority: fetch_priority,
                           class: 'w-100'
                       }}
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                   {% when 'video-media' %}
                     {% assign media_desktop = block.settings['banner-video-desktop'] %}
                     {% if block.settings['banner-video-mobile'] != blank %}
@@ -333,6 +370,7 @@
                   <div class="banner-info-content-logo mb-0 mb-md-3">
                     <img 
                       src="{{ block.settings.logo | image_url: height: 48 , format: 'png' }}"
+                      alt="Hero Banner-{{ section.settings.seo_text | append:forloop.index }}"
                       height="48"
                       width="auto"
                       fetchpriority="auto"
@@ -420,30 +458,43 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-  // document.addEventListener('DOMContentLoaded', function () {
+<script>
     {% assign section_unique_name = section.id | remove: '-' | remove: '_' %}
-    const swiperElement = document.querySelector('#hero-banner-layout-{{ section.id }}');
-    if (swiperElement) {
-      const bannerSlider{{ section_unique_name }} = new Swiper('#hero-banner-layout-{{ section.id }}', {
+    (function initHeroSwiper{{ section_unique_name }}(attempt = 0) {
+
+      /* wait until Swiper library is available */
+      if (typeof Swiper === 'undefined') {
+        if (attempt > 40) return; // stop after ~2s safety
+        setTimeout(function() {
+          initHeroSwiper{{ section_unique_name }}(attempt + 1);
+        }, 50);
+        return;
+      }
+      const swiperEl = document.querySelector('#hero-banner-layout-{{ section.id }}');
+      if (!swiperEl) return;
+
+      new Swiper(swiperEl, {
         paginationClickable: true,
         speed: {{ section.settings.slide_speed | remove: 'px' }},
         slidesPerView: 1,
         autoHeight: true,
         loop: {{ section.settings.loop }},
-         touchStartForcePreventDefault:true,
-          navigation: {
-            prevEl: '#carousel-prev-{{ section.id }}',
-            nextEl: '#carousel-next-{{ section.id }}',
-            disabledClass: 'disabled_swiper_button'
-          },
-         pagination: {
-            el: "#hero-pagination-wrapper-{{ section.id }}",
-            clickable: true
+        touchStartForcePreventDefault: true,
+
+        navigation: {
+          prevEl: '#carousel-prev-{{ section.id }}',
+          nextEl: '#carousel-next-{{ section.id }}',
+          disabledClass: 'disabled_swiper_button'
+        },
+
+        pagination: {
+          el: "#hero-pagination-wrapper-{{ section.id }}",
+          clickable: true
         }
       });
-    }
-  // });
+
+    })();
+
 </script>
 
 {% schema %}

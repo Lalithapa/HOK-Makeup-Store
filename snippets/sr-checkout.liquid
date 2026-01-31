@@ -1,11 +1,24 @@
 <script type="application/javascript">
 checkoutBuyer = "https://fastrr-boost-ui.pickrr.com/";
 </script>
+
 <input type="hidden" value="hokmakeup.com" id="sellerDomain"/>
+
+<!-- Async CSS load (non render-blocking) -->
 <link rel="stylesheet" href="https://fastrr-boost-ui.pickrr.com/assets/styles/shopify.css">
+<noscript>
+  <link rel="stylesheet" href="https://fastrr-boost-ui.pickrr.com/assets/styles/shopify.css">
+</noscript>
+<script src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shopify.js" defer></script>
+
+<!-- Delay marketing script until after page load -->
+<script src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shiprocketMarketing.js" async></script>
+
+<!-- previous used -->
+{% comment %} <link rel="stylesheet" href="https://fastrr-boost-ui.pickrr.com/assets/styles/shopify.css">
 <script src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shopify.js" defer></script>
 <script src="https://fastrr-boost-ui.pickrr.com/assets/js/channels/shiprocketMarketing.js"></script>
-<input type="hidden" value="rz" id="template"/>
+<input type="hidden" value="rz" id="template"/> {% endcomment %}
 <!-- <input type="hidden" value="percent" id="discountType"/>
 <input type="hidden" value="5" id="discValue"/> -->
 <style>
@@ -45,26 +58,9 @@ checkoutBuyer = "https://fastrr-boost-ui.pickrr.com/";
   padding:0;
   padding-left:15px;
 } */
+ @media (max-width: 768px) {
+    #kp-account33 {
+      visibility: hidden !important;
+    }
+  }
 </style>
-
-{% comment %} Fastrr Login Css {% endcomment %}
-<style>
-{% comment %} #kp-account33 {
-  position: relative;
-  top: -2px;
-  right: 100px;
-  width: 20px;
-}
-
-@media (max-width: 1200px) {
-  #kp-account33 {
-    right: 100px;
-  }
-} {% endcomment %}
-
-@media (max-width: 768px) {
-   #kp-account33 {
-    visibility: hidden !important;
-  }
-}
-   </style>

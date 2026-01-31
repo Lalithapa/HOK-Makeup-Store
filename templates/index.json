@@ -142,7 +142,7 @@
             "gradient_condition": "gradient_mobile",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/Revbeauty-logo.png",
+            "logo": "shopify://shop_images/Revbeauty-logo_48.png",
             "cta_text": "<h3>Blur. Set. Go bold.</h3>",
             "cta_subtext": "<p>One routine, three essentials.</p>",
             "cta_text_mobile": "<h3>Blur. Set. Go bold.</h3>",
@@ -160,7 +160,7 @@
             "gradient_condition": "gradient_mobile",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/LA_Girl_34a62834-e66d-40be-aa3c-37a4b4712169.png",
+            "logo": "shopify://shop_images/LA_GIRL_48.png",
             "cta_text": "<h3>Turn Up the Glow</h3>",
             "cta_subtext": "<p>Build, blend, and perfect with pro formulas.</p>",
             "cta_text_mobile": "<h3>Turn Up the Glow</h3>",
@@ -178,7 +178,7 @@
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/Lamel_logo_black-removebg-preview.png",
+            "logo": "shopify://shop_images/Lamel_48.png",
             "cta_text": "<h3>One Swipe, </h3><h3>All the Benefits</h3>",
             "cta_subtext": "<p>A lip oil that tints, </p><p>plumps and nourishes all in one.</p>",
             "cta_text_mobile": "<h3>One Swipe, All the Benefits</h3>",
@@ -196,7 +196,7 @@
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/MILANI-LOGO_BLACK_92d825bb-a3c0-4e38-ac6c-94ed6d3a9f07.png",
+            "logo": "shopify://shop_images/Milani_48.png",
             "cta_text": "<h3>Flawless skin </h3><h3>starts here</h3>",
             "cta_subtext": "<p>Milani Conceal + Perfect Base Range<br/>Coverage that lasts. Finish that stays</p>",
             "cta_text_mobile": "<h3>Flawless skin starts here</h3>",
@@ -214,7 +214,7 @@
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/Pink_Flash_21a22d52-bc5b-48d9-aca0-30938dbf2611.png",
+            "logo": "shopify://shop_images/Pinkflash_48.png",
             "cta_text": "<h3>Make It Last</h3>",
             "cta_subtext": "<p>Smudge-proof, glossy, and made to stay</p>",
             "cta_text_mobile": "<h3>Make It Last</h3>",
@@ -235,7 +235,7 @@
             "text_style": "text-dark",
             "button_style": "button-style-dark",
             "content_visibility": "d-flex d-md-none",
-            "logo": "shopify://shop_images/MILANI-LOGO_BLACK_92d825bb-a3c0-4e38-ac6c-94ed6d3a9f07.png",
+            "logo": "shopify://shop_images/Milani_48_e0002a8c-ba7a-4146-9a84-76a2c421d706.png",
             "cta_text": "",
             "cta_subtext": "",
             "cta_text_mobile": "<h3>Turn Up The Gloss</h3>",
@@ -291,7 +291,7 @@
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/Dr-Paw-Paw_Section-1-_m_ba4ebb2d-f9fb-46e6-928e-6ce37f1cfcea.png",
+            "logo": "shopify://shop_images/Pawpaw_48.png",
             "cta_text": "<h3>Refined by science</h3><h3>powered by purpose</h3>",
             "cta_subtext": "<p>Skincare that works to hydrate, </p><p>brighten & calm</p>",
             "cta_text_mobile": "<h3>Refined by science</h3><h3>powered by purpose</h3>",
@@ -309,7 +309,7 @@
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/hok_logo_418be83f-582b-4cc1-9a29-7ccba30416dd.png",
+            "logo": "shopify://shop_images/HOK_main_Logo_48.png",
             "cta_text": "<h3>Declutter in style</h3><h3>2 new variants!</h3>",
             "cta_subtext": "<p>HOK's Beauty Atelier collection</p>",
             "cta_text_mobile": "<h3>Declutter in style</h3><h3>2 new variants!</h3>",
@@ -328,7 +328,7 @@
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
-            "logo": "shopify://shop_images/Revbeauty-logo.png",
+            "logo": "shopify://shop_images/Revbeauty-logo_48_3d587d59-2780-4e9e-8d82-9992f3354ac3.png",
             "cta_text": "<h3>Beauty that doesn't </h3><h3>break the bank</h3>",
             "cta_subtext": "<p>Upto 50% off on best beauty combos</p>",
             "cta_text_mobile": "<h3>Beauty that doesn't </h3><h3>break the bank</h3>",
@@ -950,23 +950,23 @@
     "multi_functional_container_A7XTBC": {
       "type": "multi-functional-container",
       "blocks": {
-        "image_media_6cH7t6": {
-          "type": "image-media",
-          "disabled": true,
+        "video_media_PVUYGU": {
+          "type": "video-media",
           "settings": {
-            "banner-url": "https://hokmakeup.com/collections/product-without-clearance",
-            "banner-image-desktop": "shopify://shop_images/TILE_1.gif",
+            "banner-url": "shopify://collections/product-without-clearance",
+            "banner-video-desktop": "shopify://files/videos/Offer Tile_b5a327a2-1e09-43f7-a63d-71bf7437bd96.mp4",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
             "shopcatagorytxt": "Sale is Live"
           }
         },
-        "video_media_PVUYGU": {
-          "type": "video-media",
+        "image_media_M4ixh8": {
+          "type": "image-media",
+          "disabled": true,
           "settings": {
-            "banner-url": "https://hokmakeup.com/collections/product-without-clearance",
-            "banner-video-desktop": "shopify://files/videos/Offer Tile (2).mp4",
+            "banner-url": "shopify://collections/product-without-clearance",
+            "banner-image-desktop": "shopify://shop_images/Offer_Tile.gif",
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1074,8 +1074,8 @@
         }
       },
       "block_order": [
-        "image_media_6cH7t6",
         "video_media_PVUYGU",
+        "image_media_M4ixh8",
         "image_media_8MTF4d",
         "image_media_CXi9Ff",
         "image_media_J3Yn9Q",
@@ -1468,6 +1468,35 @@
       "type": "hok-featured-collection",
       "settings": {
         "showContainer": "container",
+        "seo_text": "Back-In-Stocks-",
+        "image_priority": false,
+        "coll-title": "BACK IN STOCK",
+        "url": "shopify://collections/back-in-stocks",
+        "url-title": "View All",
+        "collection": "back-in-stocks",
+        "products_to_show": 16,
+        "swat_alig": true,
+        "slide_speed": 200,
+        "showCenter": false,
+        "showFreeScroll": true,
+        "loop": false,
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 40,
+        "margin_bottom_mobile": 0,
+        "slides-limit": 16,
+        "num-slides-sm": "1.6",
+        "num-slides-md": "2.2",
+        "num-slides-lg": "3.4",
+        "num-slides-xl": "4.2",
+        "num-slides-2xl": "5"
+      }
+    },
+    "hok_featured_collection_bV9EXM": {
+      "type": "hok-featured-collection",
+      "disabled": true,
+      "settings": {
+        "showContainer": "container",
         "seo_text": "New-Arrivals-",
         "image_priority": false,
         "coll-title": "NEW ARRIVALS",
@@ -1504,7 +1533,7 @@
         "veiw-all-url": "https://hokmakeup.com/collections/focallure-beauty",
         "content_1": "Shop Now",
         "coll_link_1": "https://hokmakeup.com/collections/focallure-beauty",
-        "cont_1_img": "shopify://files/videos/New.mp4",
+        "cont_1_img": "shopify://files/videos/Focallure_Grid_Media.mp4",
         "content_2": "Viral Lipstick",
         "coll_link_2": "https://hokmakeup.com/collections/lipstick",
         "cont_2_img": "shopify://shop_images/Mobile_Opal_Lipstick_83948b49-ca69-4ef0-9216-ec407d53825f.jpg",
@@ -2379,65 +2408,6 @@
         "include_margins": false
       }
     },
-    "authorised_retailers_FhGc4F": {
-      "type": "authorised-retailers",
-      "blocks": {
-        "logo_PzBxQB": {
-          "type": "logo",
-          "settings": {
-            "title": "Nykaa",
-            "image": "shopify://shop_images/image_4_f3e4dea7-284e-4c32-b64c-36e67bf76a9b.png",
-            "alt": "Nykaa",
-            "link": ""
-          }
-        },
-        "logo_7nkHkj": {
-          "type": "logo",
-          "settings": {
-            "title": "tira",
-            "image": "shopify://shop_images/image_5_557e6917-f63c-4a82-92cb-edc6c7c3468b.png",
-            "alt": "Nykaa",
-            "link": ""
-          }
-        },
-        "logo_9NDYwD": {
-          "type": "logo",
-          "settings": {
-            "title": "mintra",
-            "image": "shopify://shop_images/image_7_38b3c49b-13f9-4141-9b28-5f00b10f8e65.png",
-            "alt": "Nykaa",
-            "link": ""
-          }
-        },
-        "logo_GkLqmX": {
-          "type": "logo",
-          "settings": {
-            "title": "amazon",
-            "image": "shopify://shop_images/image_147_73a06941-c650-4c43-86c7-2f560772f371.png",
-            "alt": "Nykaa",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_PzBxQB",
-        "logo_7nkHkj",
-        "logo_9NDYwD",
-        "logo_GkLqmX"
-      ],
-      "disabled": true,
-      "name": "Authorised Retailers",
-      "settings": {
-        "kicker": "Authorised retailers",
-        "heading": "Find us at your go-to stores",
-        "bg": "#ffffff",
-        "link_target": "_blank",
-        "logo_width_mobile": 100,
-        "logo_width_desktop": 150,
-        "img_max_h_mobile": 48,
-        "img_max_h_desktop": 46
-      }
-    },
     "multi_functional_container_8Ffmec": {
       "type": "multi-functional-container",
       "blocks": {
@@ -2567,6 +2537,7 @@
     "multi_functional_container_4M7jiW",
     "product_tabs_yaphwd",
     "hok_featured_collection_yCrqB9",
+    "hok_featured_collection_bV9EXM",
     "grid_media_collection_krrKMw",
     "multi_functional_container_iDtNmF",
     "multi_functional_container_m9THUq",
@@ -2578,7 +2549,6 @@
     "hok_featured_collection_LaACzh",
     "multi_functional_container_CNAPNB",
     "17661434025cbc13d5",
-    "authorised_retailers_FhGc4F",
     "multi_functional_container_8Ffmec",
     "rich_text_TCqqwJ",
     "17327352487d4c08d1",
