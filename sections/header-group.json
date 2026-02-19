@@ -28,7 +28,11 @@
             "icon_size": 14,
             "icon_color": "#000000",
             "icon_text_spacing": 16,
+<<<<<<< HEAD
             "background_color": "#eae6ff",
+=======
+            "background_color": "#fff9ec",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "text_color": "#000000",
             "font_size": 14,
             "font_weight": "400",

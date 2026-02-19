@@ -71,7 +71,62 @@
   </div>
 </div>
 <script>
-  // document.addEventListener('DOMContentLoaded', function () {
+{% assign section_unique_name = section.id | remove: '-' | remove: '_' %}
+(function initProductSwiper{{ section_unique_name }}(attempt = 0) {
+  /* wait until Swiper is available */
+  if (typeof Swiper === 'undefined') {
+    if (attempt > 40) return; // stop after ~2s
+    setTimeout(function() {
+      initProductSwiper{{ section_unique_name }}(attempt + 1);
+    }, 50);
+    return;
+  }
+  /* ensure slider exists */
+  const swiperEl = document.querySelector('#product-slider-{{ section.id }}');
+  if (!swiperEl) return;
+
+  let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),
+      numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),
+      numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),
+      numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),
+      numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
+  new Swiper(swiperEl, {
+    spaceBetween: 12,
+    slidesPerGroup: 2,
+    speed: {{ section.settings.slide_speed | remove: 'px' }},
+    slidesPerView: numSlidesSm{{ section_unique_name }},
+    centeredSlides: {{ section.settings.showCenter }},
+    freeMode: {{ section.settings.showFreeScroll }},
+    loop: {{ section.settings.loop }},
+
+    breakpoints: {
+      768: {
+        slidesPerView: numSlidesMd{{ section_unique_name }},
+        slidesPerGroup: 1
+      },
+      1024: {
+        slidesPerView: numSlidesLg{{ section_unique_name }},
+        spaceBetween: 20
+      },
+      1280: {
+        slidesPerView: numSlidesXl{{ section_unique_name }},
+        spaceBetween: 20
+      },
+      1536: {
+        slidesPerView: numSlides2xl{{ section_unique_name }},
+        spaceBetween: 20
+      }
+    },
+
+    navigation: {
+      prevEl: '#product-slider-prev-{{ section.id }}',
+      nextEl: '#product-slider-next-{{ section.id }}'
+    }
+  });
+})();
+</script>
+
+{% comment %} <script>
     {% assign section_unique_name = section.id |  remove: '-' |  remove: '_'  %}
       let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
       const productSlider{{ section.id |  remove: '-' |  remove: '_'   }} = new Swiper('#product-slider-{{ section.id }}', {
@@ -106,8 +161,7 @@
         nextEl: '#product-slider-next-{{ section.id }}',
       }
     });
-    // });
-</script>
+</script> {% endcomment %}
 {% schema %}
 {
   "name": "New Featured Collection",

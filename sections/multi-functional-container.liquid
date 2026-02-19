@@ -49,6 +49,7 @@
   assign num_slides_xl = section.settings['num-slides-xl']
   assign num_slides_2xl = section.settings['num-slides-2xl']
   assign image_priority = section.settings.image_priority
+<<<<<<< HEAD
   assign preffered_width = section.settings.preffered_width
   if image_priority
     assign fetch_priority = 'high'
@@ -57,6 +58,17 @@
     assign fetch_priority = 'auto'
     assign load_video = 'none'
   endif
+=======
+  if image_priority
+    assign fetch_priority = 'high'
+    assign lz_loading = 'eager'
+    assign load_video = 'metadata'
+  else
+    assign fetch_priority = 'auto'
+    assign lz_loading = 'lazy'
+    assign load_video = 'none'
+  endif 
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
 %}
 <div class="section-{{ section.id }}-margin">
   <div
@@ -76,7 +88,7 @@
     {% if section.settings['hero-banner'] != blank %}
       <a href="{{ section.settings.carousel-sub-title-links }}">
         <img
-          loading="lazy"
+          loading={{ lz_loading }}
           class="{% if section.settings['hero-banner-mobile'] != blank %}mobile_screen{% endif %}"
           width="100%"
           height="100%"
@@ -88,7 +100,7 @@
     {% if section.settings['hero-banner-mobile'] != blank %}
       <a href="{{ section.settings.carousel-sub-title-links }}" class="img-center">
         <img
-          loading="lazy"
+          loading={{ lz_loading }}
           class="desktop_screen"
           width="100%"
           height="100%"
@@ -115,6 +127,7 @@
               >
                 {% case block.type %}
                   {% when 'image-media' %}
+<<<<<<< HEAD
                       {% liquid
                         assign sizes = '(min-width: 768px) {{ preffered_width | append:"px" }}, 100vw' 
                         assign widths = '480, 768, 1100, 1500, 1920' 
@@ -131,6 +144,46 @@
                             sizes: sizes,
                             alt: block.settings.banner-image-desktop.alt ,
                             widths: widths,
+=======
+                    {% liquid
+                        assign sizes = '(min-width: 990px) 1335px, 100vw' 
+                        assign widths = '480, 768, 1100, 1500, 1920' 
+                        assign primary_ratio = block.settings.banner-image-desktop.aspect_ratio | default: 1.777 
+                      %}
+                      <div class="swiper-media-container" style="aspect-ratio: {{ primary_ratio }}">
+                          <picture>
+                            {% if block.settings.banner-image-mobile != blank %}
+                              <source 
+                                media="(max-width: 749px)"
+                                srcset="
+                                {{ block.settings.banner-image-mobile | image_url: width: 480, format: 'webp' }} 480w,
+                                {{ block.settings.banner-image-mobile | image_url: width: 768, format: 'webp' }} 768w">
+                            {% endif %}
+                            {{
+                              block.settings.banner-image-desktop
+                              | image_url: width: 1335, format: 'webp'
+                              | image_tag:
+                                sizes: sizes,
+                                widths: widths,
+                                loading: lz_loading,
+                                fetchpriority: fetch_priority,
+                                decoding: 'async'
+                            }}
+                          </picture>
+                        </div>
+                    
+                      {% comment %} {% if block.settings['banner-image-mobile'] != blank %}
+                       {% assign mobile_ratio = block.settings.banner-image-mobile.aspect_ratio | default: 1.777 %}
+                       <div class="swiper-media-container desktop_screen" style="aspect-ratio: {{ primary_ratio }}">
+                        {{
+                          block.settings['banner-image-desktop']
+                          | image_url: width: 1335  , format: 'webp'
+                          | image_tag:
+                            height: '100%',
+                            sizes: sizes,
+                            widths: widths,
+                            loading: lz_loading,
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                             fetchpriority: fetch_priority
                         }}
                         </div>
@@ -141,8 +194,13 @@
                             | image_tag:
                               height: '100%',
                               sizes: sizes,
+<<<<<<< HEAD
                               alt: block.settings.banner-image-mobile.alt ,
                               widths: widths,
+=======
+                              widths: widths,
+                              loading: lz_loading,
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                               fetchpriority: fetch_priority
                           }}
                         </div>     
@@ -150,6 +208,7 @@
                         <div class="swiper-media-container" style="aspect-ratio: {{ primary_ratio }}">
                           {{
                             block.settings['banner-image-desktop']
+<<<<<<< HEAD
                             | image_url: width: preffered_width
                             | image_tag:
                               height: '100%',
@@ -160,6 +219,18 @@
                           }}
                           </div>
                       {% endif %}
+=======
+                            | image_url: width: 1335  , format: 'webp'
+                            | image_tag:
+                              height: '100%',
+                              sizes: sizes,
+                              widths: widths,
+                              loading: lz_loading,
+                              fetchpriority: fetch_priority
+                          }}
+                          </div>
+                      {% endif %} {% endcomment %}
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                     
                   {% when 'video-media' %}
                     {% assign media_desktop = block.settings['banner-video-desktop'] %}
@@ -259,10 +330,80 @@
     </div>
   </div>
 </div>
-<script async type="text/javascript">
+<script>
+{% assign section_unique_name = section.id | remove: '-' | remove: '_' %}
+(function initSwiperSection{{ section_unique_name }}() {
+
+  if (typeof Swiper === 'undefined') {
+    setTimeout(initSwiperSection{{ section_unique_name }}, 50);
+    return;
+  }
+
+  let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),
+      numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),
+      numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),
+      numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),
+      numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
+
+  {% if section.settings.enableShuffle %}
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    const swiperWrapper = document.querySelector('#square-banner-carousel-{{ section.id }} .swiper-wrapper');
+    if (swiperWrapper) {
+      const slides = Array.from(swiperWrapper.children);
+      shuffle(slides);
+      swiperWrapper.innerHTML = '';
+      slides.forEach(slide => swiperWrapper.appendChild(slide));
+    }
+  {% endif %}
+
+  new Swiper('#square-banner-carousel-{{ section.id }}', {
+    spaceBetween: 12,
+    speed: {{ section.settings.slide_speed | remove: 'px' }},
+    slidesPerView: numSlidesSm{{ section_unique_name }},
+    centeredSlides: {{ section.settings.showCenter }},
+    autoHeight: true,
+    freeMode: {{ section.settings.showFreeScroll }},
+    loop: {{ section.settings.loop }},
+    grabCursor: true,
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: false,
+    },
+
+    navigation: {
+      prevEl: '#carousel-prev-{{ section.id }}',
+      nextEl: '#carousel-next-{{ section.id }}',
+      disabledClass: 'disabled_swiper_button'
+    },
+
+    touchStartForcePreventDefault: true,
+
+    breakpoints: {
+      768: { slidesPerView: numSlidesMd{{ section_unique_name }} },
+      1024: { slidesPerView: numSlidesLg{{ section_unique_name }}, spaceBetween: 20 },
+      1280: { slidesPerView: numSlidesXl{{ section_unique_name }}, spaceBetween: 20 },
+      1536: { slidesPerView: numSlides2xl{{ section_unique_name }}, spaceBetween: 20 }
+    }
+  });
+
+})();
+</script>
+
+{% comment %} <script>
   // document.addEventListener('DOMContentLoaded', function () {
   {% assign section_unique_name = section.id |  remove: '-' |  remove: '_'  %}
-  let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
+  let numSlidesSm{{ section_unique_name }} = parseFloat('{{ num_slides_sm }}'),
+  numSlidesMd{{ section_unique_name }} = parseFloat('{{ num_slides_md }}'),
+  numSlidesLg{{ section_unique_name }} = parseFloat('{{ num_slides_lg }}'),
+  numSlidesXl{{ section_unique_name }} = parseFloat('{{ num_slides_xl }}'),
+  numSlides2xl{{ section_unique_name }} = parseFloat('{{ num_slides_2xl }}');
   {% if section.settings.enableShuffle %}
      function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -319,7 +460,7 @@
     }
   });
   // });
-</script>
+</script> {% endcomment %}
 
 {% schema %}
 {

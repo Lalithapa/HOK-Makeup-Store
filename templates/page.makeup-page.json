@@ -557,7 +557,11 @@
         "margin_top_desktop": 46,
         "margin_bottom_desktop": 46,
         "margin_top_mobile": 26,
+<<<<<<< HEAD
         "margin_bottom_mobile": 28
+=======
+        "margin_bottom_mobile": 0
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       }
     },
     "ticker_tape_erJbLw": {
@@ -748,12 +752,21 @@
       "type": "banner-product-grid",
       "settings": {
         "showContainer": "container",
+<<<<<<< HEAD
         "background_color": "#fff0d9",
         "title": "Lashes Speak Louder with Ardell.",
         "subTitle": "From everyday glam to red carpet drama, there's a lash for every look—and every lash moment.",
         "image": "shopify://shop_images/1080x1080_135572c7-e4fa-4006-8954-46c7e641e88f.jpg",
         "mobile_image": "shopify://shop_images/715x430.jpg",
         "collection": "focallure-beauty",
+=======
+        "background_color": "#fff3f5",
+        "title": "Lashes Speak Louder with Ardell.",
+        "subTitle": "From everyday glam to red carpet drama, there's a lash for every look—and every lash moment.",
+        "image": "shopify://shop_images/Ardell__D.jpg",
+        "mobile_image": "shopify://shop_images/Ardell__M.jpg",
+        "collection": "ardell",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
         "margin_top_desktop": 64,
         "margin_bottom_desktop": 36,
         "margin_top_mobile": 48,
@@ -763,6 +776,7 @@
     "skincare_finds_bi7mG7": {
       "type": "skincare-finds",
       "blocks": {
+<<<<<<< HEAD
         "content_jbzmam": {
           "type": "content",
           "settings": {
@@ -790,6 +804,8 @@
             "subtitle": "<p>Favourite fragrance of our 60% customers!</p>"
           }
         },
+=======
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
         "content_EkJyfP": {
           "type": "content",
           "settings": {
@@ -807,6 +823,7 @@
             "title": "Upto 20% Off",
             "subtitle": "<p>In 78 wishlists right now!</p>"
           }
+<<<<<<< HEAD
         }
       },
       "block_order": [
@@ -815,6 +832,43 @@
         "content_7BR7mE",
         "content_EkJyfP",
         "content_4eXWCX"
+=======
+        },
+        "content_7BR7mE": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Giverny_D_d3da0374-0b1e-4096-9064-7bf85974b2cc.jpg",
+            "url": "shopify://collections/giverny",
+            "title": "Any 3 at 1199",
+            "subtitle": "<p>Favourite fragrance of our 60% customers!</p>"
+          }
+        },
+        "content_jbzmam": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Lamel_D_bc6c9b48-b31e-4735-a7bb-742497b17c4d.jpg",
+            "url": "shopify://collections/lamel",
+            "title": "Upto 15% Off",
+            "subtitle": "<p><em>In 47 carts right now!</em></p>"
+          }
+        },
+        "content_yG4ntq": {
+          "type": "content",
+          "settings": {
+            "image": "shopify://shop_images/Pinkflash_D_9da6d981-4f56-4170-9bf7-2ad3a2a4c3b1.jpg",
+            "url": "shopify://collections/pink-flash",
+            "title": "Upto 70% Off",
+            "subtitle": "<p>Just restocked—and already running low again.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_EkJyfP",
+        "content_4eXWCX",
+        "content_7BR7mE",
+        "content_jbzmam",
+        "content_yG4ntq"
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       ],
       "settings": {
         "showContainer": "container",
@@ -1278,6 +1332,7 @@
         "testimonial_zPKLdG": {
           "type": "testimonial",
           "settings": {
+<<<<<<< HEAD
             "image": "shopify://shop_images/1_84c876d4-de09-427c-857f-5af96a2ddb0b.webp",
             "name": "Shikha S.",
             "location": "Lucknow",
@@ -1286,11 +1341,22 @@
             "product_link": "shopify://products/focallure-watery-transferproof-lip-cream",
             "rating": 5,
             "quote": "Absolutely love it! So smooth and blendable, shades are vibrant and long-lasting.. great quality for the price."
+=======
+            "image": "shopify://shop_images/girl1.png",
+            "name": "Shikha S.",
+            "location": "Lucknow",
+            "date": "12.02.25",
+            "product": "Watery Transferproof Lip Cream",
+            "product_link": "shopify://products/focallure-watery-transferproof-lip-cream",
+            "rating": 5,
+            "quote": "Totally in love—smooth, blendable formulas with a flawless, lightweight finish! Vibrant, long-lasting, and inclusive shades in sleek packaging—must-try quality at a great price."
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
           }
         },
         "testimonial_Lw7TpF": {
           "type": "testimonial",
           "settings": {
+<<<<<<< HEAD
             "image": "shopify://shop_images/81555969905_1_57384a1d-820f-4033-9f38-c241db259f21.webp",
             "name": "Sushree Sutar",
             "location": "Delhi",
@@ -1299,20 +1365,38 @@
             "product_link": "shopify://products/la-girl-pro-corrector-hd",
             "rating": 4,
             "quote": "Heard about HOK from a friend and I’m impressed! Incredible discounts with authentic, high-quality brands."
+=======
+            "image": "shopify://shop_images/girl2.png",
+            "name": "Sushree Sutar",
+            "location": "Delhi",
+            "date": "02.03.25",
+            "product": "L.A. Girl Pro Corrector HD",
+            "product_link": "shopify://products/la-girl-pro-corrector-hd",
+            "rating": 4,
+            "quote": "My friend recommended me HOK makeup website and I am really impressed with the discount on product they are offering... product quality are branded and top notch."
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
           }
         },
         "testimonial_mEyde4": {
           "type": "testimonial",
           "settings": {
+<<<<<<< HEAD
             "image": "shopify://shop_images/717489291255_1_7188aa8a-20d3-417f-8e02-99bc577994fc.jpg",
             "name": "Adhya",
             "location": "Pune",
             "date": "25/12/25",
+=======
+            "image": "shopify://shop_images/girl3.png",
+            "name": "Adhya",
+            "location": "Pune",
+            "date": "25.03.25",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "product": "Milani Conceal + Perfect Long Wear Concealer",
             "product_link": "shopify://products/conceal-perfect-long-wear-concealer",
             "rating": 5,
             "quote": "Good quality products at discounted price.. Have a lot of international brands like focallure which is not available at other sites."
           }
+<<<<<<< HEAD
         },
         "testimonial_9pV89W": {
           "type": "testimonial",
@@ -1326,13 +1410,19 @@
             "rating": 5,
             "quote": "Killer Queen is so pretty on my lips-it’s a cross between burgundy with pink opalesque sparkles. It’s super moisturizing and doesn’t leave my lips dry."
           }
+=======
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
         }
       },
       "block_order": [
         "testimonial_zPKLdG",
         "testimonial_Lw7TpF",
+<<<<<<< HEAD
         "testimonial_mEyde4",
         "testimonial_9pV89W"
+=======
+        "testimonial_mEyde4"
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       ],
       "settings": {
         "showContainer": "container",

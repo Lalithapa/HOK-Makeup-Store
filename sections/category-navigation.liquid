@@ -72,7 +72,11 @@
                 assign card_width = '90'
                 assign card_height = '90'
               else
+<<<<<<< HEAD
                 assign card_width = 'auto'
+=======
+                assign card_width = '140'
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                 assign card_height = '55'
               endif
             %}
@@ -80,6 +84,7 @@
           {% assign primary_ratio = img.aspect_ratio | default: 1.777 %}
           <a href="{{ block.settings.collection_link }}" title="{{ block.settings.title | escape }}">
            <div class="swiper-media-container" style="aspect-ratio: {{ primary_ratio }}">
+<<<<<<< HEAD
              {% comment %} {{
                 img
                 | image_url: width: card_width , height: card_height , format: 'webp'
@@ -98,6 +103,18 @@
                 fetchpriority="{{ fetch_priority }}"
                 alt="{{ block.settings.title | escape }}"
               >
+=======
+             {{
+                img
+                | image_url: width: 140, format: 'webp'
+                | image_tag:
+                  width: card_width,
+                  height: card_height,
+                  loading: lazy_loading,
+                  fetchpriority: fetch_priority,
+                  alt: block.settings.title
+              }}
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             </div>
             {% if block.settings.title %}
               <p class="fw-semibold">{{ block.settings.title }}</p>

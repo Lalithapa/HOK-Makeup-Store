@@ -23,7 +23,11 @@
         "image_9Jtw68": {
           "type": "image",
           "settings": {
+<<<<<<< HEAD
             "image": "shopify://shop_images/HOK_Makeup_X_Sweetons.jpg",
+=======
+            "image": "shopify://shop_images/1_1720e242-429d-4898-bfe0-1c0656e51246.png",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "collection_link": "shopify://collections/hok-makeup-x-sweetons",
             "title": "Treats"
           }
@@ -132,11 +136,17 @@
         },
         "video_media_yhkYDa": {
           "type": "video-media",
+          "disabled": true,
           "settings": {
             "banner_top_tag": "none",
             "banner-url": "shopify://collections/product-without-clearance",
+<<<<<<< HEAD
             "banner-video-desktop": "shopify://files/videos/Swipe Right Sale Banner_459e8bc5-f22d-418e-8c03-2afb462b73ed.mp4",
             "banner-video-mobile": "shopify://files/videos/Swipe Right Sale Banner Mobile_5e8e4726-3a66-4f12-988c-e2fcbadc82ce.mp4",
+=======
+            "banner-video-desktop": "shopify://files/videos/Glam Desktop Sale.mp4",
+            "banner-video-mobile": "shopify://files/videos/Hero_Banner_Mobile.mp4",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "show_gradient": "none",
             "gradient_condition": "gradient_on_all",
             "text_style": "text-dark",
@@ -148,6 +158,7 @@
             "cta_subtext_mobile": ""
           }
         },
+<<<<<<< HEAD
         "image_media_eyg74b": {
           "type": "image-media",
           "settings": {
@@ -155,10 +166,20 @@
             "banner-url": "https://hokmakeup.com/products/lamel-lip-stain-hydrating-lip-tint?_pos=1&_psq=lamel+lip&_ss=e&_v=1.0",
             "banner-image-desktop": "shopify://shop_images/LIP_STAIN_HEADER_BANNER_DESKTOP.jpg",
             "banner-image-mobile": "shopify://shop_images/LIP_STAIN_HEADER_BANNER_MOBILE.jpg",
+=======
+        "image_media_VKwf6E": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/makeup-revolution",
+            "banner-image-desktop": "shopify://shop_images/MUR_BANNER_141d0475-c5e7-4eaa-be58-1ec948229ff8.jpg",
+            "banner-image-mobile": "shopify://shop_images/MUR_BANNER_MOBILE_796ef6f4-fc26-46bd-ac6b-4c2e897ae09b.jpg",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "show_gradient": "white-gradient",
             "gradient_condition": "gradient_mobile",
             "text_style": "text-dark",
             "button_style": "button-style-dark",
+<<<<<<< HEAD
             "logo": "shopify://shop_images/LAMEL_EMPOWERING_MAKE-UP-logo-nospace.svg",
             "cta_text": "<h3>Back on Popular Demand</h3>",
             "cta_subtext": "<p> Stain that won't quit on you</p>",
@@ -272,11 +293,206 @@
             "cta_text_mobile": "<h3>Make It Last</h3>",
             "cta_subtext_mobile": "<p>Smudge-proof, glossy, and made to stay</p>"
           }
+=======
+            "logo": "shopify://shop_images/Revbeauty-logo_48.png",
+            "cta_text": "<h3>Blur. Set. Go bold.</h3>",
+            "cta_subtext": "<p>One routine, three essentials.</p>",
+            "cta_text_mobile": "<h3>Blur. Set. Go bold.</h3>",
+            "cta_subtext_mobile": "<p>One routine, three essentials.</p>"
+          }
+        },
+        "image_media_pA9TyY": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/la-girl",
+            "banner-image-desktop": "shopify://shop_images/LA_GIRL_BANNER_ffae05ab-f189-4f43-b1ab-da12f1038f3d.jpg",
+            "banner-image-mobile": "shopify://shop_images/LA_GIRL_BANNER_MOBILE.jpg",
+            "show_gradient": "white-gradient",
+            "gradient_condition": "gradient_mobile",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/LA_GIRL_48.png",
+            "cta_text": "<h3>Turn Up the Glow</h3>",
+            "cta_subtext": "<p>Build, blend, and perfect with pro formulas.</p>",
+            "cta_text_mobile": "<h3>Turn Up the Glow</h3>",
+            "cta_subtext_mobile": "<p>Build, blend, and perfect with pro formulas.</p>"
+          }
+        },
+        "image_media_AwttCj": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/lamel",
+            "banner-image-desktop": "shopify://shop_images/Artboard_1_db637370-8974-4127-bcec-8df2c486f68e.png",
+            "banner-image-mobile": "shopify://shop_images/Lamel-_Mobile.png",
+            "show_gradient": "white-gradient",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/Lamel_48.png",
+            "cta_text": "<h3>One Swipe, </h3><h3>All the Benefits</h3>",
+            "cta_subtext": "<p>A lip oil that tints, </p><p>plumps and nourishes all in one.</p>",
+            "cta_text_mobile": "<h3>One Swipe, All the Benefits</h3>",
+            "cta_subtext_mobile": "<p>A lip oil that tints, plumps and nourishes all in one.</p>"
+          }
+        },
+        "image_media_yrzFJL": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "https://hokmakeup.com/collections/milani",
+            "banner-image-desktop": "shopify://shop_images/Artboard_1_copy_dfff2d10-bbe0-456e-9bdb-524cb6240d14.png",
+            "banner-image-mobile": "shopify://shop_images/Artboard_2_copy-copy-0.png",
+            "show_gradient": "white-gradient",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/Milani_48.png",
+            "cta_text": "<h3>Flawless skin </h3><h3>starts here</h3>",
+            "cta_subtext": "<p>Milani Conceal + Perfect Base Range<br/>Coverage that lasts. Finish that stays</p>",
+            "cta_text_mobile": "<h3>Flawless skin starts here</h3>",
+            "cta_subtext_mobile": "<p>Milani Conceal + Perfect Base Range<br/>Coverage that lasts. Finish that stays</p>"
+          }
+        },
+        "image_media_jCfUrg": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "https://hokmakeup.com/collections/pink-flash",
+            "banner-image-desktop": "shopify://shop_images/Desktop_8c5d5100-fde0-48f2-a2e1-fd080eefa881.jpg",
+            "banner-image-mobile": "shopify://shop_images/Mobile_65b7e01c-189a-4c2f-a1ee-27c1f59be560.jpg",
+            "show_gradient": "white-gradient",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/Pinkflash_48.png",
+            "cta_text": "<h3>Make It Last</h3>",
+            "cta_subtext": "<p>Smudge-proof, glossy, and made to stay</p>",
+            "cta_text_mobile": "<h3>Make It Last</h3>",
+            "cta_subtext_mobile": "<p>Smudge-proof, glossy, and made to stay</p>"
+          }
+        },
+        "video_media_anHgKq": {
+          "type": "video-media",
+          "disabled": true,
+          "settings": {
+            "banner_top_tag": "none",
+            "banner_bottom_logo": "shopify://shop_images/MILANI-LOGO_BLACK_92d825bb-a3c0-4e38-ac6c-94ed6d3a9f07.png",
+            "banner-url": "shopify://products/milani-keep-it-full-glossy-plumping-lip-balm",
+            "banner-video-desktop": "shopify://files/videos/Milani Keep It Full Glossy Plumping Balm Desktop_6c51b32d-9ed1-497b-9338-24bb21ff9136.mp4",
+            "banner-video-mobile": "shopify://files/videos/Milani Keep It Full Glossy Plumping Balm Mobile.mp4",
+            "show_gradient": "none",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "content_visibility": "d-flex d-md-none",
+            "logo": "shopify://shop_images/Milani_48_e0002a8c-ba7a-4146-9a84-76a2c421d706.png",
+            "cta_text": "",
+            "cta_subtext": "",
+            "cta_text_mobile": "<h3>Turn Up The Gloss</h3>",
+            "cta_subtext_mobile": "<p>Milani Keep It Full Glossy Plumping Balm</p>"
+          }
+        },
+        "image_media_9chUJ9": {
+          "type": "image-media",
+          "disabled": true,
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/nicka-k",
+            "banner-image-desktop": "shopify://shop_images/Nicka_K_1_ef2d6c81-9bea-4438-93e0-08f894a517bb.jpg",
+            "banner-image-mobile": "shopify://shop_images/mobile_view.png",
+            "show_gradient": "white-gradient",
+            "gradient_condition": "gradient_mobile",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/Nickak_logo.png",
+            "cta_text": "<h3>The latest is here</h3>",
+            "cta_subtext": "<p>Make room on your vanity</p>",
+            "cta_text_mobile": "<h3>The latest is here</h3>",
+            "cta_subtext_mobile": "<p>Make room on your vanity</p>"
+          }
+        },
+        "image_media_qKDm3G": {
+          "type": "image-media",
+          "disabled": true,
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/ln-pro",
+            "banner-image-desktop": "shopify://shop_images/LN_PRO_1.jpg",
+            "banner-image-mobile": "shopify://shop_images/Artboard_2_fb06c3c2-195e-481b-8951-d9b1664cc00a.png",
+            "show_gradient": "white-gradient",
+            "gradient_condition": "gradient_mobile",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/LN_Pro_Logo_dbfe28b7-bbc9-4c77-a8e3-7f0d6e6c0cac.png",
+            "cta_text": "<h3>Cute is the new cool</h3>",
+            "cta_subtext": "<p>Bringing you the sweet side of slay</p>",
+            "cta_text_mobile": "<h3>Cute is the new cool</h3>",
+            "cta_subtext_mobile": "<p>Bringing you the sweet side of slay</p>"
+          }
+        },
+        "image_media_bWzahR": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/dr-paw-paw",
+            "banner-image-desktop": "shopify://shop_images/1920x835.jpg",
+            "banner-image-mobile": "shopify://shop_images/550x845.jpg",
+            "show_gradient": "none",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/Pawpaw_48.png",
+            "cta_text": "<h3>Refined by science</h3><h3>powered by purpose</h3>",
+            "cta_subtext": "<p>Skincare that works to hydrate, </p><p>brighten & calm</p>",
+            "cta_text_mobile": "<h3>Refined by science</h3><h3>powered by purpose</h3>",
+            "cta_subtext_mobile": "<p>Skincare that works to hydrate, brighten & calm</p>"
+          }
+        },
+        "image_media_8xGfY6": {
+          "type": "image-media",
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://products/aloxe-big-cosmetic-organizer",
+            "banner-image-desktop": "shopify://shop_images/Hok_makeup_1.jpg",
+            "banner-image-mobile": "shopify://shop_images/ydpu8mrcpttj0oi0mqs5.webp",
+            "show_gradient": "none",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/HOK_main_Logo_48.png",
+            "cta_text": "<h3>Declutter in style</h3><h3>2 new variants!</h3>",
+            "cta_subtext": "<p>HOK's Beauty Atelier collection</p>",
+            "cta_text_mobile": "<h3>Declutter in style</h3><h3>2 new variants!</h3>",
+            "cta_subtext_mobile": "<p>HOK's Beauty Atelier collection</p>"
+          }
+        },
+        "image_media_tGgNjm": {
+          "type": "image-media",
+          "disabled": true,
+          "settings": {
+            "banner_top_tag": "none",
+            "banner-url": "shopify://collections/combos",
+            "banner-image-desktop": "shopify://shop_images/yqdnfwlbpcg4a5ebvm4q.webp",
+            "banner-image-mobile": "shopify://shop_images/Mobile_Banner_780x1200_b4149e46-e204-4a0f-9dba-0c8b54fc0e01.jpg",
+            "show_gradient": "none",
+            "gradient_condition": "gradient_on_all",
+            "text_style": "text-dark",
+            "button_style": "button-style-dark",
+            "logo": "shopify://shop_images/Revbeauty-logo_48_3d587d59-2780-4e9e-8d82-9992f3354ac3.png",
+            "cta_text": "<h3>Beauty that doesn't </h3><h3>break the bank</h3>",
+            "cta_subtext": "<p>Upto 50% off on best beauty combos</p>",
+            "cta_text_mobile": "<h3>Beauty that doesn't </h3><h3>break the bank</h3>",
+            "cta_subtext_mobile": "<p>Upto 50% off on best beauty combos</p>"
+          }
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
         }
       },
       "block_order": [
         "image_media_VD3Q6V",
         "video_media_yhkYDa",
+<<<<<<< HEAD
         "image_media_eyg74b",
         "image_media_VKwf6E",
         "image_media_pA9TyY",
@@ -284,6 +500,19 @@
         "image_media_9chUJ9",
         "image_media_yrzFJL",
         "image_media_jCfUrg"
+=======
+        "image_media_VKwf6E",
+        "image_media_pA9TyY",
+        "image_media_AwttCj",
+        "image_media_yrzFJL",
+        "image_media_jCfUrg",
+        "video_media_anHgKq",
+        "image_media_9chUJ9",
+        "image_media_qKDm3G",
+        "image_media_bWzahR",
+        "image_media_8xGfY6",
+        "image_media_tGgNjm"
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       ],
       "custom_css": [
         ".carousel-btn {padding: 0 !important;}"
@@ -302,9 +531,27 @@
       "blocks": {
         "video_media_PVUYGU": {
           "type": "video-media",
+<<<<<<< HEAD
           "settings": {
             "banner-url": "shopify://collections/product-without-clearance",
             "banner-video-desktop": "shopify://files/videos/MOTION TILE 1 GIF COMPRESSED.mp4",
+=======
+          "settings": {
+            "banner-url": "shopify://collections/product-without-clearance",
+            "banner-video-desktop": "shopify://files/videos/Offer Tile_b5a327a2-1e09-43f7-a63d-71bf7437bd96.mp4",
+            "cta-text": "",
+            "cta-text-color": "#ffffff",
+            "cta-bg-color": "#000000",
+            "shopcatagorytxt": "Sale is Live"
+          }
+        },
+        "image_media_M4ixh8": {
+          "type": "image-media",
+          "disabled": true,
+          "settings": {
+            "banner-url": "shopify://collections/product-without-clearance",
+            "banner-image-desktop": "shopify://shop_images/Offer_Tile.gif",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -413,6 +660,7 @@
       },
       "block_order": [
         "video_media_PVUYGU",
+        "image_media_M4ixh8",
         "image_media_8MTF4d",
         "image_media_CXi9Ff",
         "image_media_J3Yn9Q",
@@ -461,12 +709,21 @@
     "multi_functional_container_KEjR43": {
       "type": "multi-functional-container",
       "blocks": {
+<<<<<<< HEAD
         "image_media_acQd34": {
           "type": "image-media",
           "settings": {
             "banner-url": "https://hokmakeup.com/pages/buy-any-4-1999",
             "banner-image-desktop": "shopify://shop_images/3840X600.jpg",
             "banner-image-mobile": "shopify://shop_images/1080X495.jpg",
+=======
+        "video_media_VgLeRp": {
+          "type": "video-media",
+          "settings": {
+            "banner-url": "shopify://collections/hok-value-vault-shop-combos-at-best-price",
+            "banner-video-desktop": "shopify://files/videos/3840X600.mp4",
+            "banner-video-mobile": "shopify://files/videos/1080X495.mp4",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -662,8 +919,88 @@
         "showArrow": false
       }
     },
+<<<<<<< HEAD
     "hok_featured_collection_yCrqB9": {
       "type": "hok-featured-collection",
+=======
+    "product_tabs_yaphwd": {
+      "type": "product-tabs",
+      "blocks": {
+        "image_K7BR98": {
+          "type": "image",
+          "settings": {
+            "collection": "new-arrivals",
+            "image": "shopify://shop_images/New_arrivals_1ee14aef-48c5-40c6-b0d4-0b02d4c0d155.jpg",
+            "mobile_image": "shopify://shop_images/New_arrivals_1ee14aef-48c5-40c6-b0d4-0b02d4c0d155.jpg",
+            "title": "New Arrivals"
+          }
+        },
+        "image_eM3iDb": {
+          "type": "image",
+          "settings": {
+            "collection": "best-seller-home-page",
+            "image": "shopify://shop_images/LA_Girl_D.jpg",
+            "mobile_image": "shopify://shop_images/LA_Girl_M.jpg",
+            "title": "Best Sellers"
+          }
+        },
+        "image_KkermF": {
+          "type": "image",
+          "settings": {
+            "collection": "combos",
+            "image": "shopify://shop_images/Artboard_1_9_3a69240b-feec-4562-95ce-3dfa48ef1e8b.jpg",
+            "mobile_image": "shopify://shop_images/Artboard_1_9_3a69240b-feec-4562-95ce-3dfa48ef1e8b.jpg",
+            "title": "Combos"
+          }
+        }
+      },
+      "block_order": [
+        "image_K7BR98",
+        "image_eM3iDb",
+        "image_KkermF"
+      ],
+      "disabled": true,
+      "name": "Product cards tabs",
+      "settings": {
+        "showContainer": "container",
+        "margin_top_desktop": 24,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 40,
+        "margin_bottom_mobile": 0
+      }
+    },
+    "hok_featured_collection_yCrqB9": {
+      "type": "hok-featured-collection",
+      "settings": {
+        "showContainer": "container",
+        "seo_text": "Back-In-Stocks-",
+        "image_priority": false,
+        "coll-title": "BACK IN STOCK",
+        "url": "shopify://collections/back-in-stocks",
+        "url-title": "View All",
+        "collection": "back-in-stocks",
+        "products_to_show": 16,
+        "swat_alig": true,
+        "slide_speed": 200,
+        "showCenter": false,
+        "showFreeScroll": true,
+        "loop": false,
+        "margin_top_desktop": 64,
+        "margin_bottom_desktop": 0,
+        "margin_top_mobile": 40,
+        "margin_bottom_mobile": 0,
+        "slides-limit": 16,
+        "num-slides-sm": "1.6",
+        "num-slides-md": "2.2",
+        "num-slides-lg": "3.4",
+        "num-slides-xl": "4.2",
+        "num-slides-2xl": "5"
+      }
+    },
+    "hok_featured_collection_bV9EXM": {
+      "type": "hok-featured-collection",
+      "disabled": true,
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       "settings": {
         "showContainer": "container",
         "seo_text": "Back-In-Stocks-",
@@ -1231,7 +1568,11 @@
           "type": "image-media",
           "settings": {
             "banner-url": "shopify://collections/product-without-clearance",
+<<<<<<< HEAD
             "banner-image-desktop": "shopify://shop_images/1_38043c3f-cf7f-4ad4-84f4-2547f2efb319.jpg",
+=======
+            "banner-image-desktop": "shopify://shop_images/1_7deb8037-8c44-4478-891a-34b7338cc2ba.jpg",
+>>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
             "cta-text": "",
             "cta-text-color": "#ffffff",
             "cta-bg-color": "#000000",
@@ -1481,6 +1822,7 @@
     "multi_functional_container_KEjR43",
     "multi_functional_container_4M7jiW",
     "hok_featured_collection_yCrqB9",
+    "hok_featured_collection_bV9EXM",
     "grid_media_collection_krrKMw",
     "hok_featured_collection_Mjb6i7",
     "multi_functional_container_XaTjix",
