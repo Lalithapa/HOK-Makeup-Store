@@ -3,13 +3,13 @@
   margin-top: {{ section.settings.margin_top_desktop }}px;
   margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
   }
-  .product-tab-section {
+  .section-{{ section.id }} .product-tab-section {
     padding: 40px 0;
     margin: auto;
     overflow:hidden;
   }
 
-  .product-tab-header {
+ .section-{{ section.id }} .product-tab-header {
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -17,7 +17,7 @@
   margin: auto;
   }
 
-  .product-tab-button {
+ .section-{{ section.id }} .product-tab-button {
   background: none;
   border: none;
   font-weight: bold;
@@ -35,7 +35,7 @@
   color: #000;
   }
 
-  .product-tab-button.active::after {
+ .section-{{ section.id }} .product-tab-button.active::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -57,23 +57,23 @@
     max-width: 100%;
     box-sizing: border-box;
   } */
-  .tabs_swiper{
+  .section-{{ section.id }} .tabs_swiper{
     top: unset !important;
     bottom: -26px;
     background: #F5F5F5;
     z-index: 0;
   }
-  .tabs_swiper .swiper-pagination-progressbar-fill{
+  .section-{{ section.id }} .tabs_swiper .swiper-pagination-progressbar-fill{
     background: #6E6E6E;
   }
 
-  .product-tab-container {
+  .section-{{ section.id }} .product-tab-container {
     display: none;
     width: 100%;
     overflow:unset !important;
   }
 
-  .product-tab-container.active {
+ .section-{{ section.id }} .product-tab-container.active {
   display: block;
   }
   @media screen and (max-width: 768px) {
@@ -81,28 +81,28 @@
       margin-top: {{ section.settings.margin_top_mobile }}px;
       margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
     }
-    .product-tab-section{
+   .section-{{ section.id }} .product-tab-section{
       padding: 0 12px;
     }
-    .product-tab-header{
+    .section-{{ section.id }} .product-tab-header{
       gap:18px;
       justify-content: space-evenly;
       flex-wrap: nowrap;
       overflow: scroll;
       width: 100%;
     }
-    .product-tab-button {
+    .section-{{ section.id }} .product-tab-button {
       font-size: 20px;
       white-space: nowrap;
       padding: 0;
     }
-    .product-tab-grid-container {
+    .section-{{ section.id }} .product-tab-grid-container {
       grid-auto-columns: 230px;
     }
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-margin">
+<div class="section-{{ section.id }}-margin section-{{ section.id }}">
   <div class="product-tab-section{% if section.settings.showContainer %} {{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <!-- Tabs -->
     <div class="product-tab-header">

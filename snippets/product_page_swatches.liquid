@@ -54,6 +54,7 @@
                   data-value="{{ value |  replace: " ", "-" | escape }}"
                   data-id="{{ variant.option1 | capitalize }}"
                   class="swatch-element swiper-slide product-data {% if is_color %} color {% endif %}"
+                  is_new_variant="{{ variant.metafields.custom.new_variant_added }}"
                 >
                   <input
                     type="radio"
@@ -82,7 +83,7 @@
                       style="
                         {% if product.variants[forloop.index0].metafields.custom.colour != blank %}
                         background-color:{{ product.variants[forloop.index0].metafields.custom.colour }} !important;
-                        {% else %} background-image: url('{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url }} {% else %}{{ variant.featured_image | image_url }}{% endif %}');
+                        {% else %} background-image: url('{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url: width: 34, format: 'webp' }} {% else %}{{ variant.featured_image | image_url: width: 34, format: 'webp' }}{% endif %}');
                           background-size: contain;
                         {% endif %}
                       "

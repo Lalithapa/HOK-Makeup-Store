@@ -68,7 +68,7 @@
                       {% if isrecommend %}width:23px!important;height:23px!important;{% endif %}
                       {% if product.variants[forloop.index0].metafields.custom.colour != blank %}
                             background-color:{{ product.variants[forloop.index0].metafields.custom.colour }} !important;
-                            {% else %} background-image: url('{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url }} {% else %}{{ variant.featured_image | image_url }}{% endif %}');
+                            {% else %} background-image: url('{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url: width: 30, format: 'webp' }} {% else %}{{ variant.featured_image | image_url: width: 30, format: 'webp' }}{% endif %}');
                             {% endif %}
                     "
                   >

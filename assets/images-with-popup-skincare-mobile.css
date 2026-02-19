@@ -233,11 +233,11 @@
     .image-popup-gallery-mobile.image-popup-gallery {
         padding: 120px 0px;
         /* padding-bottom: 85px; */
-        background-image: url(//hokmakeup.com/cdn/shop/files/Group-transformed.png?v=1748943804);
+        background-image: url("https://cdn.shopify.com/s/files/1/0896/2320/0023/files/mobile_bachgg.png?v=1770889664");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
-        background-color: #FBFAF9;
+        background-color: #fff;
     }
 
     .image-popup-gallery-mobile .image-popup-gallery__modal-content-mobile {

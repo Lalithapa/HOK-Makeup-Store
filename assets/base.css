@@ -9,6 +9,13 @@
 .shopify-section {
     background: transparent !important;
 }*/
+.message-icon span{
+  font-size: 14px;
+  font-weight: 500;
+}
+._suggestedButton_ub6la_1702{
+  background-color: #EAE6FF !important;
+}
 span.yt-byob-current-price {
     color: #212529;
     font-weight: 700;
@@ -64,6 +71,7 @@ button.sc-fRfEKy.jHueim.yt-product-atc-disabled ,.sc-cWWfbf.geLTKC.yt-byob-quant
   -webkit-text-fill-color: transparent;
 }
 /* end here */
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -147,11 +155,305 @@ button.sc-fRfEKy.jHueim.yt-product-atc-disabled ,.sc-cWWfbf.geLTKC.yt-byob-quant
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+#yt-product-block[data-yt-product-block='bundle-builder'] {
+    padding-inline: 16px;
+}
 
+/* Category-Navigation Lalit - 04-02-26 */
+.tab-button,
+  .tab-button.active[data-tab=home] {
+    box-shadow: 0 2px 10px 0 rgba(150, 149, 149, .25)
+  }
+
+  .top-1px {
+    top: 1px
+  }
+
+  .tab-button.active .top-1px {
+    top: 2px
+  }
+
+  #makeup .category-cards,
+  .tab-nav {
+    gap: 16px
+  }
+
+  .top-nav-categories {
+    background: #f4f4f4
+  }
+
+  .tab-nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px 0 0;
+    z-index: 0;
+    width: calc(100% - 8px)
+  }
+
+  .tab-nav[location=home] {
+    gap: 8px
+  }
+
+  .tab-nav[location=skincare] .tab-button {
+    padding: 4px 10px
+  }
+
+  .tab-button {
+    flex: 1;
+    background: #fff;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s
+  }
+
+  .tab-button svg {
+    margin-right: 5px;
+    height: 16px;
+  }
+
+  .tab-button.active[data-tab=home] {
+    background: #1b1a1a;
+    color: #fff
+  }
+
+  .tab-button.active[data-tab=home] svg,
+  a.tab-button[data-tab=home]:hover svg {
+    fill: #fff
+  }
+
+  a.tab-button[data-tab=home]:hover {
+    background: #000;
+    color: #fff
+  }
+
+  .tab-button.active,
+  .tab-button.active[data-tab=makeup] {
+    background: #f0dce3
+  }
+
+  a.tab-button[data-tab=makeup]:hover {
+    background: #f0dce3;
+    color: #000
+  }
+
+  .tab-button.active {
+    font-weight: 700;
+    position: relative;
+    font-size: 15px
+  }
+
+  .tab-button.active[data-tab=skincare] {
+    background: #cfebf0;
+    margin-left: 4px
+  }
+
+  a.tab-button.active[data-tab=makeup]:before,
+  a.tab-button.active[data-tab=skincare]:before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    top: -7px;
+    width: calc(100% + 16px);
+    height: calc(100% + 14px);
+    z-index: -1;
+    border-radius: 17px 17px 0 0
+  }
+
+  a.tab-button.active[data-tab=makeup] .before-extra {
+    content: "";
+    position: absolute;
+    background: #fff;
+    bottom: -7px;
+    right: -38px;
+    width: 30px;
+    height: 30px;
+    z-index: -1;
+    clip-path: path("M30,0 A25,25 0 0,0 0,30 L0,0 Z");
+    transform: rotate(270deg)
+  }
+
+  a.tab-button.active[data-tab=makeup] .after-extra,
+  a.tab-button.active[data-tab=skincare] .after-extra {
+    content: "";
+    position: absolute;
+    background: #fff;
+    bottom: -7px;
+    left: -38px;
+    width: 30px;
+    height: 30px;
+    z-index: -1;
+    clip-path: path("M30,0 A25,25 0 0,0 0,30 L0,0 Z");
+    transform: rotate(180deg)
+  }
+
+  button.tab-button.active:before {
+    content: "";
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    background: #fff;
+    box-shadow: 0 -16px 20px 0 rgb(181 181 181 / 26%);
+    z-index: -1;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px
+  }
+
+  .tab-button.active svg {
+    width: 19px;
+    height: 19px;
+    margin-right: 6px
+  }
+
+  .tab-content.active {
+    display: block;
+    border-radius: 17px;
+    margin: 6px 0
+  }
+
+  #makeup.tab-content.active,
+  #skincare.tab-content.active {
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(91, 91, 91, .25)
+  }
+
+  #skincare.tab-content.active {
+    border-radius: 17px 0 17px 17px
+  }
+
+  .category-cards {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 10px
+  }
+
+  .category-cards::-webkit-scrollbar,
+  .tab-content {
+    display: none
+  }
+
+  .tab-product-cards {
+    border-radius: 20px;
+    scroll-snap-align: start;
+    text-align: center;
+    flex: 0 0 auto
+  }
+
+  .tab-product-cards>* {
+    mix-blend-mode: multiply
+  }
+
+  #makeup .tab-product-cards img,
+  #skincare .tab-product-cards img {
+    width: auto;
+    height: 70px
+  }
+
+  @media screen and (max-width:380px) {
+    .tab-nav {
+      flex-wrap: wrap
+    }
+
+    .tab-nav .tab-button[data-tab=home] {
+      flex: 1 1 100%
+    }
+
+    a.tab-button.active[data-tab=makeup] .after-extra {
+      display: none
+    }
+
+    #makeup.tab-content.active {
+      border-top-left-radius: 0
+    }
+
+    .tab-button.active[data-tab=makeup],
+    .tab-button.active[data-tab=skincare] {
+      margin-left: 8px
+    }
+  }
+/* Category-Navigation Lalit - 04-02-26 */
+/* Toaster styling - Lalit - 07-02-2026 */
+ .toastify_notication {
+    position: fixed;
+    bottom: 40px;
+    z-index: 16000161 !important;
+    width: 100%;
+  }
+  .hok-toast {
+  width: 250px;                 /* adjust as needed */
+  max-width: 100%;
+  border-radius: 62px;
+  border: 1.5px solid #FFAAC6;
+  background: #F0437D;
+  padding: 10px 24px 10px 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  }
+
+  .hok-toast__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+  }
+
+  .hok-toast__icon svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+
+  .hok-toast__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+  }
+
+  .hok-toast__sub {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #FFC5D8;
+    line-height: 1.1;
+  }
+
+  .hok-toast__btn {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: transform .08s ease, background .15s ease;
+    white-space: nowrap;
+  }
+
+  .hok-toast__btn:hover {
+    background: rgba(255, 255, 255, 0.24);
+    color: #fff;
+  }
+
+  .hok-toast__btn:active {
+    transform: translateY(1px);
+  }
+/* Toaster styling - Lalit - 07-02-2026 */
 
 /* Smart Menu Styles */
 a:has(.tmenu_item_text:empty){
   display:none;
+}
+.tmenu_item--root > .tmenu_submenu {
+   height: 100dvh !important;
 }
 .tmenu_submenu{
   box-shadow: none !important; 
@@ -179,7 +481,9 @@ a:has(.tmenu_item_text:empty){
   padding: 40px 100px 20px !important;
 }
 /* Smart Menu Styles */
-
+.wishlist-h-count.wishlist-total-count{
+  background: #de0953 !important;
+}
 .b-add_to_bag-button,
 #landing-page-button {
   font-weight: 700;
@@ -312,8 +616,60 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   .page-width-tablet {
     padding: 0 5rem;
   }
+  #insta-feed h2 {
+    font-size: 20px !important;
+  }
 }
-
+.b-mini_cart-link {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.b-mini_cart-quantity_number {
+    font-weight: 400;
+    font-size: 8px;
+    justify-content: center;
+}
+.h-wishlist-icon .wishlist-h-count {
+    padding-left: 0 !important;
+    right: -8px !important;
+    top: -4px !important;
+    line-height: 17px !important;
+}
+@media screen and (min-width: 1200px) {
+  .b-mini_cart-quantity_number {
+    background:  #de0953;
+    border-radius: 7px;
+    color: #fff;
+    left: 50%;
+    min-width: 14px;
+    padding: 1px 3px;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .b-mini_cart-quantity {
+    bottom: 100%;
+    left: 100%;
+    position: absolute;
+  }
+  .b-mini_cart-quantity_number {
+    background: #DE0953;
+    border-radius: 7px;
+    color: var(--color-light);
+    left: 50%;
+    min-height: 14px;
+    min-width: 14px;
+    padding: 1px 3px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-80%, -30%);
+  }
+}
 @media screen and (min-width: 990px) {
   .header:not(.drawer-menu).page-width {
     padding-left: 5rem;
@@ -2359,7 +2715,7 @@ input[type='checkbox'] {
   align-items: center;
   font-size: 0.9rem;
   bottom: 0.8rem;
-  left: 2.2rem;
+  left: 1rem;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
 }
 
@@ -2621,9 +2977,9 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-.header-wrapper--border-bottom {
+/* .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
+} */
 
 .header {
   display: grid;
@@ -2686,7 +3042,7 @@ input[type='checkbox'] {
   }
 
   .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -2749,7 +3105,7 @@ input[type='checkbox'] {
   }
 
   .header--mobile-left {
-    grid-template-columns: auto 2fr 1fr;
+    display:block;
   }
 }
 
@@ -3080,9 +3436,10 @@ details[open] > .header__submenu {
   margin-left: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 768px) {
   .header__inline-menu {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .header--top-center .header__inline-menu {

@@ -6,32 +6,32 @@
     padding-top: {{ section.settings.padding_text_top_desktop }}px;
    padding-bottom: {{ section.settings.padding_text_bottom_desktop }}px;
   }
-   .skincare-finds-section{
+   .section-{{ section.id }} .skincare-finds-section{
      background-color: {{ section.settings.background_color }};
    }
-  .b-skincare-vendor{
+  .section-{{ section.id }} .b-skincare-vendor{
     font-size: 22px;
     font-weight: 800;
     line-height: 32px;
     margin-top: 10px;
   }
-  .b-skincare-subtitle{
+ .section-{{ section.id }}  .b-skincare-subtitle{
     font-size: 19px;
     color: #7E7E7E;
   }
-  .b-skincare-subtitle strong{
+ .section-{{ section.id }}  .b-skincare-subtitle strong{
     color: #1B1B1B;
   }
-  .skincare-finds-swiper-pagination-{{ section.id }}{
+  .section-{{ section.id }} .skincare-finds-swiper-pagination-{{ section.id }}{
     top: unset !important;
     /* bottom: -12px; */
     background: #F5F5F5;
     z-index:1;
   }
-  .skincare-finds-swiper-pagination-{{ section.id }} .swiper-pagination-progressbar-fill{
-    background: #6E6E6E;
+  .section-{{ section.id }} .skincare-finds-swiper-pagination-{{ section.id }} .swiper-pagination-progressbar-fill{
+    background: #6E6E6E !important;
   }
-  .view-all-continer-btn{
+ .section-{{ section.id }}  .view-all-continer-btn{
     color: #000;
     font-weight: 800;
     font-size: 16px;
@@ -43,48 +43,59 @@
     text-align: center;
     justify-content: center;
   }
-  .skincare-offer-card {
+  .section-{{ section.id }} .skincare-offer-card {
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 2px 10px 0px rgba(40, 84, 102, 0.25);
     transition: 0.3s;
   }
-  .skincare-offer-card .content{
+  .section-{{ section.id }} .skincare-offer-card .content{
     padding: 24px;
   }
 
-  .skincare-offer-card .skincare-brand-line {
+  .section-{{ section.id }} .skincare-offer-card .skincare-brand-line {
     margin-bottom: 8px;
     gap: 16px;
   }
-  .skincare-brand-line img {
+  .section-{{ section.id }} .skincare-brand-line img {
     width: 120px;
     height: 34px;
     object-fit: contain;
   }
 
-  .skincare-offer-card .discount-text {
+  .section-{{ section.id }} .skincare-offer-card .discount-text {
     color: #000;
     font-size: 20px;
     font-weight: 700;
   }
-  .skincare-offer-card .middle-line {
+  .section-{{ section.id }} .skincare-offer-card .middle-line {
     font-size: 16px;
     color: #D2D2D2;
   }
 
-  .skincare-offer-card .tagline-phrase {
+  .section-{{ section.id }} .skincare-offer-card .tagline-phrase {
     color: #000;
     font-size: 16px;
     text-align: center;
     white-space: nowrap;
   }
+  /* .discount-text.neqwIn_cls{
+    color: #FFF !important;
+    font-size: 13px !important;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 13px;
+    background:#000;
+    display: inline-block;
+     transform: skewX(-25deg);
+     padding: 3px 5px;
+  } */
   @media screen and (max-width: 768px) {
-    .b-skincare-vendor {
+   .section-{{ section.id }}  .b-skincare-vendor {
       font-size: 20px;
       margin-top: 4px;
     }
-    .b-skincare-subtitle {
+    .section-{{ section.id }} .b-skincare-subtitle {
       font-size: 16px;
     }
   }
@@ -95,32 +106,32 @@
       padding-top: {{ section.settings.padding_text_top_mobile }}px;
       padding-bottom: {{ section.settings.padding_text_bottom_mobile }}px;
     }
-    .b-skincare-vendor {
+   .section-{{ section.id }}  .b-skincare-vendor {
       font-size: 16px;
       line-height: 20px;
     }
-    .b-skincare-subtitle {
+    .section-{{ section.id }} .b-skincare-subtitle {
       font-size: 11px;
       text-overflow: ellipsis;
       height: 30px;
     }
-    .view-all-continer-btn{
+   .section-{{ section.id }}  .view-all-continer-btn{
     font-size: 13px;
     width: 100%;
     }
-    .skincare-brand-line img {
+    .section-{{ section.id }} .skincare-brand-line img {
       width: 90px;
       height: 24px;
   }
-  .skincare-offer-card .content {
+  .section-{{ section.id }} .skincare-offer-card .content {
       padding: 18px;
   }
-  .skincare-offer-card .discount-text ,
-  .skincare-offer-card .middle-line {
+  .section-{{ section.id }} .skincare-offer-card .discount-text ,
+  .section-{{ section.id }} .skincare-offer-card .middle-line {
     font-size: 16px;
     white-space: nowrap;
   }
-  .skincare-offer-card .tagline-phrase {
+ .section-{{ section.id }} .skincare-offer-card .tagline-phrase {
     font-size: 12px;
     font-weight: 800;
   }
@@ -139,7 +150,7 @@
     assign fetch_priority = 'auto'
   endif
 %}
-<div class="section-{{ section.id }}-margin">
+<div class="section-{{ section.id }}-margin section-{{ section.id }}">
   <div class="{% if section.settings.showContainer %}{{ section.settings.showContainer }}{% endif %} carousel-section-wrapper{% if section.settings.addInnerPadding %} spacing_handler{% endif %} scroll-trigger animate--fade-in">
     {% if section.settings['coll-title'] %}
       <div class="carousel-section-title-wrapper d-flex justify-content-between align-items-end w-100">
@@ -156,7 +167,7 @@
         id="product-slider-{{ section.id }}"
         class="carousel-wrapper-outer {% if section.settings.showContainer == "container" %}spacing{% endif %} swiper"
       >
-        <div class="carousel-wrapper-inner swiper-wrapper p-2 p-md-3">
+        <div class="carousel-wrapper-inner swiper-wrapper {% unless page.handle contains 'skin' %} p-2 p-md-3 {% endunless %}">
           {% for block in section.blocks %}
             {% assign section_block = block.settings %}
             <div class="swiper-slide">
@@ -186,7 +197,7 @@
 
                 {% when 'cards' %}
                   <a href="{{ section_block.url }}">
-                    <div class="skincare-offer-card " dfdf>
+                    <div class="skincare-offer-card ">
                       <img
                         class="img-fluid"
                         src="{{ section_block.image | image_url }}"
@@ -209,8 +220,16 @@
                               height="34"
                             >
                           </span>
-                          <span class="middle-line">|</span>
-                          <span class="discount-text">{{ section_block.title }}</span>
+                          {% unless template == 'page.skin-care' and forloop.index == 3 %}<span class="middle-line">|</span>{% endunless %}
+                          {% if template == 'page.skin-care' and forloop.first or forloop.index == 2 %}<svg xmlns="http://www.w3.org/2000/svg" width="72" height="14" viewBox="0 0 72 14" fill="none">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="14" viewBox="0 0 72 14" fill="none">
+                          <path d="M10 0H72L62 14H0L10 0Z" fill="#111111"/>
+                          <path d="M22.904 1.28L21.016 12H19.24L15.368 5.12L14.152 12H12.024L13.912 1.28H15.704L19.576 8.16L20.776 1.28H22.904ZM23.1993 8.64C23.1993 8 23.3113 7.408 23.5353 6.864C23.7593 6.32 24.0686 5.85067 24.4633 5.456C24.8686 5.05067 25.3379 4.736 25.8713 4.512C26.4153 4.27733 27.0019 4.16 27.6313 4.16C28.1646 4.16 28.6446 4.24533 29.0713 4.416C29.5086 4.576 29.8819 4.81067 30.1913 5.12C30.5006 5.41867 30.7406 5.78133 30.9113 6.208C31.0819 6.63467 31.1673 7.10933 31.1673 7.632C31.1673 8.048 31.1086 8.448 30.9913 8.832H25.2473C25.3006 9.344 25.4926 9.75467 25.8233 10.064C26.1646 10.3627 26.6019 10.512 27.1353 10.512C27.5299 10.512 27.9086 10.432 28.2713 10.272C28.6339 10.1013 28.9433 9.87733 29.1993 9.6L30.3993 10.688C29.9939 11.1573 29.4926 11.52 28.8953 11.776C28.2979 12.032 27.6579 12.16 26.9753 12.16C26.4099 12.16 25.8926 12.0747 25.4233 11.904C24.9646 11.7333 24.5699 11.4987 24.2393 11.2C23.9086 10.8907 23.6526 10.5173 23.4713 10.08C23.2899 9.64267 23.1993 9.16267 23.1993 8.64ZM29.2313 7.536C29.2099 7.01333 29.0446 6.59733 28.7353 6.288C28.4259 5.968 28.0206 5.808 27.5193 5.808C27.0073 5.808 26.5593 5.968 26.1753 6.288C25.7913 6.608 25.5246 7.024 25.3753 7.536H29.2313ZM38.9588 4.32L39.5508 9.2L41.8868 4.32H43.8868L40.0308 12H38.2548L37.5988 7.216L35.2628 12H33.4868L32.3188 4.32H34.3348L34.9427 9.2L37.2468 4.32H38.9588ZM51.5091 1.28L49.6211 12H47.4771L49.3651 1.28H51.5091ZM57.3926 4.16C58.278 4.16 58.9233 4.45333 59.3286 5.04C59.7446 5.62667 59.862 6.432 59.6806 7.456L58.8806 12H56.8486L57.6006 7.76C57.6966 7.20533 57.6326 6.77333 57.4086 6.464C57.1846 6.144 56.822 5.984 56.3206 5.984C55.8086 5.984 55.3713 6.14933 55.0086 6.48C54.6566 6.8 54.4273 7.24267 54.3206 7.808L53.5846 12H51.5686L52.9126 4.32H54.9446L54.7206 5.584C55.03 5.136 55.414 4.78933 55.8726 4.544C56.3313 4.288 56.838 4.16 57.3926 4.16Z" fill="white"/>
+                          </svg>
+                        {% else %}
+                            <span class="discount-text ">{{ section_block.title }}</span>
+                          {% endif %}
+                        
                         </div>
                         <div class="tagline-phrase">{{ section_block.subtitle }}</div>
                       </div>
@@ -270,11 +289,11 @@
         },
         1280: {
           slidesPerView: numSlidesXl{{ section_unique_name }},
-          spaceBetween: 32
+          spaceBetween: 10
         },
         1536: {
           slidesPerView: numSlides2xl{{ section_unique_name }},
-          spaceBetween: 32
+          spaceBetween: 10
         },
       },
       navigation: {

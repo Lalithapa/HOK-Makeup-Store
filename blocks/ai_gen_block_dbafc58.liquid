@@ -1,7 +1,3 @@
-{% doc %}
-  @prompt
-    create a marquee section
-{% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
@@ -65,18 +61,19 @@
 
   @media screen and (max-width: 749px) {
     .ai-marquee-item-{{ ai_gen_id }} {
-      font-size: {{ block.settings.font_size | times: 0.85 }}px;
+      font-size: {{ block.settings.font_size | times: 0.95 }}px;
     }
 
     .ai-marquee-icon-{{ ai_gen_id }} {
-      width: {{ block.settings.icon_size | times: 0.85 }}px;
-      height: {{ block.settings.icon_size | times: 0.85 }}px;
+      width: {{ block.settings.icon_size | times: 0.95 }}px;
+      height: {{ block.settings.icon_size | times: 0.95 }}px;
     }
   }
 {% endstyle %}
 
 <marquee-block-{{ ai_gen_id }} class="ai-marquee-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   <div class="ai-marquee-container-{{ ai_gen_id }}">
+    <a href="{{ block.settings.marquee_link }}" title="Sale Link" aria-label="Sale link" >
     <div class="ai-marquee-content-{{ ai_gen_id }}">
       {% for i in (1..2) %}
         {% if block.settings.text_1 != blank %}
@@ -220,6 +217,7 @@
         {% endif %}
       {% endfor %}
     </div>
+  </a>
   </div>
 </marquee-block-{{ ai_gen_id }}>
 
@@ -256,6 +254,11 @@
     {
       "type": "header",
       "content": "Content"
+    },
+    {
+      "type": "url",
+      "id": "marquee_link",
+      "label": "Marquee Link"
     },
     {
       "type": "text",

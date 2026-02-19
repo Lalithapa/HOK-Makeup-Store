@@ -13,6 +13,8 @@
       assign offer_name = '799_50OFF'
     elsif collection.handle contains 'buy-any-3-get-3-free'
       assign offer_name = 'buy3_get3'
+    elsif collection.handle contains 'organic-works-bar-soaps'
+      assign offer_name = 'bar_soaps'
     elsif collection.handle contains 'buy-any-3-at-799'
       assign offer_name = 'buy3_799'
     elsif collection.handle contains 'hok-makeup-x-sweetons'
@@ -177,10 +179,10 @@
                        </li>
                       {% elsif offer_name == 'buy4_999'%}
                        <li class="bogo-text-wrapper">
-                        Buy any <strong>4</strong> at <strong>₹999</strong> - Limited Time Offer!
+                        Buy any <strong>3</strong> at <strong>₹999</strong> - Limited Time Offer!
                        </li>
                        <li class="bogo-text-wrapper">
-                         Buy any <strong>7</strong> at <strong>₹1499</strong> - Limited Time Offer!
+                         Buy any <strong>6</strong> at <strong>₹1499</strong> - Limited Time Offer!
                         </li>
                       {% elsif offer_name == 'Lagirl@1499'%}
                        <li class="bogo-text-wrapper">
@@ -193,6 +195,10 @@
                       {% elsif offer_name == 'buy3_get3'%}
                        <li class="bogo-text-wrapper">
                         Buy any <strong>3</strong> at <strong>₹1499</strong> + Get <b>3 Free</b> Gifts
+                       </li>
+                      {% elsif offer_name == 'bar_soaps'%}
+                       <li class="bogo-text-wrapper">
+                        Receive a <b>₹250</b> lip balm absolutely free
                        </li>
                       {% elsif offer_name == 'buy3_799'%}
                        <li class="bogo-text-wrapper">
@@ -240,7 +246,7 @@
                         >
                       </p>
                     {% elsif offer_name == 'combos' %}
-                      <p class="bogo-text-wrapper">Get a <b>Surprise Gift</b> on orders above <b>₹799</b></p>
+                      <p class="bogo-text-wrapper">Get a <b>Surprise Gift</b> on orders above <b>₹999</b></p>
                       <p class="bogo-text-wrapper" style="color: #991054;text-align: center;"> 
                         <b>
                           Offers on Selected
@@ -282,9 +288,8 @@
                      {% elsif offer_name == 'flat-70-off-orders-above-599' %}
                        <li class="bogo-text-wrapper"> Flat <strong>70%</strong> OFF on Orders <strong>599+</strong> </li>
                     {% elsif offer_name == 'default' %}
-                      <li class="bogo-text-wrapper">Extra <b>10% OFF</b> on orders above ₹999</li>
-                      <li class="bogo-text-wrapper">Extra <b>15% OFF</b> on orders above ₹1499</li>
-                      <li class="bogo-text-wrapper">Get <b>Two Surprise Gifts</b> on orders above ₹2299</li>
+                      <li class="bogo-text-wrapper">Extra <b>15% OFF</b> on orders below ₹1250 + Surprise Gift</li>
+                      <li class="bogo-text-wrapper">Extra <b>25% OFF</b> on orders above ₹1250 + Surprise Gift</li>
                       <li class="bogo-text-wrapper"><b>On Prepaid Orders: Extra 5% OFF</b></li>
                       <p class="bogo-text-wrapper" style="color: #991054;text-align: center;">
                         <small style="font-size: 10px;">*Offers will be applied at checkout</small>

@@ -54,7 +54,7 @@
             {% comment %} mw-310 {% endcomment %}
             <div class="swiper-slide" product_slider="true">
               {% assign indexing = forloop.index %}
-              {% render 'new-pocket', product: product, fetch_priority: fetch_priority, indexIs: indexing , seo_text: section.settings.seo_text %}
+              {% render 'new-pocket-skincare', product: product, fetch_priority: fetch_priority, indexIs: indexing , seo_text: section.settings.seo_text %}
             </div>
           {% endfor %}
         </div>

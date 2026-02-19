@@ -52,7 +52,7 @@
         {% for product in collection.products limit: 10 %}
           {% if product.available %}
           <div class="swiper-slide product-card-skincare">
-            {% render 'new-pocket',
+            {% render 'new-pocket-skincare',
               product: product,
               fetch_priority: fetch_priority,
               indexIs: indexing,

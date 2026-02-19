@@ -13,6 +13,7 @@
   "sections": {
     "main_cart_drawer_446jVG": {
       "type": "main-cart-drawer",
+      "disabled": true,
       "settings": {}
     },
     "product_quickview_Ciajkn": {

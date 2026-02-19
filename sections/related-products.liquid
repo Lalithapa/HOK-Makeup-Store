@@ -39,7 +39,7 @@
         {% for recommendation in recommendations.products %}
           <li class="grid__item">
             {% assign indexing = forloop.index0 %}
-            {% render 'new-pocket', product: recommendation, fetch_priority: true, indexIs: indexing %}
+            {% render 'new-pocket-skincare', product: recommendation, fetch_priority: true, indexIs: indexing %}
             {% comment %} {% render 'product-pockets', product: recommendation, fetch_priority: true, indexIs: indexing %} 
               {% render 'card-product',
                 card_product: recommendation,

@@ -17,17 +17,18 @@
         "ai_gen_block_dbafc58_dpDFfL": {
           "type": "ai_gen_block_dbafc58",
           "settings": {
-            "text_1": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
-            "text_2": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
-            "text_3": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
-            "text_4": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
-            "text_5": "HOK Glam Nation Sale – Upto 50% OFF + Surprise Gift",
+            "marquee_link": "shopify://collections/product-without-clearance",
+            "text_1": "HOK Swipe Right Sale - Up To 50% + Surprise Gift",
+            "text_2": "HOK Swipe Right Sale - Up To 50% + Surprise Gift",
+            "text_3": "HOK Swipe Right Sale - Up To 50% + Surprise Gift",
+            "text_4": "HOK Swipe Right Sale - Up To 50% + Surprise Gift",
+            "text_5": "HOK Swipe Right Sale - Up To 50% + Surprise Gift",
             "show_icon": true,
             "icon_type": "sparkle",
             "icon_size": 14,
             "icon_color": "#000000",
             "icon_text_spacing": 16,
-            "background_color": "#eae1d0",
+            "background_color": "#eae6ff",
             "text_color": "#000000",
             "font_size": 14,
             "font_weight": "400",
@@ -48,24 +49,24 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".tmenu_item_text {font-family: 'Mosvita' !important;}",
+        ".tmenu_item_text {font-family: \"Mosvita\" !important;}",
         ".tmenu_item--root > .tmenu_submenu {box-shadow: none !important; border-top: 0.5px solid #d2d1d1;}"
       ],
       "settings": {
-        "logo_position": "top-center",
-        "menu": "main-menu",
+        "logo_position": "top-left",
+        "menu": "desktop-main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "always",
+        "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": false,
         "enable_language_selector": true,
         "enable_customer_avatar": true,
-        "mobile_logo_position": "center",
+        "mobile_logo_position": "left",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 24,
+        "padding_bottom": 0
       }
     }
   },

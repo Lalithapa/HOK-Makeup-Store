@@ -71,7 +71,7 @@
               {% for product in block.settings.collection.products limit:4 %}
                 <div class="product-tab-block-section swiper-slide">
                   {% assign indexing = forloop.index0 %}
-                  {% render 'new-pocket', product: product, fetch_priority: fetch_priority, indexIs: indexing %}
+                  {% render 'new-pocket-skincare', product: product, fetch_priority: fetch_priority, indexIs: indexing %}
                 </div>
               {% endfor %}
             </div>

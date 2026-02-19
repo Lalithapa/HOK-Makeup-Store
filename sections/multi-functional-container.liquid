@@ -49,13 +49,13 @@
   assign num_slides_xl = section.settings['num-slides-xl']
   assign num_slides_2xl = section.settings['num-slides-2xl']
   assign image_priority = section.settings.image_priority
-  assign load_video = false
+  assign preffered_width = section.settings.preffered_width
   if image_priority
     assign fetch_priority = 'high'
-    assign load_video = true
+    assign load_video = 'metadata'
   else
     assign fetch_priority = 'auto'
-    assign load_video = false
+    assign load_video = 'none'
   endif
 %}
 <div class="section-{{ section.id }}-margin">
@@ -107,7 +107,7 @@
           {% for block in section.blocks %}
             <div class="square-banner-slide-wrapper swiper-slide">
               <a
-                href="{{ block.settings['banner-url'] }}"
+                href="{{ block.settings['banner-url'] }}" aria-label="{{ section.settings.seo_text | default: 'Shop collection' | append: ' - banner ' | append: forloop.index | escape }}"
                 class="square-banner-slide"
                 {% if section.settings.seo_text %}
                   data-location="{{ section.settings.seo_text | append:forloop.index }}"
@@ -115,79 +115,104 @@
               >
                 {% case block.type %}
                   {% when 'image-media' %}
-                    {% assign sizes = '100vw' %}
-                    {% assign widths = '550, 750, 1100, 1500, 1920, 2000, 3000' %}
+                      {% liquid
+                        assign sizes = '(min-width: 768px) {{ preffered_width | append:"px" }}, 100vw' 
+                        assign widths = '480, 768, 1100, 1500, 1920' 
+                        assign primary_ratio = block.settings.banner-image-desktop.aspect_ratio | default: 1.777 
+                      %}
                     {% if block.settings['banner-image-mobile'] != blank %}
-                      {{
-                        block.settings['banner-image-desktop']
-                        | image_url: width: 3000
-                        | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: fetch_priority,
-                          class: 'w-100 desktop_screen'
-                      }}
-                      {{
-                        block.settings['banner-image-mobile']
-                        | image_url: width: 550
-                        | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: fetch_priority,
-                          class: 'w-100 mobile_screen'
-                      }}
-                    {% else %}
-                      {{
-                        block.settings['banner-image-desktop']
-                        | image_url: width: 3000
-                        | image_tag:
-                          height: '100%',
-                          sizes: sizes,
-                          widths: widths,
-                          fetchpriority: fetch_priority,
-                          class: 'w-100'
-                      }}
-                    {% endif %}
+                       {% assign mobile_ratio = block.settings.banner-image-mobile.aspect_ratio | default: 1.777 %}
+                       <div class="swiper-media-container desktop_screen"  style="aspect-ratio: {{ primary_ratio }}">
+                        {{
+                          block.settings['banner-image-desktop']
+                          | image_url: width: preffered_width
+                          | image_tag:
+                            height: '100%',
+                            sizes: sizes,
+                            alt: block.settings.banner-image-desktop.alt ,
+                            widths: widths,
+                            fetchpriority: fetch_priority
+                        }}
+                        </div>
+                         <div class="swiper-media-container mobile_screen" style="aspect-ratio: {{ mobile_ratio }}">
+                          {{
+                            block.settings['banner-image-mobile']
+                            | image_url: width: 550 ,  format: 'webp'
+                            | image_tag:
+                              height: '100%',
+                              sizes: sizes,
+                              alt: block.settings.banner-image-mobile.alt ,
+                              widths: widths,
+                              fetchpriority: fetch_priority
+                          }}
+                        </div>     
+                      {% else %}
+                        <div class="swiper-media-container" style="aspect-ratio: {{ primary_ratio }}">
+                          {{
+                            block.settings['banner-image-desktop']
+                            | image_url: width: preffered_width
+                            | image_tag:
+                              height: '100%',
+                              alt: block.settings.banner-image-desktop.alt , 
+                              sizes: sizes,
+                              widths: widths,
+                              fetchpriority: fetch_priority
+                          }}
+                          </div>
+                      {% endif %}
+                    
                   {% when 'video-media' %}
                     {% assign media_desktop = block.settings['banner-video-desktop'] %}
+                    {% assign primary_ratio = block.settings.banner-video-desktop.aspect_ratio | default: 1.777 %}
                     {% if block.settings['banner-video-mobile'] != blank %}
                       {% assign media_mobile = block.settings['banner-video-mobile'] %}
-                      {{
-                        media_desktop
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'desktop_screen square-banner-media',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          controls: false
-                      }}
+                      {% assign mobile_ratio = block.settings.banner-video-mobile.aspect_ratio | default: 1.777 %}
+                       <div class="swiper-media-container desktop_screen" style="aspect-ratio: {{ primary_ratio }}">
+                        {{
+                          media_desktop
+                          | video_tag: 
+                            image_size: '250x',
+                            width: '100%',
+                            height: 'auto',
+                            preload: load_video ,
+                            class: 'lazy-video square-banner-media',
+                            autoplay: true,
+                            loop: true,
+                            muted: true,
+                            controls: false
+                        }}
+                      </div>
+                      <div class="swiper-media-container mobile_screen" style="aspect-ratio: {{ mobile_ratio }}">
                       {{
                         media_mobile
                         | video_tag:
+                          image_size: '150x',
                           width: '100%',
-                          height: '100%',
-                          class: 'mobile_screen square-banner-media',
+                          height: 'auto',
+                          preload: load_video ,
+                          class: 'lazy-video square-banner-media',
                           autoplay: true,
                           loop: true,
                           muted: true,
                           controls: false
                       }}
+                      </div>
                     {% else %}
-                      {{
-                        media_desktop
-                        | video_tag:
-                          width: '100%',
-                          height: '100%',
-                          class: 'square-banner-media d-block',
-                          autoplay: true,
-                          loop: true,
-                          muted: true,
-                          controls: false
-                      }}
+                     <div class="swiper-media-container" style="aspect-ratio: {{ primary_ratio }}">
+                        {{
+                          media_desktop
+                          | video_tag:
+                            image_size: '250x',
+                            width: '100%',
+                            height: 'auto',
+                            preload: load_video ,
+                            class: 'square-banner-media lazy-video d-block',
+                            autoplay: true,
+                            loop: true,
+                            muted: true,
+                            controls: false
+                        }}
+                      </div>
                     {% endif %}
                 {% endcase %}
                 {% if block.settings.shopcatagorytxt != blank %}
@@ -479,7 +504,12 @@
       "id": "carousel-sub-title-links",
       "label": "Carousel Sub Title Link"
     },
-
+    {
+      "type": "number",
+      "id": "preffered_width",
+      "label": "Preffered Width",
+      "default" : 1335
+    },
     {
       "type": "image_picker",
       "id": "hero-banner",

@@ -1,53 +1,6 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
-    <script>
-function isCustomerLoggedIn() {
- {% if customer %}
-  return true;
- {% else %}
-  return false;
- {% endif %}
-}// Your custom SVG icon
-var accountIconSVG = `
- <a id="kp-account33" class="custom-account-icon" href="#" style="display:inline-flex; align-items:center;">
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 25" fill="none">
-    <path d="M11.8501 0.849609C14.9726 0.849609 17.5005 3.3744 17.5005 6.4834C17.5003 9.59227 14.9725 12.1162 11.8501 12.1162C8.7277 12.1162 6.19986 9.59227 6.19971 6.4834C6.19971 3.3744 8.7276 0.849609 11.8501 0.849609Z" stroke="black" stroke-width="1"></path>
-    <path d="M22.8501 23.9377C22.8501 22.4969 22.5656 21.0702 22.0128 19.7391C21.46 18.408 20.6497 17.1985 19.6283 16.1797C18.6068 15.1609 17.3942 14.3527 16.0596 13.8014C14.725 13.25 13.2946 12.9662 11.8501 12.9662C10.4056 12.9662 8.97516 13.25 7.64058 13.8014C6.306 14.3527 5.09337 15.1609 4.07192 16.1797C3.05048 17.1985 2.24022 18.408 1.68742 19.7391C1.13462 21.0702 0.850098 22.4969 0.850098 23.9377" stroke="black" stroke-width="1" stroke-linecap="round"></path>
-  </svg>
- </a>
-`;function insertAndConfigureAccountIcon() {
- const searchIconContainer = document.querySelector('.b-header-shopping.d-flex.align-items-center');
- if (!searchIconContainer) {
-  console.warn('Search icon container not found.');
-  return;
- } // Prevent multiple insertions
- if (document.getElementById('kp-account33')) return; // Insert account icon after search icon
- searchIconContainer.insertAdjacentHTML('afterend', accountIconSVG);
-  const accountLink = document.getElementById('kp-account33'); if (isCustomerLoggedIn()) {
-  accountLink.setAttribute('href', '/account');
- } else {
-  accountLink.setAttribute('href', '#');
-  accountLink.addEventListener('click', function (e) {
-   e.preventDefault();
-   if (typeof shipRocketMarketingLogin === 'function') {
-    shipRocketMarketingLogin();
-   } else {
-    window.location.href = '/account/login';
-   }
-  });
- }
-}document.addEventListener('DOMContentLoaded', insertAndConfigureAccountIcon);
-</script><script>
-  document.addEventListener('DOMContentLoaded', function() {
- var accountIconElement = document.querySelector('.b-account_links-link.m-sign_in');
- if (accountIconElement) {
-  accountIconElement.remove();
-  console.log('Account icon element removed.');
- } else {
-  console.log('Account icon element not found.');
- }
-}); </script> 
     <meta charset="utf-8">
     <meta name="google-site-verification" content="TDoXrfR2tc8ptJb5eduGq1vRueRu-47EbZAUmcY1MxQ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,6 +10,7 @@ var accountIconSVG = `
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
+    {% render 'srp-login' %}
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +27,10 @@ var accountIconSVG = `
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
+    {% comment %} Preload Video Image to improve LCP {% endcomment %}
+      <link rel="preload" as="image" href="https://hokmakeup.com/cdn/shop/files/preview_images/75c5223dcd1446eb9f79d19815ad4005.thumbnail.0000000000_1280x.jpg?v=1770034528" fetchpriority="high">
+      <link rel="preload" as="image" href="https://hokmakeup.com/cdn/shop/files/preview_images/9229d1873d54494faf726f0e6e9679e3.thumbnail.0000000000_390x.jpg?v=1770034528" fetchpriority="high">
+    {% comment %} Preload Video Image to improve LCP {% endcomment %}
     {% render 'meta-tags', page_description: page_description, page_title: page_title %}
     <script src="{{ 'jquery.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'application.js' | asset_url }}" defer="defer"></script>
@@ -346,20 +304,17 @@ var accountIconSVG = `
       }
       }
     {% endstyle %}
-
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'base.css' | asset_url | stylesheet_tag:  preload: true }}
+    {{ 'bootstrap.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'swiper.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'additional-swiper.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'product-pocket.css' | asset_url | stylesheet_tag: preload: true }}
     {% if template contains 'product' %}
       {{ 'product-page.css' | asset_url | stylesheet_tag }}
     {% endif %}
     {% if template.suffix == 'hok-rewards' %}
       {{ 'hok_rewards.css' | asset_url | stylesheet_tag }}
     {% endif %}
-    <link rel="preload" as="style" href="{{ 'bootstrap.css' | asset_url }}" onload="this.onload=null;this.rel='stylesheet'">
-    {% comment %} <link rel="stylesheet" href="{{ 'swiper.css' | asset_url  }}" media="print" onload="this.media='all'">{% endcomment %}
-    {{ 'swiper.css' | asset_url | stylesheet_tag }}
-    {{ 'additional-swiper.css' | asset_url | stylesheet_tag }}
-    {{ 'mini-cart.css' | asset_url | stylesheet_tag }}
-    {{ 'product-pocket.css' | asset_url | stylesheet_tag }}
     {% if template == 'cart' %}
       <link
         rel="stylesheet"
@@ -368,13 +323,15 @@ var accountIconSVG = `
         onload="this.media='all'"
       >
     {% endif %}
-    {%- if settings.cart_type == 'drawer' -%}
-      {% comment %}{{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }} {% endcomment %}
+     {{ 'yt-app.css' | asset_url | stylesheet_tag: preload: true }} 
+      {% comment %} {%- if settings.cart_type == 'drawer' -%}
+       {{ 'mini-cart.css' | asset_url | stylesheet_tag }}
+      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
       {{ 'component-cart.css' | asset_url | stylesheet_tag }}
       {{ 'component-totals.css' | asset_url | stylesheet_tag }}
       {{ 'component-price.css' | asset_url | stylesheet_tag }}
       {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -392,10 +349,7 @@ var accountIconSVG = `
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
-      <link
-        rel="stylesheet"
-        href="{{ 'component-predictive-search.css' | asset_url }}"
-      >
+      {{ 'component-predictive-search.css' | asset_url | stylesheet_tag: preload: true }}
     {%- endif -%}
     {% render 'sr-checkout' %}
     <script>
@@ -533,7 +487,55 @@ var accountIconSVG = `
     <!-- Required to show all the recommended products on Foundation Friday -->
     <script>
       // Video Lazyload and New Icon Logic
-     document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll("video.lazyvideo"),r=e=>{let r=e.querySelector("source"),t=r.getAttribute("data-src");r.setAttribute("src",t),e.load()},t=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&(r(e.target),t.unobserve(e.target))})},{threshold:.5});e.forEach(e=>t.observe(e));let n=[document.querySelector("#HeaderMenu-makeup .new-icon"),document.querySelector("#HeaderMenu-makeup-explore-all .new-icon"),document.querySelector("#HeaderDrawer-makeup .new-icon"),document.querySelector("#HeaderDrawer-makeup-explore-all .new-icon")],a=[document.querySelector("#HeaderMenu-skin .new-icon"),document.querySelector("#HeaderMenu-skin-explore-all .new-icon"),document.querySelector("#HeaderDrawer-skin .new-icon"),document.querySelector("#HeaderDrawer-skin-explore-all .new-icon")];localStorage.getItem("visitedMakeup")&&n.forEach(e=>e&&(e.style.display="none")),localStorage.getItem("visitedSkincare")&&a.forEach(e=>e&&(e.style.display="none"));let l=[document.getElementById("HeaderMenu-makeup"),document.getElementById("HeaderMenu-makeup-explore-all"),document.getElementById("HeaderDrawer-makeup"),document.getElementById("HeaderDrawer-makeup-explore-all")];l.forEach(e=>{e&&e.addEventListener("click",function(){localStorage.setItem("visitedMakeup","true")})});let o=[document.getElementById("HeaderMenu-skin"),document.getElementById("HeaderMenu-skin-explore-all"),document.getElementById("HeaderDrawer-skin"),document.getElementById("HeaderDrawer-skin-explore-all")];o.forEach(e=>{e&&e.addEventListener("click",function(){localStorage.setItem("visitedSkincare","true")})})});
+      document.addEventListener('DOMContentLoaded', () => {
+        const videos = document.querySelectorAll('.lazy-video');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const video = entry.target;
+
+            video.preload = 'metadata';
+            video.play().catch(() => {});
+
+            observer.unobserve(video);
+          });
+        }, {
+          rootMargin: '200px',
+          threshold: 0.1
+        });
+
+        videos.forEach(video => observer.observe(video));
+      });
+
+      //  document.addEventListener("DOMContentLoaded", function () {
+      //     const videos = document.querySelectorAll("video.lazyvideo");
+
+      //     if (!videos.length) return;
+
+      //     const loadVideo = (video) => {
+      //         const source = video.querySelector("source[data-src]");
+      //         if (!source) return;
+
+      //         source.src = source.dataset.src;
+      //         video.load();
+      //     };
+
+      //     const observer = new IntersectionObserver((entries, observer) => {
+      //         entries.forEach(entry => {
+      //             if (entry.isIntersecting) {
+      //                 loadVideo(entry.target);
+      //                 observer.unobserve(entry.target);
+      //             }
+      //         });
+      //     }, {
+      //         threshold: 0.5
+      //     });
+
+      //     videos.forEach(video => observer.observe(video));
+      // });
+
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',

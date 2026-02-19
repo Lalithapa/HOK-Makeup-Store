@@ -272,19 +272,19 @@
                 <a href="{{ block.settings['banner-url'] }}" data-location="Hero-banner-{{ forloop.index }}">
                   {% if block.type == 'image' %}
                       <img
-                          src="{{ block.settings.banner-image-desktop | image_url }}"
+                          src="{{ block.settings.banner-image-desktop | image_url: width: 1920, height: 835 , format: 'webp' }}"
                           class="{% if block.settings['banner-image-mobile'] != blank %}desktop_screen{% endif %}"
-                          height="100%"
-                          width="100%" 
+                          width="auto" 
+                          height="auto"
                           fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
                           loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                       >
                         {% if block.settings['banner-image-mobile'] != blank %}
                             <img
-                            src="{{ block.settings.banner-image-mobile | image_url }}"
+                            src="{{ block.settings.banner-image-mobile | image_url: width: 390, height: 600 , format: 'webp' }}"
                             class="mobile_screen"
-                            height="100%"
-                            width="100%"
+                            height="auto"
+                            width="auto"
                             fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}"
                             loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                             >
@@ -292,11 +292,11 @@
                     {% elsif block.type == 'video' %}
                       {% assign media_desktop = block.settings['banner-video-desktop'] %}
                       {% assign media_mobile =  block.settings['banner-video-mobile'] %}
-                        <video poster="{{ media_desktop.preview_image.src | image_url }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
+                        <video poster="{{ media_desktop.preview_image.src | image_url: width: 1920, height: 835 , format: 'webp' }}" class="lazyvideo desktop_screen square-banner-media" autoplay loop muted playsinline>
                           <source data-src="{{ media_desktop.sources[1].url }}" type="video/mp4">
                           Your browser does not support the video tag
                         </video>
-                        <video poster="{{ media_mobile.preview_image.src | image_url }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
+                        <video poster="{{ media_mobile.preview_image.src | image_url: width: 390, height: 600 , format: 'webp' }}" class="lazyvideo mobile_screen square-banner-media" autoplay loop muted playsinline>
                           <source data-src="{{ media_mobile.sources[1].url }}" type="video/mp4">
                           Your browser does not support the video tag.
                         </video>

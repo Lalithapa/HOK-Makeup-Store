@@ -43,11 +43,11 @@
                 {% if media.media_type == 'image' or media.media_type == 'model' %}
                   <div class="swiper-slide">
                     <img
-                      src="{{ media | image_url }}"
+                      src="{{ media | image_url: width: 100, height: 100 , crop: 'center' , format: 'webp' }}"
                       alt="{{ product.title }}"
                       title="{{ product.title }}"
-                      height="100"
                       width="100"
+                      height="auto"
                       loading="lazy"
                     >
                   </div>
@@ -55,10 +55,10 @@
                 {% else %}
                   <div class="swiper-slide">
                     <img
-                      src="{{ media.preview_image.src | image_url }}"
+                      src="{{ media.preview_image.src | image_url: width: 100, height: 100 , crop: 'center' , format: 'webp' }}"
                       alt="{{ media.alt | escape }}"
-                      height="100%"
-                      width="100%"
+                      width="100"
+                      height="auto"
                       loading="eager"
                     >
                   </div>
@@ -71,12 +71,6 @@
           </div>
         </div>
         <div class="col-12 col-md-10 position-relative my-auto p-0 pl-md-4">
-          {% comment %} <div
-            style="display: block;"
-            class="gw-wl-add-to-wishlist-placeholder desktop"
-            data-gw-product_id="{{ product.id }}"
-          ></div> {% endcomment %}
-
           {% if  product.price > 100 %}<div class="product-page-container wishlist-engine" data-product_id="{{  product.id }}" data-variant_id="{{ product.selected_or_first_available_variant.id }}" data-full_button="false" data-css="true"></div>{% endif %}
           <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #fff" class="swiper productSlider2">
             <div class="swiper-wrapper">
@@ -85,12 +79,12 @@
                   <div class="swiper-slide">
                     <div class="image-container">
                       <img
-                        src="{{ media | image_url }}"
+                        src="{{ media | image_url: width: 700, height: 700 , format: 'webp' }}"
                         alt="{{ product.title }}"
                         title="{{ product.title }}"
                         loading="lazy"
                         width="100%"
-                        height="100%"
+                        height="auto"
                         onload="this.parentElement.classList.add('loaded')"
                       >
                     </div>
@@ -261,8 +255,8 @@
               <div class="product_actions-variations">
                 <div class="product-swatches-container">
                   <span class="product_swatch_colors_name">
-                    {% unless template contains 'candies' or product.handle == 'dr-pawpaw-original-balm' -%}
-                      Shade:
+                    {% unless template contains 'candies' or template contains 'bar-soap' or product.handle == 'dr-pawpaw-original-balm' -%}
+                      Shade: 
                     {% else -%}
                       Size:
                     {% endunless -%}
@@ -288,6 +282,8 @@
                   assign offer_name = 'Lagirl@1499'
                 elsif collection.handle contains 'buy-any-3-get-3-free'
                   assign offer_name = 'buy3_get3'
+                elsif collection.handle contains 'organic-works-bar-soaps'
+                  assign offer_name = 'bar_soaps'
                 elsif collection.handle contains 'flat-50-on-orders-799'
                   assign offer_name = '799_50OFF'
                 elsif collection.handle contains 'buy-any-3-at-799'
@@ -343,13 +339,15 @@
                         {% elsif offer_name == 'pd-bundle' %}
                           <b>Buy Any 3 at ₹94</b> ...
                         {% elsif offer_name == 'buy4@999' %}
-                          <b>Buy Any 4 at ₹99</b> ...
+                          <b>Buy Any 3 at ₹99</b> ...
                         {% elsif offer_name == 'Lagirl@1499' %}
                           <b>Buy Any 4 at ₹1499</b> ...
                         {% elsif offer_name == 'candy' %}
                           <b>Buy Any 2 and get</b> ...
                         {% elsif offer_name == 'buy3_get3' %}
                           <b>Buy Any 3 at ₹14</b> ...
+                        {% elsif offer_name == 'bar_soaps' %}
+                          <b>Get a Lip Balm worth </b> ...
                         {% elsif offer_name == '799_50OFF' %}
                           <b>Flat 50% on or</b> ...
                         {% elsif offer_name == 'buy3_799' %}
@@ -363,13 +361,13 @@
                         {% elsif offer_name == 'lamelbuy4_1299' %}
                           <b>Buy Any 4 at ₹109</b> ...
                         {% elsif offer_name == 'combos' %}
-                          Get a <b>Surprise Gift</b> on ...
+                           Get a Surprise Gift on ..
                         {% elsif offer_name == 'giverny' %}
                           <b>Buy Any 3 at 125</b> ...
                         {% elsif offer_name == 'bogo' %}
                           <b>Buy One Get </b> ...
                         {% elsif offer_name == 'default' %}
-                          <b>Extra 10% OFF Orders </b> ...
+                          <b>Extra 15% OFF Orders </b> ...
                         {% elsif offer_name == 'lamel' %}
                           <b>Buy Two Get One Free</b> ...
                         {% endif %}
@@ -391,7 +389,7 @@
                                 {% endunless %}
                               {% elsif offer_name == 'combos' %}
                                  <div class="bogo-offer">
-                                    <p class="bogo-text-wrapper">Get a <b>Surprise Gift</b> on orders above <b>₹799</b></p>
+                                    <p class="bogo-text-wrapper">Get a <b>Surprise Gift</b> on orders above <b>₹999</b></p>
                                   </div>
                               {% elsif offer_name == 'pd-bundle' %}
                                 <div class="bogo-offer">
@@ -399,8 +397,8 @@
                                 </div>
                               {% elsif offer_name == 'buy4@999' %}
                                 <div class="bogo-offer">
-                                  <p class="bogo-text-wrapper">Buy Any <b>4 at ₹999 </b> - Limited Time Offer!</p>
-                                  <p class="bogo-text-wrapper">Buy Any <b>7 at ₹1499 </b> - Limited Time Offer!</p>
+                                  <p class="bogo-text-wrapper">Buy Any <b>3 at ₹999 </b> - Limited Time Offer!</p>
+                                  <p class="bogo-text-wrapper">Buy Any <b>6 at ₹1499 </b> - Limited Time Offer!</p>
                                 </div>
                               {% elsif offer_name == 'candy' %}
                                 <div class="bogo-offer">
@@ -414,6 +412,10 @@
                               {% elsif offer_name == 'Lagirl@1499' %}
                                 <div class="bogo-offer">
                                   <p class="bogo-text-wrapper">Buy any <strong>4</strong> at <strong>₹1499</strong></p>
+                                </div>
+                              {% elsif offer_name == 'bar_soaps' %}
+                                <div class="bogo-offer">
+                                  <p class="bogo-text-wrapper">Get a <b>₹250</b> lip balm absolutely free </p>
                                 </div>
                               {% elsif offer_name == 'buy4_1299' %}
                                 <div class="bogo-offer">
@@ -496,9 +498,8 @@
                                 </div>
                               {% elsif offer_name == 'default' %}
                                   <div class="bogo-offer">
-                                      <p class="bogo-text-wrapper">Extra <b>10% OFF</b> on orders above ₹999</p>
-                                      <p class="bogo-text-wrapper">Extra <b>15% OFF</b> on orders above ₹1499</p>
-                                      <p class="bogo-text-wrapper">Get <b>Two Surprise Gifts</b> on orders above ₹2299</p>
+                                      <p class="bogo-text-wrapper">Extra <b>15% OFF</b> on orders below ₹1250 + Surprise Gift</p>
+                                      <p class="bogo-text-wrapper">Extra <b>25% OFF</b> on orders above ₹1250 + Surprise Gift</p>
                                       <p class="bogo-text-wrapper"><b>On Prepaid Orders: Extra 5% OFF</b></p>
                                   </div>
                               {% endif %}

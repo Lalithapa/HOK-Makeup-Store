@@ -95,7 +95,7 @@
     </div>
     {% comment %} PDP Image Ends {% endcomment %}
     {% comment %} PDP Details Starts {% endcomment %}
-    <div class="b-product_promo_tile-content">
+    <div class="b-product_promo_tile-content skin-care-detail">
       {% unless showCross %}
         {% unless pdptag %}
         <div class="custom_label_badge">
@@ -128,12 +128,13 @@
           </div>
         {% endif %}
       {% endunless %}
-      <p class="b-product_promo_vendor-name">
-        <a class="b-product_promo_vendor-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
-          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929E' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: 'D-CAT' | remove: 'C-CAT'  | remove: 'B2G2' | remove: 'B499' | remove:"B1299" | remove:"M1299" | remove:"E1299" | remove:"L1099" | remove:"R1499" | remove:"M799"| remove:"929D" -}}
-        </a>
-        <a class="b-product_promo_tile-name_link" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
+      <p class="b-product_promo_vendor-name b-product_promo_vendor-name-skincare">
+       
+        <a class="b-product_promo_tile-name_link tile-name_link-skincare" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
           {{- product.title | remove: product.vendor  -}}
+        </a>
+         <a class="b-product_promo_vendor-name_link vendor-name_link-skincare" href="{{- product.url -}}" {% if seo_text %} data-location="{{ seo_text | append:indexIs }}"{% endif %}>
+          {{- product.vendor | remove:'pd-bundle' | remove: 'BOGO' | remove: '929A' | remove: '929E' | remove: '929B' | remove: '929B' | remove: 'CLUB' | remove: 'bg-free' | remove: '3-for-2' | remove: 'D-CAT' | remove: 'C-CAT'  | remove: 'B2G2' | remove: 'B499' | remove:"B1299" | remove:"M1299" | remove:"E1299" | remove:"L1099" | remove:"R1499" | remove:"M799"| remove:"929D" -}}
         </a>
       </p>
       {% comment %} {% if template contains 'collection' %}gap-1{%  else %}gap-2{% endif %} {% endcomment %}
@@ -156,7 +157,7 @@
               style="display:none"
             {% endif %}
           >
-            <span class="discount_label">
+            <span class="discount_label skin-care">
               {{
                 first_variant.compare_at_price
                 | minus: first_variant.price
@@ -171,25 +172,6 @@
           </span>
         {% endunless %}
       </div>
-      {% comment %} <div class="variant_container">
-        {% if first_variant.option1 != blank and first_variant.option1 != 'Default Title' %}
-          Shade: <span class="variant_name">{{ first_variant.option1 }}</span>
-            {% endif %}
-          </div>
-          
-          {% if product.available and product.variants.size > 1 %}
-          {% assign random_number = 'now' | date: '%s' | modulo: 100 | plus: 1 %}
-          {% render 'new-swatches'
-          with 'Color' as swatch,
-          product: product,
-          indexIs: indexIs,
-          isrecommend: true,
-          isAdvertisement: showCross,
-          random_number: random_number,
-          handleRecommendSec: recommendedSection
-          %}
-        {% endif %}
-      {% endcomment %}
     {% if product.available and product.variants.size > 1 %}
         <fieldset class="swatch-picker d-flex align-items-center gap-2">
         {% for variant in product.variants limit:3 %}
@@ -247,3 +229,47 @@
     {% comment %} PDP Details Ends {% endcomment %}
   </div>
 </div>
+<style>
+  .b-product_promo_tile-content.skin-care-detail{
+    padding-top:16px;
+    height: 265px;
+  }
+  .b-product_promo_tile-name_link.tile-name_link-skincare{
+    font-size: 18px;
+    font-weight: 500;
+    max-height: 68px;
+    line-height:22px;
+    -webkit-line-clamp: 3;
+  }
+  .b-product_promo_vendor-name_link.vendor-name_link-skincare{
+    color: #8C92A1;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top:4px;
+  }
+  .discount_label.skin-care{font-size: 14px;}
+  .b-product_promo_tile-content.skin-care-detail .b-product_price-value{
+    font-size:18px;
+     font-weight:800;
+  }
+  .b-product_promo_tile-content.skin-care-detail .b-product_price-value.rack-rate{
+    font-size:16px;
+    font-weight:400;
+    color:#A1A3A8;
+  }
+  .b-product_promo_tile-content.skin-care-detail{padding: 16px 0px 0px 6px;}
+  .b-product_promo_tile-content.skin-care-detail .circular_swatch{width:24px; height:24px;}
+ .b-product_promo_tile-content.skin-care-detail .swatch-picker{margin-top:-4px;}
+ .b-product_promo_tile-content.skin-care-detail .Avada_Star-Icon.AirReviews-Star--Icon-slim svg,.Avada_Star-Icon.AirReviews-Star--Icon-slim.Avada_Star-Icon--empty svg{width: 14px;height: 14px;}
+ .b-product_promo_tile-content.skin-care-detail .AirReviews-StarRate .AirReviews-StarRate--Positive, .AirReviews-StarRate .AirReviews-StarRate--Negative {gap:0 !important;}  
+  @media (max-width: 768px) {
+  .b-product_promo_tile-name_link.tile-name_link-skincare{ -webkit-line-clamp: 4; font-size: 16px; line-height:18px;}
+  .b-product_promo_tile-content.skin-care-detail .b-product_price-value{ font-size:16px !important;}
+  .b-product_promo_tile-content.skin-care-detail .b-product_price-value.rack-rate{ font-size:14px!important;}
+ .discount_label.skin-care{font-size: 14px;}
+  .b-product_promo_tile-content.skin-care-detail .circular_swatch{width:18px; height:18px;}
+  .b-product_promo_tile-content.skin-care-detail .swatch-picker{margin-top:-6px;} 
+  }
+   
+ 
+</style>

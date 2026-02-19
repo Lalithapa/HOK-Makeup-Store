@@ -36,15 +36,15 @@ var feedbackSlider,
   productFirstVariant = document.querySelectorAll(".b-add_to_bagId");
 
 // Openeing Cart Slider
-const cartSlide = () => {
-  $("#toastifies").hide(),
-    //$(".b-mini_cart-container").load(location.href + " .b-mini_cart-container"),
-    newSlide.classList.contains("show_Slider")
-      ? (newSlide.classList.remove("show_Slider"),
-        $("#bg_dark").removeClass("cartOverlay"))
-      : ((newSlide.className += " show_Slider"),
-        $("#bg_dark").addClass("cartOverlay"));
-};
+// const cartSlide = () => {
+//   $("#toastifies").hide(),
+//     //$(".b-mini_cart-container").load(location.href + " .b-mini_cart-container"),
+//     newSlide.classList.contains("show_Slider")
+//       ? (newSlide.classList.remove("show_Slider"),
+//         $("#bg_dark").removeClass("cartOverlay"))
+//       : ((newSlide.className += " show_Slider"),
+//         $("#bg_dark").addClass("cartOverlay"));
+// };
 
 // Closing Cart Slider
 const closeSlider = () => {
@@ -63,7 +63,18 @@ const closeSlider = () => {
   // $("#djgjkfs").removeClass("sjdkdsdklsds"),
   // $("#djgjkfjs").removeClass("sflkgjf");
 };
+function updateCartBubble(cartCount) {
+  const bubble = document.querySelector('.b-mini_cart-quantity_number');
+  if (!bubble) return;
 
+  if (Number(cartCount) > 0) {
+    bubble.classList.remove('toggle-bubble');
+    bubble.style.display = 'flex';
+  } else {
+    bubble.classList.add('toggle-bubble');
+    bubble.style.display = 'none';
+  }
+}
 // Adding Sku in Cart
 const reUseCart = async (event, method, variant_id, qty) => {
   let is_cart_reccommend = $(event.currentTarget).is("[data-add]");
@@ -106,6 +117,7 @@ const reUseCart = async (event, method, variant_id, qty) => {
         dataType: "json",
         success: function (cart) {
           $(".cartIconQty").text(cart.item_count);
+           updateCartBubble(cart.item_count);
         },
         error: function (error) {
           console.error("Error fetching cart information:", error);
@@ -149,6 +161,7 @@ const removeItem = async (event, variant_id) => {
         dataType: "json",
         success: function (cart) {
           $(".cartIconQty").text(cart.item_count);
+           updateCartBubble(cart.item_count);
         },
         error: function (error) {
           console.error("Error fetching cart information:", error);

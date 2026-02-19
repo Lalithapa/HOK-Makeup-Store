@@ -183,12 +183,14 @@
         "testimonial_KnRELb": {
           "type": "testimonial",
           "settings": {
+            "ticker_icon": "shopify://shop_images/Dr._PP_8070f153-1301-49d8-9358-a1ebd17b6994.png",
             "custom_content": "<p>loved by<em> CELEBS </em>like </p>"
           }
         },
         "testimonial_GnmTCF": {
           "type": "testimonial",
           "settings": {
+            "ticker_icon": "shopify://shop_images/Dr._PP_8070f153-1301-49d8-9358-a1ebd17b6994.png",
             "custom_content": "<p><strong>Victoria Beckham & Emma Watson</strong></p>"
           }
         }
@@ -201,7 +203,13 @@
         ".ticker-paw-paw .wrapper-9ioi {width: calc(100% - 100px) !important; height: 78px !important;}",
         "@media screen and (max-width: 750px) {.ticker-paw-paw .wrapper-9ioi {height: 55px !important; width: calc(100% - 45px) !important; } .ticker-paw-paw.tabbY2 {padding: 1px 0px 1px 0px; }}"
       ],
-      "settings": {}
+      "settings": {
+        "bg_color": "#000000",
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36
+      }
     },
     "why_like_section_YUkWbH": {
       "type": "why-like-section",
@@ -341,6 +349,7 @@
         "carousel-title": "",
         "carousel-sub-title": "",
         "carousel-sub-title-links": "",
+        "preffered_width": 1335,
         "num-slides-sm": "1",
         "num-slides-md": "3",
         "num-slides-lg": "3",
@@ -355,24 +364,28 @@
         "testimonial_AiFxNb": {
           "type": "testimonial",
           "settings": {
+            "ticker_icon": "shopify://shop_images/Dr._PP.png",
             "custom_content": "<p><em>DERMATOLOGIST</em>  approved</p>"
           }
         },
         "testimonial_7AYL9m": {
           "type": "testimonial",
           "settings": {
+            "ticker_icon": "shopify://shop_images/Dr._PP_8070f153-1301-49d8-9358-a1ebd17b6994.png",
             "custom_content": "<p> <strong>paediatrician  </strong>approved          </p>"
           }
         },
         "testimonial_NU9ywN": {
           "type": "testimonial",
           "settings": {
+            "ticker_icon": "shopify://shop_images/Dr._PP_8070f153-1301-49d8-9358-a1ebd17b6994.png",
             "custom_content": "<p>suitable for <em>ECZEMA</em> prone skin</p>"
           }
         },
         "testimonial_jxPdBy": {
           "type": "testimonial",
           "settings": {
+            "ticker_icon": "shopify://shop_images/Dr._PP_8070f153-1301-49d8-9358-a1ebd17b6994.png",
             "custom_content": "<p>suitable for <strong>sensitive</strong> skin</p>"
           }
         }
@@ -387,7 +400,13 @@
         ".ticker-paw-paw .wrapper-9ioi {width: calc(100% - 100px) !important; height: 78px !important;}",
         "@media screen and (max-width: 750px) {.ticker-paw-paw .wrapper-9ioi {height: 55px !important; width: calc(100% - 45px) !important; } .ticker-paw-paw.tabbY2 {padding: 1px 0px 1px 0px; }}"
       ],
-      "settings": {}
+      "settings": {
+        "bg_color": "#000000",
+        "margin_top_desktop": 36,
+        "margin_bottom_desktop": 36,
+        "margin_top_mobile": 36,
+        "margin_bottom_mobile": 36
+      }
     },
     "find_your_pawpaw_94yJaV": {
       "type": "find-your-pawpaw",

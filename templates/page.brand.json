@@ -26,6 +26,40 @@
       "blocks": {
         "52589991-d8c3-4398-b07f-b196a544dbc8": {
           "type": "image",
+          "disabled": true,
+          "settings": {
+            "clubImg": "shopify://shop_images/Frame_38736_3.jpg",
+            "clubImgmob": "shopify://shop_images/Frame_38742.jpg",
+            "slid_img": "https://hokmakeup.com/collections/carbon-theory"
+          }
+        },
+        "image_hgLKfP": {
+          "type": "image",
+          "settings": {
+            "clubImg": "shopify://shop_images/Frame_38734.jpg",
+            "clubImgmob": "shopify://shop_images/aakkk.jpg",
+            "slid_img": "https://hokmakeup.com/collections/focallure-beauty"
+          }
+        },
+        "image_CkVdmm": {
+          "type": "image",
+          "settings": {
+            "clubImg": "shopify://shop_images/Frame_38735_1.jpg",
+            "clubImgmob": "shopify://shop_images/unnamed.webp",
+            "slid_img": "https://hokmakeup.com/collections/pink-flash"
+          }
+        },
+        "image_wCLK3B": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "clubImg": "shopify://shop_images/Frame_38737_2.jpg",
+            "clubImgmob": "shopify://shop_images/Frame_38741_5.jpg",
+            "slid_img": "shopify://collections/dr-paw-paw"
+          }
+        },
+        "image_NcxkzW": {
+          "type": "image",
           "settings": {
             "clubImg": "shopify://shop_images/lamel.svg",
             "clubImgmob": "shopify://shop_images/lamel-1.svg",
@@ -58,6 +92,7 @@
         },
         "fb001243-a34b-4ecd-8f3a-4676cb8c9f04": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "clubImg": "shopify://shop_images/4_988cb5d4-3c97-45c8-8b5e-0fac1450b8e0.svg",
             "clubImgmob": "shopify://shop_images/4.svg",
@@ -106,6 +141,7 @@
         },
         "3117addb-770f-4ef5-bf57-aa8166e06851": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "clubImg": "shopify://shop_images/10_7d3ffc17-fa08-4986-a227-f26af33c7ec0.svg",
             "clubImgmob": "shopify://shop_images/10.svg",
@@ -163,6 +199,10 @@
       },
       "block_order": [
         "52589991-d8c3-4398-b07f-b196a544dbc8",
+        "image_hgLKfP",
+        "image_CkVdmm",
+        "image_wCLK3B",
+        "image_NcxkzW",
         "d0b4b038-3382-4741-ad43-fd8a556e82d0",
         "6a6ca289-0822-4d01-8239-1e73ceaa9ea6",
         "511ae696-507d-413b-bac5-693edb597be8",
@@ -196,6 +236,22 @@
         "3a7a3258-7b43-4e6a-b643-4a0dab1195d0": {
           "type": "image",
           "settings": {
+            "clubImg": "shopify://shop_images/Frame_38736_7.jpg",
+            "clubImgmob": "shopify://shop_images/Frame_38742_1_75bd5a08-9b49-4c20-8fc3-e0a27410b14a.jpg",
+            "slid_img": "https://hokmakeup.com/collections/carbon-theory"
+          }
+        },
+        "image_gCibGj": {
+          "type": "image",
+          "settings": {
+            "clubImg": "shopify://shop_images/Frame_38737_1.jpg",
+            "clubImgmob": "shopify://shop_images/Frame_38741_6.jpg",
+            "slid_img": "shopify://collections/dr-paw-paw"
+          }
+        },
+        "image_LcwbKp": {
+          "type": "image",
+          "settings": {
             "clubImg": "shopify://shop_images/dektop.svg",
             "clubImgmob": "shopify://shop_images/mobile.svg",
             "slid_img": "shopify://collections/eveline-cosmetics"
@@ -227,6 +283,7 @@
         },
         "134eb4b5-4a8f-4245-9c63-502cee97d2f5": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "clubImg": "shopify://shop_images/4-1.svg",
             "clubImgmob": "shopify://shop_images/d.svg",
@@ -251,6 +308,7 @@
         },
         "b1768ff4-71c3-4f67-986c-8d35bb206c1b": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "clubImg": "shopify://shop_images/7-1.svg",
             "clubImgmob": "shopify://shop_images/g.svg",
@@ -260,6 +318,8 @@
       },
       "block_order": [
         "3a7a3258-7b43-4e6a-b643-4a0dab1195d0",
+        "image_gCibGj",
+        "image_LcwbKp",
         "45f69e83-c543-4bec-83eb-b162c914b9fd",
         "b97c7eb9-2b88-4f25-9d4b-d2ba1b58966b",
         "0ef2473c-ac6b-4bf3-8a91-328dd366a7c8",

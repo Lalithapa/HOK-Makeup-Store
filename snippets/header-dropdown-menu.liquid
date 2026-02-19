@@ -2,13 +2,12 @@
   Renders a standard dropdown style menu for the header.
   Usage:
   {% render 'header-dropdown-menu' %}
-{% endcomment %}
-{% capture new_launch  %} 
+ {% capture new_launch  %} 
 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 14 14" fill="none" class="position-relative new-icon" style="top:-8px;">
   <rect width="14" height="14" rx="7" fill="#E06E27"/>
   <path d="M8.544 3.623H9.327V9.5H8.616L4.881 4.991H4.872V9.5H4.089V3.623H4.8L8.535 8.132H8.544V3.623Z" fill="white"/>
 </svg>
-{% endcapture %}
+{% endcapture %} {% endcomment %}
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
@@ -26,7 +25,8 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  {{- link.title | escape -}} {% if link.handle == 'makeup' or link.handle == 'skin' %} {{ new_launch }} {% endif %}
+                  {{- link.title | escape -}} 
+                  {% comment %} {% if link.handle == 'makeup' or link.handle == 'skin' %} {{ new_launch }} {% endif %} {% endcomment %}
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
@@ -47,11 +47,11 @@
                           aria-current="page"
                         {% endif %}
                       >
-                      {% if childlink.title != 'Explore All' %}
-                        {{ childlink.title | escape }}
+                      {% comment %} {% if childlink.title != 'Explore All' %}
+                        {{ childlink.title | escape }} {{ new_launch }}
                       {% else %}
-                         <span>{{ childlink.title | escape }} {{ new_launch }}</span>
-                      {% endif %}
+                      {% endif %} {% endcomment %}
+                        {{ childlink.title | escape }}
                       </a>
                     {%- else -%}
                       <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
