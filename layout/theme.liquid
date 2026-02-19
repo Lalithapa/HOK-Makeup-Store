@@ -34,8 +34,7 @@
     {% render 'meta-tags', page_description: page_description, page_title: page_title %}
     <script src="{{ 'jquery.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'application.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'swiper.js' | asset_url }}" defer></script>
-
+    <script src="{{ 'swiper.js' | asset_url }}"></script>
     <script src="{{ 'quick_view.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -44,10 +43,7 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'axios.js' | asset_url }}" defer="defer"></script>
-    {% comment %} 
-      Enable this script if you want to use scroll animation
-      <script src="{{ 'scroll-animation.js' | asset_url }}" defer="defer"></script> 
-    {% endcomment %}
+    <script src="{{ 'scroll-animation.js' | asset_url }}" defer="defer"></script>
     {% comment %}
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -308,25 +304,17 @@
       }
       }
     {% endstyle %}
-<<<<<<< HEAD
     {{ 'base.css' | asset_url | stylesheet_tag:  preload: true }}
-=======
-
-    {{ 'base.css' | asset_url | stylesheet_tag }}
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
     {{ 'bootstrap.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'swiper.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'additional-swiper.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'product-pocket.css' | asset_url | stylesheet_tag: preload: true }}
-<<<<<<< HEAD
     {% if template contains 'product' %}
       {{ 'product-page.css' | asset_url | stylesheet_tag }}
     {% endif %}
     {% if template.suffix == 'hok-rewards' %}
       {{ 'hok_rewards.css' | asset_url | stylesheet_tag }}
     {% endif %}
-=======
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
     {% if template == 'cart' %}
       <link
         rel="stylesheet"
@@ -335,21 +323,9 @@
         onload="this.media='all'"
       >
     {% endif %}
-<<<<<<< HEAD
      {{ 'yt-app.css' | asset_url | stylesheet_tag: preload: true }} 
       {% comment %} {%- if settings.cart_type == 'drawer' -%}
        {{ 'mini-cart.css' | asset_url | stylesheet_tag }}
-=======
-    {% if template contains 'product' %}
-      {{ 'product-page.css' | asset_url | stylesheet_tag: preload: true }}
-    {% endif %}
-     {% if template.suffix == 'hok-rewards' %}
-      {{ 'hok_rewards.css' | asset_url | stylesheet_tag: preload: true }}
-    {% endif %}
-    {{ 'yt-app.css' | asset_url | stylesheet_tag: preload: true }} 
-    {% comment %} {{ 'mini-cart.css' | asset_url | stylesheet_tag }} {% endcomment %}
-    {% comment %} {%- if settings.cart_type == 'drawer' -%}
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
       {{ 'component-cart.css' | asset_url | stylesheet_tag }}
       {{ 'component-totals.css' | asset_url | stylesheet_tag }}
@@ -373,11 +349,7 @@
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
-<<<<<<< HEAD
       {{ 'component-predictive-search.css' | asset_url | stylesheet_tag: preload: true }}
-=======
-      {{ 'component-predictive-search.css' | asset_url | stylesheet_tag: preload: true }} 
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
     {%- endif -%}
     {% render 'sr-checkout' %}
     <script>

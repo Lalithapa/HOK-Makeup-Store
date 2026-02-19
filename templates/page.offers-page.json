@@ -11,10 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
-<<<<<<< HEAD
       "disabled": true,
-=======
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       "custom_css": [
         "p,div,.h2,.h3,.h4,.h5,.h6,h2,h3,h4,h5,h6 {font-size: 1.5rem !important;}",
         "h1 {font-family: var(--header-family); font-size: clamp(3rem, 2vw, 4rem); color: #000; letter-spacing: 2px; margin-bottom: clamp(2rem, 2vw, 4rem);}"
@@ -23,7 +20,6 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-<<<<<<< HEAD
     },
     "offers_banners_AiHX3e": {
       "type": "offers-banner",
@@ -107,11 +103,5 @@
     "main",
     "offers_banners_AiHX3e",
     "floating_nav_wXYxjx"
-=======
-    }
-  },
-  "order": [
-    "main"
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
   ]
 }

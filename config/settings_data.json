@@ -180,7 +180,6 @@
         "disabled": false,
         "settings": {}
       },
-<<<<<<< HEAD
       "16274974966654683533": {
         "type": "shopify://apps/yourtoken-loyalty-rewards/blocks/app-embed/28422318-8bfb-498f-ae3c-12aa490ca976",
         "disabled": false,
@@ -193,14 +192,11 @@
           "air_reviews_json_ld_v2": "{\n\"@context\": \"http://schema.org\",\n\"@type\": \"Product\",\n\"name\": {{ product.title | json }},\n\"description\": {{ product.description | escape | truncate: 150 | json }},\n\"image\": {{ product.featured_image | json }},\n\"aggregateRating\": {\n  \"@type\": \"AggregateRating\",\n  \"ratingValue\": {{ product.metafields.reviews.rating.value.rating | default: product.metafields.air_reviews_product.review_avg | json }},\n  \"bestRating\": {{ product.metafields.reviews.rating.value.scale_max | json }},\n  \"reviewCount\": {{ product.metafields.air_reviews_product.review_count | json }}\n }{% if shop.metafields.air_reviews_has_ugc_content.data.value == true %}, \n  \"review\":[{% assign reviewsData = product.metafields.air_reviews_product.data.value.reviews %}\n  {% for review in reviewsData limit: 10 %}\n    {\n      \"@type\": \"Review\",\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": {{ review.firstName | json }}\n      },\n      \"reviewRating\": {\n          \"@type\": \"Rating\",\n          \"bestRating\": {{ product.metafields.reviews.rating.value.scale_max | json }},\n          \"ratingValue\": {{ review.rate | json }},\n          \"worstRating\": {{ product.metafields.reviews.rating.value.scale_min | json }}\n      },\n      \"reviewBody\": {{ review.content | json }},\n      \"datePublished\": {{ review.createdAt | date: \"%Y-%m-%d %H:%M:%S\" | json }}\n    }{% unless forloop.last %},{% endunless %} \n  {% endfor %}]{% endif %}\n}"
         }
       },
-=======
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
       "15623156175785154009": {
         "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
         "disabled": false,
         "settings": {}
       },
-<<<<<<< HEAD
       "2149751113194833442": {
         "type": "shopify://apps/byte/blocks/app-embed/4097e215-57c2-4fa7-82dc-1afa5c242d0c",
         "disabled": true,
@@ -208,20 +204,6 @@
       },
       "1244949960318038235": {
         "type": "shopify://apps/ailead/blocks/counter/1028222e-ebe8-4cef-8140-66a0a7e8d374",
-=======
-      "1561686393582567663": {
-        "type": "shopify://apps/madgic-order-limit/blocks/limit-purchase/ad83b8ff-f1a1-4eae-9b2a-b6fe28459d93",
-        "disabled": false,
-        "settings": {}
-      },
-      "16274974966654683533": {
-        "type": "shopify://apps/yourtoken-loyalty-rewards/blocks/app-embed/28422318-8bfb-498f-ae3c-12aa490ca976",
-        "disabled": false,
-        "settings": {}
-      },
-      "17962279454735684210": {
-        "type": "shopify://apps/juphy-ai-chatbot/blocks/juphy-widget/f68438fc-3793-4355-a683-ded84ca39046",
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
         "disabled": false,
         "settings": {}
       }

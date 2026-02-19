@@ -95,17 +95,14 @@
           </a>
         </div>
         <div class="image-container-for-collection" >
-          {% assign desktop_ratio_1 = section.settings.cont_2_img_desktop.aspect_ratio | default: 1.777 %}
-          {% assign mobile_ratio_1 = section.settings.cont_2_img.aspect_ratio | default: 1.777 %}
           <a
             class="banner-full"
             href="{{ section.settings.coll_link_2 }}" data-location="trends-card-2"
-          > 
+          >
             <div class="banner__href">
               {{ section.settings.content_2 }}
               {{ white_arrow }}
             </div>
-<<<<<<< HEAD
 
             <img
               class="img-fluid mobile_screen"
@@ -123,33 +120,9 @@
               height="auto"
               loading="lazy"
             >
-=======
-            <div class="swiper-media-container desktop_screen" style="aspect-ratio: {{ desktop_ratio_1 }}">
-               <img
-                class="img-fluid"
-                src="{{ section.settings.cont_2_img_desktop | image_url: width: 500, format: 'webp' }}"
-                alt="{{ section.settings.content_2 | escape }}"
-                width="560"
-                height="auto"
-                loading="lazy"
-              >
-            </div>
-            <div class="swiper-media-container mobile_screen" style="aspect-ratio: {{ mobile_ratio_1 }}">
-               <img
-                  class="img-fluid"
-                  src="{{ section.settings.cont_2_img | image_url: width: 175, format: 'webp' }}"
-                  alt="{{ section.settings.content_2 | escape }}"
-                  width="175"
-                  height="auto"
-                  loading="lazy"
-                >
-            </div>
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
           </a>
         </div>
         <div class="image-sec-container-for-collection">
-          {% assign desktop_ratio_2 = section.settings.cont_2_img_desktop.aspect_ratio | default: 1.777 %}
-          {% assign mobile_ratio_2 = section.settings.cont_2_img.aspect_ratio | default: 1.777 %}
           <a
             class="banner-full"
             href="{{ section.settings.coll_link_3 }}" data-location="trends-card-3"
@@ -158,7 +131,6 @@
               {{ section.settings.content_3 }}
               {{ white_arrow }}
             </div>
-<<<<<<< HEAD
              <img
               class="img-fluid mobile_screen"
               src="{{ section.settings.cont_3_img| image_url: width: 175, format: 'webp' }}"
@@ -175,28 +147,6 @@
               height="auto"
               loading="lazy"
             >
-=======
-            <div class="swiper-media-container desktop_screen" style="aspect-ratio: {{ desktop_ratio_2 }}">
-              <img
-                class="img-fluid"
-                src="{{ section.settings.cont_3_img_desktop | image_url: width: 500, format: 'webp' }}"
-                alt="{{ section.settings.content_3 | escape }}"
-                width="560"
-                height="auto"
-                loading="lazy"
-              >
-              </div>
-            <div class="swiper-media-container mobile_screen" style="aspect-ratio: {{ mobile_ratio_2 }}">
-              <img
-                class="img-fluid"
-                src="{{ section.settings.cont_3_img| image_url: width: 175, format: 'webp' }}"
-                alt="{{ section.settings.content_3 | escape }}"
-                width="175"
-                height="auto"
-                loading="lazy"
-              >
-            </div>
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
           </a>
         </div>
       </div>

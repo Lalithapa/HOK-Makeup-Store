@@ -251,12 +251,7 @@
                           media="(max-width: 767px)"
                           srcset="
                             {{ mobile_image | image_url: width: 320, format: 'webp' }} 320w,
-<<<<<<< HEAD
                             {{ mobile_image | image_url: width: 390, format: 'webp' }} 390w,
-=======
-                            {{ mobile_image | image_url: width: 375, format: 'webp' }} 375w,
-                            {{ mobile_image | image_url: width: 414, format: 'webp' }} 414w,
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                             {{ mobile_image | image_url: width: 480, format: 'webp' }} 480w,
                             {{ mobile_image | image_url: width: 550, format: 'webp' }} 550w,
                             {{ mobile_image | image_url: width: 750, format: 'webp' }} 750w
@@ -332,11 +327,7 @@
                       {{
                         media_desktop
                         | video_tag: 
-<<<<<<< HEAD
                           image_size: '1280x',
-=======
-                          image_size: '1920x',
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                           width: '100%',
                           height: 'auto',
                           class: 'desktop_screen square-banner-media',
@@ -348,11 +339,7 @@
                       {{
                         media_mobile
                         | video_tag: 
-<<<<<<< HEAD
                           image_size: '500x',
-=======
-                          image_size: '390x',
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                           width: '100%',
                           height: 'auto',
                           class: 'mobile_screen square-banner-media',
@@ -365,11 +352,7 @@
                        {{
                         media_desktop
                         | video_tag: 
-<<<<<<< HEAD
                           image_size: '1280x',
-=======
-                          image_size: '1920x',
->>>>>>> c121235ecbccc93bdecb70633d4a7dbb89ad5294
                           width: '100%',
                           height: 'auto',
                           class: 'desktop_screen square-banner-media',
@@ -474,43 +457,30 @@
     </div>
   </div>
 </div>
-<script>
+<script type="text/javascript">
+  // document.addEventListener('DOMContentLoaded', function () {
     {% assign section_unique_name = section.id | remove: '-' | remove: '_' %}
-    (function initHeroSwiper{{ section_unique_name }}(attempt = 0) {
-
-      /* wait until Swiper library is available */
-      if (typeof Swiper === 'undefined') {
-        if (attempt > 40) return; // stop after ~2s safety
-        setTimeout(function() {
-          initHeroSwiper{{ section_unique_name }}(attempt + 1);
-        }, 50);
-        return;
-      }
-      const swiperEl = document.querySelector('#hero-banner-layout-{{ section.id }}');
-      if (!swiperEl) return;
-
-      new Swiper(swiperEl, {
+    const swiperElement = document.querySelector('#hero-banner-layout-{{ section.id }}');
+    if (swiperElement) {
+      const bannerSlider{{ section_unique_name }} = new Swiper('#hero-banner-layout-{{ section.id }}', {
         paginationClickable: true,
         speed: {{ section.settings.slide_speed | remove: 'px' }},
         slidesPerView: 1,
         autoHeight: true,
         loop: {{ section.settings.loop }},
-        touchStartForcePreventDefault: true,
-
-        navigation: {
-          prevEl: '#carousel-prev-{{ section.id }}',
-          nextEl: '#carousel-next-{{ section.id }}',
-          disabledClass: 'disabled_swiper_button'
-        },
-
-        pagination: {
-          el: "#hero-pagination-wrapper-{{ section.id }}",
-          clickable: true
+         touchStartForcePreventDefault:true,
+          navigation: {
+            prevEl: '#carousel-prev-{{ section.id }}',
+            nextEl: '#carousel-next-{{ section.id }}',
+            disabledClass: 'disabled_swiper_button'
+          },
+         pagination: {
+            el: "#hero-pagination-wrapper-{{ section.id }}",
+            clickable: true
         }
       });
-
-    })();
-
+    }
+  // });
 </script>
 
 {% schema %}
